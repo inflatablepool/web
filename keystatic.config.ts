@@ -30,7 +30,7 @@ const heroText = {
 export default config({
   storage: {
     kind: 'github',
-    repo: 'Felizbay/official',
+    repo: 'inflatablepool/web',
   },
   singletons: {
     news: singleton({

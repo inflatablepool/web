@@ -73,7 +73,7 @@ export const GET: APIRoute = async ({ params }) => {
     lines.push('## Related Products');
     lines.push('');
     for (const p of guide.relatedProducts) {
-      lines.push(`- [${p}](${SITE?.site || 'https://felizbay.com'}/products/${p})`);
+      lines.push(`- [${p}](${SITE?.site || 'https://inflatablepoolfactory.com'}/products/${p})`);
     }
     lines.push('');
   }
@@ -82,13 +82,13 @@ export const GET: APIRoute = async ({ params }) => {
     lines.push('## Related Guides');
     lines.push('');
     for (const g of guide.relatedGuides) {
-      lines.push(`- [${g}](${SITE?.site || 'https://felizbay.com'}/guides/${g})`);
+      lines.push(`- [${g}](${SITE?.site || 'https://inflatablepoolfactory.com'}/guides/${g})`);
     }
     lines.push('');
   }
 
   lines.push('---');
-  lines.push(`Source: ${SITE?.site || 'https://felizbay.com'}/guides/${guide.slug}`);
+  lines.push(`Source: ${SITE?.site || 'https://inflatablepoolfactory.com'}/guides/${guide.slug}`);
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/markdown; charset=utf-8' },

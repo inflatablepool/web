@@ -4,7 +4,7 @@ hero:
   subtitle: |
     استخرهای ممتاز با دیوارهای سفت و سخت drop-stitch که در عرض چند دقیقه باد می‌شوند و برای زمستان بسته می‌شوند - برای آرامش در حیاط خلوت و تفریح ​​خانوادگی طراحی شده‌اند.<br />
     اندازه‌های استخر را کاوش کنید، ویژگی‌ها را مقایسه کنید و مناسب فضای خود را بیابید.<br />
-    طراحی و اجرا توسط Aquafarer LLC، ایالات متحده آمریکا.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: استخرهای فروشگاهی
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: استخر بادی Drop Stitch مستطیلی Felizbay در حیاط خلوت
+    alt: استخر بادی Drop Stitch مستطیلی Inflatable Pool Factory در حیاط خلوت
 stats:
-  title: Felizbay در یک نگاه
+  title: Inflatable Pool Factory در یک نگاه
   columns: 4
   stats:
     - title: مجموعه های استخر
@@ -36,11 +36,11 @@ stats:
     - title: اندازه های سفارشی
       amount: Available
     - title: تماس بگیرید
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: تکنولوژی Drop Stitch
-  title: چرا یک استخر Felizbay<br />متفاوت است
+  title: چرا یک استخر Inflatable Pool Factory<br />متفاوت است
   subtitle: ساخت و ساز Drop Stitch با فشار بالا استخرهای ما را سفت، بادوام و نگهداری آسان می کند.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: برای مشاغل
   title: استخر برای تجارت،<br />همینطور
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay برای شرکای تجاری</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory برای شرکای تجاری</h3>
   items:
     - title: اجاره تعطیلات و مهمان نوازی
       description: امکانات رفاهی مهمان فصلی برای اجاره تعطیلات، مکان‌های پرطرفدار، و دارایی‌های بوتیک - به‌کارگیری سریع، نگهداری آسان، ذخیره‌سازی ساده.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: مراقبت و ایمنی
   title: داشتن آسان،<br />دوست داشتن آسان
-  subtitle: از تحویل تا اولین شنا تا ذخیره سازی در پایان فصل، داشتن استخر Felizbay ساده می ماند.
+  subtitle: از تحویل تا اولین شنا تا ذخیره سازی در پایان فصل، داشتن استخر Inflatable Pool Factory ساده می ماند.
   items:
     - title: راه اندازی در چند دقیقه
       description: 'ظرف 5 تا 15 دقیقه جعبه را خارج کرده و با پمپ همراه باد کنید، سپس با یک شلنگ باغچه پر کنید - زمان پر کردن بسته به اندازه استخر و میزان آب متفاوت است.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: استخر بادی Drop Stitch دور Felizbay
+    alt: استخر بادی Drop Stitch دور Inflatable Pool Factory
 blog_latest:
   title: راهنمای استخر و بینش
   information: |
     راهنماهای راه اندازی، نکات مراقبتی، و مشاوره خرید برای استخرهای شنای بادی
-    از تیم Felizbay.
+    از تیم Inflatable Pool Factory.
 faqs:
   title: سوالات متداول استخر بادی
-  subtitle: سوالات متداول در مورد استخرهای بادی Felizbay.
+  subtitle: سوالات متداول در مورد استخرهای بادی Inflatable Pool Factory.
   columns: 2
   items:
     - title: راه اندازی چقدر طول می کشد؟
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: چه چیزی همراه استخر است؟
-      description: هر استخر Felizbay شامل یک پمپ باد الکتریکی، یک کیت تعمیر و یک کیسه ذخیره سازی است. مدل‌های گرد دارای پوشش اختیاری هستند.
+      description: هر استخر Inflatable Pool Factory شامل یک پمپ باد الکتریکی، یک کیت تعمیر و یک کیسه ذخیره سازی است. مدل‌های گرد دارای پوشش اختیاری هستند.
       icon: tabler:box
       category: all
     - title: چه اندازه هایی موجود است؟

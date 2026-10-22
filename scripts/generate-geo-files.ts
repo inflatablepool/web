@@ -12,7 +12,7 @@ const PAGES_DIR = path.join(ROOT, 'src', 'data', 'pages');
 const WELL_KNOWN_DIR = path.join(PUBLIC, '.well-known');
 const ENTITY_JSON = path.join(WELL_KNOWN_DIR, 'entity.json');
 
-const SITE_URL = 'https://felizbay.com';
+const SITE_URL = 'https://inflatablepoolfactory.com';
 
 const LANGUAGES: Record<string, string> = {
   en: 'English',
@@ -157,7 +157,7 @@ function main(): void {
   if (!fs.existsSync(LLMS_TXT)) {
     fs.writeFileSync(
       LLMS_TXT,
-      `# Felizbay\n\nFelizbay designs and supplies premium drop stitch inflatable swimming pools.\n`
+      `# Inflatable Pool Factory\n\nInflatable Pool Factory designs and supplies premium drop stitch inflatable swimming pools.\n`
     );
     console.log('[geo] Created default llms.txt');
   }
@@ -179,7 +179,7 @@ function main(): void {
   } else {
     // Default base
     baseParts.push(
-      `# Felizbay Knowledge Base\n\nFelizbay designs and supplies premium drop stitch inflatable swimming pools.`
+      `# Inflatable Pool Factory Knowledge Base\n\nInflatable Pool Factory designs and supplies premium drop stitch inflatable swimming pools.`
     );
   }
 

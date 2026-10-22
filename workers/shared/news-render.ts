@@ -8,86 +8,86 @@ export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl'
 export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
   en: {
     title: 'News',
-    subtitle: 'The latest from Felizbay — product launches, company updates, guides, and stories from the water',
+    subtitle: 'The latest from Inflatable Pool Factory — product launches, company updates, guides, and stories from the water',
   },
   fr: {
     title: 'Actualités',
     subtitle:
-      'Les dernières nouvelles de Felizbay — lancements de produits, actualités, guides et histoires du terrain',
+      'Les dernières nouvelles de Inflatable Pool Factory — lancements de produits, actualités, guides et histoires du terrain',
   },
   de: {
     title: 'Neuigkeiten',
-    subtitle: 'Aktuelles von Felizbay – Produkteinführungen, Unternehmensupdates, Ratgeber und Geschichten vom Wasser',
+    subtitle: 'Aktuelles von Inflatable Pool Factory – Produkteinführungen, Unternehmensupdates, Ratgeber und Geschichten vom Wasser',
   },
   es: {
     title: 'Noticias',
-    subtitle: 'Las últimas novedades de Felizbay — lanzamientos, actualizaciones, guías e historias del agua',
+    subtitle: 'Las últimas novedades de Inflatable Pool Factory — lanzamientos, actualizaciones, guías e historias del agua',
   },
   pt: {
     title: 'Notícias',
     subtitle:
-      'O mais recente da Felizbay — lançamentos de produtos, atualizações da empresa, guias e histórias do mar',
+      'O mais recente da Inflatable Pool Factory — lançamentos de produtos, atualizações da empresa, guias e histórias do mar',
   },
   ar: {
     title: 'الأخبار',
-    subtitle: 'آخر المستجدات من Felizbay — إطلاق المنتجات، تحديثات الشركة، الأدلة، وقصص من الماء',
+    subtitle: 'آخر المستجدات من Inflatable Pool Factory — إطلاق المنتجات، تحديثات الشركة، الأدلة، وقصص من الماء',
   },
   it: {
     title: 'Novità',
-    subtitle: 'Ultime notizie da Felizbay – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
+    subtitle: 'Ultime notizie da Inflatable Pool Factory – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
   },
   ru: {
     title: 'Новости',
-    subtitle: 'Последние новости Felizbay — запуски продуктов, обновления компании, руководства и истории с воды',
+    subtitle: 'Последние новости Inflatable Pool Factory — запуски продуктов, обновления компании, руководства и истории с воды',
   },
   pl: {
     title: 'Aktualności',
-    subtitle: 'Najnowsze wiadomości od Felizbay – premiery produktów, aktualizacje firmy, poradniki i historie z wody',
+    subtitle: 'Najnowsze wiadomości od Inflatable Pool Factory – premiery produktów, aktualizacje firmy, poradniki i historie z wody',
   },
   nl: {
     title: 'Nieuws',
     subtitle:
-      'Het laatste nieuws van Felizbay – productlanceringen, bedrijfsupdates, handleidingen en verhalen van het water',
+      'Het laatste nieuws van Inflatable Pool Factory – productlanceringen, bedrijfsupdates, handleidingen en verhalen van het water',
   },
   sv: {
     title: 'Nyheter',
     subtitle:
-      'Senaste nyheterna från Felizbay – produktlanseringar, företagsuppdateringar, guider och berättelser från vattnet',
+      'Senaste nyheterna från Inflatable Pool Factory – produktlanseringar, företagsuppdateringar, guider och berättelser från vattnet',
   },
   no: {
     title: 'Nyheter',
     subtitle:
-      'Siste nytt fra Felizbay – produktlanseringer, bedriftsoppdateringer, veiledninger og historier fra vannet',
+      'Siste nytt fra Inflatable Pool Factory – produktlanseringer, bedriftsoppdateringer, veiledninger og historier fra vannet',
   },
   el: {
     title: 'Νέα',
     subtitle:
-      'Τα τελευταία νέα από την Felizbay – κυκλοφορίες προϊόντων, εταιρικές ενημερώσεις, οδηγοί και ιστορίες από το νερό',
+      'Τα τελευταία νέα από την Inflatable Pool Factory – κυκλοφορίες προϊόντων, εταιρικές ενημερώσεις, οδηγοί και ιστορίες από το νερό',
   },
   tr: {
     title: 'Haberler',
-    subtitle: "Felizbay'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
+    subtitle: "Inflatable Pool Factory'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
   },
   fi: {
     title: 'Uutiset',
-    subtitle: 'Uusimmat Felizbayilta — tuotelanseeraukset, yrityspäivitykset, oppaat ja tarinoita vesiltä',
+    subtitle: 'Uusimmat Inflatable Pool Factory — tuotelanseeraukset, yrityspäivitykset, oppaat ja tarinoita vesiltä',
   },
   cs: {
     title: 'Novinky',
-    subtitle: 'Nejnovější z Felizbay — uvedení produktů, aktualizace společnosti, průvodci a příběhy z vody',
+    subtitle: 'Nejnovější z Inflatable Pool Factory — uvedení produktů, aktualizace společnosti, průvodci a příběhy z vody',
   },
   da: {
     title: 'Nyheder',
-    subtitle: 'Det seneste fra Felizbay — produktlanceringer, virksomhedsopdateringer, guides og historier fra vandet',
+    subtitle: 'Det seneste fra Inflatable Pool Factory — produktlanceringer, virksomhedsopdateringer, guides og historier fra vandet',
   },
   ro: {
     title: 'Noutăți',
     subtitle:
-      'Cele mai recente de la Felizbay — lansări de produse, actualizări ale companiei, ghiduri și povești de pe apă',
+      'Cele mai recente de la Inflatable Pool Factory — lansări de produse, actualizări ale companiei, ghiduri și povești de pe apă',
   },
   th: {
     title: 'ข่าวสาร',
-    subtitle: 'ข่าวสารล่าสุดจาก Felizbay — การเปิดตัวสินค้า อัปเดตบริษัท คำแนะนำ และเรื่องราวจากบนน้ำ',
+    subtitle: 'ข่าวสารล่าสุดจาก Inflatable Pool Factory — การเปิดตัวสินค้า อัปเดตบริษัท คำแนะนำ และเรื่องราวจากบนน้ำ',
   },
 };
 

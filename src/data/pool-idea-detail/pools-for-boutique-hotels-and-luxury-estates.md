@@ -50,4 +50,4 @@ The [maintenance guide](/guides/inflatable-pool-maintenance) details the full ro
 
 ## 6. B2B Sourcing: Custom Builds & OEM/ODM
 
-For hospitality groups and estate projects, Felizbay supports commercial sourcing through our Qingdao manufacturing partner: custom dimensions and colorways, branded exteriors and deck pads, curated equipment bundles, and volume pricing. The [OEM/ODM program](/oem-odm) details capabilities and lead times; for project quotations email [info@felizbay.com](mailto:info@felizbay.com) — our team typically responds within one business day.
+For hospitality groups and estate projects, Inflatable Pool Factory supports commercial sourcing through our Qingdao manufacturing partner: custom dimensions and colorways, branded exteriors and deck pads, curated equipment bundles, and volume pricing. The [OEM/ODM program](/oem-odm) details capabilities and lead times; for project quotations email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) — our team typically responds within one business day.

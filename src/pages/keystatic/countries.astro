@@ -244,7 +244,7 @@ if (token) {
         locales.forEach((l) => {
           html += `<td class="px-2 py-1"><input type="text" name="c${idx}.label.${l}" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" /></td>`;
         });
-        html += `<td class="px-4 py-2"><input type="text" name="c${idx}.tel" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" placeholder="+1" /></td>`;
+        html += `<td class="px-4 py-2"><input type="text" name="c${idx}.tel" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" placeholder="+86" /></td>`;
         html += `<td class="px-2 py-2"><button type="button" class="remove-btn text-red-500 hover:text-red-700 text-lg leading-none">&times;</button></td>`;
         tr.innerHTML = html;
         tbody?.appendChild(tr);

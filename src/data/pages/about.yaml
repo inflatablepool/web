@@ -2,11 +2,11 @@ hero:
   tagline: About us
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay inflatable swimming pool
+    alt: Inflatable Pool Factory inflatable swimming pool
   title: |
     Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay is a premium drop stitch inflatable pool brand designed and operated by Aquafarer LLC (USA). We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
+    the <span class="text-accent dark:text-white">Inflatable Pool Factory</span> way
+  subtitle: 'Inflatable Pool Factory is a premium drop stitch inflatable pool brand by the Inflatable Pool Team at Qingdao Vatrad Group. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
 
 stats:
   title: By the numbers
@@ -19,7 +19,7 @@ stats:
     - title: Rated pressure
       amount: '4-5 PSI'
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 
 features3_what_we_build:
   title: What we build
@@ -55,7 +55,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
+    alt: Inflatable Pool Factory rectangular drop stitch inflatable swimming pool
 
 steps2_values:
   title: Our values
@@ -68,16 +68,16 @@ steps2_values:
       description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
       icon: tabler:settings
     - title: Support that outlasts the season
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 
 steps2_milestones:
   title: Milestones
-  subtitle: A short version of the Felizbay story.
+  subtitle: A short version of the Inflatable Pool Factory story.
   isReversed: true
   items:
     - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+      description: 'Inflatable Pool Factory was founded with a single focus: premium drop stitch inflatable swimming pools.'
       icon: tabler:pool
     - title: Three signature collections
       description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
@@ -92,9 +92,9 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Website
-      description: felizbay.com — browse our pools and request a quote.
+      description: inflatablepoolfactory.com — browse our pools and request a quote.
     - title: OEM / Wholesale
       description: Custom sizes, colors, and branding available for business partners.
 
@@ -119,7 +119,7 @@ brand_hub_cards:
 production_section:
   tagline: 'Production Excellence'
   title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  description: 'The Inflatable Pool Factory production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
   cards:
     - title: 'Experienced Technician Team'
       items:
@@ -145,7 +145,7 @@ production_section:
 global_ops_section:
   tagline: 'Global Reach'
   title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  description_html: 'Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.'
   stats:
     - value: '4'
       label: 'Pool collections'

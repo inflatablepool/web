@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Augstākās kvalitātes baseini ar stingrām drop-stitch sienām, kas dažu minūšu laikā tiek piepūstas un iesaiņotas ziemai — paredzēti atpūtai pagalmā un ģimenes izklaidei.<br />
     Izpētiet baseinu izmērus, salīdziniet funkcijas un atrodiet savai telpai piemērotāko.<br />
-    Projektēja un ekspluatē Aquafarer LLC, ASV.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Veikals baseini
@@ -18,7 +18,7 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay taisnstūrveida piepūšamais Drop Stitch peldbaseins pagalmā
+    alt: Inflatable Pool Factory taisnstūrveida piepūšamais Drop Stitch peldbaseins pagalmā
 stats:
   title: Felizbajs īsumā
   columns: 4
@@ -36,11 +36,11 @@ stats:
     - title: Pielāgoti izmēri
       amount: Available
     - title: Sazināties
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch tehnoloģija
-  title: Kāpēc Felizbay baseins<br />Ir Citādi
+  title: Kāpēc Inflatable Pool Factory baseins<br />Ir Citādi
   subtitle: Augstspiediena Drop Stitch konstrukcija padara mūsu baseinus stingrus, izturīgus un viegli uzglabājamus.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Uzņēmumiem
   title: Baseini biznesam,<br />Arī
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznesa partneriem</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory biznesa partneriem</h3>
   items:
     - title: Īre brīvdienām un viesmīlība
       description: Sezonas viesu ērtības īrei brīvdienām, apskates vietām un modes preču veikaliem — ātri izvietojamas, viegli uzturamas, vienkārši uzglabājamas.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Aprūpe un drošība
   title: Viegli iegūt īpašumā,<br />Viegli mīlēt
-  subtitle: No piegādes līdz pirmajai peldei līdz sezonas beigām, Felizbay baseina īpašumtiesības paliek vienkārši.
+  subtitle: No piegādes līdz pirmajai peldei līdz sezonas beigām, Inflatable Pool Factory baseina īpašumtiesības paliek vienkārši.
   items:
     - title: Iestatīšana minūtēs
       description: 'Izņemiet kastīti un piepūšiet ar komplektā iekļauto sūkni 5–15 minūtēs, pēc tam piepildiet ar dārza šļūteni — uzpildes laiks mainās atkarībā no baseina izmēra un ūdens padeves.'
@@ -148,7 +148,7 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay apaļais Drop Stitch piepūšamais peldbaseins
+    alt: Inflatable Pool Factory apaļais Drop Stitch piepūšamais peldbaseins
 blog_latest:
   title: Baseina ceļveži un ieskats
   information: |
@@ -156,7 +156,7 @@ blog_latest:
     no Felizbajas komandas.
 faqs:
   title: Bieži uzdotie jautājumi par piepūšamo baseinu
-  subtitle: Bieži uzdotie jautājumi par Felizbay piepūšamajiem peldbaseiniem.
+  subtitle: Bieži uzdotie jautājumi par Inflatable Pool Factory piepūšamajiem peldbaseiniem.
   columns: 2
   items:
     - title: Cik ilgi notiek iestatīšana?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas ir iekļauts baseinā?
-      description: Katrā Felizbay baseinā ir elektriskais gaisa sūknis, remonta komplekts un uzglabāšanas soma. Apaļajiem modeļiem pēc izvēles ir uzstādīts vāks.
+      description: Katrā Inflatable Pool Factory baseinā ir elektriskais gaisa sūknis, remonta komplekts un uzglabāšanas soma. Apaļajiem modeļiem pēc izvēles ir uzstādīts vāks.
       icon: tabler:box
       category: all
     - title: Kādi izmēri ir pieejami?

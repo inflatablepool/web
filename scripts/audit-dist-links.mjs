@@ -29,7 +29,7 @@ function loadWorkerRoutes() {
     const toml = path.join(workersDir, entry.name, 'wrangler.toml');
     if (!existsSync(toml)) continue;
     const txt = readFileSync(toml, 'utf8');
-    for (const m of txt.matchAll(/pattern\s*=\s*"Felizbay\.com(\/[^"]*?)(\*)?"/g)) {
+    for (const m of txt.matchAll(/pattern\s*=\s*"Inflatable Pool Factory\.com(\/[^"]*?)(\*)?"/g)) {
       if (m[2]) prefixes.push(m[1]);
       else exact.add(m[1]);
     }
@@ -142,7 +142,7 @@ function main() {
     while ((hm = hlRe.exec(t)) !== null) {
       hreflangRefs++;
       const href = hm[2];
-      if (/^https?:\/\/(www\.)?Felizbay\.com\//.test(href) || href.startsWith('/')) {
+      if (/^https?:\/\/(www\.)?Inflatable Pool Factory\.com\//.test(href) || href.startsWith('/')) {
         const p = href.replace(/^https?:\/\/[^/]+/, '');
         if (!targetExists(p) && !isWorkerRoute(p)) brokenHreflang.push(`${page} [${hm[1]}] -> ${href}`);
       }
@@ -159,8 +159,8 @@ function main() {
       if (!raw || raw.startsWith('#') || /^(mailto|tel|javascript|data|sms|whatsapp):/i.test(raw)) continue;
       let p = raw;
       if (/^https?:\/\//i.test(raw)) {
-        if (!/^https?:\/\/(www\.)?Felizbay\.com\//i.test(raw)) continue; // external
-        p = raw.replace(/^https?:\/\/(www\.)?Felizbay\.com/i, '');
+        if (!/^https?:\/\/(www\.)?Inflatable Pool Factory\.com\//i.test(raw)) continue; // external
+        p = raw.replace(/^https?:\/\/(www\.)?Inflatable Pool Factory\.com/i, '');
       } else if (raw.startsWith('//')) continue;
       else if (!raw.startsWith('/')) continue; // relative — astro emits absolute; skip noise
       internalRefs++;

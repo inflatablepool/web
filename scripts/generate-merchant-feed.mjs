@@ -19,7 +19,7 @@
  *
  * GMC registration (manual, one-time):
  *   Merchant Center → Products → Add product source → From file →
- *   https://felizbay.com/merchant-feed.xml → configure fetch schedule
+ *   https://inflatablepoolfactory.com/merchant-feed.xml → configure fetch schedule
  *   (default 24 h) → trigger a manual fetch → review item issues.
  *   Account-level shipping & return settings must be configured BEFORE
  *   the first fetch; shipping_label "pool_standard" groups pool items.
@@ -29,7 +29,7 @@ import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const BASE = 'https://felizbay.com';
+const BASE = 'https://inflatablepoolfactory.com';
 
 /** Parse PRODUCT_CATALOG from functions/api/checkout.ts (single eligibility source). */
 function parseCheckoutCatalog() {
@@ -37,7 +37,7 @@ function parseCheckoutCatalog() {
   const block = src.slice(src.indexOf('PRODUCT_CATALOG'), src.indexOf('};', src.indexOf('PRODUCT_CATALOG')));
   const entries = {};
   const re =
-    /'(FZ-[A-Z0-9-]+)':\s*\{[\s\S]*?name:\s*'([^']+)'[\s\S]*?slug:\s*'([^']+)'[\s\S]*?unitAmount:\s*(\d+)[\s\S]*?currency:\s*'([^']+)'[\s\S]*?image:\s*'([^']+)'/g;
+    /'(IPF-[A-Z0-9-]+)':\s*\{[\s\S]*?name:\s*'([^']+)'[\s\S]*?slug:\s*'([^']+)'[\s\S]*?unitAmount:\s*(\d+)[\s\S]*?currency:\s*'([^']+)'[\s\S]*?image:\s*'([^']+)'/g;
   let m;
   while ((m = re.exec(block))) {
     entries[m[1]] = { name: m[2], slug: m[3], unitAmount: Number(m[4]), currency: m[5], image: m[6] };
@@ -144,9 +144,9 @@ for (const w of warnings) console.warn('[merchant-feed] ⚠ ' + w);
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>Felizbay Products</title>
+    <title>Inflatable Pool Factory Products</title>
     <link>${BASE}/</link>
-    <description>Felizbay retail product feed — purchasable SKUs only (Stripe checkout enabled).</description>
+    <description>Inflatable Pool Factory retail product feed — purchasable SKUs only (Stripe checkout enabled).</description>
 ${items
   .map(
     (i) => `    <item>
@@ -158,7 +158,7 @@ ${items
       <g:availability>${i.inStock ? 'in_stock' : 'out_of_stock'}</g:availability>
       <g:price>${xmlEscape(i.price)} ${xmlEscape(i.currency)}</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Felizbay</g:brand>
+      <g:brand>Inflatable Pool Factory</g:brand>
       <g:shipping_label>pool_standard</g:shipping_label>
     </item>`
   )

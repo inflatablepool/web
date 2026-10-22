@@ -5,7 +5,7 @@ description: 'Turnover cleaning, commercial durability, guest rules, insurance, 
 
 Adding a pool amenity to an Airbnb, VRBO, or boutique vacation rental is a practical way to elevate your listing's photo appeal and outdoor utility — and to encourage the kind of guest reviews that keep calendars full. However, managing water amenities in a commercial or short-term rental environment introduces distinct challenges compared to private residential use.
 
-While the Felizbay drop-stitch pool provides exceptional structural durability, rapid setup, and easy drainage, property managers must carefully navigate cleaning turnovers, guest safety, insurance, and regulatory compliance.
+While the Inflatable Pool Factory drop-stitch pool provides exceptional structural durability, rapid setup, and easy drainage, property managers must carefully navigate cleaning turnovers, guest safety, insurance, and regulatory compliance.
 
 ## 1. Fast Cleaning & Turnover Efficiency Between Guests
 
@@ -32,7 +32,7 @@ A repeatable between-stay routine keeps turnovers inside a standard housekeeping
 
 Guest handling is unpredictable, making commercial durability essential:
 
-- **Drop-stitch vs. standard inflatables:** Standard single-layer vinyl inflatable pools are prone to punctures, wall sagging, and air leaks under frequent or careless use. Felizbay's high-pressure [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) provides a rigid, ultra-durable shell capable of supporting adult bather loads without collapsing or warping.
+- **Drop-stitch vs. standard inflatables:** Standard single-layer vinyl inflatable pools are prone to punctures, wall sagging, and air leaks under frequent or careless use. Inflatable Pool Factory's high-pressure [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) provides a rigid, ultra-durable shell capable of supporting adult bather loads without collapsing or warping.
 
 - **Wear protection:** Always install heavy-duty rubber floor tiles or thick ground padding beneath the pool base to shield against abrasive footwear, patio stones, or dropped objects.
 
@@ -64,4 +64,4 @@ Operating a pool at a short-term rental property transforms residential equipmen
 2. **Locking cover:** Use a heavy-duty, lockable pool cover between guest stays or during non-rental periods to prevent unauthorized access by neighborhood children or wildlife.
 3. **Digital welcome guide:** Include pool operating instructions, emergency shut-off valve locations, and safety warnings in your digital guest guidebook.
 
-By pairing durable Felizbay hardware with robust risk management, hosts can deliver a premium summer amenity that supports guest satisfaction and strengthens a listing's appeal.
+By pairing durable Inflatable Pool Factory hardware with robust risk management, hosts can deliver a premium summer amenity that supports guest satisfaction and strengthens a listing's appeal.

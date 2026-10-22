@@ -9,7 +9,7 @@ Cold-water immersion (CWI) has moved from locker-room folklore to a mainstream r
 
 A plunge vessel gets used hard: you grip the rim, brace against the wall, and step in and out daily. Soft air-ring pools flex under that treatment. A [drop-stitch tub](/guides/what-is-a-drop-stitch-inflatable-pool) inflated to its rated 4–5 PSI operating pressure holds a firm, straight-walled shape with a rim stable enough to sit on during entry, exit, and breathwork.
 
-Felizbay SPA tubs add the two features a plunge actually needs: **built-in seats** for an upright seated immersion position, and a **5 mm insulated thermal bottom** that slows heat transfer from the ground — useful whether you are keeping heat out (cold plunge) or in (hot soak).
+Inflatable Pool Factory SPA tubs add the two features a plunge actually needs: **built-in seats** for an upright seated immersion position, and a **5 mm insulated thermal bottom** that slows heat transfer from the ground — useful whether you are keeping heat out (cold plunge) or in (hot soak).
 
 ## 2. Cooling Strategy: Ice or Active Chilling
 
@@ -46,7 +46,7 @@ Daily single-user plunges are low-contamination, but small volumes still need a 
 
 - **Consult a physician first** if you have high blood pressure, a heart condition, circulatory issues, are pregnant, or take medication that affects circulation or causes drowsiness. Cold immersion places real physiological stress on the cardiovascular system.
 - **Never plunge alone or while impaired.** Have someone within earshot, keep sessions short at first (around 2–5 minutes), and exit immediately if you feel dizzy or unwell.
-- **Not a medical device.** Felizbay tubs are water vessels. They are not sold to diagnose, treat, cure, or prevent any condition, and no health outcome is guaranteed.
+- **Not a medical device.** Inflatable Pool Factory tubs are water vessels. They are not sold to diagnose, treat, cure, or prevent any condition, and no health outcome is guaranteed.
 - **Supervise the vessel.** A filled tub of any temperature is a drowning hazard for children — keep it covered and inaccessible when not in use.
 
 ## 6. Build the Routine

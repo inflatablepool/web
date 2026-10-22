@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Pošljite nam sporočilo
   subtitle: Za ponudbe, tehnična vprašanja ali poizvedbe o partnerstvu nam pišite. Odgovorimo v enem delovnem dnevu.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Pošljite povpraševanje → Zagotovite ponudbo
   success_message: hvala Vaše sporočilo je pristalo v našem nabiralniku. Odgovorili vam bomo v enem delovnem dnevu.
   error_message: Pri pošiljanju vašega sporočila je šlo nekaj narobe. Poskusite znova ali nam neposredno pošljite e-pošto.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Zaščita pred neželeno pošto: rešite naslednje'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Velikosti, barve, ovitki, blagovna znamka in embalaža po meri.
       icon: tabler:palette
     - title: E-pošta
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Spletna stran
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Odzivni čas
       description: Odgovorimo v enem delovnem dnevu.
       icon: tabler:clock
 map:
   title: Stopite v stik
-  subtitle: Kontaktirajte Felizbay
-  address: felizbay.com
+  subtitle: Kontaktirajte Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

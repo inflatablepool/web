@@ -2,11 +2,11 @@ hero:
   tagline: O nás
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Nafukovací bazén Felizbay
+    alt: Nafukovací bazén Inflatable Pool Factory
   title: |
     Aby bylo plavání jednoduché, <br />
-    stylem <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay je prémiová značka nafukovacích bazénů Drop Stitch navržená a provozovaná společností Aquafarer LLC (USA). Věříme, že každá rodina si zaslouží skutečný bazén na dvorku – bez stavby, povolení nebo trvalé instalace. Naše bazény se nafouknou během několika minut, přežijí celá léta rodinné zábavy a na konci sezóny se sbalí.
+    stylem <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory je prémiová značka nafukovacích bazénů Drop Stitch navržená společností Inflatable Pool Team · Qingdao Vatrad Group. Věříme, že každá rodina si zaslouží skutečný bazén na dvorku – bez stavby, povolení nebo trvalé instalace. Naše bazény se nafouknou během několika minut, přežijí celá léta rodinné zábavy a na konci sezóny se sbalí.
 stats:
   title: Podle čísel
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Jmenovitý tlak
       amount: 4-5 PSI
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Co stavíme
   subtitle: Zaměřená produktová řada, kterou známe zevnitř – vysokotlaké nafukovací bazény Drop Stitch.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Obdélníkový nafukovací bazén Felizbay Drop Stitch
+    alt: Obdélníkový nafukovací bazén Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: Naše hodnoty
   subtitle: Tři principy, které formují každý bazén, který postavíme.
@@ -64,15 +64,15 @@ steps2_values:
       description: Vysokotlaká konstrukce Drop Stitch, testovaná nad jmenovitým tlakem, před odesláním jakéhokoli bazénu.
       icon: tabler:settings
     - title: Podpora, která přežije sezónu
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milníky
-  subtitle: Krátká verze příběhu Felizbay.
+  subtitle: Krátká verze příběhu Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Zaměřeno na nafukovací bazény
-      description: 'Felizbay byla založena s jediným zaměřením: prémiové nafukovací bazény Drop Stitch.'
+      description: 'Inflatable Pool Factory byla založena s jediným zaměřením: prémiové nafukovací bazény Drop Stitch.'
       icon: tabler:pool
     - title: Tři sbírky podpisů
       description: Obdélníkové, kulaté modré a kulaté šedé bazénové řady, každá s volitelnými kryty a vlastními velikostmi.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: webové stránky
-      description: felizbay.com — prohlédněte si naše bazény a vyžádejte si cenovou nabídku.
+      description: inflatablepoolfactory.com — prohlédněte si naše bazény a vyžádejte si cenovou nabídku.
     - title: OEM / Velkoobchod
       description: Vlastní velikosti, barvy a značky dostupné pro obchodní partnery.
 brand_hub_tagline: Produkty
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Výrobní dokonalost
   title: Zajištění vynikajícího řemesla
-  description: Výrobní linka Felizbay je určena pro vysoce kvalitní, odolné, vysokotlaké nafukovací bazény.
+  description: Výrobní linka Inflatable Pool Factory je určena pro vysoce kvalitní, odolné, vysokotlaké nafukovací bazény.
   cards:
     - title: Tým zkušených techniků
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Globální dosah
   title_html: Jedna značka, <span class="text-white/90">celosvětovou přepravu</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Bazénové sbírky

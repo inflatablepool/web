@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Padalhan kami ng mensahe
   subtitle: Para sa mga quote, teknikal na tanong o mga katanungan sa pakikipagsosyo, i-drop sa amin ang isang linya. Sumasagot kami sa loob ng isang araw ng negosyo.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
   success_message: Salamat! Ang iyong mensahe ay nakarating sa aming inbox. Sasagot kami sa loob ng isang araw ng negosyo.
   error_message: Nagkaproblema sa pagpapadala ng iyong mensahe. Pakisubukang muli o direktang mag-email sa amin.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: mangyaring lutasin ang sumusunod'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Mga custom na laki, kulay, cover, branding, at packaging.
       icon: tabler:palette
     - title: Email
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Website
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Oras ng pagtugon
       description: Sumasagot kami sa loob ng isang araw ng negosyo.
       icon: tabler:clock
 map:
   title: Makipag-ugnayan
-  subtitle: Makipag-ugnayan kay Felizbay
-  address: felizbay.com
+  subtitle: Makipag-ugnayan kay Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

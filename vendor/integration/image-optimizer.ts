@@ -21,7 +21,7 @@ export default function imageOptimizer(): AstroIntegration {
         outDir = base;
       },
       'astro:build:done': async () => {
-        const imagesDir = path.join(outDir, 'images', 'Felizbay');
+        const imagesDir = path.join(outDir, 'images', 'Inflatable Pool Factory');
         if (!fs.existsSync(imagesDir)) {
           return;
         }

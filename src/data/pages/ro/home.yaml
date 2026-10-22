@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Piscine premium cu pereți rigidi drop-stitch care se umflă în câteva minute și se împachetează pentru iarnă - concepute pentru relaxarea în curte și distracția în familie.<br />
     Explorați dimensiunile piscinei, comparați caracteristicile și găsiți cea potrivită pentru spațiul dvs.<br />
-    Proiectat și operat de Aquafarer LLC, SUA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Piscine de magazin
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscina gonflabilă dreptunghiulară Felizbay Drop Stitch într-o curte
+    alt: Piscina gonflabilă dreptunghiulară Inflatable Pool Factory Drop Stitch într-o curte
 stats:
-  title: Felizbay dintr-o privire
+  title: Inflatable Pool Factory dintr-o privire
   columns: 4
   stats:
     - title: Colecții de piscină
@@ -36,11 +36,11 @@ stats:
     - title: Dimensiuni personalizate
       amount: Available
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Tehnologia Drop Stitch
-  title: De ce o piscină Felizbay<br />Este diferit
+  title: De ce o piscină Inflatable Pool Factory<br />Este diferit
   subtitle: Construcția Drop Stitch de înaltă presiune face piscinele noastre rigide, durabile și depozitate fără efort.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Pentru afaceri
   title: piscine pentru afaceri,<br />Prea
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pentru partenerii de afaceri</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory pentru partenerii de afaceri</h3>
   items:
     - title: Închirieri de vacanță și ospitalitate
       description: Facilități sezoniere pentru oaspeți pentru închirieri de vacanță, site-uri de lux și proprietăți tip boutique — rapid de implementat, ușor de întreținut, simplu de depozitat.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Îngrijire și siguranță
   title: Ușor de deținut,<br />Ușor de iubit
-  subtitle: De la livrare la prima înot până la depozitarea la sfârșitul sezonului, deținerea unei piscine Felizbay rămâne simplă.
+  subtitle: De la livrare la prima înot până la depozitarea la sfârșitul sezonului, deținerea unei piscine Inflatable Pool Factory rămâne simplă.
   items:
     - title: Configurare în minute
       description: 'Despachetați și umflați cu pompa inclusă în 5-15 minute, apoi umpleți cu un furtun de grădină - timpul de umplere variază în funcție de dimensiunea piscinei și de alimentarea cu apă.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscina gonflabilă rotundă Felizbay Drop Stitch
+    alt: Piscina gonflabilă rotundă Inflatable Pool Factory Drop Stitch
 blog_latest:
   title: Ghiduri și informații despre piscină
   information: |
     Ghiduri de configurare, sfaturi de îngrijire și sfaturi de cumpărare pentru piscine gonflabile
-    din echipa Felizbay.
+    din echipa Inflatable Pool Factory.
 faqs:
   title: Întrebări frecvente ale piscinei gonflabile
-  subtitle: Întrebări frecvente despre piscinele gonflabile Felizbay.
+  subtitle: Întrebări frecvente despre piscinele gonflabile Inflatable Pool Factory.
   columns: 2
   items:
     - title: Cât durează configurarea?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ce este inclus cu piscina?
-      description: Fiecare piscină Felizbay include o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele rotunde au o husă montată opțional.
+      description: Fiecare piscină Inflatable Pool Factory include o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele rotunde au o husă montată opțional.
       icon: tabler:box
       category: all
     - title: Ce dimensiuni sunt disponibile?

@@ -51,76 +51,81 @@ const Body: any =
 const META: Record<string, { title: string; description: string }> = {
   en: {
     title: `Privacy Policy — ${SITE.name}`,
-    description: 'Felizbay privacy policy. Learn how we collect, use, and protect your personal data.',
+    description: 'Inflatable Pool Factory privacy policy. Learn how we collect, use, and protect your personal data.',
   },
   de: {
-    title: 'Datenschutzerklärung — Felizbay',
+    title: 'Datenschutzerklärung — Inflatable Pool Factory',
     description:
       'Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren zur Erhebung, Nutzung und Offenlegung Ihrer Informationen, wenn Sie den Dienst nutzen, un',
   },
   es: {
-    title: 'Política de Privacidad — Felizbay',
+    title: 'Política de Privacidad — Inflatable Pool Factory',
     description:
       'Esta Política de Privacidad describe Nuestras políticas y procedimientos sobre la recopilación, el uso y la divulgación de Su información cuando Usted utiliza e',
   },
   fr: {
-    title: 'Politique de confidentialité — Felizbay',
+    title: 'Politique de confidentialité — Inflatable Pool Factory',
     description:
       "Cette Politique de confidentialité décrit Nos politiques et procédures concernant la collecte, l'utilisation et la divulgation de Vos informations lorsque Vous ",
   },
   it: {
-    title: 'Informativa sulla Privacy — Felizbay',
+    title: 'Informativa sulla Privacy — Inflatable Pool Factory',
     description:
       "La presente Informativa sulla Privacy descrive le nostre politiche e procedure relative alla raccolta, all'uso e alla divulgazione delle Tue informazioni quando",
   },
   cs: {
-    title: 'Zásady ochrany osobních údajů — Felizbay',
+    title: 'Zásady ochrany osobních údajů — Inflatable Pool Factory',
     description:
-      'Zásady ochrany osobních údajů společnosti Felizbay. Zjistěte, jak shromažďujeme, používáme a chráníme vaše osobní údaje.',
+      'Zásady ochrany osobních údajů společnosti Inflatable Pool Factory. Zjistěte, jak shromažďujeme, používáme a chráníme vaše osobní údaje.',
   },
   sv: {
     title: `Sekretesspolicy — ${SITE.name}`,
-    description: 'Felizbay sekretesspolicy. Lär dig hur vi samlar in, använder och skyddar dina personuppgifter.',
+    description:
+      'Inflatable Pool Factory sekretesspolicy. Lär dig hur vi samlar in, använder och skyddar dina personuppgifter.',
   },
   da: {
     title: `Privatlivspolitik — ${SITE.name}`,
-    description: 'Felizbay privatlivspolitik. Lær, hvordan vi indsamler, bruger og beskytter dine personlige data.',
+    description:
+      'Inflatable Pool Factory privatlivspolitik. Lær, hvordan vi indsamler, bruger og beskytter dine personlige data.',
   },
   el: {
     title: `Πολιτική απορρήτου — ${SITE.name}`,
     description:
-      'Felizbay πολιτική απορρήτου. Μάθετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα.',
+      'Inflatable Pool Factory πολιτική απορρήτου. Μάθετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα.',
   },
   no: {
     title: `Retningslinjer for personvern — ${SITE.name}`,
     description:
-      'Felizbay personvernerklæring. Finn ut hvordan vi samler inn, bruker og beskytter dine personopplysninger.',
+      'Inflatable Pool Factory personvernerklæring. Finn ut hvordan vi samler inn, bruker og beskytter dine personopplysninger.',
   },
   ru: {
     title: `Политика конфиденциальности — ${SITE.name}`,
     description:
-      'Felizbay политика конфиденциальности. Узнайте, как мы собираем, используем и защищаем ваши персональные данные.',
+      'Inflatable Pool Factory политика конфиденциальности. Узнайте, как мы собираем, используем и защищаем ваши персональные данные.',
   },
   nl: {
     title: `Privacybeleid — ${SITE.name}`,
-    description: 'Felizbay privacybeleid. Ontdek hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.',
+    description:
+      'Inflatable Pool Factory privacybeleid. Ontdek hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.',
   },
   fi: {
     title: `Tietosuojakäytäntö — ${SITE.name}`,
-    description: 'Felizbay tietosuojakäytäntö. Opi kuinka keräämme, käytämme ja suojaamme henkilötietojasi.',
+    description:
+      'Inflatable Pool Factory tietosuojakäytäntö. Opi kuinka keräämme, käytämme ja suojaamme henkilötietojasi.',
   },
   pl: {
     title: `Polityka prywatności — ${SITE.name}`,
     description:
-      'Felizbay polityka prywatności. Dowiedz się, jak gromadzimy, wykorzystujemy i chronimy Twoje dane osobowe.',
+      'Inflatable Pool Factory polityka prywatności. Dowiedz się, jak gromadzimy, wykorzystujemy i chronimy Twoje dane osobowe.',
   },
   ar: {
     title: `سياسة الخصوصية — ${SITE.name}`,
-    description: 'Felizbay سياسة الخصوصية. تعرف على كيفية جمع بياناتك الشخصية واستخدامها وحمايتها.',
+    description: 'Inflatable Pool Factory سياسة الخصوصية. تعرف على كيفية جمع بياناتك الشخصية واستخدامها وحمايتها.',
   },
   pt: {
     title: `Política de Privacidade — ${SITE.name}`,
-    description: 'Felizbay política de privacidade. Saiba como coletamos, usamos e protegemos seus dados pessoais.',
+    description:
+      'Inflatable Pool Factory política de privacidade. Saiba como coletamos, usamos e protegemos seus dados pessoais.',
   },
 };
 const meta = META[lang] || META.en;
@@ -169,14 +174,14 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'P
             </li>
             <li>
               <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement)
-              refers to Aquafarer LLC, a supplier of inflatable swimming pools based in New Mexico, USA.
+              refers to Qingdao Vatrad Group, a supplier of inflatable swimming pools based in Qingdao, China.
             </li>
             <li>
               <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other
               device by a website.
             </li>
             <li>
-              <strong>Country</strong> refers to: New Mexico, United States
+              <strong>Country</strong> refers to: China
             </li>
             <li>
               <strong>Device</strong> means any device that can access the Service.
@@ -196,8 +201,8 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'P
               <strong>Usage Data</strong> refers to data collected automatically.
             </li>
             <li>
-              <strong>Website</strong> refers to Felizbay, accessible from{' '}
-              <a href="https://felizbay.com">https://felizbay.com</a>
+              <strong>Website</strong> refers to Inflatable Pool Factory, accessible from{' '}
+              <a href="https://inflatablepoolfactory.com">https://inflatablepoolfactory.com</a>
             </li>
             <li>
               <strong>You</strong> means the individual accessing or using the Service.
@@ -281,8 +286,8 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'P
           <h2 id="contact-us">Contact Us</h2>
           <p>If you have any questions about this Privacy Policy, You can contact us:</p>
           <ul>
-            <li>By email: info@felizbay.com</li>
-            <li>By mail: New Mexico, USA</li>
+            <li>By email: info@inflatablepoolfactory.com</li>
+            <li>By mail: Qingdao, Shandong, China</li>
           </ul>
         </div>
       </section>

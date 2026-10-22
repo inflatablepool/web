@@ -8,9 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const TMP_DIR = path.join(ROOT, '.cache', 'webp-tmp');
 
-const IMAGE_ROOT = 'D:\\Felizbay Aluminum Hull RIB boat图片';
-const R2_BUCKET = 'felizbay-assets';
-const R2_BASE_PATH = 'images/Felizbay/products/rib';
+const IMAGE_ROOT = 'D:\\Inflatable Pool Factory Aluminum Hull RIB boat图片';
+const R2_BUCKET = 'inflatable-pool-factory-assets';
+const R2_BASE_PATH = 'images/inflatable-pool-factory/products/rib';
 const WEBP_QUALITY = 80;
 const MAX_WIDTH = 2000;
 

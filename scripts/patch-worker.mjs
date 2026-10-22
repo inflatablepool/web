@@ -22,7 +22,8 @@ try {
     stdio: ['pipe', 'pipe', 'pipe'],
   });
   const list = JSON.parse(output);
-  const ns = list.find((n) => n.title === 'multi-session') || list.find((n) => n.title === 'Felizbay-session');
+  const ns =
+    list.find((n) => n.title === 'multi-session') || list.find((n) => n.title === 'inflatable-pool-factory-session');
   if (ns && existsSync(wranglerJson)) {
     const config = JSON.parse(readFileSync(wranglerJson, 'utf-8'));
     config.kv_namespaces = [{ binding: 'SESSION', id: ns.id }];

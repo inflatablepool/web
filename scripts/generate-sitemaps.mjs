@@ -4,7 +4,7 @@ import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const PUBLIC = path.join(ROOT, 'public');
-const BASE = 'https://felizbay.com';
+const BASE = 'https://inflatablepoolfactory.com';
 
 const EXCLUDE_PREFIXES = ['/keystatic/', '/admin/', '/login/', '/register/', '/api/', '/404/', '/500/'];
 const EXCLUDE_EXACT = new Set(['/brand/', '/v2/']);
@@ -127,7 +127,7 @@ const TYPE_BY_PREFIX = [
   ['/gallery', 'media'],
   ['/solutions/', 'service'],
   ['/oem-odm-manufacturer', 'service'],
-  ['/Felizbay-story', 'brand'],
+  ['/inflatable-pool-factory-story', 'brand'],
   ['/marine-industry', 'industry'],
   ['/contact', 'service'],
   ['/warranty', 'support'],
@@ -165,7 +165,7 @@ function entityXml(pages) {
       `  <url>\n    <loc>${BASE}${p}</loc>${hreflangLinks(p, pages)}\n    <x:entity>${entity}</x:entity>\n    <x:type>${type}</x:type>\n    <priority>${PRIORITY_BY_TYPE[type] || '0.5'}</priority>\n  </url>`
     );
   }
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:x="https://felizbay.com/geo" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${rows.join('\n')}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:x="https://inflatablepoolfactory.com/geo" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${rows.join('\n')}\n</urlset>\n`;
 }
 
 function simpleXml(urls, changefreq, pages) {
@@ -179,7 +179,7 @@ function simpleXml(urls, changefreq, pages) {
 const AI_TOP_SECTIONS = [
   '/',
   '/about/',
-  '/about/Felizbay/',
+  '/about/inflatable-pool-factory/',
   '/products/',
   '/faq/',
   '/academy/',
@@ -194,7 +194,7 @@ const AI_TOP_SECTIONS = [
   '/contact/',
   '/size-guide/',
   '/randdcenter/',
-  '/Felizbay-story/',
+  '/inflatable-pool-factory-story/',
   '/gallery/',
   '/warranty/',
   '/quality/',

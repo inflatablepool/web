@@ -111,7 +111,7 @@ const ACCEPT_LANG_MAP: Record<string, string> = {
   in: 'id',
 };
 
-const ASSETS_BASE = 'https://assets.felizbay.com';
+const ASSETS_BASE = 'https://assets.inflatablepoolfactory.com';
 const I18N_EXCLUDED = [
   '/api',
   '/keystatic',

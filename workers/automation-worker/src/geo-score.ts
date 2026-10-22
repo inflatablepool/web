@@ -46,7 +46,7 @@ export async function geoScore(env: Env): Promise<Response> {
       const maxScore = items.length;
 
       return {
-        url: `https://felizbay.com${url}`,
+        url: `https://inflatablepoolfactory.com${url}`,
         llmsTxt: hasLlmsTxt,
         llmsFullTxt: hasLlmsFullTxt,
         entityJson: hasEntityJson,

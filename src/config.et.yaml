@@ -1,6 +1,6 @@
 site:
-  name: Felizbay
-  site: 'https://felizbay.com'
+  name: Inflatable Pool Factory
+  site: 'https://inflatablepoolfactory.com'
   base: '/'
   trailingSlash: true
   googleSiteVerificationId: ''
@@ -8,14 +8,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'Felizbay | Inflatable Swimming Pools — Drop Stitch Backyard Pools'
-    template: '%s — Felizbay'
-  description: 'Premium drop stitch inflatable swimming pools by Felizbay. Rigid walls, quick inflation, and easy winter storage.'
+    default: 'Inflatable Pool Factory | Inflatable Swimming Pools — Drop Stitch Backyard Pools'
+    template: '%s — Inflatable Pool Factory'
+  description: 'Premium drop stitch inflatable swimming pools by Inflatable Pool Factory. Rigid walls, quick inflation, and easy winter storage.'
   robots:
     index: true
     follow: true
   keywords:
-    - Felizbay
+    - Inflatable Pool Factory
     - inflatable swimming pool
     - drop stitch pool
     - inflatable pool

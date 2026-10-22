@@ -2,11 +2,11 @@ hero:
   tagline: Σχετικά με εμάς
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Φουσκωτή πισίνα Felizbay
+    alt: Φουσκωτή πισίνα Inflatable Pool Factory
   title: |
     Κάνοντας το κολύμπι απλό, <br />
-    με το στυλ <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Το Felizbay είναι μια premium μάρκα φουσκωτή πισίνα Drop Stitch που σχεδιάστηκε και λειτουργεί από την Aquafarer LLC (ΗΠΑ). Πιστεύουμε ότι κάθε οικογένεια αξίζει μια πραγματική πισίνα στην πίσω αυλή — χωρίς κατασκευή, άδειες ή μόνιμη εγκατάσταση. Οι πισίνες μας φουσκώνουν άκαμπτες μέσα σε λίγα λεπτά, επιβιώνουν σε ολόκληρα καλοκαίρια οικογενειακής διασκέδασης και μαζεύονται μικρές στο τέλος της σεζόν.
+    με το στυλ <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Το Inflatable Pool Factory είναι μια premium μάρκα φουσκωτή πισίνα Drop Stitch που σχεδιάστηκε από Inflatable Pool Team · Qingdao Vatrad Group. Πιστεύουμε ότι κάθε οικογένεια αξίζει μια πραγματική πισίνα στην πίσω αυλή — χωρίς κατασκευή, άδειες ή μόνιμη εγκατάσταση. Οι πισίνες μας φουσκώνουν άκαμπτες μέσα σε λίγα λεπτά, επιβιώνουν σε ολόκληρα καλοκαίρια οικογενειακής διασκέδασης και μαζεύονται μικρές στο τέλος της σεζόν.
 stats:
   title: Με τους αριθμούς
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Ονομαστική πίεση
       amount: 4-5 PSI
     - title: Επαφή
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Αυτό που χτίζουμε
   subtitle: Μια εστιασμένη σειρά προϊόντων που γνωρίζουμε από μέσα προς τα έξω — φουσκωτές πισίνες Drop Stitch υψηλής πίεσης.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay ορθογώνια φουσκωτή πισίνα Drop Stitch
+    alt: Inflatable Pool Factory ορθογώνια φουσκωτή πισίνα Drop Stitch
 steps2_values:
   title: Οι αξίες μας
   subtitle: Τρεις αρχές που διαμορφώνουν κάθε πισίνα που κατασκευάζουμε.
@@ -64,15 +64,15 @@ steps2_values:
       description: Κατασκευή Drop Stitch υψηλής πίεσης, δοκιμασμένη πάνω από την ονομαστική της πίεση, πριν από οποιαδήποτε πλοία πισίνας.
       icon: tabler:settings
     - title: Υποστήριξη που διαρκεί περισσότερο από τη σεζόν
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Ορόσημα
-  subtitle: Μια σύντομη εκδοχή της ιστορίας του Felizbay.
+  subtitle: Μια σύντομη εκδοχή της ιστορίας του Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Επικεντρώθηκε στις φουσκωτές πισίνες
-      description: 'Η Felizbay ιδρύθηκε με ένα μόνο επίκεντρο: φουσκωτές πισίνες premium drop stitch.'
+      description: 'Η Inflatable Pool Factory ιδρύθηκε με ένα μόνο επίκεντρο: φουσκωτές πισίνες premium drop stitch.'
       icon: tabler:pool
     - title: Τρεις συλλογές υπογραφών
       description: Ορθογώνιες, στρογγυλές μπλε και στρογγυλές γκρι γραμμές πισίνας, καθεμία με προαιρετικά καλύμματα και προσαρμοσμένα μεγέθη.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Δικτυακός τόπος
-      description: felizbay.com — περιηγηθείτε στις πισίνες μας και ζητήστε μια προσφορά.
+      description: inflatablepoolfactory.com — περιηγηθείτε στις πισίνες μας και ζητήστε μια προσφορά.
     - title: OEM / Χονδρική
       description: Προσαρμοσμένα μεγέθη, χρώματα και επωνυμία διαθέσιμα για επιχειρηματικούς συνεργάτες.
 brand_hub_tagline: Προϊόντα
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Αριστεία Παραγωγής
   title: Εξασφάλιση εξαιρετικής χειροτεχνίας
-  description: Η γραμμή παραγωγής Felizbay είναι αφιερωμένη σε υψηλής ποιότητας, ανθεκτικές και υψηλής πίεσης φουσκωτές πισίνες.
+  description: Η γραμμή παραγωγής Inflatable Pool Factory είναι αφιερωμένη σε υψηλής ποιότητας, ανθεκτικές και υψηλής πίεσης φουσκωτές πισίνες.
   cards:
     - title: Ομάδα έμπειρων τεχνικών
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Παγκόσμια Απήχηση
   title_html: Μία μάρκα, <span class="text-white/90">παγκόσμια αποστολή</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Συλλογές πισίνας

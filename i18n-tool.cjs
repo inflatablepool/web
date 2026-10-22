@@ -353,7 +353,7 @@ const commands = {
   // Show usage
   help() {
     console.log(`
-i18n-tool — Felizbay i18n management
+i18n-tool — Inflatable Pool Factory i18n management
 
 Usage: node i18n-tool.cjs <command> [args]
 

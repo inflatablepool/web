@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Trimite-ne un mesaj
   subtitle: Pentru oferte, întrebări tehnice sau întrebări de parteneriat, scrieți-ne. Răspundem în termen de o zi lucrătoare.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Trimiteți întrebarea → Obțineți o cotație
   success_message: Mulţumesc! Mesajul dvs. a ajuns în căsuța noastră de e-mail. Vă vom răspunde în termen de o zi lucrătoare.
   error_message: A apărut o eroare la trimiterea mesajului dvs. Vă rugăm să încercați din nou sau să ne trimiteți un e-mail direct.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: vă rugăm să rezolvați următoarele'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Dimensiuni, culori, coperți, branding și ambalaje personalizate.
       icon: tabler:palette
     - title: E-mail
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Site-ul web
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Timp de răspuns
       description: Răspundem în termen de o zi lucrătoare.
       icon: tabler:clock
 map:
   title: Luați legătura
-  subtitle: Contactați Felizbay
-  address: felizbay.com
+  subtitle: Contactați Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

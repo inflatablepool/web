@@ -19,7 +19,7 @@ const OUT = path.join(ROOT, 'tools', '_work', 'endiff.json');
 const langs = ['fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da'];
 const EXPLICIT_COMPARE = new Set([
   'aluminum-vs-fiberglass',
-  'Felizbay-vs-traditional-manufacturers',
+  'inflatable-pool-factory-vs-traditional-manufacturers',
   'commercial-vs-recreational-rib',
   'inflatable-vs-hardboard',
   'pvc-vs-hypalon',

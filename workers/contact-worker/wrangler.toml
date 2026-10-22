@@ -1,9 +1,9 @@
-name = "felizbay-contact"
+name = "inflatable-pool-factory-contact"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
-routes = [{ pattern = "felizbay.com/api/contact*", zone_name = "felizbay.com" }]
+routes = [{ pattern = "inflatablepoolfactory.com/api/contact*", zone_name = "inflatablepoolfactory.com" }]
 
 # Secrets (set via `wrangler secret put`, NOT here):
 #   CONTACT_RESEND_API_KEY  — Resend API key for the admin notification email
@@ -11,10 +11,10 @@ routes = [{ pattern = "felizbay.com/api/contact*", zone_name = "felizbay.com" }]
 #   CONTACT_FROM_EMAIL      — sender email
 #   CONTACT_FROM_NAME       — sender display name
 
-# D1 (created via: wrangler d1 create Felizbay-db) — shared with admin-worker
+# D1 (created via: wrangler d1 create inflatable-pool-factory-db) — shared with admin-worker
 [[d1_databases]]
 binding = "DB"
-database_name = "Felizbay-db"
+database_name = "inflatable-pool-factory-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 migrations_dir = "../../migrations"
 
@@ -23,4 +23,4 @@ migrations_dir = "../../migrations"
 # back through the admin-worker (R2 is not public).
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "felizbay-data"
+bucket_name = "inflatable-pool-factory-data"

@@ -2,7 +2,7 @@
  * Drop-Stitch Pool catalog data — series, sizes, FOB Qingdao prices,
  * standard inclusions and optional accessories.
  *
- * Source of truth: Felizbay quotation sheet (price basis: 20 pcs per item,
+ * Source of truth: Inflatable Pool Factory quotation sheet (price basis: 20 pcs per item,
  * FOB Qingdao, USD) and core product series & specifications sheet.
  */
 

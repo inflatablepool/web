@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Piscines haut de gamme avec parois rigides drop-stitch qui se gonflent en quelques minutes et se rangent pour l'hiver — conçues pour la détente dans le jardin et le plaisir en famille.<br />
     Explorez les tailles de piscine, comparez les caractéristiques et trouvez celle qui convient le mieux à votre espace.<br />
-    Conçu et exploité par Aquafarer LLC, États-Unis.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Magasiner les piscines
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscine gonflable rectangulaire Drop Stitch Felizbay dans une cour
+    alt: Piscine gonflable rectangulaire Drop Stitch Inflatable Pool Factory dans une cour
 stats:
-  title: Felizbay en un coup d'œil
+  title: Inflatable Pool Factory en un coup d'œil
   columns: 4
   stats:
     - title: Collections de piscine
@@ -36,11 +36,11 @@ stats:
     - title: Tailles personnalisées
       amount: Available
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Technologie Drop Stitch
-  title: Pourquoi une piscine Felizbay<br />est différent
+  title: Pourquoi une piscine Inflatable Pool Factory<br />est différent
   subtitle: La construction Drop Stitch à haute pression rend nos piscines rigides, durables et faciles à ranger.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Pour les entreprises
   title: Piscines pour entreprises,<br />Aussi
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pour les partenaires commerciaux</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory pour les partenaires commerciaux</h3>
   items:
     - title: Locations de vacances et hospitalité
       description: 'Équipements saisonniers pour les locations de vacances, les sites de glamping et les propriétés de charme : rapides à déployer, faciles à entretenir et simples à stocker.'
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Entretien et sécurité
   title: Facile à posséder,<br />Facile à aimer
-  subtitle: De la livraison à la première baignade en passant par le stockage de fin de saison, posséder une piscine Felizbay reste simple.
+  subtitle: De la livraison à la première baignade en passant par le stockage de fin de saison, posséder une piscine Inflatable Pool Factory reste simple.
   items:
     - title: Configuration en quelques minutes
       description: 'Déballez et gonflez avec la pompe incluse en 5 à 15 minutes, puis remplissez avec un tuyau d''arrosage — le temps de remplissage varie en fonction de la taille de la piscine et de l''approvisionnement en eau.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscine gonflable ronde Drop Stitch Felizbay
+    alt: Piscine gonflable ronde Drop Stitch Inflatable Pool Factory
 blog_latest:
   title: Guides et informations sur la piscine
   information: |
     Guides d'installation, conseils d'entretien et conseils d'achat pour piscines gonflables
-    de l'équipe Felizbay.
+    de l'équipe Inflatable Pool Factory.
 faqs:
   title: FAQ sur les piscines gonflables
-  subtitle: Questions courantes sur les piscines gonflables Felizbay.
+  subtitle: Questions courantes sur les piscines gonflables Inflatable Pool Factory.
   columns: 2
   items:
     - title: Combien de temps prend l'installation ?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Qu'est-ce qui est inclus avec la piscine ?
-      description: Chaque piscine Felizbay comprend une pompe à air électrique, un kit de réparation et un sac de rangement. Les modèles ronds ont un couvercle ajusté en option.
+      description: Chaque piscine Inflatable Pool Factory comprend une pompe à air électrique, un kit de réparation et un sac de rangement. Les modèles ronds ont un couvercle ajusté en option.
       icon: tabler:box
       category: all
     - title: Quelles tailles sont disponibles ?

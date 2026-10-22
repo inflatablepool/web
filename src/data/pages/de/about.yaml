@@ -2,11 +2,11 @@ hero:
   tagline: Über uns
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Aufblasbares Felizbay-Schwimmbecken
+    alt: Aufblasbares Inflatable Pool Factory-Schwimmbecken
   title: |
     Schwimmen einfach machen, <br />
-    auf <span class="text-accent dark:text-white">Felizbay</span>-Art
-  subtitle: Felizbay ist eine Premium-Marke für aufblasbare Drop-Stitch-Pools, die von Aquafarer LLC (USA) entwickelt und betrieben wird. Wir glauben, dass jede Familie einen echten Pool im Hinterhof verdient – ​​ohne Bauarbeiten, Genehmigungen oder dauerhafte Installation. Unsere Pools sind in wenigen Minuten fest aufgeblasen, überstehen ganze Sommer voller Familienspaß und lassen sich am Ende der Saison klein zusammenpacken.
+    auf <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-Art
+  subtitle: Inflatable Pool Factory ist eine Premium-Marke für aufblasbare Drop-Stitch-Pools, entwickelt von Inflatable Pool Team · Qingdao Vatrad Group. Wir glauben, dass jede Familie einen echten Pool im Hinterhof verdient – ​​ohne Bauarbeiten, Genehmigungen oder dauerhafte Installation. Unsere Pools sind in wenigen Minuten fest aufgeblasen, überstehen ganze Sommer voller Familienspaß und lassen sich am Ende der Saison klein zusammenpacken.
 stats:
   title: Anhand der Zahlen
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nenndruck
       amount: 4-5 PSI
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Was wir bauen
   subtitle: Eine fokussierte Produktlinie, die wir in- und auswendig kennen – aufblasbare Hochdruck-Drop-Stitch-Schwimmbecken.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rechteckiges aufblasbares Drop-Stitch-Schwimmbecken
+    alt: Inflatable Pool Factory rechteckiges aufblasbares Drop-Stitch-Schwimmbecken
 steps2_values:
   title: Unsere Werte
   subtitle: Drei Prinzipien, die jeden von uns gebauten Pool prägen.
@@ -64,15 +64,15 @@ steps2_values:
       description: Hochdruck-Drop-Stitch-Konstruktion, getestet über dem Nenndruck, bevor der Pool ausgeliefert wird.
       icon: tabler:settings
     - title: Unterstützung, die die Saison überdauert
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Meilensteine
-  subtitle: Eine Kurzversion der Felizbay-Geschichte.
+  subtitle: Eine Kurzversion der Inflatable Pool Factory-Geschichte.
   isReversed: true
   items:
     - title: Konzentriert sich auf aufblasbare Pools
-      description: 'Felizbay wurde mit einem einzigen Fokus gegründet: aufblasbare Premium-Drop-Stitch-Schwimmbecken.'
+      description: 'Inflatable Pool Factory wurde mit einem einzigen Fokus gegründet: aufblasbare Premium-Drop-Stitch-Schwimmbecken.'
       icon: tabler:pool
     - title: Drei Signature-Kollektionen
       description: Rechteckige, runde blaue und runde graue Poollinien, jeweils mit optionalen Abdeckungen und Sondergrößen.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-Mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Webseite
-      description: felizbay.com – stöbern Sie in unseren Pools und fordern Sie ein Angebot an.
+      description: inflatablepoolfactory.com – stöbern Sie in unseren Pools und fordern Sie ein Angebot an.
     - title: OEM / Großhandel
       description: Für Geschäftspartner sind individuelle Größen, Farben und Branding möglich.
 brand_hub_tagline: Produkte
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Produktionsexzellenz
   title: Gewährleistung exquisiter Handwerkskunst
-  description: Die Felizbay-Produktionslinie ist auf hochwertige, langlebige, aufblasbare Hochdruck-Schwimmbecken spezialisiert.
+  description: Die Inflatable Pool Factory-Produktionslinie ist auf hochwertige, langlebige, aufblasbare Hochdruck-Schwimmbecken spezialisiert.
   cards:
     - title: Erfahrenes Technikerteam
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Globale Reichweite
   title_html: Eine Marke, <span class="text-white/90">Weltweiter Versand</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Pool-Kollektionen

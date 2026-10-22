@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Piscinas premium con paredes rígidas drop-stitch que se inflan en minutos y se guardan para el invierno, diseñadas para relajarse en el patio trasero y divertirse en familia.<br />
     Explore los tamaños de piscinas, compare características y encuentre la opción adecuada para su espacio.<br />
-    Diseñado y operado por Aquafarer LLC, EE. UU.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Comprar piscinas
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscina inflable rectangular Felizbay drop stitch en un patio trasero
+    alt: Piscina inflable rectangular Inflatable Pool Factory drop stitch en un patio trasero
 stats:
-  title: Felizbay de un vistazo
+  title: Inflatable Pool Factory de un vistazo
   columns: 4
   stats:
     - title: Colecciones de piscinas
@@ -36,11 +36,11 @@ stats:
     - title: Tamaños personalizados
       amount: Available
     - title: Contacto
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Tecnología Drop Stitch
-  title: Por qué una piscina Felizbay<br />es diferente
+  title: Por qué una piscina Inflatable Pool Factory<br />es diferente
   subtitle: La construcción Drop Stitch de alta presión hace que nuestras piscinas sean rígidas, duraderas y fáciles de almacenar.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Para empresas
   title: Piscinas para Negocios,<br />También
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay para socios comerciales</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory para socios comerciales</h3>
   items:
     - title: Alquileres vacacionales y hostelería
       description: 'Servicios de temporada para huéspedes para alquileres vacacionales, sitios de glamping y propiedades boutique: rápidos de implementar, fáciles de mantener y fáciles de almacenar.'
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Cuidado y seguridad
   title: fácil de poseer,<br />fácil de amar
-  subtitle: Desde la entrega hasta el primer baño y el almacenamiento al final de la temporada, ser propietario de una piscina Felizbay sigue siendo sencillo.
+  subtitle: Desde la entrega hasta el primer baño y el almacenamiento al final de la temporada, ser propietario de una piscina Inflatable Pool Factory sigue siendo sencillo.
   items:
     - title: Configuración en minutos
       description: 'Desembale e infle con la bomba incluida en 5 a 15 minutos, luego llénelo con una manguera de jardín; el tiempo de llenado varía según el tamaño de la piscina y el suministro de agua.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscina hinchable Felizbay round drop stitch
+    alt: Piscina hinchable Inflatable Pool Factory round drop stitch
 blog_latest:
   title: Guías e información sobre piscinas
   information: |
     Guías de instalación, consejos de cuidado y consejos de compra para piscinas inflables
-    del equipo Felizbay.
+    del equipo Inflatable Pool Factory.
 faqs:
   title: Preguntas frecuentes sobre piscinas inflables
-  subtitle: Preguntas habituales sobre las piscinas hinchables Felizbay.
+  subtitle: Preguntas habituales sobre las piscinas hinchables Inflatable Pool Factory.
   columns: 2
   items:
     - title: ¿Cuánto tiempo lleva la configuración?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: ¿Qué incluye la piscina?
-      description: Cada piscina Felizbay incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos redondos tienen una cubierta incorporada opcional.
+      description: Cada piscina Inflatable Pool Factory incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos redondos tienen una cubierta incorporada opcional.
       icon: tabler:box
       category: all
     - title: ¿Qué tallas hay disponibles?

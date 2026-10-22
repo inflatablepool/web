@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Premium πισίνες με άκαμπτους τοίχους drop-stitch που φουσκώνουν μέσα σε λίγα λεπτά και συσκευάζονται για χειμώνα — σχεδιασμένες για χαλάρωση στην πίσω αυλή και οικογενειακή διασκέδαση.<br />
     Εξερευνήστε τα μεγέθη της πισίνας, συγκρίνετε χαρακτηριστικά και βρείτε τη σωστή εφαρμογή για τον χώρο σας.<br />
-    Σχεδιάστηκε και λειτουργεί από την Aquafarer LLC, ΗΠΑ.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Πισίνες καταστημάτων
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
+    alt: Inflatable Pool Factory ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
 stats:
-  title: Το Felizbay με μια ματιά
+  title: Το Inflatable Pool Factory με μια ματιά
   columns: 4
   stats:
     - title: Συλλογές πισίνας
@@ -36,11 +36,11 @@ stats:
     - title: Προσαρμοσμένα μεγέθη
       amount: Available
     - title: Επαφή
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Τεχνολογία Drop Stitch
-  title: Γιατί μια πισίνα Felizbay<br />Είναι Διαφορετικό
+  title: Γιατί μια πισίνα Inflatable Pool Factory<br />Είναι Διαφορετικό
   subtitle: Η κατασκευή Drop Stitch υψηλής πίεσης κάνει τις πισίνες μας άκαμπτες, ανθεκτικές και αβίαστη στην αποθήκευση.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Για Επιχειρήσεις
   title: Πισίνες για Επιχειρήσεις,<br />Πολύ
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay για επιχειρηματικούς εταίρους</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory για επιχειρηματικούς εταίρους</h3>
   items:
     - title: Ενοικιάσεις διακοπών και φιλοξενίας
       description: Εποχικές ανέσεις επισκεπτών για ενοικιάσεις διακοπών, τοποθεσίες με λάμπινγκ και μπουτίκ — γρήγορη ανάπτυξη, εύκολη συντήρηση, απλή αποθήκευση.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Φροντίδα & Ασφάλεια
   title: Εύκολο στην κατοχή,<br />Εύκολο να αγαπάς
-  subtitle: Από την παράδοση μέχρι το πρώτο κολύμπι μέχρι την αποθήκευση στο τέλος της σεζόν, η ιδιοκτησία μιας πισίνας Felizbay παραμένει απλή.
+  subtitle: Από την παράδοση μέχρι το πρώτο κολύμπι μέχρι την αποθήκευση στο τέλος της σεζόν, η ιδιοκτησία μιας πισίνας Inflatable Pool Factory παραμένει απλή.
   items:
     - title: Ρύθμιση σε λεπτά
       description: 'Αποσυσκευάστε και φουσκώστε με την αντλία που περιλαμβάνεται σε 5-15 λεπτά και μετά γεμίστε με έναν εύκαμπτο σωλήνα κήπου — ο χρόνος πλήρωσης ποικίλλει ανάλογα με το μέγεθος της πισίνας και την παροχή νερού.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay στρογγυλή φουσκωτή πισίνα Drop Stitch
+    alt: Inflatable Pool Factory στρογγυλή φουσκωτή πισίνα Drop Stitch
 blog_latest:
   title: Pool Guides & Insights
   information: |
     Οδηγοί εγκατάστασης, συμβουλές φροντίδας και συμβουλές αγοράς για φουσκωτές πισίνες
-    από την ομάδα Felizbay.
+    από την ομάδα Inflatable Pool Factory.
 faqs:
   title: Συχνές ερωτήσεις για φουσκωτή πισίνα
-  subtitle: Συνήθεις ερωτήσεις σχετικά με τις φουσκωτές πισίνες Felizbay.
+  subtitle: Συνήθεις ερωτήσεις σχετικά με τις φουσκωτές πισίνες Inflatable Pool Factory.
   columns: 2
   items:
     - title: Πόσο χρόνο διαρκεί η εγκατάσταση;
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Τι περιλαμβάνει η πισίνα;
-      description: Κάθε πισίνα Felizbay περιλαμβάνει ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Τα στρογγυλά μοντέλα διαθέτουν προαιρετικά τοποθετημένο κάλυμμα.
+      description: Κάθε πισίνα Inflatable Pool Factory περιλαμβάνει ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Τα στρογγυλά μοντέλα διαθέτουν προαιρετικά τοποθετημένο κάλυμμα.
       icon: tabler:box
       category: all
     - title: Τι μεγέθη είναι διαθέσιμα;

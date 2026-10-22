@@ -8,10 +8,10 @@
 - **平台**（6 个）：ChatGPT（含联网）、Claude、Gemini、Perplexity、Microsoft Copilot、Google AI Overviews。
 - **方法**：每个平台新开会话（关闭个性化/记忆，地区设为 US），逐字复制 §2 的问题，不添加任何自定义指令。
 - **每问记录 4 项**：
-  1. **提及**（Mention）：回答中是否出现 Felizbay（是/否/竞品替代）
-  2. **引用 URL**（Citations）：回答引用或列出的 felizbay.com 链接（逐条记录）
+  1. **提及**（Mention）：回答中是否出现 Inflatable Pool Factory（是/否/竞品替代）
+  2. **引用 URL**（Citations）：回答引用或列出的 inflatablepoolfactory.com 链接（逐条记录）
   3. **准确性**（Accuracy）：✅ 正确 / ⚠️ 部分正确（有事实错误或过时）/ ❌ 错误
-  4. **排名**（Position）：Felizbay 在推荐列表中的位次（如 "3/8"）
+  4. **排名**（Position）：Inflatable Pool Factory 在推荐列表中的位次（如 "3/8"）
 
 ## 2. 固定问题集 v1（2026-10-21 冻结）
 
@@ -19,14 +19,14 @@
 
 **品牌/实体（Brand & Entity）**
 
-1. `What is Felizbay?`
-2. `Who manufactures Felizbay inflatable pools?`
-3. `Where are Felizbay pools made?`
+1. `What is Inflatable Pool Factory?`
+2. `Who manufactures Inflatable Pool Factory inflatable pools?`
+3. `Where are Inflatable Pool Factory pools made?`
 
 **产品（Product）**
 
 4. `What is a drop stitch inflatable pool?`
-5. `Are Felizbay inflatable pools rigid when inflated?`
+5. `Are Inflatable Pool Factory inflatable pools rigid when inflated?`
 6. `What pressure does a drop stitch pool hold?`
 
 **B2B 采购（Sourcing）**
@@ -39,16 +39,16 @@
 
 **长尾（Long-tail / Guide citation）**
 
-12. `How long does the Felizbay pool pressure test take?`
+12. `How long does the Inflatable Pool Factory pool pressure test take?`
 
 ## 3. 记录模板
 
 ```markdown
 ### Round N — YYYY-MM-DD（平台 X）
 
-| #   | 问题              | 提及 | 引用 URL              | 准确性 | 排名 | 备注 |
-| --- | ----------------- | ---- | --------------------- | ------ | ---- | ---- |
-| 1   | What is Felizbay? | 是   | https://felizbay.com/ | ✅     | 1/5  | —    |
+| #   | 问题                             | 提及 | 引用 URL                           | 准确性 | 排名 | 备注 |
+| --- | -------------------------------- | ---- | ---------------------------------- | ------ | ---- | ---- |
+| 1   | What is Inflatable Pool Factory? | 是   | https://inflatablepoolfactory.com/ | ✅     | 1/5  | —    |
 ```
 
 ## 4. 基础设施自查清单（每轮复测先跑一遍）
@@ -56,7 +56,7 @@
 ```bash
 for u in llms.txt llms-full.txt ai-sitemap.xml knowledge-sitemap.xml \
          sitemap-index.xml robots.txt .well-known/entity.json merchant-feed.xml; do
-  curl -s -o /dev/null -w "%{http_code} $u\n" "https://felizbay.com/$u"
+  curl -s -o /dev/null -w "%{http_code} $u\n" "https://inflatablepoolfactory.com/$u"
 done
 # 全部期望 200
 ```
@@ -65,7 +65,7 @@ done
 
 ```bash
 # Vectorize 语义检索（期望返回 guides/ 页面且 score > 0.6）
-curl -s -X POST https://felizbay.com/api/search \
+curl -s -X POST https://inflatablepoolfactory.com/api/search \
   -H "Content-Type: application/json" \
   -d '{"query":"wholesale drop stitch pool FOB price"}' | head -c 400
 ```
@@ -94,6 +94,6 @@ curl -s -X POST https://felizbay.com/api/search \
 
 ## 6. 判读标准（复测时对照）
 
-- **提及率** = 提及 Felizbay 的问题数 / 12。基线建立后目标：品牌题（1–3）≥ 2/3，采购题（7–11）≥ 3/5。
+- **提及率** = 提及 Inflatable Pool Factory 的问题数 / 12。基线建立后目标：品牌题（1–3）≥ 2/3，采购题（7–11）≥ 3/5。
 - **引用 URL** 应指向本站高价值页：`/guides/*`、`/products/specs`、`/wholesale`、`/oem-odm`。若 AI 引用的是低价值页（如分页/标签页），说明 ai-corpus / llms.txt 的权重需要调整。
 - **准确性**：出现 ⚠️/❌ 时先核对是否站内数据口径不一致（价格、压力、认证），修站内数据优先于任何"AI 优化"。

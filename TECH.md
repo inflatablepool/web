@@ -1,10 +1,10 @@
-# Felizbay 网站技术架构文档
+# Inflatable Pool Factory 网站技术架构文档
 
 > 最后更新: 2026-10-21 (P6 WebP 图片迁移: 15 张 >100KB 产品图转 WebP 1600px q82, 18.5MB→0.85MB; 蜜罐误伤修复: Contact.astro 页面 JS 提交前删除 email_confirm 字段, 事故复盘见 docs/technical-audit-2026-10.md §2.1; R2 自动 prune: fast-upload-r2.mjs 每次 deploy 自动清理本地已删除的 R2 对象; www→apex 301: Cloudflare Redirect Rule 单跳路径保留; 完整审计记录见 docs/technical-audit-2026-10.md)
-> 项目路径: `D:\Github\Felizbay`
-> 在线网址: https://felizbay.com (Cloudflare Pages + 5 Workers)
+> 项目路径: `D:\Github\Inflatable Pool Factory`
+> 在线网址: https://inflatablepoolfactory.com (Cloudflare Pages + 5 Workers)
 > 构建命令: `npm run build` → 输出到 `dist/` 目录
-> 部署命令: `npx wrangler pages deploy dist/ --project-name felizbay`
+> 部署命令: `npx wrangler pages deploy dist/ --project-name inflatable-pool-factory`
 
 ---
 
@@ -40,8 +40,8 @@
 | 包管理   | npm (package-lock.json, CI 使用 `npm ci`)                                                                      |
 | Node     | >= 22.12.0                                                                                                     |
 | 主机     | **Cloudflare Pages** (静态文件) + **Cloudflare Workers** (API)                                                 |
-| 数据库   | **Cloudflare D1** (`Felizbay-db`: inquiry, news, rate_limit, better-auth 表)                                   |
-| 存储     | **Cloudflare R2** (felizbay-assets, felizbay-data)                                                             |
+| 数据库   | **Cloudflare D1** (`inflatable-pool-factory-db`: inquiry, news, rate_limit, better-auth 表)                    |
+| 存储     | **Cloudflare R2** (inflatable-pool-factory-assets, inflatable-pool-factory-data)                               |
 | CMS      | Keystatic (本地 CMS, 在 `/keystatic` 路由)                                                                     |
 | 认证     | better-auth (Google OAuth + 邮箱密码, D1 会话, Turnstile)                                                      |
 | 插件     | `@astrojs/sitemap`, `@astrojs/mdx`, `astro-icon`, `astro-seo`, `@astrojs/markdown-remark`, `astro-auto-import` |
@@ -102,7 +102,7 @@
 │   │   │   ├── industries/       # 行业 Landing Pages (2026)
 │   │   │   │   ├── schools.astro      # SUP/皮划艇学校方案
 │   │   │   │   └── distributors.astro # 经销商合作方案
-│   │   │   ├── why-Felizbay.astro # 品牌差异化 (3 支柱: commercial / idea-to-market / global)
+│   │   │   ├── why-inflatable-pool-factory.astro # 品牌差异化 (3 支柱: commercial / idea-to-market / global)
 │   │   │   ├── factory/
 │   │   │   │   ├── index.astro       # 工厂总览
 │   │   │   │   ├── capacity.astro    # 生产能力
@@ -310,7 +310,7 @@ localizeHref() (src/i18n/routing.ts): 匹配 LOCALIZED_ROUTES → 添加 /{lang}
 - 本地化 YAML 文件 (`navigation.zh.yaml` 等) **仅供 Keystatic CMS 编辑参考**，不会影响渲染
 - 实际的翻译数据在 `i18n-config.json` 中
 - 添加新导航项后，务必检查 `navTextMap` 和 `i18n-config.json` 是否同步更新
-- **新增品牌/行业页面的导航项**: `Why Felizbay` (Company)、`For Schools` (Solutions)、`For Distributors` (Solutions) 已同步更新到 `navigation.yaml`
+- **新增品牌/行业页面的导航项**: `Why Inflatable Pool Factory` (Company)、`For Schools` (Solutions)、`For Distributors` (Solutions) 已同步更新到 `navigation.yaml`
 
 ### 4.6 翻译键命名约定
 
@@ -349,7 +349,7 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 
 **翻译缓存:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
 
-**不翻译规则:** 技术术语 (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) 所有语言保留原文。同源词 (如法语 "Certifications" = EN "Certifications") 也保留原文——Google Translate 也返回相同值。
+**不翻译规则:** 技术术语 (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Inflatable Pool Factory) 所有语言保留原文。同源词 (如法语 "Certifications" = EN "Certifications") 也保留原文——Google Translate 也返回相同值。
 
 ---
 
@@ -604,23 +604,23 @@ rec (本地化 ProductRecord) → 页面各 section 渲染
 
 项目有 **5 个独立的 Cloudflare Workers** (+ 共享代码目录 `workers/shared/`):
 
-> `seo-worker` (Felizbay-seo) 已于 2026-08-18 删除 — 其端点 (search/geo-score/page-inspect/seo/*) 均为硬编码演示响应, 无生产调用, 且 CI 不部署。
+> `seo-worker` (inflatable-pool-factory-seo) 已于 2026-08-18 删除 — 其端点 (search/geo-score/page-inspect/seo/*) 均为硬编码演示响应, 无生产调用, 且 CI 不部署。
 
-| Worker     | 名称                  | 路由                                                                                   | 存储                 | 用途                                                                                                 |
-| ---------- | --------------------- | -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
-| Admin      | `felizbay-admin`      | `/api/admin/*`, `/api/auth/*`                                                          | D1, R2 (data)        | better-auth 认证, GitHub CRUD, D1 查询, 询盘 CSV 导出 + 附件下载                                     |
-| AI         | `felizbay-ai`         | `/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*` | Vectorize, R2 (data) | AI 问答/搜索/嵌入 + 知识库增量重建 (cron: 每天 3AM, corpus 哈希跳过) + R2 限流/答案缓存/每日嵌入预算 |
-| Automation | `felizbay-automation` | `/api/automation/*`                                                                    | R2 (data), D1        | 定时任务 (cron: 每天 2AM, D1 清理 + IndexNow)                                                        |
-| Contact    | `felizbay-contact`    | `/api/contact*`                                                                        | D1, R2 (data)        | 联系表单 (Turnstile + 限流 + D1 存储 + 可选附件上传 R2)                                              |
-| News       | `felizbay-news`       | `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*`                 | D1 (news 表)         | 新闻/RSS/新闻 sitemap (D1 驱动, 无静态页)                                                            |
+| Worker     | 名称                                 | 路由                                                                                   | 存储                 | 用途                                                                                                 |
+| ---------- | ------------------------------------ | -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| Admin      | `inflatable-pool-factory-admin`      | `/api/admin/*`, `/api/auth/*`                                                          | D1, R2 (data)        | better-auth 认证, GitHub CRUD, D1 查询, 询盘 CSV 导出 + 附件下载                                     |
+| AI         | `inflatable-pool-factory-ai`         | `/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*` | Vectorize, R2 (data) | AI 问答/搜索/嵌入 + 知识库增量重建 (cron: 每天 3AM, corpus 哈希跳过) + R2 限流/答案缓存/每日嵌入预算 |
+| Automation | `inflatable-pool-factory-automation` | `/api/automation/*`                                                                    | R2 (data), D1        | 定时任务 (cron: 每天 2AM, D1 清理 + IndexNow)                                                        |
+| Contact    | `inflatable-pool-factory-contact`    | `/api/contact*`                                                                        | D1, R2 (data)        | 联系表单 (Turnstile + 限流 + D1 存储 + 可选附件上传 R2)                                              |
+| News       | `inflatable-pool-factory-news`       | `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*`                 | D1 (news 表)         | 新闻/RSS/新闻 sitemap (D1 驱动, 无静态页)                                                            |
 
-**D1 数据库 `Felizbay-db`** (admin/contact/news/automation 共享) 主要表:
+**D1 数据库 `inflatable-pool-factory-db`** (admin/contact/news/automation 共享) 主要表:
 
 - `inquiry` — 联系表单提交 (IP/UA/语言/附件 R2 key `logoKey`)
 - `news` — 新闻文章 (news-worker + admin 撰写)
 - `rate_limit` — 联系表单按 IP 限流 (每 IP 每小时 5 次)
 - `user` / `session` / `account` / `verification` / `rateLimit` — better-auth 会话管理与认证限流
-- 迁移位于 `migrations/`，由 `wrangler d1 migrations apply Felizbay-db` 应用 (CI 首次部署自动执行)
+- 迁移位于 `migrations/`，由 `wrangler d1 migrations apply inflatable-pool-factory-db` 应用 (CI 首次部署自动执行)
 
 ### 7.1 3MB Worker 限制
 
@@ -651,7 +651,7 @@ npm run deploy:workers
 
 ### 7.3 管理员认证配置 (better-auth)
 
-管理后台登录 (`/login`, `/keystatic/*`) 使用 **better-auth**，运行在 `felizbay-admin` Worker 上（`workers/shared/auth.ts` 是共享配置）：
+管理后台登录 (`/login`, `/keystatic/*`) 使用 **better-auth**，运行在 `inflatable-pool-factory-admin` Worker 上（`workers/shared/auth.ts` 是共享配置）：
 
 | 项目       | 说明                                                                                   |
 | ---------- | -------------------------------------------------------------------------------------- |
@@ -665,13 +665,13 @@ npm run deploy:workers
 **Secrets（通过 `wrangler secret put` 或 CI `secret bulk` 设置）:**
 
 ```bash
-npx wrangler secret put BETTER_AUTH_SECRET --name felizbay-admin   # 会话签名密钥 (openssl rand -base64 32)
-npx wrangler secret put ADMIN_EMAILS --name felizbay-admin         # 管理员邮箱列表
-npx wrangler secret put GOOGLE_CLIENT_ID --name felizbay-admin     # Google OAuth
-npx wrangler secret put GOOGLE_CLIENT_SECRET --name felizbay-admin
-npx wrangler secret put TURNSTILE_SECRET_KEY --name felizbay-admin # 登录验证码
-npx wrangler secret put GITHUB_TOKEN --name felizbay-admin         # CMS 内容写入 PAT
-npx wrangler secret put SESSION_SECRET --name felizbay-admin       # legacy HMAC 回退
+npx wrangler secret put BETTER_AUTH_SECRET --name inflatable-pool-factory-admin   # 会话签名密钥 (openssl rand -base64 32)
+npx wrangler secret put ADMIN_EMAILS --name inflatable-pool-factory-admin         # 管理员邮箱列表
+npx wrangler secret put GOOGLE_CLIENT_ID --name inflatable-pool-factory-admin     # Google OAuth
+npx wrangler secret put GOOGLE_CLIENT_SECRET --name inflatable-pool-factory-admin
+npx wrangler secret put TURNSTILE_SECRET_KEY --name inflatable-pool-factory-admin # 登录验证码
+npx wrangler secret put GITHUB_TOKEN --name inflatable-pool-factory-admin         # CMS 内容写入 PAT
+npx wrangler secret put SESSION_SECRET --name inflatable-pool-factory-admin       # legacy HMAC 回退
 ```
 
 > `SESSION_SECRET` + `src/lib/auth.ts` (HMAC-SHA256) 保留为 **legacy 回退**，与旧 cookie (`ks-admin-session`) 兼容；新登录全部走 better-auth cookie (`csr_session`)。`ADMIN_USERNAME / ADMIN_PASSWORD_HASH` 与 `src/data/admin-auth.json` 同样仅作 legacy 回退，不推荐继续使用。
@@ -691,7 +691,7 @@ Cloudflare Pages 自带的中间件, 在请求到达静态文件之前执行:
 
 **主要功能**:
 
-1. **R2 资源跳转**: 将 `/images/*` 和 `/files/*` 请求 301 重定向到 `https://assets.felizbay.com`
+1. **R2 资源跳转**: 将 `/images/*` 和 `/files/*` 请求 301 重定向到 `https://assets.inflatablepoolfactory.com`
 2. **国际化检测**: 检测用户语言, 非英语用户 302 重定向到对应语言版本
 3. **管理员页面保护**: `/keystatic`, `/admin` 路径的访问控制
 
@@ -737,7 +737,7 @@ const target = `/${lang}/solutions/fishing-boat-solutions`;
 <title>Redirecting to: {target}</title>
 <meta http-equiv="refresh" content={`0;url=${target}`} />
 <meta name="robots" content="noindex" />
-<link rel="canonical" href={`https://felizbay.com${target}`} />
+<link rel="canonical" href={`https://inflatablepoolfactory.com${target}`} />
 <body>
   <a href={target}>Redirecting to {target}</a>
 </body>
@@ -749,10 +749,10 @@ const target = `/${lang}/solutions/fishing-boat-solutions`;
 
 ### 9.1 Bucket 配置
 
-| Bucket 名称       | 绑定名        | 用途                       |
-| ----------------- | ------------- | -------------------------- |
-| `felizbay-assets` | `ASSETS_R2`   | 静态资产 (图片, 文件)      |
-| `felizbay-data`   | `DATA_BUCKET` | 数据 (AI 索引, 自动化任务) |
+| Bucket 名称                      | 绑定名        | 用途                       |
+| -------------------------------- | ------------- | -------------------------- |
+| `inflatable-pool-factory-assets` | `ASSETS_R2`   | 静态资产 (图片, 文件)      |
+| `inflatable-pool-factory-data`   | `DATA_BUCKET` | 数据 (AI 索引, 自动化任务) |
 
 ### 9.2 资产上传与自动 prune (2026-10)
 
@@ -760,7 +760,7 @@ const target = `/${lang}/solutions/fishing-boat-solutions`;
 npm run build:r2   # 或 node scripts/fast-upload-r2.mjs
 ```
 
-上传后的资产通过 `https://assets.felizbay.com/...` 访问。
+上传后的资产通过 `https://assets.inflatablepoolfactory.com/...` 访问。
 
 **自动 prune**: `fast-upload-r2.mjs` 在每次上传后自动清理 R2 中"本地已不存在"的过期对象（覆盖 `data/`、`images/`、`files/` 前缀）。护栏：
 
@@ -775,7 +775,7 @@ npm run build:r2   # 或 node scripts/fast-upload-r2.mjs
 静态文件中的图片 URL 会被重写:
 
 - 原始: `/images/product/foo.jpg`
-- 重写后: `https://assets.felizbay.com/images/product/foo.jpg`
+- 重写后: `https://assets.inflatablepoolfactory.com/images/product/foo.jpg`
 
 由 `functions/_middleware.ts` 处理: 匹配 `/images/*` 和 `/files/*` → 301 重定向到 `ASSETS_BASE`。
 
@@ -840,7 +840,7 @@ guard (探测 CLOUDFLARE_API_TOKEN/ACCOUNT_ID → enabled=true|false)
 用户请求
   ↓
 Cloudflare CDN (全球边缘网络)
-  ├─ www.felizbay.com/* → apex 301 (Dashboard Redirect Rule, 单跳, 路径保留 — 2026-10 配置, 非 _redirects)
+  ├─ www.inflatablepoolfactory.com/* → apex 301 (Dashboard Redirect Rule, 单跳, 路径保留 — 2026-10 配置, 非 _redirects)
   ├─ Pages Functions (_middleware.ts) → 语言检测 / 重定向
   └─ 静态文件 (dist/)
        ├─ / → index.html (英语首页)
@@ -867,7 +867,7 @@ API / 动态请求
 | **Node 版本**        | >= 22.12.0                        | 项目强制要求                     |
 | **包管理**           | npm                               | `npm ci` (CI) / `npm install`    |
 | **静态输出**         | `dist/`                           | `output: 'static'`, 无适配器     |
-| **D1 数据库**        | `Felizbay-db`                     | inquiry/news/rate_limit/auth 表  |
+| **D1 数据库**        | `inflatable-pool-factory-db`      | inquiry/news/rate_limit/auth 表  |
 
 ### 10.3 部署命令
 
@@ -1043,7 +1043,7 @@ Set-Content -Path file.astro -Value $newContent
 **验证命令**:
 
 ```bash
-curl -sL -o /dev/null -w "%{http_code}" https://felizbay.com/en/solutions-fishing-boat-solutions/
+curl -sL -o /dev/null -w "%{http_code}" https://inflatablepoolfactory.com/en/solutions-fishing-boat-solutions/
 # 期望: 200 (跟随重定向到 /en/solutions/fishing-boat-solutions/)
 ```
 
@@ -1257,7 +1257,7 @@ applier (`tools/i18n-apply.mjs`) 开发中实际踩过的坑:
 
 ### 11.23 机器可读字段保持英文 (审计白名单)
 
-审计扫描时以下字段命中 EN 值属于**设计如此**, 不要"修复": JSON-LD、meta、image alt、href/slug、`.source` 路由、公司名 (`customer`/`company` 键)、邮寄地址、`color`/`badge` class、认证代号 (CE/ISO/USCG)、测试标准 (`standard` 键, 如 ASTM D751)、对比矩阵规格单元格 (`premium` 键)、阀门品牌名 (Halkey-Roberts/Leafield/Boston)、真实地名、产品型号 (如 RIB 600 Patrol)、`custom.yaml` 的 `hero.tagline` ("Felizbay Custom Lab")。完整键名排除表见 `tools/i18n-audit.mjs` 的 `NOISE_KEY`, 字面值排除表见同文件的 `MACHINE_VALUES`。
+审计扫描时以下字段命中 EN 值属于**设计如此**, 不要"修复": JSON-LD、meta、image alt、href/slug、`.source` 路由、公司名 (`customer`/`company` 键)、邮寄地址、`color`/`badge` class、认证代号 (CE/ISO/USCG)、测试标准 (`standard` 键, 如 ASTM D751)、对比矩阵规格单元格 (`premium` 键)、阀门品牌名 (Halkey-Roberts/Leafield/Boston)、真实地名、产品型号 (如 RIB 600 Patrol)、`custom.yaml` 的 `hero.tagline` ("Inflatable Pool Factory Custom Lab")。完整键名排除表见 `tools/i18n-audit.mjs` 的 `NOISE_KEY`, 字面值排除表见同文件的 `MACHINE_VALUES`。
 
 ---
 
@@ -1309,7 +1309,7 @@ applier (`tools/i18n-apply.mjs`) 开发中实际踩过的坑:
 
 ### 12.5 R2 资产
 
-- 静态图片/文件上传到 R2 后, 通过 `https://assets.felizbay.com/...` 访问
+- 静态图片/文件上传到 R2 后, 通过 `https://assets.inflatablepoolfactory.com/...` 访问
 - 上传命令: `node scripts/fast-upload-r2.mjs`
 - `functions/_middleware.ts` 自动将 `/images/*` 和 `/files/*` 重定向到 R2
 
@@ -1430,7 +1430,7 @@ npm run check:i18n     # 仅 i18n 翻译检查
 后台管理系统位于 `/keystatic/*` 路由，提供 CMS 功能（编辑产品、文章、页面、导航等）。系统采用 **静态构建 + Worker API 的混合架构**：
 
 - **前端**: Astro 静态页面 (`output: 'static'`)，所有 admin 页面在构建时预渲染
-- **API**: Cloudflare Worker (`felizbay-admin`) 处理认证、GitHub 读写、D1 查询
+- **API**: Cloudflare Worker (`inflatable-pool-factory-admin`) 处理认证、GitHub 读写、D1 查询
 - **认证**: better-auth（Google OAuth + 邮箱密码，D1 会话，Turnstile 验证码）
 - **存储**: 内容读写 GitHub 仓库（REST API，draft 分支编辑 → publish 合并）；提交记录/用户会话存 D1
 
@@ -1450,7 +1450,7 @@ npm run check:i18n     # 仅 i18n 翻译检查
           ▼                         ▼
 ┌──────────────────┐    ┌──────────────────────────┐
 │  Cloudflare Pages │    │  Cloudflare Worker       │
-│  dist/ (静态文件)  │    │  felizbay-admin         │
+│  dist/ (静态文件)  │    │  inflatable-pool-factory-admin         │
 │                   │    │                          │
 │  /keystatic/*     │    │  better-auth (D1 会话)   │
 │  /login           │    │  /api/admin/list         │
@@ -1464,7 +1464,7 @@ npm run check:i18n     # 仅 i18n 翻译检查
                     ┌────────────────┴───────────────┐
                     ▼                                ▼
         ┌────────────────────────┐      ┌────────────────────┐
-        │  GitHub REST API        │      │  D1 (Felizbay-db)  │
+        │  GitHub REST API        │      │  D1 (inflatable-pool-factory-db)  │
         │  api.github.com         │      │  user/session/      │
         │  GET/PUT/POST contents  │      │  account/verification│
         │  POST merges (draft→main)│      │  inquiry (提交记录)  │

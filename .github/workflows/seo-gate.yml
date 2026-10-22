@@ -85,6 +85,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: 检查三条产品线落地页 / OEM-ODM 主路径 / 首页必需词 / schema 统一 / 禁用表述
-        run: python3 scripts/07_positioning_check.py --strict --base https://felizbay.com
+        run: python3 scripts/07_positioning_check.py --strict --base https://inflatablepoolfactory.com
         # 画像：RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM/ODM Solution
         # 阻断项（19 项清单）→ exit 1；告警（5 项）仅提示

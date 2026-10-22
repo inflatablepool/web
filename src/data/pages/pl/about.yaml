@@ -2,11 +2,11 @@ hero:
   tagline: O nas
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Nadmuchiwany basen Felizbay
+    alt: Nadmuchiwany basen Inflatable Pool Factory
   title: |
     Ułatwienie pływania, <br />
-    w stylu <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay to marka premium nadmuchiwanych basenów Drop Stitch, zaprojektowana i obsługiwana przez Aquafarer LLC (USA). Wierzymy, że każda rodzina zasługuje na prawdziwy basen na podwórku – bez budowy, pozwoleń i stałej instalacji. Nasze baseny napompowują się do sztywności w ciągu kilku minut, przetrwają pełne rodzinnej zabawy lato i pakują się do niewielkich rozmiarów pod koniec sezonu.
+    w stylu <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory to marka premium nadmuchiwanych basenów Drop Stitch, zaprojektowana przez Inflatable Pool Team · Qingdao Vatrad Group. Wierzymy, że każda rodzina zasługuje na prawdziwy basen na podwórku – bez budowy, pozwoleń i stałej instalacji. Nasze baseny napompowują się do sztywności w ciągu kilku minut, przetrwają pełne rodzinnej zabawy lato i pakują się do niewielkich rozmiarów pod koniec sezonu.
 stats:
   title: Według liczb
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Ciśnienie znamionowe
       amount: 4-5 PSI
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Co budujemy
   subtitle: Skoncentrowana linia produktów, którą znamy na wylot — wysokociśnieniowe nadmuchiwane baseny Drop Stitch.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Prostokątny nadmuchiwany basen Felizbay Drop Stitch
+    alt: Prostokątny nadmuchiwany basen Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: Nasze wartości
   subtitle: Trzy zasady, które kształtują każdy basen, który budujemy.
@@ -64,15 +64,15 @@ steps2_values:
       description: Wysokociśnieniowa konstrukcja Drop Stitch, testowana powyżej ciśnienia znamionowego przed każdym statkiem basenowym.
       icon: tabler:settings
     - title: Wsparcie, które przetrwa sezon
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Kamienie milowe
-  subtitle: Krótka wersja historii Felizbay.
+  subtitle: Krótka wersja historii Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Koncentruje się na nadmuchiwanych basenach
-      description: 'Firma Felizbay została założona z jednym celem: najwyższej jakości nadmuchiwanymi basenami typu drop-stitch.'
+      description: 'Firma Inflatable Pool Factory została założona z jednym celem: najwyższej jakości nadmuchiwanymi basenami typu drop-stitch.'
       icon: tabler:pool
     - title: Trzy autorskie kolekcje
       description: Prostokątne, okrągłe niebieskie i okrągłe szare linie basenowe, każdy z opcjonalnymi pokrywami i niestandardowymi rozmiarami.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Strona internetowa
-      description: felizbay.com — przeglądaj nasze baseny i poproś o wycenę.
+      description: inflatablepoolfactory.com — przeglądaj nasze baseny i poproś o wycenę.
     - title: OEM / sprzedaż hurtowa
       description: Niestandardowe rozmiary, kolory i branding dostępne dla partnerów biznesowych.
 brand_hub_tagline: Produkty
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Doskonałość produkcji
   title: Zapewnienie wyśmienitego kunsztu
-  description: Linia produkcyjna Felizbay dedykowana jest wysokiej jakości, trwałym, wysokociśnieniowym basenom dmuchanym.
+  description: Linia produkcyjna Inflatable Pool Factory dedykowana jest wysokiej jakości, trwałym, wysokociśnieniowym basenom dmuchanym.
   cards:
     - title: Doświadczony zespół techników
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Globalny zasięg
   title_html: Jedna marka, <span class="text-white/90">wysyłka na cały świat</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Kolekcje basenowe

@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: ส่งข้อความถึงเรา
   subtitle: สำหรับการเสนอราคา คำถามทางเทคนิค หรือสอบถามเกี่ยวกับความร่วมมือ โปรดโทรหาเรา เราตอบกลับภายในหนึ่งวันทำการ
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: ส่งคำถาม → รับใบเสนอราคา
   success_message: ขอบคุณ! ข้อความของคุณเข้าสู่กล่องจดหมายของเราแล้ว เราจะตอบกลับภายในหนึ่งวันทำการ
   error_message: เกิดข้อผิดพลาดในการส่งข้อความของคุณ โปรดลองอีกครั้งหรือส่งอีเมลถึงเราโดยตรง
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'ป้องกันสแปม: โปรดแก้ไขปัญหาต่อไปนี้'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: ขนาด สี ปก การสร้างแบรนด์ และบรรจุภัณฑ์ที่กำหนดเอง
       icon: tabler:palette
     - title: อีเมล
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: เว็บไซต์
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: เวลาตอบสนอง
       description: เราตอบกลับภายในหนึ่งวันทำการ
       icon: tabler:clock
 map:
   title: ได้รับการติดต่อ
-  subtitle: ติดต่อFelizbay
-  address: felizbay.com
+  subtitle: ติดต่อInflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

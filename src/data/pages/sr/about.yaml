@@ -2,11 +2,11 @@ hero:
   tagline: O nama
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay bazen na naduvavanje
+    alt: Inflatable Pool Factory bazen na naduvavanje
   title: |
     Učinite plivanje jednostavnim, <br />
-    na <span class="text-accent dark:text-white">Felizbay</span> način
-  subtitle: Felizbay je vrhunski brend bazena na naduvavanje Drop Stitch koji je dizajnirao i kojim upravlja Aquafarer LLC (SAD). Verujemo da svaka porodica zaslužuje pravi bazen u dvorištu - bez izgradnje, dozvola ili stalne instalacije. Naši bazeni se čvrsto naduvaju za nekoliko minuta, preživljavaju puna leta porodične zabave i spakuju se malo na kraju sezone.
+    na <span class="text-accent dark:text-white">Inflatable Pool Factory</span> način
+  subtitle: Inflatable Pool Factory je vrhunski brend bazena na naduvavanje Drop Stitch koji je dizajnirao Inflatable Pool Team · Qingdao Vatrad Group. Verujemo da svaka porodica zaslužuje pravi bazen u dvorištu - bez izgradnje, dozvola ili stalne instalacije. Naši bazeni se čvrsto naduvaju za nekoliko minuta, preživljavaju puna leta porodične zabave i spakuju se malo na kraju sezone.
 stats:
   title: Po brojevima
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nazivni pritisak
       amount: 4-5 PSI
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Ono što gradimo
   subtitle: Fokusirana linija proizvoda koju poznajemo iznutra — bazeni na naduvavanje Drop Stitch pod visokim pritiskom.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay pravougaoni bazen na naduvavanje Drop Stitch
+    alt: Inflatable Pool Factory pravougaoni bazen na naduvavanje Drop Stitch
 steps2_values:
   title: Naše vrednosti
   subtitle: Tri principa koji oblikuju svaki bazen koji izgradimo.
@@ -64,7 +64,7 @@ steps2_values:
       description: Konstrukcija Drop Stitch visokog pritiska, testirana iznad svog nominalnog pritiska, pre bilo kakvog bazena.
       icon: tabler:settings
     - title: Podrška koja nadmašuje sezonu
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Prekretnice
@@ -72,7 +72,7 @@ steps2_milestones:
   isReversed: true
   items:
     - title: Fokusiran na bazene na naduvavanje
-      description: 'Felizbay je osnovan sa jednim fokusom: vrhunski bazeni na naduvavanje drop stitch.'
+      description: 'Inflatable Pool Factory je osnovan sa jednim fokusom: vrhunski bazeni na naduvavanje drop stitch.'
       icon: tabler:pool
     - title: Tri kolekcije potpisa
       description: Pravougaone, okrugle plave i okrugle sive linije bazena, svaka sa opcionim poklopcima i prilagođenim veličinama.
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Vebsite
       description: felizbai.com — pregledajte naše bazene i zatražite ponudu.
     - title: OEM / Veleprodaja
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Production Ekcellence
   title: Obezbeđivanje izuzetne izrade
-  description: Proizvodna linija Felizbay je posvećena visokokvalitetnim, izdržljivim bazenima na naduvavanje pod visokim pritiskom.
+  description: Proizvodna linija Inflatable Pool Factory je posvećena visokokvalitetnim, izdržljivim bazenima na naduvavanje pod visokim pritiskom.
   cards:
     - title: Tim iskusnih tehničara
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Global Reach
   title_html: Jedan brend, <span class="text-white/90">slanje širom sveta</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Kolekcije bazena

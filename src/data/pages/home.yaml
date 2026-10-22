@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Premium pools with rigid drop-stitch walls that inflate in minutes and pack away for winter — designed for backyard relaxation and family fun.<br />
     Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Designed by the Inflatable Pool Team at Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Shop Pools
@@ -18,10 +18,10 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
+    alt: Inflatable Pool Factory rectangular drop stitch inflatable swimming pool in a backyard
 
 stats:
-  title: Felizbay at a Glance
+  title: Inflatable Pool Factory at a Glance
   columns: 4
   stats:
     - title: Pool Collections
@@ -37,7 +37,7 @@ stats:
     - title: Custom Sizes
       amount: Available
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 
 compare_collections:
   tagline: Compare Collections
@@ -69,7 +69,7 @@ compare_collections:
 features:
   id: features
   tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
+  title: 'Why an Inflatable Pool Factory Pool<br />Is Different'
   subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
   columns: 2
   items:
@@ -138,7 +138,7 @@ content_workshop:
   tagline: For Businesses
   title: 'Pools for Business,<br />Too'
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory for business partners</h3>
   items:
     - title: 'Vacation Rentals & Hospitality'
       description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
@@ -150,7 +150,7 @@ content_workshop:
 content_compliance:
   tagline: Care & Safety
   title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  subtitle: 'From delivery to first swim to end-of-season storage, owning an Inflatable Pool Factory pool stays simple.'
   items:
     - title: 'Setup in Minutes'
       description: 'Unbox and inflate with the included pump in 5-15 minutes, then fill with a garden hose — filling time varies with pool size and water supply.'
@@ -182,17 +182,17 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay round drop stitch inflatable swimming pool
+    alt: Inflatable Pool Factory round drop stitch inflatable swimming pool
 
 blog_latest:
   title: Pool Guides & Insights
   information: |
     Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
+    from the Inflatable Pool Factory team.
 
 faqs:
   title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  subtitle: 'Common questions about Inflatable Pool Factory inflatable swimming pools.'
   columns: 2
   items:
     - title: How long does setup take?
@@ -212,7 +212,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+      description: 'Every Inflatable Pool Factory pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
       icon: tabler:box
       category: all
     - title: What sizes are available?

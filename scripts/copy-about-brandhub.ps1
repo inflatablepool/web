@@ -15,9 +15,9 @@ brand_hub_cards:
     desc: Shipping to 50+ countries from our Qingdao facility with authorized service partners across Europe, Asia-Pacific, and the Americas.
     link: /brand-global-presence
     link_label: 'Learn more →'
-  - title: Why Felizbay
+  - title: Why Inflatable Pool Factory
     desc: Vertical integration, dual certification (ISO 9001 + BSCI), CE compliance, and low MOQs — built for brands, distributors, and government agencies.
-    link: /brand-why-Felizbay
+    link: /brand-why-inflatable-pool-factory
     link_label: 'Learn more →'
 '@
 

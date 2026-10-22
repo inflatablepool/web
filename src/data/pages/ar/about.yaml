@@ -2,11 +2,11 @@ hero:
   tagline: معلومات عنا
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: حوض سباحة قابل للنفخ في Felizbay
+    alt: حوض سباحة قابل للنفخ في Inflatable Pool Factory
   title: |
     جعل السباحة بسيطة، <br />
-    على طريقة <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay هي علامة تجارية فاخرة لحمام السباحة القابل للنفخ Drop Stitch تم تصميمها وإدارتها بواسطة Aquafarer LLC (الولايات المتحدة الأمريكية). نحن نؤمن بأن كل عائلة تستحق حمام سباحة حقيقي في الفناء الخلفي - بدون بناء أو تصاريح أو تركيب دائم. يتم نفخ حمامات السباحة الخاصة بنا بشكل قوي في دقائق، وتظل على قيد الحياة في الصيف الكامل من المرح العائلي، ويتم تعبئتها بكميات صغيرة في نهاية الموسم.
+    على طريقة <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory هي علامة تجارية فاخرة لحمام السباحة القابل للنفخ Drop Stitch من قبل Inflatable Pool Team · Qingdao Vatrad Group. نحن نؤمن بأن كل عائلة تستحق حمام سباحة حقيقي في الفناء الخلفي - بدون بناء أو تصاريح أو تركيب دائم. يتم نفخ حمامات السباحة الخاصة بنا بشكل قوي في دقائق، وتظل على قيد الحياة في الصيف الكامل من المرح العائلي، ويتم تعبئتها بكميات صغيرة في نهاية الموسم.
 stats:
   title: بالأرقام
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: الضغط المقدر
       amount: 4-5 PSI
     - title: اتصال
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: ما نبنيه
   subtitle: خط إنتاج مركّز نعرفه من الداخل إلى الخارج - حمامات سباحة قابلة للنفخ Drop Stitch عالية الضغط.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل من Felizbay
+    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل من Inflatable Pool Factory
 steps2_values:
   title: قيمنا
   subtitle: ثلاثة مبادئ تشكل كل حمام سباحة نبنيه.
@@ -64,15 +64,15 @@ steps2_values:
       description: هيكل Drop Stitch عالي الضغط، تم اختباره أعلى من الضغط المقدر، قبل شحن أي حمام سباحة.
       icon: tabler:settings
     - title: الدعم الذي يدوم هذا الموسم
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: المعالم
-  subtitle: نسخة قصيرة من قصة Felizbay.
+  subtitle: نسخة قصيرة من قصة Inflatable Pool Factory.
   isReversed: true
   items:
     - title: تركز على حمامات السباحة القابلة للنفخ
-      description: 'تم تأسيس Felizbay بتركيز واحد: برك سباحة Drop Stitch قابلة للنفخ فاخرة.'
+      description: 'تم تأسيس Inflatable Pool Factory بتركيز واحد: برك سباحة Drop Stitch قابلة للنفخ فاخرة.'
       icon: tabler:pool
     - title: ثلاث مجموعات التوقيع
       description: خطوط حمام سباحة مستطيلة، وزرقاء مستديرة، ورمادية مستديرة، كل منها مزود بأغطية اختيارية وأحجام مخصصة.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: بريد إلكتروني
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: موقع إلكتروني
-      description: felizbay.com - تصفح حمامات السباحة لدينا واطلب عرض أسعار.
+      description: inflatablepoolfactory.com - تصفح حمامات السباحة لدينا واطلب عرض أسعار.
     - title: تصنيع المعدات الأصلية / بالجملة
       description: الأحجام والألوان والعلامات التجارية المخصصة متاحة لشركاء الأعمال.
 brand_hub_tagline: منتجات
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: التميز في الإنتاج
   title: ضمان براعة رائعة
-  description: إن خط إنتاج Felizbay مخصص لحمامات السباحة القابلة للنفخ عالية الجودة والمتينة وعالية الضغط.
+  description: إن خط إنتاج Inflatable Pool Factory مخصص لحمامات السباحة القابلة للنفخ عالية الجودة والمتينة وعالية الضغط.
   cards:
     - title: فريق فني من ذوي الخبرة
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: الوصول العالمي
   title_html: علامة تجارية واحدة، <span class="text-white/90">الشحن في جميع أنحاء العالم</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: مجموعات حمامات السباحة

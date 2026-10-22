@@ -1,9 +1,10 @@
-# Felizbay — Astro 7 Multilingual Platform
+# Inflatable Pool Factory — Astro 7 Multilingual Platform
 
-Multilingual (37 languages) water sports equipment site for **Felizbay**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
+Multilingual (37 languages) water sports equipment site for **Inflatable Pool Factory**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Scale:** ~645 pages across 37 languages, 0 build errors
-**Domains:** `felizbay.com` (production; `www.felizbay.com/*` → apex via Cloudflare Redirect Rule, 301 single-hop, path-preserving), `assets.felizbay.com` (R2 asset storage)
+**Domains:** `inflatablepoolfactory.com` (production; `www.inflatablepoolfactory.com/*` → apex via Cloudflare Redirect Rule, 301 single-hop, path-preserving), `assets.inflatablepoolfactory.com` (R2 asset storage)
+**Legal identity:** Inflatable Pool Team at Qingdao Vatrad Group · Qingdao, Shandong, China · `info@inflatablepoolfactory.com`
 
 **2026-10 architecture snapshot** (latest changes): P6 WebP image migration — 15 product images >100KB converted to WebP 1600px q82 (18.5MB → 0.85MB, -97%), 215 refs × 97 files updated, Lighthouse product-page perf 46 → 67 live (LCP 15.3s → 3.5s) · honeypot false-positive fix — `Contact.astro` page JS strips `email_confirm` from the payload before submit (browsers/password managers autofilled the field and silently dropped real inquiries; post-mortem in `docs/technical-audit-2026-10.md` §2.1) · R2 auto-prune — `fast-upload-r2.mjs` deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) on every deploy, guarded (>200 stale aborts, prune failure never fails deploy) · technical audit record — `docs/technical-audit-2026-10.md` (48/50 audit findings, inquiry T1–T5 tests, www 301 verification), AI visibility protocol — `docs/ai-visibility-baseline.md`.
 
@@ -62,7 +63,7 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 ## 1. Architecture Overview
 
 ```
-Request → felizbay.com/{lang}/{path}
+Request → inflatablepoolfactory.com/{lang}/{path}
               ↓
     ┌──────────────────────┐
     │ Cloudflare CDN       │  ← Brotli/gzip, HTTP/3, WAF
@@ -71,7 +72,7 @@ Request → felizbay.com/{lang}/{path}
               ↓
     ┌──────────────────────┐
     │ Routes:              │
-    │  felizbay.com/*    → Pages (static HTML via Cloudflare Pages)
+    │  inflatablepoolfactory.com/*    → Pages (static HTML via Cloudflare Pages)
     │  /api/contact*      → contact-worker
     │  /news*, /rss.xml   → news-worker (D1-backed news + RSS)
     │  /api/chat*, /ask*  → ai-worker
@@ -83,20 +84,20 @@ Request → felizbay.com/{lang}/{path}
     ┌──────────────────────┐
     │ Pages Functions      │  ← _middleware.ts
     │  - Locale detection  │     (cookie → geo-ip → Accept-Language)
-    │  - R2 asset redirect │     (/images/* → assets.felizbay.com)
+    │  - R2 asset redirect │     (/images/* → assets.inflatablepoolfactory.com)
     │  - Security headers  │
     └──────────────────────┘
               ↓
     ┌──────────────────────┐
     │ R2 Buckets:          │
-    │  felizbay-assets   → Static images/files/PDFs
-    │  felizbay-data     → SEO/GEO data, search index, rules
+    │  inflatable-pool-factory-assets   → Static images/files/PDFs
+    │  inflatable-pool-factory-data     → SEO/GEO data, search index, rules
     └──────────────────────┘
 ```
 
 All pages are pre-rendered at build time (pure SSG, no SSR adapter). API Workers handle dynamic requests at the edge.
 
-All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay.com/de/guides`.
+All locale URLs use **path-based** format: `inflatablepoolfactory.com/fr/products`, `inflatablepoolfactory.com/de/guides`.
 
 ---
 
@@ -115,7 +116,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 | Auth            | better-auth (Google OAuth, D1-backed sessions, Turnstile)                                     |
 | Frontend Host   | Cloudflare Pages (Direct Upload)                                                              |
 | Backend Workers | 5 Workers: contact, ai, admin, automation, news                                               |
-| Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, auth)                              |
+| Database        | Cloudflare D1 (`inflatable-pool-factory-db`: inquiries, news, rate_limit, auth)               |
 | Asset Storage   | Cloudflare R2 (assets + data buckets)                                                         |
 | CI/CD           | GitHub Actions (ci.yml PR gate + deploy.yml on main + ai-index.yml post-deploy index rebuild) |
 | SEO/GEO         | llms.txt (37 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
@@ -135,13 +136,13 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  │  ├── about.astro            # About page
 │  │  │  ├── brand/                 # Brand hub
 │  │  │  │  ├── index.astro         # Brand index
-│  │  │  │  ├── Felizbay.astro     # Felizbay entity page
+│  │  │  │  ├── inflatable-pool-factory.astro     # Inflatable Pool Factory entity page
 │  │  │  │  └── team.astro          # Team entity (founder, leadership, 6 profiles)
 │  │  │  ├── brand-story.astro      # Brand story
 │  │  │  ├── brand-marine-expertise.astro # Marine engineering expertise
 │  │  │  ├── brand-global-presence.astro  # Global presence
-│  │  │  ├── brand-why-Felizbay.astro    # Why Felizbay (legacy)
-│  │  │  ├── why-Felizbay.astro          # Why Felizbay (3-pillar brand page)
+│  │  │  ├── brand-why-inflatable-pool-factory.astro    # Why Inflatable Pool Factory (legacy)
+│  │  │  ├── why-inflatable-pool-factory.astro          # Why Inflatable Pool Factory (3-pillar brand page)
 │  │  │  ├── industries/
 │  │  │  │  ├── schools.astro             # School equipment solutions
 │  │  │  │  └── distributors.astro        # Distributor partnership program
@@ -232,7 +233,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  ├── pages/                    # Page YAML content (root = EN, subdir = per locale)
 │  │  │  ├── home.yaml
 │  │  │  ├── about.yaml
-│  │  │  ├── why-Felizbay.yaml     # 3-pillar brand page
+│  │  │  ├── why-inflatable-pool-factory.yaml     # 3-pillar brand page
 │  │  │  ├── industries-schools.yaml
 │  │  │  ├── industries-distributors.yaml
 │  │  │  ├── solutions-clubs.yaml
@@ -298,11 +299,11 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 
 ## 4. Workers
 
-### 4.1 contact-worker (felizbay-contact)
+### 4.1 contact-worker (inflatable-pool-factory-contact)
 
-- **Route:** `felizbay.com/api/contact*`
+- **Route:** `inflatablepoolfactory.com/api/contact*`
 - **Methods:** `POST`
-- **Bindings:** `DB` (D1 — `Felizbay-db`), `DATA_BUCKET` (R2 — `felizbay-data`, inquiry attachments)
+- **Bindings:** `DB` (D1 — `inflatable-pool-factory-db`), `DATA_BUCKET` (R2 — `inflatable-pool-factory-data`, inquiry attachments)
 - **Features:**
   - JSON + HTML form body parsing with validation (firstName, lastName, company, address, zip, country, email, tel, subject, message)
   - **Multipart file upload** (optional `file` field): max 20 MB; extension allow-list (png, jpg, jpeg, svg, webp, pdf, ai, psd, dwg, dxf, zip); magic-number content sniffing per extension; stored to R2 at `inquiry-files/{uuid}.{ext}` before the D1 insert, with the key saved in the `inquiry.logoKey` column
@@ -315,9 +316,9 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
   - CORS headers
 - **Secrets:** `CONTACT_RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `CONTACT_FROM_EMAIL`, `CONTACT_FROM_NAME`, `TURNSTILE_SECRET_KEY`
 
-### 4.2 ai-worker (felizbay-ai)
+### 4.2 ai-worker (inflatable-pool-factory-ai)
 
-- **Routes:** `felizbay.com/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*`
+- **Routes:** `inflatablepoolfactory.com/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*`
 - **Bindings:** `AI` (Workers AI), `VECTORIZE` (ai-index-v2), `DATA_BUCKET` (R2 — reindex state/meta/log + rate-limit counters, answer cache, daily quota)
 - **Cron:** daily 03:00 UTC — R2 housekeeping (stale rate-limit windows, old cache days, quota files), then resumes any pending knowledge-index rebuild (hash-skipped when the corpus is unchanged)
 - **Knowledge corpus:** generated at build time by `scripts/generate-ai-corpus.mjs` from the final `dist/` HTML (self-canonical, non-thin pages only) → `dist/ai-corpus/<locale>.json` + `dist/ai-corpus.json` manifest with per-locale hashes
@@ -336,10 +337,10 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 - **Secrets:** `REINDEX_TOKEN` (synced by deploy.yml; also used by ai-index.yml)
 - **CI:** deploy.yml ensures `ai-index-v2` exists (1024-dim cosine) before deploying workers; `ai-index.yml` runs after every successful deploy — loops `POST /api/reindex` until done, then smoke-tests `/api/ask`
 
-### 4.3 admin-worker (felizbay-admin)
+### 4.3 admin-worker (inflatable-pool-factory-admin)
 
-- **Routes:** `felizbay.com/api/admin/*`, `/api/auth/*`
-- **Bindings:** `DB` (D1 — `Felizbay-db`, shared with contact/news/automation), `DATA_BUCKET` (R2 — `felizbay-data`, inquiry attachments)
+- **Routes:** `inflatablepoolfactory.com/api/admin/*`, `/api/auth/*`
+- **Bindings:** `DB` (D1 — `inflatable-pool-factory-db`, shared with contact/news/automation), `DATA_BUCKET` (R2 — `inflatable-pool-factory-data`, inquiry attachments)
 - **Auth:** [better-auth](https://better-auth.com) with D1-backed sessions (`drizzleAdapter`), Google OAuth + email/password, Turnstile on login, `ADMIN_EMAILS` as the admin role source of truth (`isAdminEmail`), admin plugin for user/session management
 - **Endpoints:**
   - `POST /api/auth/login` — better-auth login (Google OAuth / email + password, Turnstile)
@@ -359,18 +360,18 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 - **Secrets:** `BETTER_AUTH_SECRET`, `SESSION_SECRET`, `GITHUB_TOKEN`, `ADMIN_EMAILS`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `TURNSTILE_SECRET_KEY`
 - **Vars:** `GITHUB_OWNER`, `GITHUB_REPO`, `BETTER_AUTH_URL`
 
-### 4.4 news-worker (felizbay-news)
+### 4.4 news-worker (inflatable-pool-factory-news)
 
 - **Routes:** `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*` (37 languages + root)
-- **Bindings:** `DB` (D1 — `Felizbay-db`, `news` table)
+- **Bindings:** `DB` (D1 — `inflatable-pool-factory-db`, `news` table)
 - **Features:**
   - Serves news posts, RSS feeds, news sitemap and LLM markdown directly from D1 (no static news pages)
   - Admin composes news at `/keystatic/news` (writes to D1 via admin API)
   - Seeded on first deploy by `scripts/seed-news.mjs` (only when table is empty)
 
-### 4.5 automation-worker (felizbay-automation)
+### 4.5 automation-worker (inflatable-pool-factory-automation)
 
-- **Route:** `felizbay.com/api/automation/*`
+- **Route:** `inflatablepoolfactory.com/api/automation/*`
 - **Cron:** Daily `0 2 * * *`
 - **Bindings:** `DATA_BUCKET` (R2), `DB` (D1)
 - **Endpoints:**
@@ -413,7 +414,7 @@ Two layers of locale detection:
 
 ### 5.2 R2 Asset Redirect
 
-`functions/_middleware.ts` redirects `/images/*` and `/files/*` to `https://assets.felizbay.com/{path}` (301)
+`functions/_middleware.ts` redirects `/images/*` and `/files/*` to `https://assets.inflatablepoolfactory.com/{path}` (301)
 
 ### 5.3 Supported Languages (37)
 
@@ -470,6 +471,8 @@ Two layers of locale detection:
 
 **First-time setup (creating Cloudflare resources, domain migration, third-party keys, GitHub secrets):** see [`SETUP.md`](./SETUP.md) — CI only deploys into pre-existing resources (Pages project, R2 buckets, D1 database, zone).
 
+> **2026-10 rebrand migration (Felizbay → Inflatable Pool Factory):** all code/config identifiers now use the new brand, but existing Cloudflare resources are **not renamed automatically**. Before the new brand goes live, create/migrate the `inflatable-pool-factory` Pages project, the five `inflatable-pool-factory-*` Workers, `inflatable-pool-factory-db`, and the two `inflatable-pool-factory-*` R2 buckets; copy D1/R2 data; rename R2 object keys (`images/Felizbay/` → `images/inflatable-pool-factory/`, `Felizbay-*` → `inflatable-pool-factory-*`, and the two demo videos); then update `CF_PROD_D1_ID`, the Google OAuth redirect URI, Resend domain, and the CMS target repo (`inflatablepool/web`). Full checklist: [`SETUP.md` § 品牌更名迁移](./SETUP.md#品牌更名迁移2026-10felizbay--inflatable-pool-factory).
+
 **Required Secrets:** `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`, `CF_PROD_D1_ID`, `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `CONTACT_FROM_EMAIL`, `BETTER_AUTH_SECRET`, `ADMIN_EMAILS`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 
 The deploy workflow degrades gracefully: if the Cloudflare secrets are not configured, the build still runs and only the Cloudflare steps are skipped (via the `guard` step).
@@ -478,12 +481,12 @@ The deploy workflow degrades gracefully: if the Cloudflare secrets are not confi
 
 Images, photos, PDFs, and other static files must be uploaded to R2, **not committed to the repo**.
 
-- **Bucket:** `felizbay-assets` (served via `assets.felizbay.com`)
+- **Bucket:** `inflatable-pool-factory-assets` (served via `assets.inflatablepoolfactory.com`)
 - **Upload command:** `npm run deploy:r2` (runs `scripts/fast-upload-r2.mjs`)
 - **Source dir:** `public/images/` and `public/files/` are uploaded to R2
 - **Auto-prune (2026-10):** every upload also deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) whose local source no longer exists — guards: empty local prefix skipped, >200 stale objects aborts prune with warning, prune failure never fails the deploy
 - **Repo:** Only keep source assets in `public/` for build-time processing; large media files go directly to R2
-- **URL pattern:** `https://assets.felizbay.com/images/Felizbay/products/{slug}.webp`
+- **URL pattern:** `https://assets.inflatablepoolfactory.com/images/inflatable-pool-factory/products/{slug}.webp`
 
 ---
 
@@ -501,7 +504,7 @@ Images, photos, PDFs, and other static files must be uploaded to R2, **not commi
 ### 7.2 GEO Data Pipeline (R2)
 
 ```
-felizbay-data/
+inflatable-pool-factory-data/
 ├── geo/
 │   ├── entity.json             # Organization entity
 │   ├── knowledge-base.json     # Brand/factory/certification facts
@@ -527,7 +530,7 @@ felizbay-data/
 | llms.txt             | `/llms.txt` (37 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
 | AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
 | Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
-| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-Felizbay, industries/schools, industries/distributors)                |
+| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-inflatable-pool-factory, industries/schools, industries/distributors) |
 | Entity Graph         | Organization `@id` on every page, entity.json with `parentOrganization`, `hasCertification`, `makesOffer`, `areaServed` (11 countries), `contactPoint`       |
 | Knowledge Graph      | Product entity enriched with manufacturer, material, countryOfOrigin, dimensions                                                                             |
 | Image SEO            | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                   |
@@ -601,7 +604,7 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 **Translation cache:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
 
-**Key rules:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
+**Key rules:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Inflatable Pool Factory) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
 
 ---
 
@@ -614,7 +617,7 @@ Header and footer navigation defined in `src/data/site/navigation.yaml`:
 - 6 header dropdown groups (Products, Technology & Innovation, Learn, Solutions, Company, Support)
 - 6 footer columns mirroring header structure
 - Solutions dropdown: Clubs, Schools, Resorts, Entrepreneurs, Rental Business, Distributors, Business Packages, Success Stories, Cases, Diving, Fishing, Tourism, Rescue, Yacht Tenders, Custom Lab
-- Company dropdown: About, Why Felizbay, Story, Team, Certifications, Partners, Factory, Quality, Safety, Warranty, News
+- Company dropdown: About, Why Inflatable Pool Factory, Story, Team, Certifications, Partners, Factory, Quality, Safety, Warranty, News
 - Per-locale overrides via `src/data/site/navigation.{locale}.yaml`
 
 ### 9.2 Locale-Aware Routing
@@ -639,7 +642,7 @@ Keystatic CMS provides a form-based navigation editor at `/keystatic/navigation`
 | Feature            | Status                                                                                                                      |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint           | `POST /api/contact` → contact-worker (Cloudflare Worker, D1-backed)                                                         |
-| Email              | Resend API (to `info@felizbay.com`, from `web@mail.felizbay.com`, `Reply-To` = submitter)                                   |
+| Email              | Resend API (to `info@inflatablepoolfactory.com`, from `web@mail.inflatablepoolfactory.com`, `Reply-To` = submitter)         |
 | Fields             | firstName, lastName, company, address, zip, country, email, tel, subject, message                                           |
 | Validation         | Required fields, email regex, spam keyword filter, field sanitisation                                                       |
 | Captcha            | ✅ Cloudflare Turnstile (verified server-side when `TURNSTILE_SECRET_KEY` is set)                                           |
@@ -655,7 +658,7 @@ Keystatic CMS pages (`/keystatic/*`, `/login`) are static Astro pages that post 
 
 ### Authentication
 
-- **better-auth** on admin-worker: Google OAuth + email/password with D1-backed sessions (`user`, `session`, `account`, `verification` tables in `Felizbay-db`)
+- **better-auth** on admin-worker: Google OAuth + email/password with D1-backed sessions (`user`, `session`, `account`, `verification` tables in `inflatable-pool-factory-db`)
 - Turnstile captcha on the login page; `ADMIN_EMAILS` secret controls who gets the admin role
 - GitHub PAT for file operations (stored in a cookie via `/api/admin/save-token`); content edits target the `draft` branch, published via `/api/admin/publish`
 - User/session management at `/keystatic/users`
@@ -770,10 +773,10 @@ src/data/pages/*.yaml → Page content SSOT (55+ pages × 37 languages)
 
 ### R2 Buckets
 
-| Bucket            | Binding       | Purpose                                                       |
-| ----------------- | ------------- | ------------------------------------------------------------- |
-| `felizbay-assets` | `ASSETS_R2`   | Static images, files, PDFs (served via `assets.felizbay.com`) |
-| `felizbay-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content        |
+| Bucket                           | Binding       | Purpose                                                                    |
+| -------------------------------- | ------------- | -------------------------------------------------------------------------- |
+| `inflatable-pool-factory-assets` | `ASSETS_R2`   | Static images, files, PDFs (served via `assets.inflatablepoolfactory.com`) |
+| `inflatable-pool-factory-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content                     |
 
 Worker data is loaded at runtime from `DATA_BUCKET` — no JSON is bundled into Worker deployments (keeps Workers under 3 MB).
 
@@ -784,63 +787,63 @@ Worker data is loaded at runtime from `DATA_BUCKET` — no JSON is bundled into 
 ### contact-worker (`workers/contact-worker/wrangler.toml`)
 
 ```toml
-name = "felizbay-contact"
+name = "inflatable-pool-factory-contact"
 main = "index.ts"
-routes = [{ pattern = "felizbay.com/api/contact*", zone_name = "felizbay.com" }]
-[[d1_databases]] binding = "DB" database_name = "Felizbay-db"
+routes = [{ pattern = "inflatablepoolfactory.com/api/contact*", zone_name = "inflatablepoolfactory.com" }]
+[[d1_databases]] binding = "DB" database_name = "inflatable-pool-factory-db"
 # secrets: CONTACT_RESEND_API_KEY, CONTACT_EMAIL_TO, CONTACT_FROM_EMAIL, TURNSTILE_SECRET_KEY
 ```
 
 ### ai-worker (`workers/ai-worker/wrangler.toml`)
 
 ```toml
-name = "felizbay-ai"
+name = "inflatable-pool-factory-ai"
 main = "index.ts"
 routes = [
-  "felizbay.com/api/chat*", "felizbay.com/api/ask*",
-  "felizbay.com/api/search*", "felizbay.com/api/embed*",
-  "felizbay.com/api/reindex*", "felizbay.com/api/ai/*"
+  "inflatablepoolfactory.com/api/chat*", "inflatablepoolfactory.com/api/ask*",
+  "inflatablepoolfactory.com/api/search*", "inflatablepoolfactory.com/api/embed*",
+  "inflatablepoolfactory.com/api/reindex*", "inflatablepoolfactory.com/api/ai/*"
 ]
 [triggers] crons = ["0 3 * * *"]
-[vars] SITE_ORIGIN = "https://felizbay.com"
+[vars] SITE_ORIGIN = "https://inflatablepoolfactory.com"
 [ai] binding = "AI"
 [[vectorize]] binding = "VECTORIZE" index_name = "ai-index-v2"
-[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "felizbay-data"
+[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "inflatable-pool-factory-data"
 # secrets: REINDEX_TOKEN
 ```
 
 ### admin-worker (`workers/admin-worker/wrangler.toml`)
 
 ```toml
-name = "felizbay-admin"
+name = "inflatable-pool-factory-admin"
 main = "index.ts"
-routes = ["felizbay.com/api/admin/*", "felizbay.com/api/auth/*"]
-[vars] GITHUB_OWNER = "Felizbay" GITHUB_REPO = "official" BETTER_AUTH_URL = "https://felizbay.com"
-[[d1_databases]] binding = "DB" database_name = "Felizbay-db"
+routes = ["inflatablepoolfactory.com/api/admin/*", "inflatablepoolfactory.com/api/auth/*"]
+[vars] GITHUB_OWNER = "inflatablepool" GITHUB_REPO = "web" BETTER_AUTH_URL = "https://inflatablepoolfactory.com"
+[[d1_databases]] binding = "DB" database_name = "inflatable-pool-factory-db"
 # secrets: BETTER_AUTH_SECRET, ADMIN_EMAILS, SESSION_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, TURNSTILE_SECRET_KEY, GITHUB_TOKEN
 ```
 
 ### news-worker (`workers/news-worker/wrangler.toml`)
 
 ```toml
-name = "felizbay-news"
+name = "inflatable-pool-factory-news"
 main = "index.ts"
 routes = [
-  "felizbay.com/{lang}/news*" (37 langs), "felizbay.com/{lang}/rss.xml",
-  "felizbay.com/sitemap-news.xml", "felizbay.com/llms/news*"
+  "inflatablepoolfactory.com/{lang}/news*" (37 langs), "inflatablepoolfactory.com/{lang}/rss.xml",
+  "inflatablepoolfactory.com/sitemap-news.xml", "inflatablepoolfactory.com/llms/news*"
 ]
-[[d1_databases]] binding = "DB" database_name = "Felizbay-db"
+[[d1_databases]] binding = "DB" database_name = "inflatable-pool-factory-db"
 ```
 
 ### automation-worker (`workers/automation-worker/wrangler.toml`)
 
 ```toml
-name = "felizbay-automation"
+name = "inflatable-pool-factory-automation"
 main = "src/index.ts"
-routes = ["felizbay.com/api/automation/*"]
+routes = ["inflatablepoolfactory.com/api/automation/*"]
 [triggers] crons = ["0 2 * * *"]
-[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "felizbay-data"
-[[d1_databases]] binding = "DB" database_name = "Felizbay-db"
+[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "inflatable-pool-factory-data"
+[[d1_databases]] binding = "DB" database_name = "inflatable-pool-factory-db"
 [vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION / CLEANUP_TOKEN
 ```
 
@@ -852,7 +855,7 @@ routes = ["felizbay.com/api/automation/*"]
 - **Zero cold start for static routes:** No SSR Worker — every page is served as static HTML
 - **5 Workers with specific routes:** Only API/dynamic requests trigger Worker execution
 - **R2 data offload:** SEO/GEO data loaded at runtime from R2 (no bundled JSON in Workers) — keeps Workers under 3 MB
-- **R2 asset offload:** Images served from `assets.felizbay.com` (separate subdomain, no cookie overhead)
+- **R2 asset offload:** Images served from `assets.inflatablepoolfactory.com` (separate subdomain, no cookie overhead)
 - **Remote image handling:** `adaptOpenGraphImages()` in `src/utils/images.ts` bypasses `getImage()` for remote URLs, avoiding Sharp fetch errors on CDN 404s
 - **Pages Functions middleware:** Minimal overhead (locale detection + redirect logic)
 - **Idempotent GEO generation:** `llms-full.txt` is rebuilt from scratch each build — no duplicate accumulation
@@ -862,9 +865,9 @@ routes = ["felizbay.com/api/automation/*"]
 
 ## 16. Business Positioning (2026)
 
-### 16.1 Brand Differentiation — Why Felizbay
+### 16.1 Brand Differentiation — Why Inflatable Pool Factory
 
-Three-pillar positioning at `/why-Felizbay`:
+Three-pillar positioning at `/why-inflatable-pool-factory`:
 
 - **Designed For Commercial Use** — Commercial-grade materials, higher durability, low maintenance
 - **From Idea To Market** — 90-day brand launch: concept → prototype → production → shipping
@@ -896,7 +899,7 @@ Three-pillar positioning at `/why-Felizbay`:
 - Rental Business Starter Kit (`/solutions/rental-business`)
 - School Equipment Guide (`/industries/schools`)
 - Distributor Brochure (`/industries/distributors`)
-- Why Felizbay Overview (`/why-Felizbay`)
+- Why Inflatable Pool Factory Overview (`/why-inflatable-pool-factory`)
 
 ---
 

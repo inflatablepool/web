@@ -19,7 +19,7 @@ interface Env {
   SITE?: string;
 }
 
-const SITE = 'https://felizbay.com';
+const SITE = 'https://inflatablepoolfactory.com';
 const POSTS_PER_PAGE = 6;
 
 // ---------- helpers ----------
@@ -129,7 +129,7 @@ ${extraHead}
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="logo" href="${langRoot(lang)}">Felizbay <span class="dot">News</span></a>
+  <a class="logo" href="${langRoot(lang)}">Inflatable Pool Factory <span class="dot">News</span></a>
   <nav>
     <a href="${langPrefix(lang)}/news/">${escapeHtml(NEWS_UI[lang]?.title || 'News')}</a>
     <a href="${langRoot(lang)}contact/">Contact</a>
@@ -138,7 +138,7 @@ ${extraHead}
 </header>
 ${body}
 <footer>
-  <p>© ${new Date().getFullYear()} Felizbay — Inflatable boats, RIBs, SUP boards & kayaks. <a href="${langRoot(lang)}">${escapeHtml('Visit felizbay.com')}</a></p>
+  <p>© ${new Date().getFullYear()} Inflatable Pool Factory — Inflatable boats, RIBs, SUP boards & kayaks. <a href="${langRoot(lang)}">${escapeHtml('Visit inflatablepoolfactory.com')}</a></p>
 </footer>
 </div>
 </body>
@@ -258,7 +258,7 @@ function listPage(lang: string, posts: News[], total: number, page: number, cano
 <ul class="list">${items || '<li class="card"><h3>No posts yet</h3></li>'}</ul>
 <div class="pagination">${prev}${next}</div>`;
 
-  return pageShell(lang, body, `${ui.title} | Felizbay`, canonical, ui.subtitle || 'News from Felizbay');
+  return pageShell(lang, body, `${ui.title} | Inflatable Pool Factory`, canonical, ui.subtitle || 'News from Inflatable Pool Factory');
 }
 
 function postPage(lang: string, post: News, related: News[], canonical: string) {
@@ -284,8 +284,8 @@ function postPage(lang: string, post: News, related: News[], canonical: string) 
     image: post.image,
     datePublished: isoDate(post.publishDate),
     dateModified: isoDate(post.updateDate || post.publishDate),
-    author: post.author ? { '@type': 'Person', name: post.author } : { '@type': 'Organization', name: 'Felizbay' },
-    publisher: { '@type': 'Organization', name: 'Felizbay', url: SITE },
+    author: post.author ? { '@type': 'Person', name: post.author } : { '@type': 'Organization', name: 'Inflatable Pool Factory' },
+    publisher: { '@type': 'Organization', name: 'Inflatable Pool Factory', url: SITE },
     mainEntityOfPage: canonical,
     articleSection: post.category || undefined,
     inLanguage: lang,
@@ -301,7 +301,7 @@ function postPage(lang: string, post: News, related: News[], canonical: string) 
 </article>
 ${relatedHtml}`;
 
-  return pageShell(lang, body, `${post.title} | Felizbay`, canonical, post.excerpt || '', jsonLd);
+  return pageShell(lang, body, `${post.title} | Inflatable Pool Factory`, canonical, post.excerpt || '', jsonLd);
 }
 
 function fmtDate(d: Date, lang: string): string {
@@ -326,9 +326,9 @@ function rssXml(lang: string, posts: News[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>${escapeHtml(NEWS_UI[lang]?.title || 'News')} | Felizbay</title>
+  <title>${escapeHtml(NEWS_UI[lang]?.title || 'News')} | Inflatable Pool Factory</title>
   <link>${site}</link>
-  <description>Latest news from Felizbay</description>
+  <description>Latest news from Inflatable Pool Factory</description>
   <atom:link href="${publicUrl(langPrefix(lang) + '/rss.xml')}" rel="self" type="application/rss+xml"/>
 ${items}
 </channel>

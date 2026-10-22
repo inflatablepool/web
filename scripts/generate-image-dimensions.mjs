@@ -1,5 +1,5 @@
 // Generates src/data/site/image-dimensions.json — width/height registry for
-// images served from public/images (uploaded to R2 as assets.felizbay.com).
+// images served from public/images (uploaded to R2 as assets.inflatablepoolfactory.com).
 // Image.astro uses it to emit width/height (and aspect-ratio) on remote <img>
 // tags that don't pass explicit dimensions, fixing CLS from missing sizes.
 import fs from 'node:fs';
@@ -28,7 +28,7 @@ async function main() {
   for (const file of files) {
     const rel = '/' + path.relative(IMAGES_DIR, file).split(path.sep).join('/');
     // R2 objects are stored with an `images/` prefix (see scripts/fast-upload-r2.mjs),
-    // so remote URLs are https://assets.felizbay.com/images/<rel>.
+    // so remote URLs are https://assets.inflatablepoolfactory.com/images/<rel>.
     const key = '/images' + rel;
     try {
       const meta = await sharp(file).metadata();

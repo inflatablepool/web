@@ -446,7 +446,7 @@ const slugs = [
     desc: 'The ultimate 9.12m flagship RIB with 600 HP twin engines and 380L fuel.',
     def: 'A 9.12m ultimate flagship RIB with 26° deep V hull, 380L fuel, CE Category B/C, supporting twin 300 HP (600 HP total).',
     problem:
-      'Premium buyers need the largest, most capable RIB in the Felizbay range for offshore luxury cruising with 19-person capacity.',
+      'Premium buyers need the largest, most capable RIB in the Inflatable Pool Factory range for offshore luxury cruising with 19-person capacity.',
     howItWorks:
       'The AP900 features 380L oversized fuel tank, twin 300 HP engines (600 HP total), dual sundecks, optional kitchenette and head, and bow storage locker — the pinnacle of the Apex series.',
     audience:
@@ -466,7 +466,7 @@ const slugs = [
       fuel: '380 L built-in',
     },
     ai_comparison:
-      'The AP900 is the ultimate Felizbay RIB — 9.12m, 600 HP twin engines, 380L fuel, 19 passengers. Nothing else in the range matches its combination of size, power, and luxury.',
+      'The AP900 is the ultimate Inflatable Pool Factory RIB — 9.12m, 600 HP twin engines, 380L fuel, 19 passengers. Nothing else in the range matches its combination of size, power, and luxury.',
     ai_faq: [
       {
         q: 'What is the top speed of the AP900?',
@@ -877,7 +877,7 @@ const slugs = [
     problem:
       'Buyers want a crossover boat that combines RIB safety with fiberglass luxury and superyacht-tender-level comfort.',
     howItWorks:
-      'The EX7 is Felizbay first fiberglass hull boat with raised slim tubes, maximizing interior space while maintaining tube protection. Features dual sundecks, head in console, galley, and T-Top.',
+      'The EX7 is Inflatable Pool Factory first fiberglass hull boat with raised slim tubes, maximizing interior space while maintaining tube protection. Features dual sundecks, head in console, galley, and T-Top.',
     audience: 'Luxury boat buyers, yacht owners, and resort operators wanting crossover comfort.',
     ai_use_cases: ['Luxury day cruising', 'Yacht tender', 'Coastal sightseeing', 'Resort guest transport'],
     ai_specs: {
@@ -889,7 +889,7 @@ const slugs = [
       fuel: '270 L built-in',
     },
     ai_comparison:
-      'The EX7 is unique in the Felizbay range — fiberglass hull with slim protective tubes rather than full RIB wrapping. Interior space is maximized with 2.00m ultra-wide beam.',
+      'The EX7 is unique in the Inflatable Pool Factory range — fiberglass hull with slim protective tubes rather than full RIB wrapping. Interior space is maximized with 2.00m ultra-wide beam.',
     ai_faq: [
       {
         q: 'Why does the EX7 use a fiberglass hull?',
@@ -962,7 +962,7 @@ const slugs = [
     problem:
       'Small yacht and sailboat owners need the lightest possible tender that one person can carry, launch, and retrieve.',
     howItWorks:
-      'The SW240 features a 10.5° aluminum V-hull at just 33 kg, with 38cm tubes, 3-person capacity, and short shaft 6 HP rating — the lightest boat in the Felizbay range.',
+      'The SW240 features a 10.5° aluminum V-hull at just 33 kg, with 38cm tubes, 3-person capacity, and short shaft 6 HP rating — the lightest boat in the Inflatable Pool Factory range.',
     audience: 'Small yacht owners, sailors, and recreational boaters needing a portable tender.',
     ai_use_cases: [
       'Yacht tender for small vessels',
@@ -979,7 +979,7 @@ const slugs = [
       weight: '33 kg',
     },
     ai_comparison:
-      'The SW240 is the lightest Felizbay boat at 33 kg — designed for single-person portability. Available in UL240 (short shaft) and UL240LT (long shaft) variants.',
+      'The SW240 is the lightest Inflatable Pool Factory boat at 33 kg — designed for single-person portability. Available in UL240 (short shaft) and UL240LT (long shaft) variants.',
     ai_faq: [
       {
         q: 'What is the difference between UL240 and UL240LT?',
@@ -1565,7 +1565,7 @@ slugs.forEach((s) => {
   } else if (s.slug.startsWith('sw')) {
     useCase = 'Yacht tender, portable recreation, fishing';
     operatingCost = 'Very low — minimal maintenance, no fuel system (portable tank), easy hull cleaning';
-    whyChoose = `The ${s.name} is the lightest boat in the Felizbay range — one-person portable with aluminum durability at minimal operating cost.`;
+    whyChoose = `The ${s.name} is the lightest boat in the Inflatable Pool Factory range — one-person portable with aluminum durability at minimal operating cost.`;
     lifespan = '8-12 years with proper care';
   } else {
     useCase = 'Yacht tender, day cruising, console RIB';

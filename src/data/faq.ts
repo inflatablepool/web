@@ -56,7 +56,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-filtration',
     question: 'Do I need a filter pump?',
     answer:
-      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Felizbay pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
+      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Inflatable Pool Factory pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
     category: 'maintenance',
     relatedProducts: [],
     relatedGuides: [],
@@ -119,7 +119,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-lifespan',
     question: 'How long does an inflatable pool last?',
     answer:
-      'With proper care, a Felizbay drop stitch pool can provide seasons of reliable use — the exact lifespan depends on climate, UV exposure, water chemistry, and storage conditions. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
+      'With proper care, an Inflatable Pool Factory drop stitch pool can provide seasons of reliable use — the exact lifespan depends on climate, UV exposure, water chemistry, and storage conditions. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],
@@ -128,16 +128,16 @@ export const faqs: FaqRecord[] = [
     id: 'pool-shipping',
     question: 'How long does shipping take?',
     answer:
-      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@felizbay.com with your location and quantity for an accurate delivery estimate.',
+      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate delivery estimate.',
     category: 'shipping',
     relatedProducts: [],
     relatedGuides: [],
   },
   {
     id: 'pool-pricing',
-    question: 'How much do Felizbay pools cost?',
+    question: 'How much do Inflatable Pool Factory pools cost?',
     answer:
-      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@felizbay.com for details.',
+      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@inflatablepoolfactory.com for details.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: [],
@@ -153,9 +153,9 @@ export const faqs: FaqRecord[] = [
   },
   {
     id: 'pool-warranty',
-    question: 'What is the Felizbay warranty?',
+    question: 'What is the Inflatable Pool Factory warranty?',
     answer:
-      'Felizbay pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@felizbay.com with your order details to start a claim.',
+      'Inflatable Pool Factory pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@inflatablepoolfactory.com with your order details to start a claim.',
     category: 'warranty',
     relatedProducts: [],
     relatedGuides: [],
@@ -171,9 +171,9 @@ export const faqs: FaqRecord[] = [
   },
   {
     id: 'company-model',
-    question: 'Is Felizbay a trading company or a manufacturer?',
+    question: 'Is Inflatable Pool Factory a trading company or a manufacturer?',
     answer:
-      'Felizbay is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+      'Inflatable Pool Factory is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: [],
@@ -207,7 +207,7 @@ export const faqs: FaqRecord[] = [
   },
   {
     id: 'sourcing-factory-location',
-    question: 'Where is the Felizbay factory located?',
+    question: 'Where is the Inflatable Pool Factory production facility located?',
     answer:
       'Our production facility is in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the factory in person or join a live video walkthrough of the production and pressure-test areas.',
     category: 'sourcing',

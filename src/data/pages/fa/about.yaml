@@ -2,11 +2,11 @@ hero:
   tagline: درباره ما
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: استخر بادی Felizbay
+    alt: استخر بادی Inflatable Pool Factory
   title: |
     ساده کردن شنا، <br />
-    به سبک <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay یک برند استخر بادی درجه یک Drop Stitch است که توسط Aquafarer LLC (ایالات متحده آمریکا) طراحی و اداره می شود. ما معتقدیم که هر خانواده سزاوار یک استخر واقعی در حیاط خلوت است - بدون ساخت و ساز، مجوز، یا نصب دائمی. استخرهای ما در عرض چند دقیقه به صورت سفت و سخت باد می‌شوند، تابستان‌های کاملی از تفریحات خانوادگی را پشت سر می‌گذارند، و در پایان فصل بسته‌بندی کوچکی را در خود جای می‌دهند.
+    به سبک <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory یک برند استخر بادی درجه یک Drop Stitch است که توسط Inflatable Pool Team · Qingdao Vatrad Group طراحی می شود. ما معتقدیم که هر خانواده سزاوار یک استخر واقعی در حیاط خلوت است - بدون ساخت و ساز، مجوز، یا نصب دائمی. استخرهای ما در عرض چند دقیقه به صورت سفت و سخت باد می‌شوند، تابستان‌های کاملی از تفریحات خانوادگی را پشت سر می‌گذارند، و در پایان فصل بسته‌بندی کوچکی را در خود جای می‌دهند.
 stats:
   title: با اعداد
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: فشار نامی
       amount: 4-5 PSI
     - title: تماس بگیرید
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: چیزی که ما می سازیم
   subtitle: خط تولید متمرکزی که از درون می شناسیم - استخرهای بادی Drop Stitch با فشار بالا.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: استخر بادی مستطیلی Felizbay Drop Stitch
+    alt: استخر بادی مستطیلی Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: ارزش های ما
   subtitle: سه اصل که هر استخری را که می سازیم شکل می دهد.
@@ -64,15 +64,15 @@ steps2_values:
       description: ساخت و ساز Drop Stitch فشار بالا، بالاتر از فشار نامی آن، قبل از هر کشتی استخر آزمایش شده است.
       icon: tabler:settings
     - title: حمایتی که طول فصل را بیشتر می کند
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: نقاط عطف
-  subtitle: نسخه کوتاهی از داستان Felizbay.
+  subtitle: نسخه کوتاهی از داستان Inflatable Pool Factory.
   isReversed: true
   items:
     - title: تمرکز بر استخرهای بادی
-      description: 'Felizbay با یک تمرکز تاسیس شد: استخرهای بادی درجه یک Drop Stitch.'
+      description: 'Inflatable Pool Factory با یک تمرکز تاسیس شد: استخرهای بادی درجه یک Drop Stitch.'
       icon: tabler:pool
     - title: سه مجموعه امضا
       description: خطوط مستطیلی، آبی گرد و خاکستری گرد استخر، هر کدام با روکش های اختیاری و اندازه های سفارشی.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: ایمیل
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: وب سایت
-      description: felizbay.com - استخرهای ما را مرور کنید و درخواست قیمت دهید.
+      description: inflatablepoolfactory.com - استخرهای ما را مرور کنید و درخواست قیمت دهید.
     - title: OEM / عمده فروشی
       description: اندازه‌ها، رنگ‌ها و نام تجاری سفارشی برای شرکای تجاری در دسترس است.
 brand_hub_tagline: محصولات
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: تعالی تولید
   title: حصول اطمینان از کاردستی عالی
-  description: خط تولید Felizbay به استخرهای بادی با کیفیت بالا، بادوام و فشار بالا اختصاص دارد.
+  description: خط تولید Inflatable Pool Factory به استخرهای بادی با کیفیت بالا، بادوام و فشار بالا اختصاص دارد.
   cards:
     - title: تیم تکنسین با تجربه
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: دسترسی جهانی
   title_html: یک برند، <span class="text-white/90">حمل و نقل در سراسر جهان</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: مجموعه های استخر

@@ -53,7 +53,7 @@ function socialProviders(e: AuthEnv): Record<string, { clientId: string; clientS
 export function createAuth(authEnv: AuthEnv, db: DB) {
   return betterAuth({
     secret: authEnv.BETTER_AUTH_SECRET,
-    baseURL: authEnv.BETTER_AUTH_URL || 'https://felizbay.com',
+    baseURL: authEnv.BETTER_AUTH_URL || 'https://inflatablepoolfactory.com',
     database: drizzleAdapter(db, { provider: 'sqlite', schema }),
     emailAndPassword: {
       enabled: true,

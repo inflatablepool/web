@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Nosūtiet mums ziņu
   subtitle: Lai saņemtu piedāvājumus, tehniskus jautājumus vai partnerības jautājumus, rakstiet mums. Mēs atbildam vienas darba dienas laikā.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Sūtīt pieprasījumu → Saņemt piedāvājumu
   success_message: Paldies! Jūsu ziņojums ir nonācis mūsu iesūtnē. Mēs atbildēsim vienas darba dienas laikā.
   error_message: Nosūtot ziņojumu, radās kļūda. Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: lūdzu, atrisiniet tālāk norādīto'
   fields:
@@ -113,10 +113,10 @@ features2_other_ways:
       description: Pielāgoti izmēri, krāsas, vāki, zīmols un iepakojums.
       icon: tabler:palette
     - title: E-pasts
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Tīmekļa vietne
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Atbildes laiks
       description: Mēs atbildam vienas darba dienas laikā.
@@ -124,6 +124,6 @@ features2_other_ways:
 map:
   title: Sazinieties
   subtitle: Sazinieties ar Felizbaju
-  address: felizbay.com
+  address: inflatablepoolfactory.com
   zoom: 15
 

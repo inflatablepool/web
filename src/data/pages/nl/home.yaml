@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Premium zwembaden met stevige drop-stitch-wanden die binnen enkele minuten worden opgeblazen en opgeborgen voor de winter - ontworpen voor ontspanning in de achtertuin en gezinsplezier.<br />
     Ontdek zwembadformaten, vergelijk kenmerken en vind de juiste oplossing voor uw ruimte.<br />
-    Ontworpen en beheerd door Aquafarer LLC, VS.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Winkel zwembaden
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
+    alt: Inflatable Pool Factory rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
 stats:
-  title: Felizbay in één oogopslag
+  title: Inflatable Pool Factory in één oogopslag
   columns: 4
   stats:
     - title: Zwembadcollecties
@@ -36,11 +36,11 @@ stats:
     - title: Aangepaste formaten
       amount: Available
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch-technologie
-  title: Waarom een ​​Felizbay-zwembad<br />Is anders
+  title: Waarom een ​​Inflatable Pool Factory-zwembad<br />Is anders
   subtitle: Dankzij de hogedruk-drop-stitch-constructie zijn onze zwembaden stijf, duurzaam en gemakkelijk op te bergen.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Voor bedrijven
   title: Zwembaden voor bedrijven,<br />Te
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay voor zakenpartners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory voor zakenpartners</h3>
   items:
     - title: Vakantiewoningen en gastvrijheid
       description: Seizoensgebonden gastenvoorzieningen voor vakantiewoningen, glampings en boetiekaccommodaties – snel in gebruik, gemakkelijk te onderhouden en eenvoudig op te slaan.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Zorg en veiligheid
   title: Gemakkelijk te bezitten,<br />Makkelijk om lief te hebben
-  subtitle: 'Van de levering tot de eerste zwembeurt tot de opslag aan het einde van het seizoen: het bezitten van een Felizbay-zwembad blijft eenvoudig.'
+  subtitle: 'Van de levering tot de eerste zwembeurt tot de opslag aan het einde van het seizoen: het bezitten van een Inflatable Pool Factory-zwembad blijft eenvoudig.'
   items:
     - title: Installatie in enkele minuten
       description: 'Uitpakken en opblazen met de meegeleverde pomp in 5-15 minuten, daarna vullen met een tuinslang. De vultijd varieert afhankelijk van de grootte van het zwembad en de watertoevoer.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay rond drop stitch opblaasbaar zwembad
+    alt: Inflatable Pool Factory rond drop stitch opblaasbaar zwembad
 blog_latest:
   title: Zwembadgidsen en -inzichten
   information: |
     Installatiehandleidingen, onderhoudstips en aankoopadvies voor opblaasbare zwembaden
-    van het Felizbay-team.
+    van het Inflatable Pool Factory-team.
 faqs:
   title: Veelgestelde vragen over opblaasbaar zwembad
-  subtitle: Veelgestelde vragen over Felizbay opblaasbare zwembaden.
+  subtitle: Veelgestelde vragen over Inflatable Pool Factory opblaasbare zwembaden.
   columns: 2
   items:
     - title: Hoe lang duurt het instellen?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Wat is inbegrepen bij het zwembad?
-      description: Bij elk Felizbay-zwembad wordt een elektrische luchtpomp, een reparatieset en een opbergtas geleverd. Ronde modellen hebben optioneel een gemonteerde hoes.
+      description: Bij elk Inflatable Pool Factory-zwembad wordt een elektrische luchtpomp, een reparatieset en een opbergtas geleverd. Ronde modellen hebben optioneel een gemonteerde hoes.
       icon: tabler:box
       category: all
     - title: Welke maten zijn beschikbaar?

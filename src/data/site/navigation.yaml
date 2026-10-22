@@ -1,7 +1,7 @@
 header:
   topBar:
-    - text: 'info@felizbay.com'
-      href: 'mailto:info@felizbay.com'
+    - text: 'info@inflatablepoolfactory.com'
+      href: 'mailto:info@inflatablepoolfactory.com'
   links:
     - text: Shop Pools
       href: /products
@@ -23,7 +23,7 @@ header:
           href: /pool-ideas/pools-for-glamping-and-hospitality
     - text: Guides & Care
       href: /guides
-    - text: About Felizbay
+    - text: About
       href: /about
     - text: For Businesses
       links:
@@ -90,7 +90,7 @@ footer:
           href: /quality-control
     - title: Company
       links:
-        - text: About Felizbay
+        - text: About Inflatable Pool Factory
           href: /about
         - text: Guides & Care
           href: /guides
@@ -106,4 +106,4 @@ footer:
     - text: Privacy Policy
       href: /privacy
   socialLinks: []
-  footNote: 'Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.'
+  footNote: 'Premium drop stitch inflatable pools by Inflatable Pool Factory.'

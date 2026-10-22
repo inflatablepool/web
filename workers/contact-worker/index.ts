@@ -344,7 +344,7 @@ export default {
     }
 
     if (env.CONTACT_RESEND_API_KEY && env.CONTACT_FROM_EMAIL) {
-      const fromName = env.CONTACT_FROM_NAME || 'Felizbay Contact';
+      const fromName = env.CONTACT_FROM_NAME || 'Inflatable Pool Factory Contact';
       const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
       const replyTo = `${fields.firstName} ${fields.lastName} <${fields.email}>`;
 

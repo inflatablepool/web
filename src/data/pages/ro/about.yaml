@@ -2,11 +2,11 @@ hero:
   tagline: Despre noi
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscina gonflabila Felizbay
+    alt: Piscina gonflabila Inflatable Pool Factory
   title: |
     Faceți înotul simplu, <br />
-    în stil <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay este o marcă premium pentru piscine gonflabile Drop Stitch, proiectată și operată de Aquafarer LLC (SUA). Credem că fiecare familie merită o piscină adevărată în curtea din spate - fără construcție, autorizații sau o instalare permanentă. Piscinele noastre se umflă rigid în câteva minute, supraviețuiesc verilor pline de distracție în familie și se împachetează puțin la sfârșitul sezonului.
+    în stil <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory este o marcă premium pentru piscine gonflabile Drop Stitch, proiectată de Inflatable Pool Team · Qingdao Vatrad Group. Credem că fiecare familie merită o piscină adevărată în curtea din spate - fără construcție, autorizații sau o instalare permanentă. Piscinele noastre se umflă rigid în câteva minute, supraviețuiesc verilor pline de distracție în familie și se împachetează puțin la sfârșitul sezonului.
 stats:
   title: După cifre
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Presiune nominală
       amount: 4-5 PSI
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Ce construim
   subtitle: O linie de produse concentrată pe care o cunoaștem pe dinafară - piscine gonflabile Drop Stitch de înaltă presiune.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscină gonflabilă dreptunghiulară Felizbay Drop Stitch
+    alt: Piscină gonflabilă dreptunghiulară Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: Valorile noastre
   subtitle: Trei principii care modelează fiecare piscină pe care o construim.
@@ -64,15 +64,15 @@ steps2_values:
       description: Construcție Drop Stitch de înaltă presiune, testată peste presiunea sa nominală, înainte ca orice piscină să fie expediată.
       icon: tabler:settings
     - title: Sprijin care durează mai mult decât sezonul
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Repere
-  subtitle: O versiune scurtă a poveștii Felizbay.
+  subtitle: O versiune scurtă a poveștii Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Axat pe piscine gonflabile
-      description: 'Felizbay a fost fondată cu un singur accent: piscinele gonflabile premium Drop Stitch.'
+      description: 'Inflatable Pool Factory a fost fondată cu un singur accent: piscinele gonflabile premium Drop Stitch.'
       icon: tabler:pool
     - title: Trei colecții de semnături
       description: Linii de piscine dreptunghiulare, rotunde albastre și rotunde gri, fiecare cu capace opționale și dimensiuni personalizate.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Site-ul web
-      description: felizbay.com — răsfoiți piscinele noastre și solicitați o ofertă.
+      description: inflatablepoolfactory.com — răsfoiți piscinele noastre și solicitați o ofertă.
     - title: OEM / Vânzări cu ridicata
       description: Dimensiuni, culori și branding personalizate disponibile pentru partenerii de afaceri.
 brand_hub_tagline: Produse
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Excelență în producție
   title: Asigurarea măiestriei rafinate
-  description: Linia de producție Felizbay este dedicată piscinelor gonflabile de înaltă calitate, durabile și de înaltă presiune.
+  description: Linia de producție Inflatable Pool Factory este dedicată piscinelor gonflabile de înaltă calitate, durabile și de înaltă presiune.
   cards:
     - title: Echipa de tehnicieni cu experienta
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Acoperire globală
   title_html: Un singur brand, <span class="text-white/90">expediere în întreaga lume</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Colecții de piscină

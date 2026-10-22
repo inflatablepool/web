@@ -55,13 +55,13 @@ export const guides: GuideRecord[] = [
     slug: 'inflatable-pool-setup',
     category: 'tutorial',
     title: 'Inflatable Pool Setup in 8 Steps',
-    description: 'Everything you need to know to set up your Felizbay inflatable pool correctly the first time.',
+    description: 'Everything you need to know to set up your Inflatable Pool Factory inflatable pool correctly the first time.',
     tldr: 'Pick level ground, clear it of debris, lay a ground sheet, inflate the walls to rated pressure, and fill. Total setup time is 15–30 minutes plus filling time.',
     problem:
       'Rushed setup on poor ground causes sagging walls, uneven water line, leaks from sharp objects, and a pool that never sits right.',
     solution:
       'Follow the full checklist: level ground, debris-free surface, ground sheet, even inflation, and a water fill that stops at the recommended line.',
-    audience: 'New Felizbay pool owners.',
+    audience: 'New Inflatable Pool Factory pool owners.',
     steps: [
       'Choose a firm, level spot away from overhanging trees',
       'Remove all stones, sticks, and sharp objects from the area',
@@ -132,7 +132,7 @@ export const guides: GuideRecord[] = [
     problem:
       'Most people have only seen ring-style or soft-sided inflatable pools that sag, bulge, and collapse. That experience makes it hard to believe an inflatable pool can hold a firm, straight wall at 1.5 meters of water depth.',
     solution:
-      'Drop stitch construction is the same technology used in high-pressure inflatable stand-up paddleboards. The threads limit how far the walls can expand, so pressure turns the fabric into a stiff panel instead of a balloon. Felizbay pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
+      'Drop stitch construction is the same technology used in high-pressure inflatable stand-up paddleboards. The threads limit how far the walls can expand, so pressure turns the fabric into a stiff panel instead of a balloon. Inflatable Pool Factory pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
     audience: 'First-time buyers comparing pool types.',
     steps: [
       'Outer layers: two sheets of reinforced, UV-stabilized PVC form the wall surfaces',
@@ -218,8 +218,8 @@ export const guides: GuideRecord[] = [
     category: 'buying-guide',
     title: 'How Much Space Do You Need for an Inflatable Pool?',
     description:
-      'Footprints, clearances, and load factors for Felizbay pool sizes — how to measure your space before choosing a pool.',
-    tldr: 'Plan for the pool footprint plus at least 50 cm of clear, non-slip walkway on all sides, and confirm the surface can carry the water: roughly 1 tonne per cubic meter. Felizbay round pools span 2–10 m diameter and rectangular pools start at 2 × 2 m.',
+      'Footprints, clearances, and load factors for Inflatable Pool Factory pool sizes — how to measure your space before choosing a pool.',
+    tldr: 'Plan for the pool footprint plus at least 50 cm of clear, non-slip walkway on all sides, and confirm the surface can carry the water: roughly 1 tonne per cubic meter. Inflatable Pool Factory round pools span 2–10 m diameter and rectangular pools start at 2 × 2 m.',
     problem:
       'Buyers often measure only the pool diameter, then discover there is no room to walk around it, no safe entry point, and no drainage route — or worse, the surface cannot carry the filled weight.',
     solution:
@@ -309,7 +309,7 @@ export const guides: GuideRecord[] = [
     problem:
       'A pool boosts bookings, so hosts buy one, list it, and only then meet the hard questions: barrier rules for rental properties, insurance wording, water quality between turnovers, and what happens when guests ignore supervision rules.',
     solution:
-      'Decide with the checklist first. Confirm local regulations for pools at short-term rentals, disclose the pool to your insurer, size it to the property, budget maintenance time between stays, and write supervision rules into your listing and house manual. Felizbay pools suit this use because they set up fast, drain for the off-season, and need no construction.',
+      'Decide with the checklist first. Confirm local regulations for pools at short-term rentals, disclose the pool to your insurer, size it to the property, budget maintenance time between stays, and write supervision rules into your listing and house manual. Inflatable Pool Factory pools suit this use because they set up fast, drain for the off-season, and need no construction.',
     audience: 'Vacation rental hosts and property managers.',
     steps: [
       'Check local regulations — barrier and safety rules for rental properties often apply to any pool, inflatable included',

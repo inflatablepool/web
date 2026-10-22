@@ -38,7 +38,7 @@ Full details are in the [maintenance guide](/guides/inflatable-pool-maintenance)
 
 ## 4. Honest Usage Limits
 
-> **Set expectations correctly:** Felizbay drop-stitch pools are designed for cooling, water play, light hydro-aerobics, stretching, and leisure. They are **not** lap pools, diving pools, or athletic training facilities.
+> **Set expectations correctly:** Inflatable Pool Factory drop-stitch pools are designed for cooling, water play, light hydro-aerobics, stretching, and leisure. They are **not** lap pools, diving pools, or athletic training facilities.
 
 - **Never dive or jump headfirst** into any above-ground pool — shallow water causes serious injury on impact.
 - **Recreational fitness only.** Stroke training and lap swimming need lengths and depth these pools are not sized for.

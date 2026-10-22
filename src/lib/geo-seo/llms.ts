@@ -7,7 +7,7 @@ export interface LlmsSection {
 
 export function buildLlmsTxt(sections: LlmsSection[], extra: { description: string; summary: string }): string {
   const lines: string[] = [];
-  lines.push('# Felizbay — AI Site Overview');
+  lines.push('# Inflatable Pool Factory — AI Site Overview');
   lines.push(`> Site: ${SITE_URL}`);
   lines.push('> Languages: EN, FR, DE, ES, PT, AR, IT, RU, PL, NL, SV, NO, EL, FI, DA (15 languages)');
   lines.push('');
@@ -35,11 +35,11 @@ export function buildLlmsFullTxt(
   extra: { about: string; facts: string[]; summary: string }
 ): string {
   const lines: string[] = [];
-  lines.push('# Felizbay — Complete Site Knowledge (LLMs-Full)');
+  lines.push('# Inflatable Pool Factory — Complete Site Knowledge (LLMs-Full)');
   lines.push(`> Site: ${SITE_URL}`);
   lines.push('> Last updated: 2026-07');
   lines.push('');
-  lines.push('## About Felizbay');
+  lines.push('## About Inflatable Pool Factory');
   lines.push(extra.about);
   lines.push('');
 

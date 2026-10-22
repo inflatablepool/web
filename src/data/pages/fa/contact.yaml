@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: برای ما پیام ارسال کنید
   subtitle: برای نقل قول، سؤالات فنی یا سؤالات مشارکت، با ما تماس بگیرید. ما ظرف یک روز کاری پاسخ می دهیم.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: ارسال استعلام → دریافت قیمت
   success_message: با تشکر پیام شما در صندوق ورودی ما قرار گرفت. ما ظرف یک روز کاری پاسخ خواهیم داد.
   error_message: هنگام ارسال پیام شما مشکلی پیش آمد. لطفاً دوباره امتحان کنید یا مستقیماً به ما ایمیل بزنید.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'ضد اسپم: لطفا موارد زیر را حل کنید'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: اندازه های سفارشی، رنگ ها، پوشش ها، نام تجاری، و بسته بندی.
       icon: tabler:palette
     - title: ایمیل
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: وب سایت
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: زمان پاسخگویی
       description: ما ظرف یک روز کاری پاسخ می دهیم.
       icon: tabler:clock
 map:
   title: تماس بگیرید
-  subtitle: با Felizbay تماس بگیرید
-  address: felizbay.com
+  subtitle: با Inflatable Pool Factory تماس بگیرید
+  address: inflatablepoolfactory.com
   zoom: 15
 

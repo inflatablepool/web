@@ -40,13 +40,13 @@ function getEnv(key: string, fallback: string): string {
   }
 }
 
-const REPO_OWNER = getEnv('GITHUB_OWNER', 'Felizbay');
-const REPO_NAME = getEnv('GITHUB_REPO', 'official');
+const REPO_OWNER = getEnv('GITHUB_OWNER', 'inflatablepool');
+const REPO_NAME = getEnv('GITHUB_REPO', 'web');
 const DEFAULT_BRANCH = 'main';
 const REQUEST_TIMEOUT_MS = 12000;
-const COMMIT_AUTHOR_NAME = 'Felizbay Admin';
-const COMMIT_AUTHOR_EMAIL = 'admin@felizbay.local';
-const USER_AGENT = 'felizbay-admin';
+const COMMIT_AUTHOR_NAME = 'Inflatable Pool Factory Admin';
+const COMMIT_AUTHOR_EMAIL = 'admin@inflatablepoolfactory.local';
+const USER_AGENT = 'inflatable-pool-factory-admin';
 
 export function getRepoInfo(): { owner: string; repo: string } {
   return { owner: REPO_OWNER, repo: REPO_NAME };

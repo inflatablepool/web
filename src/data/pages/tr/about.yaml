@@ -2,11 +2,11 @@ hero:
   tagline: Hakkımızda
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay şişme yüzme havuzu
+    alt: Inflatable Pool Factory şişme yüzme havuzu
   title: |
     Yüzmeyi basitleştirmek, <br />
-     <span class="text-accent dark:text-white">Felizbay</span> tarzı
-  subtitle: Felizbay, Aquafarer LLC (ABD) tarafından tasarlanan ve işletilen birinci sınıf bir Drop Stitch şişme havuz markasıdır. Her ailenin arka bahçede inşaat, izin veya kalıcı kurulum olmadan gerçek bir havuzu hak ettiğine inanıyoruz. Havuzlarımız birkaç dakika içinde sert bir şekilde şişer, yazları ailece eğlenerek geçirir ve sezon sonunda küçük küçük toplanıp toplanır.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span> tarzı
+  subtitle: Inflatable Pool Factory, Inflatable Pool Team · Qingdao Vatrad Group tarafından tasarlanan birinci sınıf bir Drop Stitch şişme havuz markasıdır. Her ailenin arka bahçede inşaat, izin veya kalıcı kurulum olmadan gerçek bir havuzu hak ettiğine inanıyoruz. Havuzlarımız birkaç dakika içinde sert bir şekilde şişer, yazları ailece eğlenerek geçirir ve sezon sonunda küçük küçük toplanıp toplanır.
 stats:
   title: Sayılara göre
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nominal basınç
       amount: 4-5 PSI
     - title: Temas etmek
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Ne inşa ediyoruz
   subtitle: 'İçini dışını bildiğimiz odaklanmış bir ürün grubu: yüksek basınçlı Drop Stitch şişme yüzme havuzları.'
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay dikdörtgen Drop Stitch şişme yüzme havuzu
+    alt: Inflatable Pool Factory dikdörtgen Drop Stitch şişme yüzme havuzu
 steps2_values:
   title: Değerlerimiz
   subtitle: İnşa ettiğimiz her havuzu şekillendiren üç prensip.
@@ -64,15 +64,15 @@ steps2_values:
       description: Yüksek basınçlı Drop Stitch yapısı, herhangi bir havuz gemisinden önce nominal basıncının üzerinde test edilmiştir.
       icon: tabler:settings
     - title: Sezon boyunca sürecek destek
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Kilometre Taşları
-  subtitle: Felizbay hikâyesinin kısa versiyonu.
+  subtitle: Inflatable Pool Factory hikâyesinin kısa versiyonu.
   isReversed: true
   items:
     - title: Şişme havuzlara odaklanıldı
-      description: 'Felizbay tek bir odak noktasıyla kuruldu: birinci sınıf Drop Stitch şişme yüzme havuzları.'
+      description: 'Inflatable Pool Factory tek bir odak noktasıyla kuruldu: birinci sınıf Drop Stitch şişme yüzme havuzları.'
       icon: tabler:pool
     - title: Üç imza koleksiyonu
       description: Dikdörtgen, yuvarlak mavi ve yuvarlak gri havuz hatları, her biri isteğe bağlı kapaklara ve özel boyutlara sahiptir.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-posta
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Web sitesi
-      description: felizbay.com — havuzlarımıza göz atın ve fiyat teklifi isteyin.
+      description: inflatablepoolfactory.com — havuzlarımıza göz atın ve fiyat teklifi isteyin.
     - title: OEM / Toptan Satış
       description: İş ortakları için özel boyutlar, renkler ve markalama mevcuttur.
 brand_hub_tagline: Ürünler
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Üretim Mükemmelliği
   title: Mükemmel İşçiliğin Sağlanması
-  description: Felizbay üretim hattı, yüksek kaliteli, dayanıklı, yüksek basınçlı şişme yüzme havuzlarına adanmıştır.
+  description: Inflatable Pool Factory üretim hattı, yüksek kaliteli, dayanıklı, yüksek basınçlı şişme yüzme havuzlarına adanmıştır.
   cards:
     - title: Deneyimli Teknisyen Ekibi
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Küresel Erişim
   title_html: Tek marka, <span class="text-white/90">dünya çapında nakliye</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Havuz koleksiyonları

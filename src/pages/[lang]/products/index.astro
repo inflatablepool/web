@@ -133,10 +133,10 @@ const cardData = await Promise.all(
 
 const metadata = merge(
   {
-    title: `${t('product.exploreTitle') || 'Explore Felizbay Inflatable Pools'} | ${SITE.name}`,
+    title: `${t('product.exploreTitle') || 'Explore Inflatable Pool Factory'} | ${SITE.name}`,
     description:
       t('product.pageDesc') ||
-      'Compare Felizbay drop stitch inflatable pools by shape, size, and features — rectangular and round pools plus SPA tubs. Find the right pool for your backyard.',
+      'Compare Inflatable Pool Factory drop stitch inflatable pools by shape, size, and features — rectangular and round pools plus SPA tubs. Find the right pool for your backyard.',
     robots: { index: !hidden, follow: true },
     openGraph: { type: 'website' },
   },
@@ -148,7 +148,7 @@ const metadata = merge(
   <JsonLd
     data={{
       '@type': 'ItemList',
-      name: 'Felizbay Inflatable Pools',
+      name: 'Inflatable Pool Factory',
       numberOfItems: products.length,
       itemListElement: products.map((p, i) => ({
         '@type': 'ListItem',
@@ -164,7 +164,7 @@ const metadata = merge(
         {t('product.shopPools') || 'Shop Pools'}
       </p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        {t('product.exploreTitle') || 'Explore Felizbay Inflatable Pools'}
+        {t('product.exploreTitle') || 'Explore Inflatable Pool Factory'}
       </h1>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
         {

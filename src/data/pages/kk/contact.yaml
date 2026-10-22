@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Бізге хабарлама жіберіңіз
   subtitle: Баға ұсыныстары, техникалық сұрақтар немесе серіктестік туралы сұраулар үшін бізге желіні қалдырыңыз. Біз бір жұмыс күні ішінде жауап береміз.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Сұрау жіберу → Баға алу
   success_message: Рахмет! Сіздің хабарламаңыз біздің кіріс жәшігімізге түсті. Біз бір жұмыс күні ішінде жауап береміз.
   error_message: Хабарыңызды жіберу кезінде бірдеңе дұрыс болмады. Қайталап көріңіз немесе бізге тікелей электрондық хат жіберіңіз.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Спамға қарсы: мынаны шешіңіз'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Таңдамалы өлшемдер, түстер, мұқабалар, брендинг және орау.
       icon: tabler:palette
     - title: Электрондық пошта
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Веб-сайт
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Жауап беру уақыты
       description: Біз бір жұмыс күні ішінде жауап береміз.
       icon: tabler:clock
 map:
   title: Хабарласыңыз
-  subtitle: Felizbayға хабарласыңыз
-  address: felizbay.com
+  subtitle: Inflatable Pool Factory хабарласыңыз
+  address: inflatablepoolfactory.com
   zoom: 15
 

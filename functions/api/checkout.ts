@@ -11,21 +11,21 @@ interface CatalogEntry {
 }
 
 const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
-  'FZ-POOL-RND-BLUE': {
+  'IPF-POOL-RND-BLUE': {
     name: 'Round Blue Inflatable Drop Stitch Swimming Pool',
     slug: 'round-blue-drop-stitch-pool',
     unitAmount: 29900,
     currency: 'usd',
     image: '/images/pools/round-blue-pool-1.webp',
   },
-  'FZ-POOL-RND-GREY': {
+  'IPF-POOL-RND-GREY': {
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',
     slug: 'round-grey-drop-stitch-pool',
     unitAmount: 39900,
     currency: 'usd',
     image: '/images/pools/round-grey-pool-1.webp',
   },
-  'FZ-POOL-RECT': {
+  'IPF-POOL-RECT': {
     name: 'Rectangular Inflatable Drop Stitch Swimming Pool',
     slug: 'rectangular-drop-stitch-pool',
     unitAmount: 49900,

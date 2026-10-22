@@ -51,7 +51,7 @@ export const GET: APIRoute = async ({ params }) => {
 
   lines.push('');
   lines.push('---');
-  lines.push(`Source: ${SITE?.site || 'https://felizbay.com'}/products/${entry.id}`);
+  lines.push(`Source: ${SITE?.site || 'https://inflatablepoolfactory.com'}/products/${entry.id}`);
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/markdown; charset=utf-8' },

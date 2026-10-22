@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Kirimkan pesan kepada kami
   subtitle: Untuk penawaran harga, pertanyaan teknis, atau pertanyaan kemitraan, hubungi kami. Kami membalas dalam satu hari kerja.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Kirim Pertanyaan → Dapatkan Penawaran
   success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami. Kami akan membalas dalam satu hari kerja.
   error_message: Terjadi masalah saat mengirim pesan Anda. Silakan coba lagi atau kirim email langsung kepada kami.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: harap selesaikan hal berikut'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Ukuran, warna, sampul, merek, dan kemasan khusus.
       icon: tabler:palette
     - title: E-mail
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Situs web
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Waktu respons
       description: Kami membalas dalam satu hari kerja.
       icon: tabler:clock
 map:
   title: Hubungi kami
-  subtitle: Hubungi Felizbay
-  address: felizbay.com
+  subtitle: Hubungi Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

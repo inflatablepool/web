@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Envoyez-nous un message
   subtitle: Pour des devis, des questions techniques ou des demandes de partenariat, écrivez-nous. Nous répondons dans un délai d'un jour ouvrable.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Envoyer une demande → Obtenir un devis
   success_message: Merci! Votre message a atterri dans notre boîte de réception. Nous vous répondrons dans un délai d'un jour ouvrable.
   error_message: Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer ou envoyez-nous un e-mail directement.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam : veuillez résoudre les problèmes suivants'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Tailles, couleurs, couvertures, marque et emballage personnalisés.
       icon: tabler:palette
     - title: E-mail
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Site web
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Temps de réponse
       description: Nous répondons dans un délai d'un jour ouvrable.
       icon: tabler:clock
 map:
   title: Entrer en contact
-  subtitle: Contacter Felizbay
-  address: felizbay.com
+  subtitle: Contacter Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

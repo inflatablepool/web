@@ -58,14 +58,14 @@ jobs:
 
       - name: Apply R2 bucket CORS rules
         if: steps.guard.outputs.enabled == 'true'
-        run:           npx wrangler r2 bucket cors set felizbay-assets --file scripts/r2-cors.json
+        run:           npx wrangler r2 bucket cors set inflatable-pool-factory-assets --file scripts/r2-cors.json
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy Pages
         if: steps.guard.outputs.enabled == 'true'
-        run: npx wrangler pages deploy dist/ --project-name felizbay
+        run: npx wrangler pages deploy dist/ --project-name inflatable-pool-factory
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -83,11 +83,11 @@ jobs:
         if: steps.guard.outputs.enabled == 'true'
         continue-on-error: true
         run: |
-          npx wrangler d1 migrations apply Felizbay-db -c workers/news-worker/wrangler.toml --remote
+          npx wrangler d1 migrations apply inflatable-pool-factory-db -c workers/news-worker/wrangler.toml --remote
           node scripts/seed-news.mjs
-          COUNT=$(npx wrangler d1 execute Felizbay-db -c workers/news-worker/wrangler.toml --remote --command "SELECT count(*) AS c FROM news;" --json | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].results[0].c)}catch(e){console.log('-1')}})")
+          COUNT=$(npx wrangler d1 execute inflatable-pool-factory-db -c workers/news-worker/wrangler.toml --remote --command "SELECT count(*) AS c FROM news;" --json | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].results[0].c)}catch(e){console.log('-1')}})")
           if [ "$COUNT" = "0" ]; then
-            npx wrangler d1 execute Felizbay-db -c workers/news-worker/wrangler.toml --remote --file=.wrangler-tmp/news-seed.sql
+            npx wrangler d1 execute inflatable-pool-factory-db -c workers/news-worker/wrangler.toml --remote --file=.wrangler-tmp/news-seed.sql
             echo "[d1] news table was empty, inserted seed posts"
           else
             echo "[d1] news table already has $COUNT rows; skipping seed (admin-created posts preserved)"

@@ -121,7 +121,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What size options are available?',
-        a: 'Multiple diameters and heights are produced. Custom sizes are available for OEM/ODM partners — contact info@felizbay.com.',
+        a: 'Multiple diameters and heights are produced. Custom sizes are available for OEM/ODM partners — contact info@inflatablepoolfactory.com.',
       },
     ],
   },
@@ -172,7 +172,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Can the color be customized?',
-        a: 'Yes. Felizbay manufactures pools in custom colors and sizes for OEM/ODM partners — contact info@felizbay.com.',
+        a: 'Yes. Inflatable Pool Factory manufactures pools in custom colors and sizes for OEM/ODM partners — contact info@inflatablepoolfactory.com.',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What sizes are available?',
-        a: 'Seven factory sizes from 1.5 × 1.5 × 0.8 m to 3 × 2 × 1 m. Custom sizes are available for OEM/ODM partners — contact info@felizbay.com.',
+        a: 'Seven factory sizes from 1.5 × 1.5 × 0.8 m to 3 × 2 × 1 m. Custom sizes are available for OEM/ODM partners — contact info@inflatablepoolfactory.com.',
       },
       {
         q: 'How is it heated?',

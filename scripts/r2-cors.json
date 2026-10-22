@@ -2,7 +2,7 @@
   "rules": [
     {
       "allowed": {
-        "origins": ["https://felizbay.com", "http://localhost:4321", "http://127.0.0.1:4321"],
+        "origins": ["https://inflatablepoolfactory.com", "http://localhost:4321", "http://127.0.0.1:4321"],
         "methods": ["GET", "HEAD"]
       },
       "maxAgeSeconds": 86400

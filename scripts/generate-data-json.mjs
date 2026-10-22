@@ -14,7 +14,7 @@ const GENERATED_DIR = path.join(ROOT, 'src', 'i18n', 'generated');
 // from a temp dir with a different cwd. INIT_CWD (set by npm/yarn) is the primary
 // path; this sidecar is a fallback for direct `astro build` invocations.
 try {
-  fs.writeFileSync(path.join(os.tmpdir(), 'felizbay-project-root'), ROOT);
+  fs.writeFileSync(path.join(os.tmpdir(), 'inflatablepoolfactory-project-root'), ROOT);
 } catch {
   // ignore
 }

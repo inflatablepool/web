@@ -5,7 +5,7 @@ export interface SiteSection {
 }
 
 export const SITE_SECTIONS: SiteSection[] = [
-  { label: 'Home', path: '/', sitemap: { entity: 'Felizbay', type: 'brand', priority: '1.0' } },
+  { label: 'Home', path: '/', sitemap: { entity: 'Inflatable Pool Factory', type: 'brand', priority: '1.0' } },
   { label: 'Products', path: '/products', sitemap: { entity: 'products', type: 'product', priority: '0.9' } },
   { label: 'About', path: '/about', sitemap: { entity: 'about', type: 'brand', priority: '0.6' } },
   { label: 'FAQ', path: '/faq', sitemap: { entity: 'faq', type: 'support', priority: '0.6' } },

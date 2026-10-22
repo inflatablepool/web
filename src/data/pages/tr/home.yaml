@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Arka bahçede rahatlama ve aile eğlencesi için tasarlanmış, dakikalar içinde şişen ve kış için toplanabilen sert drop-stitch duvarlara sahip birinci sınıf havuzlar.<br />
     Havuz boyutlarını keşfedin, özellikleri karşılaştırın ve alanınıza en uygun olanı bulun.<br />
-    Aquafarer LLC, ABD tarafından tasarlanmış ve işletilmektedir.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Alışveriş Havuzları
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Arka bahçede Felizbay dikdörtgen Drop Stitch şişme yüzme havuzu
+    alt: Arka bahçede Inflatable Pool Factory dikdörtgen Drop Stitch şişme yüzme havuzu
 stats:
-  title: Bir Bakışta Felizbay
+  title: Bir Bakışta Inflatable Pool Factory
   columns: 4
   stats:
     - title: Havuz Koleksiyonları
@@ -36,11 +36,11 @@ stats:
     - title: Özel Boyutlar
       amount: Available
     - title: Temas etmek
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch Teknolojisi
-  title: Neden Felizbay Havuzu<br />Farklı mı
+  title: Neden Inflatable Pool Factory Havuzu<br />Farklı mı
   subtitle: Yüksek basınçlı Drop Stitch yapısı, havuzlarımızı sağlam, dayanıklı ve saklamayı kolay hale getirir.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: İşletmeler için
   title: İş Havuzları,<br />Fazla
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay iş ortaklarına</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory iş ortaklarına</h3>
   items:
     - title: Kiralık Tatil Evleri ve Konaklama
       description: Kiralık tatil evleri, glamping siteleri ve butik mülkler için sezonluk misafir olanakları — kurulumu hızlı, bakımı kolay, saklaması basit.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Bakım ve Güvenlik
   title: Sahip Olmak Kolay,<br />Sevmek Kolay
-  subtitle: Teslimattan ilk yüzmeye ve sezon sonu depolamaya kadar Felizbay havuzuna sahip olmak çok kolay.
+  subtitle: Teslimattan ilk yüzmeye ve sezon sonu depolamaya kadar Inflatable Pool Factory havuzuna sahip olmak çok kolay.
   items:
     - title: Dakikalar İçinde Kurulum
       description: 'Kutusunu açın ve birlikte verilen pompayla 5-15 dakika içinde şişirin, ardından bahçe hortumuyla doldurun; doldurma süresi havuzun boyutuna ve su kaynağına göre değişir.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay yuvarlak Drop Stitch şişme yüzme havuzu
+    alt: Inflatable Pool Factory yuvarlak Drop Stitch şişme yüzme havuzu
 blog_latest:
   title: Havuz Kılavuzları ve Bilgiler
   information: |
     Şişirilebilir yüzme havuzları için kurulum kılavuzları, bakım ipuçları ve satın alma tavsiyeleri
-    Felizbay ekibinden.
+    Inflatable Pool Factory ekibinden.
 faqs:
   title: Şişme Havuz SSS
-  subtitle: Felizbay şişme yüzme havuzları hakkında sık sorulan sorular.
+  subtitle: Inflatable Pool Factory şişme yüzme havuzları hakkında sık sorulan sorular.
   columns: 2
   items:
     - title: Kurulum ne kadar sürer?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Havuza neler dahil?
-      description: Her Felizbay havuzunda elektrikli hava pompası, tamir seti ve saklama çantası bulunmaktadır. Yuvarlak modellerde isteğe bağlı olarak takılan bir kapak bulunur.
+      description: Her Inflatable Pool Factory havuzunda elektrikli hava pompası, tamir seti ve saklama çantası bulunmaktadır. Yuvarlak modellerde isteğe bağlı olarak takılan bir kapak bulunur.
       icon: tabler:box
       category: all
     - title: Hangi boyutlar mevcut?

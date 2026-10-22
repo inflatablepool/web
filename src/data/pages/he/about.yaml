@@ -2,11 +2,11 @@ hero:
   tagline: עלינו
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: בריכת שחיה מתנפחת Felizbay
+    alt: בריכת שחיה מתנפחת Inflatable Pool Factory
   title: |
     הופכים את השחייה לפשוטה, <br />
-    בסגנון <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay הוא מותג פרימיום לבריכה מתנפחת Drop Stitch שתוכנן ומופעל על ידי Aquafarer LLC (ארה"ב). אנו מאמינים שלכל משפחה מגיעה בריכה אמיתית בחצר האחורית - ללא בנייה, אישורים או התקנה קבועה. הבריכות שלנו מתנפחות תוך דקות, שורדות קיץ מלא של כיף משפחתי, ואורזות בקטנה בסוף העונה.
+    בסגנון <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory הוא מותג פרימיום לבריכה מתנפחת Drop Stitch שתוכנן על ידי Inflatable Pool Team · Qingdao Vatrad Group. אנו מאמינים שלכל משפחה מגיעה בריכה אמיתית בחצר האחורית - ללא בנייה, אישורים או התקנה קבועה. הבריכות שלנו מתנפחות תוך דקות, שורדות קיץ מלא של כיף משפחתי, ואורזות בקטנה בסוף העונה.
 stats:
   title: לפי המספרים
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: לחץ מדורג
       amount: 4-5 PSI
     - title: מַגָע
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: מה אנחנו בונים
   subtitle: קו מוצרים ממוקד שאנו מכירים מבפנים החוצה - בריכות שחייה מתנפחות Drop Stitch בלחץ גבוה.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: בריכת שחיה מתנפחת מלבנית של חברת Felizbay Drop Stitch
+    alt: בריכת שחיה מתנפחת מלבנית של חברת Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: הערכים שלנו
   subtitle: שלושה עקרונות שמעצבים כל בריכה שאנו בונים.
@@ -64,15 +64,15 @@ steps2_values:
       description: בניית Drop Stitch בלחץ גבוה, נבדקה מעל הלחץ המדורג שלה, לפני כל ספינת בריכה.
       icon: tabler:settings
     - title: תמיכה שנמשכת לאורך העונה
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: אבני דרך
-  subtitle: גרסה קצרה לסיפור Felizbay.
+  subtitle: גרסה קצרה לסיפור Inflatable Pool Factory.
   isReversed: true
   items:
     - title: התמקד בבריכות מתנפחות
-      description: 'Felizbay נוסדה עם מיקוד אחד: בריכות שחייה מתנפחות פרימיום Drop Stitch.'
+      description: 'Inflatable Pool Factory נוסדה עם מיקוד אחד: בריכות שחייה מתנפחות פרימיום Drop Stitch.'
       icon: tabler:pool
     - title: שלושה אוספי חתימות
       description: קווי בריכה מלבניים, כחולים ועגולים אפורים, כל אחד עם כיסויים אופציונליים וגדלים מותאמים אישית.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: אֶלֶקטרוֹנִי
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: אֲתַר אִינטֶרנֶט
-      description: felizbay.com - דפדף בבריכות שלנו ובקש הצעת מחיר.
+      description: inflatablepoolfactory.com - דפדף בבריכות שלנו ובקש הצעת מחיר.
     - title: OEM / סיטונאי
       description: גדלים, צבעים ומיתוג מותאמים אישית זמינים עבור שותפים עסקיים.
 brand_hub_tagline: מוצרים
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: מצוינות בייצור
   title: הבטחת אומנות מעולה
-  description: קו הייצור של Felizbay מוקדש לבריכות שחייה מתנפחות איכותיות ועמידות בלחץ גבוה.
+  description: קו הייצור של Inflatable Pool Factory מוקדש לבריכות שחייה מתנפחות איכותיות ועמידות בלחץ גבוה.
   cards:
     - title: צוות טכנאים מנוסה
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: טווח הגעה עולמי
   title_html: מותג אחד, <span class="text-white/90">משלוח לכל העולם</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: אוספי בריכות

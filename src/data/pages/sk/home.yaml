@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Prémiové bazény s pevnými stenami drop-stitch, ktoré sa nafúknu za pár minút a zbalia sa na zimu – určené na oddych na dvore a rodinnú zábavu.<br />
     Preskúmajte veľkosti bazénov, porovnajte funkcie a nájdite to pravé pre váš priestor.<br />
-    Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Obchod Pools
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Obdĺžnikový nafukovací bazén Felizbay Drop Stitch na dvore
+    alt: Obdĺžnikový nafukovací bazén Inflatable Pool Factory Drop Stitch na dvore
 stats:
-  title: Felizbay v skratke
+  title: Inflatable Pool Factory v skratke
   columns: 4
   stats:
     - title: Bazénové zbierky
@@ -36,11 +36,11 @@ stats:
     - title: Vlastné veľkosti
       amount: Available
     - title: Kontaktovať
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Technológia Drop Stitch
-  title: Prečo bazén Felizbay<br />Je iný
+  title: Prečo bazén Inflatable Pool Factory<br />Je iný
   subtitle: Vďaka vysokotlakovej konštrukcii Drop Stitch sú naše bazény pevné, odolné a nenáročné na skladovanie.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Pre firmy
   title: Bazény pre firmy,<br />tiež
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pre obchodných partnerov</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory pre obchodných partnerov</h3>
   items:
     - title: Dovolenkové prenájmy a pohostinstvo
       description: Sezónne vybavenie pre hostí na dovolenkové prenájmy, glampingy a butiky – rýchle nasadenie, jednoduchá údržba, jednoduché skladovanie.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Starostlivosť a bezpečnosť
   title: Jednoduché vlastnenie,<br />Ľahké milovať
-  subtitle: Od doručenia cez prvé kúpanie až po uskladnenie na konci sezóny je vlastnenie bazéna Felizbay jednoduché.
+  subtitle: Od doručenia cez prvé kúpanie až po uskladnenie na konci sezóny je vlastnenie bazéna Inflatable Pool Factory jednoduché.
   items:
     - title: Nastavenie v minútach
       description: 'Rozbaľte a nafúknite priloženou pumpou za 5-15 minút, potom naplňte záhradnou hadicou – čas plnenia sa líši v závislosti od veľkosti bazéna a množstva vody.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Guľatý nafukovací bazén Felizbay Drop Stitch
+    alt: Guľatý nafukovací bazén Inflatable Pool Factory Drop Stitch
 blog_latest:
   title: Pool Guides & Insights
   information: |
     Sprievodcovia nastavením, tipy na starostlivosť a rady pri nákupe nafukovacích bazénov
-    z tímu Felizbay.
+    z tímu Inflatable Pool Factory.
 faqs:
   title: Časté otázky o nafukovacom bazéne
-  subtitle: Časté otázky o nafukovacích bazénoch Felizbay.
+  subtitle: Časté otázky o nafukovacích bazénoch Inflatable Pool Factory.
   columns: 2
   items:
     - title: Ako dlho trvá nastavenie?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Čo je súčasťou bazéna?
-      description: Každý bazén Felizbay obsahuje elektrické vzduchové čerpadlo, súpravu na opravu a úložný vak. Okrúhle modely majú voliteľný namontovaný kryt.
+      description: Každý bazén Inflatable Pool Factory obsahuje elektrické vzduchové čerpadlo, súpravu na opravu a úložný vak. Okrúhle modely majú voliteľný namontovaný kryt.
       icon: tabler:box
       category: all
     - title: Aké veľkosti sú k dispozícii?

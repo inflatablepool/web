@@ -1,10 +1,10 @@
-name = "felizbay"
+name = "inflatable-pool-factory"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Pages: npx wrangler pages deploy dist/ --project-name felizbay
+# Cloudflare Pages: npx wrangler pages deploy dist/ --project-name inflatable-pool-factory
 # Functions middleware: functions/_middleware.ts
 
 [[r2_buckets]]
 binding = "ASSETS_R2"
-bucket_name = "felizbay-assets"
+bucket_name = "inflatable-pool-factory-assets"

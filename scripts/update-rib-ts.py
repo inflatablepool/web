@@ -1,6 +1,6 @@
 import openpyxl, re, os
 
-BASE = r'C:\Felizbay RIB boat'
+BASE = r'C:\Inflatable Pool Factory RIB boat'
 TS_PATH = r'C:\aweb\src\data\products.ts'
 
 model_warranty = {}

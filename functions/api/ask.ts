@@ -11,7 +11,7 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-setup-time',
     question: 'How long does it take to set up an inflatable pool?',
     answer:
-      'Most Felizbay pools set up in 15–30 minutes. Unroll the pool on flat ground, connect the included pump, and inflate the drop stitch walls to the rated pressure. Then fill with water. Rectangular pools take slightly longer than round models due to their larger footprint.',
+      'Most Inflatable Pool Factory pools set up in 15–30 minutes. Unroll the pool on flat ground, connect the included pump, and inflate the drop stitch walls to the rated pressure. Then fill with water. Rectangular pools take slightly longer than round models due to their larger footprint.',
     keywords: ['set up', 'setup', 'assemble', 'assembly', 'inflate', 'installation', 'install', 'how long'],
     url: '/faq',
   },
@@ -43,7 +43,7 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-filtration',
     question: 'Do I need a filter pump?',
     answer:
-      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Felizbay pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
+      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Inflatable Pool Factory pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
     keywords: ['filter', 'pump', 'filtration', 'cartridge'],
     url: '/faq',
   },
@@ -124,7 +124,7 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-lifespan',
     question: 'How long does an inflatable pool last?',
     answer:
-      'With proper care, a Felizbay drop stitch pool lasts 5+ seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
+      'With proper care, an Inflatable Pool Factory drop stitch pool lasts 5+ seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
     keywords: ['last', 'lifespan', 'lifetime', 'durable', 'durability', 'years', 'seasons', 'uv', 'pvc', 'material'],
     url: '/faq',
   },
@@ -132,15 +132,15 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-shipping',
     question: 'How long does shipping take?',
     answer:
-      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@felizbay.com with your location and quantity for an accurate delivery estimate.',
+      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate delivery estimate.',
     keywords: ['shipping', 'delivery', 'deliver', 'ship', 'arrive', 'dispatch', 'courier'],
     url: '/faq',
   },
   {
     id: 'pool-pricing',
-    question: 'How much do Felizbay pools cost?',
+    question: 'How much do Inflatable Pool Factory pools cost?',
     answer:
-      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@felizbay.com for details.',
+      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@inflatablepoolfactory.com for details.',
     keywords: ['price', 'pricing', 'cost', 'expensive', 'cheap', 'discount'],
     url: '/faq',
   },
@@ -154,9 +154,9 @@ const FAQ_CORPUS: FaqEntry[] = [
   },
   {
     id: 'pool-warranty',
-    question: 'What is the Felizbay warranty?',
+    question: 'What is the Inflatable Pool Factory warranty?',
     answer:
-      'Felizbay pools carry a limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers seams, valves, and fabric. Contact info@felizbay.com with your order details to start a claim.',
+      'Inflatable Pool Factory pools carry a limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers seams, valves, and fabric. Contact info@inflatablepoolfactory.com with your order details to start a claim.',
     keywords: ['warranty', 'guarantee', 'claim', 'defect', 'refund', 'return'],
     url: '/faq',
   },
@@ -170,19 +170,19 @@ const FAQ_CORPUS: FaqEntry[] = [
   },
   {
     id: 'company-model',
-    question: 'Is Felizbay a trading company or a manufacturer?',
+    question: 'Is Inflatable Pool Factory a trading company or a manufacturer?',
     answer:
-      'Felizbay is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+      'Inflatable Pool Factory is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
     keywords: ['manufacturer', 'factory', 'trading company', 'who are you', 'where made', 'made in', 'company'],
     url: '/faq',
   },
 ];
 
 const FALLBACK_ANSWER =
-  "I couldn't find an exact answer to that. For questions about our inflatable drop stitch swimming pools, email us at info@felizbay.com — we usually reply within a few hours. You can also browse the FAQ and product pages for details.";
+  "I couldn't find an exact answer to that. For questions about our inflatable drop stitch swimming pools, email us at info@inflatablepoolfactory.com — we usually reply within a few hours. You can also browse the FAQ and product pages for details.";
 
 const GREETING_ANSWER =
-  'Hello! Ask me anything about Felizbay inflatable drop stitch swimming pools — setup, sizes, prices, shipping, care, or warranty.';
+  'Hello! Ask me anything about Inflatable Pool Factory inflatable drop stitch swimming pools — setup, sizes, prices, shipping, care, or warranty.';
 
 const GREETING_RE = /^(hi|hello|hey|yo|good\s*(morning|afternoon|evening))\b/i;
 
@@ -275,7 +275,7 @@ const GENERIC_TOKENS = new Set([
   'pool',
   'pools',
   'inflatable',
-  'felizbay',
+  'Inflatable Pool Factory',
 ]);
 
 function significantTokens(text: string): Set<string> {

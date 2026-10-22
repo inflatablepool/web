@@ -1,4 +1,4 @@
-name = "felizbay-news"
+name = "inflatable-pool-factory-news"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
@@ -6,43 +6,43 @@ compatibility_flags = ["nodejs_compat"]
 routes = [
   # Paths may only end with a wildcard (Cloudflare zone route syntax); the
   # /{lang}/news prefixes must be listed explicitly.
-  { pattern = "felizbay.com/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/fr/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/de/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/es/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/pt/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/ar/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/it/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/ru/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/pl/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/nl/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/sv/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/no/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/el/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/fi/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/da/news*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/fr/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/de/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/es/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/pt/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/ar/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/it/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/ru/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/pl/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/nl/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/sv/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/no/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/el/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/fi/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/da/rss.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/sitemap-news.xml", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/llms/news*", zone_name = "felizbay.com" },
+  { pattern = "inflatablepoolfactory.com/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/fr/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/de/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/es/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/pt/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/ar/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/it/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/ru/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/pl/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/nl/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/sv/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/no/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/el/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/fi/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/da/news*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/fr/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/de/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/es/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/pt/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/ar/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/it/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/ru/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/pl/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/nl/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/sv/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/no/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/el/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/fi/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/da/rss.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/sitemap-news.xml", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/llms/news*", zone_name = "inflatablepoolfactory.com" },
 ]
 
-# D1 (created via: wrangler d1 create Felizbay-db) — shared with admin-worker/contact-worker
+# D1 (created via: wrangler d1 create inflatable-pool-factory-db) — shared with admin-worker/contact-worker
 [[d1_databases]]
 binding = "DB"
-database_name = "Felizbay-db"
+database_name = "inflatable-pool-factory-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 migrations_dir = "../../migrations"

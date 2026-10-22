@@ -2,11 +2,11 @@ hero:
   tagline: Om oss
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay uppblåsbar pool
+    alt: Inflatable Pool Factory uppblåsbar pool
   title: |
     Gör simningen enkel, <br />
-    på <span class="text-accent dark:text-white">Felizbay</span>-vis
-  subtitle: Felizbay är ett premium Drop Stitch uppblåsbar poolmärke designat och drivs av Aquafarer LLC (USA). Vi tror att varje familj förtjänar en riktig pool på bakgården - utan konstruktion, tillstånd eller en permanent installation. Våra pooler blåser upp styvt på några minuter, överlever hela somrar av familjekul och packar ihop lite vid säsongens slut.
+    på <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-vis
+  subtitle: Inflatable Pool Factory är ett premium Drop Stitch uppblåsbar poolmärke designat av Inflatable Pool Team · Qingdao Vatrad Group. Vi tror att varje familj förtjänar en riktig pool på bakgården - utan konstruktion, tillstånd eller en permanent installation. Våra pooler blåser upp styvt på några minuter, överlever hela somrar av familjekul och packar ihop lite vid säsongens slut.
 stats:
   title: Med siffrorna
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Märktryck
       amount: 4-5 PSI
     - title: Kontakta
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Vad vi bygger
   subtitle: En fokuserad produktlinje som vi känner ut och in — högtrycks Drop Stitch uppblåsbara simbassänger.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rektangulär Drop Stitch uppblåsbar pool
+    alt: Inflatable Pool Factory rektangulär Drop Stitch uppblåsbar pool
 steps2_values:
   title: Våra värderingar
   subtitle: Tre principer som formar varje pool vi bygger.
@@ -64,15 +64,15 @@ steps2_values:
       description: Högtrycks-Drop Stitch-konstruktion, testad över dess nominella tryck, innan någon pool skickas.
       icon: tabler:settings
     - title: Stöd som varar längre än säsongen
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milstolpar
-  subtitle: En kort version av Felizbay-berättelsen.
+  subtitle: En kort version av Inflatable Pool Factory-berättelsen.
   isReversed: true
   items:
     - title: Fokuserad på uppblåsbara pooler
-      description: 'Felizbay grundades med ett enda fokus: premium Drop Stitch uppblåsbara simbassänger.'
+      description: 'Inflatable Pool Factory grundades med ett enda fokus: premium Drop Stitch uppblåsbara simbassänger.'
       icon: tabler:pool
     - title: Tre signatursamlingar
       description: Rektangulära, runda blå och runda grå poollinjer, var och en med valfria överdrag och anpassade storlekar.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-post
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Webbplats
-      description: felizbay.com — bläddra i våra pooler och begär en offert.
+      description: inflatablepoolfactory.com — bläddra i våra pooler och begär en offert.
     - title: OEM / grossist
       description: Anpassade storlekar, färger och varumärken tillgängliga för affärspartners.
 brand_hub_tagline: Produkter
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Produktionsexcellens
   title: Säkerställer utsökt hantverk
-  description: Felizbays produktionslinje är dedikerad till högkvalitativa, hållbara uppblåsbara högtryckspooler.
+  description: Inflatable Pool Factory produktionslinje är dedikerad till högkvalitativa, hållbara uppblåsbara högtryckspooler.
   cards:
     - title: Erfaret teknikerteam
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Global räckvidd
   title_html: Ett märke, <span class="text-white/90">världsomspännande frakt</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Poolsamlingar

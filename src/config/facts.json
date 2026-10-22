@@ -1,26 +1,27 @@
 {
   "_comment": [
-    "Single Source of Truth for Felizbay pool brand facts.",
+    "Single Source of Truth for Inflatable Pool Factory pool brand facts.",
     "All numbers and facts on pages, llms.txt and JSON-LD render from this file.",
-    "2026-10: rebranded to inflatable swimming pools only. Contact: info@felizbay.com."
+    "2026-10: rebranded to inflatable swimming pools only. Contact: info@inflatablepoolfactory.com."
   ],
 
   "brand": {
-    "name": "Felizbay",
-    "legalName": "Aquafarer LLC",
-    "alternateName": "Felizbay Inflatable Pools",
+    "name": "Inflatable Pool Factory",
+    "legalName": "Qingdao Vatrad Group",
+    "operator": "Inflatable Pool Team",
+    "alternateName": "Inflatable Pool Factory",
     "slogan": "Premium Drop Stitch Inflatable Swimming Pools",
-    "description": "Felizbay is a premium drop stitch inflatable pool brand designed and operated by Aquafarer LLC, USA — rectangular and round pools with rigid, rock-solid walls that set up in minutes and fold away for winter storage. Every pool is 100% pressure-tested before shipping and complies with EN 16582-1 and ASTM F2666 pool safety standards.",
+    "description": "Inflatable Pool Factory is a premium drop stitch inflatable pool brand by the Inflatable Pool Team at Qingdao Vatrad Group — rectangular and round pools with rigid, rock-solid walls that set up in minutes and fold away for winter storage. Every pool is 100% pressure-tested before shipping and complies with EN 16582-1 and ASTM F2666 pool safety standards.",
     "foundingYear": 2012,
-    "url": "https://felizbay.com"
+    "url": "https://inflatablepoolfactory.com"
   },
 
   "office": {
-    "label": "US Office — Design, Sales & Billing",
-    "legalEntity": "Aquafarer LLC",
-    "city": "",
-    "province": "New Mexico",
-    "country": "US"
+    "label": "Qingdao Office — Design, Sales & Billing",
+    "legalEntity": "Qingdao Vatrad Group",
+    "city": "Qingdao",
+    "province": "Shandong",
+    "country": "CN"
   },
 
   "factory": {
@@ -81,19 +82,19 @@
   },
 
   "contact": {
-    "primaryPhone": "",
+    "primaryPhone": "+86 13305324192",
     "salesUsPhone": "",
-    "email": "info@felizbay.com",
+    "email": "info@inflatablepoolfactory.com",
     "availableLanguages": ["English"]
   },
 
   "social": {
-    "linkedin": "https://www.linkedin.com/company/Felizbay",
-    "youtube": "https://www.youtube.com/@felizbay",
-    "x": "https://x.com/Felizbay",
-    "instagram": "https://www.instagram.com/Felizbay",
-    "facebook": "https://www.facebook.com/Felizbay",
-    "rss": "https://felizbay.com/rss.xml"
+    "linkedin": "https://www.linkedin.com/company/inflatablepoolfactory",
+    "youtube": "https://www.youtube.com/@inflatablepoolfactory",
+    "x": "https://x.com/inflatablepoolfactory",
+    "instagram": "https://www.instagram.com/inflatablepoolfactory",
+    "facebook": "https://www.facebook.com/inflatablepoolfactory",
+    "rss": "https://inflatablepoolfactory.com/rss.xml"
   },
 
   "founder": {
@@ -104,7 +105,7 @@
   },
 
   "logo": {
-    "url": "https://felizbay.com/logo-512.png",
+    "url": "https://inflatablepoolfactory.com/logo-512.png",
     "width": 512,
     "height": 512
   }

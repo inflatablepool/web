@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Import images from the "Felizbay Inflatable boats" source folder into
- * public/images/Felizbay/products/<slug>/ as webp, using the site's
+ * Import images from the "Inflatable Pool Factory Inflatable boats" source folder into
+ * public/images/inflatable-pool-factory/products/<slug>/ as webp, using the site's
  * product sizing rules (800px, q80).
  *
  * Usage: node scripts/import-inflatable-images.mjs
@@ -10,8 +10,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const SRC = 'D:\\OneDrive\\Website\\Felizbay\\Felizbay Inflatable boats';
-const OUT_ROOT = path.resolve('public/images/Felizbay/products');
+const SRC = 'D:\\OneDrive\\Website\\Inflatable Pool Factory\\Inflatable Pool Factory Inflatable boats';
+const OUT_ROOT = path.resolve('public/images/inflatable-pool-factory/products');
 
 const GROUPS = [
   {
@@ -156,7 +156,7 @@ async function main() {
         continue;
       }
       n++;
-      const dest = path.join(outDir, `Felizbay-${group.slug}-${n}.webp`);
+      const dest = path.join(outDir, `inflatable-pool-factory-${group.slug}-${n}.webp`);
       const img = sharp(src);
       const meta = await img.metadata();
       const opts = {};

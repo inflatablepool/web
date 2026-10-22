@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Felizbay** — a 37-language water-sports equipment platform (~645 pages), deployed to **Cloudflare Pages + 5 Workers**.
+AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Inflatable Pool Factory** — a 37-language water-sports equipment platform (~645 pages), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Stack:** Astro 7.2 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 5.9 | MDX | Sharp | Vite 8
 
@@ -69,7 +69,7 @@ scripts/               # Build pipeline + gates (see Build Pipeline below)
 
 ### Deploy Extras (deploy.yml)
 
-`fast-upload-r2.mjs` uploads public/ assets to R2 **and auto-prunes** stale objects on every deploy: R2 keys under `data/`, `images/`, `files/` prefixes with no local source are deleted. Guards: empty local prefix skipped, >200 stale objects aborts prune with warning, prune failure never fails the deploy. `www.felizbay.com/*` → apex via Cloudflare dashboard Redirect Rule (301, single-hop, path-preserving — not configurable in `_redirects`).
+`fast-upload-r2.mjs` uploads public/ assets to R2 **and auto-prunes** stale objects on every deploy: R2 keys under `data/`, `images/`, `files/` prefixes with no local source are deleted. Guards: empty local prefix skipped, >200 stale objects aborts prune with warning, prune failure never fails the deploy. `www.inflatablepoolfactory.com/*` → apex via Cloudflare dashboard Redirect Rule (301, single-hop, path-preserving — not configurable in `_redirects`).
 
 ### Redirects
 
@@ -168,12 +168,12 @@ The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static wa
 2. Rejects honeypot submissions (`email_confirm` hidden field): returns HTTP 200 with a fake UUID but writes nothing. **Client-side guard (2026-10):** the page JS in `Contact.astro` deletes `email_confirm` from the fetch payload and clears the DOM input before submit — browsers/password managers autofill the off-screen field despite `autocomplete="off"`, which silently dropped real inquiries (incident post-mortem in `docs/technical-audit-2026-10.md` §2.1). The server honeypot only catches raw-HTTP bots now.
 3. Verifies the **Cloudflare Turnstile** token (`workers/contact-worker/index.ts` `verifyTurnstile`) when `TURNSTILE_SECRET_KEY` is configured.
 4. Enforces **5 submissions per IP per hour** via the global D1 `rate_limit` table (`migrations/0002_rate_limit.sql`) — persistent across worker isolates, not per-isolate memory. Returns HTTP 429 + `Retry-After`.
-5. Inserts the record into D1 `inquiry` (`Felizbay-db`) — no GitHub writes, no deploy churn.
+5. Inserts the record into D1 `inquiry` (`inflatable-pool-factory-db`) — no GitHub writes, no deploy churn.
 6. Sends the notification email via **Resend** with `Reply-To` set to the submitter.
 
 Admin reads submissions at `/keystatic/contact-submissions` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated) and shows the latest 50; full data is exportable via `/api/admin/inquiries.csv`.
 
-**Daily D1 maintenance:** `felizbay-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
+**Daily D1 maintenance:** `inflatable-pool-factory-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
 
 **Turnstile wiring:** the widget renders when `PUBLIC_TURNSTILE_SITE_KEY` is set (injected by CI into both `deploy.yml` and `ci.yml` builds); the secret is synced to the contact + admin workers via `wrangler secret bulk` in `deploy.yml`.
 
@@ -202,7 +202,7 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 | `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                   | —                      |
 | `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                        | —                      |
 
-**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) stay as-is in all languages. Cognates matching EN are also preserved.
+**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Inflatable Pool Factory) stay as-is in all languages. Cognates matching EN are also preserved.
 
 ## Iron Rule — Encoding / Garbled Text
 

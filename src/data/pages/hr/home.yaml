@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Vrhunski bazeni s krutim drop-stitch stijenkama koji se napuhavaju u nekoliko minuta i spremaju za zimu — dizajnirani za opuštanje u dvorištu i obiteljsku zabavu.<br />
     Istražite veličine bazena, usporedite značajke i pronađite ono što vam odgovara.<br />
-    Dizajnirao i upravlja Aquafarer LLC, SAD.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Trgovina bazenima
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay pravokutni Drop Stitch bazen na napuhavanje u dvorištu
+    alt: Inflatable Pool Factory pravokutni Drop Stitch bazen na napuhavanje u dvorištu
 stats:
-  title: Felizbay na prvi pogled
+  title: Inflatable Pool Factory na prvi pogled
   columns: 4
   stats:
     - title: Zbirke bazena
@@ -36,11 +36,11 @@ stats:
     - title: Prilagođene veličine
       amount: Available
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch tehnologija
-  title: Zašto Felizbay bazen<br />je drugačiji
+  title: Zašto Inflatable Pool Factory bazen<br />je drugačiji
   subtitle: Visokotlačna Drop Stitch konstrukcija čini naše bazene krutim, izdržljivim i lakim za spremanje.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Za tvrtke
   title: Pools for Business,<br />Također
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay za poslovne partnere</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory za poslovne partnere</h3>
   items:
     - title: Iznajmljivanje za odmor i ugostiteljstvo
       description: Sezonski sadržaji za goste za iznajmljivanje na odmoru, mjesta za glamping i butik posjede — brzi za postavljanje, jednostavni za održavanje, jednostavni za spremanje.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Njega i sigurnost
   title: Jednostavan za posjedovanje,<br />Lako za voljeti
-  subtitle: Od isporuke preko prvog kupanja do skladištenja na kraju sezone, posjedovanje bazena Felizbay ostaje jednostavno.
+  subtitle: Od isporuke preko prvog kupanja do skladištenja na kraju sezone, posjedovanje bazena Inflatable Pool Factory ostaje jednostavno.
   items:
     - title: Postavljanje u nekoliko minuta
       description: 'Raspakirajte i napuhajte priloženom pumpom za 5-15 minuta, zatim napunite vrtnim crijevom — vrijeme punjenja ovisi o veličini bazena i opskrbi vodom.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay okrugli Drop Stitch bazen na napuhavanje
+    alt: Inflatable Pool Factory okrugli Drop Stitch bazen na napuhavanje
 blog_latest:
   title: Vodiči i uvidi u bazene
   information: |
     Vodiči za postavljanje, savjeti za njegu i savjeti za kupnju bazena na napuhavanje
-    iz Felizbay tima.
+    iz Inflatable Pool Factory tima.
 faqs:
   title: Često postavljana pitanja o bazenu na napuhavanje
-  subtitle: Uobičajena pitanja o Felizbay bazenima na napuhavanje.
+  subtitle: Uobičajena pitanja o Inflatable Pool Factory bazenima na napuhavanje.
   columns: 2
   items:
     - title: Koliko dugo traje postavljanje?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Što je uključeno u bazen?
-      description: Svaki Felizbay bazen uključuje električnu zračnu pumpu, pribor za popravak i torbu za pohranu. Okrugli modeli imaju izborni poklopac.
+      description: Svaki Inflatable Pool Factory bazen uključuje električnu zračnu pumpu, pribor za popravak i torbu za pohranu. Okrugli modeli imaju izborni poklopac.
       icon: tabler:box
       category: all
     - title: Koje su veličine dostupne?

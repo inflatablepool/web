@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Lähetä meille viesti
   subtitle: Tarjouksia, teknisiä kysymyksiä tai kumppanuuskyselyitä varten ota meihin yhteyttä. Vastaamme yhden arkipäivän kuluessa.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Lähetä kysely → Pyydä tarjous
   success_message: Kiitos! Viestisi on päätynyt postilaatikkoomme. Vastaamme yhden arkipäivän kuluessa.
   error_message: Jotain meni pieleen viestisi lähettämisessä. Yritä uudelleen tai lähetä meille sähköpostia.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Roskapostin esto: ratkaise seuraavat asiat'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Mukautetut koot, värit, kannet, tuotemerkit ja pakkaukset.
       icon: tabler:palette
     - title: Sähköposti
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Verkkosivusto
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Vastausaika
       description: Vastaamme yhden arkipäivän kuluessa.
       icon: tabler:clock
 map:
   title: Ota yhteyttä
-  subtitle: Ota yhteyttä Felizbayyn
-  address: felizbay.com
+  subtitle: Ota yhteyttä Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

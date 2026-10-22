@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Baseny premium ze sztywnymi ścianami drop-stitch, które nadmuchują się w ciągu kilku minut i pakują na zimę — zaprojektowane z myślą o relaksie na podwórku i rodzinnej zabawie.<br />
     Przeglądaj rozmiary basenów, porównaj funkcje i znajdź odpowiedni dla swojej przestrzeni.<br />
-    Zaprojektowany i obsługiwany przez Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Kup baseny
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Prostokątny nadmuchiwany basen Felizbay Drop Stitch na podwórku
+    alt: Prostokątny nadmuchiwany basen Inflatable Pool Factory Drop Stitch na podwórku
 stats:
-  title: Felizbay w skrócie
+  title: Inflatable Pool Factory w skrócie
   columns: 4
   stats:
     - title: Kolekcje basenowe
@@ -36,11 +36,11 @@ stats:
     - title: Rozmiary niestandardowe
       amount: Available
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Technologia Drop Stitch
-  title: Dlaczego basen Felizbay<br />Jest inny
+  title: Dlaczego basen Inflatable Pool Factory<br />Jest inny
   subtitle: Wysokociśnieniowa konstrukcja Drop Stitch sprawia, że ​​nasze baseny są sztywne, trwałe i łatwe w przechowywaniu.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Dla firm
   title: Baseny dla Biznesu,<br />Zbyt
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay dla partnerów biznesowych</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory dla partnerów biznesowych</h3>
   items:
     - title: Wynajem wakacyjny i hotelarstwo
       description: Sezonowe udogodnienia dla gości do wynajmu wakacyjnego, obiektów typu glamping i obiektów butikowych — szybkie we wdrażaniu, łatwe w utrzymaniu i proste w przechowywaniu.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Opieka i bezpieczeństwo
   title: Łatwy w posiadaniu,<br />Łatwo kochać
-  subtitle: Od dostawy, przez pierwsze pływanie, aż po przechowywanie na koniec sezonu, posiadanie basenu Felizbay pozostaje proste.
+  subtitle: Od dostawy, przez pierwsze pływanie, aż po przechowywanie na koniec sezonu, posiadanie basenu Inflatable Pool Factory pozostaje proste.
   items:
     - title: Konfiguracja w kilka minut
       description: 'Rozpakuj i napompuj za pomocą dołączonej pompy w ciągu 5–15 minut, a następnie napełnij wężem ogrodowym — czas napełniania różni się w zależności od wielkości basenu i zaopatrzenia w wodę.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Okrągły nadmuchiwany basen Felizbay Drop Stitch
+    alt: Okrągły nadmuchiwany basen Inflatable Pool Factory Drop Stitch
 blog_latest:
   title: Przewodniki i spostrzeżenia dotyczące basenów
   information: |
     Poradniki konfiguracji, wskazówki dotyczące pielęgnacji i porady dotyczące zakupu nadmuchiwanych basenów
-    z zespołu Felizbay.
+    z zespołu Inflatable Pool Factory.
 faqs:
   title: Często zadawane pytania dotyczące nadmuchiwanego basenu
-  subtitle: Często zadawane pytania dotyczące nadmuchiwanych basenów Felizbay.
+  subtitle: Często zadawane pytania dotyczące nadmuchiwanych basenów Inflatable Pool Factory.
   columns: 2
   items:
     - title: Jak długo trwa konfiguracja?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Co jest wliczone w cenę basenu?
-      description: Każdy basen Felizbay zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele okrągłe mają opcjonalną dopasowaną pokrywę.
+      description: Każdy basen Inflatable Pool Factory zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele okrągłe mają opcjonalną dopasowaną pokrywę.
       icon: tabler:box
       category: all
     - title: Jakie rozmiary są dostępne?

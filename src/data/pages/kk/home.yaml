@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Қатты drop-stitch қабырғалары бар премиум бассейндер бірнеше минут ішінде үрленіп, қыста жиналады — аулада демалуға және отбасылық көңіл көтеруге арналған.<br />
     Бассейн өлшемдерін зерттеңіз, мүмкіндіктерді салыстырыңыз және кеңістігіңізге сәйкес келетінін табыңыз.<br />
-    Aquafarer LLC, АҚШ әзірлеген және басқарған.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Дүкен бассейндері
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Ауладағы Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
+    alt: Ауладағы Inflatable Pool Factory тікбұрышты Drop Stitch үрлемелі бассейні
 stats:
-  title: Бір қарағанда Felizbay
+  title: Бір қарағанда Inflatable Pool Factory
   columns: 4
   stats:
     - title: Бассейн жинақтары
@@ -36,11 +36,11 @@ stats:
     - title: Арнайы өлшемдер
       amount: Available
     - title: Байланыс
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch технологиясы
-  title: Неліктен Felizbay бассейні<br />Басқа
+  title: Неліктен Inflatable Pool Factory бассейні<br />Басқа
   subtitle: Жоғары қысымды Drop Stitch конструкциясы бассейндерімізді қатты, берік және сақтауға оңай етеді.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Бизнеске арналған
   title: Бизнеске арналған бассейндер,<br />Сондай-ақ
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Іскерлік серіктестерге арналған Felizbay</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Іскерлік серіктестерге арналған Inflatable Pool Factory</h3>
   items:
     - title: Демалыстарды жалға беру және қонақжайлылық
       description: Демалыстарды жалға алу, глампинг алаңдары және бутик қасиеттеріне арналған маусымдық ыңғайлылықтар — орналастыру жылдам, техникалық қызмет көрсету оңай, сақтау оңай.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Күтім және қауіпсіздік
   title: Меншікке оңай,<br />Сүйу оңай
-  subtitle: Жеткізуден бастап бірінші жүзуге дейін маусымның соңына дейін Felizbay бассейніне ие болу оңай.
+  subtitle: Жеткізуден бастап бірінші жүзуге дейін маусымның соңына дейін Inflatable Pool Factory бассейніне ие болу оңай.
   items:
     - title: Минуттарда орнату
       description: 'Қораптан шығарып, жинақтағы сорғымен 5-15 минут ішінде үрлеңіз, содан кейін бақша шлангімен толтырыңыз — толтыру уақыты бассейн өлшеміне және сумен қамтамасыз етілуіне байланысты өзгереді.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay дөңгелек Drop Stitch үрлемелі бассейн
+    alt: Inflatable Pool Factory дөңгелек Drop Stitch үрлемелі бассейн
 blog_latest:
   title: Бассейнге арналған гидтер және түсініктемелер
   information: |
     Үрлемелі бассейндерді орнату бойынша нұсқаулықтар, күтім бойынша кеңестер және сатып алу бойынша кеңестер
-    Felizbay командасынан.
+    Inflatable Pool Factory командасынан.
 faqs:
   title: Үрлемелі бассейн туралы жиі қойылатын сұрақтар
-  subtitle: Felizbay үрлемелі бассейндері туралы жиі қойылатын сұрақтар.
+  subtitle: Inflatable Pool Factory үрлемелі бассейндері туралы жиі қойылатын сұрақтар.
   columns: 2
   items:
     - title: Орнату қанша уақытты алады?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Бассейнге не кіреді?
-      description: Әрбір Felizbay бассейнінде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілерде қосымша орнатылған қақпақ бар.
+      description: Әрбір Inflatable Pool Factory бассейнінде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілерде қосымша орнатылған қақпақ бар.
       icon: tabler:box
       category: all
     - title: Қандай өлшемдері бар?

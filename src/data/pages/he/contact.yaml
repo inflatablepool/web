@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: שלחו לנו הודעה
   subtitle: להצעות מחיר, שאלות טכניות או פניות לשותפות, פנו אלינו. אנו משיבים תוך יום עסקים אחד.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: שלח פניה ← קבל הצעת מחיר
   success_message: תוֹדָה! ההודעה שלך נחתה בתיבת הדואר הנכנס שלנו. אנו נשיב תוך יום עסקים אחד.
   error_message: משהו השתבש בשליחת ההודעה שלך. אנא נסה שוב או שלח לנו דוא"ל ישירות.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'אנטי ספאם: אנא פתור את הדברים הבאים'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: גדלים, צבעים, כיסויים, מיתוג ואריזה מותאמים אישית.
       icon: tabler:palette
     - title: אֶלֶקטרוֹנִי
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: אֲתַר אִינטֶרנֶט
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: זמן תגובה
       description: אנו משיבים תוך יום עסקים אחד.
       icon: tabler:clock
 map:
   title: לְהִתְקַשֵׁר
-  subtitle: צור קשר עם Felizbay
-  address: felizbay.com
+  subtitle: צור קשר עם Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

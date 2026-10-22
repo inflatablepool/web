@@ -3,16 +3,16 @@ title: 'Pools for Glamping & Boutique Hospitality: Elevate Your Outdoor Resort E
 description: 'Site planning, commercial durability, turnover cleaning, seasonal setup, and compliance for glamping resort pools.'
 ---
 
-In the competitive world of luxury glamping, eco-resorts, and boutique hospitality, offering unique, high-end outdoor amenities is key to standing out and maximizing occupancy. Guests seek immersive nature stays without sacrificing comfort or luxury. The Felizbay drop-stitch pool system delivers a sophisticated, temporary-to-semi-permanent water feature that aligns naturally with nature-focused architectural aesthetics.
+In the competitive world of luxury glamping, eco-resorts, and boutique hospitality, offering unique, high-end outdoor amenities is key to standing out and maximizing occupancy. Guests seek immersive nature stays without sacrificing comfort or luxury. The Inflatable Pool Factory drop-stitch pool system delivers a sophisticated, temporary-to-semi-permanent water feature that aligns naturally with nature-focused architectural aesthetics.
 
-Designed with high structural rigidity, minimal environmental footprint, and fast setup, Felizbay pools empower hospitality operators to create striking water retreats in remote or scenic landscapes.
+Designed with high structural rigidity, minimal environmental footprint, and fast setup, Inflatable Pool Factory pools empower hospitality operators to create striking water retreats in remote or scenic landscapes.
 
 ## 1. Site Planning & Spatial Integration for Glamping Resorts
 
 Integrating a water feature into geodesic domes, safari tents, tiny homes, or luxury cabins requires thoughtful spatial design that complements natural surroundings while respecting site boundaries.
 
 - **Aesthetic harmonization:**
-  Clean geometric lines and neutral exterior tones allow Felizbay drop-stitch pools to integrate seamlessly with wooden decking, stone paving, or natural grass without looking like intrusive industrial hardware.
+  Clean geometric lines and neutral exterior tones allow Inflatable Pool Factory drop-stitch pools to integrate seamlessly with wooden decking, stone paving, or natural grass without looking like intrusive industrial hardware.
 
 - **Spatial clearance & decking integration:**
   - **Compact soaking pods:** A 2.1 m × 1.6 m footprint (SS211608) fits neatly onto private guest deck platforms, offering an exclusive private soak per unit.
@@ -24,7 +24,7 @@ Integrating a water feature into geodesic domes, safari tents, tiny homes, or lu
 Glamping resort amenities experience continuous, back-to-back usage from diverse guests throughout the operating season. Equipment must withstand heavy commercial demands:
 
 - **High-density drop-stitch durability:**
-  Utilizing tens of thousands of internal polyester threads sealed within multi-layer UV-resistant PVC, Felizbay pools withstand high bather loads, sun exposure, and variable weather without sagging or losing pressure.
+  Utilizing tens of thousands of internal polyester threads sealed within multi-layer UV-resistant PVC, Inflatable Pool Factory pools withstand high bather loads, sun exposure, and variable weather without sagging or losing pressure.
 
 - **Rigid structural stability:**
   Unlike standard soft-sided inflatables, guests can safely sit on the reinforced side walls or lean back against the perimeter without causing water spillage or structural deformation.
@@ -69,9 +69,9 @@ Operating water amenities in commercial hospitality environments requires strict
 
 ## 6. Commercial Inquiries & Custom OEM/ODM Solutions
 
-Looking to elevate your glamping site or hospitality resort with custom water features? Felizbay offers end-to-end commercial solutions, including tailored dimensions, custom colorways, branded logos, and integrated filtration accessories designed specifically for commercial resort operators.
+Looking to elevate your glamping site or hospitality resort with custom water features? Inflatable Pool Factory offers end-to-end commercial solutions, including tailored dimensions, custom colorways, branded logos, and integrated filtration accessories designed specifically for commercial resort operators.
 
-### Partner with Felizbay for your next hospitality project
+### Partner with Inflatable Pool Factory for your next hospitality project
 
 - **Custom dimensions & colors:** Tailor pool sizes and exterior aesthetics to match your resort's design theme.
 - **Bulk commercial pricing:** Flexible purchasing and logistics for multi-unit resorts and glamping franchises.
@@ -79,4 +79,4 @@ Looking to elevate your glamping site or hospitality resort with custom water fe
 
 ### Get started today
 
-Interested in custom commercial configurations or a project quote? Email [info@felizbay.com](mailto:info@felizbay.com) or [submit a project request through our contact form](/contact) — our team typically responds within one business day.
+Interested in custom commercial configurations or a project quote? Email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) or [submit a project request through our contact form](/contact) — our team typically responds within one business day.

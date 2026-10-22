@@ -98,20 +98,20 @@ function generateSiteSettingsBlock(code) {
   const isRtl = code === 'ar';
   const siteName =
     code === 'ar'
-      ? 'Felizbay \u2014 القوارب المطاطية'
+      ? 'Inflatable Pool Factory \u2014 القوارب المطاطية'
       : code === 'ru'
-        ? 'Felizbay \u2014 Надувные лодки'
+        ? 'Inflatable Pool Factory \u2014 Надувные лодки'
         : code === 'pl'
-          ? 'Felizbay'
+          ? 'Inflatable Pool Factory'
           : code === 'it'
-            ? 'Felizbay'
+            ? 'Inflatable Pool Factory'
             : code === 'pt'
-              ? 'Felizbay'
+              ? 'Inflatable Pool Factory'
               : code === 'es'
-                ? 'Felizbay'
+                ? 'Inflatable Pool Factory'
                 : code === 'de'
-                  ? 'Felizbay'
-                  : 'Felizbay';
+                  ? 'Inflatable Pool Factory'
+                  : 'Inflatable Pool Factory';
 
   return `
 # --- Per-language site settings ---
@@ -122,20 +122,20 @@ siteSettings:
   organization:
     name: '${siteName}'
     logo: ''
-    contactEmail: info@felizbay.com
+    contactEmail: info@inflatablepoolfactory.com
     contactPhone: '+1 (213) 557-7888'
     address: '5067 Saddleback St, Montclair, CA 91763, USA'  # TODO: translate address to ${label} if localized address exists
   i18n:
     language: ${code}${isRtl ? '\n    textDirection: rtl' : ''}
   socialLinks:
     - platform: youtube
-      url: 'https://www.youtube.com/@felizbay'
+      url: 'https://www.youtube.com/@inflatablepoolfactory'
     - platform: x
-      url: 'https://x.com/Felizbay'
+      url: 'https://x.com/inflatablepoolfactory'
     - platform: instagram
-      url: 'https://www.instagram.com/Felizbay'
+      url: 'https://www.instagram.com/inflatablepoolfactory'
     - platform: facebook
-      url: 'https://www.facebook.com/Felizbay'
+      url: 'https://www.facebook.com/inflatablepoolfactory'
     - platform: rss
       url: /rss.xml
 `;

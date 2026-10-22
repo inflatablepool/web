@@ -2,11 +2,11 @@ hero:
   tagline: Haqqımızda
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay şişmə hovuzu
+    alt: Inflatable Pool Factory şişmə hovuzu
   title: |
     Üzgüçülüyün sadələşdirilməsi, <br />
-     <span class="text-accent dark:text-white">Felizbay</span> üslubunda
-  subtitle: Felizbay, Aquafarer MMC (ABŞ) tərəfindən dizayn edilmiş və idarə olunan premium Drop Stitch şişmə hovuz markasıdır. Biz inanırıq ki, hər bir ailə həyətdə əsl hovuza layiqdir - tikinti, icazə və ya daimi quraşdırma olmadan. Hovuzlarımız bir neçə dəqiqə ərzində sərt şəkildə şişirilir, ailə əyləncəsinin tam yaylarından sağ çıxır və mövsümün sonunda kiçik həcmdə yığışır.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span> üslubunda
+  subtitle: Inflatable Pool Factory, Inflatable Pool Team · Qingdao Vatrad Group tərəfindən dizayn edilmiş premium Drop Stitch şişmə hovuz markasıdır. Biz inanırıq ki, hər bir ailə həyətdə əsl hovuza layiqdir - tikinti, icazə və ya daimi quraşdırma olmadan. Hovuzlarımız bir neçə dəqiqə ərzində sərt şəkildə şişirilir, ailə əyləncəsinin tam yaylarından sağ çıxır və mövsümün sonunda kiçik həcmdə yığışır.
 stats:
   title: Rəqəmlərə görə
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nominal təzyiq
       amount: 4-5 PSI
     - title: Əlaqə
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Biz nə qururuq
   subtitle: İçəridən bildiyimiz diqqət mərkəzində olan məhsul xətti - yüksək təzyiqli Drop Stitch şişmə hovuzları.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay düzbucaqlı Drop Stitch şişmə hovuzu
+    alt: Inflatable Pool Factory düzbucaqlı Drop Stitch şişmə hovuzu
 steps2_values:
   title: Bizim dəyərlərimiz
   subtitle: Qurduğumuz hər hovuzu formalaşdıran üç prinsip.
@@ -64,15 +64,15 @@ steps2_values:
       description: Hovuz gəmilərindən əvvəl nominal təzyiqdən yuxarı sınaqdan keçirilmiş yüksək təzyiqli Drop Stitch konstruksiyası.
       icon: tabler:settings
     - title: Mövsümü geridə qoyan dəstək
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Mərhələlər
-  subtitle: Felizbay hekayəsinin qısa versiyası.
+  subtitle: Inflatable Pool Factory hekayəsinin qısa versiyası.
   isReversed: true
   items:
     - title: Şişirilən hovuzlara diqqət yetirir
-      description: 'Felizbay bir fokusla yaradılmışdır: premium drop stitch şişmə hovuzlar.'
+      description: 'Inflatable Pool Factory bir fokusla yaradılmışdır: premium drop stitch şişmə hovuzlar.'
       icon: tabler:pool
     - title: Üç imza kolleksiyası
       description: Düzbucaqlı, dəyirmi mavi və dəyirmi boz hovuz xətləri, hər biri isteğe bağlı örtüklər və fərdi ölçülərə malikdir.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-poçt
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Veb sayt
-      description: felizbay.com — hovuzlarımızı nəzərdən keçirin və qiymət tələb edin.
+      description: inflatablepoolfactory.com — hovuzlarımızı nəzərdən keçirin və qiymət tələb edin.
     - title: OEM / Topdan
       description: Biznes tərəfdaşları üçün xüsusi ölçülər, rənglər və brendinq mövcuddur.
 brand_hub_tagline: Məhsullar
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: İstehsal Mükəmməlliyi
   title: Nəfis sənətkarlığın təmin edilməsi
-  description: Felizbay istehsal xətti yüksək keyfiyyətli, davamlı, yüksək təzyiqli şişmə hovuzlara həsr edilmişdir.
+  description: Inflatable Pool Factory istehsal xətti yüksək keyfiyyətli, davamlı, yüksək təzyiqli şişmə hovuzlara həsr edilmişdir.
   cards:
     - title: Təcrübəli Texniki Komanda
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Qlobal Çatdırılma
   title_html: Bir marka, <span class="text-white/90">dünya miqyasında göndərmə</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Hovuz kolleksiyaları

@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Premium-Pools mit starren drop-stitch-Wänden, die sich in wenigen Minuten aufblasen und für den Winter verstauen lassen – konzipiert für Entspannung im Garten und Familienspaß.<br />
     Entdecken Sie Poolgrößen, vergleichen Sie Funktionen und finden Sie die richtige Lösung für Ihren Raum.<br />
-    Entworfen und betrieben von Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Shop-Pools
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rechteckiges aufblasbares Drop-Stitch-Schwimmbecken in einem Hinterhof
+    alt: Inflatable Pool Factory rechteckiges aufblasbares Drop-Stitch-Schwimmbecken in einem Hinterhof
 stats:
-  title: Felizbay auf einen Blick
+  title: Inflatable Pool Factory auf einen Blick
   columns: 4
   stats:
     - title: Pool-Kollektionen
@@ -36,11 +36,11 @@ stats:
     - title: Benutzerdefinierte Größen
       amount: Available
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop-Stitch-Technologie
-  title: Warum ein Felizbay-Pool<br />Ist anders
+  title: Warum ein Inflatable Pool Factory-Pool<br />Ist anders
   subtitle: Die Hochdruck-Drop-Stitch-Konstruktion macht unsere Pools steif, langlebig und mühelos zu lagern.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Für Unternehmen
   title: Pools für Unternehmen,<br />Zu
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay für Geschäftspartner</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory für Geschäftspartner</h3>
   items:
     - title: Ferienwohnungen und Gastgewerbe
       description: Saisonale Gästeausstattung für Ferienunterkünfte, Glamping-Plätze und Boutique-Immobilien – schnell einsetzbar, einfach zu warten, einfach zu lagern.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Pflege und Sicherheit
   title: Einfach zu besitzen,<br />Leicht zu lieben
-  subtitle: Von der Lieferung über das erste Schwimmen bis zur Lagerung am Ende der Saison bleibt der Besitz eines Felizbay-Pools einfach.
+  subtitle: Von der Lieferung über das erste Schwimmen bis zur Lagerung am Ende der Saison bleibt der Besitz eines Inflatable Pool Factory-Pools einfach.
   items:
     - title: Einrichtung in wenigen Minuten
       description: 'Auspacken und mit der mitgelieferten Pumpe in 5–15 Minuten aufpumpen, dann mit einem Gartenschlauch füllen – die Füllzeit variiert je nach Poolgröße und Wasserversorgung.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay runder, aufblasbarer Drop-Stitch-Pool
+    alt: Inflatable Pool Factory runder, aufblasbarer Drop-Stitch-Pool
 blog_latest:
   title: Poolführer und Einblicke
   information: |
     Aufbauanleitungen, Pflegetipps und Kaufberatung für aufblasbare Schwimmbecken
-    vom Felizbay-Team.
+    vom Inflatable Pool Factory-Team.
 faqs:
   title: Häufig gestellte Fragen zu aufblasbaren Pools
-  subtitle: Häufige Fragen zu den aufblasbaren Felizbay-Schwimmbecken.
+  subtitle: Häufige Fragen zu den aufblasbaren Inflatable Pool Factory-Schwimmbecken.
   columns: 2
   items:
     - title: Wie lange dauert die Einrichtung?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Was ist im Pool enthalten?
-      description: Zu jedem Felizbay-Pool gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Runde Modelle verfügen optional über eine passgenaue Abdeckung.
+      description: Zu jedem Inflatable Pool Factory-Pool gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Runde Modelle verfügen optional über eine passgenaue Abdeckung.
       icon: tabler:box
       category: all
     - title: Welche Größen sind verfügbar?

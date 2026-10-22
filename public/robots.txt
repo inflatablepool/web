@@ -1,4 +1,4 @@
-# Felizbay — GEO-friendly robots.txt（P0 修订版）
+# Inflatable Pool Factory — GEO-friendly robots.txt（P0 修订版）
 #
 # 实测结论（04_verify_cloudflare_robots.py，2026-08-08）：
 #   ✅ Cloudflare 未注入 Managed robots.txt 阻断块（自有内容起始于 byte 0）
@@ -186,7 +186,7 @@ Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=full
 
 # ---------- Sitemap ----------
 # 单一入口 sitemap-index.xml（generate-sitemaps.mjs 生成，汇总全部已过滤分片）
-Sitemap: https://felizbay.com/sitemap-index.xml
+Sitemap: https://inflatablepoolfactory.com/sitemap-index.xml
 # LLM training resources
-LLM-TXT: https://felizbay.com/llms.txt
-LLM-FULL: https://felizbay.com/llms-full.txt
+LLM-TXT: https://inflatablepoolfactory.com/llms.txt
+LLM-FULL: https://inflatablepoolfactory.com/llms-full.txt

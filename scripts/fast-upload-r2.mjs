@@ -6,10 +6,10 @@ import { globSync } from 'glob';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const PUBLIC_DIR = path.join(ROOT, 'public');
-const BUCKET = 'felizbay-assets';
+const BUCKET = 'inflatable-pool-factory-assets';
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID || '2ac0f11c5362bbba3a7b34693dd56ba4';
-const ASSET_BASE = process.env.ASSETS_BASE_URL || 'https://assets.felizbay.com';
+const ASSET_BASE = process.env.ASSETS_BASE_URL || 'https://assets.inflatablepoolfactory.com';
 // Required only for the post-deploy edge-cache purge of data/*. If unset, the
 // purge step is skipped (deploy still succeeds, but stale data may be cached).
 const ZONE_ID = process.env.CLOUDFLARE_ZONE_ID;

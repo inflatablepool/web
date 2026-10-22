@@ -18,7 +18,7 @@
  * Examples:
  *   node scripts/new-page.mjs content about-us
  *   node scripts/new-page.mjs product sup-racer-14
- *   node scripts/new-page.mjs news Felizbay-new-factory
+ *   node scripts/new-page.mjs news inflatable-pool-factory-new-factory
  *   node scripts/new-page.mjs tech carbon-fiber-kevlar
  *   node scripts/new-page.mjs usecase sailing-training
  *   node scripts/new-page.mjs node whitewater-kayak
@@ -142,9 +142,9 @@ title: ${title}
 sku: ${sku}
 summary: ${summary}
 description: ${summary}
-image: /images/Felizbay/products/${id}.${ext}
+image: /images/inflatable-pool-factory/products/${id}.${ext}
 gallery:
-  - url: /images/Felizbay/products/${id}.${ext}
+  - url: /images/inflatable-pool-factory/products/${id}.${ext}
     alt: ${title}
 category: ${slugify(category)}
 tags:
@@ -277,10 +277,10 @@ async function createNews(slug) {
 publishDate: ${new Date().toISOString()}
 title: "${title}"
 excerpt: '${excerpt}'
-image: /images/Felizbay/news/${slug}.jpg
+image: /images/inflatable-pool-factory/news/${slug}.jpg
 tags: []
 category: ${category}
-author: Felizbay Team
+author: Inflatable Pool Factory Team
 metadata:
   title: '${title}'
   description: '${excerpt}'
@@ -291,7 +291,7 @@ ${title}
 TODO: write article content here.
 `;
   write(file, content);
-  console.log(`\nNext: add a news image to public/images/Felizbay/news/${slug}.jpg`);
+  console.log(`\nNext: add a news image to public/images/inflatable-pool-factory/news/${slug}.jpg`);
 }
 
 // 鈹€鈹€ 4. Technology 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€

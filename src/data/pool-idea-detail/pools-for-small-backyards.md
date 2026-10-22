@@ -3,7 +3,7 @@ title: 'Pools for Small Backyards: Maximize Your Outdoor Living Space'
 description: 'Dimensioning, ground preparation, weight safety, and drainage for installing a compact drop-stitch pool in a small yard.'
 ---
 
-Having a compact yard or courtyard shouldn't limit your summer enjoyment. The Felizbay drop-stitch inflatable pool is engineered to turn small outdoor footprints into luxurious personal retreats. By combining high-density rigid construction with a compact footprint, you can enjoy a refreshing soak without taking over your entire lawn or patio.
+Having a compact yard or courtyard shouldn't limit your summer enjoyment. The Inflatable Pool Factory drop-stitch inflatable pool is engineered to turn small outdoor footprints into luxurious personal retreats. By combining high-density rigid construction with a compact footprint, you can enjoy a refreshing soak without taking over your entire lawn or patio.
 
 This guide focuses on critical considerations for small-space pool installation — from precise dimensioning and floor leveling to drainage and weight safety.
 
@@ -11,7 +11,7 @@ This guide focuses on critical considerations for small-space pool installation 
 
 In a small backyard, every centimeter counts.
 
-- **Straight walls vs. sloped inflation:** Traditional vinyl inflatable pools feature outward-sloping walls that waste valuable yard space while offering less interior room. Felizbay's high-pressure [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool) creates vertical, ultra-rigid side walls.
+- **Straight walls vs. sloped inflation:** Traditional vinyl inflatable pools feature outward-sloping walls that waste valuable yard space while offering less interior room. Inflatable Pool Factory's high-pressure [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool) creates vertical, ultra-rigid side walls.
 - **Compact footprint, maximum space:** The exterior footprint translates almost directly into usable interior water area, allowing you to fit a comfortable soaking pool into narrow yards, side courts, or compact patios.
 
 ## 2. Maintenance Clearance & Operational Space
@@ -47,7 +47,7 @@ Water is extremely heavy, and calculating total weight is vital for safety, part
 
 In small yards, discharging 1,000+ liters of water all at once can flood flower beds, swamp paved areas, or run off onto neighboring properties.
 
-- **Direct hose adapter:** Felizbay pools include a secure, threaded drain valve compatible with standard garden hoses.
+- **Direct hose adapter:** Inflatable Pool Factory pools include a secure, threaded drain valve compatible with standard garden hoses.
 - **Controlled water removal:**
   - Connect a hose to direct wastewater safely toward your yard's main storm drain or a dedicated sewer cleanout.
   - Alternatively, practice eco-friendly water reuse by using non-salted, untreated pool water to slowly irrigate established garden trees and lawns.

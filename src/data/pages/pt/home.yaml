@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Piscinas premium com paredes rígidas drop-stitch que inflam em minutos e podem ser guardadas para o inverno - projetadas para relaxamento no quintal e diversão em família.<br />
     Explore tamanhos de piscinas, compare recursos e encontre o ajuste certo para o seu espaço.<br />
-    Projetado e operado pela Aquafarer LLC, EUA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Loja de piscinas
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscina inflável retangular Felizbay Drop Stitch em um quintal
+    alt: Piscina inflável retangular Inflatable Pool Factory Drop Stitch em um quintal
 stats:
-  title: Felizbay num relance
+  title: Inflatable Pool Factory num relance
   columns: 4
   stats:
     - title: Coleções de piscina
@@ -36,11 +36,11 @@ stats:
     - title: Tamanhos personalizados
       amount: Available
     - title: Contato
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Tecnologia Drop Stitch
-  title: Por que uma piscina Felizbay<br />É diferente
+  title: Por que uma piscina Inflatable Pool Factory<br />É diferente
   subtitle: A construção Drop Stitch de alta pressão torna nossas piscinas rígidas, duráveis ​​e fáceis de armazenar.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Para empresas
   title: Piscinas para Negócios,<br />Também
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay para parceiros de negócios</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory para parceiros de negócios</h3>
   items:
     - title: Aluguéis por temporada e hospitalidade
       description: Amenidades sazonais para hóspedes em aluguéis por temporada, locais de glamping e propriedades boutique — rápidas de implantar, fáceis de manter e simples de armazenar.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Cuidado e Segurança
   title: Fácil de possuir,<br />Fácil de amar
-  subtitle: Da entrega ao primeiro mergulho e ao armazenamento no final da temporada, possuir uma piscina Felizbay permanece simples.
+  subtitle: Da entrega ao primeiro mergulho e ao armazenamento no final da temporada, possuir uma piscina Inflatable Pool Factory permanece simples.
   items:
     - title: Configuração em minutos
       description: 'Desembale e encha com a bomba incluída em 5 a 15 minutos e, em seguida, encha com uma mangueira de jardim – o tempo de enchimento varia de acordo com o tamanho da piscina e o abastecimento de água.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscina inflável redonda Felizbay Drop Stitch
+    alt: Piscina inflável redonda Inflatable Pool Factory Drop Stitch
 blog_latest:
   title: Guias e insights de piscina
   information: |
     Guias de configuração, dicas de cuidados e conselhos de compra para piscinas infláveis
-    da equipe Felizbay.
+    da equipe Inflatable Pool Factory.
 faqs:
   title: Perguntas frequentes sobre piscina inflável
-  subtitle: Perguntas comuns sobre piscinas infláveis ​​Felizbay.
+  subtitle: Perguntas comuns sobre piscinas infláveis ​​Inflatable Pool Factory.
   columns: 2
   items:
     - title: Quanto tempo leva a configuração?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: O que está incluído na piscina?
-      description: Cada piscina Felizbay inclui uma bomba de ar elétrica, um kit de reparo e uma bolsa de armazenamento. Os modelos redondos possuem uma tampa opcional.
+      description: Cada piscina Inflatable Pool Factory inclui uma bomba de ar elétrica, um kit de reparo e uma bolsa de armazenamento. Os modelos redondos possuem uma tampa opcional.
       icon: tabler:box
       category: all
     - title: Quais tamanhos estão disponíveis?

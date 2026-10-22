@@ -141,8 +141,8 @@ export interface Props {
 const { type: typeProp, data, breadcrumbs, faqs, product, article, howto, image, video, service } = Astro.props;
 const type = typeProp || (data?.['@type'] as LdType) || 'WebSite';
 const siteUrl = String(SITE.site).replace(/\/+$/, '');
-const name = SITE_SETTINGS?.siteName || SITE?.name || 'Felizbay';
-const authorName = 'Felizbay Team';
+const name = SITE_SETTINGS?.siteName || SITE?.name || 'Inflatable Pool Factory';
+const authorName = 'Inflatable Pool Factory Team';
 
 let schema: Record<string, unknown> = { '@context': 'https://schema.org' };
 

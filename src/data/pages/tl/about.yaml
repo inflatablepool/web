@@ -2,11 +2,11 @@ hero:
   tagline: Tungkol sa amin
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay inflatable swimming pool
+    alt: Inflatable Pool Factory inflatable swimming pool
   title: |
     Ginagawang simple ang paglangoy, <br />
-    estilo ng <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Ang Felizbay ay isang premium na drop stitch inflatable pool brand na dinisenyo at pinamamahalaan ng Aquafarer LLC (USA). Naniniwala kami na ang bawat pamilya ay karapat-dapat sa isang tunay na pool sa likod-bahay — nang walang konstruksyon, mga permit, o isang permanenteng pag-install. Ang aming mga pool ay namumuo nang matibay sa loob ng ilang minuto, nakakaligtas sa buong tag-araw ng kasiyahan ng pamilya, at nag-iimpake ng kaunti sa pagtatapos ng season.
+    estilo ng <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Ang Inflatable Pool Factory ay isang premium na drop stitch inflatable pool brand na dinisenyo ng Inflatable Pool Team · Qingdao Vatrad Group. Naniniwala kami na ang bawat pamilya ay karapat-dapat sa isang tunay na pool sa likod-bahay — nang walang konstruksyon, mga permit, o isang permanenteng pag-install. Ang aming mga pool ay namumuo nang matibay sa loob ng ilang minuto, nakakaligtas sa buong tag-araw ng kasiyahan ng pamilya, at nag-iimpake ng kaunti sa pagtatapos ng season.
 stats:
   title: Sa pamamagitan ng mga numero
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Na-rate na presyon
       amount: 4-5 PSI
     - title: Makipag-ugnayan
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Kung ano ang aming binuo
   subtitle: Isang nakatutok na linya ng produkto na alam natin sa labas — high-pressure drop stitch inflatable swimming pool.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rectangular Drop Stitch inflatable swimming pool
+    alt: Inflatable Pool Factory rectangular Drop Stitch inflatable swimming pool
 steps2_values:
   title: Ang aming mga halaga
   subtitle: Tatlong prinsipyo na humuhubog sa bawat pool na itinayo natin.
@@ -64,15 +64,15 @@ steps2_values:
       description: High-pressure drop stitch construction, nasubok sa itaas nito rate pressure, bago ang anumang pool ship.
       icon: tabler:settings
     - title: Suporta na lumalampas sa season
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milestones
-  subtitle: Isang maikling bersyon ng kwentong Felizbay.
+  subtitle: Isang maikling bersyon ng kwentong Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Nakatuon sa mga inflatable pool
-      description: 'Itinatag ang Felizbay na may iisang focus: premium drop stitch inflatable swimming pool.'
+      description: 'Itinatag ang Inflatable Pool Factory na may iisang focus: premium drop stitch inflatable swimming pool.'
       icon: tabler:pool
     - title: Tatlong koleksyon ng lagda
       description: Parihaba, bilog na asul, at bilog na kulay abong mga linya ng pool, bawat isa ay may mga opsyonal na cover at custom na laki.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Website
-      description: felizbay.com — i-browse ang aming mga pool at humiling ng quote.
+      description: inflatablepoolfactory.com — i-browse ang aming mga pool at humiling ng quote.
     - title: OEM / Pakyawan
       description: Available ang mga custom na laki, kulay, at branding para sa mga kasosyo sa negosyo.
 brand_hub_tagline: Mga produkto
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Kahusayan sa Produksyon
   title: Tinitiyak ang Katangi-tanging Pagkayari
-  description: Ang linya ng produksyon ng Felizbay ay nakatuon sa mataas na kalidad, matibay, mataas na presyon ng inflatable swimming pool.
+  description: Ang linya ng produksyon ng Inflatable Pool Factory ay nakatuon sa mataas na kalidad, matibay, mataas na presyon ng inflatable swimming pool.
   cards:
     - title: Sanay na Technician Team
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Global na Abot
   title_html: Isang tatak, <span class="text-white/90">pandaigdigang pagpapadala</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Mga koleksyon ng pool

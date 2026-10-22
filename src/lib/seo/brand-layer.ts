@@ -114,7 +114,7 @@ export function getAllBrandPages(): BrandPageEntry[] {
 }
 
 export const BRAND_SUMMARY = {
-  name: 'Felizbay',
+  name: 'Inflatable Pool Factory',
   tagline: 'Inflatable Swimming Pools for Every Backyard',
   description: 'Durable drop-stitch inflatable pools that set up in minutes and last for summers.',
   foundingYear: 2012,

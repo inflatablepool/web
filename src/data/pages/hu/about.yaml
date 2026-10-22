@@ -2,11 +2,11 @@ hero:
   tagline: Rólunk
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay felfújható medence
+    alt: Inflatable Pool Factory felfújható medence
   title: |
     Az úszás egyszerűvé tétele, <br />
-     <span class="text-accent dark:text-white">Felizbay</span> módra
-  subtitle: A Felizbay egy prémium Drop Stitch felfújható medence márka, amelyet az Aquafarer LLC (USA) tervezett és üzemeltet. Hiszünk abban, hogy minden család megérdemel egy igazi medencét a hátsó udvarban – építkezés, engedélyek vagy állandó telepítés nélkül. Medencéink percek alatt mereven felfújódnak, túlélik a családi szórakozás teljes nyarait, és a szezon végén elpakolnak.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span> módra
+  subtitle: Az Inflatable Pool Factory egy prémium Drop Stitch felfújható medence márka, amelyet az Inflatable Pool Team · Qingdao Vatrad Group tervezett. Hiszünk abban, hogy minden család megérdemel egy igazi medencét a hátsó udvarban – építkezés, engedélyek vagy állandó telepítés nélkül. Medencéink percek alatt mereven felfújódnak, túlélik a családi szórakozás teljes nyarait, és a szezon végén elpakolnak.
 stats:
   title: A számok alapján
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Névleges nyomás
       amount: 4-5 PSI
     - title: Érintkezés
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Amit építünk
   subtitle: Egy fókuszált termékcsalád, amelyet kívülről ismerünk – nagynyomású Drop Stitch felfújható úszómedencék.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay téglalap alakú Drop Stitch felfújható medence
+    alt: Inflatable Pool Factory téglalap alakú Drop Stitch felfújható medence
 steps2_values:
   title: Értékeink
   subtitle: Három alapelv, amely minden általunk épített medencét alakít.
@@ -64,15 +64,15 @@ steps2_values:
       description: Nagynyomású Drop Stitch konstrukció, amelyet a névleges nyomás felett teszteltek, mielőtt bármilyen medence kiszállna.
       icon: tabler:settings
     - title: Támogatás, amely túlmutat a szezonon
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Mérföldkövek
-  subtitle: A Felizbay-történet rövid változata.
+  subtitle: Az Inflatable Pool Factory-történet rövid változata.
   isReversed: true
   items:
     - title: A felfújható medencékre összpontosít
-      description: 'A Felizbay-t egyetlen céllal alapították: a prémium Drop Stitch felfújható úszómedencéket.'
+      description: 'Az Inflatable Pool Factory-t egyetlen céllal alapították: a prémium Drop Stitch felfújható úszómedencéket.'
       icon: tabler:pool
     - title: Három aláírásgyűjtemény
       description: Téglalap alakú, kerek kék és kerek szürke medencevonalak, mindegyik opcionális burkolattal és egyedi méretekkel.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Weboldal
-      description: felizbay.com — böngésszen medencéink között, és kérjen árajánlatot.
+      description: inflatablepoolfactory.com — böngésszen medencéink között, és kérjen árajánlatot.
     - title: OEM / nagykereskedelem
       description: Egyedi méretek, színek és márkajelzések állnak rendelkezésre üzleti partnerek számára.
 brand_hub_tagline: Termékek
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Termelési Kiválóság
   title: Kiváló kivitelezés biztosítása
-  description: A Felizbay gyártósort kiváló minőségű, tartós, nagynyomású felfújható úszómedencék gyártására fejlesztették ki.
+  description: Az Inflatable Pool Factory gyártósort kiváló minőségű, tartós, nagynyomású felfújható úszómedencék gyártására fejlesztették ki.
   cards:
     - title: Tapasztalt technikus csapat
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Global Reach
   title_html: Egy márka, <span class="text-white/90">világméretű szállítás</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Medence kollekciók

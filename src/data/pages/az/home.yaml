@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Bir neçə dəqiqə ərzində şişən və qışa yığılan sərt drop-stitch divarları olan premium hovuzlar həyətdə istirahət və ailəvi əyləncə üçün nəzərdə tutulub.<br />
     Hovuz ölçülərini araşdırın, xüsusiyyətləri müqayisə edin və məkanınıza uyğun olanı tapın.<br />
-    Aquafarer MMC, ABŞ tərəfindən dizayn edilmiş və idarə edilmişdir.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Mağaza hovuzları
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Həyətdə Felizbay düzbucaqlı Drop Stitch şişmə hovuzu
+    alt: Həyətdə Inflatable Pool Factory düzbucaqlı Drop Stitch şişmə hovuzu
 stats:
-  title: Bir Baxışda Felizbay
+  title: Bir Baxışda Inflatable Pool Factory
   columns: 4
   stats:
     - title: Hovuz kolleksiyaları
@@ -36,11 +36,11 @@ stats:
     - title: Xüsusi Ölçülər
       amount: Available
     - title: Əlaqə
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch Texnologiyası
-  title: Niyə Felizbay Hovuzu<br />Fərqlidir
+  title: Niyə Inflatable Pool Factory Hovuzu<br />Fərqlidir
   subtitle: Yüksək təzyiqli Drop Stitch konstruksiyası hovuzlarımızı möhkəm, dayanıqlı və saxlanmasını asanlaşdırır.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Bizneslər üçün
   title: Biznes üçün hovuzlar,<br />çox
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznes tərəfdaşları üçün</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory biznes tərəfdaşları üçün</h3>
   items:
     - title: Tətil İcarəsi və Qonaqpərvərlik
       description: Tətil kirayələri, qlampinq saytları və butik mülkləri üçün mövsümi qonaq şəraiti - yerləşdirmək üçün sürətli, saxlanması asan, saxlanması sadədir.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Qulluq və Təhlükəsizlik
   title: Sahibi olmaq asan,<br />Sevmək asan
-  subtitle: Çatdırılmadan ilk üzməyə, mövsümün sonunda saxlanmaya qədər Felizbay hovuzuna sahib olmaq sadədir.
+  subtitle: Çatdırılmadan ilk üzməyə, mövsümün sonunda saxlanmaya qədər Inflatable Pool Factory hovuzuna sahib olmaq sadədir.
   items:
     - title: Dəqiqədə quraşdırma
       description: 'Qutudan çıxarın və daxil olan nasosla 5-15 dəqiqə ərzində doldurun, sonra bağ şlanqı ilə doldurun — doldurma vaxtı hovuzun ölçüsünə və su təchizatına görə dəyişir.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay dəyirmi Drop Stitch şişmə hovuzu
+    alt: Inflatable Pool Factory dəyirmi Drop Stitch şişmə hovuzu
 blog_latest:
   title: Hovuz Bələdçiləri və İnsights
   information: |
     Quraşdırma təlimatları, qulluq tövsiyələri və şişmə hovuzlar üçün satın alma məsləhətləri
-    Felizbay komandasından.
+    Inflatable Pool Factory komandasından.
 faqs:
   title: Şişmə hovuzu haqqında tez-tez verilən suallar
-  subtitle: Felizbay şişmə hovuzları haqqında ümumi suallar.
+  subtitle: Inflatable Pool Factory şişmə hovuzları haqqında ümumi suallar.
   columns: 2
   items:
     - title: Quraşdırma nə qədər vaxt aparır?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuza nə daxildir?
-      description: Hər Felizbay hovuzuna elektrik hava nasosu, təmir dəsti və saxlama çantası daxildir. Dəyirmi modellərdə əlavə olaraq quraşdırılmış örtük var.
+      description: Hər Inflatable Pool Factory hovuzuna elektrik hava nasosu, təmir dəsti və saxlama çantası daxildir. Dəyirmi modellərdə əlavə olaraq quraşdırılmış örtük var.
       icon: tabler:box
       category: all
     - title: Hansı ölçülər mövcuddur?

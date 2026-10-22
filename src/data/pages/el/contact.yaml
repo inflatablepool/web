@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Στείλτε μας ένα μήνυμα
   subtitle: Για προσφορές, τεχνικές ερωτήσεις ή ερωτήσεις συνεργασίας, στείλτε μας μια γραμμή. Απαντάμε εντός μιας εργάσιμης ημέρας.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Αποστολή ερωτήματος → Λάβετε προσφορά
   success_message: Ευχαριστώ! Το μήνυμά σας έφτασε στα εισερχόμενά μας. Θα απαντήσουμε εντός μιας εργάσιμης ημέρας.
   error_message: Παρουσιάστηκε κάποιο πρόβλημα κατά την αποστολή του μηνύματός σας. Δοκιμάστε ξανά ή στείλτε μας email απευθείας.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: λύστε τα παρακάτω'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Προσαρμοσμένα μεγέθη, χρώματα, καλύμματα, επωνυμία και συσκευασία.
       icon: tabler:palette
     - title: E-mail
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Δικτυακός τόπος
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Χρόνος απόκρισης
       description: Απαντάμε εντός μιας εργάσιμης ημέρας.
       icon: tabler:clock
 map:
   title: Επικοινωνήστε
-  subtitle: Επικοινωνήστε με το Felizbay
-  address: felizbay.com
+  subtitle: Επικοινωνήστε με το Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

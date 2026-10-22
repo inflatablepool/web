@@ -22,7 +22,7 @@
 
 import facts from '../config/facts.json';
 
-const SITE = 'https://felizbay.com';
+const SITE = 'https://inflatablepoolfactory.com';
 
 // 稳定的 @id 锚点。@id 是实体身份的唯一凭据，一旦发布不要再改。
 export const ID = {
@@ -61,14 +61,15 @@ export function organizationNode() {
 
     address: {
       '@type': 'PostalAddress',
-      streetAddress: facts.office.city ? `${facts.office.label}, ${facts.office.city}` : facts.office.label,
+      streetAddress: facts.office.label,
+      addressLocality: facts.office.city,
       addressRegion: facts.office.province,
       addressCountry: facts.office.country,
     },
 
-    // ManufacturingBusiness 的生产地点：美国设计 + 青岛工厂生产。
-    // address 是法律实体（Aquafarer LLC, New Mexico）的注册地址，
-    // location 单独声明中国生产基地，两个实体不再混在一处。
+    // 品牌与生产团队位于青岛。
+    // address 是法律实体（Qingdao Vatrad Group）的注册地址，
+    // location 单独声明青岛生产基地。
     location: {
       '@type': 'Place',
       '@id': ID.factory,
@@ -81,7 +82,7 @@ export function organizationNode() {
       },
     },
 
-    // 两个电话拆成两个 contactPoint 并标明用途，而不是在两个 schema 块里各写一个
+    // 联系方式：只输出已配置的电话，避免生成空号码。
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -91,13 +92,17 @@ export function organizationNode() {
         areaServed: facts.reach.regions,
         availableLanguage: facts.contact.availableLanguages,
       },
-      {
-        '@type': 'ContactPoint',
-        contactType: 'sales',
-        telephone: facts.contact.salesUsPhone,
-        areaServed: 'US',
-        availableLanguage: ['English'],
-      },
+      ...(facts.contact.salesUsPhone
+        ? [
+            {
+              '@type': 'ContactPoint',
+              contactType: 'sales',
+              telephone: facts.contact.salesUsPhone,
+              areaServed: 'US',
+              availableLanguage: ['English'],
+            },
+          ]
+        : []),
     ],
 
     numberOfEmployees: {

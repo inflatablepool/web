@@ -72,7 +72,7 @@ async function translateText(text, lang) {
   }
 
   try {
-    const mUrl = `${MYMEMORY_URL}?q=${encodeURIComponent(text)}&langpair=en|${lang}&de=translate@felizbay.com`;
+    const mUrl = `${MYMEMORY_URL}?q=${encodeURIComponent(text)}&langpair=en|${lang}&de=translate@inflatablepoolfactory.com`;
     const mRes = await fetch(mUrl, { signal: AbortSignal.timeout(10000) });
     const mData = await mRes.json();
     if (mData.responseStatus === 200 && mData.responseData?.translatedText) {

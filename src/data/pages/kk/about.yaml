@@ -2,11 +2,11 @@ hero:
   tagline: Біз туралы
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay үрлемелі бассейні
+    alt: Inflatable Pool Factory үрлемелі бассейні
   title: |
     Жүзуді қарапайым ету, <br />
-     <span class="text-accent dark:text-white">Felizbay</span> стилінде
-  subtitle: Felizbay - Aquafarer LLC (АҚШ) әзірлеген және басқаратын жоғары сапалы Drop Stitch үрлемелі бассейн бренді. Әрбір отбасы құрылыссыз, рұқсатсыз немесе тұрақты қондырғысыз аулада нағыз бассейнге лайық деп санаймыз. Біздің бассейндер бірнеше минут ішінде қатты толтырылады, отбасылық көңіл көтерудің толық жазынан аман қалады және маусымның соңында шағын жиналады.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span> стилінде
+  subtitle: Inflatable Pool Factory - Inflatable Pool Team · Qingdao Vatrad Group әзірлеген жоғары сапалы Drop Stitch үрлемелі бассейн бренді. Әрбір отбасы құрылыссыз, рұқсатсыз немесе тұрақты қондырғысыз аулада нағыз бассейнге лайық деп санаймыз. Біздің бассейндер бірнеше минут ішінде қатты толтырылады, отбасылық көңіл көтерудің толық жазынан аман қалады және маусымның соңында шағын жиналады.
 stats:
   title: Сандар бойынша
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Номиналды қысым
       amount: 4-5 PSI
     - title: Байланыс
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Біз не саламыз
   subtitle: Бізге белгілі бір мақсатты өнім желісі — жоғары қысымды Drop Stitch үрлемелі бассейндер.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
+    alt: Inflatable Pool Factory тікбұрышты Drop Stitch үрлемелі бассейні
 steps2_values:
   title: Біздің құндылықтарымыз
   subtitle: Біз жасайтын әрбір бассейнді қалыптастыратын үш принцип.
@@ -64,15 +64,15 @@ steps2_values:
       description: Кез келген бассейнге жіберілмес бұрын оның номиналды қысымынан жоғары сыналған жоғары қысымды Drop Stitch конструкциясы.
       icon: tabler:settings
     - title: Маусымнан асып түсетін қолдау
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Белгілер
-  subtitle: Felizbay әңгімесінің қысқаша нұсқасы.
+  subtitle: Inflatable Pool Factory әңгімесінің қысқаша нұсқасы.
   isReversed: true
   items:
     - title: Үрлемелі бассейндерге назар аударылған
-      description: 'Felizbay бір ғана мақсатпен құрылған: премиум Drop Stitch үрлемелі бассейндер.'
+      description: 'Inflatable Pool Factory бір ғана мақсатпен құрылған: премиум Drop Stitch үрлемелі бассейндер.'
       icon: tabler:pool
     - title: Үш қол жинағы
       description: Тіктөртбұрышты, дөңгелек көк және дөңгелек сұр бассейн сызықтары, әрқайсысының қосымша қақпақтары және реттелетін өлшемдері бар.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Электрондық пошта
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Веб-сайт
-      description: felizbay.com — бассейндерімізді шолып, баға сұраңыз.
+      description: inflatablepoolfactory.com — бассейндерімізді шолып, баға сұраңыз.
     - title: OEM / Көтерме
       description: Жеке өлшемдер, түстер және брендинг іскери серіктестер үшін қолжетімді.
 brand_hub_tagline: Өнімдер
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Өндірістің үздігі
   title: Керемет шеберлікті қамтамасыз ету
-  description: Felizbay өндірістік желісі жоғары сапалы, берік, жоғары қысымды үрлемелі бассейндерге арналған.
+  description: Inflatable Pool Factory өндірістік желісі жоғары сапалы, берік, жоғары қысымды үрлемелі бассейндерге арналған.
   cards:
     - title: Тәжірибелі техниктер командасы
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Жаһандық қол жеткізу
   title_html: Бір бренд, <span class="text-white/90">дүниежүзілік тасымалдау</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Бассейн топтамалары

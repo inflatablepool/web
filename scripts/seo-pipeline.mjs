@@ -188,36 +188,36 @@ function generateSocialPosts(pageSlug) {
         ].includes(w)
     );
   const hook = SOCIAL_HOOKS[Math.floor(Math.random() * SOCIAL_HOOKS.length)];
-  const hashtags = ['#Felizbay', '#surfing', '#ocean', ...keywords.slice(0, 3).map((k) => `#${k}`)];
+  const hashtags = ['#InflatablePoolFactory', '#surfing', '#ocean', ...keywords.slice(0, 3).map((k) => `#${k}`)];
 
   return [
     {
       platform: 'instagram',
-      content: `${hook}\n\nFull guide: felizbay.com${url}\n\n${title}`,
+      content: `${hook}\n\nFull guide: inflatablepoolfactory.com${url}\n\n${title}`,
       hashtags,
       cta: 'Link in bio',
     },
     {
       platform: 'tiktok',
-      content: `${hook} 馃憜 Full guide at felizbay.com${url}`,
+      content: `${hook} 馃憜 Full guide at inflatablepoolfactory.com${url}`,
       hashtags: hashtags.slice(0, 3),
       cta: 'Full guide in bio',
     },
     {
       platform: 'twitter',
-      content: `${hook}\n\n${title}\n\nRead 鈫?felizbay.com${url}\n\n${hashtags.slice(0, 3).join(' ')}`,
+      content: `${hook}\n\n${title}\n\nRead 鈫?inflatablepoolfactory.com${url}\n\n${hashtags.slice(0, 3).join(' ')}`,
       hashtags,
       cta: 'Read full guide',
     },
     {
       platform: 'pinterest',
-      content: `${title} u2014 Complete Guide\n\nfelizbay.com${url}`,
+      content: `${title} u2014 Complete Guide\n\ninflatablepoolfactory.com${url}`,
       hashtags,
       cta: 'Save for later',
     },
     {
       platform: 'reddit',
-      content: `**${title}**\n\nI've been testing different ${keywords.slice(0, 3).join(', ')} in real conditions.\n\n${hook.replace(':', '.')}\n\nFull breakdown: https://felizbay.com${url}`,
+      content: `**${title}**\n\nI've been testing different ${keywords.slice(0, 3).join(', ')} in real conditions.\n\n${hook.replace(':', '.')}\n\nFull breakdown: https://inflatablepoolfactory.com${url}`,
       hashtags: [],
       cta: 'Full breakdown',
     },
@@ -249,7 +249,7 @@ function toCsv(tasks) {
   return rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n');
 }
 
-console.log('=== Felizbay SEO Pipeline v3.6 ===\n');
+console.log('=== Inflatable Pool Factory SEO Pipeline v3.6 ===\n');
 
 const tasks = runRules(SAMPLE_DATA);
 const geo = generateGeo(SAMPLE_DATA);

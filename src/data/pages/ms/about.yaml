@@ -2,11 +2,11 @@ hero:
   tagline: Tentang kami
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Kolam renang kembung Felizbay
+    alt: Kolam renang kembung Inflatable Pool Factory
   title: |
     Menjadikan berenang mudah, <br />
-    gaya <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay ialah jenama kolam inflatable drop stitch premium yang direka dan dikendalikan oleh Aquafarer LLC (USA). Kami percaya setiap keluarga berhak mendapat kolam sebenar di belakang rumah — tanpa pembinaan, permit atau pemasangan kekal. Kolam renang kami mengembang tegar dalam beberapa minit, bertahan sepanjang musim panas dengan keseronokan keluarga, dan berkemas kecil pada akhir musim.
+    gaya <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory ialah jenama kolam inflatable drop stitch premium yang direka oleh Inflatable Pool Team · Qingdao Vatrad Group. Kami percaya setiap keluarga berhak mendapat kolam sebenar di belakang rumah — tanpa pembinaan, permit atau pemasangan kekal. Kolam renang kami mengembang tegar dalam beberapa minit, bertahan sepanjang musim panas dengan keseronokan keluarga, dan berkemas kecil pada akhir musim.
 stats:
   title: Dengan nombor
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Tekanan terkadar
       amount: 4-5 PSI
     - title: Kenalan
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Apa yang kita bina
   subtitle: Barisan produk tertumpu yang kami tahu luar dalam — kolam renang kembung Drop Stitch tekanan tinggi.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Kolam renang kembung Felizbay segi empat tepat Drop Stitch
+    alt: Kolam renang kembung Inflatable Pool Factory segi empat tepat Drop Stitch
 steps2_values:
   title: Nilai kita
   subtitle: Tiga prinsip yang membentuk setiap kolam yang kita bina.
@@ -64,15 +64,15 @@ steps2_values:
       description: Pembinaan Drop Stitch bertekanan tinggi, diuji melebihi tekanan terkadarnya, sebelum sebarang kolam dihantar.
       icon: tabler:settings
     - title: Sokongan yang bertahan lebih lama daripada musim ini
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Pencapaian
-  subtitle: Versi pendek cerita Felizbay.
+  subtitle: Versi pendek cerita Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Tertumpu pada kolam kembung
-      description: 'Felizbay diasaskan dengan fokus tunggal: kolam renang kembung Drop Stitch premium.'
+      description: 'Inflatable Pool Factory diasaskan dengan fokus tunggal: kolam renang kembung Drop Stitch premium.'
       icon: tabler:pool
     - title: Tiga koleksi tandatangan
       description: Garisan kolam segi empat tepat, biru bulat dan kelabu bulat, masing-masing dengan penutup pilihan dan saiz tersuai.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mel
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: laman web
-      description: felizbay.com — semak imbas kolam kami dan minta sebut harga.
+      description: inflatablepoolfactory.com — semak imbas kolam kami dan minta sebut harga.
     - title: OEM / Borong
       description: Saiz tersuai, warna dan penjenamaan tersedia untuk rakan kongsi perniagaan.
 brand_hub_tagline: Produk
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Kecemerlangan Pengeluaran
   title: Memastikan Ketukangan Yang Indah
-  description: Barisan pengeluaran Felizbay didedikasikan untuk kolam renang kembung berkualiti tinggi, tahan lama, bertekanan tinggi.
+  description: Barisan pengeluaran Inflatable Pool Factory didedikasikan untuk kolam renang kembung berkualiti tinggi, tahan lama, bertekanan tinggi.
   cards:
     - title: Pasukan Juruteknik Berpengalaman
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Jangkauan Global
   title_html: Satu jenama, <span class="text-white/90">penghantaran ke seluruh dunia</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Koleksi kolam

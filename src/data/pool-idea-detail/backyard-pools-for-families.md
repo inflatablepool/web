@@ -3,7 +3,7 @@ title: 'Backyard Pools for Families: The Complete Guide'
 description: 'Space planning, water capacity, setup, maintenance, and child safety for a family drop-stitch inflatable pool.'
 ---
 
-Nothing brings more laughter and excitement to a warm summer day than a cool, inviting pool in your own backyard. For families seeking summer relaxation, multi-person capacity, and hassle-free cleaning, the Felizbay drop-stitch inflatable pool offers the ideal balance — combining the portability of a traditional inflatable pool with the rigidity and stability of a hard-sided structure.
+Nothing brings more laughter and excitement to a warm summer day than a cool, inviting pool in your own backyard. For families seeking summer relaxation, multi-person capacity, and hassle-free cleaning, the Inflatable Pool Factory drop-stitch inflatable pool offers the ideal balance — combining the portability of a traditional inflatable pool with the rigidity and stability of a hard-sided structure.
 
 This guide covers everything you need to know about planning, setup, maintenance, and child safety, ensuring your family enjoys a refreshing, worry-free summer.
 
@@ -17,7 +17,7 @@ Proper spatial planning is the first step toward a seamless and enjoyable backya
   - **Clear clearance zone:** Maintain a clear pathway of at least 1 to 1.5 meters around all sides of the pool for easy entry, exit, lounging, and routine maintenance.
 
 - **Actual usable space:**
-  - Traditional soft-sided inflatable pools feature sloped inner walls that eat into your actual swimming area. Felizbay utilizes high-density [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool), resulting in firm, upright, ultra-rigid side walls.
+  - Traditional soft-sided inflatable pools feature sloped inner walls that eat into your actual swimming area. Inflatable Pool Factory utilizes high-density [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool), resulting in firm, upright, ultra-rigid side walls.
   - This means **the advertised dimensions closely match your actual usable space**. A medium-to-large rectangular drop-stitch pool delivers well over 90% usable interior water surface — giving multiple adults and children ample room to splash, stretch out, and play without feeling cramped.
 
 ## 2. Water Capacity & Multi-Person Usability
@@ -33,7 +33,7 @@ When hosting family gatherings, weight capacity and water volume are crucial con
 
 ## 3. Quick & Easy Setup Guide
 
-Forget about costly yard excavation or complex construction. Transforming your backyard into a water park is fast and straightforward with Felizbay:
+Forget about costly yard excavation or complex construction. Transforming your backyard into a water park is fast and straightforward with Inflatable Pool Factory:
 
 1. **Clear the ground:** Thoroughly sweep and inspect the area, clearing away any debris or sharp objects.
 2. **Lay the ground cloth:** Unfold the protective ground cloth and lay the pool body flat over it.
@@ -42,7 +42,7 @@ Forget about costly yard excavation or complex construction. Transforming your b
 
 ## 4. Drainage & Daily Maintenance
 
-Easy cleaning is a top priority for busy families. Felizbay pools are designed with low-maintenance living in mind:
+Easy cleaning is a top priority for busy families. Inflatable Pool Factory pools are designed with low-maintenance living in mind:
 
 - **Efficient drainage:**
   - Equipped with a large-diameter rapid drain valve that attaches directly to a standard garden hose, so you can easily direct drained water toward your lawn or outdoor drainage systems.
@@ -62,6 +62,6 @@ While water activities are full of fun, safety remains the highest priority at a
   - **Drain & store after use:** When the pool is not in active use or during extended periods, drain the water completely or restrict physical access (for example, using secure pool fencing or storing the pool away) to prevent children from wandering near unsupervised water.
   - **Slip prevention:** Instruct children not to run or jump on wet surfaces around the pool edges, and use non-slip mats at entry and exit points.
 
-## 6. Why Choose Felizbay Drop-Stitch Inflatable Pools?
+## 6. Why Choose Inflatable Pool Factory Drop-Stitch Inflatable Pools?
 
-Combining smart space planning, maximum usable interior volume, rapid setup, easy drainage, and effortless cleaning, Felizbay provides modern families with a high-performance, premium backyard water solution. Bring the resort experience right to your home this summer, and enjoy safe, cool, and memorable moments with your loved ones!
+Combining smart space planning, maximum usable interior volume, rapid setup, easy drainage, and effortless cleaning, Inflatable Pool Factory provides modern families with a high-performance, premium backyard water solution. Bring the resort experience right to your home this summer, and enjoy safe, cool, and memorable moments with your loved ones!

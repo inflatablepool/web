@@ -1,35 +1,36 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://felizbay.com/#organization",
-  "name": "Felizbay",
-  "legalName": "Aquafarer LLC",
-  "url": "https://felizbay.com",
-  "description": "Felizbay designs and supplies premium drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage.",
+  "@id": "https://inflatablepoolfactory.com/#organization",
+  "name": "Inflatable Pool Factory",
+  "legalName": "Qingdao Vatrad Group",
+  "url": "https://inflatablepoolfactory.com",
+  "description": "Inflatable Pool Factory designs and supplies premium drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage. A brand of the Inflatable Pool Team at Qingdao Vatrad Group.",
   "industry": "Consumer Pool & Outdoor Products",
   "isicV4": "3230",
   "location": {
     "@type": "Place",
-    "name": "Aquafarer LLC",
+    "name": "Qingdao Vatrad Group",
     "address": {
       "@type": "PostalAddress",
-      "addressRegion": "New Mexico",
-      "addressCountry": "US"
+      "addressLocality": "Qingdao",
+      "addressRegion": "Shandong",
+      "addressCountry": "CN"
     }
   },
   "areaServed": ["US", "CA", "GB", "DE", "FR", "ES", "IT", "NL", "AU", "JP"],
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "email": "info@felizbay.com",
+      "email": "info@inflatablepoolfactory.com",
       "contactType": "sales",
       "availableLanguage": ["English"]
     }
   ],
   "sameAs": [
-    "https://www.youtube.com/@felizbay",
-    "https://x.com/Felizbay",
-    "https://www.linkedin.com/company/Felizbay"
+    "https://www.youtube.com/@inflatablepoolfactory",
+    "https://x.com/inflatablepoolfactory",
+    "https://www.linkedin.com/company/inflatablepoolfactory"
   ],
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Drop Stitch Inflatable Swimming Pools" } },

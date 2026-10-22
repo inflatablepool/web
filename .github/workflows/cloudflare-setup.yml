@@ -22,30 +22,30 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Create D1 database (Felizbay-db)
+      - name: Create D1 database (inflatable-pool-factory-db)
         id: d1
         run: |
           echo "## Cloudflare setup result" >> "$GITHUB_STEP_SUMMARY"
           set +e
-          npx wrangler d1 create Felizbay-db > /tmp/d1-create.log 2>&1
+          npx wrangler d1 create inflatable-pool-factory-db > /tmp/d1-create.log 2>&1
           status=$?
           set -e
           if [ $status -ne 0 ] && ! grep -qiE "already exist|duplicate" /tmp/d1-create.log; then
             cat /tmp/d1-create.log
-            echo "::error::Failed to create D1 database Felizbay-db (check CLOUDFLARE_API_TOKEN has D1:Edit permission)"
+            echo "::error::Failed to create D1 database inflatable-pool-factory-db (check CLOUDFLARE_API_TOKEN has D1:Edit permission)"
             exit 1
           fi
           cat /tmp/d1-create.log
           npx wrangler d1 list --json > /tmp/d1-list.json
-          DBID=$(node -e "const j=require('/tmp/d1-list.json');const arr=Array.isArray(j)?j:(j.result||[]);const db=arr.find(d=>d.name==='Felizbay-db');if(!db){console.error('Felizbay-db not found in account');process.exit(1)}console.log(db.uuid||db.id||db.database_id||'')")
+          DBID=$(node -e "const j=require('/tmp/d1-list.json');const arr=Array.isArray(j)?j:(j.result||[]);const db=arr.find(d=>d.name==='inflatable-pool-factory-db');if(!db){console.error('inflatable-pool-factory-db not found in account');process.exit(1)}console.log(db.uuid||db.id||db.database_id||'')")
           if [ -z "$DBID" ]; then echo "::error::Could not extract database_id"; exit 1; fi
           echo "D1_DATABASE_ID=$DBID" >> "$GITHUB_OUTPUT"
           echo "- CF_PROD_D1_ID (add as GitHub secret): \`$DBID\`" >> "$GITHUB_STEP_SUMMARY"
           echo "D1_ID_FOR_SECRET=$DBID"
 
-      - name: Create R2 buckets (felizbay-assets, felizbay-data)
+      - name: Create R2 buckets (inflatable-pool-factory-assets, inflatable-pool-factory-data)
         run: |
-          for b in felizbay-assets felizbay-data; do
+          for b in inflatable-pool-factory-assets inflatable-pool-factory-data; do
             set +e
             npx wrangler r2 bucket create "$b" > "/tmp/r2-$b.log" 2>&1
             status=$?
@@ -59,15 +59,15 @@ jobs:
             echo "- R2 bucket \`$b\`: ready" >> "$GITHUB_STEP_SUMMARY"
           done
 
-      - name: Set R2 CORS rules (felizbay-assets)
+      - name: Set R2 CORS rules (inflatable-pool-factory-assets)
         run: |
-          npx wrangler r2 bucket cors set felizbay-assets --file scripts/r2-cors.json
-          echo "- R2 CORS applied to \`felizbay-assets\`" >> "$GITHUB_STEP_SUMMARY"
+          npx wrangler r2 bucket cors set inflatable-pool-factory-assets --file scripts/r2-cors.json
+          echo "- R2 CORS applied to \`inflatable-pool-factory-assets\`" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Create Pages project (felizbay)
+      - name: Create Pages project (Inflatable Pool Factory)
         run: |
           set +e
-          npx wrangler pages project create felizbay --production-branch main > /tmp/pages.log 2>&1
+          npx wrangler pages project create inflatable-pool-factory --production-branch main > /tmp/pages.log 2>&1
           status=$?
           set -e
           if [ $status -ne 0 ] && ! grep -qiE "already exist|duplicate|already taken" /tmp/pages.log; then
@@ -76,7 +76,7 @@ jobs:
             exit 1
           fi
           cat /tmp/pages.log
-          echo "- Pages project \`felizbay\`: ready (production branch: main)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pages project \`Inflatable Pool Factory\`: ready (production branch: main)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Create Vectorize index (ai-index-v2)
         run: |
@@ -106,7 +106,7 @@ jobs:
             echo "workers.dev subdomain already claimed"
           else
             # PUT requires an explicit subdomain name (error 10033 otherwise).
-            for name in felizbay felizbay-web aquafarer-felizbay; do
+            for name in inflatable-pool-factory inflatable-pool-factory-web aquafarer-inflatable-pool-factory; do
               code=$(curl -s -o /tmp/subdomain-put.json -w "%{http_code}" -X PUT \
                 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
                 -H "Content-Type: application/json" \
@@ -125,24 +125,24 @@ jobs:
             fi
           fi
 
-      - name: Attach R2 custom domain (assets.felizbay.com)
+      - name: Attach R2 custom domain (assets.inflatablepoolfactory.com)
         run: |
           # The Pages middleware 301s /images/* and /files/* to this domain and
           # product data references it directly — without it all images 404/530.
           # Idempotent: skips when the domain is already attached.
           CF_API="https://api.cloudflare.com/client/v4"
           AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
-          BUCKET=felizbay-assets
-          DOMAIN=assets.felizbay.com
+          BUCKET=inflatable-pool-factory-assets
+          DOMAIN=assets.inflatablepoolfactory.com
           # Resolve the zone id: prefer the live API value (a secret pasted with
           # trailing whitespace/newline produced invalid JSON -> API error 10040),
           # fall back to the trimmed secret. Validate the 32-hex shape.
-          ZONE_ID=$(curl -sS "${AUTH[@]}" "${CF_API}/zones?name=felizbay.com" | jq -r '.result[0].id // empty' | tr -d '[:space:]')
+          ZONE_ID=$(curl -sS "${AUTH[@]}" "${CF_API}/zones?name=inflatablepoolfactory.com" | jq -r '.result[0].id // empty' | tr -d '[:space:]')
           if [ -z "$ZONE_ID" ]; then
             ZONE_ID=$(printf '%s' "${CLOUDFLARE_ZONE_ID:-}" | tr -d '[:space:]')
           fi
           if ! printf '%s' "$ZONE_ID" | grep -qE '^[0-9a-f]{32}$'; then
-            echo "::error::Could not resolve a valid felizbay.com zone id (needs Zone:Read permission or a correct CLOUDFLARE_ZONE_ID secret)"
+            echo "::error::Could not resolve a valid inflatablepoolfactory.com zone id (needs Zone:Read permission or a correct CLOUDFLARE_ZONE_ID secret)"
             exit 1
           fi
 
@@ -197,8 +197,8 @@ jobs:
         run: |
           CF_API="https://api.cloudflare.com/client/v4"
           AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
-          BUCKET=felizbay-assets
-          DOMAIN=assets.felizbay.com
+          BUCKET=inflatable-pool-factory-assets
+          DOMAIN=assets.inflatablepoolfactory.com
 
           # 1. Custom domain attach status (ownership/ssl must both be "active").
           for i in 1 2 3 4 5 6; do
@@ -232,8 +232,8 @@ jobs:
               echo "::warning::$DOMAIN/$path returned HTTP $CODE"
             fi
           done
-          CODE=$(curl -sSL -o /tmp/obj2.bin -w "%{http_code}" --max-time 30 "https://felizbay.com/images/default.webp")
-          echo "fetch (via site 301) https://felizbay.com/images/default.webp -> HTTP $CODE ($(wc -c < /tmp/obj2.bin) bytes)"
+          CODE=$(curl -sSL -o /tmp/obj2.bin -w "%{http_code}" --max-time 30 "https://inflatablepoolfactory.com/images/default.webp")
+          echo "fetch (via site 301) https://inflatablepoolfactory.com/images/default.webp -> HTTP $CODE ($(wc -c < /tmp/obj2.bin) bytes)"
 
       - name: Summary
         run: |

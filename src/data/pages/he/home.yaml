@@ -4,7 +4,7 @@ hero:
   subtitle: |
     בריכות פרימיום עם קירות drop-stitch קשיחים שמתנפחים תוך דקות ונארזות לחורף - מיועדות לרגיעה בחצר האחורית וכיף משפחתי.<br />
     חקור את גדלי הבריכה, השווה תכונות ומצא את ההתאמה המתאימה לחלל שלך.<br />
-    עוצב ומופעל על ידי Aquafarer LLC, ארה"ב.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: חנות בריכות
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
+    alt: Inflatable Pool Factory מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
 stats:
-  title: Felizbay במבט חטוף
+  title: Inflatable Pool Factory במבט חטוף
   columns: 4
   stats:
     - title: אוספי בריכה
@@ -36,11 +36,11 @@ stats:
     - title: גדלים מותאמים אישית
       amount: Available
     - title: מַגָע
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: טכנולוגיית Drop Stitch
-  title: למה בריכת Felizbay<br />הוא שונה
+  title: למה בריכת Inflatable Pool Factory<br />הוא שונה
   subtitle: בניית Drop Stitch בלחץ גבוה הופכת את הבריכות שלנו לקשיחות, עמידות וללא מאמץ לאחסון.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: לעסקים
   title: בריכות לעסקים,<br />גַם
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay לשותפים עסקיים</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory לשותפים עסקיים</h3>
   items:
     - title: השכרת נופש ואירוח
       description: שירותים עונתיים לאורחים עבור השכרות נופש, אתרי גלמפינג ונכסי בוטיק - מהיר לפריסה, קל לתחזוקה, פשוט לאחסון.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: טיפול ובטיחות
   title: קל לבעלות,<br />קל לאהוב
-  subtitle: מהמסירה לשחייה הראשונה ועד לאחסון סוף העונה, בעלות על בריכת Felizbay נשארת פשוטה.
+  subtitle: מהמסירה לשחייה הראשונה ועד לאחסון סוף העונה, בעלות על בריכת Inflatable Pool Factory נשארת פשוטה.
   items:
     - title: הגדרה תוך דקות
       description: 'פתח את הארגז ונפח בעזרת המשאבה הכלולה תוך 5-15 דקות, ולאחר מכן מלא בצינור גינה - זמן המילוי משתנה בהתאם לגודל הבריכה ואספקת המים.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay בריכת שחיה מתנפחת Drop Stitch עגולה
+    alt: Inflatable Pool Factory בריכת שחיה מתנפחת Drop Stitch עגולה
 blog_latest:
   title: מדריכים ותובנות לבריכה
   information: |
     מדריכי התקנה, טיפים לטיפול ועצות קנייה לבריכות שחייה מתנפחות
-    מצוות Felizbay.
+    מצוות Inflatable Pool Factory.
 faqs:
   title: בריכה מתנפחת שאלות נפוצות
-  subtitle: שאלות נפוצות על בריכות שחייה מתנפחות של Felizbay.
+  subtitle: שאלות נפוצות על בריכות שחייה מתנפחות של Inflatable Pool Factory.
   columns: 2
   items:
     - title: כמה זמן לוקחת ההתקנה?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: מה כלול בבריכה?
-      description: כל בריכת Felizbay כוללת משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. לדגמים עגולים יש כיסוי אופציונלי.
+      description: כל בריכת Inflatable Pool Factory כוללת משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. לדגמים עגולים יש כיסוי אופציונלי.
       icon: tabler:box
       category: all
     - title: אילו גדלים זמינים?

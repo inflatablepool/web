@@ -4,7 +4,7 @@ hero:
   subtitle: |
     สระว่ายน้ำระดับพรีเมียมพร้อมผนัง drop-stitch ที่แข็งแรง ซึ่งจะพองตัวได้ภายในไม่กี่นาทีและแพ็คไว้สำหรับฤดูหนาว ออกแบบมาเพื่อการพักผ่อนในสวนหลังบ้านและความสนุกสนานในครอบครัว<br />
     สำรวจขนาดสระว่ายน้ำ เปรียบเทียบคุณลักษณะ และค้นหาขนาดที่เหมาะกับพื้นที่ของคุณ<br />
-    ออกแบบและดำเนินการโดย Aquafarer LLC สหรัฐอเมริกา
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: ร้านค้าสระว่ายน้ำ
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Felizbay Drop Stitch ในสวนหลังบ้าน
+    alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Inflatable Pool Factory Drop Stitch ในสวนหลังบ้าน
 stats:
-  title: ข้อมูลโดยย่อของFelizbay
+  title: ข้อมูลโดยย่อของInflatable Pool Factory
   columns: 4
   stats:
     - title: คอลเลกชันสระว่ายน้ำ
@@ -36,11 +36,11 @@ stats:
     - title: ขนาดที่กำหนดเอง
       amount: Available
     - title: ติดต่อ
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: เทคโนโลยีDrop Stitch
-  title: ทำไมต้องมีสระFelizbay<br />มีความแตกต่าง
+  title: ทำไมต้องมีสระInflatable Pool Factory<br />มีความแตกต่าง
   subtitle: โครงสร้าง Drop Stitch แรงดันสูงทำให้สระของเรามีความแข็งแกร่ง ทนทาน และจัดเก็บได้อย่างง่ายดาย
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: สำหรับธุรกิจ
   title: สระว่ายน้ำสำหรับธุรกิจ<br />ด้วย
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay สำหรับพันธมิตรทางธุรกิจ</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory สำหรับพันธมิตรทางธุรกิจ</h3>
   items:
     - title: ที่พักให้เช่าและการต้อนรับ
       description: สิ่งอำนวยความสะดวกสำหรับผู้เข้าพักตามฤดูกาลสำหรับที่พักให้เช่า สถานที่ตั้งแคมป์ และที่พักสไตล์บูติก — ปรับใช้ได้รวดเร็ว บำรุงรักษาง่าย และจัดเก็บง่าย
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: การดูแลและความปลอดภัย
   title: เป็นเจ้าของได้ง่ายๆ<br />รักง่าย
-  subtitle: ตั้งแต่การจัดส่งไปจนถึงการว่ายน้ำครั้งแรกไปจนถึงการจัดเก็บเมื่อสิ้นสุดฤดูกาล การเป็นเจ้าของสระว่ายน้ำ Felizbay ยังคงเป็นเรื่องง่าย
+  subtitle: ตั้งแต่การจัดส่งไปจนถึงการว่ายน้ำครั้งแรกไปจนถึงการจัดเก็บเมื่อสิ้นสุดฤดูกาล การเป็นเจ้าของสระว่ายน้ำ Inflatable Pool Factory ยังคงเป็นเรื่องง่าย
   items:
     - title: ตั้งค่าในไม่กี่นาที
       description: 'แกะกล่องและเติมลมด้วยปั๊มที่ให้มาภายใน 5-15 นาที จากนั้นเติมสายยางในสวน เวลาเติมจะแตกต่างกันไปตามขนาดสระว่ายน้ำและการจ่ายน้ำ'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: สระว่ายน้ำเป่าลม Felizbay Round Drop Stitch
+    alt: สระว่ายน้ำเป่าลม Inflatable Pool Factory Round Drop Stitch
 blog_latest:
   title: คู่มือสระว่ายน้ำและข้อมูลเชิงลึก
   information: |
     คู่มือการติดตั้ง เคล็ดลับการดูแล และคำแนะนำในการซื้อสระว่ายน้ำเป่าลม
-    จากทีมFelizbay
+    จากทีมInflatable Pool Factory
 faqs:
   title: คำถามที่พบบ่อยเกี่ยวกับสระน้ำเป่าลม
-  subtitle: คำถามทั่วไปเกี่ยวกับสระว่ายน้ำทำให้พอง Felizbay
+  subtitle: คำถามทั่วไปเกี่ยวกับสระว่ายน้ำทำให้พอง Inflatable Pool Factory
   columns: 2
   items:
     - title: การตั้งค่าใช้เวลานานเท่าใด?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: มีอะไรรวมอยู่ในสระว่ายน้ำ?
-      description: สระ Felizbay ทุกสระมีปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ รุ่นทรงกลมมีฝาครอบแบบติดตั้งที่เป็นอุปกรณ์เสริม
+      description: สระ Inflatable Pool Factory ทุกสระมีปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ รุ่นทรงกลมมีฝาครอบแบบติดตั้งที่เป็นอุปกรณ์เสริม
       icon: tabler:box
       category: all
     - title: มีขนาดอะไรบ้าง?

@@ -3,7 +3,7 @@ title: 'Large Pools for Family Gatherings: The Summer Party Guide'
 description: 'Bather capacity planning, filtration sizing, drainage times, and party maintenance for large drop-stitch pools.'
 ---
 
-When summer heat hits, nothing brings family, friends, and neighbors together quite like a backyard pool party. Hosting a successful outdoor gathering requires a pool built for stability, ample space, and active fun. The Felizbay drop-stitch inflatable pool offers large-scale capacity with the rigidity of a permanent pool, giving adults and kids room to swim, lounge, and play without structural sagging.
+When summer heat hits, nothing brings family, friends, and neighbors together quite like a backyard pool party. Hosting a successful outdoor gathering requires a pool built for stability, ample space, and active fun. The Inflatable Pool Factory drop-stitch inflatable pool offers large-scale capacity with the rigidity of a permanent pool, giving adults and kids room to swim, lounge, and play without structural sagging.
 
 This guide breaks down real capacity metrics, spatial footprint requirements, maintenance management, and filtration systems needed to keep your large pool party-ready all season long.
 
@@ -13,7 +13,7 @@ A common mistake when planning for large gatherings is determining capacity sole
 
 ### Bather capacity & depth guidelines
 
-The tiers below map to real Felizbay catalog models — every dimension, wall height, and wall thickness comes straight from the size chart:
+The tiers below map to real Inflatable Pool Factory catalog models — every dimension, wall height, and wall thickness comes straight from the size chart:
 
 | Pool Size Tier            | Catalog Model                          | Dimensions (Ø × H / L × W × H)  | Wall Thickness | Recommended Capacity                    | Ideal Activity Type                                  |
 | ------------------------- | -------------------------------------- | ------------------------------- | -------------- | --------------------------------------- | ---------------------------------------------------- |
@@ -23,7 +23,7 @@ The tiers below map to real Felizbay catalog models — every dimension, wall he
 
 ### Why vertical walls matter for capacity
 
-Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Felizbay's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
+Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Inflatable Pool Factory's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
 
 ### A working density rule
 
@@ -80,4 +80,4 @@ Larger pools require consistent maintenance, but splitting tasks into quick rout
 
 ## 6. Hosting the Ultimate Pool Gathering
 
-With proper sizing, clear filtration planning, and structural stability, your large Felizbay drop-stitch pool becomes the center of summer fun. Enjoy endless hours of refreshing splash time, sunbathing, and family memories right in your back garden!
+With proper sizing, clear filtration planning, and structural stability, your large Inflatable Pool Factory drop-stitch pool becomes the center of summer fun. Enjoy endless hours of refreshing splash time, sunbathing, and family memories right in your back garden!

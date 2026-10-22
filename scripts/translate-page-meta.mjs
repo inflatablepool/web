@@ -50,7 +50,7 @@ const PRESERVE_PATTERNS = [
   /\bHypalon\b/gi,
   /\bDrop-Stitch\b/gi,
   /\bdrop-stitch\b/g,
-  /\bFelizbay\b/g,
+  /\bInflatable Pool Factory\b/g,
   /\bISO\b/g,
   /\bPSI\b/g,
   /\bFRP\b/g,
@@ -150,7 +150,7 @@ async function translateText(text, lang, sourceLang, stub) {
   }
 
   try {
-    const mmDe = process.env.MM_DE || 'translate@felizbay.com';
+    const mmDe = process.env.MM_DE || 'translate@inflatablepoolfactory.com';
     const mUrl = `${MYMEMORY_URL}?q=${encodeURIComponent(preservedText)}&langpair=${sourceLang}|${lang}&de=${encodeURIComponent(mmDe)}`;
     const mRes = await fetch(mUrl, { signal: AbortSignal.timeout(15000) });
     if (mRes.status === 429) {

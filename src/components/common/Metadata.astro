@@ -179,9 +179,9 @@ const resolveNofollow = (): boolean => {
 };
 
 // Avoid double-branding: if the title already contains the site name,
-// skip the template (e.g. "OARS Pump Set — Felizbay" + "%s — Felizbay"
-// would produce "OARS Pump Set — Felizbay — Felizbay").
-const siteBrand = SITE?.name || 'Felizbay';
+// skip the template (e.g. "OARS Pump Set — Inflatable Pool Factory" + "%s — Inflatable Pool Factory"
+// would produce "OARS Pump Set — Inflatable Pool Factory — Inflatable Pool Factory").
+const siteBrand = SITE?.name || 'Inflatable Pool Factory';
 const rawTitle = title || localeMeta?.title?.default || METADATA?.title?.default || '';
 const titleAlreadyBranded = rawTitle.includes(siteBrand);
 
@@ -192,7 +192,7 @@ const siteDescription = localeMeta?.description || METADATA?.description || '';
 const rawDescription = description || siteDescription;
 const paddedDescription =
   rawDescription && rawDescription.length < 50
-    ? `${rawDescription.trim()} — ${siteDescription || 'Felizbay'}`.trim()
+    ? `${rawDescription.trim()} — ${siteDescription || 'Inflatable Pool Factory'}`.trim()
     : rawDescription;
 
 // Astro renders attribute values by escaping & " < >; measure the escaped
@@ -229,7 +229,7 @@ const decision = decideIndexing(Astro.url.pathname, {
 });
 
 // 统一 title 长度：模板套用后超 65 字符处理（SERP ~600px 上限）。
-// 优先整段去掉品牌尾段（" — Felizbay"），去掉后仍超长才截断 + "…"，
+// 优先整段去掉品牌尾段（" — Inflatable Pool Factory"），去掉后仍超长才截断 + "…"，
 // 避免长标题在结果页被截成残缺语义或半截品牌。
 const titleTemplateStr =
   ignoreTitleTemplate || titleAlreadyBranded ? '%s' : localeMeta?.title?.template || METADATA?.title?.template || '%s';

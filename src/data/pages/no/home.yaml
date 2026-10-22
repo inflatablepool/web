@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Førsteklasses bassenger med stive drop-stitch-vegger som blåses opp i løpet av minutter og pakker sammen for vinteren – designet for avslapning i bakgården og familiemoro.<br />
     Utforsk bassengstørrelser, sammenlign funksjoner og finn den som passer for rommet ditt.<br />
-    Designet og drevet av Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Handle bassenger
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rektangulære drop stitch oppblåsbare svømmebasseng i en bakgård
+    alt: Inflatable Pool Factory rektangulære drop stitch oppblåsbare svømmebasseng i en bakgård
 stats:
-  title: Felizbay med et blikk
+  title: Inflatable Pool Factory med et blikk
   columns: 4
   stats:
     - title: Bassengsamlinger
@@ -36,11 +36,11 @@ stats:
     - title: Egendefinerte størrelser
       amount: Available
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch-teknologi
-  title: Hvorfor et Felizbay-basseng<br />er annerledes
+  title: Hvorfor et Inflatable Pool Factory-basseng<br />er annerledes
   subtitle: Høytrykks Drop Stitch-konstruksjon gjør bassengene våre stive, holdbare og enkle å lagre.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: For bedrifter
   title: Pools for Business,<br />Også
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for forretningspartnere</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory for forretningspartnere</h3>
   items:
     - title: Ferieutleie og gjestfrihet
       description: Sesongbaserte gjestefasiliteter for ferieutleie, glampingplasser og boutique-eiendommer – raske å distribuere, enkle å vedlikeholde, enkle å lagre.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Omsorg og sikkerhet
   title: Lett å eie,<br />Lett å elske
-  subtitle: Fra levering til første svømmetur til lagring i slutten av sesongen, er det enkelt å eie et Felizbay-basseng.
+  subtitle: Fra levering til første svømmetur til lagring i slutten av sesongen, er det enkelt å eie et Inflatable Pool Factory-basseng.
   items:
     - title: Oppsett på minutter
       description: 'Pakk ut og fyll opp med den medfølgende pumpen på 5-15 minutter, og fyll deretter med en hageslange - fylletiden varierer med bassengstørrelsen og vanntilførselen.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay rundt Drop Stitch oppblåsbart svømmebasseng
+    alt: Inflatable Pool Factory rundt Drop Stitch oppblåsbart svømmebasseng
 blog_latest:
   title: Bassengguider og innsikt
   information: |
     Oppsettguider, pleietips og kjøpsråd for oppblåsbare svømmebassenger
-    fra Felizbay-teamet.
+    fra Inflatable Pool Factory-teamet.
 faqs:
   title: Vanlige spørsmål om oppblåsbart basseng
-  subtitle: Vanlige spørsmål om Felizbay oppblåsbare svømmebassenger.
+  subtitle: Vanlige spørsmål om Inflatable Pool Factory oppblåsbare svømmebassenger.
   columns: 2
   items:
     - title: Hvor lang tid tar oppsettet?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hva følger med bassenget?
-      description: Hvert Felizbay-basseng inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Runde modeller har et valgfritt montert deksel.
+      description: Hvert Inflatable Pool Factory-basseng inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Runde modeller har et valgfritt montert deksel.
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgjengelige?

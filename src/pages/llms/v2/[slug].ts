@@ -16,7 +16,7 @@ export const GET: APIRoute = async ({ params }) => {
 
   lines.push(`# ${entry.title}`);
   lines.push('');
-  const siteName = SITE?.name || 'Felizbay';
+  const siteName = SITE?.name || 'Inflatable Pool Factory';
   lines.push(`*${siteName} Knowledge Center*`);
   lines.push('');
   lines.push(entry.description);
@@ -79,7 +79,7 @@ export const GET: APIRoute = async ({ params }) => {
     lines.push('## Related Products');
     lines.push('');
     for (const p of entry.relatedProducts) {
-      lines.push(`- [${p}](${SITE?.site || 'https://felizbay.com'}/products/${p})`);
+      lines.push(`- [${p}](${SITE?.site || 'https://inflatablepoolfactory.com'}/products/${p})`);
     }
     lines.push('');
   }
@@ -88,14 +88,14 @@ export const GET: APIRoute = async ({ params }) => {
     lines.push('## Related Guides');
     lines.push('');
     for (const g of entry.relatedGuides) {
-      lines.push(`- [${g}](${SITE?.site || 'https://felizbay.com'}/v2/${g})`);
+      lines.push(`- [${g}](${SITE?.site || 'https://inflatablepoolfactory.com'}/v2/${g})`);
     }
     lines.push('');
   }
 
   lines.push('---');
   lines.push(
-    `Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://felizbay.com'}/v2/${entry.slug}`
+    `Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://inflatablepoolfactory.com'}/v2/${entry.slug}`
   );
 
   return new Response(lines.join('\n'), {

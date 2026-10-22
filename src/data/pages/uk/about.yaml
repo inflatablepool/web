@@ -2,11 +2,11 @@ hero:
   tagline: Про нас
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Надувний басейн Felizbay
+    alt: Надувний басейн Inflatable Pool Factory
   title: |
     Зробити плавання простим, <br />
-    у стилі <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay — бренд надувних басейнів преміум-класу Drop Stitch, розроблений і керований компанією Aquafarer LLC (США). Ми віримо, що кожна родина заслуговує на справжній басейн у дворі — без будівництва, дозволів і постійної установки. Наші басейни накачуються за лічені хвилини, переживають повне літо сімейних розваг і збираються в кінці сезону.
+    у стилі <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory — бренд надувних басейнів преміум-класу Drop Stitch, розроблений Inflatable Pool Team · Qingdao Vatrad Group. Ми віримо, що кожна родина заслуговує на справжній басейн у дворі — без будівництва, дозволів і постійної установки. Наші басейни накачуються за лічені хвилини, переживають повне літо сімейних розваг і збираються в кінці сезону.
 stats:
   title: За цифрами
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Номінальний тиск
       amount: 4-5 PSI
     - title: контакт
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Що ми будуємо
   subtitle: Цілеспрямована лінія продуктів, яку ми знаємо зсередини, — надувні басейни Drop Stitch високого тиску.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Прямокутний надувний басейн Felizbay Drop Stitch
+    alt: Прямокутний надувний басейн Inflatable Pool Factory Drop Stitch
 steps2_values:
   title: Наші цінності
   subtitle: Три принципи, які формують кожен басейн, який ми будуємо.
@@ -64,7 +64,7 @@ steps2_values:
       description: Конструкція Drop Stitch високого тиску, випробувана вище номінального тиску, перед будь-яким транспортуванням басейну.
       icon: tabler:settings
     - title: Підтримка, яка витримає весь сезон
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Віхи
@@ -72,7 +72,7 @@ steps2_milestones:
   isReversed: true
   items:
     - title: Орієнтований на надувні басейни
-      description: 'Компанія Felizbay була заснована з єдиною метою: надувні басейни преміум-класу Drop Stitch.'
+      description: 'Компанія Inflatable Pool Factory була заснована з єдиною метою: надувні басейни преміум-класу Drop Stitch.'
       icon: tabler:pool
     - title: Три збори підписів
       description: Прямокутні, круглі сині та круглі сірі лінії басейну, кожна з додатковими кришками та нестандартними розмірами.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Електронна пошта
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Веб-сайт
-      description: felizbay.com — перегляньте наші пули та запитайте ціну.
+      description: inflatablepoolfactory.com — перегляньте наші пули та запитайте ціну.
     - title: OEM / Оптова торгівля
       description: Нестандартні розміри, кольори та брендинг доступні для ділових партнерів.
 brand_hub_tagline: Продукти
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Досконалість виробництва
   title: Гарантія вишуканої майстерності
-  description: Виробнича лінія Felizbay призначена для високоякісних, міцних надувних басейнів високого тиску.
+  description: Виробнича лінія Inflatable Pool Factory призначена для високоякісних, міцних надувних басейнів високого тиску.
   cards:
     - title: Досвідчена команда техніків
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Глобальне охоплення
   title_html: Один бренд, <span class="text-white/90">доставка по всьому світу</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Колекції басейнів

@@ -2,11 +2,11 @@ hero:
   tagline: Apie mus
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay pripučiamas baseinas
+    alt: Inflatable Pool Factory pripučiamas baseinas
   title: |
     Kad plaukimas būtų paprastas, <br />
-    pagal <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay yra aukščiausios kokybės „Drop Stitch“ pripučiamų baseinų prekės ženklas, kurį sukūrė ir valdo „Aquafarer LLC“ (JAV). Manome, kad kiekviena šeima nusipelno tikro baseino kieme – be statybų, leidimų ar nuolatinio įrengimo. Mūsų baseinai išsipučia per kelias minutes, išgyvena visas šeimos linksmybių vasaras, o sezono pabaigoje supakuoja nedidelius.
+    pagal <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory yra aukščiausios kokybės „Drop Stitch“ pripučiamų baseinų prekės ženklas, kurį sukūrė Inflatable Pool Team · Qingdao Vatrad Group. Manome, kad kiekviena šeima nusipelno tikro baseino kieme – be statybų, leidimų ar nuolatinio įrengimo. Mūsų baseinai išsipučia per kelias minutes, išgyvena visas šeimos linksmybių vasaras, o sezono pabaigoje supakuoja nedidelius.
 stats:
   title: Pagal skaičius
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Vardinis slėgis
       amount: 4-5 PSI
     - title: Susisiekite
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Ką statome
   subtitle: Tikslinga produktų linija, kurią žinome iš vidaus – aukšto slėgio „Drop Stitch“ pripučiami baseinai.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas
+    alt: Inflatable Pool Factory stačiakampis Drop Stitch pripučiamas baseinas
 steps2_values:
   title: Mūsų vertybės
   subtitle: Trys principai, kurie formuoja kiekvieną mūsų statomą baseiną.
@@ -64,15 +64,15 @@ steps2_values:
       description: Aukšto slėgio „Drop Stitch“ konstrukcija, išbandyta virš vardinio slėgio, prieš siunčiant baseiną.
       icon: tabler:settings
     - title: Parama, kuri trunka ilgiau nei sezoną
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Gairės
-  subtitle: Trumpa Felizbay istorijos versija.
+  subtitle: Trumpa Inflatable Pool Factory istorijos versija.
   isReversed: true
   items:
     - title: Orientuota į pripučiamus baseinus
-      description: '„Felizbay“ buvo įkurta vienu tikslu: aukščiausios kokybės „Drop Stitch“ pripučiamiems baseinams.'
+      description: '„Inflatable Pool Factory“ buvo įkurta vienu tikslu: aukščiausios kokybės „Drop Stitch“ pripučiamiems baseinams.'
       icon: tabler:pool
     - title: Trys parašų rinkiniai
       description: Stačiakampės, apvalios mėlynos ir apvalios pilkos baseino linijos su pasirenkamais dangčiais ir pasirinktiniais dydžiais.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: El. paštas
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Svetainė
-      description: felizbay.com — naršykite mūsų baseinuose ir paprašykite kainos pasiūlymo.
+      description: inflatablepoolfactory.com — naršykite mūsų baseinuose ir paprašykite kainos pasiūlymo.
     - title: OEM / didmeninė prekyba
       description: Verslo partneriams galimi pasirinktiniai dydžiai, spalvos ir prekės ženklas.
 brand_hub_tagline: Produktai
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Gamybos meistriškumas
   title: Išskirtinio meistriškumo užtikrinimas
-  description: Felizbay gamybos linija skirta aukštos kokybės, patvariems, aukšto slėgio pripučiamiems baseinams.
+  description: Inflatable Pool Factory gamybos linija skirta aukštos kokybės, patvariems, aukšto slėgio pripučiamiems baseinams.
   cards:
     - title: Patyrusi technikų komanda
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Pasaulinis pasiekiamumas
   title_html: Vienas prekės ženklas, <span class="text-white/90">gabenimas visame pasaulyje</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Baseino kolekcijos

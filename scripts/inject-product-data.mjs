@@ -443,7 +443,8 @@ const slugs = [
       capacity: '19 persons',
       fuel: '380 L built-in',
     },
-    ai_comparison: 'The AP900 is the ultimate Felizbay RIB — 9.12m, 600 HP twins, 380L fuel, 19 passengers.',
+    ai_comparison:
+      'The AP900 is the ultimate Inflatable Pool Factory RIB — 9.12m, 600 HP twins, 380L fuel, 19 passengers.',
     ai_faq: [
       { q: 'What is the top speed?', a: 'With twin 300 HP, up to 60 knots depending on load and conditions.' },
       {
@@ -826,7 +827,7 @@ const slugs = [
     problem:
       'Buyers want a crossover boat combining RIB safety with fiberglass luxury and superyacht-tender-level comfort.',
     howItWorks:
-      'The EX7 is the first Felizbay fiberglass hull boat with raised slim tubes, maximizing interior space. Features dual sundecks, head, galley, and T-Top.',
+      'The EX7 is the first Inflatable Pool Factory fiberglass hull boat with raised slim tubes, maximizing interior space. Features dual sundecks, head, galley, and T-Top.',
     audience: 'Luxury boat buyers, yacht owners, and resort operators wanting crossover comfort.',
     biz: ['resorts'],
     ai_use_cases: ['Luxury day cruising', 'Yacht tender', 'Coastal sightseeing', 'Resort guest transport'],
@@ -926,7 +927,7 @@ const slugs = [
       weight: '33 kg',
     },
     ai_comparison:
-      'The SW240 is the lightest Felizbay boat at 33 kg. Available in UL240 (short shaft) and UL240LT (long shaft) variants.',
+      'The SW240 is the lightest Inflatable Pool Factory boat at 33 kg. Available in UL240 (short shaft) and UL240LT (long shaft) variants.',
     ai_faq: [
       {
         q: 'What is the difference between UL240 and UL240LT?',
@@ -1494,7 +1495,7 @@ const bizEntries = slugs
     } else if (s.slug.startsWith('sw')) {
       useCase = 'Yacht tender, portable recreation, fishing';
       operatingCost = 'Very low — minimal maintenance, no fuel system (portable tank), easy hull cleaning';
-      whyChoose = `The ${s.name} is the lightest boat in the Felizbay range — one-person portable with aluminum durability at minimal operating cost.`;
+      whyChoose = `The ${s.name} is the lightest boat in the Inflatable Pool Factory range — one-person portable with aluminum durability at minimal operating cost.`;
       lifespan = '8-12 years with proper care';
     } else {
       useCase = 'Yacht tender, day cruising, console RIB';

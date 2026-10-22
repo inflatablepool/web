@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://felizbay.com';
+export const SITE_URL = 'https://inflatablepoolfactory.com';
 
 export interface IntentRule {
   pattern: RegExp;

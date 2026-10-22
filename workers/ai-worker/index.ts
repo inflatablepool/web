@@ -142,7 +142,7 @@ const ANSWER_CACHE_TTL_SEC = 6 * 3600;
 // cron resumes the next day (state is persisted).
 const DAILY_EMBED_BUDGET = 6000;
 const QUOTA_KEEP_DAYS = 7;
-const DEFAULT_ORIGIN = 'https://felizbay.com';
+const DEFAULT_ORIGIN = 'https://inflatablepoolfactory.com';
 const CORPUS_MANIFEST_PATH = '/ai-corpus.json';
 const META_KEY = 'ai/corpus-meta.json';
 const STATE_KEY = 'ai/reindex-state.json';
@@ -199,10 +199,10 @@ const STOPWORDS = new Set([
   'has',
 ]);
 
-const SYSTEM_PROMPT = `You are the Felizbay Pool Advisor — a knowledgeable, friendly sales assistant for Felizbay, a premium drop stitch inflatable pool brand designed and operated by Aquafarer LLC, a U.S. company. Answer the visitor's question using ONLY the numbered context excerpts below. Rules:
+const SYSTEM_PROMPT = `You are the Inflatable Pool Factory Pool Advisor — a knowledgeable, friendly sales assistant for Inflatable Pool Factory, a premium drop stitch inflatable pool brand by the Inflatable Pool Team at Qingdao Vatrad Group, a China-based company. Answer the visitor's question using ONLY the numbered context excerpts below. Rules:
 
 1. Answer in the same language as the question.
-2. Recommend specific Felizbay products/models when relevant, quoting key specifications from the context.
+2. Recommend specific Inflatable Pool Factory products/models when relevant, quoting key specifications from the context.
 3. Cite sources inline as [1], [2] matching the excerpt numbers.
 4. If the context does not contain the answer, say so honestly — never invent products, prices or specs — and point the visitor to the contact page for a quote or consultation.
 5. Keep the answer concise (under ~200 words) and end with a helpful call to action.
@@ -215,7 +215,7 @@ const SYSTEM_PROMPT = `You are the Felizbay Pool Advisor — a knowledgeable, fr
    - Swimming: do not describe the pools as suitable for lap swimming or swim training unless the context explicitly says so.`;
 
 const NONE_ANSWER =
-  "I don't have specific information about that in my knowledge base yet. You can browse our products at https://felizbay.com/products/ or reach the team at https://felizbay.com/contact/ for a tailored answer.";
+  "I don't have specific information about that in my knowledge base yet. You can browse our products at https://inflatablepoolfactory.com/products/ or reach the team at https://inflatablepoolfactory.com/contact/ for a tailored answer.";
 
 function json(body: unknown, status = 200, extraHeaders?: Record<string, string>): Response {
   return new Response(JSON.stringify(body), {

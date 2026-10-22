@@ -1,7 +1,7 @@
 /**
  * Pool Ideas scenario content — consumer-first use-case pages.
  * Each scenario answers a real buyer need, lists suitable conditions,
- * matches Felizbay product families, and embeds a real size table
+ * matches Inflatable Pool Factory product families, and embeds a real size table
  * sourced from the pool catalog (no invented specs).
  */
 
@@ -42,7 +42,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     eyebrow: 'Pool Ideas',
     title: 'Backyard Pools for Families',
     intro: [
-      'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Felizbay drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
+      'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Inflatable Pool Factory drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
       'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rock-solid at 4–5 PSI: children can lean on the rim, and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
     ],
     conditions: [
@@ -78,7 +78,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     eyebrow: 'Pool Ideas',
     title: 'Pools for Small Backyards',
     intro: [
-      'You do not need a big garden to have a real pool. Felizbay pools start at 2 m round and 2 × 2 m rectangular — footprints that fit a small patio, a side yard, or the corner of a townhouse garden — and they pack away completely in the off-season, returning your space when you need it.',
+      'You do not need a big garden to have a real pool. Inflatable Pool Factory pools start at 2 m round and 2 × 2 m rectangular — footprints that fit a small patio, a side yard, or the corner of a townhouse garden — and they pack away completely in the off-season, returning your space when you need it.',
       'Because the walls are rigid drop-stitch instead of sagging vinyl, even the smallest sizes feel like proper pools: straight sides, stable rim, real water depth.',
     ],
     conditions: [
@@ -119,9 +119,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Large Pools for Family Gatherings',
     image: '/images/pool-ideas/large-pools-for-family-gatherings.jpg',
     imageAlt:
-      'A family of five relaxing in a large round Felizbay drop-stitch pool on a wooden deck during a summer BBQ gathering.',
+      'A family of five relaxing in a large round Inflatable Pool Factory drop-stitch pool on a wooden deck during a summer BBQ gathering.',
     intro: [
-      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and rims strong enough to sit on.',
+      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Inflatable Pool Factory\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and rims strong enough to sit on.',
       'Despite the size, setup stays measured in minutes-to-an-hour with a 1000W electric pump — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules).',
     ],
     conditions: [
@@ -157,7 +157,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     eyebrow: 'Pool Ideas',
     title: 'Outdoor Soaking & Relaxation',
     intro: [
-      'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Felizbay constant-temperature SPA tubs bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
+      'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Inflatable Pool Factory constant-temperature SPA tubs bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
       'The tubs share the same drop-stitch construction as our pools — rigid walls, 4–5 PSI operating pressure — plus insulated designs with seats, so they hold temperature efficiently and stay in place through four-season use in mild climates.',
     ],
     conditions: [
@@ -193,9 +193,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Vacation Rentals',
     image: '/images/pool-ideas/pools-for-vacation-rentals.jpg',
     imageAlt:
-      'A family of three enjoying a round Felizbay inflatable pool on the rooftop terrace of a city vacation rental.',
+      'A family of three enjoying a round Inflatable Pool Factory inflatable pool on the rooftop terrace of a city vacation rental.',
     intro: [
-      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that installs in under an hour, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
+      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Inflatable Pool Factory drop-stitch pools were made for this gap: a genuine swimming pool that installs in under an hour, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
       'Rigid 4–5 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
     ],
     conditions: [
@@ -232,7 +232,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Glamping & Hospitality',
     image: '/images/pool-ideas/pools-for-glamping-and-hospitality.jpg',
     imageAlt:
-      'A round Felizbay inflatable pool set on the wooden deck of a mountain glamping dome surrounded by pine forest.',
+      'A round Inflatable Pool Factory inflatable pool set on the wooden deck of a mountain glamping dome surrounded by pine forest.',
     intro: [
       'Glamping sites, boutique cabins, and countryside hotels compete on experience. A drop-stitch pool or SPA tub delivers a premium amenity that moves with your business: set it up for the season on a deck or level ground, then store it when the weather turns — no planning permission for permanent structures in many jurisdictions (always confirm locally).',
       'For operators, the same product line is available in commercial configurations: custom sizes, branded colors, and OEM/ODM production through our Qingdao manufacturing partner.',
@@ -275,9 +275,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for DINK Households',
     image: '/images/pool-ideas/pools-for-dink-households.jpg',
     imageAlt:
-      'A DINK couple soaking in a compact round Felizbay pool on a modern minimalist balcony with potted plants.',
+      'A DINK couple soaking in a compact round Inflatable Pool Factory pool on a modern minimalist balcony with potted plants.',
     intro: [
-      'For double-income, no-kids households, the backyard is a private retreat — a place for morning coffee, an after-work cool-down, and weekend cocktails under the stars. A Felizbay soaking pool delivers that ritual without construction: rigid drop-stitch walls that look architectural rather than toy-like, and a footprint sized for a patio or courtyard.',
+      'For double-income, no-kids households, the backyard is a private retreat — a place for morning coffee, an after-work cool-down, and weekend cocktails under the stars. An Inflatable Pool Factory soaking pool delivers that ritual without construction: rigid drop-stitch walls that look architectural rather than toy-like, and a footprint sized for a patio or courtyard.',
       'Low water volume keeps filling, heating, and chemical care light, and when a travel week or the off-season arrives, the pool deflates into a storage footprint that fits a garage shelf.',
     ],
     conditions: [
@@ -321,9 +321,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Cold Plunge & Recovery Pools',
     image: '/images/pool-ideas/cold-plunge-and-recovery-pools.jpg',
     imageAlt:
-      'A man doing a cold plunge recovery session in a round grey Felizbay tub inside a home garage gym.',
+      'A man doing a cold plunge recovery session in a round grey Inflatable Pool Factory tub inside a home garage gym.',
     intro: [
-      'Cold-water immersion has become a staple recovery routine for athletes and fitness enthusiasts. A dedicated plunge vessel needs rigid walls you can brace against, insulation to slow warming, and a compact footprint that fits a garage gym or a shaded patio corner — exactly what Felizbay drop-stitch tubs are built for.',
+      'Cold-water immersion has become a staple recovery routine for athletes and fitness enthusiasts. A dedicated plunge vessel needs rigid walls you can brace against, insulation to slow warming, and a compact footprint that fits a garage gym or a shaded patio corner — exactly what Inflatable Pool Factory drop-stitch tubs are built for.',
       'The same 4–5 PSI rigid construction used across our pools, plus the 5 mm insulated thermal bottom on SPA tubs, holds cold water steadily. Add ice, or pair the tub with external water-chilling equipment — the line is designed to work with heating and spa therapy units.',
     ],
     conditions: [
@@ -351,7 +351,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     safety: [
       'Cold immersion places stress on the cardiovascular system — consult a physician first if you have high blood pressure, a heart condition, circulatory issues, or are pregnant.',
       'Never plunge alone or under the influence of alcohol or sedatives; keep initial sessions short (around 2–5 minutes).',
-      'Felizbay tubs are water vessels, not medical devices — no health or recovery claims are made or implied.',
+      'Inflatable Pool Factory tubs are water vessels, not medical devices — no health or recovery claims are made or implied.',
       'Secure the fitted cover when not in use to keep children, pets, and debris out.',
     ],
     cta: 'Set up a recovery station at home.',
@@ -364,10 +364,10 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Pet Families',
     image: '/images/pool-ideas/pools-for-pet-families.jpg',
     imageAlt:
-      'A golden retriever playing in a round Felizbay pool on a sunny suburban lawn while its owner joins in with a toy.',
+      'A golden retriever playing in a round Inflatable Pool Factory pool on a sunny suburban lawn while its owner joins in with a toy.',
     intro: [
       'Dogs feel the summer heat far more than we do, and a backyard splash spot is one of the best ways to keep them cool, exercised, and entertained. The problem with most inflatable pools is that thin vinyl walls lose to claws within days.',
-      'Felizbay drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–5 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the toughest portable wall you can buy.',
+      'Inflatable Pool Factory drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–5 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the toughest portable wall you can buy.',
     ],
     conditions: [
       'A level patch of lawn or patio from about 2 × 2 m',
@@ -404,10 +404,10 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Water Fitness & Active Family Fun',
     image: '/images/pool-ideas/pools-for-water-fitness-and-recreation.jpg',
     imageAlt:
-      'A family doing water exercises and splash games in a spacious round Felizbay pool on a sunny backyard lawn.',
+      'A family doing water exercises and splash games in a spacious round Inflatable Pool Factory pool on a sunny backyard lawn.',
     intro: [
       'Water aerobics, standing stretches, resistance walking, and family splash games turn a pool into a summer fitness platform. What matters for movement is usable floor area and stable, vertical walls — soft ring pools lose interior space to sloped sides and slosh over the rim during active play.',
-      'Felizbay drop-stitch pools keep their shape at 4–5 PSI: straight 90-degree walls, a flat stable floor, and rims firm enough to grip for balance work — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
+      'Inflatable Pool Factory drop-stitch pools keep their shape at 4–5 PSI: straight 90-degree walls, a flat stable floor, and rims firm enough to grip for balance work — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
     ],
     conditions: [
       'A footprint from about 3 × 2 m with at least 1 m of clear, non-slip walkway around the pool',
@@ -444,9 +444,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Townhomes & Compact Yards',
     image: '/images/pool-ideas/townhome-and-compact-yard-pools.jpg',
     imageAlt:
-      'A round Felizbay inflatable pool on the small patio of a modern townhome with wooden privacy fencing and potted plants.',
+      'A round Inflatable Pool Factory inflatable pool on the small patio of a modern townhome with wooden privacy fencing and potted plants.',
     intro: [
-      'Townhome patios, side yards, and courtyards rarely appear in pool brochures — but a 2 m pool changes that math. Felizbay drop-stitch pools start at footprints that fit a small paved yard, install without touching shared structures, and disappear into storage the day you need the space back.',
+      'Townhome patios, side yards, and courtyards rarely appear in pool brochures — but a 2 m pool changes that math. Inflatable Pool Factory drop-stitch pools start at footprints that fit a small paved yard, install without touching shared structures, and disappear into storage the day you need the space back.',
       'Because the walls inflate rigid at 4–5 PSI instead of sagging like a ring pool, even the smallest sizes read as a real pool — straight sides, a stable rim, genuine depth.',
     ],
     conditions: [
@@ -484,10 +484,10 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Retirees & Empty Nesters',
     image: '/images/pool-ideas/pools-for-retirees-and-empty-nesters.jpg',
     imageAlt:
-      'A retired couple enjoying a warm soak in a round Felizbay pool in a flower-filled garden at golden hour.',
+      'A retired couple enjoying a warm soak in a round Inflatable Pool Factory pool in a flower-filled garden at golden hour.',
     intro: [
       'When the yard quiets down, a pool stops being a playground and becomes a daily comfort — a cool soak on a warm afternoon, gentle movement for stiff joints, and a magnet for visiting grandchildren. The catch is that permanent pools demand heavy upkeep that nobody wants in retirement.',
-      'Felizbay drop-stitch pools split the difference: rigid walls with a rim you can sit on while stepping in, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
+      'Inflatable Pool Factory drop-stitch pools split the difference: rigid walls with a rim you can sit on while stepping in, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
     ],
     conditions: [
       'A level, step-free patch of patio or garden from about 1.8 × 1.8 m with a clear, non-slip access path',
@@ -528,9 +528,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Rental & Event Operators',
     image: '/images/pool-ideas/pools-for-rental-and-event-operators.jpg',
     imageAlt:
-      'A large commercial Felizbay pool deployed at an outdoor festival site with sand-filter equipment and an operator checking water circulation.',
+      'A large commercial Inflatable Pool Factory pool deployed at an outdoor festival site with sand-filter equipment and an operator checking water circulation.',
     intro: [
-      'Summer festivals, brand activations, pop-up beach clubs, and community events all want one thing: a water feature guests remember. Rigid pools are too heavy to tour, and toy inflatables rarely survive a second weekend. Felizbay commercial drop-stitch pools bridge the gap — rock-solid at 4–5 PSI, quick to deploy and strike, and packed small enough to stack in a box truck.',
+      'Summer festivals, brand activations, pop-up beach clubs, and community events all want one thing: a water feature guests remember. Rigid pools are too heavy to tour, and toy inflatables rarely survive a second weekend. Inflatable Pool Factory commercial drop-stitch pools bridge the gap — rock-solid at 4–5 PSI, quick to deploy and strike, and packed small enough to stack in a box truck.',
       'The same platform scales from a single VIP plunge to a Ø 10 m centerpiece, with OEM/ODM options for branded fleet builds.',
     ],
     conditions: [
@@ -568,9 +568,9 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Pools for Boutique Hotels & Luxury Estates',
     image: '/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.jpg',
     imageAlt:
-      'A round Felizbay soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
+      'A round Inflatable Pool Factory soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
     intro: [
-      'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Felizbay drop-stitch soaking pools deliver the same photogenic experience with a non-invasive install a small team completes in under an hour.',
+      'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Inflatable Pool Factory drop-stitch soaking pools deliver the same photogenic experience with a non-invasive install a small team completes in under an hour.',
       'For properties, the line supports commercial projects: custom sizes and colorways, quiet filtration setups, and OEM/ODM production through our Qingdao manufacturing partner.',
     ],
     conditions: [

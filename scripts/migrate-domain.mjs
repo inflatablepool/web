@@ -18,10 +18,10 @@ import { join, relative, resolve } from 'path';
 import { readdirSync, statSync } from 'fs';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const OLD_DOMAIN = 'https://felizbay.com';
-const OLD_ASSETS = 'https://assets.felizbay.com';
-const OLD_EMAIL = 'info@felizbay.com';
-const OLD_WEB_EMAIL = 'web@felizbay.com';
+const OLD_DOMAIN = 'https://inflatablepoolfactory.com';
+const OLD_ASSETS = 'https://assets.inflatablepoolfactory.com';
+const OLD_EMAIL = 'info@inflatablepoolfactory.com';
+const OLD_WEB_EMAIL = 'web@inflatablepoolfactory.com';
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');

@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Бассейны премиум-класса с жесткими стенками drop-stitch, которые надуваются за считанные минуты и упаковываются на зиму, созданы для отдыха на заднем дворе и семейного отдыха.<br />
     Изучите размеры бассейна, сравните характеристики и найдите тот, который подойдет вашему пространству.<br />
-    Разработан и эксплуатируется компанией Aquafarer LLC, США.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Магазин бассейнов
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Прямоугольный надувной бассейн Felizbay Drop Stitch на заднем дворе
+    alt: Прямоугольный надувной бассейн Inflatable Pool Factory Drop Stitch на заднем дворе
 stats:
-  title: Felizbay с первого взгляда
+  title: Inflatable Pool Factory с первого взгляда
   columns: 4
   stats:
     - title: Коллекции бассейнов
@@ -36,11 +36,11 @@ stats:
     - title: Нестандартные размеры
       amount: Available
     - title: Контакт
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Технология Drop Stitch
-  title: Почему бассейн Felizbay<br />отличается
+  title: Почему бассейн Inflatable Pool Factory<br />отличается
   subtitle: Конструкция Drop Stitch под высоким давлением делает наши бассейны жесткими, долговечными и удобными для хранения.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Для бизнеса
   title: Бассейны для бизнеса,<br />Слишком
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay для деловых партнеров</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory для деловых партнеров</h3>
   items:
     - title: Аренда на время отпуска и гостиничный бизнес
       description: Сезонные удобства для гостей при аренде на время отпуска, местах для глэмпинга и бутик-отелях — быстро развертываются, просты в обслуживании и просто хранятся.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Уход и безопасность
   title: Легко владеть,<br />Легко любить
-  subtitle: От доставки до первого купания и хранения в конце сезона — владение бассейном Felizbay остается простым.
+  subtitle: От доставки до первого купания и хранения в конце сезона — владение бассейном Inflatable Pool Factory остается простым.
   items:
     - title: Настройка за несколько минут
       description: 'Распакуйте и накачайте насосом, входящим в комплект поставки, в течение 5–15 минут, затем заполните водой из садового шланга — время наполнения зависит от размера бассейна и количества воды.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay круглый надувной бассейн Drop Stitch
+    alt: Inflatable Pool Factory круглый надувной бассейн Drop Stitch
 blog_latest:
   title: Путеводители по бассейнам и аналитика
   information: |
     Руководства по установке, советы по уходу и советы по покупке надувных бассейнов.
-    от команды Felizbay.
+    от команды Inflatable Pool Factory.
 faqs:
   title: Часто задаваемые вопросы по надувному бассейну
-  subtitle: Частые вопросы о надувных бассейнах Felizbay.
+  subtitle: Частые вопросы о надувных бассейнах Inflatable Pool Factory.
   columns: 2
   items:
     - title: Сколько времени занимает установка?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Что входит в стоимость бассейна?
-      description: Каждый бассейн Felizbay включает в себя электрический воздушный насос, ремонтный комплект и сумку для хранения. Круглые модели имеют дополнительную встроенную крышку.
+      description: Каждый бассейн Inflatable Pool Factory включает в себя электрический воздушный насос, ремонтный комплект и сумку для хранения. Круглые модели имеют дополнительную встроенную крышку.
       icon: tabler:box
       category: all
     - title: Какие размеры доступны?

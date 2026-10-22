@@ -34,7 +34,7 @@ interface ConfigData {
   siteSettings: SiteSettingsData;
 }
 let data: ConfigData = {
-  site: { name: 'Felizbay', site: 'https://felizbay.com' },
+  site: { name: 'Inflatable Pool Factory', site: 'https://inflatablepoolfactory.com' },
   metadata: {
     keywords: [],
     robots: { index: true, follow: true },
@@ -207,7 +207,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="keywords"
           value={Array.isArray(getData().metadata?.keywords) ? getData().metadata.keywords.join(', ') : ''}
-          placeholder="Felizbay, inflatable swimming pool, drop stitch pool, backyard pool"
+          placeholder="Inflatable Pool Factory, inflatable swimming pool, drop stitch pool, backyard pool"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">
@@ -251,7 +251,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="twitter_handle"
           value={getData().metadata?.twitter?.handle ?? ''}
-          placeholder="@felizbay"
+          placeholder="@Inflatable Pool Factory"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">twitter:creator meta 标签。在 Twitter 卡片中显示为"由 @xxx 创作"。</p>
@@ -264,7 +264,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="twitter_site"
           value={getData().metadata?.twitter?.site ?? ''}
-          placeholder="@felizbay"
+          placeholder="@Inflatable Pool Factory"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">twitter:site meta 标签。在 Twitter 卡片中显示网站关联账号。</p>
@@ -353,7 +353,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="org_name"
           value={getData().siteSettings.organization?.name ?? ''}
-          placeholder="Felizbay"
+          placeholder="Inflatable Pool Factory"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.name。应与 Branding 面板中的 Site Name 保持一致。</p>
@@ -366,7 +366,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="org_logo"
           value={getData().siteSettings.organization?.logo ?? ''}
-          placeholder="https://felizbay.com/favicon.svg"
+          placeholder="https://inflatablepoolfactory.com/favicon.svg"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">
@@ -382,7 +382,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="email"
           name="org_email"
           value={getData().siteSettings.organization?.contactEmail ?? ''}
-          placeholder="info@felizbay.com"
+          placeholder="info@inflatablepoolfactory.com"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.email。不影响联系表单发送。</p>
@@ -395,7 +395,7 @@ const PLATFORM_ICONS: Record<string, string> = {
           type="text"
           name="org_phone"
           value={getData().siteSettings.organization?.contactPhone ?? ''}
-          placeholder="+1 (213) 557-7888"
+          placeholder="+86 13305324192"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.telephone。推荐包含国际区号。</p>

@@ -278,8 +278,8 @@ form_project:
 
 cta:
   title: 'Prefer to discuss by email?'
-  subtitle: 'Send your inquiry directly to our team at info@felizbay.com and we will respond within 24 hours.'
+  subtitle: 'Send your inquiry directly to our team at info@inflatablepoolfactory.com and we will respond within 24 hours.'
   actions:
     - variant: primary
       text: Email us directly
-      href: mailto:info@felizbay.com
+      href: mailto:info@inflatablepoolfactory.com

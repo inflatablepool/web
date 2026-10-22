@@ -33,7 +33,7 @@ const poolArticles: ContentV2Record[] = [
     explanation:
       'In a drop stitch pool, two sheets of PVC are joined by thousands of internal polyester threads. When the chamber inflates, the threads pull taut and lock the sheets a fixed distance apart, turning soft fabric into a panel as rigid as plywood. The water pushes out; the walls push back.',
     solution:
-      'Felizbay builds every pool with high-pressure drop stitch chambers. Inflate to the rated pressure and the walls stand vertical without any frame, rods, or stakes — full water pressure, full depth, all season.',
+      'Inflatable Pool Factory builds every pool with high-pressure drop stitch chambers. Inflate to the rated pressure and the walls stand vertical without any frame, rods, or stakes — full water pressure, full depth, all season.',
     recommendation:
       'If you are comparing inflatable pools, press the wall of a filled pool: a drop stitch wall feels like a drum, not a pillow. That rigidity is what keeps the pool usable for years instead of one summer.',
     faq: [
@@ -99,7 +99,7 @@ const poolArticles: ContentV2Record[] = [
     explanation:
       'Warm, still, sunlit water is the perfect algae environment. A filter pump circulates and removes particles; chlorine kills organisms; correct pH makes the chlorine work. Covering blocks sunlight and debris — the two things that feed the problem.',
     solution:
-      'Felizbay pools fit standard cartridge filter pumps. Establish the routine on day one: filter 4–8 hours daily, test 2–3 times a week, dose with a floating dispenser, skim daily, cover between swims.',
+      'Inflatable Pool Factory pools fit standard cartridge filter pumps. Establish the routine on day one: filter 4–8 hours daily, test 2–3 times a week, dose with a floating dispenser, skim daily, cover between swims.',
     recommendation:
       'Buy a basic test kit and a cover with your pool — together they cost less than one unnecessary water change and prevent 90% of water problems.',
     faq: [

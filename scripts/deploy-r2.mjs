@@ -5,7 +5,7 @@ import { globSync } from 'glob';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const PUBLIC_DIR = path.join(ROOT, 'public');
-const BUCKET = 'felizbay-assets';
+const BUCKET = 'inflatable-pool-factory-assets';
 
 function detectMime(filePath) {
   const ext = path.extname(filePath).toLowerCase();

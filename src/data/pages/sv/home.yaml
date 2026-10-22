@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Premiumpooler med styva drop-stitch-väggar som blåser upp på några minuter och packar ihop för vintern — designade för avkoppling på bakgården och familjekul.<br />
     Utforska poolstorlekar, jämför funktioner och hitta rätt passform för ditt utrymme.<br />
-    Designad och drivs av Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Shoppa pooler
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rektangulär Drop Stitch uppblåsbar pool på en bakgård
+    alt: Inflatable Pool Factory rektangulär Drop Stitch uppblåsbar pool på en bakgård
 stats:
-  title: Felizbay i korthet
+  title: Inflatable Pool Factory i korthet
   columns: 4
   stats:
     - title: Pool samlingar
@@ -36,11 +36,11 @@ stats:
     - title: Anpassade storlekar
       amount: Available
     - title: Kontakta
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch-teknik
-  title: Varför en Felizbay Pool<br />är annorlunda
+  title: Varför en Inflatable Pool Factory Pool<br />är annorlunda
   subtitle: Högtrycks-Drop Stitch-konstruktion gör våra pooler styva, hållbara och lätta att lagra.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: För företag
   title: Pooler för företag,<br />För
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay för affärspartners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory för affärspartners</h3>
   items:
     - title: Semesterbostäder och gästfrihet
       description: Säsongsbetonade gästbekvämligheter för semesterbostäder, glampingplatser och boutiquefastigheter – snabba att installera, lätta att underhålla, lätta att förvara.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Vård & Säkerhet
   title: Lätt att äga,<br />Lätt att älska
-  subtitle: Från leverans till första simtur till förvaring vid slutet av säsongen är det enkelt att äga en Felizbay-pool.
+  subtitle: Från leverans till första simtur till förvaring vid slutet av säsongen är det enkelt att äga en Inflatable Pool Factory-pool.
   items:
     - title: Installation på några minuter
       description: 'Packa upp och blåsa upp med den medföljande pumpen på 5-15 minuter, fyll sedan med en trädgårdsslang – påfyllningstiden varierar med poolstorlek och vattentillförsel.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay rund Drop Stitch uppblåsbar pool
+    alt: Inflatable Pool Factory rund Drop Stitch uppblåsbar pool
 blog_latest:
   title: Poolguider och insikter
   information: |
     Installationsguider, skötseltips och köpråd för uppblåsbara simbassänger
-    från Felizbay-teamet.
+    från Inflatable Pool Factory-teamet.
 faqs:
   title: Vanliga frågor om uppblåsbar pool
-  subtitle: Vanliga frågor om Felizbay uppblåsbara simbassänger.
+  subtitle: Vanliga frågor om Inflatable Pool Factory uppblåsbara simbassänger.
   columns: 2
   items:
     - title: Hur lång tid tar installationen?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Vad ingår i poolen?
-      description: Varje Felizbay-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Runda modeller har en valfri monterad kåpa.
+      description: Varje Inflatable Pool Factory-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Runda modeller har en valfri monterad kåpa.
       icon: tabler:box
       category: all
     - title: Vilka storlekar finns tillgängliga?

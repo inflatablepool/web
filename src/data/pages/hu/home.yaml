@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Prémium medencék merev drop-stitch falakkal, amelyek percek alatt felfújódnak, és elpakolódnak télre – kerti pihenésre és családi szórakozásra tervezték.<br />
     Fedezze fel a medenceméreteket, hasonlítsa össze a funkciókat, és találja meg a helyének megfelelőt.<br />
-    Tervezője és üzemeltetője az Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Vásároljon medencéket
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay téglalap alakú Drop Stitch felfújható medence egy hátsó udvarban
+    alt: Inflatable Pool Factory téglalap alakú Drop Stitch felfújható medence egy hátsó udvarban
 stats:
-  title: Felizbay egy pillantásra
+  title: Inflatable Pool Factory egy pillantásra
   columns: 4
   stats:
     - title: Medence gyűjtemények
@@ -36,11 +36,11 @@ stats:
     - title: Egyedi méretek
       amount: Available
     - title: Érintkezés
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch technológia
-  title: Miért egy Felizbay medence?<br />Különböző
+  title: Miért egy Inflatable Pool Factory medence?<br />Különböző
   subtitle: A nagynyomású Drop Stitch konstrukció merevvé, tartóssá és könnyedén tárolhatóvá teszi medencéinket.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Vállalkozásoknak
   title: Üzleti medencék,<br />Is
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay üzleti partnereknek</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory üzleti partnereknek</h3>
   items:
     - title: Nyaralás és vendéglátás
       description: Szezonális vendégszolgáltatások nyaralókhoz, kilátóhelyekhez és butik ingatlanokhoz – gyorsan telepíthető, könnyen karbantartható, egyszerűen tárolható.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Gondozás és biztonság
   title: Könnyen birtokolható,<br />Könnyű Szeretni
-  subtitle: A szállítástól az első úszáson át a szezon végi tárolásig a Felizbay medence birtoklása egyszerű marad.
+  subtitle: A szállítástól az első úszáson át a szezon végi tárolásig az Inflatable Pool Factory medence birtoklása egyszerű marad.
   items:
     - title: Beállítás percekben
       description: 'Bontsa ki és fújja fel a mellékelt szivattyúval 5-15 perc alatt, majd töltse fel kerti tömlővel – a feltöltési idő a medence méretétől és a vízellátástól függően változik.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay kerek Drop Stitch felfújható medence
+    alt: Inflatable Pool Factory kerek Drop Stitch felfújható medence
 blog_latest:
   title: Pool útmutatók és betekintések
   information: |
     Felfújható úszómedencék beállítási útmutatói, gondozási tanácsai és vásárlási tanácsok
-    a Felizbay csapattól.
+    az Inflatable Pool Factory csapattól.
 faqs:
   title: Felfújható medence GYIK
-  subtitle: Gyakori kérdések a Felizbay felfújható medencékkel kapcsolatban.
+  subtitle: Gyakori kérdések az Inflatable Pool Factory felfújható medencékkel kapcsolatban.
   columns: 2
   items:
     - title: Mennyi ideig tart a beállítás?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mit tartalmaz a medence?
-      description: Minden Felizbay medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A kerek modellek opcionálisan felszerelt burkolattal rendelkeznek.
+      description: Minden Inflatable Pool Factory medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A kerek modellek opcionálisan felszerelt burkolattal rendelkeznek.
       icon: tabler:box
       category: all
     - title: Milyen méretek kaphatók?

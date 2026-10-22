@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Mga premium na pool na may matibay na drop-stitch na pader na pumuputok sa loob ng ilang minuto at nakaimpake para sa taglamig — dinisenyo para sa pagpapahinga sa likod-bahay at kasiyahan ng pamilya.<br />
     I-explore ang mga laki ng pool, ihambing ang mga feature, at hanapin ang tamang akma para sa iyong space.<br />
-    Dinisenyo at pinamamahalaan ng Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Mamili ng Pool
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rectangular drop stitch inflatable swimming pool sa likod-bahay
+    alt: Inflatable Pool Factory rectangular drop stitch inflatable swimming pool sa likod-bahay
 stats:
-  title: Felizbay sa isang Sulyap
+  title: Inflatable Pool Factory sa isang Sulyap
   columns: 4
   stats:
     - title: Mga Koleksyon ng Pool
@@ -36,11 +36,11 @@ stats:
     - title: Mga Custom na Laki
       amount: Available
     - title: Makipag-ugnayan
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Teknolohiya ng Drop Stitch
-  title: Bakit isang Felizbay Pool<br />Ay Iba
+  title: Bakit isang Inflatable Pool Factory Pool<br />Ay Iba
   subtitle: Ang high-pressure drop stitch construction ay ginagawang matibay, matibay, at walang hirap sa pag-imbak ang aming mga pool.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Para sa mga Negosyo
   title: Pool para sa Negosyo,<br />masyadong
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay para sa mga kasosyo sa negosyo</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory para sa mga kasosyo sa negosyo</h3>
   items:
     - title: Mga Renta sa Bakasyon at Hospitality
       description: Mga pana-panahong amenity ng bisita para sa mga pinaparentahang bakasyunan, glamping site, at boutique property — mabilis i-deploy, madaling mapanatili, simpleng iimbak.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Pangangalaga at Kaligtasan
   title: Madaling pagmamay-ari,<br />Madaling Magmahal
-  subtitle: Mula sa paghahatid hanggang sa unang paglangoy hanggang sa end-of-season storage, nananatiling simple ang pagmamay-ari ng Felizbay pool.
+  subtitle: Mula sa paghahatid hanggang sa unang paglangoy hanggang sa end-of-season storage, nananatiling simple ang pagmamay-ari ng Inflatable Pool Factory pool.
   items:
     - title: Setup sa Minuto
       description: 'I-unbox at i-inflate ang kasamang pump sa loob ng 5-15 minuto, pagkatapos ay punuin ng hose sa hardin — nag-iiba ang oras ng pagpuno sa laki ng pool at supply ng tubig.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay round Drop Stitch inflatable swimming pool
+    alt: Inflatable Pool Factory round Drop Stitch inflatable swimming pool
 blog_latest:
   title: Mga Gabay sa Pool at Mga Insight
   information: |
     Mga gabay sa pag-setup, mga tip sa pangangalaga, at payo sa pagbili para sa mga inflatable na swimming pool
-    mula sa pangkat ng Felizbay.
+    mula sa pangkat ng Inflatable Pool Factory.
 faqs:
   title: FAQ ng Inflatable Pool
-  subtitle: Mga karaniwang tanong tungkol sa Felizbay inflatable swimming pool.
+  subtitle: Mga karaniwang tanong tungkol sa Inflatable Pool Factory inflatable swimming pool.
   columns: 2
   items:
     - title: Gaano katagal ang setup?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ano ang kasama sa pool?
-      description: Ang bawat pool ng Felizbay ay may kasamang electric air pump, repair kit, at storage bag. Ang mga bilog na modelo ay may opsyonal na fitted cover.
+      description: Ang bawat pool ng Inflatable Pool Factory ay may kasamang electric air pump, repair kit, at storage bag. Ang mga bilog na modelo ay may opsyonal na fitted cover.
       icon: tabler:box
       category: all
     - title: Anong mga sukat ang magagamit?

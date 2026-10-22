@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Aukščiausios klasės baseinai su tvirtomis drop-stitch sienomis, kurios pripučiamos per kelias minutes ir supakuojamos žiemai – sukurti poilsiui kieme ir šeimos pramogoms.<br />
     Ištirkite baseinų dydžius, palyginkite funkcijas ir raskite tinkamą jūsų erdvei.<br />
-    Sukūrė ir eksploatuoja Aquafarer LLC, JAV.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Parduotuvė baseinai
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas kieme
+    alt: Inflatable Pool Factory stačiakampis Drop Stitch pripučiamas baseinas kieme
 stats:
-  title: Felizbay iš pirmo žvilgsnio
+  title: Inflatable Pool Factory iš pirmo žvilgsnio
   columns: 4
   stats:
     - title: Baseino kolekcijos
@@ -36,11 +36,11 @@ stats:
     - title: Individualūs dydžiai
       amount: Available
     - title: Susisiekite
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch technologija
-  title: Kodėl Felizbay baseinas<br />Yra Skirtingas
+  title: Kodėl Inflatable Pool Factory baseinas<br />Yra Skirtingas
   subtitle: Dėl aukšto slėgio Drop Stitch konstrukcijos mūsų baseinai yra standūs, patvarūs ir lengvai laikomi.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Įmonėms
   title: Baseinai verslui,<br />Taip pat
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay verslo partneriams</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory verslo partneriams</h3>
   items:
     - title: Nuoma atostogoms ir svetingumas
       description: Sezoniniai svečių patogumai, skirti išsinuomoti atostogas, lankytinas vietas ir butiko patalpas – greitai įdiegti, lengvai prižiūrėti, paprasta laikyti.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Priežiūra ir sauga
   title: Lengva turėti,<br />Lengva mylėti
-  subtitle: Nuo pristatymo iki pirmojo plaukimo iki saugojimo sezono pabaigoje – turėti Felizbay baseiną yra paprasta.
+  subtitle: Nuo pristatymo iki pirmojo plaukimo iki saugojimo sezono pabaigoje – turėti Inflatable Pool Factory baseiną yra paprasta.
   items:
     - title: Nustatymas per minutes
       description: 'Išpakuokite ir pripūskite naudodami pridedamą pompą per 5–15 minučių, tada užpildykite sodo žarna – užpildymo laikas priklauso nuo baseino dydžio ir vandens tiekimo.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay apvalus Drop Stitch pripučiamas baseinas
+    alt: Inflatable Pool Factory apvalus Drop Stitch pripučiamas baseinas
 blog_latest:
   title: Baseino vadovai ir įžvalgos
   information: |
     Pripučiamų baseinų sąrankos vadovai, priežiūros patarimai ir pirkimo patarimai
-    iš Felizbay komandos.
+    iš Inflatable Pool Factory komandos.
 faqs:
   title: Pripučiamo baseino DUK
-  subtitle: Dažniausiai užduodami klausimai apie Felizbay pripučiamus baseinus.
+  subtitle: Dažniausiai užduodami klausimai apie Inflatable Pool Factory pripučiamus baseinus.
   columns: 2
   items:
     - title: Kiek laiko trunka sąranka?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas įskaičiuota į baseiną?
-      description: Kiekviename Felizbay baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvalūs modeliai turi papildomą dangtelį.
+      description: Kiekviename Inflatable Pool Factory baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvalūs modeliai turi papildomą dangtelį.
       icon: tabler:box
       category: all
     - title: Kokie dydžiai galimi?

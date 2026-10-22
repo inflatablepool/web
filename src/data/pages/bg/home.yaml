@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Първокласни басейни с твърди drop-stitch стени, които се надуват за минути и се събират за зимата — предназначени за релаксация в задния двор и семейно забавление.<br />
     Разгледайте размерите на басейна, сравнете характеристиките и намерете подходящото за вашето пространство.<br />
-    Проектиран и управляван от Aquafarer LLC, САЩ.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Магазин Басейни
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Правоъгълен надуваем плувен басейн Felizbay Drop Stitch в задния двор
+    alt: Правоъгълен надуваем плувен басейн Inflatable Pool Factory Drop Stitch в задния двор
 stats:
-  title: Felizbay с един поглед
+  title: Inflatable Pool Factory с един поглед
   columns: 4
   stats:
     - title: Колекции басейн
@@ -36,11 +36,11 @@ stats:
     - title: Персонализирани размери
       amount: Available
     - title: Контакт
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Технология Drop Stitch
-  title: Защо басейн Felizbay<br />е различен
+  title: Защо басейн Inflatable Pool Factory<br />е различен
   subtitle: Конструкцията Drop Stitch под високо налягане прави нашите басейни твърди, издръжливи и лесни за съхранение.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: За бизнеса
   title: Пулове за бизнес,<br />също
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay за бизнес партньори</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory за бизнес партньори</h3>
   items:
     - title: Ваканционни имоти под наем и хотелиерство
       description: Сезонни удобства за гости за ваканционни наеми, места за глемпинг и бутикови имоти — бързо разгръщане, лесно за поддръжка, лесно за съхранение.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Грижи и безопасност
   title: Лесен за притежаване,<br />Лесен за обичане
-  subtitle: От доставката през първото плуване до съхранението в края на сезона, притежаването на басейн Felizbay остава лесно.
+  subtitle: От доставката през първото плуване до съхранението в края на сезона, притежаването на басейн Inflatable Pool Factory остава лесно.
   items:
     - title: Настройка за минути
       description: 'Разопаковайте и напомпайте с включената помпа за 5-15 минути, след което напълнете с градински маркуч — времето за пълнене варира в зависимост от размера на басейна и водоснабдяването.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay кръгъл надуваем басейн Drop Stitch
+    alt: Inflatable Pool Factory кръгъл надуваем басейн Drop Stitch
 blog_latest:
   title: Ръководства и прозрения за басейна
   information: |
     Ръководства за настройка, съвети за грижа и съвети за закупуване на надуваеми плувни басейни
-    от екипа на Felizbay.
+    от екипа на Inflatable Pool Factory.
 faqs:
   title: ЧЗВ за надуваем басейн
-  subtitle: Често задавани въпроси относно надуваемите басейни Felizbay.
+  subtitle: Често задавани въпроси относно надуваемите басейни Inflatable Pool Factory.
   columns: 2
   items:
     - title: Колко време отнема настройката?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Какво е включено в басейна?
-      description: Всеки басейн Felizbay включва електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Кръглите модели имат опционален монтиран капак.
+      description: Всеки басейн Inflatable Pool Factory включва електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Кръглите модели имат опционален монтиран капак.
       icon: tabler:box
       category: all
     - title: Какви размери са налични?

@@ -1,17 +1,17 @@
-name = "felizbay-admin"
+name = "inflatable-pool-factory-admin"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
 routes = [
-  { pattern = "felizbay.com/api/admin/*", zone_name = "felizbay.com" },
-  { pattern = "felizbay.com/api/auth/*", zone_name = "felizbay.com" },
+  { pattern = "inflatablepoolfactory.com/api/admin/*", zone_name = "inflatablepoolfactory.com" },
+  { pattern = "inflatablepoolfactory.com/api/auth/*", zone_name = "inflatablepoolfactory.com" },
 ]
 
 [vars]
-GITHUB_OWNER = "Felizbay"
-GITHUB_REPO = "official"
-BETTER_AUTH_URL = "https://felizbay.com"
+GITHUB_OWNER = "inflatablepool"
+GITHUB_REPO = "web"
+BETTER_AUTH_URL = "https://inflatablepoolfactory.com"
 
 # Secrets (set via `wrangler secret put`, NOT here):
 #   BETTER_AUTH_SECRET        — session signing key (openssl rand -base64 32)
@@ -20,10 +20,10 @@ BETTER_AUTH_URL = "https://felizbay.com"
 #   ADMIN_EMAILS              — comma-separated admin emails (role source of truth)
 #   GITHUB_TOKEN              — Fine-grained PAT for the CMS content endpoints
 
-# D1 (created via: wrangler d1 create Felizbay-db)
+# D1 (created via: wrangler d1 create inflatable-pool-factory-db)
 [[d1_databases]]
 binding = "DB"
-database_name = "Felizbay-db"
+database_name = "inflatable-pool-factory-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 migrations_dir = "../../migrations"
 
@@ -31,4 +31,4 @@ migrations_dir = "../../migrations"
 # served back to admins through /api/admin/inquiries/file.
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "felizbay-data"
+bucket_name = "inflatable-pool-factory-data"

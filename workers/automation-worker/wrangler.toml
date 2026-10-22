@@ -1,10 +1,10 @@
-name = "felizbay-automation"
+name = "inflatable-pool-factory-automation"
 main = "src/index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
 routes = [
-  { pattern = "felizbay.com/api/automation/*", zone_name = "felizbay.com" },
+  { pattern = "inflatablepoolfactory.com/api/automation/*", zone_name = "inflatablepoolfactory.com" },
 ]
 
 [triggers]
@@ -12,16 +12,16 @@ crons = ["0 2 * * *"]
 
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "felizbay-data"
+bucket_name = "inflatable-pool-factory-data"
 
-# D1 (created via: wrangler d1 create Felizbay-db) — shared with admin/news/contact workers
+# D1 (created via: wrangler d1 create inflatable-pool-factory-db) — shared with admin/news/contact workers
 [[d1_databases]]
 binding = "DB"
-database_name = "Felizbay-db"
+database_name = "inflatable-pool-factory-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 
 [vars]
 INDEXNOW_KEY = ""
-INDEXNOW_HOST = "felizbay.com"
-INDEXNOW_KEY_LOCATION = "https://felizbay.com/579f6d8a1e2b4c7f9a3d5e8b0c2f4a6b.txt"
+INDEXNOW_HOST = "inflatablepoolfactory.com"
+INDEXNOW_KEY_LOCATION = "https://inflatablepoolfactory.com/579f6d8a1e2b4c7f9a3d5e8b0c2f4a6b.txt"
 CLEANUP_TOKEN = ""

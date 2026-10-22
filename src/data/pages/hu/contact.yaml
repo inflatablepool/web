@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Küldj nekünk üzenetet
   subtitle: Árajánlatok, műszaki kérdések vagy partnerségi kérdések esetén írjon nekünk. Egy munkanapon belül válaszolunk.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Kérdés küldése → Kérjen árajánlatot
   success_message: Köszönöm! Üzenete beérkezett a postafiókunkba. Egy munkanapon belül válaszolunk.
   error_message: Hiba történt az üzenet elküldésekor. Kérjük, próbálja újra, vagy írjon nekünk közvetlenül.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: kérjük, oldja meg a következőt'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Egyedi méretek, színek, borítók, márkajelzések és csomagolás.
       icon: tabler:palette
     - title: Email
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Weboldal
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Válaszidő
       description: Egy munkanapon belül válaszolunk.
       icon: tabler:clock
 map:
   title: Vegye fel a kapcsolatot
-  subtitle: Forduljon Felizbayhoz
-  address: felizbay.com
+  subtitle: Forduljon Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

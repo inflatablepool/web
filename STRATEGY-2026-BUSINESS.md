@@ -1,14 +1,14 @@
-# Felizbay 商业升级战略方案 (2026)
+# Inflatable Pool Factory 商业升级战略方案 (2026)
 
 ## 一、总体战略定位调整
 
 ### 当前定位
 
-Felizbay = 中国高品质充气船、SUP、Kayak OEM/ODM 制造商
+Inflatable Pool Factory = 中国高品质充气船、SUP、Kayak OEM/ODM 制造商
 
 ### 新定位
 
-**Felizbay — "Your Water Adventure Business Partner"**
+**Inflatable Pool Factory — "Your Water Adventure Business Partner"**
 
 不只是制造水上装备，更帮助全球伙伴建立成功的水上运动业务。
 
@@ -24,7 +24,7 @@ Business Solution → Product → Factory
 
 ### 第一屏 Hero
 
-**主标题：** Build Your Water Adventure Business With Felizbay
+**主标题：** Build Your Water Adventure Business With Inflatable Pool Factory
 
 **副标题：** From professional water equipment manufacturing to complete solutions for clubs, resorts and emerging brands.
 

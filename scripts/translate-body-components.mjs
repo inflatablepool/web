@@ -87,7 +87,7 @@ const PRESERVE_PATTERNS = [
   /\bHypalon\b/gi,
   /\bDrop-Stitch\b/gi,
   /\bdrop-stitch\b/g,
-  /\bFelizbay\b/g,
+  /\bInflatable Pool Factory\b/g,
   /\bISO\b/g,
   /\bPSI\b/g,
   /\bFRP\b/g,
@@ -344,7 +344,7 @@ async function myMemoryTranslate(preservedText, sourceLang, lang) {
   // MyMemory 免费接口 ~500 字符截断：长段落宁可失败留给下轮，不要静默残句
   if (preservedText.length > 450) return null;
   try {
-    const mmDe = process.env.MM_DE || 'translate@felizbay.com';
+    const mmDe = process.env.MM_DE || 'translate@inflatablepoolfactory.com';
     const url = `${MYMEMORY_URL}?q=${encodeURIComponent(preservedText)}&langpair=${sourceLang}|${lang}&de=${encodeURIComponent(mmDe)}`;
     const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (res.status === 429) {

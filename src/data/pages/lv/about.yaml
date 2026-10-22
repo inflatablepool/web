@@ -2,11 +2,11 @@ hero:
   tagline: Par mums
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay piepūšamais peldbaseins
+    alt: Inflatable Pool Factory piepūšamais peldbaseins
   title: |
     Peldēšana ir vienkārša, <br />
-    pēc <span class="text-accent dark:text-white">Felizbay</span> parauga
-  subtitle: Felizbay ir augstākās klases piepūšamo baseinu zīmols Drop Stitch, ko izstrādājis un pārvalda Aquafarer LLC (ASV). Mēs uzskatām, ka katra ģimene ir pelnījusi īstu baseinu pagalmā — bez būvniecības, atļaujām vai pastāvīgas uzstādīšanas. Mūsu baseini dažu minūšu laikā kļūst stingrāki, izdzīvo visas vasaras ģimenes izklaidēs un sezonas beigās iepako mazus.
+    pēc <span class="text-accent dark:text-white">Inflatable Pool Factory</span> parauga
+  subtitle: Inflatable Pool Factory ir augstākās klases piepūšamo baseinu zīmols Drop Stitch, ko izstrādājis Inflatable Pool Team · Qingdao Vatrad Group. Mēs uzskatām, ka katra ģimene ir pelnījusi īstu baseinu pagalmā — bez būvniecības, atļaujām vai pastāvīgas uzstādīšanas. Mūsu baseini dažu minūšu laikā kļūst stingrāki, izdzīvo visas vasaras ģimenes izklaidēs un sezonas beigās iepako mazus.
 stats:
   title: Pēc skaitļiem
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nominālais spiediens
       amount: 4-5 PSI
     - title: Sazināties
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Ko mēs veidojam
   subtitle: Mērķtiecīga produktu līnija, ko mēs zinām no iekšpuses — augstspiediena Drop Stitch piepūšamie peldbaseini.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay taisnstūra Drop Stitch piepūšamais peldbaseins
+    alt: Inflatable Pool Factory taisnstūra Drop Stitch piepūšamais peldbaseins
 steps2_values:
   title: Mūsu vērtības
   subtitle: Trīs principi, kas veido katru mūsu uzbūvēto baseinu.
@@ -64,7 +64,7 @@ steps2_values:
       description: Augstspiediena Drop Stitch konstrukcija, kas pārbaudīta virs nominālā spiediena, pirms baseina nosūtīšanas.
       icon: tabler:settings
     - title: Atbalsts, kas pārsniedz sezonu
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Pagrieziena punkti
@@ -72,7 +72,7 @@ steps2_milestones:
   isReversed: true
   items:
     - title: Koncentrēts uz piepūšamiem baseiniem
-      description: 'Felizbay tika dibināta ar vienu mērķi: augstākās kvalitātes Drop Stitch piepūšamie peldbaseini.'
+      description: 'Inflatable Pool Factory tika dibināta ar vienu mērķi: augstākās kvalitātes Drop Stitch piepūšamie peldbaseini.'
       icon: tabler:pool
     - title: Trīs parakstu kolekcijas
       description: Taisnstūrveida, apaļas zilas un apaļas pelēkas baseina līnijas, katra ar izvēles vākiem un pielāgotiem izmēriem.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-pasts
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Tīmekļa vietne
-      description: felizbay.com — pārlūkojiet mūsu baseinus un pieprasiet piedāvājumu.
+      description: inflatablepoolfactory.com — pārlūkojiet mūsu baseinus un pieprasiet piedāvājumu.
     - title: OEM / vairumtirdzniecība
       description: Biznesa partneriem pieejami pielāgoti izmēri, krāsas un zīmols.
 brand_hub_tagline: Produkti
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Ražošanas izcilība
   title: Izsmalcinātas meistarības nodrošināšana
-  description: Felizbay ražošanas līnija ir paredzēta augstas kvalitātes, izturīgiem, augstspiediena piepūšamiem peldbaseiniem.
+  description: Inflatable Pool Factory ražošanas līnija ir paredzēta augstas kvalitātes, izturīgiem, augstspiediena piepūšamiem peldbaseiniem.
   cards:
     - title: Pieredzējušu tehniķu komanda
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Globālā sasniedzamība
   title_html: Viens zīmols, <span class="text-white/90">piegāde visā pasaulē</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Baseinu kolekcijas

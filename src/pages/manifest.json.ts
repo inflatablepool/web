@@ -6,10 +6,10 @@ export const prerender = true;
 export const GET: APIRoute = async () => {
   const siteUrl = String(SITE.site).replace(/\/+$/, '');
   const manifest = {
-    name: 'Felizbay',
-    short_name: 'Felizbay',
+    name: 'Inflatable Pool Factory',
+    short_name: 'Pool Factory',
     description:
-      'Premium drop stitch inflatable swimming pools by Felizbay. Rigid walls, fast setup, easy winter storage.',
+      'Premium drop stitch inflatable swimming pools by Inflatable Pool Factory. Rigid walls, fast setup, easy winter storage.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

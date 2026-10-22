@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Bize bir mesaj gönderin
   subtitle: Fiyat teklifleri, teknik sorular veya ortaklık sorularınız için bize bir satır bırakın. Bir iş günü içinde cevap veriyoruz.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Talep Gönder → Teklif Al
   success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı. Bir iş günü içinde cevap vereceğiz.
   error_message: Mesajınızı gönderirken bir şeyler ters gitti. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Spam önleme: lütfen aşağıdakileri çözün'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Özel boyutlar, renkler, kapaklar, markalama ve paketleme.
       icon: tabler:palette
     - title: E-posta
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Web sitesi
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Tepki süresi
       description: Bir iş günü içinde cevap veriyoruz.
       icon: tabler:clock
 map:
   title: İletişime Geçin
-  subtitle: Felizbay ile iletişime geçin
-  address: felizbay.com
+  subtitle: Inflatable Pool Factory ile iletişime geçin
+  address: inflatablepoolfactory.com
   zoom: 15
 

@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Pošlite nám správu
   subtitle: V prípade cenových ponúk, technických otázok alebo otázok o partnerstve nám napíšte. Odpovedáme do jedného pracovného dňa.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Odoslať dopyt → Získať cenovú ponuku
   success_message: Ďakujem! Vaša správa pristála v našej doručenej pošte. Odpovieme do jedného pracovného dňa.
   error_message: Pri odosielaní vašej správy sa vyskytla chyba. Skúste to znova alebo nám napíšte priamo.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: prosím vyriešte nasledovné'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Vlastné veľkosti, farby, kryty, značky a balenie.
       icon: tabler:palette
     - title: Email
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Webová stránka
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Čas odozvy
       description: Odpovedáme do jedného pracovného dňa.
       icon: tabler:clock
 map:
   title: Kontaktujte nás
-  subtitle: Kontaktujte Felizbay
-  address: felizbay.com
+  subtitle: Kontaktujte Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

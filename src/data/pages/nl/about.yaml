@@ -2,11 +2,11 @@ hero:
   tagline: Over ons
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay opblaasbaar zwembad
+    alt: Inflatable Pool Factory opblaasbaar zwembad
   title: |
     Zwemmen eenvoudig maken, <br />
-    op de <span class="text-accent dark:text-white">Felizbay</span>-manier
-  subtitle: Felizbay is een premium drop-stitch opblaasbaar zwembadmerk, ontworpen en beheerd door Aquafarer LLC (VS). Wij geloven dat elk gezin een echt zwembad in de achtertuin verdient – ​​zonder constructie, vergunningen of permanente installatie. Onze zwembaden worden binnen enkele minuten stevig opgeblazen, overleven hele zomers vol familieplezier en kunnen aan het einde van het seizoen klein worden opgeborgen.
+    op de <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-manier
+  subtitle: Inflatable Pool Factory is een premium drop-stitch opblaasbaar zwembadmerk, ontworpen door Inflatable Pool Team · Qingdao Vatrad Group. Wij geloven dat elk gezin een echt zwembad in de achtertuin verdient – ​​zonder constructie, vergunningen of permanente installatie. Onze zwembaden worden binnen enkele minuten stevig opgeblazen, overleven hele zomers vol familieplezier en kunnen aan het einde van het seizoen klein worden opgeborgen.
 stats:
   title: Door de cijfers
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nominale druk
       amount: 4-5 PSI
     - title: Contact
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Wat wij bouwen
   subtitle: 'Een gerichte productlijn die we door en door kennen: hogedruk-drop-stitch opblaasbare zwembaden.'
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad
+    alt: Inflatable Pool Factory rechthoekig drop stitch opblaasbaar zwembad
 steps2_values:
   title: Onze waarden
   subtitle: Drie principes die vorm geven aan elk zwembad dat we bouwen.
@@ -64,15 +64,15 @@ steps2_values:
       description: Hogedruk-drop-stitch-constructie, getest boven de nominale druk, voordat er zwembadschepen worden verzonden.
       icon: tabler:settings
     - title: Ondersteuning die het seizoen overleeft
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Mijlpalen
-  subtitle: Een korte versie van het Felizbay-verhaal.
+  subtitle: Een korte versie van het Inflatable Pool Factory-verhaal.
   isReversed: true
   items:
     - title: Gericht op opblaasbare zwembaden
-      description: 'Felizbay is opgericht met één enkele focus: premium drop-stitch opblaasbare zwembaden.'
+      description: 'Inflatable Pool Factory is opgericht met één enkele focus: premium drop-stitch opblaasbare zwembaden.'
       icon: tabler:pool
     - title: Drie kenmerkende collecties
       description: Rechthoekige, ronde blauwe en ronde grijze zwembadlijnen, elk met optionele afdekkingen en aangepaste formaten.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Website
-      description: felizbay.com — blader door onze zwembaden en vraag een offerte aan.
+      description: inflatablepoolfactory.com — blader door onze zwembaden en vraag een offerte aan.
     - title: OEM/groothandel
       description: Aangepaste formaten, kleuren en branding beschikbaar voor zakenpartners.
 brand_hub_tagline: Producten
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Uitmuntende productie
   title: Zorgen voor uitstekend vakmanschap
-  description: De productielijn van Felizbay is gewijd aan hoogwaardige, duurzame, hogedruk opblaasbare zwembaden.
+  description: De productielijn van Inflatable Pool Factory is gewijd aan hoogwaardige, duurzame, hogedruk opblaasbare zwembaden.
   cards:
     - title: Ervaren techniciteam
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Mondiaal bereik
   title_html: Eén merk, <span class="text-white/90">wereldwijde verzending</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Zwembadcollecties

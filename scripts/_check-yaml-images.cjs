@@ -6,8 +6,8 @@ const yamlFiles = glob.sync('src/data/pages/**/*.yaml');
 const allRefs = {};
 for (const f of yamlFiles) {
   const content = fs.readFileSync(path.join(ROOT, f), 'utf8');
-  // Match all assets.felizbay.com URLs including unquoted ones
-  const re = /https:\/\/assets\.Felizbay\.com\/(images\/[^"'\s\])>}]+)/g;
+  // Match all assets.inflatablepoolfactory.com URLs including unquoted ones
+  const re = /https:\/\/assets\.Inflatable Pool Factory\.com\/(images\/[^"'\s\])>}]+)/g;
   let m;
   while ((m = re.exec(content)) !== null) {
     const refPath = m[1];

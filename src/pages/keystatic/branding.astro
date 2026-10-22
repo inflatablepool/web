@@ -13,13 +13,13 @@ const file = siteFileForLocale('src/config.yaml', locale);
 getRepoInfo();
 
 let data: Record<string, any> = {
-  site_name: 'Felizbay',
+  site_name: 'Inflatable Pool Factory',
   logo_image: '',
-  logo_alt: 'Felizbay logo',
-  copyright: '© {year} Felizbay · All rights reserved.',
+  logo_alt: 'Inflatable Pool Factory logo',
+  copyright: '© {year} Inflatable Pool Factory · All rights reserved.',
   phone: '+86 13305324192',
   address: 'Economic Development Zone, Laixi, Qingdao, China, 266600',
-  email: 'info@felizbay.com',
+  email: 'info@inflatablepoolfactory.com',
   whatsapp_number: '',
   whatsapp_default_message: 'Hello, I would like to inquire about your products.',
   contact_email_to: '',
@@ -130,7 +130,7 @@ const year = new Date().getFullYear();
           type="text"
           name="site_name"
           value={data.site_name ?? ''}
-          placeholder="Felizbay"
+          placeholder="Inflatable Pool Factory"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">
@@ -158,7 +158,7 @@ const year = new Date().getFullYear();
           type="text"
           name="logo_alt"
           value={data.logo_alt ?? ''}
-          placeholder="Felizbay logo"
+          placeholder="Inflatable Pool Factory logo"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
       </div>
@@ -222,7 +222,7 @@ const year = new Date().getFullYear();
             type="email"
             name="email"
             value={data.email ?? ''}
-            placeholder="info@felizbay.com"
+            placeholder="info@inflatablepoolfactory.com"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
           />
         </div>
@@ -311,7 +311,7 @@ const year = new Date().getFullYear();
             type="text"
             name="contact_from_name"
             value={data.contact_from_name ?? ''}
-            placeholder="Felizbay Contact"
+            placeholder="Inflatable Pool Factory Contact"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
           />
         </div>
@@ -491,8 +491,8 @@ const year = new Date().getFullYear();
           if (copyrightEl instanceof HTMLTextAreaElement && previewEl) {
             const name =
               siteNameEl instanceof HTMLInputElement
-                ? (siteNameEl.value || 'Felizbay').trim() || 'Felizbay'
-                : 'Felizbay';
+                ? (siteNameEl.value || 'Inflatable Pool Factory').trim() || 'Inflatable Pool Factory'
+                : 'Inflatable Pool Factory';
             previewEl.textContent = (copyrightEl.value || '')
               .replace(/\\{year\\}/gi, String(year))
               .replace(/\\{site_name\\}/gi, name);

@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Pošaljite nam poruku
   subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, pošaljite nam liniju. Odgovaramo u roku od jednog radnog dana.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Pošaljite upit → Dobijte ponudu
   success_message: Hvala! Vaša poruka je stigla u naše prijemno sanduče. Odgovorićemo u roku od jednog radnog dana.
   error_message: Nešto nije u redu pri slanju vaše poruke. Pokušajte ponovo ili nam direktno pošaljite email.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: rešite sledeće'
   fields:
@@ -113,7 +113,7 @@ features2_other_ways:
       description: Prilagođene veličine, boje, korice, brendiranje i pakovanje.
       icon: tabler:palette
     - title: Email
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Vebsite
       description: felizbai.com
@@ -123,7 +123,7 @@ features2_other_ways:
       icon: tabler:clock
 map:
   title: Javite se
-  subtitle: Kontaktirajte Felizbay
+  subtitle: Kontaktirajte Inflatable Pool Factory
   address: felizbai.com
   zoom: 15
 

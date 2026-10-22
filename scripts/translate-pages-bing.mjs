@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PLAN = {
   'oem-odm': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
   'quality-control': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
-  'why-Felizbay': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
+  'why-inflatable-pool-factory': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
   'oem-odm-blueprint': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'de', 'fr', 'es', 'it'],
 };
 
@@ -60,7 +60,7 @@ const SKIP_EXACT = new Set(['primary', 'Best Seller', 'Professional', 'Premium',
 const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g, // inline HTML tags
   /https?:\/\/[^\s<>"']+/g, // URLs
-  /\bFelizbay\b/g,
+  /\bInflatable Pool Factory\b/g,
   /\bRIB\b/g,
   /\bRIBs\b/g,
   /\bCE\b/g,

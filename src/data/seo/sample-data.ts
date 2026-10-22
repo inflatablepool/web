@@ -14,7 +14,7 @@ export const sampleTopQueries: GscQuery[] = [
   { query: 'longboard vs shortboard', impressions: 180, clicks: 3, ctr: 1.67, position: 6.1 },
   { query: '3mm vs 5mm wetsuit', impressions: 160, clicks: 2, ctr: 1.25, position: 8.9 },
   { query: 'best surf gear brands', impressions: 140, clicks: 1, ctr: 0.71, position: 13.4 },
-  { query: 'Felizbay surfboard pro', impressions: 120, clicks: 4, ctr: 3.33, position: 3.2 },
+  { query: 'Inflatable Pool Factory surfboard pro', impressions: 120, clicks: 4, ctr: 3.33, position: 3.2 },
   { query: 'surfing safety tips', impressions: 110, clicks: 1, ctr: 0.91, position: 10.7 },
 ];
 
@@ -44,7 +44,7 @@ export const sampleLowCtrPages: GscPage[] = [
     position: 16.2,
     category: 'no-exposure',
   },
-  { path: '/en/v2/Felizbay-wetsuit-pro', impressions: 150, clicks: 2, ctr: 1.33, position: 9.8, category: 'mid-rank' },
+  { path: '/en/v2/inflatable-pool-factory-wetsuit-pro', impressions: 150, clicks: 2, ctr: 1.33, position: 9.8, category: 'mid-rank' },
   {
     path: '/en/v2/ocean-conditions-explained',
     impressions: 130,
@@ -122,8 +122,8 @@ export const samplePositionChanges: PositionChange[] = [
     week: 'W24',
   },
   {
-    slug: 'Felizbay-surfboard-pro',
-    title: 'Felizbay Surfboard Pro',
+    slug: 'inflatable-pool-factory-surfboard-pro',
+    title: 'Inflatable Pool Factory Surfboard Pro',
     previousPosition: 4.0,
     currentPosition: 3.2,
     delta: -0.8,

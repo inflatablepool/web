@@ -28,7 +28,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const DIST = process.argv[2] || './dist';
-const BASE = 'https://felizbay.com';
+const BASE = 'https://inflatablepoolfactory.com';
 
 const STOPWORDS = {
   en: ['the', 'and', 'of', 'to', 'a', 'in', 'for', 'is', 'on', 'that', 'with', 'as', 'by', 'at', 'from'],

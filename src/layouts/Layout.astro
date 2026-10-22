@@ -86,7 +86,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <Analytics id={seo.googleAnalyticsId} />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="preconnect" href="https://assets.felizbay.com" crossorigin />
+    <link rel="preconnect" href="https://assets.inflatablepoolfactory.com" crossorigin />
 
     {
       !isRootOnlyRoute &&
@@ -113,18 +113,27 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
             type="Organization"
             data={{
               name: facts.brand.name,
-              alternateName: 'Felizbay Inflatable Pools',
+              legalName: facts.brand.legalName,
+              alternateName: 'Inflatable Pool Factory',
               url: seo.siteUrl,
               logo: facts.logo.url,
               image: facts.logo.url,
               description: facts.brand.description,
               slogan: facts.brand.slogan,
               foundingDate: String(facts.brand.foundingYear),
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: facts.office.label,
+                addressLocality: facts.office.city,
+                addressRegion: facts.office.province,
+                addressCountry: facts.office.country,
+              },
               foundingLocation: {
                 '@type': 'Place',
-                name: 'New Mexico, USA',
+                name: 'Qingdao, China',
                 address: {
                   '@type': 'PostalAddress',
+                  addressLocality: facts.office.city,
                   addressRegion: facts.office.province,
                   addressCountry: facts.office.country,
                 },
@@ -165,15 +174,19 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
               name: facts.founder.name,
               jobTitle: facts.founder.jobTitle,
               description:
-                'Founder of Felizbay, supplier of premium drop stitch inflatable swimming pools for families and retailers worldwide.',
-              url: 'https://felizbay.com/about',
+                'Founder of Inflatable Pool Factory, supplier of premium drop stitch inflatable swimming pools for families and retailers worldwide.',
+              url: 'https://inflatablepoolfactory.com/about',
               knowsAbout: [
                 'Drop Stitch Pool Manufacturing',
                 'PVC Fabrication',
                 'Inflatable Pool Design',
                 'Pool Safety Standards',
               ],
-              affiliation: { '@type': 'Organization', name: facts.brand.name, url: 'https://felizbay.com' },
+              affiliation: {
+                '@type': 'Organization',
+                name: facts.brand.name,
+                url: 'https://inflatablepoolfactory.com',
+              },
               worksFor: { '@type': 'Organization', name: facts.brand.name },
             }}
           />
@@ -183,7 +196,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
               name: SITE_SETTINGS.siteName || orgName,
               url: seo.siteUrl,
               description:
-                'Premium drop stitch inflatable swimming pools by Felizbay — rigid walls, fast setup, easy winter storage.',
+                'Premium drop stitch inflatable swimming pools by Inflatable Pool Factory — rigid walls, fast setup, easy winter storage.',
               about: getAboutSchema(pathname),
               potentialAction: {
                 '@type': 'SearchAction',

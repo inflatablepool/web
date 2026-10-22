@@ -1,6 +1,6 @@
-Contact: mailto:security@felizbay.com
+Contact: mailto:security@inflatablepoolfactory.com
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: en, fr, de, es, pt, ar, it, ru, pl, nl, sv, no, el, fi, da
-Canonical: https://felizbay.com/.well-known/security.txt
-Policy: https://felizbay.com/security
-Hiring: https://felizbay.com/contact
+Canonical: https://inflatablepoolfactory.com/.well-known/security.txt
+Policy: https://inflatablepoolfactory.com/security
+Hiring: https://inflatablepoolfactory.com/contact

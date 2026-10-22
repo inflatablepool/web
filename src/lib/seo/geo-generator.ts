@@ -33,7 +33,7 @@ const QUESTIONS: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'How fast can I set up an inflatable pool?',
-      a: 'Most Felizbay pools inflate in 10–20 minutes with an electric pump and are ready to fill immediately after.',
+      a: 'Most Inflatable Pool Factory pools inflate in 10–20 minutes with an electric pump and are ready to fill immediately after.',
     },
   ],
   'inflatable-pool-vs-steel-frame': [

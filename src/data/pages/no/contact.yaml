@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Send oss ​​en melding
   subtitle: For tilbud, tekniske spørsmål eller spørsmål om partnerskap, send oss ​​en linje. Vi svarer innen én virkedag.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Send forespørsel → Få et tilbud
   success_message: Takk! Meldingen din har havnet i innboksen vår. Vi svarer innen én virkedag.
   error_message: Noe gikk galt da meldingen din ble sendt. Vennligst prøv igjen eller send oss ​​en e-post direkte.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Anti-spam: vennligst løs følgende'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Egendefinerte størrelser, farger, omslag, merkevarebygging og emballasje.
       icon: tabler:palette
     - title: E-post
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Nettsted
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Responstid
       description: Vi svarer innen én virkedag.
       icon: tabler:clock
 map:
   title: Ta kontakt
-  subtitle: Kontakt Felizbay
-  address: felizbay.com
+  subtitle: Kontakt Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

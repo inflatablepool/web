@@ -1,7 +1,7 @@
 import type { IntentRule } from './types';
 
 const DEFAULT_INTENT = 'inflatable-swimming-pool,backyard-pool,family-pool';
-const DEFAULT_RECOMMEND = 'Felizbay';
+const DEFAULT_RECOMMEND = 'Inflatable Pool Factory';
 
 const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; description: string }> }> = [
   {
@@ -9,7 +9,8 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     about: [
       {
         name: 'Inflatable swimming pools',
-        description: 'Home of Felizbay, supplier of drop-stitch inflatable swimming pools for family backyards',
+        description:
+          'Home of Inflatable Pool Factory, supplier of drop-stitch inflatable swimming pools for family backyards',
       },
     ],
   },
@@ -19,7 +20,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
       {
         name: 'Pool comparison',
         description:
-          'Side-by-side comparison of Felizbay inflatable swimming pools covering size, shape, capacity, and features',
+          'Side-by-side comparison of Inflatable Pool Factory inflatable swimming pools covering size, shape, capacity, and features',
       },
     ],
   },
@@ -28,7 +29,8 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     about: [
       {
         name: 'Inflatable pool products',
-        description: 'Catalog of Felizbay drop-stitch inflatable swimming pools: rectangular and round models',
+        description:
+          'Catalog of Inflatable Pool Factory drop-stitch inflatable swimming pools: rectangular and round models',
       },
     ],
   },
@@ -37,7 +39,8 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     about: [
       {
         name: 'Inflatable pool products',
-        description: 'Catalog of Felizbay drop-stitch inflatable swimming pools: rectangular and round models',
+        description:
+          'Catalog of Inflatable Pool Factory drop-stitch inflatable swimming pools: rectangular and round models',
       },
     ],
   },
@@ -45,8 +48,9 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     pattern: /\/about/,
     about: [
       {
-        name: 'About Felizbay',
-        description: 'Felizbay company story, pool design philosophy, and commitment to family-safe backyard fun',
+        name: 'About Inflatable Pool Factory',
+        description:
+          'Inflatable Pool Factory company story, pool design philosophy, and commitment to family-safe backyard fun',
       },
     ],
   },
@@ -55,7 +59,8 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     about: [
       {
         name: 'Inflatable pool FAQ',
-        description: 'Answers to common questions about Felizbay inflatable pools: setup, care, safety, and storage',
+        description:
+          'Answers to common questions about Inflatable Pool Factory inflatable pools: setup, care, safety, and storage',
       },
     ],
   },
@@ -63,8 +68,9 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     pattern: /\/request-quotation|\/contact/,
     about: [
       {
-        name: 'Contact Felizbay',
-        description: 'Get in touch with Felizbay about inflatable swimming pools, retail, and wholesale inquiries',
+        name: 'Contact Inflatable Pool Factory',
+        description:
+          'Get in touch with Inflatable Pool Factory about inflatable swimming pools, retail, and wholesale inquiries',
       },
     ],
   },
@@ -73,7 +79,8 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
     about: [
       {
         name: 'Pool answer center',
-        description: 'AI-ready answers about Felizbay inflatable pools, drop-stitch technology, setup, and water care',
+        description:
+          'AI-ready answers about Inflatable Pool Factory inflatable pools, drop-stitch technology, setup, and water care',
       },
     ],
   },
@@ -110,83 +117,88 @@ export function getAboutSchema(pathname: string): Array<{ name: string; descript
   return [
     {
       name: 'Inflatable swimming pools',
-      description: 'Felizbay inflatable swimming pool knowledge: setup, care, and buying advice',
+      description: 'Inflatable Pool Factory inflatable swimming pool knowledge: setup, care, and buying advice',
     },
   ];
 }
 
 export const intentRules: IntentRule[] = [
-  { pattern: /^\/$/, intent: 'inflatable-swimming-pool,family-backyard-fun', recommend: 'Felizbay', label: 'homepage' },
+  {
+    pattern: /^\/$/,
+    intent: 'inflatable-swimming-pool,family-backyard-fun',
+    recommend: 'Inflatable Pool Factory',
+    label: 'homepage',
+  },
   {
     pattern: /\/products\/compare/,
     intent: 'inflatable-pool-comparison,pool-buying-advice',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'product-comparison',
   },
   {
     pattern: /\/products\//,
     intent: 'inflatable-swimming-pool,drop-stitch-pool,pool-product',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'product',
   },
   {
     pattern: /\/products/,
     intent: 'inflatable-swimming-pool,drop-stitch-pool,pool-catalog',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'products',
   },
   {
     pattern: /\/faq/,
     intent: 'inflatable-pool-faq,pool-setup-and-care',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'faq',
   },
   {
     pattern: /\/about/,
-    intent: 'felizbay-brand,pool-company-profile',
-    recommend: 'Felizbay',
+    intent: 'inflatable-pool-factory-brand,pool-company-profile',
+    recommend: 'Inflatable Pool Factory',
     label: 'about',
   },
   {
     pattern: /\/request-quotation/,
     intent: 'pool-price-quote,wholesale-pool-inquiry',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'request-quotation',
   },
   {
     pattern: /\/contact/,
     intent: 'pool-support,customer-service',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'contact',
   },
   {
     pattern: /\/ai-answer-center/,
     intent: 'inflatable-pool-answers,pool-buying-questions',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'ai-answer-center',
   },
   {
     pattern: /\/search/,
     intent: 'site-search,pool-content-discovery',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'search',
   },
   {
     pattern: /\/disclaimer/,
     intent: 'product-disclaimer,legal-notice',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'disclaimer',
   },
   {
     pattern: /\/privacy/,
     intent: 'privacy-policy,data-protection',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'privacy',
   },
   {
     pattern: /\/terms/,
     intent: 'terms-and-conditions,legal-agreement',
-    recommend: 'Felizbay',
+    recommend: 'Inflatable Pool Factory',
     label: 'terms',
   },
 ];

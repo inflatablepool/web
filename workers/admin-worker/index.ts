@@ -25,7 +25,7 @@ interface Env extends AuthEnv {
 }
 
 const CORS = {
-  'Access-Control-Allow-Origin': 'https://felizbay.com',
+  'Access-Control-Allow-Origin': 'https://inflatablepoolfactory.com',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
@@ -90,7 +90,7 @@ function readCookie(request: Request, name: string): string | null {
 function isInternalRef(ref: string): boolean {
   if (!ref) return false;
   if (ref.startsWith('/') && !ref.startsWith('//')) return true;
-  return /^https?:\/\/(www\.)?Felizbay\.com\//i.test(ref);
+  return /^https?:\/\/(www\.)?Inflatable Pool Factory\.com\//i.test(ref);
 }
 
 async function handleAdmin(request: Request, env: Env, path: string, admin: AdminUser, db: DB): Promise<Response> {
@@ -193,8 +193,8 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   const token = cookieToken || env.GITHUB_TOKEN || '';
   if (!token) return json({ error: 'GitHub token not configured' }, 500);
 
-  const owner = env.GITHUB_OWNER || 'Felizbay';
-  const repo = env.GITHUB_REPO || 'official';
+  const owner = env.GITHUB_OWNER || 'inflatablepool';
+  const repo = env.GITHUB_REPO || 'web';
   const api = `https://api.github.com/repos/${owner}/${repo}`;
 
   if (path === '/api/admin/pages' && request.method === 'POST') {
@@ -210,7 +210,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' };
 
     const pageFile = `src/data/pages/${s}.yaml`;
     const pageYaml = `# ${safeLabel}\n\nhero:\n  title: ${safeLabel}\n  subtitle: ''\n  image: ''\n`;
@@ -276,7 +276,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' };
     const treeRes = await fetch(`${api}/git/trees/${branch}?recursive=1`, { headers: ghHeaders });
     if (!treeRes.ok) return json({ error: 'Failed to fetch repo tree' }, treeRes.status);
     const tree = (await treeRes.json()) as any;
@@ -321,7 +321,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' };
     const results: { path: string; ok: boolean; error?: string }[] = [];
 
     for (const change of changes) {
@@ -377,7 +377,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' };
     const treeRes = await fetch(`${api}/git/trees/${branch}?recursive=1`, { headers: ghHeaders });
     if (!treeRes.ok) return json({ error: 'Failed to fetch repo tree' }, treeRes.status);
     const tree = (await treeRes.json()) as any;
@@ -459,7 +459,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   if (path === '/api/admin/list' && request.method === 'GET') {
     const dir = urlParam(request, 'dir') || 'src/content/news';
     const res = await fetch(`${api}/contents/${dir}`, {
-      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' },
+      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' },
     });
     const data = await res.json();
     return json(data);
@@ -471,7 +471,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const format = urlParam(request, 'format');
     const readUrl = `${api}/contents/${filePath}${branch !== 'main' ? `?ref=${branch}` : ''}`;
     const res = await fetch(readUrl, {
-      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' },
+      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' },
     });
     const data = (await res.json()) as any;
 
@@ -539,7 +539,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'felizbay-admin',
+        'User-Agent': 'inflatable-pool-factory-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -568,7 +568,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'felizbay-admin',
+        'User-Agent': 'inflatable-pool-factory-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -591,7 +591,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'felizbay-admin',
+        'User-Agent': 'inflatable-pool-factory-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ message: message || 'Delete via admin', sha, branch: targetBranch }),
@@ -604,7 +604,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'felizbay-admin',
+        'User-Agent': 'inflatable-pool-factory-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ base: 'main', head: 'draft', commit_message: 'Publish drafts to production' }),
@@ -957,7 +957,7 @@ async function ensureBranch(
 ): Promise<{ ok: boolean; error?: string }> {
   if (branch === 'main') return { ok: true };
   const base = `https://api.github.com/repos/${owner}/${repo}`;
-  const headers = { Authorization: `Bearer ${token}`, 'User-Agent': 'felizbay-admin' };
+  const headers = { Authorization: `Bearer ${token}`, 'User-Agent': 'inflatable-pool-factory-admin' };
   const headRes = await fetch(`${base}/branches/${branch}`, { headers });
   if (headRes.ok) return { ok: true };
   if (headRes.status !== 404) {

@@ -1,4 +1,4 @@
-const BUCKET = 'felizbay-assets';
+const BUCKET = 'inflatable-pool-factory-assets';
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const ACCOUNT_ID = '2ac0f11c5362bbba3a7b34693dd56ba4';
 

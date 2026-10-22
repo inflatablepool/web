@@ -54,7 +54,7 @@ const NOISE_KEY =
 // Values that must stay byte-identical to EN in every language (brand names,
 // certification-class codes, product model names living under prose keys).
 const MACHINE_VALUES = new Set([
-  'Felizbay Custom Lab',
+  'Inflatable Pool Factory Custom Lab',
   'USCG Type III / Type V',
   'CE / ISO / USCG Type III/V',
   'RIB 600 Patrol (Twin Engine)',

@@ -2,11 +2,11 @@ hero:
   tagline: Tietoja meistä
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbayn puhallettava uima-allas
+    alt: Inflatable Pool Factory puhallettava uima-allas
   title: |
     Uinti on helppoa, <br />
-     <span class="text-accent dark:text-white">Felizbay</span>-tyyliin
-  subtitle: Felizbay on Aquafarer LLC:n (USA) suunnittelema ja ylläpitämä korkealuokkainen Drop Stitch puhallettava uima-allasbrändi. Uskomme, että jokainen perhe ansaitsee todellisen uima-altaan takapihalle ilman rakentamista, lupia tai pysyvää asennusta. Altaamme täyttyvät jäykäksi muutamassa minuutissa, selviytyvät koko perheen kesistä ja pakataan pieniksi kauden lopussa.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-tyyliin
+  subtitle: Inflatable Pool Factory on Inflatable Pool Team · Qingdao Vatrad Groupin suunnittelema korkealuokkainen Drop Stitch puhallettava uima-allasbrändi. Uskomme, että jokainen perhe ansaitsee todellisen uima-altaan takapihalle ilman rakentamista, lupia tai pysyvää asennusta. Altaamme täyttyvät jäykäksi muutamassa minuutissa, selviytyvät koko perheen kesistä ja pakataan pieniksi kauden lopussa.
 stats:
   title: Numeroiden mukaan
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nimellispaine
       amount: 4-5 PSI
     - title: Ota yhteyttä
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Mitä rakennamme
   subtitle: Keskittynyt tuotesarja, jonka tunnemme läpikotaisin – korkeapaineiset Drop Stitch puhallettavat uima-altaat.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbayn suorakulmainen Drop Stitch puhallettava uima-allas
+    alt: Inflatable Pool Factory suorakulmainen Drop Stitch puhallettava uima-allas
 steps2_values:
   title: Arvomme
   subtitle: Kolme periaatetta, jotka muovaavat jokaista rakentamaamme uima-allasta.
@@ -64,15 +64,15 @@ steps2_values:
       description: Korkeapaineinen Drop Stitch-rakenne, joka on testattu nimellispaineen yläpuolella ennen uima-altaan lähettämistä.
       icon: tabler:settings
     - title: Tuki, joka kestää kauden
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Virstanpylväät
-  subtitle: Lyhyt versio Felizbayn tarinasta.
+  subtitle: Lyhyt versio Inflatable Pool Factory tarinasta.
   isReversed: true
   items:
     - title: Keskittynyt puhallettaviin uima-altaisiin
-      description: 'Felizbay perustettiin yhdellä painopisteellä: laadukkaat Drop Stitch puhallettavat uima-altaat.'
+      description: 'Inflatable Pool Factory perustettiin yhdellä painopisteellä: laadukkaat Drop Stitch puhallettavat uima-altaat.'
       icon: tabler:pool
     - title: Kolme allekirjoituskokoelmaa
       description: Suorakaiteen muotoiset, pyöreät siniset ja pyöreät harmaat allaslinjat, joista jokaisessa on valinnaiset kannet ja mukautetut koot.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Sähköposti
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Verkkosivusto
-      description: felizbay.com — selaa altaamme ja pyydä tarjous.
+      description: inflatablepoolfactory.com — selaa altaamme ja pyydä tarjous.
     - title: OEM / tukkumyynti
       description: Mukautetut koot, värit ja brändäys saatavilla liikekumppaneille.
 brand_hub_tagline: Tuotteet
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Tuotannon erinomaisuutta
   title: Laadukkaan käsityötaidon varmistaminen
-  description: Felizbayn tuotantolinja on omistettu korkealaatuisille, kestäville, korkeapaineisille puhallettaville uima-altaille.
+  description: Inflatable Pool Factory tuotantolinja on omistettu korkealaatuisille, kestäville, korkeapaineisille puhallettaville uima-altaille.
   cards:
     - title: Kokenut teknikkotiimi
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Maailmanlaajuinen kattavuus
   title_html: Yksi merkki, <span class="text-white/90">maailmanlaajuinen toimitus</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Allas kokoelmat

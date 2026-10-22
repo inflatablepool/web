@@ -2,11 +2,11 @@ hero:
   tagline: Sobre nosotros
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Piscina hinchable Felizbay
+    alt: Piscina hinchable Inflatable Pool Factory
   title: |
     Simplificando la natación, <br />
-    a la <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay es una marca premium de piscinas inflables drop stitch diseñada y operada por Aquafarer LLC (EE. UU.). Creemos que cada familia merece una verdadera piscina en el patio trasero, sin construcción, permisos ni instalación permanente. Nuestras piscinas se inflan rígidamente en minutos, sobreviven veranos llenos de diversión familiar y se guardan pequeñas al final de la temporada.
+    a la <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory es una marca premium de piscinas inflables drop stitch diseñada por Inflatable Pool Team · Qingdao Vatrad Group. Creemos que cada familia merece una verdadera piscina en el patio trasero, sin construcción, permisos ni instalación permanente. Nuestras piscinas se inflan rígidamente en minutos, sobreviven veranos llenos de diversión familiar y se guardan pequeñas al final de la temporada.
 stats:
   title: Por los números
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Presión nominal
       amount: 4-5 PSI
     - title: Contacto
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: lo que construimos
   subtitle: 'Una línea de productos enfocada que conocemos al dedillo: piscinas inflables Drop Stitch de alta presión.'
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Piscina hinchable Felizbay rectangular drop stitch
+    alt: Piscina hinchable Inflatable Pool Factory rectangular drop stitch
 steps2_values:
   title: Nuestros valores
   subtitle: Tres principios que dan forma a cada piscina que construimos.
@@ -64,15 +64,15 @@ steps2_values:
       description: Construcción Drop Stitch de alta presión, probada por encima de su presión nominal, antes de enviar cualquier piscina.
       icon: tabler:settings
     - title: Soporte que dura más que la temporada
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Hitos
-  subtitle: Una versión corta de la historia de Felizbay.
+  subtitle: Una versión corta de la historia de Inflatable Pool Factory.
   isReversed: true
   items:
     - title: Enfocados a piscinas inflables
-      description: 'Felizbay se fundó con un único enfoque: piscinas inflables Drop Stitch de primera calidad.'
+      description: 'Inflatable Pool Factory se fundó con un único enfoque: piscinas inflables Drop Stitch de primera calidad.'
       icon: tabler:pool
     - title: Tres colecciones exclusivas
       description: Líneas de piscinas rectangulares, redondas azules y redondas grises, cada una con cubiertas opcionales y tamaños personalizados.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Correo electrónico
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Sitio web
-      description: felizbay.com — navega por nuestras piscinas y solicita un presupuesto.
+      description: inflatablepoolfactory.com — navega por nuestras piscinas y solicita un presupuesto.
     - title: OEM/al por mayor
       description: Tamaños, colores y marcas personalizados disponibles para socios comerciales.
 brand_hub_tagline: Productos
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Excelencia en producción
   title: Garantizar una artesanía exquisita
-  description: La línea de producción Felizbay está dedicada a piscinas inflables de alta presión, duraderas y de alta calidad.
+  description: La línea de producción Inflatable Pool Factory está dedicada a piscinas inflables de alta presión, duraderas y de alta calidad.
   cards:
     - title: Equipo de técnicos experimentados
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Alcance global
   title_html: una marca, <span class="text-white/90">envío mundial</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Colecciones de piscinas

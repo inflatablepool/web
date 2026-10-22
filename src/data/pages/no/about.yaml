@@ -2,11 +2,11 @@ hero:
   tagline: Om oss
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay oppblåsbart svømmebasseng
+    alt: Inflatable Pool Factory oppblåsbart svømmebasseng
   title: |
     Gjør svømming enkelt, <br />
-    på <span class="text-accent dark:text-white">Felizbay</span>-måten
-  subtitle: Felizbay er et premium drop stitch oppblåsbart bassengmerke designet og drevet av Aquafarer LLC (USA). Vi mener at hver familie fortjener et ekte basseng i bakgården - uten konstruksjon, tillatelser eller en permanent installasjon. Bassengene våre blåses opp stive på få minutter, overlever hele somre med familiemoro, og pakker sammen små ved sesongslutt.
+    på <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-måten
+  subtitle: Inflatable Pool Factory er et premium drop stitch oppblåsbart bassengmerke designet av Inflatable Pool Team · Qingdao Vatrad Group. Vi mener at hver familie fortjener et ekte basseng i bakgården - uten konstruksjon, tillatelser eller en permanent installasjon. Bassengene våre blåses opp stive på få minutter, overlever hele somre med familiemoro, og pakker sammen små ved sesongslutt.
 stats:
   title: Etter tallene
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nominell trykk
       amount: 4-5 PSI
     - title: Kontakt
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Det vi bygger
   subtitle: En fokusert produktlinje vi kjenner ut og inn - høytrykks Drop Stitch oppblåsbare svømmebassenger.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay rektangulær drop stitch oppblåsbart svømmebasseng
+    alt: Inflatable Pool Factory rektangulær drop stitch oppblåsbart svømmebasseng
 steps2_values:
   title: Våre verdier
   subtitle: Tre prinsipper som former hvert basseng vi bygger.
@@ -64,15 +64,15 @@ steps2_values:
       description: Høytrykks Drop Stitch-konstruksjon, testet over det nominelle trykket, før bassenget sendes.
       icon: tabler:settings
     - title: Støtte som varer ut sesongen
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milepæler
-  subtitle: En kortversjon av Felizbay-historien.
+  subtitle: En kortversjon av Inflatable Pool Factory-historien.
   isReversed: true
   items:
     - title: Fokusert på oppblåsbare bassenger
-      description: 'Felizbay ble grunnlagt med ett enkelt fokus: premium drop stitch oppblåsbare svømmebassenger.'
+      description: 'Inflatable Pool Factory ble grunnlagt med ett enkelt fokus: premium drop stitch oppblåsbare svømmebassenger.'
       icon: tabler:pool
     - title: Tre signatursamlinger
       description: Rektangulære, runde blå og runde grå bassenglinjer, hver med valgfrie deksler og tilpassede størrelser.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: E-post
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Nettsted
-      description: felizbay.com — bla gjennom våre bassenger og be om et tilbud.
+      description: inflatablepoolfactory.com — bla gjennom våre bassenger og be om et tilbud.
     - title: OEM / Engros
       description: Egendefinerte størrelser, farger og merkevarebygging tilgjengelig for forretningspartnere.
 brand_hub_tagline: Produkter
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Produksjon fortreffelighet
   title: Sikre utsøkt håndverk
-  description: Felizbays produksjonslinje er dedikert til høykvalitets, holdbare, høytrykks oppblåsbare svømmebassenger.
+  description: Inflatable Pool Factory produksjonslinje er dedikert til høykvalitets, holdbare, høytrykks oppblåsbare svømmebassenger.
   cards:
     - title: Erfarent teknikerteam
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Global rekkevidde
   title_html: Ett merke, <span class="text-white/90">verdensomspennende frakt</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Bassengsamlinger

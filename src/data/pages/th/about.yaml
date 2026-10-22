@@ -2,11 +2,11 @@ hero:
   tagline: เกี่ยวกับเรา
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: สระว่ายน้ำเป่าลม Felizbay
+    alt: สระว่ายน้ำเป่าลม Inflatable Pool Factory
   title: |
     ว่ายน้ำให้เป็นเรื่องง่าย <br />
-    สไตล์ <span class="text-accent dark:text-white">Felizbay</span> 
-  subtitle: Felizbay คือแบรนด์สระน้ำเป่าลม Drop Stitch ระดับพรีเมียมที่ออกแบบและดำเนินการโดย Aquafarer LLC (สหรัฐอเมริกา) เราเชื่อว่าทุกครอบครัวสมควรมีสระว่ายน้ำจริงๆ ในสวนหลังบ้าน โดยไม่ต้องก่อสร้าง ใบอนุญาต หรือติดตั้งถาวร สระน้ำของเราพองตัวได้ภายในไม่กี่นาที สนุกสนานกับครอบครัวในช่วงฤดูร้อน และแพ็คให้เล็กลงเมื่อสิ้นสุดฤดูกาล
+    สไตล์ <span class="text-accent dark:text-white">Inflatable Pool Factory</span> 
+  subtitle: Inflatable Pool Factory คือแบรนด์สระน้ำเป่าลม Drop Stitch ระดับพรีเมียมที่ออกแบบโดย Inflatable Pool Team · Qingdao Vatrad Group เราเชื่อว่าทุกครอบครัวสมควรมีสระว่ายน้ำจริงๆ ในสวนหลังบ้าน โดยไม่ต้องก่อสร้าง ใบอนุญาต หรือติดตั้งถาวร สระน้ำของเราพองตัวได้ภายในไม่กี่นาที สนุกสนานกับครอบครัวในช่วงฤดูร้อน และแพ็คให้เล็กลงเมื่อสิ้นสุดฤดูกาล
 stats:
   title: โดยตัวเลข
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: จัดอันดับความดัน
       amount: 4-5 PSI
     - title: ติดต่อ
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: สิ่งที่เราสร้าง
   subtitle: กลุ่มผลิตภัณฑ์ที่มุ่งเน้นที่เรารู้จักจากภายในสู่ภายนอก — สระว่ายน้ำเป่าลม Drop Stitch แรงดันสูง
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Drop Stitch
+    alt: Inflatable Pool Factory สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Drop Stitch
 steps2_values:
   title: ค่านิยมของเรา
   subtitle: หลักการสามประการที่หล่อหลอมทุกสระที่เราสร้าง
@@ -64,15 +64,15 @@ steps2_values:
       description: โครงสร้างแบบ Drop Stitch แรงดันสูง ผ่านการทดสอบเหนือแรงดันที่กำหนด ก่อนลงเรือในสระน้ำ
       icon: tabler:settings
     - title: การสนับสนุนที่ยาวนานกว่าฤดูกาล
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: เหตุการณ์สำคัญ
-  subtitle: เรื่องราวสั้น ๆ ของ Felizbay
+  subtitle: เรื่องราวสั้น ๆ ของ Inflatable Pool Factory
   isReversed: true
   items:
     - title: มุ่งเน้นไปที่สระน้ำเป่าลม
-      description: 'Felizbay ก่อตั้งขึ้นโดยมุ่งเน้นที่เดียว: สระว่ายน้ำเป่าลม Drop Stitch ระดับพรีเมี่ยม'
+      description: 'Inflatable Pool Factory ก่อตั้งขึ้นโดยมุ่งเน้นที่เดียว: สระว่ายน้ำเป่าลม Drop Stitch ระดับพรีเมี่ยม'
       icon: tabler:pool
     - title: คอลเลกชันลายเซ็นสามรายการ
       description: เส้นสระว่ายน้ำทรงสี่เหลี่ยม กลมสีน้ำเงิน และกลมสีเทา แต่ละเส้นมีฝาปิดเสริมและขนาดที่กำหนดเอง
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: อีเมล
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: เว็บไซต์
-      description: felizbay.com — เรียกดูพูลของเราและขอใบเสนอราคา
+      description: inflatablepoolfactory.com — เรียกดูพูลของเราและขอใบเสนอราคา
     - title: OEM/ขายส่ง
       description: ขนาด สี และตราสินค้าที่กำหนดเองสำหรับพันธมิตรทางธุรกิจ
 brand_hub_tagline: สินค้า
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: ความเป็นเลิศด้านการผลิต
   title: รับรองฝีมือประณีต
-  description: สายการผลิตของ Felizbay ทุ่มเทให้กับสระว่ายน้ำแบบเป่าลมคุณภาพสูง ทนทาน และมีแรงดันสูงโดยเฉพาะ
+  description: สายการผลิตของ Inflatable Pool Factory ทุ่มเทให้กับสระว่ายน้ำแบบเป่าลมคุณภาพสูง ทนทาน และมีแรงดันสูงโดยเฉพาะ
   cards:
     - title: ทีมช่างผู้มีประสบการณ์
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: การเข้าถึงทั่วโลก
   title_html: แบรนด์หนึ่ง, <span class="text-white/90">จัดส่งทั่วโลก</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: คอลเลกชันสระว่ายน้ำ

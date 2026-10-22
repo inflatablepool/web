@@ -12,7 +12,7 @@ export const GET: APIRoute = async ({ params }) => {
   const guide = procurementGuides.find((g) => g.slug === params.slug);
   if (!guide) return new Response('Not found', { status: 404 });
 
-  const site = SITE?.site || 'https://felizbay.com';
+  const site = SITE?.site || 'https://inflatablepoolfactory.com';
   const lines: string[] = [];
 
   lines.push(`# ${guide.title}`);

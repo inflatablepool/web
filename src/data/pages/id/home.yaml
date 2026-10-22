@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Kolam renang premium dengan dinding drop-stitch kaku yang dapat mengembang dalam hitungan menit dan dikemas untuk musim dingin — dirancang untuk relaksasi di halaman belakang dan kesenangan keluarga.<br />
     Jelajahi ukuran kolam, bandingkan fiturnya, dan temukan yang paling cocok untuk ruangan Anda.<br />
-    Dirancang dan dioperasikan oleh Aquafarer LLC, AS.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Kolam Toko
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Kolam renang tiup Drop Stitch persegi panjang Felizbay di halaman belakang
+    alt: Kolam renang tiup Drop Stitch persegi panjang Inflatable Pool Factory di halaman belakang
 stats:
-  title: Sekilas tentang Felizbay
+  title: Sekilas tentang Inflatable Pool Factory
   columns: 4
   stats:
     - title: Koleksi Kolam Renang
@@ -36,11 +36,11 @@ stats:
     - title: Ukuran Khusus
       amount: Available
     - title: Kontak
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Teknologi Drop Stitch
-  title: Mengapa Kolam Felizbay<br />Berbeda
+  title: Mengapa Kolam Inflatable Pool Factory<br />Berbeda
   subtitle: Konstruksi Drop Stitch bertekanan tinggi membuat kolam kami kaku, tahan lama, dan mudah disimpan.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Untuk Bisnis
   title: Kolam untuk Bisnis,<br />Juga
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay untuk mitra bisnis</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory untuk mitra bisnis</h3>
   items:
     - title: Penyewaan Liburan & Perhotelan
       description: Fasilitas tamu musiman untuk persewaan liburan, tempat glamping, dan properti butik — cepat digunakan, mudah dirawat, dan mudah disimpan.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Perawatan & Keamanan
   title: Mudah untuk Dimiliki,<br />Mudah untuk Mencintai
-  subtitle: Dari pengiriman hingga renang pertama hingga penyimpanan akhir musim, memiliki kolam Felizbay tetaplah sederhana.
+  subtitle: Dari pengiriman hingga renang pertama hingga penyimpanan akhir musim, memiliki kolam Inflatable Pool Factory tetaplah sederhana.
   items:
     - title: Pengaturan dalam hitungan Menit
       description: 'Buka kotak dan kembangkan dengan pompa yang disertakan dalam 5-15 menit, lalu isi dengan selang taman — waktu pengisian bervariasi tergantung ukuran kolam dan persediaan air.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Kolam renang tiup Drop Stitch bulat Felizbay
+    alt: Kolam renang tiup Drop Stitch bulat Inflatable Pool Factory
 blog_latest:
   title: Panduan & Wawasan Kolam Renang
   information: |
     Panduan pengaturan, tip perawatan, dan saran pembelian untuk kolam renang tiup
-    dari tim Felizbay.
+    dari tim Inflatable Pool Factory.
 faqs:
   title: FAQ Kolam Tiup
-  subtitle: Pertanyaan umum tentang kolam renang tiup Felizbay.
+  subtitle: Pertanyaan umum tentang kolam renang tiup Inflatable Pool Factory.
   columns: 2
   items:
     - title: Berapa lama waktu yang dibutuhkan untuk pengaturan?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Apa saja yang termasuk dalam kolam renang?
-      description: Setiap kolam Felizbay dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model bulat memiliki penutup opsional.
+      description: Setiap kolam Inflatable Pool Factory dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model bulat memiliki penutup opsional.
       icon: tabler:box
       category: all
     - title: Ukuran apa yang tersedia?

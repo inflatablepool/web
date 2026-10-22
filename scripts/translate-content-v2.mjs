@@ -48,7 +48,7 @@ const DRY_RUN = process.argv.includes('--dry-run');
 const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g, // inline HTML tags
   /https?:\/\/[^\s<>"']+/g, // URLs
-  /\bFelizbay\b/g,
+  /\bInflatable Pool Factory\b/g,
   /\bRIB\b/g,
   /\bRIBs\b/g,
   /\bCE\b/g,

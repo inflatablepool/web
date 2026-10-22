@@ -5,11 +5,11 @@ contact_form:
   id: form
   title: Отправьте нам сообщение
   subtitle: Для получения предложений, технических вопросов или запросов о партнерстве напишите нам. Мы отвечаем в течение одного рабочего дня.
-  email_to: info@felizbay.com
+  email_to: info@inflatablepoolfactory.com
   submit_button: Отправить запрос → Получить предложение
   success_message: Спасибо! Ваше сообщение попало в наш почтовый ящик. Мы ответим в течение одного рабочего дня.
   error_message: Что-то пошло не так при отправке вашего сообщения. Пожалуйста, попробуйте еще раз или напишите нам напрямую.
-  default_country_code: '+1'
+  default_country_code: '+86'
   captcha:
     label: 'Антиспам: пожалуйста, решите следующее'
   fields:
@@ -113,17 +113,17 @@ features2_other_ways:
       description: Нестандартные размеры, цвета, обложки, брендинг и упаковка.
       icon: tabler:palette
     - title: Электронная почта
-      description: info@felizbay.com
+      description: info@inflatablepoolfactory.com
       icon: tabler:mail
     - title: Веб-сайт
-      description: felizbay.com
+      description: inflatablepoolfactory.com
       icon: tabler:world
     - title: Время ответа
       description: Мы отвечаем в течение одного рабочего дня.
       icon: tabler:clock
 map:
   title: Свяжитесь с нами
-  subtitle: Связаться с Felizbay
-  address: felizbay.com
+  subtitle: Связаться с Inflatable Pool Factory
+  address: inflatablepoolfactory.com
   zoom: 15
 

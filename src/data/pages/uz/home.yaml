@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Bir necha daqiqada puflanadigan va qish uchun yig‘iladigan qattiq drop-stitch devorlari bo‘lgan premium basseynlar hovlida dam olish va oilaviy dam olish uchun mo‘ljallangan.<br />
     Hovuz oʻlchamlarini oʻrganing, xususiyatlarni taqqoslang va oʻz joyingizga mos keladiganini toping.<br />
-    Aquafarer MChJ tomonidan ishlab chiqilgan va boshqariladi, AQSh.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Do'konlar basseynlari
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Orqa hovlida Felizbay to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
+    alt: Orqa hovlida Inflatable Pool Factory to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
 stats:
-  title: Bir qarashda Felizbay
+  title: Bir qarashda Inflatable Pool Factory
   columns: 4
   stats:
     - title: Hovuz kolleksiyalari
@@ -36,11 +36,11 @@ stats:
     - title: Maxsus o'lchamlar
       amount: Available
     - title: Aloqa
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch texnologiyasi
-  title: Nima uchun Felizbay hovuzi<br />Turli
+  title: Nima uchun Inflatable Pool Factory hovuzi<br />Turli
   subtitle: Yuqori bosimli Drop Stitch konstruktsiyasi bizning hovuzlarimizni qattiq, bardoshli va saqlashni osonlashtiradi.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Korxonalar uchun
   title: Biznes uchun basseynlar,<br />ham
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznes hamkorlari uchun</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory biznes hamkorlari uchun</h3>
   items:
     - title: Dam olish uchun ijara va mehmondo'stlik
       description: Dam olish maskanlari, glamping saytlari va butik ob'ektlari uchun mavsumiy mehmonlar uchun qulayliklar - tez o'rnatish, parvarish qilish oson, saqlash oson.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Xizmat va xavfsizlik
   title: Oson egalik qilish,<br />Sevish oson
-  subtitle: Yetkazib berishdan tortib, birinchi suzishgacha, mavsum oxirida saqlashgacha, Felizbay hovuziga ega bo'lish oddiy bo'lib qoladi.
+  subtitle: Yetkazib berishdan tortib, birinchi suzishgacha, mavsum oxirida saqlashgacha, Inflatable Pool Factory hovuziga ega bo'lish oddiy bo'lib qoladi.
   items:
     - title: Bir necha daqiqada sozlash
       description: '5-15 daqiqada qutidan chiqarib oling va kiritilgan nasos bilan puflang, keyin bog ''shlangi bilan to''ldiring - to''ldirish vaqti hovuz hajmi va suv ta''minotiga qarab farq qiladi.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay dumaloq Drop Stitch shishiriladigan suzish havzasi
+    alt: Inflatable Pool Factory dumaloq Drop Stitch shishiriladigan suzish havzasi
 blog_latest:
   title: Hovuz bo'yicha ko'rsatmalar va tushunchalar
   information: |
     Puflanadigan suzish havzalarini sozlash bo'yicha ko'rsatmalar, parvarish bo'yicha maslahatlar va sotib olish bo'yicha maslahatlar
-    Felizbay jamoasidan.
+    Inflatable Pool Factory jamoasidan.
 faqs:
   title: Puflanadigan basseyn haqida tez-tez so'raladigan savollar
-  subtitle: Felizbay shishiriladigan suzish havzalari haqida umumiy savollar.
+  subtitle: Inflatable Pool Factory shishiriladigan suzish havzalari haqida umumiy savollar.
   columns: 2
   items:
     - title: O'rnatish qancha vaqt oladi?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuzga nima kiradi?
-      description: Har bir Felizbay hovuzida elektr havo nasosi, ta'mirlash to'plami va saqlash sumkasi mavjud. Dumaloq modellarda ixtiyoriy o'rnatilgan qopqoq mavjud.
+      description: Har bir Inflatable Pool Factory hovuzida elektr havo nasosi, ta'mirlash to'plami va saqlash sumkasi mavjud. Dumaloq modellarda ixtiyoriy o'rnatilgan qopqoq mavjud.
       icon: tabler:box
       category: all
     - title: Qanday o'lchamlar mavjud?

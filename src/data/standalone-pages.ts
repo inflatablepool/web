@@ -12,7 +12,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'drop-stitch-technology',
     title: 'Drop Stitch Pool Technology',
     description:
-      "How Felizbay uses high-pressure drop stitch construction to build inflatable swimming pools with rigid, self-supporting walls that hold their shape all season and fold away for winter storage.",
+      "How Inflatable Pool Factory uses high-pressure drop stitch construction to build inflatable swimming pools with rigid, self-supporting walls that hold their shape all season and fold away for winter storage.",
     pageType: 'capability',
     sections: [
       {
@@ -25,7 +25,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Materials & Durability',
-        body: 'Felizbay pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Every pool is inflation-tested at the factory before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool can deliver seasons of reliable use.',
+        body: 'Inflatable Pool Factory pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Every pool is inflation-tested at the factory before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool can deliver seasons of reliable use.',
       },
       {
         heading: 'Setup and Storage',
@@ -43,7 +43,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'oem-odm-pools',
     title: 'OEM / ODM Pool Manufacturing',
     description:
-      'Custom inflatable pool manufacturing from Felizbay: custom sizes, colors, logos, covers, and packaging, produced in our own factory and shipped factory-direct worldwide.',
+      'Custom inflatable pool manufacturing from Inflatable Pool Factory: custom sizes, colors, logos, covers, and packaging, produced in our own factory and shipped factory-direct worldwide.',
     pageType: 'service',
     sections: [
       {

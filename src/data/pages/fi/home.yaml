@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Ensiluokkaiset uima-altaat jäykillä drop-stitch-seinämillä, jotka täyttyvät minuuteissa ja pakkautuvat talveksi – suunniteltu takapihalla rentoutumiseen ja perheen hauskanpitoon.<br />
     Tutustu uima-altaiden kokoihin, vertaile ominaisuuksia ja löydä tilallesi sopiva.<br />
-    Suunnittelija ja operoi Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Osta altaat
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbayn suorakulmainen Drop Stitch puhallettava uima-allas takapihalla
+    alt: Inflatable Pool Factory suorakulmainen Drop Stitch puhallettava uima-allas takapihalla
 stats:
-  title: Felizbay yhdellä silmäyksellä
+  title: Inflatable Pool Factory yhdellä silmäyksellä
   columns: 4
   stats:
     - title: Allas kokoelmat
@@ -36,11 +36,11 @@ stats:
     - title: Mukautetut koot
       amount: Available
     - title: Ota yhteyttä
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch -tekniikka
-  title: Miksi Felizbay-allas<br />On Erilainen
+  title: Miksi Inflatable Pool Factory-allas<br />On Erilainen
   subtitle: Korkeapaineinen Drop Stitch-rakenne tekee altaistamme jäykkiä, kestäviä ja vaivatonta säilyttää.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Yrityksille
   title: Uima-altaat yrityksille,<br />Liian
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay liikekumppaneille</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory liikekumppaneille</h3>
   items:
     - title: Loma-asunnot ja vieraanvaraisuus
       description: Sesonkiajan mukavuudet loma-asunnoille, käyntikohteille ja putiikkeille – nopea ottaa käyttöön, helppo ylläpitää, helppo säilyttää.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Huolto ja turvallisuus
   title: Helppo omistaa,<br />Helppo rakastaa
-  subtitle: Felizbay-uima-altaan omistaminen on helppoa toimituksesta ensimmäiseen uintiin kauden lopun säilytykseen.
+  subtitle: Inflatable Pool Factory-uima-altaan omistaminen on helppoa toimituksesta ensimmäiseen uintiin kauden lopun säilytykseen.
   items:
     - title: Asennus minuuteissa
       description: 'Pura pakkauksesta ja täytä mukana tulevalla pumpulla 5–15 minuutissa, täytä sitten puutarhaletkulla – täyttöaika vaihtelee altaan koon ja vesihuollon mukaan.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay pyöreä Drop Stitch puhallettava uima-allas
+    alt: Inflatable Pool Factory pyöreä Drop Stitch puhallettava uima-allas
 blog_latest:
   title: Allasoppaat ja näkemykset
   information: |
     Ilmatäytteisten uima-altaiden asennusoppaita, hoitovinkkejä ja ostoneuvoja
-    Felizbayn joukkueesta.
+    Inflatable Pool Factory joukkueesta.
 faqs:
   title: Puhallettava uima-allas UKK
-  subtitle: Yleisiä kysymyksiä Felizbayn puhallettavista uima-altaista.
+  subtitle: Yleisiä kysymyksiä Inflatable Pool Factory puhallettavista uima-altaista.
   columns: 2
   items:
     - title: Kuinka kauan asennus kestää?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mitä altaan hintaan sisältyy?
-      description: Jokainen Felizbay-allas sisältää sähköisen ilmapumpun, korjaussarjan ja säilytyspussin. Pyöreissä malleissa on lisävarusteena asennettu kansi.
+      description: Jokainen Inflatable Pool Factory-allas sisältää sähköisen ilmapumpun, korjaussarjan ja säilytyspussin. Pyöreissä malleissa on lisävarusteena asennettu kansi.
       icon: tabler:box
       category: all
     - title: Mitä kokoja on saatavilla?

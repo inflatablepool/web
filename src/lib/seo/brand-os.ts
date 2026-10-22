@@ -66,11 +66,11 @@ export interface EngineStatus {
 const POOL_PRODUCT_IDS = ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'];
 
 export const BRAND: BrandIdentity = {
-  name: 'Felizbay',
+  name: 'Inflatable Pool Factory',
   tagline: 'Inflatable Swimming Pools — Backyard Fun for the Whole Family',
   taglineShort: 'Inflatable Swimming Pools',
   description:
-    'Felizbay designs drop-stitch inflatable swimming pools that set up in minutes, store flat in the off-season, and stand up to summers of family use.',
+    'Inflatable Pool Factory designs drop-stitch inflatable swimming pools that set up in minutes, store flat in the off-season, and stand up to summers of family use.',
   foundingYear: 2012,
   categories: ['Rectangular Pools', 'Round Pools', 'Pool Accessories'],
   ethos: [
@@ -104,12 +104,12 @@ export const BRAND: BrandIdentity = {
     },
   ],
   brandStory:
-    'Felizbay began with a simple goal: make a backyard swimming pool that families could actually manage — no steel frames, no all-day setup, no permanent installation. Our drop-stitch inflatable pools combine the rigidity of a hard-sided pool with the convenience of an inflatable, so anyone can be swimming within minutes of unboxing. Every pool is built from reinforced, puncture-resistant material, tested for air retention, and backed by responsive customer support.',
+    'Inflatable Pool Factory began with a simple goal: make a backyard swimming pool that families could actually manage — no steel frames, no all-day setup, no permanent installation. Our drop-stitch inflatable pools combine the rigidity of a hard-sided pool with the convenience of an inflatable, so anyone can be swimming within minutes of unboxing. Every pool is built from reinforced, puncture-resistant material, tested for air retention, and backed by responsive customer support.',
   milestones: [
     {
       year: 2012,
       event: 'Founded',
-      description: 'Felizbay established with a focus on outdoor family products.',
+      description: 'Inflatable Pool Factory established with a focus on outdoor family products.',
     },
     {
       year: 2018,
@@ -125,7 +125,8 @@ export const BRAND: BrandIdentity = {
     {
       year: 2024,
       event: 'Growing Community',
-      description: 'Thousands of families across multiple markets cooling off in a Felizbay pool each summer.',
+      description:
+        'Thousands of families across multiple markets cooling off in an Inflatable Pool Factory pool each summer.',
     },
   ],
   trustSignals: [
@@ -153,7 +154,8 @@ export const BRAND: BrandIdentity = {
     {
       icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
       title: 'Responsive Support',
-      description: 'Real people answering questions about setup, care, and accessories at info@felizbay.com.',
+      description:
+        'Real people answering questions about setup, care, and accessories at info@inflatablepoolfactory.com.',
     },
   ],
   productOntology: [
@@ -169,7 +171,7 @@ export const BRAND: BrandIdentity = {
     },
     {
       category: 'Pool Accessories',
-      description: 'Covers, ground sheets, repair kits, and replacement parts for Felizbay pools.',
+      description: 'Covers, ground sheets, repair kits, and replacement parts for Inflatable Pool Factory pools.',
       items: ['Pool Covers', 'Ground Sheets', 'Repair Kits', 'Air Valves'],
     },
   ],

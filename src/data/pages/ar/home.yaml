@@ -4,7 +4,7 @@ hero:
   subtitle: |
     حمامات سباحة متميزة بجدران drop-stitch صلبة تنتفخ في دقائق وتوضع في مكانها لفصل الشتاء - مصممة للاسترخاء في الفناء الخلفي والمرح العائلي.<br />
     استكشف أحجام حمامات السباحة، وقارن الميزات، واعثر على المقاس المناسب لمساحتك.<br />
-    تم تصميمه وتشغيله بواسطة شركة Aquafarer LLC، الولايات المتحدة الأمريكية.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: تسوق حمامات السباحة
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل الشكل من Felizbay في الفناء الخلفي
+    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل الشكل من Inflatable Pool Factory في الفناء الخلفي
 stats:
-  title: Felizbay في لمحة
+  title: Inflatable Pool Factory في لمحة
   columns: 4
   stats:
     - title: مجموعات البلياردو
@@ -36,11 +36,11 @@ stats:
     - title: أحجام مخصصة
       amount: Available
     - title: اتصال
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: تقنية Drop Stitch
-  title: لماذا بركة Felizbay<br />مختلف
+  title: لماذا بركة Inflatable Pool Factory<br />مختلف
   subtitle: هيكل Drop Stitch عالي الضغط يجعل حمامات السباحة الخاصة بنا صلبة ومتينة وسهلة التخزين.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: للشركات
   title: حمامات سباحة للأعمال،<br />أيضاً
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay لشركاء الأعمال</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory لشركاء الأعمال</h3>
   items:
     - title: إيجارات العطلات والضيافة
       description: وسائل الراحة الموسمية للضيوف للإيجارات أثناء العطلات، والمواقع الفاخرة، وعقارات البوتيك - سريعة النشر، وسهلة الصيانة، وسهلة التخزين.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: الرعاية والسلامة
   title: سهل التملك،<br />من السهل أن تحب
-  subtitle: من التسليم إلى السباحة الأولى إلى التخزين في نهاية الموسم، يظل امتلاك حمام سباحة Felizbay أمرًا بسيطًا.
+  subtitle: من التسليم إلى السباحة الأولى إلى التخزين في نهاية الموسم، يظل امتلاك حمام سباحة Inflatable Pool Factory أمرًا بسيطًا.
   items:
     - title: الإعداد في دقائق
       description: 'قم بفك العلبة ونفخها باستخدام المضخة المرفقة خلال 5-15 دقيقة، ثم املأها بخرطوم الحديقة - يختلف وقت الملء باختلاف حجم حوض السباحة وإمدادات المياه.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: حمام سباحة Drop Stitch قابل للنفخ دائري من Felizbay
+    alt: حمام سباحة Drop Stitch قابل للنفخ دائري من Inflatable Pool Factory
 blog_latest:
   title: أدلة ورؤى حمام السباحة
   information: |
     أدلة الإعداد، ونصائح العناية، ونصائح الشراء لحمامات السباحة القابلة للنفخ
-    من فريق Felizbay.
+    من فريق Inflatable Pool Factory.
 faqs:
   title: الأسئلة الشائعة حول حمام السباحة القابل للنفخ
-  subtitle: أسئلة شائعة حول حمامات السباحة القابلة للنفخ Felizbay.
+  subtitle: أسئلة شائعة حول حمامات السباحة القابلة للنفخ Inflatable Pool Factory.
   columns: 2
   items:
     - title: كم من الوقت يستغرق الإعداد؟
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: ما الذي يتم تضمينه مع المسبح؟
-      description: يشتمل كل مسبح في Felizbay على مضخة هواء كهربائية ومجموعة أدوات إصلاح وحقيبة تخزين. تحتوي النماذج المستديرة على غطاء اختياري مُجهز.
+      description: يشتمل كل مسبح في Inflatable Pool Factory على مضخة هواء كهربائية ومجموعة أدوات إصلاح وحقيبة تخزين. تحتوي النماذج المستديرة على غطاء اختياري مُجهز.
       icon: tabler:box
       category: all
     - title: ما هي الأحجام المتوفرة؟

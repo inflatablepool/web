@@ -5,7 +5,8 @@ import { getProducts } from '~/utils/products';
 
 const metadata = {
   title: `Product Comparison — ${SITE.name}`,
-  description: 'Compare Felizbay inflatable swimming pools side by side. Size, capacity, material, and more.',
+  description:
+    'Compare Inflatable Pool Factory inflatable swimming pools side by side. Size, capacity, material, and more.',
 };
 
 const products = await getProducts();
@@ -44,7 +45,7 @@ const comparisonRows = [
     <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
     <h1 class="mt-4 text-4xl font-semibold text-gray-900">Product Comparison</h1>
     <p class="mt-4 text-lg text-gray-500">
-      Compare all Felizbay pools side by side. Find the right inflatable swimming pool for your backyard.
+      Compare all Inflatable Pool Factory pools side by side. Find the right inflatable swimming pool for your backyard.
     </p>
 
     <div class="mt-12 overflow-x-auto">
@@ -106,7 +107,7 @@ const comparisonRows = [
 
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
-        Felizbay product comparison table covering {products.length} products across {
+        Inflatable Pool Factory product comparison table covering {products.length} products across {
           ['pool'].filter((c) => products.some((p) => p.category === c)).length
         } categories. Compare shape, color, wall material, pressure, and price.
       </p>

@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 // Seeds the D1 `news` table from the static `src/content/news/*.mdx` posts.
 // Usage:
 //   node scripts/seed-news.mjs          # write SQL into .wrangler-tmp/news-seed.sql
-//   wrangler d1 execute Felizbay-db -c workers/news-worker/wrangler.toml --remote --file=.wrangler-tmp/news-seed.sql
+//   wrangler d1 execute inflatable-pool-factory-db -c workers/news-worker/wrangler.toml --remote --file=.wrangler-tmp/news-seed.sql
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIR = path.join(ROOT, 'src', 'content', 'news');

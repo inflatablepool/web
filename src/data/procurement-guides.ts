@@ -3,7 +3,7 @@
  * content for wholesale buyers, importers and brand owners.
  *
  * All prices are FOB Qingdao, USD, price basis 20 pcs per item
- * (source: Felizbay quotation sheet, October 2026).
+ * (source: Inflatable Pool Factory quotation sheet, October 2026).
  */
 
 export type GuideCluster = 'factory-oem' | 'materials-quality' | 'price-logistics';
@@ -67,7 +67,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 2: Drop-Stitch Engineering Depth',
         paragraphs: [
-          'Drop stitch is a specialized construction: two layers of PVC joined by thousands of internal polyester threads, inflated to pressures an ordinary vinyl pool could never survive. A manufacturer with real drop-stitch capability can tell you its standard wall thickness options (Felizbay offers 10, 15, 20 and 50 cm), its rated operating pressure, its maximum pressure tolerance and its over-pressure protection strategy without checking with "the engineer."',
+          'Drop stitch is a specialized construction: two layers of PVC joined by thousands of internal polyester threads, inflated to pressures an ordinary vinyl pool could never survive. A manufacturer with real drop-stitch capability can tell you its standard wall thickness options (Inflatable Pool Factory offers 10, 15, 20 and 50 cm), its rated operating pressure, its maximum pressure tolerance and its over-pressure protection strategy without checking with "the engineer."',
           'If a supplier cannot immediately state the operating pressure, the pressure-relief valve threshold and the test pressure used in QC, they do not engineer the product they sell.',
         ],
       },
@@ -81,7 +81,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 4: MOQ and Sampling Policy',
         paragraphs: [
-          'A confident manufacturer lets you prove quality before you commit volume. Felizbay manufactures pre-production samples from a single piece, and its standard price list is based on 20 pcs per item — a deliberately low barrier that lets importers test a market without betting on a full container.',
+          'A confident manufacturer lets you prove quality before you commit volume. Inflatable Pool Factory manufactures pre-production samples from a single piece, and its standard price list is based on 20 pcs per item — a deliberately low barrier that lets importers test a market without betting on a full container.',
           'Be wary of suppliers who demand large first orders with no sample stage, or who quote one MOQ in the first email and a different one after you engage. Written, itemized MOQ and pricing terms are a basic test of supplier professionalism.',
         ],
       },
@@ -89,13 +89,13 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'Criterion 5: Material Compliance',
         paragraphs: [
           'Pool fabric must survive UV exposure, chlorine chemistry and years of flexing. Ask for the material specification sheet: fabric weight, lamination layers, UV stabilizers and chemical compliance. For markets in the EU, REACH compliance is a legal requirement — request the declaration and keep it on file.',
-          'Felizbay pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC — the same premium material used for high-pressure SUP boards — and the compliance documents are available to buyers on request.',
+          'Inflatable Pool Factory pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC — the same premium material used for high-pressure SUP boards — and the compliance documents are available to buyers on request.',
         ],
       },
       {
         heading: 'Criterion 6: Export and Logistics Experience',
         paragraphs: [
-          'A pool that survives the factory must also survive the ocean. Experienced exporters pack to container specifications, quote in standard Incoterms (Felizbay quotes FOB Qingdao), know the packed weight and carton dimensions of every SKU, and can advise on 20GP versus 40HQ loading.',
+          'A pool that survives the factory must also survive the ocean. Experienced exporters pack to container specifications, quote in standard Incoterms (Inflatable Pool Factory quotes FOB Qingdao), know the packed weight and carton dimensions of every SKU, and can advise on 20GP versus 40HQ loading.',
           'Deflated drop-stitch pools pack at just 5–10% of the volume of an equivalent rigid pool — but only if the supplier actually optimizes cartons for container loading. Ask for a loading plan with your quote.',
         ],
       },
@@ -122,7 +122,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'The Bottom Line',
         paragraphs: [
           'Choose the manufacturer who welcomes your inspection, quotes precise engineering numbers, tests every unit and lets you start small. That combination — verifiable quality plus low entry risk — is worth more than any unit-price discount.',
-          'Felizbay manufactures drop stitch pools at its own Qingdao facility, pressure-drop tests every unit for 24–48 hours, ships samples from one piece and prices standard items on a 20-pc basis, FOB Qingdao. Send an RFQ and hold us to every criterion on this list.',
+          'Inflatable Pool Factory manufactures drop stitch pools at its own Qingdao facility, pressure-drop tests every unit for 24–48 hours, ships samples from one piece and prices standard items on a 20-pc basis, FOB Qingdao. Send an RFQ and hold us to every criterion on this list.',
         ],
       },
     ],
@@ -137,7 +137,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'What is a reasonable first order?',
-        a: 'Start with one pre-production sample to validate quality, then a 20-pc first order per item — the same basis Felizbay uses for its standard price list. This is large enough to test a sales channel and small enough to cap your risk.',
+        a: 'Start with one pre-production sample to validate quality, then a 20-pc first order per item — the same basis Inflatable Pool Factory uses for its standard price list. This is large enough to test a sales channel and small enough to cap your risk.',
       },
     ],
     related: [
@@ -173,7 +173,7 @@ export const procurementGuides: ProcurementGuide[] = [
         paragraphs: ['The practical differences show up in five areas:'],
         bullets: [
           'Design ownership: OEM designs are yours and can be made exclusive; ODM designs belong to the factory and may be sold to others unless you negotiate exclusivity.',
-          'Upfront cost: OEM requires engineering, tooling or patterning work and larger commitments; ODM prices from the existing price list (Felizbay\'s standard basis is 20 pcs per item, FOB Qingdao).',
+          'Upfront cost: OEM requires engineering, tooling or patterning work and larger commitments; ODM prices from the existing price list (Inflatable Pool Factory\'s standard basis is 20 pcs per item, FOB Qingdao).',
           'Lead time: ODM starts production almost immediately; OEM needs engineering approval and a pre-production sample cycle first.',
           'Risk: ODM designs are already market-proven and pressure-tested at scale; OEM designs carry first-production risk that the sample stage exists to eliminate.',
           'Differentiation: OEM lets you build a product no competitor can copy; ODM means competing on brand, channel and service rather than product design.',
@@ -182,7 +182,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'What OEM Looks Like in Practice',
         paragraphs: [
-          'A typical Felizbay OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; a pre-production sample is manufactured and pressure-tested for your approval; mass production runs at our Qingdao factory with inline seam and valve inspection; and every unit passes a 24–48 hour pressure-drop test before container loading.',
+          'A typical Inflatable Pool Factory OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; a pre-production sample is manufactured and pressure-tested for your approval; mass production runs at our Qingdao factory with inline seam and valve inspection; and every unit passes a 24–48 hour pressure-drop test before container loading.',
           'Customization can cover everything from pool dimensions and fabric colorways to logo printing, fitted covers, built-in seats, 5 mm insulated bottoms, valve placement and retail packaging.',
         ],
       },
@@ -202,16 +202,16 @@ export const procurementGuides: ProcurementGuide[] = [
         ],
       },
       {
-        heading: 'Felizbay Supports Both',
+        heading: 'Inflatable Pool Factory Supports Both',
         paragraphs: [
-          'As a factory-direct manufacturer, Felizbay runs ODM and OEM projects on the same production lines with the same QC gates — every unit, catalog or custom, passes the 24–48 hour pressure-drop test before shipment. Your drawings and colorways stay yours: we never sell a customer-exclusive design to another buyer, and NDAs are welcome.',
+          'As a factory-direct manufacturer, Inflatable Pool Factory runs ODM and OEM projects on the same production lines with the same QC gates — every unit, catalog or custom, passes the 24–48 hour pressure-drop test before shipment. Your drawings and colorways stay yours: we never sell a customer-exclusive design to another buyer, and NDAs are welcome.',
         ],
       },
     ],
     faq: [
       {
         q: 'Is ODM just "white label"?',
-        a: 'Close, but more flexible. White label usually means identical stock products with a printed logo. ODM at Felizbay also covers configuration choices — size selection, colorways, covers, packaging and valve options — before branding is applied.',
+        a: 'Close, but more flexible. White label usually means identical stock products with a printed logo. ODM at Inflatable Pool Factory also covers configuration choices — size selection, colorways, covers, packaging and valve options — before branding is applied.',
       },
       {
         q: 'Can I get exclusivity on an ODM design?',
@@ -240,7 +240,7 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 8,
     audience: 'Retailers, e-commerce sellers and entrepreneurs launching a private pool brand.',
-    tldr: 'Private label means selling proven drop-stitch pool designs under your own brand: logo printing, custom colors, branded covers and retail packaging, produced by an established factory. With Felizbay you can start with a single sample, price on a 20-pc basis FOB Qingdao, and reach shelves with packaging tuned to your channel. Success depends on picking the right 2–3 SKUs, respecting the sample stage, and budgeting the full landed cost — not just the FOB price.',
+    tldr: 'Private label means selling proven drop-stitch pool designs under your own brand: logo printing, custom colors, branded covers and retail packaging, produced by an established factory. With Inflatable Pool Factory you can start with a single sample, price on a 20-pc basis FOB Qingdao, and reach shelves with packaging tuned to your channel. Success depends on picking the right 2–3 SKUs, respecting the sample stage, and budgeting the full landed cost — not just the FOB price.',
     sections: [
       {
         heading: 'What Private Label Means for Pools',
@@ -264,7 +264,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'MOQ, Pricing and the Sample Stage',
         paragraphs: [
-          'Felizbay\'s price list is quoted FOB Qingdao in USD on a basis of 20 pcs per item — low enough to launch a real assortment without container-scale risk. Standard catalog FOB prices run from $137.96 for a compact Ø 2 × 0.5 m pool to $1,600.58 for the Ø 10 × 1.2 m event-scale model, with SPA tubs from $381.36.',
+          'Inflatable Pool Factory\'s price list is quoted FOB Qingdao in USD on a basis of 20 pcs per item — low enough to launch a real assortment without container-scale risk. Standard catalog FOB prices run from $137.96 for a compact Ø 2 × 0.5 m pool to $1,600.58 for the Ø 10 × 1.2 m event-scale model, with SPA tubs from $381.36.',
           'Before any volume order, a pre-production sample is manufactured and pressure-tested for your approval. Never skip this stage: the sample is where print quality, color accuracy and packaging fit get verified against what you imagined. Approve the sample, and mass production has an unambiguous reference standard.',
         ],
       },
@@ -315,7 +315,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Who owns the brand and listings?',
-        a: 'You do. The factory manufactures; you own the trademark, the marketplace listings, the customer relationship and all market-facing assets. Felizbay never sells a customer-exclusive design or colorway to another buyer.',
+        a: 'You do. The factory manufactures; you own the trademark, the marketplace listings, the customer relationship and all market-facing assets. Inflatable Pool Factory never sells a customer-exclusive design or colorway to another buyer.',
       },
     ],
     related: [
@@ -347,7 +347,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         heading: 'The Pressure Specification',
-        paragraphs: ['Felizbay\'s engineering baseline, applied across the catalog:'],
+        paragraphs: ['Inflatable Pool Factory\'s engineering baseline, applied across the catalog:'],
         bullets: [
           'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
           'Factory QC test pressure: 6 PSI — every unit is tested above its operating point',
@@ -397,7 +397,7 @@ export const procurementGuides: ProcurementGuide[] = [
         a: 'Testing above the operating point creates margin: a unit that holds at 6 PSI for two days will hold at 4–5 PSI all season. It also confirms the pressure-relief valve (auto-release above 6 PSI) functions in its designed range.',
       },
       {
-        q: 'Does every Felizbay pool get this test?',
+        q: 'Does every Inflatable Pool Factory pool get this test?',
         a: 'Yes — catalog SKUs, private label runs and full OEM projects all pass through the same final QC gate: rated-pressure inflation, 24–48 hour hold, inspection, then deflating, cleaning and packaging. Third-party inspection of the process is welcome on any order.',
       },
     ],
@@ -424,8 +424,8 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'How Pool Wholesale Pricing Is Structured',
         paragraphs: [
-          'Manufacturer pricing for drop stitch pools is quoted FOB (Free On Board) in USD. Felizbay quotes FOB Qingdao: the price covers the pool, standard inclusions, export packing and delivery of the goods onto your freight forwarder\'s vessel at Qingdao port. Ocean freight, insurance, import duty and destination charges are the buyer\'s side of the Incoterm.',
-          'The second key term is the price basis. Felizbay\'s standard list is based on 20 pcs per item — order at or above that quantity per SKU and the list price applies; below it, expect adjusted pricing or a sample-rate premium. Samples themselves start from a single piece.',
+          'Manufacturer pricing for drop stitch pools is quoted FOB (Free On Board) in USD. Inflatable Pool Factory quotes FOB Qingdao: the price covers the pool, standard inclusions, export packing and delivery of the goods onto your freight forwarder\'s vessel at Qingdao port. Ocean freight, insurance, import duty and destination charges are the buyer\'s side of the Incoterm.',
+          'The second key term is the price basis. Inflatable Pool Factory\'s standard list is based on 20 pcs per item — order at or above that quantity per SKU and the list price applies; below it, expect adjusted pricing or a sample-rate premium. Samples themselves start from a single piece.',
         ],
       },
       {
@@ -518,7 +518,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Packed Weights by SKU',
         paragraphs: [
-          'Published packed weights from the Felizbay quotation sheet, round pools: Ø 2 × 0.5 m — 18.4 kg; Ø 3 × 1.2 m — 45 kg; Ø 3.7 × 1.2 m — 58 kg; Ø 4 × 1.2 m — 65 kg; Ø 4.6 × 1.2 m — 78 kg; Ø 5 × 1.2 m — 88 kg; Ø 5.5 × 1.2 m — 102 kg; Ø 6 × 1.2 m — 115 kg; Ø 6 × 1.6 m — 135 kg; Ø 7 × 1.2 m — 130 kg; Ø 7 × 1.5 m — 140 kg; Ø 7.3 × 1.3 m — 160 kg; Ø 10 × 1.2 m — 250 kg.',
+          'Published packed weights from the Inflatable Pool Factory quotation sheet, round pools: Ø 2 × 0.5 m — 18.4 kg; Ø 3 × 1.2 m — 45 kg; Ø 3.7 × 1.2 m — 58 kg; Ø 4 × 1.2 m — 65 kg; Ø 4.6 × 1.2 m — 78 kg; Ø 5 × 1.2 m — 88 kg; Ø 5.5 × 1.2 m — 102 kg; Ø 6 × 1.2 m — 115 kg; Ø 6 × 1.6 m — 135 kg; Ø 7 × 1.2 m — 130 kg; Ø 7 × 1.5 m — 140 kg; Ø 7.3 × 1.3 m — 160 kg; Ø 10 × 1.2 m — 250 kg.',
           'Weight scales with fabric area and wall thickness, which is why the Ø 6 × 1.6 m at 135 kg outweighs the physically larger-diameter Ø 7 × 1.2 m at 130 kg. For rectangular, SPA and custom models, packed weights are confirmed per SKU at quotation.',
         ],
       },
@@ -551,7 +551,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Get the Loading Plan With Your Quote',
         paragraphs: [
-          'A factory that exports pools every week can hand you a loading plan in the same document as your FOB quote. Ask for it: packed weights, carton dimensions, pieces per container by SKU, and a 20GP versus 40HQ comparison for your mix. Felizbay provides this on request with every wholesale quotation.',
+          'A factory that exports pools every week can hand you a loading plan in the same document as your FOB quote. Ask for it: packed weights, carton dimensions, pieces per container by SKU, and a 20GP versus 40HQ comparison for your mix. Inflatable Pool Factory provides this on request with every wholesale quotation.',
         ],
       },
     ],
@@ -562,7 +562,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Should I ship FOB or CIF?',
-        a: 'FOB Qingdao is the standard and the basis of Felizbay\'s pricing. It lets you control freight forwarder selection and often beats factory-arranged CIF on cost and visibility. If you have no forwarder relationship yet, ask for a CIF comparison and benchmark it against your own forwarder\'s quote.',
+        a: 'FOB Qingdao is the standard and the basis of Inflatable Pool Factory\'s pricing. It lets you control freight forwarder selection and often beats factory-arranged CIF on cost and visibility. If you have no forwarder relationship yet, ask for a CIF comparison and benchmark it against your own forwarder\'s quote.',
       },
       {
         q: 'Do cartons need pallets?',

@@ -6,14 +6,15 @@ import { globSync } from 'glob';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
-const publicDir = path.join(projectRoot, 'public', 'images', 'Felizbay');
+const publicDir = path.join(projectRoot, 'public', 'images', 'Inflatable Pool Factory');
 const srcAssetsDir = path.join(projectRoot, 'src', 'assets', 'images');
 
-const BASE = 'D:\\OneDrive\\Daily work\\E3\\processing\\Felizbay';
+const BASE = 'D:\\OneDrive\\Daily work\\E3\\processing\\Inflatable Pool Factory';
 const BOATS = path.join(BASE, 'boats');
 const PADDLE = path.join(BASE, 'paddle');
 const ACC = path.join(BASE, 'paddles-and-accessories');
-const AQUA = 'D:\\OneDrive\\Daily work\\E3\\processing\\Felizbay Helen\\鍏徃鏂囦欢\\Felizbay\\鍥剧墖';
+const AQUA =
+  'D:\\OneDrive\\Daily work\\E3\\processing\\Inflatable Pool Factory Helen\\鍏徃鏂囦欢\\Inflatable Pool Factory\\鍥剧墖';
 
 function normalize(p) {
   return p.replace(/\\/g, '/');

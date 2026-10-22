@@ -4,7 +4,7 @@ hero:
   subtitle: |
     Kõrgetasemelised jäikade drop-stitch seintega basseinid, mis täituvad mõne minutiga ja pakitakse talveks kaasa – loodud tagaaias lõõgastumiseks ja pere lõbutsemiseks.<br />
     Uurige basseini suurusi, võrrelge funktsioone ja leidke oma ruumi jaoks sobiv.<br />
-    Projekteeris ja haldab Aquafarer LLC, USA.
+    Inflatable Pool Team · Qingdao Vatrad Group.
   actions:
     - variant: primary
       text: Ostke basseinid
@@ -18,9 +18,9 @@ hero:
       icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay ristkülikukujuline Drop Stitch täispuhutav bassein tagaaias
+    alt: Inflatable Pool Factory ristkülikukujuline Drop Stitch täispuhutav bassein tagaaias
 stats:
-  title: Felizbay lühidalt
+  title: Inflatable Pool Factory lühidalt
   columns: 4
   stats:
     - title: Basseini kollektsioonid
@@ -36,11 +36,11 @@ stats:
     - title: Kohandatud suurused
       amount: Available
     - title: Võtke ühendust
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features:
   id: features
   tagline: Drop Stitch tehnoloogia
-  title: Miks just Felizbay bassein<br />On Erinev
+  title: Miks just Inflatable Pool Factory bassein<br />On Erinev
   subtitle: Kõrgsurve Drop Stitch-konstruktsioon muudab meie basseinid jäigaks, vastupidavaks ja lihtsaks ladustamiseks.
   columns: 2
   items:
@@ -106,7 +106,7 @@ content_workshop:
   tagline: Ettevõtete jaoks
   title: Basseinid ettevõtetele,<br />Ka
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay äripartneritele</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Inflatable Pool Factory äripartneritele</h3>
   items:
     - title: Puhkuserent ja külalislahkus
       description: Hooajalised külalistele mõeldud mugavused puhkuseks üürimiseks, külastuskohtadeks ja butiikpindadeks – kiire kasutuselevõtt, lihtne hooldada, lihtne hoiustada.
@@ -117,7 +117,7 @@ content_workshop:
 content_compliance:
   tagline: Hooldus ja ohutus
   title: Lihtne omada,<br />Lihtne armastada
-  subtitle: Alates tarnimisest kuni esimese ujumiseni kuni hooaja lõpu hoiustamiseni on Felizbay basseini omamine lihtne.
+  subtitle: Alates tarnimisest kuni esimese ujumiseni kuni hooaja lõpu hoiustamiseni on Inflatable Pool Factory basseini omamine lihtne.
   items:
     - title: Seadistamine minutitega
       description: 'Eemaldage kast ja täitke 5–15 minutiga kaasasoleva pumbaga, seejärel täitke aiavoolikuga – täitmisaeg sõltub basseini suurusest ja veevarustusest.'
@@ -148,15 +148,15 @@ steps:
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay ümmargune Drop Stitch täispuhutav bassein
+    alt: Inflatable Pool Factory ümmargune Drop Stitch täispuhutav bassein
 blog_latest:
   title: Basseini juhendid ja ülevaated
   information: |
     Täispuhutavate basseinide seadistamise juhendid, hooldusnõuanded ja ostunõuanded
-    Felizbay meeskonnast.
+    Inflatable Pool Factory meeskonnast.
 faqs:
   title: Täispuhutava basseini KKK
-  subtitle: Levinud küsimused Felizbay täispuhutavate basseinide kohta.
+  subtitle: Levinud küsimused Inflatable Pool Factory täispuhutavate basseinide kohta.
   columns: 2
   items:
     - title: Kui kaua seadistamine aega võtab?
@@ -176,7 +176,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mis on basseiniga kaasas?
-      description: Iga Felizbay bassein sisaldab elektrilist õhupumpa, remondikomplekti ja hoiukotti. Ümaratel mudelitel on valikuline paigaldatud kate.
+      description: Iga Inflatable Pool Factory bassein sisaldab elektrilist õhupumpa, remondikomplekti ja hoiukotti. Ümaratel mudelitel on valikuline paigaldatud kate.
       icon: tabler:box
       category: all
     - title: Mis suurused on saadaval?

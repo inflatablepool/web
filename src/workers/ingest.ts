@@ -64,7 +64,7 @@ export default {
     }
 
     if (url.pathname === '/reindex' && request.method === 'POST') {
-      const siteUrl = (env.SITE_URL || '').replace(/\/+$/, '') || 'https://felizbay.com';
+      const siteUrl = (env.SITE_URL || '').replace(/\/+$/, '') || 'https://inflatablepoolfactory.com';
       const sitemapUrl = env.SITEMAP_URL || `${siteUrl}/api/ai/sitemap`;
       const res = await fetch(sitemapUrl);
       if (!res.ok) throw new Error(`Sitemap fetch failed: ${res.status}`);

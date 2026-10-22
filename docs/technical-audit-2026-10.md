@@ -45,7 +45,7 @@
 
 ## 2. Contact 表单询盘测试结果（2026-10-21）
 
-对 `https://felizbay.com/api/contact`（contact-worker）执行分层线上测试：
+对 `https://inflatablepoolfactory.com/api/contact`（contact-worker）执行分层线上测试：
 
 | #   | 层               | 测试方法                        | 预期                         | 实际                                              | 结果 |
 | --- | ---------------- | ------------------------------- | ---------------------------- | ------------------------------------------------- | ---- |
@@ -80,13 +80,13 @@
 
 Cloudflare Redirect Rule 配置后实测：
 
-| 请求                                       | 状态 | Location                                |
-| ------------------------------------------ | ---- | --------------------------------------- |
-| `https://www.felizbay.com/`                | 301  | `https://felizbay.com/`                 |
-| `https://www.felizbay.com/products/specs/` | 301  | `https://felizbay.com/products/specs/`  |
-| `https://www.felizbay.com/de/contact/`     | 301  | `https://felizbay.com/de/contact/`      |
-| `https://www.felizbay.com/api/contact`     | 301  | `https://felizbay.com/api/contact`      |
-| `http://www.felizbay.com/`                 | 301  | `https://felizbay.com/`（单跳，无链式） |
+| 请求                                                    | 状态 | Location                                             |
+| ------------------------------------------------------- | ---- | ---------------------------------------------------- |
+| `https://www.inflatablepoolfactory.com/`                | 301  | `https://inflatablepoolfactory.com/`                 |
+| `https://www.inflatablepoolfactory.com/products/specs/` | 301  | `https://inflatablepoolfactory.com/products/specs/`  |
+| `https://www.inflatablepoolfactory.com/de/contact/`     | 301  | `https://inflatablepoolfactory.com/de/contact/`      |
+| `https://www.inflatablepoolfactory.com/api/contact`     | 301  | `https://inflatablepoolfactory.com/api/contact`      |
+| `http://www.inflatablepoolfactory.com/`                 | 301  | `https://inflatablepoolfactory.com/`（单跳，无链式） |
 
 路径通配（`$1`）与 http→https 均正常。
 

@@ -2,11 +2,11 @@ hero:
   tagline: Meie kohta
   image:
     src: /images/pools/round-grey-pool-1.webp
-    alt: Felizbay täispuhutav bassein
+    alt: Inflatable Pool Factory täispuhutav bassein
   title: |
     Ujumise lihtsaks muutmine, <br />
-     <span class="text-accent dark:text-white">Felizbay</span>-viisil
-  subtitle: Felizbay on esmaklassiline täispuhutav Drop Stitch basseini bränd, mille kujundas ja haldab Aquafarer LLC (USA). Usume, et iga pere väärib tõelist basseini tagahoovis – ilma ehituse, lubade või püsiva paigalduseta. Meie basseinid täituvad mõne minutiga jäigaks, elavad üle terve suvi pere lõbusalt ja pakivad hooaja lõpus väikeseks.
+     <span class="text-accent dark:text-white">Inflatable Pool Factory</span>-viisil
+  subtitle: Inflatable Pool Factory on esmaklassiline täispuhutav Drop Stitch basseini bränd, mille on kujundanud Inflatable Pool Team · Qingdao Vatrad Group. Usume, et iga pere väärib tõelist basseini tagahoovis – ilma ehituse, lubade või püsiva paigalduseta. Meie basseinid täituvad mõne minutiga jäigaks, elavad üle terve suvi pere lõbusalt ja pakivad hooaja lõpus väikeseks.
 stats:
   title: Numbrite järgi
   columns: 4
@@ -18,7 +18,7 @@ stats:
     - title: Nimirõhk
       amount: 4-5 PSI
     - title: Võtke ühendust
-      amount: info@felizbay.com
+      amount: info@inflatablepoolfactory.com
 features3_what_we_build:
   title: Mida me ehitame
   subtitle: Fokuseeritud tootesari, mida tunneme läbi ja lõhki – kõrgsurvega Drop Stitch täispuhutavad basseinid.
@@ -52,7 +52,7 @@ features3_more:
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.webp
-    alt: Felizbay ristkülikukujuline Drop Stitch täispuhutav bassein
+    alt: Inflatable Pool Factory ristkülikukujuline Drop Stitch täispuhutav bassein
 steps2_values:
   title: Meie väärtused
   subtitle: Kolm põhimõtet, mis kujundavad iga ehitatava basseini.
@@ -64,15 +64,15 @@ steps2_values:
       description: Kõrgsurve Drop Stitch konstruktsioon, mida on testitud üle selle nimirõhu, enne basseini saatmist.
       icon: tabler:settings
     - title: Toetus, mis kestab kauem kui hooaeg
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Verstapostid
-  subtitle: Felizbay loo lühiversioon.
+  subtitle: Inflatable Pool Factory loo lühiversioon.
   isReversed: true
   items:
     - title: Keskendutakse täispuhutavatele basseinidele
-      description: 'Felizbay asutati ühe fookusega: esmaklassilised täispuhutavad Drop Stitch basseinid.'
+      description: 'Inflatable Pool Factory asutati ühe fookusega: esmaklassilised täispuhutavad Drop Stitch basseinid.'
       icon: tabler:pool
     - title: Kolm allkirjakogu
       description: Ristkülikukujulised, ümmargused sinised ja ümmargused hallid basseinijooned, millest igaühel on valikulised katted ja kohandatud suurused.
@@ -86,9 +86,9 @@ features2_locations:
   columns: 3
   items:
     - title: Meil
-      description: info@felizbay.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com — we reply within one business day.
     - title: Veebisait
-      description: felizbay.com — sirvige meie basseine ja küsige hinnapakkumist.
+      description: inflatablepoolfactory.com — sirvige meie basseine ja küsige hinnapakkumist.
     - title: OEM / hulgimüük
       description: Äripartneritele on saadaval kohandatud suurused, värvid ja kaubamärgid.
 brand_hub_tagline: Tooted
@@ -110,7 +110,7 @@ brand_hub_cards:
 production_section:
   tagline: Tootmise tipptase
   title: Peen käsitöö tagamine
-  description: Felizbay tootmisliin on pühendatud kvaliteetsetele, vastupidavatele kõrgsurvega täispuhutavatele basseinidele.
+  description: Inflatable Pool Factory tootmisliin on pühendatud kvaliteetsetele, vastupidavatele kõrgsurvega täispuhutavatele basseinidele.
   cards:
     - title: Kogenud tehnikute meeskond
       items:
@@ -135,7 +135,7 @@ production_section:
 global_ops_section:
   tagline: Globaalne haare
   title_html: Üks kaubamärk, <span class="text-white/90">ülemaailmne saatmine</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
   stats:
     - value: '4'
       label: Basseini kollektsioonid
