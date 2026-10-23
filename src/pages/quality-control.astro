@@ -12,7 +12,7 @@ export const prerender = true;
 const metadata = merge(
   {
     title: `Inflatable Pool Quality Control & Testing | ${SITE.name}`,
-    description: `Inflatable Pool Factory quality control: 24–48 hour pressure-drop tests, seam and valve inspection, relief-valve verification and packing checks on every inflatable pool before shipping.`,
+    description: `Inflatable pool quality control: pressure and leak testing, seam and valve checks, dimensional and packing verification, with methods confirmed per project.`,
     canonical: getCanonical('/quality-control'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -23,47 +23,48 @@ const metadata = merge(
 const claimEvidence = [
   {
     claim: 'Rigid walls at rated pressure',
-    applies: 'All collections',
-    verification: 'Inflated to rated operating pressure; 24–48 hour pressure-drop test on 100% of units',
-    result: 'No measurable pressure drop, deformation or leak at hold time',
+    applies: 'Drop-stitch pool models',
+    verification: 'Inflation and pressure/leak check against the approved model specification',
+    result: 'Units are released only when they meet the agreed specification',
     limitations: 'Rigidity depends on inflating to the pressure specified for each model — see product documentation',
   },
   {
-    claim: 'Rated operating pressure 4–5 PSI',
-    applies: 'All pool and SPA tub models',
-    verification: 'Factory QC test at 6 PSI; maximum tolerance 8 PSI; pressure-relief valve auto-release above 6 PSI',
-    result: 'Published pressure limits enforced on every production unit, not on a sample basis',
+    claim: 'Model-specific operating pressure',
+    applies: 'Pool and SPA tub models',
+    verification: 'Pressure target, relief-valve setting and test criteria are confirmed in the model specification',
+    result: 'Production and inspection use the approved pressure target',
     limitations: 'Do not exceed the rated pressure for each model; higher pressure does not increase stiffness safely',
   },
   {
-    claim: 'Inflation in 5–15 minutes',
-    applies: 'All models',
-    verification: 'Using the included 1000W electric air pump, per model',
-    result: 'Full rigidity reached within the published range depending on model size',
+    claim: 'Inflation time stated per model',
+    applies: 'Standard models',
+    verification: 'Measured with the specified pump and confirmed in the product documentation',
+    result: 'Inflation time depends on model size, pump and ambient conditions',
     limitations:
       'Excludes site preparation and water filling — filling time varies with pool capacity and water supply',
   },
   {
     claim: 'Drop-stitch wall construction',
-    applies: 'All collections',
-    verification: 'Demonstrated in the product demo videos — inflation and rigidity under load',
-    result: 'Walls hold shape when filled; see the videos at /products/specs#videos',
+    applies: 'Drop-stitch collections',
+    verification:
+      'Construction is specified in the approved bill of materials and shown in product videos where available',
+    result: 'Wall construction follows the approved product specification',
     limitations: 'Walls are not designed for sitting, standing or jumping unless stated for a specific model',
   },
   {
-    claim: 'UV-resistant, REACH-compliant PVC',
-    applies: 'All collections',
-    verification: 'Material compliance check on double-layer drop-stitch PVC per production batch',
-    result: 'Full-season outdoor service life in normal residential use',
+    claim: 'UV-resistant double-layer PVC',
+    applies: 'Drop-stitch pool models',
+    verification: 'Material specification and supplier documentation reviewed per project',
+    result: 'Material options are confirmed against target-market requirements',
     limitations: 'Cover the pool when not in use for longest material life; store dry and out of sun in the off-season',
   },
   {
-    claim: 'Safety standards EN 16582-1 / ASTM F2666',
-    applies: 'Residential pool models',
-    verification: 'Design reference; model-specific safety information provided in the product documentation',
-    result: 'Residential designs reference the applicable clauses of both standards',
+    claim: 'Residential design references',
+    applies: 'Residential pool models, where specified',
+    verification: 'Applicable standards, test methods and declarations are reviewed during project confirmation',
+    result: 'Compliance scope and documentation are confirmed before production',
     limitations:
-      'Design reference only — excludes public-use pools and SPA tubs; does not certify commercial installations',
+      'Design references do not by themselves certify a product or commercial installation; public-use and SPA requirements must be confirmed separately',
   },
 ];
 
@@ -72,39 +73,39 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Quality Control' }];
 const qcChecks = [
   {
     icon: 'tabler:gauge',
-    title: '24–48 Hour Pressure-Drop Test',
+    title: 'Pressure & Leak Test',
     description:
-      'Every completed pool is inflated to its rated operating pressure and held for 24–48 hours. Any measurable pressure drop, deformation or leak means the unit does not ship.',
+      'Pressure and leak testing is performed to the method, hold time and acceptance criteria agreed in the approved production specification.',
   },
   {
     icon: 'tabler:circle-dot',
     title: 'Valve & Seal Verification',
     description:
-      'Filter-pump ports, shut-off valves, drain valves and over-inflation safety valves are individually checked for absolute air and water tightness after heat-sealing.',
+      'Filter-pump ports, shut-off valves, drain valves and over-inflation safety valves are checked for air and water tightness to the agreed inspection plan after heat-sealing.',
   },
   {
     icon: 'tabler:search',
-    title: 'Full Seam & Rail Inspection',
+    title: 'Seam & Rail Inspection',
     description:
-      'Welded seams, reinforced rail bands and corners are visually inspected on every unit for continuity, flatness and spec adherence — no skipped stitches, no pinholes.',
+      'Welded seams, reinforced rail bands and corners are inspected as part of the agreed inspection plan for continuity, flatness and specification adherence.',
   },
   {
     icon: 'tabler:ruler-measure',
     title: 'Dimensional Control',
     description:
-      'Finished height, diameter and squareness are checked against engineering drawings so pools match the published dimensions and packed sizes on the price list.',
+      'Finished height, diameter and squareness are checked against the approved engineering drawings or specification.',
   },
   {
     icon: 'tabler:shield',
     title: 'Material Compliance',
     description:
-      'UV-resistant, REACH-compliant double-layer drop-stitch PVC with proven full-season outdoor service life — the same fabric family as our SUP boards.',
+      'Material options, including UV-resistant double-layer drop-stitch PVC, are reviewed against the target-market requirements. Compliance documentation is confirmed per project.',
   },
   {
     icon: 'tabler:package-export',
     title: 'Packing & Loading Check',
     description:
-      'Inclusions (1000W pump, repair kit, covers where applicable) are verified against the packing list before carton sealing and container loading.',
+      'Inclusions (pump, repair kit and covers where applicable) are verified against the approved packing list before carton sealing and container loading.',
   },
 ];
 ---
@@ -114,11 +115,12 @@ const qcChecks = [
     <header class="mb-10 md:mb-12 max-w-3xl">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Quality Control</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        Quality Control & Testing for Every Pool
+        Quality Control & Testing for Inflatable Pools
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        No Inflatable Pool Factory pool leaves the factory without passing a 24–48 hour pressure-drop test and a full
-        inspection of seams, valves and dimensions. This is the QC system behind our wholesale and OEM/ODM programs.
+        Each project starts with an agreed inspection plan. This page describes the QC framework we apply to drop-stitch
+        pool production; test methods, hold times, acceptance criteria and compliance documentation are confirmed for
+        each product and market in the approved specification.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
@@ -137,12 +139,10 @@ const qcChecks = [
     </header>
 
     <section class="mb-14">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
-        Six Checks Before Packing
-      </h2>
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Six QC Checkpoints</h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
-        Quality at Inflatable Pool Factory is not a final random spot-check — it is a sequence of checks woven through
-        production, ending with a hold-time test that verifies the finished product as a whole.
+        Quality control is planned as a sequence of checks across production, ending with finished-product verification.
+        The applicable checkpoints are confirmed in the approved inspection plan.
       </p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
@@ -162,7 +162,8 @@ const qcChecks = [
     <section class="mb-14">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Pressure Test Standards</h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
-        Published pressure limits are enforced on 100% of production — not on a sample basis.
+        Pressure targets are confirmed per model in the approved specification. The values below describe the standard
+        platform and do not replace the project specification.
       </p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         {
@@ -183,8 +184,8 @@ const qcChecks = [
         Performance Claims & Evidence
       </h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
-        Every performance claim on this site maps to how it is verified, which models it applies to, and where its
-        limits are. Model-specific values and documentation ship with each product.
+        The table shows how standard platform claims are verified and where their limits are. Model-specific values and
+        documentation are confirmed in the approved specification.
       </p>
       <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
         <table class="w-full text-sm min-w-[768px]">
@@ -234,9 +235,9 @@ const qcChecks = [
     <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
       <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">After-Sales Commitment</h2>
       <p class="text-sm text-gray-600 dark:text-slate-400">
-        Every pool ships with a repair kit for field fixes, and spare parts — valves, patches, pumps and covers — remain
-        available through our support team at info@inflatablepoolfactory.com for the life of the product. Wholesale and
-        OEM partners receive priority spare-part allocation with their orders.
+        Standard orders include a repair kit for field fixes. Spare parts and replacement components are available
+        through our support team at info@inflatablepoolfactory.com; availability and terms are confirmed with your
+        order. Wholesale and OEM partners can discuss spare-part planning with their order.
       </p>
     </section>
 
@@ -285,22 +286,16 @@ const qcChecks = [
 
   <section class="sr-only" data-ai-block="quality-control" aria-hidden="true">
     <p>
-      Inflatable Pool Factory inflatable pool quality control: 100% of production units pass a 24–48 hour pressure-drop
-      test at rated operating pressure before shipping; individual valve and seal verification (filter-pump ports,
-      shut-off valves, drain valves, over-inflation safety valves); full seam and reinforced rail inspection;
-      dimensional control against engineering drawings; REACH-compliant UV-resistant double-layer drop-stitch PVC;
-      packing and loading checks against the inclusion list (1000W pump, repair kit, covers). Pressure standards: 4–5
-      PSI recommended operating, 6 PSI factory QC test, 8 PSI maximum tolerance, pressure-relief valve auto-release
-      above 6 PSI. After-sales: repair kit included, spare parts (valves, patches, pumps, covers) available via
-      info@inflatablepoolfactory.com, priority spare-part allocation for wholesale and OEM partners. Evidence mapping
-      for performance claims: rigid walls at rated pressure (24–48 hour pressure-drop test, 100% of units); 4–5 PSI
-      rated operating pressure with 6 PSI factory QC test, 8 PSI maximum tolerance and pressure-relief valve above 6
-      PSI; inflation in 5–15 minutes with the included 1000W pump excluding site preparation and water filling;
-      drop-stitch wall construction demonstrated in the product demo videos at /products/specs#videos, walls not
-      designed for sitting, standing or jumping unless stated for a specific model; UV-resistant REACH-compliant PVC
-      with full-season outdoor service life in normal residential use, cover when not in use and store dry out of sun;
-      EN 16582-1 and ASTM F2666 are design references for residential pool models only — they exclude public-use pools
-      and SPA tubs and do not certify commercial installations.
+      Inflatable Pool Factory inflatable pool quality control: a project-specific inspection plan covering pressure and
+      leak testing, valve and seal verification (filter-pump ports, shut-off valves, drain valves, over-inflation safety
+      valves), seam and reinforced rail inspection, dimensional control against approved drawings, material
+      documentation and packing checks against the agreed inclusion list. Test method, hold time and acceptance criteria
+      are confirmed in the approved production specification. Model pressure targets, relief-valve settings and
+      tolerances are confirmed in the product specification. After-sales: repair kit included; spare parts (valves,
+      patches, pumps, covers) available via info@inflatablepoolfactory.com, with availability and terms confirmed per
+      order. Material and compliance documentation is reviewed against the target market; EN 16582-1, ASTM F2666 and
+      other design references are applied only where confirmed for the specific residential model and do not by
+      themselves certify a product or commercial installation.
     </p>
   </section>
 </Layout>

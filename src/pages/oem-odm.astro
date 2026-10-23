@@ -31,7 +31,7 @@ const capabilities = [
     icon: 'tabler:palette',
     title: 'Custom Colors & Materials',
     description:
-      'Match your brand palette across the drop-stitch walls, rail bands and floor. UV-resistant, REACH-compliant double-layer PVC fabric in custom colorways.',
+      'Match your brand palette across the drop-stitch walls, rail bands and floor. UV-resistant double-layer PVC in custom colorways; material and compliance documentation is reviewed per project.',
   },
   {
     icon: 'tabler:brand-figma',
@@ -135,19 +135,19 @@ const buyerFaqs = [
 const commercialTerms = [
   {
     title: 'Minimum order quantities',
-    body: 'Custom branding on existing platforms typically starts at 50–100 units per model; fully custom geometric molds typically start at 100–200 units depending on raw material yield. Final MOQs are confirmed per project scope.',
+    body: 'MOQ depends on the product platform, customization level, packaging and order volume. We confirm the applicable MOQ for your project in the quotation.',
   },
   {
     title: 'Sample development lead time',
-    body: '15–20 business days following technical drawing sign-off and sample deposit confirmation.',
+    body: 'Sample timing depends on the specification, materials and any new tooling. We confirm the sample milestones in the project schedule.',
   },
   {
     title: 'Mass production lead time',
-    body: '30–45 calendar days depending on seasonal production schedules and raw material availability.',
+    body: 'Production timing depends on the confirmed specification, order volume and production season. We confirm the delivery schedule in the quotation.',
   },
   {
     title: 'Quality assurance standard',
-    body: 'Every drop-stitch hull is 100% pressure-tested — a 24-hour hold at 1.25x rated pressure — before proceeding to final packaging.',
+    body: 'Pressure and leak-test requirements are agreed per product and project. We confirm the test method, duration and acceptance criteria in the production specification.',
   },
 ];
 
@@ -158,7 +158,7 @@ const quoteChecklist = [
   'Branding requirements: number of logo colors, logo placement locations, and preferred EVA deck pad texture.',
   'Target destination and delivery terms: FOB port, CIF, or DDP destination address.',
   'Target retail or commercial launch date: your required delivery window.',
-  'Required compliance documentation: regional standards you need supported (we work to EN 16582-1, ASTM F2666, REACH, and RoHS baselines).',
+  'Required compliance documentation: the regional standards and declarations your market requires. We confirm which requirements can be supported for the specific product and project.',
 ];
 
 const process = [
@@ -178,7 +178,7 @@ const process = [
     step: '3',
     title: 'Sample Approval',
     description:
-      'A pre-production sample is manufactured and pressure-tested for your approval before the order is released.',
+      'A pre-production sample is manufactured for your approval against the agreed specification before the order is released.',
   },
   {
     step: '4',
@@ -188,7 +188,8 @@ const process = [
   {
     step: '5',
     title: 'QC & Shipping',
-    description: 'Every unit passes a 24–48 hour pressure-drop test before deflating, cleaning and container loading.',
+    description:
+      'Pressure and leak-test requirements are confirmed in the approved production specification before deflating, cleaning and container loading.',
   },
 ];
 ---
@@ -341,27 +342,27 @@ const process = [
         </ul>
       </div>
       <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Engineering Baseline</h2>
+        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Specification Planning</h2>
         <ul class="space-y-1.5 text-sm text-gray-600 dark:text-slate-400">
           <li class="flex gap-2">
-            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 4–5 PSI recommended
-            operating pressure, rigid walls
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Operating pressure
+            and wall rigidity are defined in the approved product specification.
           </li>
           <li class="flex gap-2">
-            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pressure-relief
-            valve auto-releases above 6 PSI; 8 PSI maximum tolerance
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" />
+            Pressure-relief valve settings and maximum tolerances are confirmed for each model.
           </li>
           <li class="flex gap-2">
-            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 24–48 hour pressure-drop
-            leak test on every production unit
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pressure and
+            leak-test method, hold time and acceptance criteria are agreed per project.
           </li>
           <li class="flex gap-2">
-            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> REACH-compliant,
-            UV-resistant double-layer drop-stitch PVC
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Material and
+            UV requirements are reviewed against the target market; compliance documentation is confirmed per project.
           </li>
           <li class="flex gap-2">
-            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 1000W electric
-            air pump and repair kit included as standard
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pump, repair-kit
+            and accessory inclusions are confirmed in the quotation and packing list.
           </li>
         </ul>
       </div>
@@ -372,8 +373,8 @@ const process = [
         Commercial Terms: MOQ, Lead Times &amp; Sample Terms
       </h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
-        Typical commercial terms for custom projects — exact figures are confirmed in your quotation based on project
-        scope and season.
+        Project-specific commercial terms are confirmed in your quotation based on product scope, customization and
+        season.
       </p>
       <div class="grid sm:grid-cols-2 gap-4">
         {
@@ -484,9 +485,10 @@ const process = [
       2–10 m, rectangular up to 6 × 5 × 1.5 m and beyond), wall thickness options of 10/15/20/50 cm, custom colors, logo
       printing, Oxford-fabric covers, built-in seats, 5 mm insulated bottoms, custom valve and 38 mm filter-port
       placement, and retail-ready packaging. Five-step project flow: RFQ, engineering and FOB Qingdao quote, sample
-      approval, mass production, and QC with a 24–48 hour pressure-drop test. Engineering baseline: 4–5 PSI operating
-      pressure, pressure-relief valve above 6 PSI, 8 PSI maximum, REACH-compliant UV-resistant drop-stitch PVC. Samples
-      from 1 piece; standard price basis 20 pcs per item. Design confidentiality guaranteed; NDA welcome.
+      approval, mass production, and QC against the approved specification. MOQ, sample timing, production lead time and
+      pressure-test requirements are confirmed in the project quotation and production specification. Material and
+      compliance documentation is reviewed against the requirements of the target market. NDA terms are available on
+      request.
     </p>
   </section>
 </Layout>
