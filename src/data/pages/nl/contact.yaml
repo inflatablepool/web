@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Alleen aangepast logo/branding
         - value: full
-          label: Volledige OEM (grootte, kleur, afbeeldingen, verpakking)
+          label: OEM (grootte, kleur, afbeeldingen, verpakking)
         - value: consultation
           label: Ik weet het niet zeker - overleg nodig
     - name: productInterest

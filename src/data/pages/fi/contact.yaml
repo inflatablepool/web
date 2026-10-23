@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Vain mukautettu logo / brändäys
         - value: full
-          label: Täysi OEM (koko, väri, grafiikka, pakkaus)
+          label: OEM (koko, väri, grafiikka, pakkaus)
         - value: consultation
           label: Etkö ole varma - tarvitsee konsultaatiota
     - name: productInterest

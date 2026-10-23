@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Faqatgina maxsus logotip / brending
         - value: full
-          label: To'liq OEM (hajmi, rangi, grafikasi, qadoqlash)
+          label: OEM (hajmi, rangi, grafikasi, qadoqlash)
         - value: consultation
           label: Ishonchim komil emas - maslahat kerak
     - name: productInterest

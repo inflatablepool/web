@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Тек пайдаланушы логотипі/брендинг
         - value: full
-          label: Толық OEM (өлшем, түс, графика, орау)
+          label: OEM (өлшем, түс, графика, орау)
         - value: consultation
           label: Сенімсіз - кеңес қажет
     - name: productInterest

@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Custom na Logo / Branding lang
         - value: full
-          label: Buong OEM (laki, kulay, graphics, packaging)
+          label: OEM (laki, kulay, graphics, packaging)
         - value: consultation
           label: Hindi sigurado - kailangan ng konsultasyon
     - name: productInterest

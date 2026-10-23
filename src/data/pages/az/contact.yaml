@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Yalnız Fərdi Loqo / Brendinq
         - value: full
-          label: Tam OEM (ölçü, rəng, qrafika, qablaşdırma)
+          label: OEM (ölçü, rəng, qrafika, qablaşdırma)
         - value: consultation
           label: Əmin deyiləm - məsləhət lazımdır
     - name: productInterest

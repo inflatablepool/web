@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Kun tilpasset logo/branding
         - value: full
-          label: Fuld OEM (størrelse, farve, grafik, emballage)
+          label: OEM (størrelse, farve, grafik, emballage)
         - value: consultation
           label: Ikke sikker - har brug for konsultation
     - name: productInterest

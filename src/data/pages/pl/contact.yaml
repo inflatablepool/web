@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Tylko niestandardowe logo/branding
         - value: full
-          label: Pełny OEM (rozmiar, kolor, grafika, opakowanie)
+          label: OEM (rozmiar, kolor, grafika, opakowanie)
         - value: consultation
           label: Nie jestem pewien – potrzebna konsultacja
     - name: productInterest

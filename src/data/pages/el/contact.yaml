@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Προσαρμοσμένο λογότυπο / Μόνο επωνυμία
         - value: full
-          label: Πλήρης OEM (μέγεθος, χρώμα, γραφικά, συσκευασία)
+          label: OEM (μέγεθος, χρώμα, γραφικά, συσκευασία)
         - value: consultation
           label: Δεν είμαι σίγουρος - χρειάζεται διαβούλευση
     - name: productInterest

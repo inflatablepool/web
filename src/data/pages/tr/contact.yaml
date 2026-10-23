@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Yalnızca Özel Logo / Markalama
         - value: full
-          label: Tam OEM (boyut, renk, grafikler, ambalaj)
+          label: OEM (boyut, renk, grafikler, ambalaj)
         - value: consultation
           label: Emin değilim — danışmaya ihtiyacım var
     - name: productInterest

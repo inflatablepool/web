@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Endast anpassad logotyp/varumärke
         - value: full
-          label: Full OEM (storlek, färg, grafik, förpackning)
+          label: OEM (storlek, färg, grafik, förpackning)
         - value: consultation
           label: Inte säker - behöver konsultation
     - name: productInterest

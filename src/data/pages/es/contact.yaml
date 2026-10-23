@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Logotipo personalizado/marca únicamente
         - value: full
-          label: OEM completo (tamaño, color, gráficos, embalaje)
+          label: OEM (tamaño, color, gráficos, embalaje)
         - value: consultation
           label: 'No estoy seguro: necesito consulta'
     - name: productInterest

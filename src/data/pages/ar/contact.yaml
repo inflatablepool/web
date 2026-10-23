@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: شعار مخصص/العلامة التجارية فقط
         - value: full
-          label: OEM كامل (الحجم واللون والرسومات والتعبئة والتغليف)
+          label: OEM (الحجم واللون والرسومات والتعبئة والتغليف)
         - value: consultation
           label: لست متأكدا - بحاجة إلى التشاور
     - name: productInterest

@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Лише спеціальний логотип / брендинг
         - value: full
-          label: Повний OEM (розмір, колір, графіка, упаковка)
+          label: OEM (розмір, колір, графіка, упаковка)
         - value: consultation
           label: Не впевнений — потрібна консультація
     - name: productInterest

@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Samo logotip / blagovna znamka po meri
         - value: full
-          label: Popoln OEM (velikost, barva, grafika, embalaža)
+          label: OEM (velikost, barva, grafika, embalaža)
         - value: consultation
           label: Nisem prepričan – potrebujem posvet
     - name: productInterest

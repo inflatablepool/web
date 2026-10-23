@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: فقط لوگوی سفارشی / نام تجاری
         - value: full
-          label: OEM کامل (اندازه، رنگ، گرافیک، بسته بندی)
+          label: OEM (اندازه، رنگ، گرافیک، بسته بندی)
         - value: consultation
           label: مطمئن نیستم - نیاز به مشاوره دارید
     - name: productInterest

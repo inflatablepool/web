@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Само персонализирано лого/брандиране
         - value: full
-          label: Пълен OEM (размер, цвят, графика, опаковка)
+          label: OEM (размер, цвят, графика, опаковка)
         - value: consultation
           label: Не съм сигурен — имам нужда от консултация
     - name: productInterest

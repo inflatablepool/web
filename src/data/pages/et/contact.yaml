@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Ainult kohandatud logo/bränding
         - value: full
-          label: Täielik originaalseadmete tootja (suurus, värv, graafika, pakend)
+          label: OEM (suurus, värv, graafika, pakend)
         - value: consultation
           label: Pole kindel - vajan konsultatsiooni
     - name: productInterest

@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Tik tinkintas logotipas / prekės ženklas
         - value: full
-          label: Visas OEM (dydis, spalva, grafika, pakuotė)
+          label: OEM (dydis, spalva, grafika, pakuotė)
         - value: consultation
           label: Nežinau - reikia konsultacijos
     - name: productInterest

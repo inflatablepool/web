@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Iba vlastné logo / branding
         - value: full
-          label: Kompletný OEM (veľkosť, farba, grafika, balenie)
+          label: OEM (veľkosť, farba, grafika, balenie)
         - value: consultation
           label: Nie ste si istí – potrebujete konzultáciu
     - name: productInterest

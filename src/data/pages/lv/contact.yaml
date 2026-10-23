@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Tikai pielāgots logotips/zīmols
         - value: full
-          label: Pilns OEM (izmērs, krāsa, grafika, iepakojums)
+          label: OEM (izmērs, krāsa, grafika, iepakojums)
         - value: consultation
           label: Neesat pārliecināts - nepieciešama konsultācija
     - name: productInterest

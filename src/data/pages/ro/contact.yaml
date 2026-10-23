@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Doar logo personalizat / branding
         - value: full
-          label: OEM complet (dimensiune, culoare, grafică, ambalaj)
+          label: OEM (dimensiune, culoare, grafică, ambalaj)
         - value: consultation
           label: Nu sunt sigur - trebuie consultat
     - name: productInterest

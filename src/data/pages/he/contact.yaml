@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: לוגו מותאם אישית / מיתוג בלבד
         - value: full
-          label: OEM מלא (גודל, צבע, גרפיקה, אריזה)
+          label: OEM (גודל, צבע, גרפיקה, אריזה)
         - value: consultation
           label: לא בטוח - צריך התייעצות
     - name: productInterest

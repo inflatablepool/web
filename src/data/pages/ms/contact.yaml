@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Logo / Penjenamaan Tersuai sahaja
         - value: full
-          label: OEM penuh (saiz, warna, grafik, pembungkusan)
+          label: OEM (saiz, warna, grafik, pembungkusan)
         - value: consultation
           label: Tidak pasti - memerlukan perundingan
     - name: productInterest

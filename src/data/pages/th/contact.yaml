@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: โลโก้ที่กำหนดเอง / การสร้างแบรนด์เท่านั้น
         - value: full
-          label: OEM เต็มรูปแบบ (ขนาด สี กราฟิก บรรจุภัณฑ์)
+          label: OEM (ขนาด สี กราฟิก บรรจุภัณฑ์)
         - value: consultation
           label: ไม่แน่ใจ — ต้องการคำปรึกษา
     - name: productInterest

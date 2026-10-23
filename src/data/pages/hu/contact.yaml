@@ -67,7 +67,7 @@ contact_form:
         - value: logo
           label: Csak egyéni logó / márkajelzés
         - value: full
-          label: Teljes OEM (méret, szín, grafika, csomagolás)
+          label: OEM (méret, szín, grafika, csomagolás)
         - value: consultation
           label: Nem biztos – konzultációra van szükség
     - name: productInterest
