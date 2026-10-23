@@ -130,7 +130,7 @@ production_section:
     - title: Přísná kontrola kvality
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure and airtightness checks against the approved model specification
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Globální dosah

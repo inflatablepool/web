@@ -300,7 +300,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Start Small, Scale What Sells',
         paragraphs: [
-          'The economics of private label reward focus: a tight assortment with confirmed quantity terms, launched with a realistic schedule, teaches you more than a wide catalog launched late. Once you know which model your channel sells, scale that model — and consider moving it to a full OEM design once volume justifies it.',
+          'The economics of private label reward focus: a tight assortment with confirmed quantity terms, launched with a realistic schedule, teaches you more than a wide catalog launched late. Once you know which model your channel sells, scale that model — and consider moving it to an OEM project with an agreed scope once volume justifies it.',
         ],
       },
     ],
@@ -311,7 +311,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Can I private label just the packaging and not the pool?',
-        a: 'Yes — unbranded pools with fully custom cartons, manuals and hang tags are a common entry level. Logo printing on the product itself can be added on the next production run once the channel is proven.',
+        a: 'Yes — unbranded pools with custom cartons, manuals and hang tags are a common entry level. Logo printing on the product itself can be added on the next production run once the channel is proven.',
       },
       {
         q: 'Who owns the brand and listings?',
@@ -336,7 +336,7 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 7,
     audience: 'Wholesale buyers, QC managers and importers specifying quality standards.',
-    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–5 PSI operating, 6 PSI factory QC test pressure, 8 PSI maximum tolerance, with a pressure-relief valve that auto-releases above 6 PSI. Production units should pass the pressure-drop test defined in the approved specification, with the method, hold time and acceptance criteria agreed before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
+    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–5 PSI operating and 8 PSI maximum tolerance, with a pressure-relief valve that auto-releases above 6 PSI. Production units should pass the pressure-drop test defined in the approved specification, with the method, hold time and acceptance criteria agreed before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
     sections: [
       {
         heading: 'A Pool Is a Pressure Vessel',
@@ -350,7 +350,6 @@ export const procurementGuides: ProcurementGuide[] = [
         paragraphs: ['Inflatable Pool Factory\'s engineering baseline, applied across the catalog:'],
         bullets: [
           'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
-          'Factory QC test pressure: 6 PSI — production testing is performed above the operating point',
           'Maximum pressure tolerance: 8 PSI — the structural limit the design must survive',
           'Pressure-relief valve: auto-releases above 6 PSI, protecting against over-inflation and heat expansion',
         ],
@@ -359,7 +358,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'The Pressure-Drop Test',
         paragraphs: [
           'After assembly and finishing, completed pools are inflated to the rated operating pressure and held for the duration specified in the approved test plan. The test verifies three things at once: air-tightness of seams and valves, structural rigidity under sustained load, and leakage over time.',
-          'Why duration matters: a slow seep at a valve seal can pass a quick "pump it and squeeze it" check but will flatten a customer\'s pool wall over a weekend. A 24-hour minimum hold exposes defects that short tests cannot see. Only units that hold pressure within tolerance proceed to deflating, cleaning and packaging.',
+          'Why duration matters: a slow seep at a valve seal can pass a quick "pump it and squeeze it" check but will flatten a customer\'s pool wall over a weekend. The hold time defined in the approved specification is set to expose defects that short checks cannot see. Only units that hold pressure within tolerance proceed to deflating, cleaning and packaging.',
         ],
       },
       {
@@ -393,12 +392,12 @@ export const procurementGuides: ProcurementGuide[] = [
         a: 'It catches catastrophic failures only. Slow seeps at valve seals or micro-pinholes in welded seams hold pressure for minutes but not for days. A sustained hold exists precisely because short checks can pass defects that customers discover in week two.',
       },
       {
-        q: 'Why test at 6 PSI when operating pressure is 4–5 PSI?',
-        a: 'Testing above the operating point creates margin: a unit that holds at 6 PSI for two days will hold at 4–5 PSI all season. It also confirms the pressure-relief valve (auto-release above 6 PSI) functions in its designed range.',
+        q: 'How is the QC test pressure set?',
+        a: 'The test pressure, hold time and acceptance criteria are defined in the approved production specification for each model. The operating pressure remains 4–5 PSI, and the pressure-relief valve auto-releases above 6 PSI.',
       },
       {
         q: 'Does every Inflatable Pool Factory pool get this test?',
-        a: 'Yes — catalog SKUs, private label runs and full OEM projects all pass through the same final QC gate: rated-pressure inflation, the specified hold, inspection, then deflating, cleaning and packaging. Third-party inspection of the process is welcome on any order.',
+        a: 'Yes — catalog SKUs, private label runs and OEM projects with an agreed scope all pass through the same final QC gate: inflation to the test pressure defined in the approved specification, the specified hold, inspection, then deflating, cleaning and packaging. Third-party inspection of the process is welcome on any order.',
       },
     ],
     related: [

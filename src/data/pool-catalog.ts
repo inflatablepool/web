@@ -44,8 +44,6 @@ export interface PoolAccessory {
 
 /** Recommended daily operating pressure */
 export const POOL_OPERATING_PRESSURE = '4–5 PSI';
-/** Factory quality-control test pressure */
-export const POOL_QC_TEST_PRESSURE = '6 PSI';
 /** Maximum pressure tolerance */
 export const POOL_MAX_PRESSURE = '8 PSI';
 /** Pressure-relief valve release threshold */
@@ -53,7 +51,6 @@ export const POOL_RELIEF_VALVE_PRESSURE = '6 PSI';
 
 export const POOL_PRESSURE_SPECS = [
   { label: 'Recommended operating pressure', value: POOL_OPERATING_PRESSURE },
-  { label: 'Factory QC test pressure', value: POOL_QC_TEST_PRESSURE },
   { label: 'Maximum pressure tolerance', value: POOL_MAX_PRESSURE },
   { label: 'Pressure-relief valve auto-release', value: `Above ${POOL_RELIEF_VALVE_PRESSURE}` },
 ];

@@ -197,7 +197,7 @@ export const products: ProductRecord[] = [
     problem:
       'Rigid acrylic or fiberglass hot tubs are expensive to ship and impossible to move, while cheap inflatable spas lose heat fast and offer no seating. Buyers want a genuinely insulated spa that ships flat, retains heat, and still sets up in minutes.',
     howItWorks:
-      'The drop stitch walls inflate rigid at the recommended 4–5 PSI operating pressure (factory QC tested at 6 PSI), while the 5 mm insulated bottom base and built-in seats form a unified spa shell. Standard circulation ports connect plug-and-play to heating units, sand filter pumps, and air bubble massage systems (heating and massage units are sold separately).',
+      'The drop stitch walls inflate rigid at the recommended 4–5 PSI operating pressure, while the 5 mm insulated bottom base and built-in seats form a unified spa shell. Standard circulation ports connect plug-and-play to heating units, sand filter pumps, and air bubble massage systems (heating and massage units are sold separately).',
     audience:
       'Wellness-focused homeowners, glamping and boutique hospitality operators, vacation rental owners, and spa studios that need a movable year-round hot tub.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -210,7 +210,7 @@ export const products: ProductRecord[] = [
       size_range: '1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)',
       seats: 'Built-in integrated inflatable seats',
       bottom: '5 mm insulated thermal bottom base',
-      pressure: '4–5 PSI operating (6 PSI factory QC test)',
+      pressure: '4–5 PSI operating',
       setup: '5–15 minutes with 1000W electric pump',
       compatibility: 'Heating units, sand filter pumps, disinfection, air bubble massage',
     },
@@ -252,7 +252,7 @@ export const products: ProductRecord[] = [
     problem:
       'City balconies and small courtyards cannot fit a standard hot tub, and rigid tubs cannot be shipped or moved affordably. Users in small spaces still want genuine heat-retaining hydrotherapy.',
     howItWorks:
-      'The compact drop stitch shell inflates rigid at the recommended 4–5 PSI operating pressure (factory QC tested at 6 PSI). The 5 mm insulated bottom and built-in seats form a small-footprint spa shell, and standard ports connect to external heaters and filtration systems (heater not included).',
+      'The compact drop stitch shell inflates rigid at the recommended 4–5 PSI operating pressure. The 5 mm insulated bottom and built-in seats form a small-footprint spa shell, and standard ports connect to external heaters and filtration systems (heater not included).',
     audience:
       'Urban homeowners with balconies or small courtyards, athletes using cold plunge recovery, glamping operators, and rental property owners.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -265,7 +265,7 @@ export const products: ProductRecord[] = [
       size_range: 'Ø 1.8 m / Ø 2.0 m / Ø 2.3 m',
       seats: 'Built-in integrated inflatable seats',
       bottom: '5 mm insulated thermal bottom base',
-      pressure: '4–5 PSI operating (6 PSI factory QC test)',
+      pressure: '4–5 PSI operating',
       setup: '5–15 minutes with 1000W electric pump',
       compatibility: 'Heating units, sand filter pumps, disinfection, air bubble massage',
     },
