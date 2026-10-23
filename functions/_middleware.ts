@@ -112,6 +112,8 @@ const ACCEPT_LANG_MAP: Record<string, string> = {
 };
 
 const ASSETS_BASE = 'https://assets.inflatablepoolfactory.com';
+const APEX_HOST = 'inflatablepoolfactory.com';
+const WWW_HOST = `www.${APEX_HOST}`;
 const I18N_EXCLUDED = [
   '/api',
   '/keystatic',
@@ -178,6 +180,11 @@ export const onRequest: (...args: any[]) => any = async (context) => {
   const { request, next } = context;
   const url = new URL(request.url);
   const pathname = url.pathname;
+
+  // Canonical host: keep a single 301 hop and preserve path + query string.
+  if (url.hostname === WWW_HOST) {
+    return setSecurityHeaders(Response.redirect(`https://${APEX_HOST}${pathname}${url.search}`, 301));
+  }
 
   if (shouldRedirectToR2(pathname)) {
     return setSecurityHeaders(Response.redirect(ASSETS_BASE + pathname, 301));
