@@ -236,7 +236,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-third-party-inspection',
     question: 'Can we appoint a third-party inspector?',
     answer:
-      'Yes. Third-party inspection (SGS, Bureau Veritas, TÜV, QIMA and similar) is welcome on any order — during production, at the pressure and leak-test stage, or before container loading.',
+      'Third-party inspection (SGS, Bureau Veritas, TÜV, QIMA and similar) can be arranged for an order — during production, at the pressure and leak-test stage, or before container loading. Scope and timing are confirmed for the project.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],

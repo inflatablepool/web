@@ -82,7 +82,7 @@ export const POOL_PRODUCTION_STEPS: PoolProductionStep[] = [
   {
     title: 'Accessory Integration & Finishing',
     description:
-      'Handles, repair-kit components, and optional covers (e.g. Oxford fabric lids) are fitted, followed by a thorough visual inspection of every seam, valve seal, and dimension for smooth finishes and strict spec adherence.',
+      'Handles, repair-kit components, and optional covers (e.g. Oxford fabric lids) are fitted, followed by visual inspection of seams, valve seals and dimensions against the approved specification.',
   },
   {
     title: 'Pressure & Leak Testing',

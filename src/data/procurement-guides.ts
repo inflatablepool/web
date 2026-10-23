@@ -159,13 +159,13 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 7,
     audience: 'Brand owners, wholesale buyers and product managers evaluating manufacturing models.',
-    tldr: 'OEM means you own the design and the factory builds exactly to your specification. ODM means you start from the manufacturer\'s proven design and apply your branding. OEM gives differentiation and IP ownership at higher cost and a longer development path; ODM can shorten development and reduce risk with less exclusivity. Many successful pool brands launch on ODM, then move their best sellers to OEM.',
+    tldr: 'OEM projects start from your design and the factory builds to your specification; design ownership and exclusivity are defined in the contract. ODM projects start from the manufacturer\'s proven platform and apply your branding. OEM gives differentiation and IP control at higher cost and a longer development path; ODM can shorten development and reduce risk with less exclusivity. Many successful pool brands launch on ODM, then move their best sellers to OEM.',
     sections: [
       {
         heading: 'The Definitions',
         paragraphs: [
-          'OEM (Original Equipment Manufacturer): you bring the design — dimensions, materials, colors, valve layout, packaging — and the factory produces it to your specification. The design is yours; the factory is your production partner.',
-          'ODM (Original Design Manufacturer): the factory offers its own existing designs, and you select, configure and brand them. The underlying design belongs to the manufacturer; your brand owns the customer relationship, the trademark and the market positioning.',
+          'OEM (Original Equipment Manufacturer): you bring the design — dimensions, materials, colors, valve layout, packaging — and the factory produces it to your specification. Design ownership and any exclusivity terms are defined in the project contract; the factory is your production partner.',
+          'ODM (Original Design Manufacturer): the factory offers its own existing designs, and you select, configure and brand them. The manufacturer\'s platform is the starting point; ownership, exclusivity and brand rights are defined in the project contract.',
         ],
       },
       {
@@ -176,7 +176,7 @@ export const procurementGuides: ProcurementGuide[] = [
           'Upfront cost: OEM requires engineering, tooling or patterning work and larger commitments; ODM prices from the existing catalog, with quantity terms confirmed in the quotation (FOB Qingdao).',
           'Development path: ODM starts from an existing platform, while OEM usually needs engineering approval and an applicable sample approval stage first. Production timing is confirmed in the quotation.',
           'Risk: ODM designs are already market-proven and produced at scale; OEM designs carry first-production risk that the applicable approval stage is intended to reduce.',
-          'Differentiation: OEM lets you build a product no competitor can copy; ODM means competing on brand, channel and service rather than product design.',
+          'Differentiation: OEM can support product differentiation through custom design; ODM competes more on brand, channel and service than on product design.',
         ],
       },
       {
@@ -197,7 +197,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'Which Model Should You Choose?',
         paragraphs: [
           'Choose ODM if you are entering the market, testing a channel, or your brand competes on price and availability. Project-specific MOQ, proven designs and a defined startup path can make it a lower-risk route to revenue.',
-          'Choose OEM if you have validated demand and need defensible differentiation — a unique size, a signature look, a feature competitors cannot replicate. Budget for the engineering and sampling cycle, and protect the result with an NDA and design-exclusivity terms.',
+          'Choose OEM if you have validated demand and need defensible differentiation — a unique size, a signature look, a feature that is difficult to replicate. Budget for the engineering and sampling cycle, and protect the result with an NDA and design-exclusivity terms.',
           'The most common pattern is hybrid: launch on ODM to prove the market, then convert your two or three best sellers into OEM designs once volumes justify the investment.',
         ],
       },
@@ -215,7 +215,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Can I get exclusivity on an ODM design?',
-        a: 'Sometimes, by negotiation, typically tied to annual volume commitments. Full exclusivity is cleaner with OEM, where the design is contractually yours. Ask us which ODM SKUs are open for exclusive arrangements in your market.',
+        a: 'Exclusivity is not standard for ODM designs. Any request is reviewed for the specific design and market and confirmed in writing before it is relied on. For OEM projects, design ownership and any exclusivity terms are defined in the project contract.',
       },
       {
         q: 'Does OEM cost more per unit?',
@@ -315,7 +315,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Who owns the brand and listings?',
-        a: 'You do. The factory manufactures; you own the trademark, the marketplace listings, the customer relationship and all market-facing assets. Customer-exclusive designs and colorways are handled under the confidentiality and exclusivity terms agreed for the project.',
+        a: 'Brand ownership and asset allocation are defined in the private-label agreement. In a typical project, the factory manufactures and the buyer owns the trademark, marketplace listings, customer relationship and market-facing assets; the specific terms are confirmed in the project contract. Customer-exclusive designs and colorways are handled under the confidentiality and exclusivity terms agreed for the project.',
       },
     ],
     related: [
@@ -364,8 +364,8 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Seam and Valve Inspection',
         paragraphs: [
-          'Pressure testing is the final gate, but quality is built upstream. During production, inline inspection covers every heat-welded seam and each installed component: the 38 mm filter-pump port, water shut-off valves, over-inflation safety valves and drain valves — all heat-sealed and checked against internal air and water pressure.',
-          'Rail bands — the double and triple-layer reinforced PVC edges on every seam — receive visual inspection for bonding quality, because rails are where high internal pressure concentrates.',
+          'Pressure testing is the final gate, but quality is built upstream. During production, inline inspection covers heat-welded seams and installed components — including the 38 mm filter-pump port, water shut-off valves, over-inflation safety valves and drain valves — against the approved inspection plan.',
+          'Rail bands — the double and triple-layer reinforced PVC edges on seams — receive visual inspection for bonding quality, because rails are where high internal pressure concentrates.',
         ],
       },
       {
