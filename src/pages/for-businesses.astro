@@ -118,8 +118,8 @@ const resources: Array<{ title: string; description: string; href: string }> = [
 
 const metadata = merge(
   {
-    title: `For Businesses | ${SITE.name}`,
-    description: `Inflatable Pool Factory business programs: vacation rental and glamping setups, wholesale, OEM/ODM manufacturing, and private-label pools from our Qingdao factory partner.`,
+    title: `B2B Inflatable Pool Solutions | ${SITE.name}`,
+    description: `Inflatable pool manufacturing, custom product development and private-label solutions for brands, importers, retailers and commercial buyers.`,
     openGraph: { type: 'website' },
   },
   {}
@@ -131,12 +131,27 @@ const metadata = merge(
     <header class="mb-10 md:mb-14 max-w-3xl">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">For Businesses</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        Inflatable Pool Factory for Business Projects
+        B2B Inflatable Pool Solutions for Brands and Commercial Buyers
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium leading-relaxed">
-        The same drop-stitch platform behind our retail pools powers rental fleets, retail programs, and custom brand
-        production. Four ways to work with us — pick the track that matches your project.
+        We support B2B buyers seeking inflatable swimming pool manufacturing, custom product development and
+        private-label solutions. Whether you are developing a new product, expanding an existing range or sourcing for a
+        commercial project, our team can review your requirements and discuss the appropriate manufacturing approach.
       </p>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm">
+        {
+          [
+            'OEM and ODM manufacturing',
+            'Custom product development',
+            'Private-label and packaging options',
+            'Product sourcing for commercial applications',
+          ].map((item) => (
+            <span class="inline-flex items-center rounded-full bg-sky-50 dark:bg-sky-900/40 px-3 py-1.5 font-medium text-sky-700 dark:text-sky-300">
+              {item}
+            </span>
+          ))
+        }
+      </div>
     </header>
 
     <div class="grid gap-6 md:grid-cols-2">
@@ -224,6 +239,47 @@ const metadata = merge(
                 <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
               </span>
             </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Procurement FAQ -->
+    <div class="mt-14">
+      <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+        Common procurement questions
+      </h2>
+      <div class="space-y-3">
+        {
+          [
+            {
+              q: 'Which types of buyers do you work with?',
+              a: 'Brand owners, private-label companies, importers, distributors, retailers, e-commerce sellers, hotels, resorts, rental operators and commercial project teams.',
+            },
+            {
+              q: 'Can you support both standard products and custom projects?',
+              a: 'Yes. You can start from our standard drop-stitch collections or discuss custom sizes, colors, branding and packaging. The applicable OEM or ODM scope is confirmed after we review your requirements.',
+            },
+            {
+              q: 'What should we include in an initial inquiry?',
+              a: 'Your buyer type, product type or reference product, target dimensions, estimated quantity, target market and any branding or packaging requirements. Drawings and reference images are welcome.',
+            },
+            {
+              q: 'How do we start a project?',
+              a: 'Submit the RFQ form or email our team. We will review the brief, confirm the next steps and identify any technical details needed before quotation.',
+            },
+          ].map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
           ))
         }
       </div>

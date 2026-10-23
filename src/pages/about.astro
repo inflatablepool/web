@@ -9,10 +9,10 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import { SITE } from 'astrowind:config';
+import facts from '~/config/facts.json';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import { pageContentData } from '~/i18n/generated/site-data';
 import __pageData from '~/i18n/generated/pages/about.ts';
-import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
 const lang = 'en';
@@ -40,11 +40,8 @@ const philosophy = about.philosophy || {};
 const design = about.design || {};
 
 const metadata = {
-  title: localizePageTitle(page, `About ${SITE.name} — Inflatable Swimming Pool Manufacturer`),
-  description: localizePageDescription(
-    page,
-    `${SITE.name} designs and manufactures premium drop stitch inflatable swimming pools — rigid, durable, and easy to store. Learn our story and design principles.`
-  ),
+  title: `About ${SITE.name} & ${facts.brand.legalName}`,
+  description: `Drop stitch inflatable pool brand by the Inflatable Pool Team at ${facts.brand.legalName}. Learn who we are, what we build and how we work with B2B buyers.`,
   openGraph: {
     type: 'website',
     ...(hero?.image?.src ? { images: [{ url: hero.image.src, width: 1200, height: 630 }] } : {}),
@@ -58,6 +55,58 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: '/' }, { name: 'About' }]
   <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
 
   <Stats title={stats.title} stats={stats.stats} />
+
+  <!-- Entity clarity for buyers, search engines and AI systems. -->
+  <section class="max-w-6xl mx-auto py-16 px-6" id="company">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Company &amp; Manufacturing Entity</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          Who is behind Inflatable Pool Factory?
+        </h2>
+        <p class="mt-5 text-gray-600 dark:text-slate-400 leading-relaxed">
+          Inflatable Pool Factory is the pool brand of the Inflatable Pool Team at {facts.brand.legalName}. The team
+          works from Qingdao, Shandong, China, supporting sales, partner inquiries and order coordination for
+          drop-stitch inflatable pools.
+        </p>
+        <p class="mt-4 text-gray-600 dark:text-slate-400 leading-relaxed">
+          We work with retail customers and B2B partners, including brands, importers, distributors, retailers and
+          commercial projects. For each order, the contracting entity, production location and shipping terms are stated
+          in the quotation.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 text-sm">
+          <a href="/oem-odm" class="font-semibold text-primary dark:text-sky-400 hover:underline"
+            >OEM / ODM manufacturing</a
+          >
+          <a href="/manufacturing" class="font-semibold text-primary dark:text-sky-400 hover:underline"
+            >Manufacturing process</a
+          >
+          <a href="/contact" class="font-semibold text-primary dark:text-sky-400 hover:underline">Contact the team</a>
+        </div>
+      </div>
+      <dl class="grid sm:grid-cols-2 gap-4">
+        {
+          [
+            { term: 'Brand', detail: facts.brand.name },
+            { term: 'Operated by', detail: facts.brand.operator },
+            { term: 'Legal entity', detail: facts.brand.legalName },
+            { term: 'Location', detail: `${facts.office.city}, ${facts.office.province}, China` },
+            { term: 'Business focus', detail: 'Drop-stitch pool manufacturing, OEM/ODM and private label' },
+            { term: 'Website', detail: 'inflatablepoolfactory.com' },
+            { term: 'Email', detail: facts.contact.email },
+            { term: 'Phone', detail: facts.contact.primaryPhone },
+          ].map((item) => (
+            <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                {item.term}
+              </dt>
+              <dd class="mt-1 text-sm font-medium text-gray-900 dark:text-slate-200 break-words">{item.detail}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
 
   <!-- Origin Story -->
   <section class="max-w-6xl mx-auto py-24 px-6">

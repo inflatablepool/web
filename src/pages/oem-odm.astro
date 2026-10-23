@@ -2,7 +2,6 @@
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
-import { SITE } from 'astrowind:config';
 import { getCanonical } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
@@ -10,8 +9,8 @@ export const prerender = true;
 
 const metadata = merge(
   {
-    title: `Inflatable Pool OEM/ODM Manufacturer | ${SITE.name}`,
-    description: `OEM/ODM inflatable pool manufacturing by Inflatable Pool Factory — custom sizes, colors, logo printing, covers and retail packaging. 48 standard SKUs plus full custom engineering. Request a quote.`,
+    title: `Custom Inflatable Pool OEM/ODM Manufacturer`,
+    description: `Develop custom inflatable pools with tailored specifications, branding and packaging options. Discuss your OEM or ODM project with our team.`,
     canonical: getCanonical('/oem-odm'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -60,6 +59,79 @@ const capabilities = [
   },
 ];
 
+const manufactureCategories = [
+  {
+    title: 'Rectangular Drop-Stitch Pools',
+    description:
+      'Straight-sided pools for family swimming and larger outdoor spaces, available in standard sizes and project-specific dimensions.',
+    href: '/products/rectangular-drop-stitch-pool',
+  },
+  {
+    title: 'Round Drop-Stitch Pools',
+    description:
+      'Classic round pools in blue or grey finishes, with optional fitted covers and branding options for retail or commercial programs.',
+    href: '/products/round-blue-drop-stitch-pool',
+  },
+  {
+    title: 'SPA & Hot Tub Models',
+    description:
+      'Round and square SPA tubs with built-in seats and insulated bottoms for soaking applications. External heating and filtration are specified separately.',
+    href: '/products/hot-tub-round',
+  },
+  {
+    title: 'Covers, Accessories & Packaging',
+    description:
+      'Fitted covers, pumps, repair kits, valves, cartons and retail packaging can be specified alongside your pool order.',
+    href: '/products/specs',
+  },
+];
+
+const oemVsOdm = [
+  {
+    label: 'Product specification',
+    oem: 'You provide approved drawings, a specification or a reference sample.',
+    odm: 'You share the target market and requirements; we review whether a standard platform, modification or development scope fits.',
+  },
+  {
+    label: 'Design responsibility',
+    oem: 'Your design; we manufacture to the agreed specification.',
+    odm: 'Any design, engineering or development work is defined in writing before quotation and production.',
+  },
+  {
+    label: 'Branding & packaging',
+    oem: 'Logo, colors, covers and packaging are specified in the approved brief.',
+    odm: 'Branding and packaging can be included where they fall within the agreed project scope.',
+  },
+  {
+    label: 'Best suited for',
+    oem: 'Buyers with a defined product or an existing design.',
+    odm: 'Buyers who need a modified platform or want to discuss a development project.',
+  },
+];
+
+const buyerFaqs = [
+  {
+    question: 'Can you manufacture to our drawings?',
+    answer:
+      'Share your drawings, reference sample or target specification. We review the requirement, confirm whether the project fits an OEM or ODM path, and identify any technical details needed before quoting.',
+  },
+  {
+    question: 'What determines MOQ and production lead time?',
+    answer:
+      'MOQ and production lead time depend on the product platform, customization level, order volume and production season. Final terms are confirmed in your project quotation.',
+  },
+  {
+    question: 'What is the difference between OEM and ODM here?',
+    answer:
+      'OEM means we manufacture to your approved specification. ODM means we review a product requirement and confirm whether an existing platform or a development scope can meet it. The exact scope is defined in writing before work begins.',
+  },
+  {
+    question: 'What should we prepare before requesting a quote?',
+    answer:
+      'Product type or reference product, target dimensions, material or performance requirements, logo and packaging requirements, estimated quantity, target market and expected delivery date.',
+  },
+];
+
 const commercialTerms = [
   {
     title: 'Minimum order quantities',
@@ -80,6 +152,7 @@ const commercialTerms = [
 ];
 
 const quoteChecklist = [
+  'Product type or reference product: rectangular, round, SPA or a custom configuration.',
   'Target dimensions: length × width × outer wall height (or internal water depth goal).',
   'Estimated order quantity: initial sample request plus projected mass production volume.',
   'Branding requirements: number of logo colors, logo placement locations, and preferred EVA deck pad texture.',
@@ -127,11 +200,12 @@ const process = [
         OEM / ODM Manufacturing
       </p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        Custom Inflatable Pools for Brands &amp; Business Partners
+        Custom Inflatable Pool Manufacturing for Your Brand
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Inflatable Pool Factory manufactures drop-stitch inflatable pools to your specification — custom sizes, colors,
-        logo printing, covers and retail packaging, produced at our Qingdao factory and shipped worldwide.
+        We support OEM and ODM projects for brands, importers, retailers and commercial buyers — from standard
+        drop-stitch platforms with your branding to project-specific sizes, covers and packaging. Share your
+        requirements and we will confirm the appropriate route before quotation.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
@@ -164,6 +238,30 @@ const process = [
     </div>
 
     <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">What We Manufacture</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Our core program covers drop-stitch pools and SPA tubs. Use the standard collections as a starting point, or
+        discuss a project-specific configuration with our team.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          manufactureCategories.map((category) => (
+            <a
+              href={category.href}
+              class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+            >
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{category.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{category.description}</p>
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                View product range <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
         How an OEM/ODM Project Runs
       </h2>
@@ -184,6 +282,36 @@ const process = [
           ))
         }
       </ol>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">OEM vs. ODM</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        OEM and ODM are different starting points, not interchangeable labels. We confirm the applicable path and the
+        design/development boundary in writing before quotation.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[640px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Project element</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">OEM</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">ODM</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              oemVsOdm.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top">{row.label}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.oem}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.odm}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="mb-14 grid md:grid-cols-2 gap-4">
@@ -276,6 +404,30 @@ const process = [
           ))
         }
       </ul>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">OEM/ODM Buyer FAQ</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Direct answers to the questions buyers ask before sharing drawings or requesting samples.
+      </p>
+      <div class="space-y-3">
+        {
+          buyerFaqs.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.question}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.answer}
+              </div>
+            </details>
+          ))
+        }
+      </div>
     </section>
 
     <section class="mb-6">

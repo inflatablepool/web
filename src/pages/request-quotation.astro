@@ -1,10 +1,12 @@
 ---
 import Steps2 from '~/components/widgets/Steps2.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Content from '~/components/widgets/Content.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/request-quotation.ts';
 
@@ -14,15 +16,27 @@ const page = getPageContent(lang, 'request-quotation');
 
 const hero = page.hero_text ?? {};
 const process = page.steps2_process ?? {};
-const content = page.content_form ?? {};
+const form = page.content_form ?? {};
+const faq = page.faq ?? {};
 const cta = page.cta ?? {};
 const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
 
 const metadata = {
-  title: `Request a Quotation — ${SITE.name}`,
-  description: hero.subtitle || '',
-};
+  title: 'Request an Inflatable Pool OEM/ODM Quote',
+  description:
+    'Share your product specifications, customization requirements and estimated order quantity to start an inflatable pool OEM or ODM inquiry.',
+  canonical: getCanonical('/request-quotation'),
+  openGraph: { type: 'website' },
+} as MetaData;
 const crumbs = [{ name: 'Home', href: '/' }, { name: 'Request Quotation' }];
+
+const consent = {
+  required: true,
+  text: 'I agree to the processing of my personal data in accordance with the',
+  link_text: 'Privacy Policy',
+  link_href: '/privacy',
+  error_message: 'Please confirm that you accept the Privacy Policy before submitting.',
+};
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -34,6 +48,33 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Request Quotation' }];
     items={process.items}
     image={process.image}
   />
-  <Content tagline={content.tagline} title={content.title} subtitle={content.subtitle} content={content.content} />
+  <ContactUs
+    id={form.id || 'rfq'}
+    tagline={form.tagline}
+    title={form.title}
+    subtitle={form.subtitle}
+    emailTo={form.email_to || 'info@inflatablepoolfactory.com'}
+    emailSubject={form.email_subject || 'OEM/ODM quotation request'}
+    submitButton={form.submit_button || 'Submit Project RFQ'}
+    successMessage={form.success_message}
+    errorMessage={form.error_message}
+    fields={form.fields ?? []}
+    consent={consent}
+    defaultCountryCode={form.default_country_code || '+86'}
+    enableFileUpload={true}
+    fileLabel="Drawing / reference upload (optional)"
+    fileHint="Spec sheet, drawing, reference image or packaging artwork — PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP, up to 20 MB."
+  />
+  <FAQs title={faq.title} subtitle={faq.subtitle} columns={faq.columns} items={faq.items} />
   <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline>
+    (() => {
+      const product = new URLSearchParams(window.location.search).get('product');
+      if (!product) return;
+      const message = document.getElementById('rfq-message');
+      if (message instanceof HTMLTextAreaElement && !message.value.trim()) {
+        message.value = `Product of interest: ${product}\n`;
+      }
+    })();
+  </script>
 </Layout>

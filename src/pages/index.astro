@@ -10,7 +10,6 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import Icon from '~/components/ui/Icon.astro';
-import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/home.ts';
@@ -24,11 +23,17 @@ const page = getPageContent(lang, 'home');
 
 const hero = page.hero ?? {};
 const stats = page.stats ?? {};
+const categories = page.content_categories ?? {};
+const capabilities = page.oem_capabilities ?? {};
+const manufacturing = page.manufacturing_process ?? {};
+const quality = page.quality_control ?? {};
+const industries = page.industries ?? {};
+const project = page.project_development ?? {};
+const b2bFaqs = page.b2b_faqs ?? {};
+const consumerIntro = page.consumer_intro ?? {};
 const compareCollections = page.compare_collections ?? {};
 const customerTypes = page.content_customer_types ?? {};
 const features = page.features ?? {};
-const categories = page.content_categories ?? {};
-const workshop = page.content_workshop ?? {};
 const compliance = page.content_compliance ?? {};
 const steps = page.steps ?? {};
 const faqs = page.faqs ?? {};
@@ -45,10 +50,19 @@ const customerItems = (customerTypes.items ?? []).map(
   })
 );
 
+const industryItems = (industries.items ?? []).map(
+  (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
+    title: item.title,
+    description: item.description,
+    icon: item.icon,
+    callToAction: item.cta ? { text: item.cta, href: item.cta_href, icon: 'tabler:arrow-right' } : undefined,
+  })
+);
+
 const metadata = {
-  title: `Premium Drop Stitch Inflatable Pools | ${SITE.name}`,
+  title: `Inflatable Pool Manufacturer | OEM & ODM Solutions`,
   description:
-    'Inflatable Pool Factory premium drop stitch inflatable pools — rigid walls, fast setup, and easy storage for backyards and outdoor spaces. Compare sizes and find your pool.',
+    'Explore OEM and ODM inflatable pool manufacturing, product customization and private-label options for brands, importers and commercial buyers.',
 };
 ---
 
@@ -67,14 +81,119 @@ const metadata = {
 
   <Stats title={stats.title} stats={stats.stats} />
 
+  <!-- Product categories: the fastest route from manufacturer positioning to real products. -->
+  {
+    poolProducts.length > 0 && (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+        <div class="text-center mb-8">
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+            {categories.tagline || t('product.catalog') || 'Product Categories'}
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">
+            {categories.title || 'Inflatable Pools We Manufacture'}
+          </h2>
+          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+            {categories.subtitle || ''}
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          {poolProducts.map((p) => (
+            <ProductCard product={p} lang={lang} />
+          ))}
+        </div>
+        <div class="mt-8 text-center">
+          <a
+            href="/products"
+            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+          >
+            <Icon name="tabler:pool" class="w-4 h-4" />
+            View All Pools
+          </a>
+        </div>
+      </section>
+    )
+  }
+
   <Features2
-    id={features.id}
-    tagline={features.tagline}
-    title={features.title}
-    subtitle={features.subtitle}
-    columns={3}
-    items={features.items}
+    tagline={capabilities.tagline}
+    title={capabilities.title}
+    subtitle={capabilities.subtitle}
+    columns={2}
+    items={capabilities.items}
   />
+  {
+    capabilities.cta?.href && (
+      <div class="max-w-7xl mx-auto px-4 md:px-6 -mt-8 pb-10 text-center">
+        <a
+          href={capabilities.cta.href}
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          {capabilities.cta.text}
+          <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    )
+  }
+
+  <Steps2
+    tagline={manufacturing.tagline}
+    title={manufacturing.title}
+    subtitle={manufacturing.subtitle}
+    items={manufacturing.items}
+    callToAction={manufacturing.cta}
+  />
+
+  <Features2
+    tagline={quality.tagline}
+    title={quality.title}
+    subtitle={quality.subtitle}
+    columns={4}
+    items={quality.items}
+  />
+  {
+    quality.cta?.href && (
+      <div class="max-w-7xl mx-auto px-4 md:px-6 -mt-8 pb-10 text-center">
+        <a
+          href={quality.cta.href}
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          {quality.cta.text}
+          <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    )
+  }
+
+  <Features2
+    tagline={industries.tagline}
+    title={industries.title}
+    subtitle={industries.subtitle}
+    columns={4}
+    items={industryItems}
+  />
+
+  <Steps2
+    tagline={project.tagline}
+    title={project.title}
+    subtitle={project.subtitle}
+    items={project.items}
+    callToAction={project.cta}
+  />
+
+  <FAQs title={b2bFaqs.title} subtitle={b2bFaqs.subtitle} columns={b2bFaqs.columns} items={b2bFaqs.items} />
+
+  <!-- Consumer content remains available below the B2B decision path. -->
+  <section class="px-4 sm:px-6 mx-auto max-w-6xl">
+    <div
+      class="rounded-3xl border border-gray-200 dark:border-slate-700 bg-gray-50/60 dark:bg-slate-900/40 px-6 py-8 text-center"
+    >
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        {consumerIntro.tagline}
+      </p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight font-heading">{consumerIntro.title}</h2>
+      <p class="mt-3 text-muted dark:text-slate-400 max-w-3xl mx-auto">{consumerIntro.subtitle}</p>
+    </div>
+  </section>
 
   {
     compareCollections.rows ? (
@@ -128,45 +247,21 @@ const metadata = {
   }
 
   <Features2
+    id={features.id}
+    tagline={features.tagline}
+    title={features.title}
+    subtitle={features.subtitle}
+    columns={3}
+    items={features.items}
+  />
+
+  <Features2
     tagline={customerTypes.tagline}
     title={customerTypes.title}
     subtitle={customerTypes.subtitle}
     columns={3}
     items={customerItems}
   />
-
-  <!-- Product highlights -->
-  {
-    poolProducts.length > 0 && (
-      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
-        <div class="text-center mb-8">
-          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
-            {categories.tagline || t('product.catalog') || 'Shop Pools'}
-          </p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">
-            {categories.title || 'Explore Our Pools'}
-          </h2>
-          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
-            {categories.subtitle || ''}
-          </p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-3">
-          {poolProducts.map((p) => (
-            <ProductCard product={p} lang={lang} />
-          ))}
-        </div>
-        <div class="mt-8 text-center">
-          <a
-            href="/products"
-            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
-          >
-            <Icon name="tabler:pool" class="w-4 h-4" />
-            View All Pools
-          </a>
-        </div>
-      </section>
-    )
-  }
 
   <Steps2 title={steps.title} items={steps.items} image={steps.image} />
 
@@ -179,39 +274,6 @@ const metadata = {
   />
 
   <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
-
-  <!-- For Businesses band -->
-  {
-    workshop.title ? (
-      <section class="px-4 py-12 sm:px-6 mx-auto max-w-7xl bg-gray-50/50 dark:bg-slate-900/40 rounded-3xl">
-        <div class="text-center max-w-3xl mx-auto mb-10">
-          {workshop.tagline && (
-            <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
-              {workshop.tagline}
-            </p>
-          )}
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading" set:html={workshop.title} />
-        </div>
-        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {(workshop.items ?? []).map((item: { title: string; description: string }) => (
-            <div class="p-6 rounded-2xl bg-white dark:bg-slate-800/60 border border-gray-100 dark:border-slate-700">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100">{item.title}</h3>
-              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
-            </div>
-          ))}
-        </div>
-        <div class="mt-8 text-center">
-          <a
-            href="/for-businesses"
-            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
-          >
-            Explore Business Solutions
-            <Icon name="tabler:arrow-right" class="w-4 h-4" />
-          </a>
-        </div>
-      </section>
-    ) : null
-  }
 
   {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>

@@ -1,76 +1,120 @@
 hero_text:
-  tagline: Get a Quote
-  title: 'Request a Quotation<br />for Your Pool Order'
-  subtitle: 'Tell us about your requirements and our team will respond with a detailed quotation within 2 business days.'
+  tagline: OEM / ODM Quote
+  title: 'Request an Inflatable Pool<br />OEM/ODM Quote'
+  subtitle: |
+    Share your product requirements, estimated order quantity and target market. Our team will review the information and determine the next steps for product selection, customization or manufacturing quotation.<br />
+    If you have technical drawings, reference photos or packaging requirements, include them with your inquiry.
 steps2_process:
   title: How It Works
   subtitle: 'Four simple steps from inquiry to quotation.'
   items:
     - title: 'Step 1: Submit Your Requirements'
-      description: 'Fill out the form below with your pool type, size, and quantity. The more detail you provide, the more accurate your quotation.'
+      description: 'Fill out the form below with your buyer type, product type, quantity, customization level and target market. The more detail you provide, the more accurate your quotation.'
       icon: tabler:file-text
     - title: 'Step 2: We Review & Advise'
-      description: 'Our team reviews your requirements and may contact you for clarification. We provide recommendations on sizes, colors, and accessories.'
+      description: 'Our team reviews your requirements and may contact you for clarification. We provide recommendations on sizes, colors, accessories and the appropriate OEM or ODM path.'
       icon: tabler:users
     - title: 'Step 3: Receive Your Quote'
-      description: 'You receive a detailed quotation including unit pricing, lead time, payment terms, and shipping options. Typically within 48 hours.'
+      description: 'You receive a detailed quotation covering the agreed scope, unit pricing, lead time, payment terms and shipping options. We review the requirements and reply with the next steps; complex projects may require technical clarification.'
       icon: tabler:currency-dollar
     - title: 'Step 4: Order & Delivery'
       description: 'After quote acceptance, we arrange production and shipping. Regular updates throughout the process.'
       icon: tabler:truck-delivery
 content_form:
-  tagline: Quotation Form
-  title: 'Tell Us What You Need'
-  subtitle: 'All fields with * are required.'
+  id: rfq
+  tagline: Project RFQ
+  title: 'Tell Us About Your Inflatable Pool Project'
+  subtitle: 'Fields marked * are required. If a detail is not confirmed yet, enter “TBD” and our team will follow up.'
+  email_to: info@inflatablepoolfactory.com
+  email_subject: OEM/ODM quotation request
+  submit_button: 'Submit Project RFQ'
+  success_message: 'Thanks — your project brief has been received. Our team will review it and reply with the next steps.'
+  error_message: 'Something went wrong sending your RFQ. Please try again or email us directly at info@inflatablepoolfactory.com.'
+  default_country_code: '+86'
   fields:
-    - name: Pool Type
+    - name: firstName
+      label: First Name
+      row: 1
+      type: text
+      required: true
+    - name: lastName
+      label: Last Name
+      row: 1
+      type: text
+      required: true
+    - name: email
+      label: Business Email
+      row: 2
+      type: email
+      required: true
+    - name: companyName
+      label: Company Name
+      row: 2
+      type: text
+      required: true
+    - name: buyerType
+      label: Buyer Type
+      row: 3
       type: select
+      required: true
+      placeholder: Select buyer type
       options:
-        - Rectangular Drop Stitch Pool
-        - Round Drop Stitch Pool (Blue)
-        - Round Drop Stitch Pool (Grey)
-        - Round Pool with Cover
-        - Custom OEM/ODM
-    - name: Pool Size
-      type: text
-      placeholder: e.g. 4 m x 2.5 m x 1.2 m, or diameter 3 m
-    - name: Quantity
-      type: text
-      placeholder: e.g. 50 units
-    - name: Target Market
-      type: text
-      placeholder: e.g. Europe, North America, Middle East
-    - name: Delivery Country
-      type: text
-      placeholder: e.g. Italy, UAE, USA, Australia
-    - name: Color / Finish
+        - Brand Owner / Private Label
+        - Importer / Distributor
+        - Retailer / E-commerce
+        - Hotel / Resort / Hospitality
+        - Commercial Project
+        - Other
+    - name: productType
+      label: Product Type
+      row: 3
       type: select
+      required: true
+      placeholder: Select product type
       options:
-        - No Preference
-        - Blue
-        - Grey
-        - Custom Color
-    - name: Cover Needed
+        - Rectangular Drop-Stitch Pool
+        - Round Pool (Blue)
+        - Round Pool (Grey)
+        - SPA / Hot Tub
+        - Custom OEM / ODM
+        - Not Sure Yet
+    - name: quantity
+      label: Estimated Quantity
+      row: 4
+      type: text
+      required: true
+      placeholder: e.g. 50 units, or TBD
+    - name: customizationLevel
+      label: Customization Level
+      row: 4
       type: select
+      required: true
+      placeholder: Select customization level
       options:
-        - Yes
-        - No
-        - Not sure
-    - name: Customization Required
+        - Standard Product
+        - Logo / Branding Only
+        - Custom Sizes, Colors or Packaging
+        - ODM / Product Development
+        - Not Sure Yet
+    - name: country
+      label: Country / Target Market
+      row: 5
       type: text
-      placeholder: e.g. custom colors, branding/logo, packaging, special fittings
-    - name: Timeline
+      required: true
+      placeholder: e.g. Germany, UAE, USA
+    - name: targetDelivery
+      label: Target Delivery Date
+      row: 5
       type: text
-      placeholder: e.g. delivery within 90 days
-    - name: Additional Requirements
+      required: false
+      placeholder: e.g. Q2 2027, or TBD
+    - name: message
+      label: Project Brief
+      row: 6
       type: textarea
-      placeholder: Describe your application, technical specifications, or any special requirements
-    - name: Upload Specification
-      type: file
-      placeholder: Upload your spec sheet, drawing, or reference document (PDF, images)
-    - name: Upload Logo / Artwork
-      type: file
-      placeholder: Upload your logo or artwork for custom branding (AI, EPS, PNG)
+      required: false
+      rows: 5
+      placeholder: Product dimensions, materials, branding, packaging and any other requirements...
 
 content_rfq_types:
   tagline: 3-Tier RFQ System
@@ -276,9 +320,27 @@ form_project:
       required: false
       placeholder: Describe your project and any specific requirements...
 
+faq:
+  title: 'Quotation FAQ'
+  subtitle: 'What to expect before and after you submit your project brief.'
+  columns: 2
+  items:
+    - title: 'What information is needed for an accurate quotation?'
+      description: 'Product type or reference product, target dimensions, materials or performance requirements, branding and packaging needs, estimated quantity, target market and delivery date. If a detail is still open, enter “TBD”.'
+      icon: tabler:file-invoice
+    - title: 'How long does it take to receive a quote?'
+      description: 'Quotation timing depends on the product scope and technical details. We review each request and reply with the next steps, including any clarification needed before pricing.'
+      icon: tabler:clock
+    - title: 'Can I upload drawings or reference images?'
+      description: 'Yes. Use the optional attachment field to upload a spec sheet, drawing, reference image or packaging artwork. Accepted formats include PDF, PNG, JPG, WebP, AI, PSD, DWG, DXF and ZIP, up to 20 MB.'
+      icon: tabler:paperclip
+    - title: 'Does submitting an RFQ create an order?'
+      description: 'No. The RFQ starts a project discussion. Commercial terms, samples, tooling and production are only confirmed after both sides agree in writing.'
+      icon: tabler:checklist
+
 cta:
   title: 'Prefer to discuss by email?'
-  subtitle: 'Send your inquiry directly to our team at info@inflatablepoolfactory.com and we will respond within 24 hours.'
+  subtitle: 'Send your inquiry directly to our team at info@inflatablepoolfactory.com and we will review it and reply with the next steps.'
   actions:
     - variant: primary
       text: Email us directly

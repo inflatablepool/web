@@ -1,21 +1,18 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: 'OEM / ODM Inflatable Pool Manufacturing'
+  title: 'Custom Inflatable Pool Manufacturer<br />for Brands & Businesses'
   subtitle: |
-    Premium pools with rigid drop-stitch walls that inflate in minutes and pack away for winter — designed for backyard relaxation and family fun.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed by the Inflatable Pool Team at Qingdao Vatrad Group.
+    OEM and ODM manufacturing for inflatable swimming pools, with tailored product development, private-label options and manufacturing support for global B2B buyers.<br />
+    From the Inflatable Pool Team at Qingdao Vatrad Group — based in Qingdao, China.<br />
+    Homeowners can still explore our standard pool collections further down the page.
   actions:
     - variant: primary
-      text: Shop Pools
-      href: /products
-      icon: tabler:pool
-    - text: Find Your Pool
-      href: /find-your-pool
-      icon: tabler:compass
-    - text: For Business
-      href: /for-businesses
-      icon: tabler:briefcase
+      text: Request an OEM Quote
+      href: /request-quotation
+      icon: tabler:file-invoice
+    - text: Explore Our Manufacturing
+      href: /manufacturing
+      icon: tabler:building-factory
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Inflatable Pool Factory rectangular drop stitch inflatable swimming pool in a backyard
@@ -26,21 +23,15 @@ stats:
   stats:
     - title: Pool Collections
       amount: '4'
-    - title: Pool Sizes
+    - title: Standard SKUs
+      amount: '48'
+    - title: Size Range
       amount: 2-10 m
-    - title: Time to Inflate
-      amount: '5-15 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
-      amount: 2-Year Limited
-    - title: Custom Sizes
-      amount: Available
-    - title: Contact
-      amount: info@inflatablepoolfactory.com
+    - title: Factory Base, China
+      amount: Qingdao
 
 compare_collections:
-  tagline: Compare Collections
+  tagline: Compare Standard Collections
   title: 'Four Collections,<br />One Clear Choice'
   subtitle: 'Sizes and best uses at a glance — full specifications live on each product page.'
   headers:
@@ -129,9 +120,154 @@ content_customer_types:
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
+  tagline: Product Categories
+  title: 'Inflatable Pools We Manufacture'
+  subtitle: 'Start from our standard drop-stitch collections, or review custom sizes and branding options for your market.'
+
+oem_capabilities:
+  tagline: OEM / ODM Capabilities
+  title: 'What We Can Customize'
+  subtitle: 'Bring a product requirement, a reference model or an existing design. We will confirm the applicable OEM or ODM path and the details needed for quotation.'
+  columns: 2
+  items:
+    - title: 'Custom Sizes & Structures'
+      description: 'Standard round, rectangular and SPA collections plus project-specific dimensions and wall thickness options, subject to engineering review.'
+      icon: tabler:ruler-2
+    - title: 'Colors, Materials & Branding'
+      description: 'Pool and rail colorways, logo placement, covers and selected material options for your brand or market.'
+      icon: tabler:palette
+    - title: 'Packaging & Accessories'
+      description: 'Retail-ready cartons, labels, manuals, pumps, repair kits and covers — specified to match your sales channel.'
+      icon: tabler:package
+    - title: 'OEM / ODM Project Support'
+      description: 'Share drawings, a reference product or target specifications. We confirm scope, samples and commercial terms before production.'
+      icon: tabler:tools
+  cta:
+    text: 'Explore OEM / ODM Capabilities'
+    href: /oem-odm
+
+manufacturing_process:
+  tagline: Manufacturing
+  title: 'From Brief to Container'
+  subtitle: 'A controlled project flow from requirement review to inspection and dispatch at our Qingdao operation. Final process details are agreed in your project specification.'
+  items:
+    - title: 'Requirement Review'
+      description: 'We review your product type, dimensions, target market and customization needs, then confirm the appropriate OEM or ODM route.'
+      icon: tabler:clipboard-text
+    - title: 'Engineering & Quotation'
+      description: 'Specifications, materials, branding and packaging are defined; commercial terms, samples and lead times are confirmed in the quotation.'
+      icon: tabler:ruler-measure
+    - title: 'Sample & Approval'
+      description: 'A sample is prepared against the agreed specification for your review before mass production is released.'
+      icon: tabler:checkup-list
+    - title: 'Production & In-Process Checks'
+      description: 'Cutting, welding, valve installation and assembly follow the approved specification, with checks at defined stages.'
+      icon: tabler:building-factory
+    - title: 'Inspection & Dispatch'
+      description: 'Finished units are inspected against the agreed plan, packed to the approved packing list and prepared for shipment.'
+      icon: tabler:package-export
+  cta:
+    text: 'See the Manufacturing Process'
+    href: /manufacturing
+
+quality_control:
+  tagline: Quality Control
+  title: 'Checks That Reduce Your Procurement Risk'
+  subtitle: 'Inspection requirements are agreed per product and project. Our quality-control process covers materials, workmanship, valves and final packing.'
+  columns: 4
+  items:
+    - title: 'Incoming Material Checks'
+      description: 'Fabric, valves and components are checked against the approved specification before production.'
+      icon: tabler:package-import
+    - title: 'In-Process Inspection'
+      description: 'Seams, reinforced rails, valves and key dimensions are checked at defined production stages.'
+      icon: tabler:search
+    - title: 'Pressure & Leak Testing'
+      description: 'The applicable test pressure, hold time and acceptance criteria are confirmed in the product inspection plan.'
+      icon: tabler:gauge
+    - title: 'Final Packing Checks'
+      description: 'Accessories, manuals and carton contents are verified against the packing list before dispatch.'
+      icon: tabler:package-export
+  cta:
+    text: 'Review Quality Control'
+    href: /quality-control
+
+industries:
+  tagline: Who We Work With
+  title: 'Built for B2B Buyers'
+  subtitle: 'Choose the path that matches your role in the supply chain.'
+  columns: 4
+  items:
+    - title: 'Brands & Private Label'
+      description: 'Develop or adapt a pool program under your own brand, with logo, packaging and documentation options confirmed per project.'
+      icon: tabler:tag
+      cta: 'Private Label'
+      cta_href: /private-label
+    - title: 'Importers & Distributors'
+      description: 'Review standard collections, specifications and FOB pricing, then discuss volume and market requirements with our team.'
+      icon: tabler:ship
+      cta: 'Wholesale Program'
+      cta_href: /wholesale
+    - title: 'Retailers & E-commerce'
+      description: 'Source retail-ready pools and packaging for garden, pool and online channels.'
+      icon: tabler:building-store
+      cta: 'Business Overview'
+      cta_href: /for-businesses
+    - title: 'Hotels, Resorts & Commercial'
+      description: 'Discuss pool selection and project support for hospitality, rental and commercial applications.'
+      icon: tabler:building-community
+      cta: 'Commercial Pools'
+      cta_href: /commercial-pools
+
+project_development:
+  tagline: Project Development
+  title: 'How a Custom Project Moves Forward'
+  subtitle: 'A clear path from first inquiry to production, with the scope and responsibilities documented at each stage.'
+  items:
+    - title: 'Share Your Brief'
+      description: 'Product type, target dimensions, estimated quantity, target market and any drawings or reference photos.'
+      icon: tabler:file-text
+    - title: 'Feasibility & Scope'
+      description: 'We review the requirement and confirm whether it fits a standard platform, an OEM modification or an ODM development path.'
+      icon: tabler:search
+    - title: 'Sample & Approval'
+      description: 'Sampling requirements, approval criteria and any tooling or development costs are confirmed before work begins.'
+      icon: tabler:checkup-list
+    - title: 'Production & Delivery'
+      description: 'After approval, production, inspection, packing and shipping are scheduled against the agreed quotation.'
+      icon: tabler:truck-delivery
+  cta:
+    text: 'Start a Project Discussion'
+    href: /request-quotation
+
+b2b_faqs:
+  title: 'B2B Purchasing FAQ'
+  subtitle: 'Practical answers for brands, importers and commercial buyers.'
+  columns: 2
+  items:
+    - title: 'Can you manufacture to our drawings?'
+      description: 'Share your drawings, reference sample or target specification. Our team will review the requirement and confirm whether the project fits an OEM or ODM path, what technical details are needed and whether any design work is included. <a href="/oem-odm" class="text-primary dark:text-sky-400 hover:underline">See OEM/ODM details</a>.'
+      icon: tabler:file-text
+    - title: 'What determines MOQ and lead time?'
+      description: 'MOQ and production lead time depend on the product platform, customization level, order volume and production season. Final terms are confirmed in your project quotation.'
+      icon: tabler:calendar-stats
+    - title: 'What can be customized?'
+      description: 'Depending on the project, options can include dimensions, wall thickness, colors, logo placement, covers, valves/fittings and packaging. We confirm the available options after reviewing your requirements.'
+      icon: tabler:adjustments
+    - title: 'What quality documentation can buyers request?'
+      description: 'Inspection and test requirements are agreed per product and project. Tell us the standards, records or third-party inspection requirements your market needs, and we will confirm what can be provided. See <a href="/quality-control" class="text-primary dark:text-sky-400 hover:underline">Quality Control</a>.'
+      icon: tabler:file-check
+    - title: 'Do you support private-label programs?'
+      description: 'Private-label options are reviewed per project, including branding, packaging and documentation requirements. See <a href="/private-label" class="text-primary dark:text-sky-400 hover:underline">Private Label Pools</a>.'
+      icon: tabler:tag
+    - title: 'What information do you need for a quote?'
+      description: 'Product type or reference product, target dimensions, materials or performance requirements, branding and packaging needs, estimated quantity, target market and delivery date. <a href="/request-quotation" class="text-primary dark:text-sky-400 hover:underline">Request a quotation</a>.'
+      icon: tabler:file-invoice
+
+consumer_intro:
+  tagline: For Homeowners
+  title: 'Shop Standard Inflatable Pool Collections'
+  subtitle: 'Our standard drop-stitch pools remain available for homeowners. Business buyers can continue with the OEM/ODM resources above, or explore the consumer sections below.'
 
 content_workshop:
   isReversed: true
@@ -191,8 +327,8 @@ blog_latest:
     from the Inflatable Pool Factory team.
 
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Inflatable Pool Factory inflatable swimming pools.'
+  title: Pool Ownership FAQ
+  subtitle: 'Common questions about setup, care and storage of Inflatable Pool Factory pools.'
   columns: 2
   items:
     - title: How long does setup take?
@@ -230,13 +366,13 @@ faqs:
 
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Ready to discuss <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">your pool project?</span>
+  subtitle: 'Share your product requirements, estimated quantity and target market. Our team will review the information and outline the next steps.'
   actions:
     - variant: primary
-      text: Shop Pools
-      href: /products
-      icon: tabler:pool
-    - text: Find Your Pool
-      href: /find-your-pool
-      icon: tabler:compass
+      text: Request an OEM Quote
+      href: /request-quotation
+      icon: tabler:file-invoice
+    - text: Explore Manufacturing
+      href: /manufacturing
+      icon: tabler:building-factory

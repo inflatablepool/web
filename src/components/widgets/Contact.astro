@@ -13,11 +13,12 @@ interface Field {
   label: string;
   row: number;
   type?: 'text' | 'email' | 'tel' | 'textarea' | 'select';
+  required?: boolean;
   withCountryCode?: boolean;
   rows?: number;
   placeholder?: string;
   optionsKey?: string;
-  options?: FieldOption[];
+  options?: Array<FieldOption | string>;
 }
 
 interface ConsentConfig {
@@ -34,6 +35,7 @@ interface Props {
   subtitle?: string;
   tagline?: string;
   emailTo?: string;
+  emailSubject?: string;
   submitButton?: string;
   successMessage?: string;
   errorMessage?: string;
@@ -57,6 +59,7 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   tagline = await Astro.slots.render('tagline'),
   emailTo = '',
+  emailSubject = '',
   submitButton = 'Send message',
   successMessage = 'Thanks! Your message has landed in our inbox.',
   errorMessage = 'Something went wrong. Please try again.',
@@ -82,9 +85,9 @@ const consentLinkHref = consent?.link_href || '/privacy';
 const consentError = consent?.error_message || 'Please confirm that you accept the Privacy Policy before submitting.';
 
 const resolveOptions = (f: Field): FieldOption[] => {
-  if (Array.isArray(f.options) && f.options.length > 0) return f.options;
-  if (f.optionsKey === 'countries') return countries;
-  return [];
+  const raw =
+    Array.isArray(f.options) && f.options.length > 0 ? f.options : f.optionsKey === 'countries' ? countries : [];
+  return raw.map((option) => (typeof option === 'string' ? { value: option, label: option } : option));
 };
 
 const grouped: Record<number, Field[]> = {};
@@ -104,7 +107,7 @@ const rows = Object.keys(grouped)
     class="flex flex-col max-w-2xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full"
   >
     <form
-      id={id}
+      id={`${id}-form`}
       method="POST"
       action="/api/contact"
       class="space-y-7"
@@ -113,6 +116,7 @@ const rows = Object.keys(grouped)
       data-error-message={errorMessage}
     >
       <input type="hidden" name="email_to" value={emailTo} />
+      {emailSubject && <input type="hidden" name="subject" value={emailSubject} />}
       <div
         aria-hidden="true"
         style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
@@ -144,6 +148,8 @@ const rows = Object.keys(grouped)
                       name={f.name}
                       rows={f.rows ?? 4}
                       placeholder={f.placeholder}
+                      required={f.required}
+                      data-field-label={f.label}
                       class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                     />
                   </div>
@@ -159,6 +165,8 @@ const rows = Object.keys(grouped)
                     type={(f.type === 'select' ? 'text' : (f.type ?? 'text')) as any}
                     name={f.name}
                     placeholder={f.placeholder}
+                    required={f.required}
+                    data-field-label={f.label}
                     class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                   />
                 </div>
@@ -192,6 +200,8 @@ const rows = Object.keys(grouped)
                             name={f.name}
                             inputmode="numeric"
                             placeholder={f.placeholder ?? '555 123 4567'}
+                            required={f.required}
+                            data-field-label={f.label}
                             class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                           />
                         </div>
@@ -208,9 +218,15 @@ const rows = Object.keys(grouped)
                         <select
                           id={`${id}-${f.name}`}
                           name={f.name}
+                          data-field-label={f.label}
                           class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                          required
+                          required={f.required !== false}
                         >
+                          {f.placeholder && (
+                            <option value="" disabled selected>
+                              {f.placeholder}
+                            </option>
+                          )}
                           {opts.map((o) => (
                             <option value={o.value}>{o.label}</option>
                           ))}
@@ -228,6 +244,8 @@ const rows = Object.keys(grouped)
                         type={(f.type === 'email' ? 'email' : f.type === 'tel' ? 'tel' : 'text') as any}
                         name={f.name}
                         placeholder={f.placeholder}
+                        required={f.required}
+                        data-field-label={f.label}
                         class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                       />
                     </div>
@@ -350,6 +368,37 @@ const rows = Object.keys(grouped)
         const cc = data.tel_countryCode || '';
         if (data.tel) data.tel = `${cc} ${data.tel}`.trim();
         delete data.tel_countryCode;
+
+        // Keep the worker's required schema (firstName, lastName, email, message)
+        // while preserving form-specific fields such as buyer type, product type,
+        // quantity and customization level in the notification and D1 record.
+        const knownFields = new Set([
+          'firstName',
+          'lastName',
+          'companyName',
+          'address',
+          'zip',
+          'country',
+          'email',
+          'tel',
+          'subject',
+          'message',
+          'email_to',
+          'consent',
+          'turnstileToken',
+          'locale',
+        ]);
+        const extraLines = [];
+        for (const [k, v] of Object.entries(data)) {
+          if (knownFields.has(k) || !v) continue;
+          const fieldEl = formEl.querySelector(`[name="${k}"]`);
+          const label = fieldEl?.getAttribute('data-field-label') || k;
+          extraLines.push(`${label}: ${v}`);
+        }
+        if (extraLines.length > 0) {
+          data.message = [data.message, 'Project details:', ...extraLines].filter(Boolean).join('\n');
+        }
+
         if (consentEl instanceof HTMLInputElement) data.consent = consentEl.checked ? 'true' : 'false';
         const turnstileWidget = formEl.querySelector('.cf-turnstile');
         let tw = '';

@@ -2,7 +2,6 @@
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
-import { SITE } from 'astrowind:config';
 import { getCanonical } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { POOL_PRODUCTION_STEPS, POOL_PRESSURE_SPECS } from '~/data/pool-catalog';
@@ -11,8 +10,8 @@ export const prerender = true;
 
 const metadata = merge(
   {
-    title: `Drop Stitch Pool Manufacturing Process | ${SITE.name} Factory`,
-    description: `Inside the Inflatable Pool Factory Qingdao factory: CNC cutting, valve heat-sealing, panel welding with reinforced rails, finishing and 24–48 hour pressure testing — five controlled production steps.`,
+    title: `Inflatable Pool Manufacturing Process & QC`,
+    description: `Learn about inflatable pool production, material checks, assembly and product testing, with project-specific quality requirements for B2B manufacturing.`,
     canonical: getCanonical('/manufacturing'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -28,12 +27,12 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
     <header class="mb-10 md:mb-12 max-w-3xl">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Qingdao Factory</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        How Inflatable Pool Factory Manufactures Drop-Stitch Pools
+        Our Inflatable Pool Manufacturing and Inspection Process
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Every Inflatable Pool Factory pool goes through the same five-step factory workflow — from CNC-cut drop-stitch
-        fabric to a 24–48 hour pressure-drop test before packing. This is the process behind 48 SKUs of rigid inflatable
-        pools.
+        Explore the production steps behind our drop-stitch pools — material inspection, CNC cutting, valve and panel
+        assembly, finishing, testing and final packing. Material and test requirements are defined in the approved
+        product specification for each B2B OEM or ODM project.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
@@ -78,6 +77,51 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
 
     <section class="mb-14">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        How Buyer Requirements Are Controlled
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        For OEM and ODM projects, the approved specification is the reference point for production and inspection. The
+        applicable checks are confirmed before the order is released.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          [
+            {
+              icon: 'tabler:file-check',
+              title: 'Approved Specification',
+              description:
+                'Dimensions, materials, colors, branding and packing requirements are documented before production.',
+            },
+            {
+              icon: 'tabler:search',
+              title: 'In-Process Checks',
+              description: 'Seams, valves, reinforcement and key dimensions are checked at defined stages.',
+            },
+            {
+              icon: 'tabler:gauge',
+              title: 'Test Criteria',
+              description: 'Pressure/leak test method, hold time and acceptance criteria are agreed per product.',
+            },
+            {
+              icon: 'tabler:package-export',
+              title: 'Final Inspection',
+              description: 'Finished goods, accessories and carton contents are checked against the packing list.',
+            },
+          ].map((item) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={item.icon} class="w-5 h-5" />
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
         Pressure & Safety Specifications
       </h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
@@ -93,6 +137,47 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
               </div>
               <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
             </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">Manufacturing Buyer FAQ</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Project-specific answers on inspection, documentation and production control.
+      </p>
+      <div class="space-y-3">
+        {
+          [
+            {
+              q: 'How are materials and production processes inspected?',
+              a: 'Incoming materials, in-process workmanship and finished goods are checked against the approved specification. The specific inspection points and acceptance criteria are confirmed for each product and order.',
+            },
+            {
+              q: 'Can we include our own inspection requirements?',
+              a: 'Yes — share the standards, test methods or third-party inspection requirements your market needs during the RFQ. We will confirm which requirements can be incorporated into the project specification.',
+            },
+            {
+              q: 'What records can buyers request?',
+              a: 'Documentation depends on the product and project scope. Tell us what your compliance team or customer requires, and we will confirm the available records before production.',
+            },
+            {
+              q: 'Where does production take place?',
+              a: 'Production is based in Qingdao, Shandong, China. The contracting entity, production location and shipping terms are stated in your quotation.',
+            },
+          ].map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
           ))
         }
       </div>
