@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Pronađite pravi bazen<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">za svoje dvorište.</span>
-  subtitle: Usporedite modele i veličine ili potražite pomoć pri odabiru — naš tim odgovara na pitanja unutar jednog radnog dana.
+  subtitle: 'Usporedite modele i veličine ili potražite pomoć pri odabiru'
   actions:
     - variant: primary
       text: Trgovina bazenima

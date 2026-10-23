@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Najděte ten správný bazén<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">pro váš dvorek.</span>
-  subtitle: Porovnejte modely a velikosti nebo získejte pomoc s výběrem – náš tým odpovídá na otázky během jednoho pracovního dne.
+  subtitle: 'Porovnejte modely a velikosti nebo získejte pomoc s výběrem'
   actions:
     - variant: primary
       text: Obchod Pools

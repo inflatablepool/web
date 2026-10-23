@@ -78,9 +78,9 @@ test_results:
   - metric: Third-party inspection
     value: Welcome
     detail: Buyer-appointed inspection can be arranged during production or before loading.
-  - metric: Safety defect tolerance
-    value: 0%
-    detail: Valves, seams and welds are inspected against the approved criteria.
+  - metric: Safety-critical defects
+    value: Per inspection plan
+    detail: Safety-critical defects are rejected against the approved inspection criteria; inspection points and sampling are defined in the approved plan.
 
 spec_sheets:
   - name: Rectangular Pools

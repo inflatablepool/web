@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Encuentra la piscina adecuada<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">para tu patio trasero.</span>
-  subtitle: 'Compare modelos y tamaños, u obtenga ayuda para elegir: nuestro equipo responde preguntas dentro de un día hábil.'
+  subtitle: 'Compare modelos y tamaños, u obtenga ayuda para elegir'
   actions:
     - variant: primary
       text: Comprar piscinas

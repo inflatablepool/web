@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     ابحث عن حمام السباحة المناسب<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">للفناء الخلفي الخاص بك.</span>
-  subtitle: قارن بين النماذج والأحجام، أو احصل على مساعدة في الاختيار - يجيب فريقنا على الأسئلة خلال يوم عمل واحد.
+  subtitle: 'قارن بين النماذج والأحجام، أو احصل على مساعدة في الاختيار'
   actions:
     - variant: primary
       text: تسوق حمامات السباحة

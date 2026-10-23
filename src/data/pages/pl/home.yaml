@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Znajdź odpowiedni basen<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">dla Twojego podwórka.</span>
-  subtitle: Porównaj modele i rozmiary lub uzyskaj pomoc w wyborze — nasz zespół odpowiada na pytania w ciągu jednego dnia roboczego.
+  subtitle: 'Porównaj modele i rozmiary lub uzyskaj pomoc w wyborze'
   actions:
     - variant: primary
       text: Kup baseny

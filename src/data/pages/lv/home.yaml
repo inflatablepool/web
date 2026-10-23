@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Atrodiet pareizo baseinu<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">savam pagalmam.</span>
-  subtitle: Salīdziniet modeļus un izmērus vai saņemiet palīdzību par izvēli — mūsu komanda atbild uz jautājumiem vienas darbadienas laikā.
+  subtitle: 'Salīdziniet modeļus un izmērus vai saņemiet palīdzību par izvēli'
   actions:
     - variant: primary
       text: Veikals baseini

@@ -173,7 +173,7 @@ export const faqs: FaqRecord[] = [
     id: 'company-model',
     question: 'Is Inflatable Pool Factory a trading company or a manufacturer?',
     answer:
-      'Inflatable Pool Factory is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+      'Inflatable Pool Factory is a brand company with its own manufacturing base in Qingdao. We manufacture pools at our facility and quote factory-direct, FOB Qingdao. Export logistics are managed from our factory to your warehouse or port.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: [],
@@ -191,7 +191,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-sample-policy',
     question: 'Can I order a sample before committing to production?',
     answer:
-      'Yes. A pre-production sample is manufactured and checked against the agreed sample specification for your approval before any volume order is released. The sample stage verifies print quality, color accuracy, dimensions and packaging fit against your specification.',
+      'Sample requirements are confirmed per project. Where a sample stage applies, it is checked against the agreed specification for approval before any volume order is released. The sample stage verifies print quality, color accuracy, dimensions and packaging fit against your specification.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],

@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Találja meg a megfelelő medencét<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">a hátsó udvarodért.</span>
-  subtitle: Hasonlítsa össze a modelleket és méreteket, vagy kérjen segítséget a választáshoz – csapatunk egy munkanapon belül válaszol a kérdésekre.
+  subtitle: 'Hasonlítsa össze a modelleket és méreteket, vagy kérjen segítséget a választáshoz'
   actions:
     - variant: primary
       text: Vásároljon medencéket

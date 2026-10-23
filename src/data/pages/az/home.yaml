@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Doğru hovuzu tapın<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">həyətiniz üçün.</span>
-  subtitle: Modelləri və ölçüləri müqayisə edin və ya seçimdə kömək alın — komandamız bir iş günü ərzində suallara cavab verir.
+  subtitle: 'Modelləri və ölçüləri müqayisə edin və ya seçimdə kömək alın'
   actions:
     - variant: primary
       text: Mağaza hovuzları

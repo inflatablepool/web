@@ -81,7 +81,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 4: MOQ and Sampling Policy',
         paragraphs: [
-          'A confident manufacturer lets you prove quality before you commit volume. Inflatable Pool Factory supports pre-production samples, and confirms sample terms, MOQ and quantity pricing for each project — so importers can test a market before committing to a full container.',
+          'A confident manufacturer lets you prove quality before you commit volume. Inflatable Pool Factory reviews sample requirements for each project and confirms sample terms, MOQ and quantity pricing before an order — so importers can evaluate a market before committing to a full container.',
           'Be wary of suppliers who demand large first orders with no sample stage, or who quote one MOQ in the first email and a different one after you engage. Written, itemized MOQ and pricing terms are a basic test of supplier professionalism.',
         ],
       },
@@ -102,7 +102,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 7: Design Confidentiality',
         paragraphs: [
-          'If you are buying OEM or private label products, your designs, molds and colorways are commercial assets. A serious manufacturer states its confidentiality policy in writing, never sells a customer-exclusive design to another buyer, and accepts NDA agreements as routine business.',
+          'If you are buying OEM or private label products, your designs, molds and colorways are commercial assets. A serious manufacturer states its confidentiality policy in writing, defines how customer-exclusive designs are handled, and accepts NDA agreements as routine business.',
         ],
       },
       {
@@ -172,17 +172,17 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'How They Compare',
         paragraphs: ['The practical differences show up in five areas:'],
         bullets: [
-          'Design ownership: OEM designs are yours and can be made exclusive; ODM designs belong to the factory and may be sold to others unless you negotiate exclusivity.',
+          'Design ownership: OEM projects can specify customer-owned designs and exclusivity; ODM projects start from the manufacturer\'s platform, with ownership and exclusivity defined in the project contract.',
           'Upfront cost: OEM requires engineering, tooling or patterning work and larger commitments; ODM prices from the existing catalog, with quantity terms confirmed in the quotation (FOB Qingdao).',
-          'Development path: ODM starts from an existing platform, while OEM needs engineering approval and a pre-production sample cycle first. Production timing is confirmed in the quotation.',
-          'Risk: ODM designs are already market-proven and produced at scale; OEM designs carry first-production risk that the sample stage exists to eliminate.',
+          'Development path: ODM starts from an existing platform, while OEM usually needs engineering approval and an applicable sample approval stage first. Production timing is confirmed in the quotation.',
+          'Risk: ODM designs are already market-proven and produced at scale; OEM designs carry first-production risk that the applicable approval stage is intended to reduce.',
           'Differentiation: OEM lets you build a product no competitor can copy; ODM means competing on brand, channel and service rather than product design.',
         ],
       },
       {
         heading: 'What OEM Looks Like in Practice',
         paragraphs: [
-          'A typical Inflatable Pool Factory OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; a pre-production sample is manufactured and checked against the agreed specification for your approval; mass production runs at our Qingdao factory with inline seam and valve inspection; and production units pass the pressure and leak test defined in the approved specification before container loading.',
+          'A typical Inflatable Pool Factory OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; sample requirements and approval criteria are confirmed against the agreed specification; mass production runs at our Qingdao factory with inline seam and valve inspection; and production units pass the pressure and leak test defined in the approved specification before container loading.',
           'Customization can cover everything from pool dimensions and fabric colorways to logo printing, fitted covers, built-in seats, 5 mm insulated bottoms, valve placement and retail packaging.',
         ],
       },
@@ -204,7 +204,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Inflatable Pool Factory Supports Both',
         paragraphs: [
-          'As a factory-direct manufacturer, Inflatable Pool Factory runs ODM and OEM projects on the same production lines with the same QC gates — production units, catalog or custom, pass the pressure and leak test defined in the approved specification before shipment. Your drawings and colorways stay yours: we never sell a customer-exclusive design to another buyer, and NDAs are welcome.',
+          'As a factory-direct manufacturer, Inflatable Pool Factory runs ODM and OEM projects on the same production lines with the same QC gates — production units, catalog or custom, pass the pressure and leak test defined in the approved specification before shipment. Design ownership, confidentiality and any exclusivity terms are defined in writing for each project; NDA terms are available on request.',
         ],
       },
     ],
@@ -240,7 +240,7 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 8,
     audience: 'Retailers, e-commerce sellers and entrepreneurs launching a private pool brand.',
-    tldr: 'Private label means selling proven drop-stitch pool designs under your own brand: logo printing, custom colors, branded covers and retail packaging, produced by an established factory. With Inflatable Pool Factory you can start with a pre-production sample, confirm quantity pricing and sample terms in the quotation, and plan packaging tuned to your channel. Success depends on picking the right 2–3 SKUs, respecting the sample stage, and budgeting the full landed cost — not just the FOB price.',
+    tldr: 'Private label means selling proven drop-stitch pool designs under your own brand: logo printing, custom colors, branded covers and retail packaging, produced by an established factory. With Inflatable Pool Factory, sample requirements, quantity pricing and sample terms are confirmed in the quotation, and packaging can be planned for your channel. Success depends on picking the right 2–3 SKUs, completing the applicable approval stage, and budgeting the full landed cost — not just the FOB price.',
     sections: [
       {
         heading: 'What Private Label Means for Pools',
@@ -265,7 +265,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'MOQ, Pricing and the Sample Stage',
         paragraphs: [
           'Inflatable Pool Factory\'s reference price list is quoted FOB Qingdao in USD; quantity basis and final pricing are confirmed in the quotation. Standard catalog reference prices run from $137.96 for a compact Ø 2 × 0.5 m pool to $1,600.58 for the Ø 10 × 1.2 m event-scale model, with SPA tubs from $381.36.',
-          'Before any volume order, a pre-production sample is manufactured and checked against the agreed specification for your approval. Never skip this stage: the sample is where print quality, color accuracy and packaging fit get verified against what you imagined. Approve the sample, and mass production has an unambiguous reference standard.',
+          'Before any volume order, sample requirements and approval criteria are confirmed against the agreed specification. Where a sample stage applies, it is where print quality, color accuracy and packaging fit get verified against the approved reference. Complete the applicable approval stage, and mass production has an unambiguous reference standard.',
         ],
       },
       {
@@ -275,7 +275,7 @@ export const procurementGuides: ProcurementGuide[] = [
           '1. Select 2–3 SKUs for your first assortment — typically one family pool, one compact model, one premium option',
           '2. Request a quote with quantity terms, FOB price and production schedule per item',
           '3. Send brand assets and packaging requirements; sign an NDA if your designs are exclusive',
-          '4. Approve the pre-production sample — check print, color, stitching, valve function and carton fit',
+          '4. Complete the applicable sample approval — check print, color, stitching, valve function and carton fit',
           '5. Release mass production with inline QC and the pressure and leak test defined in the approved specification',
           '6. Book shipping (FOB Qingdao), receive, and launch with channel-specific packaging',
         ],
@@ -307,7 +307,7 @@ export const procurementGuides: ProcurementGuide[] = [
     faq: [
       {
         q: 'What is the minimum investment for a private label pool line?',
-        a: 'A realistic first order depends on your market, channel and the factory\'s confirmed MOQ. Start with a pre-production sample, then agree a trial quantity across 2–3 SKUs, plus sample costs and your packaging artwork. Request a quote for an exact figure.',
+        a: 'A realistic first order depends on your market, channel and the factory\'s confirmed MOQ. Review sample requirements first, then agree a trial quantity across 2–3 SKUs, plus sample costs and your packaging artwork. Request a quote for an exact figure.',
       },
       {
         q: 'Can I private label just the packaging and not the pool?',
@@ -315,7 +315,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
       {
         q: 'Who owns the brand and listings?',
-        a: 'You do. The factory manufactures; you own the trademark, the marketplace listings, the customer relationship and all market-facing assets. Inflatable Pool Factory never sells a customer-exclusive design or colorway to another buyer.',
+        a: 'You do. The factory manufactures; you own the trademark, the marketplace listings, the customer relationship and all market-facing assets. Customer-exclusive designs and colorways are handled under the confidentiality and exclusivity terms agreed for the project.',
       },
     ],
     related: [

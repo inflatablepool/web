@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Doğru havuzu bulun<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">arka bahçeniz için.</span>
-  subtitle: Modelleri ve boyutları karşılaştırın veya seçim konusunda yardım alın; ekibimiz soruları bir iş günü içinde yanıtlar.
+  subtitle: 'Modelleri ve boyutları karşılaştırın veya seçim konusunda yardım alın'
   actions:
     - variant: primary
       text: Alışveriş Havuzları

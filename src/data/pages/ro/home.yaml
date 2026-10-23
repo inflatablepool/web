@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Găsiți piscina potrivită<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">pentru curtea ta.</span>
-  subtitle: Comparați modele și dimensiuni sau obțineți ajutor pentru a alege — echipa noastră răspunde la întrebări în termen de o zi lucrătoare.
+  subtitle: 'Comparați modele și dimensiuni sau obțineți ajutor pentru a alege'
   actions:
     - variant: primary
       text: Piscine de magazin

@@ -52,7 +52,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Branding and Packaging',
-        body: 'Logo printing, custom color schemes, branded covers, and retail-ready packaging are all produced in-house. Send your artwork and requirements for a quote and lead time estimate.',
+        body: 'Logo printing, custom color schemes, branded covers, and retail-ready packaging are specified per project and confirmed against the approved production documentation. Send your artwork and requirements for a project review and quote.',
       },
       {
         heading: 'Quality You Can Sell',

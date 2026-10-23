@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Encontre a piscina certa<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">para o seu quintal.</span>
-  subtitle: Compare modelos e tamanhos ou obtenha ajuda para escolher – nossa equipe responde a perguntas em um dia útil.
+  subtitle: 'Compare modelos e tamanhos ou obtenha ajuda para escolher'
   actions:
     - variant: primary
       text: Loja de piscinas

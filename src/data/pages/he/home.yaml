@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     מצא את הבריכה המתאימה<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">לחצר האחורית שלך.</span>
-  subtitle: השווה דגמים וגדלים, או קבל עזרה בבחירה - הצוות שלנו עונה על שאלות תוך יום עסקים אחד.
+  subtitle: 'השווה דגמים וגדלים, או קבל עזרה בבחירה'
   actions:
     - variant: primary
       text: חנות בריכות

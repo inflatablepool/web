@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Etsi oikea uima-allas<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">takapihallesi.</span>
-  subtitle: Vertaa malleja ja kokoja tai pyydä apua valinnassa – tiimimme vastaa kysymyksiin yhden arkipäivän kuluessa.
+  subtitle: 'Vertaa malleja ja kokoja tai pyydä apua valinnassa'
   actions:
     - variant: primary
       text: Osta altaat

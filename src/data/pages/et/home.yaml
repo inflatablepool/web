@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Leidke õige bassein<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">oma tagahoovi jaoks.</span>
-  subtitle: Võrrelge mudeleid ja suurusi või otsige abi valimisel – meie meeskond vastab küsimustele ühe tööpäeva jooksul.
+  subtitle: 'Võrrelge mudeleid ja suurusi või otsige abi valimisel'
   actions:
     - variant: primary
       text: Ostke basseinid
