@@ -399,6 +399,45 @@ const rows = Object.keys(grouped)
           data.message = [data.message, 'Project details:', ...extraLines].filter(Boolean).join('\n');
         }
 
+        // Record lead attribution without changing the worker's D1 schema.
+        // The current page, campaign parameters, click IDs and external referrer
+        // are appended to the required message field for sales follow-up.
+        const sourceLines = [];
+        if (typeof window !== 'undefined') {
+          const pagePath = `${window.location.pathname}${window.location.search}`;
+          sourceLines.push(`Landing page: ${pagePath.slice(0, 500)}`);
+
+          const params = new URLSearchParams(window.location.search);
+          for (const key of [
+            'utm_source',
+            'utm_medium',
+            'utm_campaign',
+            'utm_term',
+            'utm_content',
+            'gclid',
+            'fbclid',
+            'msclkid',
+            'ttclid',
+          ]) {
+            const value = params.get(key);
+            if (value) sourceLines.push(`${key}: ${value.slice(0, 200)}`);
+          }
+
+          if (document.referrer) {
+            try {
+              const referrer = new URL(document.referrer);
+              if (referrer.origin !== window.location.origin) {
+                sourceLines.push(`External referrer: ${`${referrer.origin}${referrer.pathname}`.slice(0, 300)}`);
+              }
+            } catch {
+              // Ignore malformed referrer values.
+            }
+          }
+        }
+        if (sourceLines.length > 0) {
+          data.message = [data.message, 'Inquiry source:', ...sourceLines].filter(Boolean).join('\n');
+        }
+
         if (consentEl instanceof HTMLInputElement) data.consent = consentEl.checked ? 'true' : 'false';
         const turnstileWidget = formEl.querySelector('.cf-turnstile');
         let tw = '';
