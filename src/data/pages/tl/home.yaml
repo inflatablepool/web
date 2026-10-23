@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Hanapin ang tamang pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">para sa iyong likod-bahay.</span>
-  subtitle: Ihambing ang mga modelo at laki, o humingi ng tulong sa pagpili — sinasagot ng aming team ang mga tanong sa loob ng isang araw ng negosyo.
+  subtitle: Ihambing ang mga modelo at laki, o humingi ng tulong sa pagpili.
   actions:
     - variant: primary
       text: Mamili ng Pool

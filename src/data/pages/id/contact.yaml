@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Kirimkan pesan kepada kami
-  subtitle: Untuk penawaran harga, pertanyaan teknis, atau pertanyaan kemitraan, hubungi kami. Kami membalas dalam satu hari kerja.
+  subtitle: Untuk penawaran harga, pertanyaan teknis, atau pertanyaan kemitraan, hubungi kami.
   email_to: info@inflatablepoolfactory.com
   submit_button: Kirim Pertanyaan → Dapatkan Penawaran
-  success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami. Kami akan membalas dalam satu hari kerja.
+  success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami.
   error_message: Terjadi masalah saat mengirim pesan Anda. Silakan coba lagi atau kirim email langsung kepada kami.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Pilih perkiraan volume Anda...
         - value: sample
           label: Sampel / Prototipe saja
-        - value: 5-10
-          label: 5–10 unit (MOQ Standar)
         - value: 100-500
           label: 100–500 unit
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Situs web
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Waktu respons
-      description: Kami membalas dalam satu hari kerja.
-      icon: tabler:clock
 map:
   title: Hubungi kami
   subtitle: Hubungi Inflatable Pool Factory

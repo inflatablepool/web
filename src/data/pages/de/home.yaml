@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Finden Sie den richtigen Pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">für Ihren Garten.</span>
-  subtitle: Vergleichen Sie Modelle und Größen oder erhalten Sie Hilfe bei der Auswahl – unser Team beantwortet Fragen innerhalb eines Werktages.
+  subtitle: Vergleichen Sie Modelle und Größen oder erhalten Sie Hilfe bei der Auswahl.
   actions:
     - variant: primary
       text: Shop-Pools

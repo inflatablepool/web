@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Lähetä meille viesti
-  subtitle: Tarjouksia, teknisiä kysymyksiä tai kumppanuuskyselyitä varten ota meihin yhteyttä. Vastaamme yhden arkipäivän kuluessa.
+  subtitle: Tarjouksia, teknisiä kysymyksiä tai kumppanuuskyselyitä varten ota meihin yhteyttä.
   email_to: info@inflatablepoolfactory.com
   submit_button: Lähetä kysely → Pyydä tarjous
-  success_message: Kiitos! Viestisi on päätynyt postilaatikkoomme. Vastaamme yhden arkipäivän kuluessa.
+  success_message: Kiitos! Viestisi on päätynyt postilaatikkoomme.
   error_message: Jotain meni pieleen viestisi lähettämisessä. Yritä uudelleen tai lähetä meille sähköpostia.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Valitse arvioitu äänenvoimakkuus...
         - value: sample
           label: Vain näytteet / prototyypit
-        - value: 5-10
-          label: 5–10 yksikköä (standardi MOQ)
         - value: 100-500
           label: 100-500 yksikköä
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Verkkosivusto
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Vastausaika
-      description: Vastaamme yhden arkipäivän kuluessa.
-      icon: tabler:clock
 map:
   title: Ota yhteyttä
   subtitle: Ota yhteyttä Inflatable Pool Factory

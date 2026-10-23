@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Hitta rätt pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">för din bakgård.</span>
-  subtitle: Jämför modeller och storlekar, eller få hjälp med att välja — vårt team svarar på frågor inom en arbetsdag.
+  subtitle: Jämför modeller och storlekar, eller få hjälp med att välja.
   actions:
     - variant: primary
       text: Shoppa pooler

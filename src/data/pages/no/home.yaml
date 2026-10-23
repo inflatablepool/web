@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Finn riktig basseng<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for bakgården din.</span>
-  subtitle: Sammenlign modeller og størrelser, eller få hjelp til å velge – teamet vårt svarer på spørsmål innen én virkedag.
+  subtitle: Sammenlign modeller og størrelser, eller få hjelp til å velge.
   actions:
     - variant: primary
       text: Handle bassenger

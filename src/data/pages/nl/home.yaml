@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Vind het juiste zwembad<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">voor uw achtertuin.</span>
-  subtitle: 'Vergelijk modellen en maten, of krijg hulp bij het kiezen: ons team beantwoordt vragen binnen één werkdag.'
+  subtitle: 'Vergelijk modellen en maten, of krijg hulp bij het kiezen.'
   actions:
     - variant: primary
       text: Winkel zwembaden

@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Bize bir mesaj gönderin
-  subtitle: Fiyat teklifleri, teknik sorular veya ortaklık sorularınız için bize bir satır bırakın. Bir iş günü içinde cevap veriyoruz.
+  subtitle: Fiyat teklifleri, teknik sorular veya ortaklık sorularınız için bize bir satır bırakın.
   email_to: info@inflatablepoolfactory.com
   submit_button: Talep Gönder → Teklif Al
-  success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı. Bir iş günü içinde cevap vereceğiz.
+  success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı.
   error_message: Mesajınızı gönderirken bir şeyler ters gitti. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Tahmini hacminizi seçin...
         - value: sample
           label: Yalnızca numuneler / Prototipler
-        - value: 5-10
-          label: 5–10 adet (Standart Adedi)
         - value: 100-500
           label: 100–500 adet
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Web sitesi
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Tepki süresi
-      description: Bir iş günü içinde cevap veriyoruz.
-      icon: tabler:clock
 map:
   title: İletişime Geçin
   subtitle: Inflatable Pool Factory ile iletişime geçin

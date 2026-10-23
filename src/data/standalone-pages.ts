@@ -25,7 +25,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Materials & Durability',
-        body: 'Inflatable Pool Factory pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Every pool is inflation-tested at the factory before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool can deliver seasons of reliable use.',
+        body: 'Inflatable Pool Factory pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Production pools are checked against the approved pressure and leak-test specification before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool can deliver seasons of reliable use.',
       },
       {
         heading: 'Setup and Storage',
@@ -56,7 +56,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Quality You Can Sell',
-        body: 'Every pool is inflation-tested before it leaves the factory. Materials comply with REACH and RoHS requirements, and documentation is available for retail compliance in your market.',
+        body: 'Production pools are checked against the approved pressure and leak-test specification before shipment. Material specifications and available compliance documents are reviewed against the target market and confirmed for each project.',
       },
       {
         heading: 'Factory-Direct Logistics',
@@ -66,7 +66,7 @@ export const standalonePages: StandalonePage[] = [
     features: [
       { label: 'Custom Dimensions', desc: 'Any practical diameter, length, and wall height' },
       { label: 'Private Label', desc: 'Your logo, colors, and packaging' },
-      { label: 'Compliance Docs', desc: 'REACH/RoHS material documentation available' },
+      { label: 'Compliance Docs', desc: 'Material documentation confirmed per project' },
       { label: 'Wholesale Pricing', desc: 'Factory-direct rates on bulk orders' },
     ],
   },

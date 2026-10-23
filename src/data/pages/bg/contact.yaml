@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Изпратете ни съобщение
-  subtitle: За оферти, технически въпроси или запитвания за партньорство, пишете ни. Ние отговаряме в рамките на един работен ден.
+  subtitle: За оферти, технически въпроси или запитвания за партньорство, пишете ни.
   email_to: info@inflatablepoolfactory.com
   submit_button: Изпратете запитване → Получете оферта
-  success_message: благодаря Вашето съобщение пристигна в нашата пощенска кутия. Ние ще отговорим в рамките на един работен ден.
+  success_message: благодаря Вашето съобщение пристигна в нашата пощенска кутия.
   error_message: Нещо се обърка при изпращането на вашето съобщение. Моля, опитайте отново или ни пишете директно.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Изберете своя прогнозен обем...
         - value: sample
           label: Само мостри / прототипи
-        - value: 5-10
-          label: 5–10 единици (Standard MOQ)
         - value: 100-500
           label: 100–500 единици
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: уебсайт
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Време за реакция
-      description: Ние отговаряме в рамките на един работен ден.
-      icon: tabler:clock
 map:
   title: Свържете се с нас
   subtitle: Свържете се с Inflatable Pool Factory

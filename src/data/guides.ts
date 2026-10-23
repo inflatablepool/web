@@ -132,7 +132,7 @@ export const guides: GuideRecord[] = [
     problem:
       'Most people have only seen ring-style or soft-sided inflatable pools that sag, bulge, and collapse. That experience makes it hard to believe an inflatable pool can hold a firm, straight wall at 1.5 meters of water depth.',
     solution:
-      'Drop stitch construction is the same technology used in high-pressure inflatable stand-up paddleboards. The threads limit how far the walls can expand, so pressure turns the fabric into a stiff panel instead of a balloon. Inflatable Pool Factory pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
+      'Drop stitch construction is the same technology used in high-pressure inflatable stand-up paddleboards. The threads limit how far the walls can expand, so pressure turns the fabric into a stiff panel instead of a balloon. Inflatable Pool Factory pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI; production units are pressure and leak tested against the approved model specification before shipment.',
     audience: 'First-time buyers comparing pool types.',
     steps: [
       'Outer layers: two sheets of reinforced, UV-stabilized PVC form the wall surfaces',

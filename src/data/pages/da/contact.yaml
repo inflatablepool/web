@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Send os en besked
-  subtitle: For tilbud, tekniske spørgsmål eller partnerskabsforespørgsler, send os en linje. Vi svarer inden for en hverdag.
+  subtitle: For tilbud, tekniske spørgsmål eller partnerskabsforespørgsler, send os en linje.
   email_to: info@inflatablepoolfactory.com
   submit_button: Send forespørgsel → Få et tilbud
-  success_message: Tak! Din besked er landet i vores indbakke. Vi svarer inden for en hverdag.
+  success_message: Tak! Din besked er landet i vores indbakke.
   error_message: Noget gik galt med at sende din besked. Prøv venligst igen eller send os en e-mail direkte.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Vælg din estimerede mængde...
         - value: sample
           label: Kun prøver/prototyper
-        - value: 5-10
-          label: 5-10 enheder (Standard MOQ)
         - value: 100-500
           label: 100-500 enheder
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Hjemmeside
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Responstid
-      description: Vi svarer inden for en hverdag.
-      icon: tabler:clock
 map:
   title: Tag kontakt
   subtitle: Kontakt Inflatable Pool Factory

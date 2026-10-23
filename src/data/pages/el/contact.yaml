@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Στείλτε μας ένα μήνυμα
-  subtitle: Για προσφορές, τεχνικές ερωτήσεις ή ερωτήσεις συνεργασίας, στείλτε μας μια γραμμή. Απαντάμε εντός μιας εργάσιμης ημέρας.
+  subtitle: Για προσφορές, τεχνικές ερωτήσεις ή ερωτήσεις συνεργασίας, στείλτε μας μια γραμμή.
   email_to: info@inflatablepoolfactory.com
   submit_button: Αποστολή ερωτήματος → Λάβετε προσφορά
-  success_message: Ευχαριστώ! Το μήνυμά σας έφτασε στα εισερχόμενά μας. Θα απαντήσουμε εντός μιας εργάσιμης ημέρας.
+  success_message: Ευχαριστώ! Το μήνυμά σας έφτασε στα εισερχόμενά μας.
   error_message: Παρουσιάστηκε κάποιο πρόβλημα κατά την αποστολή του μηνύματός σας. Δοκιμάστε ξανά ή στείλτε μας email απευθείας.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Επιλέξτε τον εκτιμώμενο όγκο σας...
         - value: sample
           label: Δείγματα / Πρωτότυπα μόνο
-        - value: 5-10
-          label: 5–10 μονάδες (Τυπικό MOQ)
         - value: 100-500
           label: 100–500 μονάδες
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Δικτυακός τόπος
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Χρόνος απόκρισης
-      description: Απαντάμε εντός μιας εργάσιμης ημέρας.
-      icon: tabler:clock
 map:
   title: Επικοινωνήστε
   subtitle: Επικοινωνήστε με το Inflatable Pool Factory

@@ -9,8 +9,8 @@ Complete knowledge base for AI systems: brand entity data, product knowledge, po
 Inflatable Pool Factory is a supplier of premium drop stitch inflatable swimming pools.
 
 Pools: rectangular and round drop stitch models
-Safety: EN 16582-1, ASTM F2666
-Testing: 100% pressure-tested before shipping
+Safety: model-specific safety information and applicable standards are confirmed per product
+Testing: production units are checked against the approved pressure and leak-test specification
 Contact: info@inflatablepoolfactory.com
 
 ## Site Pages

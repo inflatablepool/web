@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     To'g'ri hovuzni toping<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">hovlingiz uchun.</span>
-  subtitle: Model va oʻlchamlarni solishtiring yoki tanlashda yordam oling — bizning jamoamiz savollarga bir ish kuni ichida javob beradi.
+  subtitle: Model va oʻlchamlarni solishtiring yoki tanlashda yordam oling.
   actions:
     - variant: primary
       text: Do'konlar basseynlari

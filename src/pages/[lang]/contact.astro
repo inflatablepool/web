@@ -1,64 +1,49 @@
 ---
 const PAGE_DESC: Record<string, { description: string }> = {
   de: {
-    description:
-      'Nehmen Sie Kontakt mit Inflatable Pool Factory auf — Vertriebs-, Support- und Partnerschaftsanfragen werden innerhalb eines Werktags beantwortet.',
+    description: 'Nehmen Sie Kontakt mit Inflatable Pool Factory auf.',
   },
   es: {
-    description:
-      'Póngase en contacto con Inflatable Pool Factory: las consultas de ventas, soporte y colaboraciones se responden en un día laborable.',
+    description: 'Póngase en contacto con Inflatable Pool Factory.',
   },
   fr: {
-    description:
-      "Contactez Inflatable Pool Factory — les demandes commerciales, d'assistance et de partenariat reçoivent une réponse sous un jour ouvré.",
+    description: 'Contactez Inflatable Pool Factory.',
   },
   it: {
-    description:
-      'Contatta Inflatable Pool Factory: le richieste di vendita, assistenza e partnership ricevono risposta entro un giorno lavorativo.',
+    description: 'Contatta Inflatable Pool Factory.',
   },
   cs: {
-    description:
-      'Kontaktujte společnost Inflatable Pool Factory — obchodním, servisním a partnerským dotazům odpovídáme do jednoho pracovního dne.',
+    description: 'Kontaktujte společnost Inflatable Pool Factory.',
   },
   sv: {
-    description:
-      'Kontakta Inflatable Pool Factory — Förfrågningar om försäljning, support och partnerskap kommer att besvaras inom en arbetsdag.',
+    description: 'Kontakta Inflatable Pool Factory.',
   },
   da: {
-    description:
-      'Kontakt Inflatable Pool Factory — Forespørgsler om salg, support og partnerskab vil blive besvaret inden for en hverdag.',
+    description: 'Kontakt Inflatable Pool Factory.',
   },
   el: {
-    description:
-      'Επικοινωνήστε με Inflatable Pool Factory — Τα ερωτήματα πωλήσεων, υποστήριξης και συνεργασίας θα απαντηθούν εντός μίας εργάσιμης ημέρας.',
+    description: 'Επικοινωνήστε με Inflatable Pool Factory.',
   },
   no: {
-    description:
-      'Kontakt Inflatable Pool Factory — Forespørsler om salg, støtte og partnerskap vil bli besvart innen én virkedag.',
+    description: 'Kontakt Inflatable Pool Factory.',
   },
   ru: {
-    description:
-      'Свяжитесь с Inflatable Pool Factory — на запросы о продажах, поддержке и партнерстве мы ответим в течение одного рабочего дня.',
+    description: 'Свяжитесь с Inflatable Pool Factory.',
   },
   nl: {
-    description:
-      'Neem contact op met Inflatable Pool Factory — Vragen over verkoop, ondersteuning en samenwerking worden binnen één werkdag beantwoord.',
+    description: 'Neem contact op met Inflatable Pool Factory.',
   },
   fi: {
-    description:
-      'Ota yhteyttä Inflatable Pool Factory — Myynti-, tuki- ja kumppanuuskyselyihin vastataan yhden arkipäivän kuluessa.',
+    description: 'Ota yhteyttä Inflatable Pool Factory.',
   },
   pl: {
-    description:
-      'Skontaktuj się z Inflatable Pool Factory — odpowiedzi na zapytania dotyczące sprzedaży, wsparcia i partnerstwa będą udzielane w ciągu jednego dnia roboczego.',
+    description: 'Skontaktuj się z Inflatable Pool Factory.',
   },
   ar: {
-    description:
-      'جهة الاتصال Inflatable Pool Factory — سيتم الرد على استفسارات المبيعات والدعم والشراكة خلال يوم عمل واحد.',
+    description: 'جهة الاتصال Inflatable Pool Factory.',
   },
   pt: {
-    description:
-      'Contato Inflatable Pool Factory — Consultas sobre vendas, suporte e parceria serão respondidas em um dia útil.',
+    description: 'Contato Inflatable Pool Factory.',
   },
 };
 const PAGE_META: Record<string, { title: string }> = {
@@ -87,42 +72,42 @@ const HUB_TEXT: Record<
     hqTitle: 'Qingdao Office — Qingdao Vatrad Group',
     hubTitle: 'Manufacturing & Export Hub',
     emailTitle: 'General enquiries',
-    emailNote: 'GMT+8 — replies within 24 hours',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
   de: {
     cardTitle: 'Kontaktinformationen',
     hqTitle: 'Qingdao-Büro — Qingdao Vatrad Group',
     hubTitle: 'Fertigungs- & Exportzentrum',
     emailTitle: 'Allgemeine Anfragen',
-    emailNote: 'GMT+8 — Antwort innerhalb von 24 Stunden',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
   es: {
     cardTitle: 'Información de contacto',
     hqTitle: 'Oficina de Qingdao — Qingdao Vatrad Group',
     hubTitle: 'Centro de producción y exportación',
     emailTitle: 'Consultas generales',
-    emailNote: 'GMT+8 — respuesta en 24 horas',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
   fr: {
     cardTitle: 'Coordonnées',
     hqTitle: 'Bureau de Qingdao — Qingdao Vatrad Group',
     hubTitle: 'Centre de production & export',
     emailTitle: 'Demandes générales',
-    emailNote: 'GMT+8 — réponse sous 24 heures',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
   it: {
     cardTitle: 'Informazioni di contatto',
     hqTitle: 'Ufficio di Qingdao — Qingdao Vatrad Group',
     hubTitle: 'Hub di produzione ed esportazione',
     emailTitle: 'Richieste generali',
-    emailNote: 'GMT+8 — risposta entro 24 ore',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
   cs: {
     cardTitle: 'Kontaktní informace',
     hqTitle: 'Kancelář v Qingdao — Qingdao Vatrad Group',
     hubTitle: 'Výrobní a exportní centrum',
     emailTitle: 'Obecné dotazy',
-    emailNote: 'GMT+8 — odpověď do 24 hodin',
+    emailNote: 'GMT+8 - Qingdao, China',
   },
 };
 import Layout from '~/layouts/PageLayout.astro';
@@ -210,7 +195,7 @@ const metadata = {
   description: localizePageDescription(
     page,
     PAGE_DESC[lang]?.description ||
-      'Get in touch with Inflatable Pool Factory — sales, support and partnership enquiries answered within one business day.'
+      'Get in touch with Inflatable Pool Factory — sales, support and partnership enquiries reviewed by our team.'
   ),
 };
 
@@ -223,7 +208,7 @@ const faqSchema = JSON.stringify({
       name: 'How can I contact Inflatable Pool Factory?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Email, WhatsApp, or the contact form on this page. OEM/ODM inquiries typically receive a response within 24 hours.',
+        text: 'Email, WhatsApp, or the contact form on this page. Our team reviews each OEM/ODM inquiry and follows up with next steps.',
       },
     },
     {
@@ -239,7 +224,7 @@ const faqSchema = JSON.stringify({
       name: 'What is the best way to start an OEM project?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Use our Request Quotation form for the fastest response. Include your product requirements, target quantity, and timeline.',
+        text: 'Use our Request Quotation form to start an OEM project. Include your product requirements, target quantity, and timeline.',
       },
     },
   ],

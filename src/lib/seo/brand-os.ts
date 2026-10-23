@@ -134,7 +134,7 @@ export const BRAND: BrandIdentity = {
       icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
       title: 'Safety Tested',
       description:
-        'Pools are designed with reference to recognized residential pool safety standards such as EN 16582-1 and ASTM F2666.',
+        'Residential pool safety standards and design references are reviewed only where confirmed for the specific model and market.',
     },
     {
       icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',

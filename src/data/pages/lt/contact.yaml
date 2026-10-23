@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Atsiųskite mums žinutę
-  subtitle: Jei turite pasiūlymų, techninių klausimų ar užklausų dėl partnerystės, susisiekite su mumis. Atsakome per vieną darbo dieną.
+  subtitle: Jei turite pasiūlymų, techninių klausimų ar užklausų dėl partnerystės, susisiekite su mumis.
   email_to: info@inflatablepoolfactory.com
   submit_button: Siųsti užklausą → Gaukite pasiūlymą
-  success_message: Ačiū! Jūsų žinutė pateko į mūsų pašto dėžutę. Atsakysime per vieną darbo dieną.
+  success_message: Ačiū! Jūsų žinutė pateko į mūsų pašto dėžutę.
   error_message: Siunčiant pranešimą įvyko klaida. Bandykite dar kartą arba parašykite mums tiesiogiai el. paštu.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Pasirinkite numatomą garsumą...
         - value: sample
           label: Tik pavyzdžiai / prototipai
-        - value: 5-10
-          label: 5–10 vienetų (standartinis MOQ)
         - value: 100-500
           label: 100–500 vienetų
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Svetainė
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Reagavimo laikas
-      description: Atsakome per vieną darbo dieną.
-      icon: tabler:clock
 map:
   title: Susisiekite
   subtitle: Susisiekite su Inflatable Pool Factory

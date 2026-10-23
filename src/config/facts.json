@@ -11,7 +11,7 @@
     "operator": "Inflatable Pool Team",
     "alternateName": "Inflatable Pool Factory",
     "slogan": "Premium Drop Stitch Inflatable Swimming Pools",
-    "description": "Inflatable Pool Factory is a premium drop stitch inflatable pool brand by the Inflatable Pool Team at Qingdao Vatrad Group — rectangular and round pools with rigid, rock-solid walls that set up in minutes and fold away for winter storage. Every pool is 100% pressure-tested before shipping and complies with EN 16582-1 and ASTM F2666 pool safety standards.",
+    "description": "Inflatable Pool Factory is a premium drop stitch inflatable pool brand by the Inflatable Pool Team at Qingdao Vatrad Group — rectangular and round pools with rigid walls that set up in minutes and fold away for winter storage. Pressure and leak-test requirements, applicable standards, and compliance documentation are confirmed per product and project.",
     "foundingYear": 2012,
     "url": "https://inflatablepoolfactory.com"
   },
@@ -37,7 +37,7 @@
     "workforceMin": 0,
     "workforceMax": 0,
     "annualCapacityUnits": 0,
-    "certifiedModels": 3
+    "certifiedModels": 0
   },
 
   "reach": {
@@ -46,37 +46,26 @@
   },
 
   "catalog": {
-    "certifiedModels": 3,
+    "certifiedModels": 0,
     "categories": ["Rectangular Pool", "Round Pool", "Pool Cover"],
     "categoryCount": 3,
     "featuredProductCount": "3 featured pools"
   },
 
   "quality": {
-    "defectFreeRate": "99.3%",
-    "defectFreeRateNote": "Based on AQL 2.5 per ISO 2859 sampling inspection of outgoing shipments over the trailing 12-month period",
+    "inspectionStandard": "Inspection points, sampling and acceptance criteria are confirmed in the approved inspection plan",
     "pressureTest": {
-      "multiplier": "1.25x",
-      "holdHours": "24h",
-      "full": "24h hold at 1.25x rated pressure"
+      "method": "Pressure and leak-test method, hold time and test pressure are confirmed in the approved production specification"
     },
-    "samplingStandard": "AQL 2.5 per ISO 2859",
-    "testCoverage": "100% pressure-tested"
+    "testCoverage": "Production units are checked against the approved specification"
   },
 
-  "certifications": [
-    { "name": "EN 16582-1", "body": "CEN" },
-    { "name": "ASTM F2666", "body": "ASTM International" },
-    { "name": "ISO 9001:2015", "body": "SGS", "since": 2022 },
-    { "name": "BSCI", "body": "amfori" },
-    { "name": "REACH", "body": null },
-    { "name": "RoHS", "body": null }
-  ],
+  "certifications": [],
 
   "commercial": {
-    "moqPools": "Contact for details",
-    "samplingLeadTimeDays": "15-20",
-    "productionLeadTimeDays": "30-45",
+    "moqPools": "Confirmed per product and project",
+    "samplingLeadTimeDays": "Confirmed in quotation",
+    "productionLeadTimeDays": "Confirmed in quotation",
     "warrantyPool": "2-year limited warranty on pool fabric, seams, and valves",
     "warrantyNote": "2-year limited warranty covers drop stitch fabric integrity, seam air-holding capability, inflation valves, and accessories"
   },

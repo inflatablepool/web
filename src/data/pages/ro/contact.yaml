@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Trimite-ne un mesaj
-  subtitle: Pentru oferte, întrebări tehnice sau întrebări de parteneriat, scrieți-ne. Răspundem în termen de o zi lucrătoare.
+  subtitle: Pentru oferte, întrebări tehnice sau întrebări de parteneriat, scrieți-ne.
   email_to: info@inflatablepoolfactory.com
   submit_button: Trimiteți întrebarea → Obțineți o cotație
-  success_message: Mulţumesc! Mesajul dvs. a ajuns în căsuța noastră de e-mail. Vă vom răspunde în termen de o zi lucrătoare.
+  success_message: Mulţumesc! Mesajul dvs. a ajuns în căsuța noastră de e-mail.
   error_message: A apărut o eroare la trimiterea mesajului dvs. Vă rugăm să încercați din nou sau să ne trimiteți un e-mail direct.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Selectați volumul estimat...
         - value: sample
           label: Numai mostre/prototipuri
-        - value: 5-10
-          label: 5–10 unități (MOQ standard)
         - value: 100-500
           label: 100-500 de unități
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Site-ul web
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Timp de răspuns
-      description: Răspundem în termen de o zi lucrătoare.
-      icon: tabler:clock
 map:
   title: Luați legătura
   subtitle: Contactați Inflatable Pool Factory

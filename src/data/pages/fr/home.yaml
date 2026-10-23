@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Trouvez la bonne piscine<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">pour votre jardin.</span>
-  subtitle: "Comparez les modèles et les tailles, ou obtenez de l'aide pour choisir : notre équipe répond aux questions dans un délai d'un jour ouvrable."
+  subtitle: "Comparez les modèles et les tailles, ou obtenez de l'aide pour choisir."
   actions:
     - variant: primary
       text: Magasiner les piscines

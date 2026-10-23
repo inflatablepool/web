@@ -65,7 +65,7 @@ steps2_values:
       description: Every seam, wall, and valve is treated as if our own families will swim in it.
       icon: tabler:heart
     - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+      description: High-pressure drop stitch construction, checked against the approved model specification before any pool ships.
       icon: tabler:settings
     - title: Support that outlasts the season
       description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
@@ -92,7 +92,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@inflatablepoolfactory.com — we reply within one business day.
+      description: info@inflatablepoolfactory.com
     - title: Website
       description: inflatablepoolfactory.com — browse our pools and request a quote.
     - title: OEM / Wholesale
@@ -139,8 +139,8 @@ production_section:
     - title: 'Strict Quality Control'
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
+        - 'Pressure and airtightness checks against the approved model specification'
+        - 'Final inspection against the approved quality plan before shipping'
 
 global_ops_section:
   tagline: 'Global Reach'

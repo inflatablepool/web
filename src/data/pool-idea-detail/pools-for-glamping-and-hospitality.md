@@ -79,4 +79,4 @@ Looking to elevate your glamping site or hospitality resort with custom water fe
 
 ### Get started today
 
-Interested in custom commercial configurations or a project quote? Email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) or [submit a project request through our contact form](/contact) — our team typically responds within one business day.
+Interested in custom commercial configurations or a project quote? Email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) or [submit a project request through our contact form](/contact) — our team will review your inquiry and follow up with next steps.

@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Padalhan kami ng mensahe
-  subtitle: Para sa mga quote, teknikal na tanong o mga katanungan sa pakikipagsosyo, i-drop sa amin ang isang linya. Sumasagot kami sa loob ng isang araw ng negosyo.
+  subtitle: Para sa mga quote, teknikal na tanong o mga katanungan sa pakikipagsosyo, i-drop sa amin ang isang linya.
   email_to: info@inflatablepoolfactory.com
   submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
-  success_message: Salamat! Ang iyong mensahe ay nakarating sa aming inbox. Sasagot kami sa loob ng isang araw ng negosyo.
+  success_message: Salamat! Ang iyong mensahe ay nakarating sa aming inbox.
   error_message: Nagkaproblema sa pagpapadala ng iyong mensahe. Pakisubukang muli o direktang mag-email sa amin.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Piliin ang iyong tinantyang dami...
         - value: sample
           label: Mga Sample / Prototype lamang
-        - value: 5-10
-          label: 5–10 unit (Karaniwang MOQ)
         - value: 100-500
           label: 100–500 unit
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Website
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Oras ng pagtugon
-      description: Sumasagot kami sa loob ng isang araw ng negosyo.
-      icon: tabler:clock
 map:
   title: Makipag-ugnayan
   subtitle: Makipag-ugnayan kay Inflatable Pool Factory

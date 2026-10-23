@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Raskite tinkamą baseiną<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">savo kiemui.</span>
-  subtitle: Palyginkite modelius ir dydžius arba gaukite pagalbos renkantis – mūsų komanda atsakys į klausimus per vieną darbo dieną.
+  subtitle: Palyginkite modelius ir dydžius arba gaukite pagalbos renkantis.
   actions:
     - variant: primary
       text: Parduotuvė baseinai

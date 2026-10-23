@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Stuur ons een bericht
-  subtitle: Voor offertes, technische vragen of vragen over samenwerking kunt u ons een bericht sturen. Wij antwoorden binnen één werkdag.
+  subtitle: Voor offertes, technische vragen of vragen over samenwerking kunt u ons een bericht sturen.
   email_to: info@inflatablepoolfactory.com
   submit_button: Stuur een aanvraag → Ontvang een offerte
-  success_message: Bedankt! Uw bericht is in onze inbox beland. Wij zullen binnen één werkdag antwoorden.
+  success_message: Bedankt! Uw bericht is in onze inbox beland.
   error_message: Er is iets misgegaan bij het verzenden van uw bericht. Probeer het opnieuw of stuur ons direct een e-mail.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Selecteer uw geschatte volume...
         - value: sample
           label: Alleen monsters/prototypes
-        - value: 5-10
-          label: 5–10 eenheden (standaard MOQ)
         - value: 100-500
           label: 100–500 eenheden
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Website
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Reactietijd
-      description: Wij antwoorden binnen één werkdag.
-      icon: tabler:clock
 map:
   title: Neem contact op
   subtitle: Neem contact op met Inflatable Pool Factory

@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Nosūtiet mums ziņu
-  subtitle: Lai saņemtu piedāvājumus, tehniskus jautājumus vai partnerības jautājumus, rakstiet mums. Mēs atbildam vienas darba dienas laikā.
+  subtitle: Lai saņemtu piedāvājumus, tehniskus jautājumus vai partnerības jautājumus, rakstiet mums.
   email_to: info@inflatablepoolfactory.com
   submit_button: Sūtīt pieprasījumu → Saņemt piedāvājumu
-  success_message: Paldies! Jūsu ziņojums ir nonācis mūsu iesūtnē. Mēs atbildēsim vienas darba dienas laikā.
+  success_message: Paldies! Jūsu ziņojums ir nonācis mūsu iesūtnē.
   error_message: Nosūtot ziņojumu, radās kļūda. Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Atlasiet aptuveno apjomu...
         - value: sample
           label: Tikai paraugi/prototipi
-        - value: 5-10
-          label: 5–10 vienības (standarta MOQ)
         - value: 100-500
           label: 100–500 vienības
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Tīmekļa vietne
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Atbildes laiks
-      description: Mēs atbildam vienas darba dienas laikā.
-      icon: tabler:clock
 map:
   title: Sazinieties
   subtitle: Sazinieties ar Felizbaju

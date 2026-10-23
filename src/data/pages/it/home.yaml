@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Trova la piscina giusta<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">per il tuo giardino.</span>
-  subtitle: 'Confronta modelli e taglie o ottieni aiuto nella scelta: il nostro team risponde alle domande entro un giorno lavorativo.'
+  subtitle: 'Confronta modelli e taglie o ottieni aiuto nella scelta.'
   actions:
     - variant: primary
       text: Acquista piscine

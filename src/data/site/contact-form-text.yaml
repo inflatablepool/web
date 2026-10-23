@@ -9,11 +9,11 @@ submit_button:
   pt: Enviar consulta → Obter orçamento
 
 success_message:
-  en: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  fr: Merci ! Votre message a bien été envoyé. Nous vous répondrons sous un jour ouvré.
-  de: Vielen Dank! Ihre Nachricht ist eingegangen. Wir antworten innerhalb eines Werktags.
-  es: ¡Gracias! Su mensaje ha sido enviado. Le responderemos en un día hábil.
-  pt: Obrigado! Sua mensagem foi enviada. Responderemos em um dia útil.
+  en: Thanks! Your message has landed in our inbox. Our team will review your message and follow up with next steps.
+  fr: Merci ! Votre message a bien été envoyé.
+  de: Vielen Dank! Ihre Nachricht ist eingegangen.
+  es: ¡Gracias! Su mensaje ha sido enviado.
+  pt: Obrigado! Sua mensagem foi enviada.
 
 error_message:
   en: Something went wrong sending your message. Please try again or email us directly.

@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Küldj nekünk üzenetet
-  subtitle: Árajánlatok, műszaki kérdések vagy partnerségi kérdések esetén írjon nekünk. Egy munkanapon belül válaszolunk.
+  subtitle: Árajánlatok, műszaki kérdések vagy partnerségi kérdések esetén írjon nekünk.
   email_to: info@inflatablepoolfactory.com
   submit_button: Kérdés küldése → Kérjen árajánlatot
-  success_message: Köszönöm! Üzenete beérkezett a postafiókunkba. Egy munkanapon belül válaszolunk.
+  success_message: Köszönöm! Üzenete beérkezett a postafiókunkba.
   error_message: Hiba történt az üzenet elküldésekor. Kérjük, próbálja újra, vagy írjon nekünk közvetlenül.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Válassza ki a becsült mennyiséget...
         - value: sample
           label: Csak minták / prototípusok
-        - value: 5-10
-          label: 5–10 egység (standard MOQ)
         - value: 100-500
           label: 100-500 egység
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Weboldal
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Válaszidő
-      description: Egy munkanapon belül válaszolunk.
-      icon: tabler:clock
 map:
   title: Vegye fel a kapcsolatot
   subtitle: Forduljon Inflatable Pool Factory

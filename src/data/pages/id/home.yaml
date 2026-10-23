@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Temukan kolam yang tepat<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">untuk halaman belakang rumahmu.</span>
-  subtitle: Bandingkan model dan ukuran, atau dapatkan bantuan dalam memilih — tim kami menjawab pertanyaan dalam satu hari kerja.
+  subtitle: Bandingkan model dan ukuran, atau dapatkan bantuan dalam memilih.
   actions:
     - variant: primary
       text: Kolam Toko

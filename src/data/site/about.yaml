@@ -5,7 +5,7 @@ origin:
     - 'Inflatable Pool Factory started with a simple frustration: inflatable pools that sagged, leaked, and lasted a single season. We believed a pool could be better — rigid enough to swim laps in, tough enough to survive year after year, and still small enough to store indoors in winter.'
     - 'Drop stitch construction — the same technology behind high-pressure inflatable stand-up paddleboards — was the answer. Thousands of internal threads lock the walls rigid under pressure, giving a fabric pool the structure of a hard-sided one.'
     - 'Every Inflatable Pool Factory pool is built around that core: quality materials, tested construction, and honest engineering, at a price a family can justify.'
-    - 'Inflatable Pool Factory is designed by the Inflatable Pool Team at <strong>Qingdao Vatrad Group</strong>. Our pools are produced at our manufacturing base in Qingdao, China, and every unit is 100% pressure-tested before it ships.'
+    - 'Inflatable Pool Factory is designed by the Inflatable Pool Team at <strong>Qingdao Vatrad Group</strong>. Our pools are produced at our manufacturing base in Qingdao, China, and production units are checked against the approved pressure and leak-test specification before shipment.'
   image: /images/pools/rectangular-pool-1.jpg
   image_alt: 'Inflatable Pool Factory drop stitch pool'
 
@@ -34,8 +34,8 @@ design:
   image: /images/pools/round-grey-pool-1.webp
   image_alt: 'Inflatable Pool Factory pool design'
   stats:
-    - value: '100%'
-      label: 'pressure-tested<br />before packing'
+    - value: 'QC'
+      label: 'checks<br />before packing'
     - value: '4–5'
       label: 'PSI rated<br />working pressure'
     - value: '5–15'

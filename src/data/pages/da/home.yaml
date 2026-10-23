@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Find den rigtige pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">til din baghave.</span>
-  subtitle: Sammenlign modeller og størrelser, eller få hjælp til at vælge - vores team besvarer spørgsmål inden for en hverdag.
+  subtitle: Sammenlign modeller og størrelser, eller få hjælp til at vælge.
   actions:
     - variant: primary
       text: Shop Pools

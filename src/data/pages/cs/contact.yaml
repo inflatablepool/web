@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Pošlete nám zprávu
-  subtitle: V případě cenových nabídek, technických dotazů nebo dotazů na partnerství nám napište. Odpovídáme do jednoho pracovního dne.
+  subtitle: V případě cenových nabídek, technických dotazů nebo dotazů na partnerství nám napište.
   email_to: info@inflatablepoolfactory.com
   submit_button: Odeslat poptávku → Získejte cenovou nabídku
-  success_message: Díky! Vaše zpráva přistála v naší doručené poště. Odpovíme do jednoho pracovního dne.
+  success_message: Díky! Vaše zpráva přistála v naší doručené poště.
   error_message: Při odesílání vaší zprávy se něco pokazilo. Zkuste to znovu nebo nám napište přímo.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Vyberte odhadovaný objem...
         - value: sample
           label: Pouze vzorky / prototypy
-        - value: 5-10
-          label: 5–10 jednotek (standardní MOQ)
         - value: 100-500
           label: 100–500 jednotek
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: webové stránky
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Doba odezvy
-      description: Odpovídáme do jednoho pracovního dne.
-      icon: tabler:clock
 map:
   title: Kontaktujte nás
   subtitle: Kontaktujte Inflatable Pool Factory

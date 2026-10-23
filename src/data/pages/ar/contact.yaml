@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: أرسل لنا رسالة
-  subtitle: للحصول على عروض الأسعار أو الأسئلة الفنية أو استفسارات الشراكة، راسلنا. نقوم بالرد خلال يوم عمل واحد.
+  subtitle: للحصول على عروض الأسعار أو الأسئلة الفنية أو استفسارات الشراكة، راسلنا.
   email_to: info@inflatablepoolfactory.com
   submit_button: أرسل استفسار → احصل على عرض أسعار
-  success_message: شكرًا! لقد وصلت رسالتك إلى صندوق البريد الوارد لدينا. سوف نقوم بالرد خلال يوم عمل واحد.
+  success_message: شكرًا! لقد وصلت رسالتك إلى صندوق البريد الوارد لدينا.
   error_message: حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني مباشرة.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: حدد الحجم المقدر...
         - value: sample
           label: عينات/نماذج أولية فقط
-        - value: 5-10
-          label: 5-10 وحدات (موك القياسي)
         - value: 100-500
           label: 100-500 وحدة
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: موقع إلكتروني
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: وقت الاستجابة
-      description: نقوم بالرد خلال يوم عمل واحد.
-      icon: tabler:clock
 map:
   title: تواصل معنا
   subtitle: تواصل مع Inflatable Pool Factory

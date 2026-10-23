@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Envíanos un mensaje
-  subtitle: Para cotizaciones, preguntas técnicas o consultas sobre asociaciones, escríbanos. Respondemos dentro de un día hábil.
+  subtitle: Para cotizaciones, preguntas técnicas o consultas sobre asociaciones, escríbanos.
   email_to: info@inflatablepoolfactory.com
   submit_button: Enviar consulta → Obtener una cotización
-  success_message: ¡Gracias! Tu mensaje ha llegado a nuestra bandeja de entrada. Le responderemos dentro de un día hábil.
+  success_message: ¡Gracias! Tu mensaje ha llegado a nuestra bandeja de entrada.
   error_message: Algo salió mal al enviar tu mensaje. Inténtelo de nuevo o envíenos un correo electrónico directamente.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Seleccione su volumen estimado...
         - value: sample
           label: Sólo muestras/prototipos
-        - value: 5-10
-          label: 5 a 10 unidades (MOQ estándar)
         - value: 100-500
           label: 100–500 unidades
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Sitio web
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Tiempo de respuesta
-      description: Respondemos dentro de un día hábil.
-      icon: tabler:clock
 map:
   title: Ponte en contacto
   subtitle: Contactar Inflatable Pool Factory

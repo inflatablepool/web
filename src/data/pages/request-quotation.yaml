@@ -83,7 +83,7 @@ content_form:
       row: 4
       type: text
       required: true
-      placeholder: e.g. 50 units, or TBD
+      placeholder: e.g., target quantity or TBD
     - name: customizationLevel
       label: Customization Level
       row: 4
@@ -122,10 +122,10 @@ content_rfq_types:
   subtitle: 'Different orders need different levels of detail. Select the form that matches your buying stage.'
   items:
     - title: 'Quick Inquiry'
-      description: '5-6 fields, 30 seconds. For initial contact, general questions, or pool availability. We respond within 24 hours.'
+      description: '5-6 fields, 30 seconds. For initial contact, general questions, or pool availability. Our team reviews each inquiry and follows up with next steps.'
       icon: tabler:bolt
     - title: 'Standard RFQ'
-      description: '8-10 fields, 2 minutes. For specific pool quotations with model selection, quantity, and delivery requirements. Detailed quotation within 48 hours.'
+      description: '8-10 fields, 2 minutes. For specific pool quotations with model selection, quantity, and delivery requirements. Detailed quotation prepared against the confirmed requirements.'
       icon: tabler:file-text
     - title: 'Project RFQ'
       description: '10-14 fields, 5 minutes. For resort fleets, glamping projects, retail programs, or OEM/ODM manufacturing requiring custom configuration. Dedicated project manager assigned.'
@@ -213,7 +213,7 @@ form_standard:
       label: Estimated Quantity
       type: text
       required: true
-      placeholder: e.g., 10-20 units
+      placeholder: e.g., target quantity or trial order
     - name: targetMarket
       label: Target Market / Region
       type: text
@@ -285,7 +285,7 @@ form_project:
       label: Quantity Range
       type: text
       required: true
-      placeholder: e.g., 20-50 units over 12 months
+      placeholder: e.g., target annual volume
     - name: customRequirements
       label: Custom Configuration Needs
       type: textarea

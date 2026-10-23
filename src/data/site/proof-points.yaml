@@ -1,8 +1,8 @@
 points:
   - id: quality
-    metric: '100%'
-    label: pressure-tested pools
-    detail: Every pool is inflation-tested before it leaves the factory
+    metric: 'Per spec'
+    label: pressure & leak checks
+    detail: Production units are checked against the approved pressure and leak-test specification
   - id: setup
     metric: '5–15'
     label: minutes to inflate
@@ -12,6 +12,6 @@ points:
     label: drop stitch PVC
     detail: Built for repeated seasonal use; folds into the included storage bag for winter
   - id: support
-    metric: '1 day'
-    label: response time
-    detail: Sales and support questions answered within one business day
+    metric: 'OEM/ODM'
+    label: custom programs
+    detail: Custom sizes, colors, branding and packaging reviewed per project

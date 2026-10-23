@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: ส่งข้อความถึงเรา
-  subtitle: สำหรับการเสนอราคา คำถามทางเทคนิค หรือสอบถามเกี่ยวกับความร่วมมือ โปรดโทรหาเรา เราตอบกลับภายในหนึ่งวันทำการ
+  subtitle: สำหรับการเสนอราคา คำถามทางเทคนิค หรือสอบถามเกี่ยวกับความร่วมมือ โปรดติดต่อเรา
   email_to: info@inflatablepoolfactory.com
   submit_button: ส่งคำถาม → รับใบเสนอราคา
-  success_message: ขอบคุณ! ข้อความของคุณเข้าสู่กล่องจดหมายของเราแล้ว เราจะตอบกลับภายในหนึ่งวันทำการ
+  success_message: ขอบคุณ! เราได้รับข้อความของคุณแล้ว
   error_message: เกิดข้อผิดพลาดในการส่งข้อความของคุณ โปรดลองอีกครั้งหรือส่งอีเมลถึงเราโดยตรง
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: เลือกปริมาณโดยประมาณของคุณ...
         - value: sample
           label: ตัวอย่าง/ต้นแบบเท่านั้น
-        - value: 5-10
-          label: 5–10 หน่วย (ขั้นต่ำมาตรฐาน)
         - value: 100-500
           label: 100–500 หน่วย
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: เว็บไซต์
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: เวลาตอบสนอง
-      description: เราตอบกลับภายในหนึ่งวันทำการ
-      icon: tabler:clock
 map:
   title: ได้รับการติดต่อ
   subtitle: ติดต่อInflatable Pool Factory

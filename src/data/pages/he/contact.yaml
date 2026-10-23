@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: שלחו לנו הודעה
-  subtitle: להצעות מחיר, שאלות טכניות או פניות לשותפות, פנו אלינו. אנו משיבים תוך יום עסקים אחד.
+  subtitle: להצעות מחיר, שאלות טכניות או פניות לשותפות, פנו אלינו.
   email_to: info@inflatablepoolfactory.com
   submit_button: שלח פניה ← קבל הצעת מחיר
-  success_message: תוֹדָה! ההודעה שלך נחתה בתיבת הדואר הנכנס שלנו. אנו נשיב תוך יום עסקים אחד.
+  success_message: תוֹדָה! ההודעה שלך נחתה בתיבת הדואר הנכנס שלנו.
   error_message: משהו השתבש בשליחת ההודעה שלך. אנא נסה שוב או שלח לנו דוא"ל ישירות.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: בחר את הנפח המשוער שלך...
         - value: sample
           label: דוגמאות / אבות טיפוס בלבד
-        - value: 5-10
-          label: 5-10 יחידות (MOQ סטנדרטי)
         - value: 100-500
           label: 100-500 יחידות
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: אֲתַר אִינטֶרנֶט
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: זמן תגובה
-      description: אנו משיבים תוך יום עסקים אחד.
-      icon: tabler:clock
 map:
   title: לְהִתְקַשֵׁר
   subtitle: צור קשר עם Inflatable Pool Factory

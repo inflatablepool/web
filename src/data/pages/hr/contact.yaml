@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Pošaljite nam poruku
-  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, javite nam se. Odgovaramo u roku od jednog radnog dana.
+  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, javite nam se.
   email_to: info@inflatablepoolfactory.com
   submit_button: Pošaljite upit → Zatražite ponudu
-  success_message: Hvala! Vaša poruka je stigla u naš inbox. Odgovorit ćemo u roku od jednog radnog dana.
+  success_message: Hvala! Vaša poruka je stigla u naš inbox.
   error_message: Nešto nije u redu prilikom slanja vaše poruke. Pokušajte ponovno ili nam izravno pošaljite e-poruku.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Odaberite svoju procijenjenu količinu...
         - value: sample
           label: Samo uzorci / prototipovi
-        - value: 5-10
-          label: 5–10 jedinica (standardni MOQ)
         - value: 100-500
           label: 100–500 jedinica
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Web stranica
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Vrijeme odziva
-      description: Odgovaramo u roku od jednog radnog dana.
-      icon: tabler:clock
 map:
   title: Javite nam se
   subtitle: Kontaktirajte Inflatable Pool Factory

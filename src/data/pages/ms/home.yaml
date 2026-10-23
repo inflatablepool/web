@@ -194,7 +194,7 @@ faqs:
 cta:
   title: |
     Cari kolam yang betul<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">untuk halaman belakang rumah anda.</span>
-  subtitle: Bandingkan model dan saiz, atau dapatkan bantuan memilih — pasukan kami menjawab soalan dalam satu hari perniagaan.
+  subtitle: Bandingkan model dan saiz, atau dapatkan bantuan memilih.
   actions:
     - variant: primary
       text: Kolam Kedai

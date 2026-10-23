@@ -7,12 +7,17 @@ export interface ProductCompliance {
 
 const poolCompliance: ProductCompliance = {
   certs: [
-    { label: 'CE', standard: 'EN 16582-1 (pool safety)' },
-    { label: 'ISO 9001:2015', standard: 'Factory quality management system', body: 'SGS' },
-    { label: 'BSCI', standard: 'Social compliance audit', body: 'amfori' },
+    {
+      label: 'Compliance documentation',
+      standard: 'Confirmed per project and target market',
+    },
   ],
-  materialCompliance: ['REACH (EU)', 'RoHS (EU)', 'California Prop 65'],
-  testStandards: ['ASTM F2666 (Portable Pool Safety)', 'ASTM D751 (Tensile/Seam)', 'ASTM G154 (UV Aging)'],
+  materialCompliance: [
+    'Material specifications and available compliance documents are confirmed per project and target market.',
+  ],
+  testStandards: [
+    'Pressure and leak-test method, hold time and acceptance criteria are confirmed in the approved production specification.',
+  ],
   warranty: '2 years against manufacturing defects',
 };
 

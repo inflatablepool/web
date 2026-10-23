@@ -21,9 +21,9 @@ interface PointEntry {
 const defaultPoints: PointEntry[] = [
   {
     id: 'quality',
-    metric: '100%',
-    label: 'pressure-tested pools',
-    detail: 'Every pool is inflation-tested before it leaves the factory',
+    metric: 'Per spec',
+    label: 'pressure & leak checks',
+    detail: 'Production units are checked against the approved pressure and leak-test specification',
   },
   {
     id: 'setup',
@@ -39,9 +39,9 @@ const defaultPoints: PointEntry[] = [
   },
   {
     id: 'support',
-    metric: '1 day',
-    label: 'response time',
-    detail: 'Sales and support questions answered within one business day',
+    metric: 'OEM/ODM',
+    label: 'custom programs',
+    detail: 'Custom sizes, colors, branding and packaging reviewed per project',
   },
 ];
 
@@ -161,7 +161,7 @@ if (token) {
                 type="text"
                 name={'p' + i + '.detail'}
                 value={p.detail}
-                placeholder="Every pool is inflation-tested before it leaves the factory"
+                placeholder="Production units are checked against the approved pressure and leak-test specification"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               />
             </div>

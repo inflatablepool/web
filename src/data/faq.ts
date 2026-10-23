@@ -128,7 +128,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-shipping',
     question: 'How long does shipping take?',
     answer:
-      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate delivery estimate.',
+      'Dispatch timing for in-stock orders is confirmed with your order confirmation. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate estimate.',
     category: 'shipping',
     relatedProducts: [],
     relatedGuides: [],
@@ -146,7 +146,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-oem',
     question: 'Do you offer OEM/ODM services?',
     answer:
-      'Yes. We offer custom sizes, colors, logos, covers, and packaging for businesses. Our factory handles everything from minor branding changes to fully custom pool designs. Minimum order quantities apply — contact us for details.',
+      'Yes. We review custom sizes, colors, logos, covers, and packaging for businesses. Custom configurations, design scope, design ownership, MOQ and sample terms are confirmed per project before quoting.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: [],
@@ -180,9 +180,9 @@ export const faqs: FaqRecord[] = [
   },
   {
     id: 'sourcing-moq',
-    question: 'What is your MOQ for wholesale and OEM orders?',
+    question: 'How do I confirm MOQ for wholesale and OEM orders?',
     answer:
-      'Samples start from a single piece, and our standard price list is based on 20 pcs per item — so a first order can be as small as 20 units per SKU. Mixed orders across multiple SKUs at 20 pcs each all qualify for list pricing.',
+      'MOQ depends on the product, customization, packaging and order volume. Share your target quantity and market; we confirm the applicable MOQ, sample terms and quantity pricing in the quotation.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],
@@ -191,7 +191,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-sample-policy',
     question: 'Can I order a sample before committing to production?',
     answer:
-      'Yes. A pre-production sample is manufactured and pressure-tested for your approval before any volume order is released. The sample stage verifies print quality, color accuracy, dimensions and packaging fit against your specification.',
+      'Yes. A pre-production sample is manufactured and checked against the agreed sample specification for your approval before any volume order is released. The sample stage verifies print quality, color accuracy, dimensions and packaging fit against your specification.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],
@@ -209,7 +209,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-factory-location',
     question: 'Where is the Inflatable Pool Factory production facility located?',
     answer:
-      'Our production facility is in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the factory in person or join a live video walkthrough of the production and pressure-test areas.',
+      'Our production facility is in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the factory in person or join a live video walkthrough of the production and inspection areas.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],
@@ -227,7 +227,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-material-compliance',
     question: 'What material compliance documents do you provide?',
     answer:
-      'Our pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC. Compliance declarations and material specification sheets are available to wholesale and OEM buyers on request.',
+      'Our pools use UV-resistant, double-layer drop-stitch PVC. Material specifications and available compliance documents are reviewed against the target market and confirmed for wholesale and OEM projects.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],
@@ -236,7 +236,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-third-party-inspection',
     question: 'Can we appoint a third-party inspector?',
     answer:
-      'Yes. Third-party inspection (SGS, Bureau Veritas, TÜV, QIMA and similar) is welcome on any order — during production, at the 24–48 hour pressure-drop test stage, or before container loading.',
+      'Yes. Third-party inspection (SGS, Bureau Veritas, TÜV, QIMA and similar) is welcome on any order — during production, at the pressure and leak-test stage, or before container loading.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],

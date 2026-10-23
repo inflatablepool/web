@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. Our team will review your message and follow up with next steps.
   email_to: info@inflatablepoolfactory.com
   submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  success_message: Thanks! Your message has landed in our inbox. Our team will review your message and follow up with next steps.
   error_message: Something went wrong sending your message. Please try again or email us directly.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Select your estimated volume...
         - value: sample
           label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
         - value: '100-500'
           label: 100–500 units
         - value: '500-plus'
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Website
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
-      icon: tabler:clock
 map:
   title: Get in Touch
   subtitle: Contact Inflatable Pool Factory

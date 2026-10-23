@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Отправьте нам сообщение
-  subtitle: Для получения предложений, технических вопросов или запросов о партнерстве напишите нам. Мы отвечаем в течение одного рабочего дня.
+  subtitle: Для получения предложений, технических вопросов или запросов о партнерстве напишите нам.
   email_to: info@inflatablepoolfactory.com
   submit_button: Отправить запрос → Получить предложение
-  success_message: Спасибо! Ваше сообщение попало в наш почтовый ящик. Мы ответим в течение одного рабочего дня.
+  success_message: Спасибо! Ваше сообщение попало в наш почтовый ящик.
   error_message: Что-то пошло не так при отправке вашего сообщения. Пожалуйста, попробуйте еще раз или напишите нам напрямую.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Выберите предполагаемый объем...
         - value: sample
           label: Только образцы/прототипы
-        - value: 5-10
-          label: 5–10 единиц (стандартный минимальный заказ)
         - value: 100-500
           label: 100–500 единиц
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Веб-сайт
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Время ответа
-      description: Мы отвечаем в течение одного рабочего дня.
-      icon: tabler:clock
 map:
   title: Свяжитесь с нами
   subtitle: Связаться с Inflatable Pool Factory

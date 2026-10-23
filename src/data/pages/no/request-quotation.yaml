@@ -1,7 +1,7 @@
 hero_text:
   tagline: Get a Quote
   title: 'Request a Quotation<br />for Your Pool Order'
-  subtitle: 'Tell us about your requirements and our team will respond with a detailed quotation within 2 business days.'
+  subtitle: 'Share your product requirements, estimated order quantity and target market. Our team will review the information and determine the next steps for product selection, customization or manufacturing quotation.'
 steps2_process:
   title: How It Works
   subtitle: 'Four simple steps from inquiry to quotation.'
@@ -13,7 +13,7 @@ steps2_process:
       description: 'Our team reviews your requirements and may contact you for clarification. We provide recommendations on sizes, colors, and accessories.'
       icon: tabler:users
     - title: 'Step 3: Receive Your Quote'
-      description: 'You receive a detailed quotation including unit pricing, lead time, payment terms, and shipping options. Typically within 48 hours.'
+      description: 'You receive a detailed quotation covering the agreed scope, unit pricing, lead time, payment terms and shipping options. We review the requirements and reply with the next steps; complex projects may require technical clarification.'
       icon: tabler:currency-dollar
     - title: 'Step 4: Order & Delivery'
       description: 'After quote acceptance, we arrange production and shipping. Regular updates throughout the process.'
@@ -36,7 +36,7 @@ content_form:
       placeholder: e.g. 4 m x 2.5 m x 1.2 m, or diameter 3 m
     - name: Quantity
       type: text
-      placeholder: e.g. 50 units
+      placeholder: e.g., target quantity
     - name: Target Market
       type: text
       placeholder: e.g. Europe, North America, Middle East
@@ -78,10 +78,10 @@ content_rfq_types:
   subtitle: 'Different orders need different levels of detail. Select the form that matches your buying stage.'
   items:
     - title: 'Quick Inquiry'
-      description: '5-6 fields, 30 seconds. For initial contact, general questions, or pool availability. We respond within 24 hours.'
+      description: '5-6 fields, 30 seconds. For initial contact, general questions, or pool availability. Our team reviews each inquiry and follows up with next steps.'
       icon: tabler:bolt
     - title: 'Standard RFQ'
-      description: '8-10 fields, 2 minutes. For specific pool quotations with model selection, quantity, and delivery requirements. Detailed quotation within 48 hours.'
+      description: '8-10 fields, 2 minutes. For specific pool quotations with model selection, quantity, and delivery requirements. Detailed quotation prepared against the confirmed scope.'
       icon: tabler:file-text
     - title: 'Project RFQ'
       description: '10-14 fields, 5 minutes. For resort fleets, glamping projects, retail programs, or OEM/ODM manufacturing requiring custom configuration. Dedicated project manager assigned.'
@@ -169,7 +169,7 @@ form_standard:
       label: Estimated Quantity
       type: text
       required: true
-      placeholder: e.g., 10-20 units
+      placeholder: e.g., target quantity or trial order
     - name: targetMarket
       label: Target Market / Region
       type: text
@@ -241,7 +241,7 @@ form_project:
       label: Quantity Range
       type: text
       required: true
-      placeholder: e.g., 20-50 units over 12 months
+      placeholder: e.g., target annual volume
     - name: customRequirements
       label: Custom Configuration Needs
       type: textarea
@@ -278,7 +278,7 @@ form_project:
 
 cta:
   title: 'Prefer to discuss by email?'
-  subtitle: 'Send your inquiry directly to our team at info@inflatablepoolfactory.com and we will respond within 24 hours.'
+  subtitle: 'Send your inquiry directly to our team at info@inflatablepoolfactory.com and we will review it and follow up with next steps.'
   actions:
     - variant: primary
       text: Email us directly

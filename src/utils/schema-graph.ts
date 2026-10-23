@@ -7,7 +7,7 @@
  *     Brand 出现在 block5 和 block6 两处，slogan 两块给的值还不一样。
  *     实体被拆成互不相认的碎片，Google 与 AI 引擎都难以合并成一个知识实体。
  *  2. knowsAbout 里有两条被字符串管道破坏的值：
- *       " certified manufacturing"（ISO 9001 丢了）
+ *       " certified manufacturing"（原认证词已丢失）
  *       "CE  inflatable boat compliance"（中间标准号丢了）
  *     与 P0 的箭头污染是同一类根因：替换脚本吃掉了 token。
  *  3. /products/ /supboard/ /compare/ /testimonials/ 等列表页完全没有
@@ -23,6 +23,9 @@
 import facts from '../config/facts.json';
 
 const SITE = 'https://inflatablepoolfactory.com';
+
+type CertificationFact = { name: string; body?: string; since?: string | number };
+const certifications = facts.certifications as CertificationFact[];
 
 // 稳定的 @id 锚点。@id 是实体身份的唯一凭据，一旦发布不要再改。
 export const ID = {
@@ -120,24 +123,27 @@ export function organizationNode() {
       facts.social.facebook,
     ].filter(Boolean),
 
-    // 认证是工厂品牌最硬的信任信号，原来只在正文里写，没有机器可读版本
-    hasCredential: facts.certifications.map((c) => ({
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: c.name,
-      ...(c.body ? { recognizedBy: { '@type': 'Organization', name: c.body } } : {}),
-      ...(c.since ? { validFrom: String(c.since) } : {}),
-    })),
+    // 认证信息只在经项目确认后发布；未确认时不输出结构化认证声明。
+    ...(certifications.length
+      ? {
+          hasCredential: certifications.map((c) => ({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'certification',
+            name: c.name,
+            ...(c.body ? { recognizedBy: { '@type': 'Organization', name: c.body } } : {}),
+            ...(c.since ? { validFrom: String(c.since) } : {}),
+          })),
+        }
+      : {}),
 
-    // 修掉被字符串管道破坏的两条，并补全标准号
     knowsAbout: [
       'Inflatable swimming pools',
       'Drop-stitch pool construction',
       'Rectangular and round backyard pools',
       'Family-safe pool materials',
       'Pool setup, water care, and seasonal storage',
-      'EN 16582-1 residential pool safety standards',
-      'ASTM F2666 pool safety compliance',
+      'Pool safety documentation and standards review',
+      'Pressure and leak-test planning for production',
     ],
 
     brand: { '@id': ID.brand },

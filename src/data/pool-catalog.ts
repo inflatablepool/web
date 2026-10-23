@@ -2,7 +2,7 @@
  * Drop-Stitch Pool catalog data — series, sizes, FOB Qingdao prices,
  * standard inclusions and optional accessories.
  *
- * Source of truth: Inflatable Pool Factory quotation sheet (price basis: 20 pcs per item,
+ * Source of truth: Inflatable Pool Factory quotation sheet (indicative reference pricing,
  * FOB Qingdao, USD) and core product series & specifications sheet.
  */
 
@@ -15,7 +15,7 @@ export interface PoolCatalogItem {
   wall: string;
   /** Packed weight in kg (when published on the quotation sheet) */
   weightKg: number | null;
-  /** FOB Qingdao unit price in USD (price basis: 20 pcs) */
+  /** Indicative FOB Qingdao unit price in USD */
   fobUsd: number;
 }
 
@@ -58,7 +58,7 @@ export const POOL_PRESSURE_SPECS = [
   { label: 'Pressure-relief valve auto-release', value: `Above ${POOL_RELIEF_VALVE_PRESSURE}` },
 ];
 
-export const PRICE_BASIS_NOTE = 'FOB Qingdao, USD — price basis: 20 pcs per item. Valid for the current production season; confirm final pricing with our sales team.';
+export const PRICE_BASIS_NOTE = 'FOB Qingdao, USD — indicative reference pricing. Quantity basis and final price are confirmed in your quotation.';
 
 export interface PoolProductionStep {
   title: string;
@@ -75,7 +75,7 @@ export const POOL_PRODUCTION_STEPS: PoolProductionStep[] = [
   {
     title: 'Valve & Fitting Installation',
     description:
-      'Precise ports are punched in the designated wall panels, then 38 mm standard filter-pump ports, water shut-off valves, over-inflation safety valves, and drain valves are heat-sealed in place with absolute leak-proof sealing against internal air and water pressure.',
+      'Precise ports are punched in the designated wall panels, then 38 mm standard filter-pump ports, water shut-off valves, over-inflation safety valves, and drain valves are heat-sealed in place against internal air and water pressure.',
   },
   {
     title: 'Panel Assembly & Rail Bonding',
@@ -90,7 +90,7 @@ export const POOL_PRODUCTION_STEPS: PoolProductionStep[] = [
   {
     title: 'Pressure & Leak Testing',
     description:
-      'Every completed pool is inflated to its rated operating pressure and held for a rigorous 24–48 hour pressure-drop test, verifying air-tightness, structural rigidity, and zero leakage before final deflating, cleaning, and packaging.',
+      'Completed pools are inflated to the rated operating pressure and checked against the pressure and leak-test method and acceptance criteria in the approved production specification before final deflating, cleaning, and packaging.',
   },
 ];
 

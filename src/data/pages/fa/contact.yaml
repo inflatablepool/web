@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: برای ما پیام ارسال کنید
-  subtitle: برای نقل قول، سؤالات فنی یا سؤالات مشارکت، با ما تماس بگیرید. ما ظرف یک روز کاری پاسخ می دهیم.
+  subtitle: برای نقل قول، سؤالات فنی یا سؤالات مشارکت، با ما تماس بگیرید.
   email_to: info@inflatablepoolfactory.com
   submit_button: ارسال استعلام → دریافت قیمت
-  success_message: با تشکر پیام شما در صندوق ورودی ما قرار گرفت. ما ظرف یک روز کاری پاسخ خواهیم داد.
+  success_message: با تشکر پیام شما در صندوق ورودی ما قرار گرفت.
   error_message: هنگام ارسال پیام شما مشکلی پیش آمد. لطفاً دوباره امتحان کنید یا مستقیماً به ما ایمیل بزنید.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: حجم تخمینی خود را انتخاب کنید...
         - value: sample
           label: فقط نمونه ها / نمونه های اولیه
-        - value: 5-10
-          label: 5-10 واحد (استاندارد MOQ)
         - value: 100-500
           label: 100-500 واحد
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: وب سایت
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: زمان پاسخگویی
-      description: ما ظرف یک روز کاری پاسخ می دهیم.
-      icon: tabler:clock
 map:
   title: تماس بگیرید
   subtitle: با Inflatable Pool Factory تماس بگیرید

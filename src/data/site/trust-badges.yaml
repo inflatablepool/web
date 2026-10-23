@@ -1,21 +1,21 @@
 badges:
   - icon: "\u2714"
-    title: Safety Tested
-    desc: Designed with reference to EN 16582-1 and ASTM F2666; model-specific safety information ships in the product documentation.
+    title: Safety Documentation
+    desc: Model-specific safety information and applicable standards are reviewed per project and ship with the product documentation.
     variant: cert
   - icon: "\u2699"
-    title: ISO 9001:2015
-    desc: Quality management system certified by SGS.
+    title: Quality Management
+    desc: Factory quality procedures are reviewed during supplier qualification and project confirmation.
     variant: cert
   - icon: "\u2726"
-    title: Pressure Tested
-    desc: Every pool inflation-tested before it leaves the factory.
+    title: Pressure & Leak Checks
+    desc: Production units are checked against the approved pressure and leak-test specification.
     variant: standard
   - icon: "\u2606"
     title: 2-Year Warranty
     desc: Limited warranty on seams, valves, and fabric against manufacturing defects.
     variant: warranty
   - icon: "\u2696"
-    title: Material Compliance
-    desc: PVC materials sourced with REACH-compliant formulations; compliance documentation available on request.
+    title: Material Documentation
+    desc: Material specifications and available compliance documents are confirmed per project and target market.
     variant: material

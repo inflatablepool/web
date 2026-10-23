@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Hantar mesej kepada kami
-  subtitle: Untuk sebut harga, soalan teknikal atau pertanyaan perkongsian, hubungi kami. Kami membalas dalam satu hari perniagaan.
+  subtitle: Untuk sebut harga, soalan teknikal atau pertanyaan perkongsian, hubungi kami.
   email_to: info@inflatablepoolfactory.com
   submit_button: Hantar Pertanyaan → Dapatkan Sebut Harga
-  success_message: Terima kasih! Mesej anda telah sampai di peti masuk kami. Kami akan membalas dalam masa satu hari bekerja.
+  success_message: Terima kasih! Mesej anda telah sampai di peti masuk kami.
   error_message: Kesilapan telah berlaku semasa menghantar mesej anda. Sila cuba lagi atau e-mel terus kepada kami.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Pilih anggaran volum anda...
         - value: sample
           label: Sampel / Prototaip sahaja
-        - value: 5-10
-          label: 5–10 unit (MOQ Standard)
         - value: 100-500
           label: 100–500 unit
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: laman web
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Masa tindak balas
-      description: Kami membalas dalam satu hari perniagaan.
-      icon: tabler:clock
 map:
   title: Hubungi
   subtitle: Hubungi Inflatable Pool Factory

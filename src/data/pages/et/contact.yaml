@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Saada meile sõnum
-  subtitle: Hinnapakkumiste, tehniliste küsimuste või partnerluspäringute korral kirjutage meile. Vastame ühe tööpäeva jooksul.
+  subtitle: Hinnapakkumiste, tehniliste küsimuste või partnerluspäringute korral kirjutage meile.
   email_to: info@inflatablepoolfactory.com
   submit_button: Saada päring → Küsi pakkumist
-  success_message: Aitäh! Teie sõnum jõudis meie postkasti. Vastame ühe tööpäeva jooksul.
+  success_message: Aitäh! Teie sõnum jõudis meie postkasti.
   error_message: Midagi läks teie sõnumi saatmisel valesti. Proovige uuesti või saatke meile otse e-kiri.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Valige oma hinnanguline helitugevus...
         - value: sample
           label: Ainult näidised/prototüübid
-        - value: 5-10
-          label: 5–10 ühikut (standardne MOQ)
         - value: 100-500
           label: 100-500 ühikut
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Veebisait
       description: inflatablepoolfactory.com
       icon: tabler:world
-    - title: Reageerimisaeg
-      description: Vastame ühe tööpäeva jooksul.
-      icon: tabler:clock
 map:
   title: Võtke ühendust
   subtitle: Võtke Inflatable Pool Factory ühendust

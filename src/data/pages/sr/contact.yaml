@@ -4,10 +4,10 @@ hero_text:
 contact_form:
   id: form
   title: Pošaljite nam poruku
-  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, pošaljite nam liniju. Odgovaramo u roku od jednog radnog dana.
+  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, pošaljite nam liniju.
   email_to: info@inflatablepoolfactory.com
   submit_button: Pošaljite upit → Dobijte ponudu
-  success_message: Hvala! Vaša poruka je stigla u naše prijemno sanduče. Odgovorićemo u roku od jednog radnog dana.
+  success_message: Hvala! Vaša poruka je stigla u naše prijemno sanduče.
   error_message: Nešto nije u redu pri slanju vaše poruke. Pokušajte ponovo ili nam direktno pošaljite email.
   default_country_code: '+86'
   captcha:
@@ -51,8 +51,6 @@ contact_form:
           label: Izaberite procenjeni volumen...
         - value: sample
           label: Samo uzorci/prototipovi
-        - value: 5-10
-          label: 5–10 jedinica (standardni MOK)
         - value: 100-500
           label: 100–500 jedinica
         - value: 500-plus
@@ -118,9 +116,6 @@ features2_other_ways:
     - title: Vebsite
       description: felizbai.com
       icon: tabler:world
-    - title: Vreme odgovora
-      description: Odgovaramo u roku od jednog radnog dana.
-      icon: tabler:clock
 map:
   title: Javite se
   subtitle: Kontaktirajte Inflatable Pool Factory
