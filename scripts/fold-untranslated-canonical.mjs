@@ -228,6 +228,56 @@ function mainText(html) {
   return t;
 }
 
+function normalizeHreflangTarget(href) {
+  try {
+    const url = new URL(href, BASE);
+    const pathname = url.pathname.replace(/\/+$/, '') || '/';
+    return pathname + (pathname === '/' ? '' : '/');
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * 已折叠页的 canonical 指向 EN 根，继续在其他页面用 hreflang 指向它会形成
+ * "hreflang → 非 canonical URL" 的无效注释（Google 会忽略）。折叠完成后，
+ * 从所有页面移除指向这些 URL 的 alternate 链接，使 HTML 与 sitemap 的
+ * hreflang 集合一致。
+ */
+function pruneFoldedHreflang(paths) {
+  if (!paths.size) return { files: 0, links: 0 };
+  let files = 0;
+  let links = 0;
+  function walkHtml(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        walkHtml(p);
+      } else if (e.name === 'index.html') {
+        const html = fs.readFileSync(p, 'utf8');
+        let removed = 0;
+        const next = html.replace(/<link\b[^>]*>/gi, (tag) => {
+          if (!/\brel=["']alternate["']/i.test(tag) || !/\bhreflang=["'][^"']+["']/i.test(tag)) return tag;
+          const href = (tag.match(/\bhref=["']([^"']+)["']/i) || [])[1] || '';
+          const target = href ? normalizeHreflangTarget(href) : '';
+          if (target && paths.has(target)) {
+            removed++;
+            return '';
+          }
+          return tag;
+        });
+        if (removed > 0) {
+          fs.writeFileSync(p, next, 'utf8');
+          files++;
+          links += removed;
+        }
+      }
+    }
+  }
+  walkHtml(DIST);
+  return { files, links };
+}
+
 function localeOf(pathKey) {
   const seg = pathKey.replace(/^\//, '').split('/')[0];
   return seg && LANGS.includes(seg) && seg !== 'en' ? seg : 'en';
@@ -248,6 +298,7 @@ let kept = 0;
 let already = 0;
 let skippedNoindex = 0;
 const samples = [];
+const foldedPaths = new Set();
 
 function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -298,6 +349,7 @@ function walk(dir) {
           `<link rel="canonical" href="${BASE}${enRoot}"`
         );
         fs.writeFileSync(p, newHtml, 'utf8');
+        foldedPaths.add(pathKey);
         folded++;
         if (samples.length < 8)
           samples.push(
@@ -310,8 +362,9 @@ function walk(dir) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   walk(DIST);
+  const pruned = pruneFoldedHreflang(foldedPaths);
   console.log(
-    `[fold-canonical] folded=${folded} keptLowConfidence=${kept} alreadyFolded=${already} noindexSkipped=${skippedNoindex}`
+    `[fold-canonical] folded=${folded} keptLowConfidence=${kept} alreadyFolded=${already} noindexSkipped=${skippedNoindex} hreflangRemoved=${pruned.links} from=${pruned.files} files`
   );
   for (const s of samples) console.log('  ', s);
 }

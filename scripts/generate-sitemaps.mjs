@@ -29,6 +29,10 @@ function distSeo(urlPath) {
     const html = readFileSync(path.join(DIST, urlPath.replace(/^\//, ''), 'index.html'), 'utf8');
     const robots = html.match(/<meta[^>]+name=["']robots["'][^>]*>/i)?.[0] ?? '';
     const noindex = /noindex/i.test(robots);
+    const canonical =
+      html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1] ??
+      html.match(/<link\s+href=["']([^"']+)["']\s+rel=["']canonical["']/i)?.[1] ??
+      '';
     const body = html.split('</head>')[1] || '';
     const text = body.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || body;
     const clean = text
@@ -37,9 +41,9 @@ function distSeo(urlPath) {
       .replace(/<[^>]+>/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
-    return { noindex, words: clean.split(/\s+/).filter(Boolean).length };
+    return { noindex, words: clean.split(/\s+/).filter(Boolean).length, canonical };
   } catch {
-    return { noindex: false, words: Infinity };
+    return { noindex: false, words: Infinity, canonical: '' };
   }
 }
 
@@ -100,6 +104,18 @@ function collectPages() {
     const seo = distSeo(p);
     if (seo.noindex) continue; // 渲染侧已 noindex（显式/正则/词数任一来源）→ 不进 sitemap
     if (seo.words < MIN_WORDS_TO_INDEX) continue; // 词数兜底
+    // Sitemap 只列 canonical 页。未翻译语言页在 fold-untranslated-canonical.mjs
+    // 中折叠到 EN 根；若把它们继续放进 sitemap，会与 Google 实际选择的
+    // canonical 冲突（"已提交的网址不在 sitemap 中/重复网页"）。
+    if (seo.canonical) {
+      try {
+        const canonicalPath = new URL(seo.canonical).pathname;
+        if (normalizePath(canonicalPath) !== normalizePath(p)) continue;
+      } catch {
+        // 相对 canonical 或异常值：保守跳过，避免把非规范页提交给搜索引擎。
+        continue;
+      }
+    }
     if (seen.has(p)) continue;
     seen.add(p);
     result.push(p);

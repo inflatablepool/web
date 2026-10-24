@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/geo-build.mjs && node scripts/generate-data-json.mjs && npx tsx scripts/generate-geo-files.ts && node scripts/_gen-uiall.cjs && node scripts/_gen-pages.cjs && node scripts/gen-icon-svgs.cjs && node scripts/generate-image-dimensions.mjs && astro build && node scripts/mirror-root-en.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-merchant-feed.mjs && node scripts/validate-dist.mjs && node scripts/fold-untranslated-canonical.mjs && node scripts/clean-public-assets.mjs && node scripts/generate-ai-corpus.mjs",
+    "build": "node scripts/geo-build.mjs && node scripts/generate-data-json.mjs && npx tsx scripts/generate-geo-files.ts && node scripts/_gen-uiall.cjs && node scripts/_gen-pages.cjs && node scripts/gen-icon-svgs.cjs && node scripts/generate-image-dimensions.mjs && astro build && node scripts/mirror-root-en.mjs && node scripts/fold-untranslated-canonical.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-merchant-feed.mjs && node scripts/validate-dist.mjs && node scripts/clean-public-assets.mjs && node scripts/generate-ai-corpus.mjs",
     "build:all": "npm run build",
     "build:geo": "npx tsx scripts/generate-geo-files.ts",
     "build:r2": "node scripts/fast-upload-r2.mjs",
