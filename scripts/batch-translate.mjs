@@ -130,8 +130,6 @@ siteSettings:
   socialLinks:
     - platform: youtube
       url: 'https://www.youtube.com/@inflatablepoolfactory'
-    - platform: x
-      url: 'https://x.com/inflatablepoolfactory'
     - platform: instagram
       url: 'https://www.instagram.com/inflatablepoolfactory'
     - platform: facebook
