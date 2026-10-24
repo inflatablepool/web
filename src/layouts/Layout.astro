@@ -89,22 +89,28 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <link rel="preconnect" href="https://assets.inflatablepoolfactory.com" crossorigin />
 
     {
-      !isRootOnlyRoute &&
-        enabledLangs
-          .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
-          .map((l: any) => (
-            <link
-              rel="alternate"
-              hreflang={l.locale}
-              href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
-            />
-          ))
+      // Root-only routes exist only in English, so a lone x-default annotation
+      // adds no value. Emit language alternates (and their x-default fallback)
+      // only for pages that actually have localized versions.
+      !isRootOnlyRoute && (
+        <>
+          {enabledLangs
+            .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
+            .map((l: any) => (
+              <link
+                rel="alternate"
+                hreflang={l.locale}
+                href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
+              />
+            ))}
+          <link
+            rel="alternate"
+            hreflang="x-default"
+            href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, defaultLang)}`}
+          />
+        </>
+      )
     }
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, defaultLang)}`}
-    />
 
     {
       !disableGlobalLd && (
