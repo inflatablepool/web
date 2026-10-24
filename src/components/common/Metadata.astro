@@ -67,13 +67,16 @@ const mergedOg: MetaDataOpenGraph = merge(
 // language above, so re-assert the correct Facebook locale here.
 const FB_LOCALES: Record<string, string> = {
   ar: 'ar_AR',
+  az: 'az_AZ',
   bg: 'bg_BG',
   cs: 'cs_CZ',
   da: 'da_DK',
   de: 'de_DE',
   el: 'el_GR',
+  en: 'en_US',
   es: 'es_ES',
   et: 'et_EE',
+  fa: 'fa_IR',
   fi: 'fi_FI',
   fr: 'fr_FR',
   he: 'he_IL',
@@ -81,6 +84,7 @@ const FB_LOCALES: Record<string, string> = {
   hu: 'hu_HU',
   id: 'id_ID',
   it: 'it_IT',
+  kk: 'kk_KZ',
   lt: 'lt_LT',
   lv: 'lv_LV',
   ms: 'ms_MY',
@@ -97,6 +101,8 @@ const FB_LOCALES: Record<string, string> = {
   th: 'th_TH',
   tl: 'fil_PH',
   tr: 'tr_TR',
+  uk: 'uk_UA',
+  uz: 'uz_UZ',
 };
 if (currentLang && FB_LOCALES[currentLang]) {
   mergedOg.locale = FB_LOCALES[currentLang];
@@ -272,7 +278,14 @@ const seoProps: SEOProps = {
   nofollow: resolveNofollow(),
   description: cleanArrows(finalDescription),
   openGraph: buildOpenGraph(adaptedOg),
-  twitter: mergedTwitter,
+  twitter: {
+    ...mergedTwitter,
+    // Social cards keep the full page title; the <title> may be trimmed for SERP width.
+    title: cleanArrows(title || localeMeta?.title?.default || METADATA?.title?.default || ''),
+    description: cleanArrows(finalDescription),
+    image: firstImage?.url,
+    imageAlt: cleanArrows(title || localeMeta?.title?.default || METADATA?.title?.default || ''),
+  },
   surpressWarnings: true,
   extend: {
     meta: [

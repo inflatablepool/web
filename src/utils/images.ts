@@ -1,6 +1,7 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import type { MetaDataOpenGraph } from '~/types';
+import imageDimensions from '~/data/site/image-dimensions.json';
 
 // Lazy-loaded glob of local images. The glob runs once and is cached.
 let _localImages: Record<string, () => Promise<unknown>> | undefined;
@@ -46,6 +47,7 @@ const isRemoteUrl = (src: unknown): src is string =>
 
 const OG_WIDTH = 1200;
 const OG_HEIGHT = 626;
+const ASSET_BASE = 'https://assets.inflatablepoolfactory.com';
 
 /**
  * Adapt OpenGraph images to absolute, optimized URLs.
@@ -63,6 +65,18 @@ export const adaptOpenGraphImages = async (
 
       const resolved = await findImage(image.url);
       if (!resolved) return { url: '' };
+
+      // Public assets (`/images/...`) are served from the R2 asset host and
+      // cannot be transformed by astro:assets. Link them directly and report
+      // their real dimensions from the build-time registry.
+      if (typeof resolved === 'string' && resolved.startsWith('/')) {
+        const dims = (imageDimensions as Record<string, { w: number; h: number }>)[resolved];
+        return {
+          url: `${ASSET_BASE}${resolved}`,
+          width: dims?.w || image.width || OG_WIDTH,
+          height: dims?.h || image.height || OG_HEIGHT,
+        };
+      }
 
       // For remote URLs, use as-is. For local images, generate optimized JPG.
       if (isRemoteUrl(resolved)) {

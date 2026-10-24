@@ -23,6 +23,11 @@ metadata:
     - round inflatable pool
     - backyard pool
     - portable swimming pool
+  openGraph:
+    images:
+      - url: 'https://assets.inflatablepoolfactory.com/images/og-default.jpg'
+        width: 1200
+        height: 626
 
 apps:
   products:
