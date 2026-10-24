@@ -64,7 +64,7 @@ steps2_values:
       description: בניית Drop Stitch בלחץ גבוה, נבדקה מעל הלחץ המדורג שלה, לפני כל ספינת בריכה.
       icon: tabler:settings
     - title: תמיכה שנמשכת לאורך העונה
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: שאלות, חלקי חילוף או אחריות — צרו קשר איתנו בכתובת info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: אבני דרך

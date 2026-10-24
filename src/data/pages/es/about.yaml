@@ -64,7 +64,7 @@ steps2_values:
       description: Construcción Drop Stitch de alta presión, probada por encima de su presión nominal, antes de enviar cualquier piscina.
       icon: tabler:settings
     - title: Soporte que dura más que la temporada
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Preguntas, repuestos o garantía — contacte con nosotros en info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Hitos

@@ -64,7 +64,7 @@ steps2_values:
       description: โครงสร้างแบบ Drop Stitch แรงดันสูง ผ่านการทดสอบเหนือแรงดันที่กำหนด ก่อนลงเรือในสระน้ำ
       icon: tabler:settings
     - title: การสนับสนุนที่ยาวนานกว่าฤดูกาล
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: คำถาม อะไหล่ หรือการรับประกัน — ติดต่อเราที่ info@inflatablepoolfactory.com
       icon: tabler:headset
 steps2_milestones:
   title: เหตุการณ์สำคัญ

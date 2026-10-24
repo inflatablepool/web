@@ -64,7 +64,7 @@ steps2_values:
       description: Конструкция Drop Stitch с високо налягане, тествана над номиналното си налягане, преди да бъде изпратен басейн.
       icon: tabler:settings
     - title: Поддръжка, която надживява сезона
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Въпроси, резервни части или гаранция — свържете се с нас на info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Важни етапи

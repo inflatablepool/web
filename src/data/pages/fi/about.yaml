@@ -64,7 +64,7 @@ steps2_values:
       description: Korkeapaineinen Drop Stitch-rakenne, joka on testattu nimellispaineen yläpuolella ennen uima-altaan lähettämistä.
       icon: tabler:settings
     - title: Tuki, joka kestää kauden
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Kysymyksiä, varaosia tai takuu — ota meihin yhteyttä osoitteessa info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Virstanpylväät

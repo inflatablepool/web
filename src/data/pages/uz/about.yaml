@@ -64,7 +64,7 @@ steps2_values:
       description: Yuqori bosimli Drop Stitch konstruktsiyasi, har qanday basseynga jo'natilishidan oldin nominal bosimidan yuqori sinovdan o'tgan.
       icon: tabler:settings
     - title: Mavsumdan uzoq davom etadigan qo'llab-quvvatlash
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Savollar, ehtiyot qismlar yoki kafolat — biz bilan info@inflatablepoolfactory.com orqali bog'laning.
       icon: tabler:headset
 steps2_milestones:
   title: Marosimlar

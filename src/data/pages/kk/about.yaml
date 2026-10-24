@@ -64,7 +64,7 @@ steps2_values:
       description: Кез келген бассейнге жіберілмес бұрын оның номиналды қысымынан жоғары сыналған жоғары қысымды Drop Stitch конструкциясы.
       icon: tabler:settings
     - title: Маусымнан асып түсетін қолдау
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Сұрақтар, қосалқы бөлшектер немесе кепілдік — бізге info@inflatablepoolfactory.com арқылы хабарласыңыз.
       icon: tabler:headset
 steps2_milestones:
   title: Белгілер

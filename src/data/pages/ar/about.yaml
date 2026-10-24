@@ -64,7 +64,7 @@ steps2_values:
       description: هيكل Drop Stitch عالي الضغط، تم اختباره أعلى من الضغط المقدر، قبل شحن أي حمام سباحة.
       icon: tabler:settings
     - title: الدعم الذي يدوم هذا الموسم
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: أسئلة أو قطع غيار أو ضمان — تواصل معنا عبر info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: المعالم

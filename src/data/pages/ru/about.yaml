@@ -64,7 +64,7 @@ steps2_values:
       description: Конструкция Drop Stitch высокого давления, проверенная давлением выше номинального, перед отправкой в ​​бассейн.
       icon: tabler:settings
     - title: Поддержка, которая переживет сезон
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Вопросы, запасные части или гарантия — свяжитесь с нами по адресу info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Вехи

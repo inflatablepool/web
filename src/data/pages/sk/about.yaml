@@ -64,7 +64,7 @@ steps2_values:
       description: Vysokotlaková konštrukcia Drop Stitch, testovaná nad menovitým tlakom, pred odoslaním akéhokoľvek bazéna.
       icon: tabler:settings
     - title: Podpora, ktorá prekoná sezónu
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Otázky, náhradné diely alebo záruka — kontaktujte nás na info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Míľniky

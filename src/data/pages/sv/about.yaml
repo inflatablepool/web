@@ -64,7 +64,7 @@ steps2_values:
       description: Högtrycks-Drop Stitch-konstruktion, testad över dess nominella tryck, innan någon pool skickas.
       icon: tabler:settings
     - title: Stöd som varar längre än säsongen
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Frågor, reservdelar eller garanti — kontakta oss på info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milstolpar

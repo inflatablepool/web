@@ -64,7 +64,7 @@ steps2_values:
       description: Augstspiediena Drop Stitch konstrukcija, kas pārbaudīta virs nominālā spiediena, pirms baseina nosūtīšanas.
       icon: tabler:settings
     - title: Atbalsts, kas pārsniedz sezonu
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Jautājumi, rezerves daļas vai garantija — sazinieties ar mums pa info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Pagrieziena punkti

@@ -64,7 +64,7 @@ steps2_values:
       description: Hochdruck-Drop-Stitch-Konstruktion, getestet über dem Nenndruck, bevor der Pool ausgeliefert wird.
       icon: tabler:settings
     - title: Unterstützung, die die Saison überdauert
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Fragen, Ersatzteile oder Garantie — kontaktieren Sie uns unter info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Meilensteine

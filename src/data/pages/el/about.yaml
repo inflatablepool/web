@@ -64,7 +64,7 @@ steps2_values:
       description: Κατασκευή Drop Stitch υψηλής πίεσης, δοκιμασμένη πάνω από την ονομαστική της πίεση, πριν από οποιαδήποτε πλοία πισίνας.
       icon: tabler:settings
     - title: Υποστήριξη που διαρκεί περισσότερο από τη σεζόν
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Ερωτήσεις, ανταλλακτικά ή εγγύηση — επικοινωνήστε μαζί μας στο info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Ορόσημα

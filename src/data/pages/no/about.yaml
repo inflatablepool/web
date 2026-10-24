@@ -64,7 +64,7 @@ steps2_values:
       description: Høytrykks Drop Stitch-konstruksjon, testet over det nominelle trykket, før bassenget sendes.
       icon: tabler:settings
     - title: Støtte som varer ut sesongen
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Spørsmål, reservedeler eller garanti — kontakt oss på info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milepæler

@@ -64,7 +64,7 @@ steps2_values:
       description: Konstrukcija Drop Stitch visokog pritiska, testirana iznad svog nominalnog pritiska, pre bilo kakvog bazena.
       icon: tabler:settings
     - title: Podrška koja nadmašuje sezonu
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Pitanja, rezervni delovi ili garancija — kontaktirajte nas na info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Prekretnice

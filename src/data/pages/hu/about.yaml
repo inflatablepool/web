@@ -64,7 +64,7 @@ steps2_values:
       description: Nagynyomású Drop Stitch konstrukció, amelyet a névleges nyomás felett teszteltek, mielőtt bármilyen medence kiszállna.
       icon: tabler:settings
     - title: Támogatás, amely túlmutat a szezonon
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Kérdések, alkatrészek vagy garancia — lépjen kapcsolatba velünk az info@inflatablepoolfactory.com címen.
       icon: tabler:headset
 steps2_milestones:
   title: Mérföldkövek

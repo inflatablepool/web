@@ -64,7 +64,7 @@ steps2_values:
       description: Hogedruk-drop-stitch-constructie, getest boven de nominale druk, voordat er zwembadschepen worden verzonden.
       icon: tabler:settings
     - title: Ondersteuning die het seizoen overleeft
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Vragen, reserveonderdelen of garantie — neem contact met ons op via info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Mijlpalen

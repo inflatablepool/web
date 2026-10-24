@@ -64,7 +64,7 @@ steps2_values:
       description: Yüksek basınçlı Drop Stitch yapısı, herhangi bir havuz gemisinden önce nominal basıncının üzerinde test edilmiştir.
       icon: tabler:settings
     - title: Sezon boyunca sürecek destek
-      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
+      description: Sorular, yedek parçalar veya garanti — info@inflatablepoolfactory.com adresinden bize ulaşın.
       icon: tabler:headset
 steps2_milestones:
   title: Kilometre Taşları
