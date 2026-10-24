@@ -41,7 +41,7 @@ export interface Props extends Omit<HTMLAttributes<'img'>, 'src' | 'width' | 'he
   layout?: Layout;
 }
 
-const { src, alt, width, height, widths, format, layout = 'constrained', ...rest } = Astro.props;
+const { src, alt, width, height, widths, format, layout = 'constrained', sizes, ...rest } = Astro.props;
 
 // --- Accessibility ---------------------------------------------------------
 if (alt === undefined || alt === null) {
@@ -67,6 +67,12 @@ const isCdnUrl =
   typeof resolved === 'string' &&
   (resolved.startsWith('http://') || resolved.startsWith('https://')) &&
   parseUrl(resolved) !== undefined;
+
+// Public-folder assets (`/images/...`) cannot be transformed by astro:assets.
+// Rendering them through <Image> emitted a srcset whose every candidate pointed
+// at the same file, so `sizes` had no effect. Emit a plain <img> instead and
+// keep the real dimensions and loading hints.
+const isPublicAsset = typeof resolved === 'string' && resolved.startsWith('/');
 
 // Infer missing dimension(s) from ESM-imported ImageMetadata. If only one of
 // width/height is provided, derive the other from the source aspect ratio.
@@ -166,6 +172,7 @@ const astroImageProps = Object.assign({}, rest, {
   alt,
   widths,
   format,
+  sizes,
   style: finalStyle,
 }) as unknown as Parameters<typeof AstroImage>[0];
 ---
@@ -175,6 +182,7 @@ const astroImageProps = Object.assign({}, rest, {
     <img
       src={cdnSrc}
       srcset={cdnSrcSet}
+      sizes={sizes}
       width={w}
       height={h}
       alt={alt}
@@ -183,6 +191,8 @@ const astroImageProps = Object.assign({}, rest, {
       {...rest}
       style={finalStyle}
     />
+  ) : isPublicAsset ? (
+    <img src={resolved} width={w} height={h} alt={alt} {...rest} style={finalStyle} />
   ) : (
     resolved && <AstroImage {...astroImageProps} />
   )
