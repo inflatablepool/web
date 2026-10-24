@@ -19,8 +19,9 @@ const { lang } = Astro.params;
 const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 
 const metadata = {
-  title: `FAQ — ${SITE.name}`,
+  title: `${t('faq.title') || 'FAQ'} — ${SITE.name}`,
   description:
+    t('faq.pageDesc') ||
     'Frequently asked questions about Inflatable Pool Factory drop stitch inflatable swimming pools — setup, water care, storage, and ordering.',
 };
 

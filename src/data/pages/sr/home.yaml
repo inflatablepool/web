@@ -23,7 +23,7 @@ stats:
   title: Inflatable Pool Factory na prvi pogled
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Kolekcije bazena
       amount: '4'
     - title: Veličine bazena
       amount: 2-10 m
