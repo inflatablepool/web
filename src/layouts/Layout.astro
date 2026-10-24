@@ -73,6 +73,14 @@ const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
 // Root-only routes have no localized versions. Emitting per-locale
 // `<link rel="alternate" hreflang>` for them would produce dead URLs.
 const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
+
+// hreflang targets must be the final canonical URL. The site uses trailing
+// slashes, so normalize localized paths before emitting alternates; otherwise
+// every annotation points at a 308 redirect.
+const localizedHref = (locale: string) => {
+  const localizedPath = localizeUseCasePath(pathWithoutLang, locale);
+  return `${siteUrlTrimmed}${localizedPath.endsWith('/') ? localizedPath : `${localizedPath}/`}`;
+};
 ---
 
 <!doctype html>
@@ -97,17 +105,9 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
           {enabledLangs
             .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
             .map((l: any) => (
-              <link
-                rel="alternate"
-                hreflang={l.locale}
-                href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
-              />
+              <link rel="alternate" hreflang={l.locale} href={localizedHref(l.locale)} />
             ))}
-          <link
-            rel="alternate"
-            hreflang="x-default"
-            href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, defaultLang)}`}
-          />
+          <link rel="alternate" hreflang="x-default" href={localizedHref(defaultLang)} />
         </>
       )
     }
