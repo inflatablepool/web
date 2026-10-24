@@ -5,3 +5,38 @@
 /request-quote/ /request-quotation/ 301
 /get-a-quote /request-quotation/ 301
 /get-a-quote/ /request-quotation/ 301
+
+# Legacy localized URLs for English-only pages.
+# These were previously emitted by the language switcher and hreflang tags even
+# though no localized page exists. Redirect them to the canonical English page
+# instead of returning 404.
+/:lang/commercial-pools /commercial-pools/ 301
+/:lang/commercial-pools/ /commercial-pools/ 301
+/:lang/find-your-pool /find-your-pool/ 301
+/:lang/find-your-pool/ /find-your-pool/ 301
+/:lang/for-businesses /for-businesses/ 301
+/:lang/for-businesses/ /for-businesses/ 301
+/:lang/manufacturing /manufacturing/ 301
+/:lang/manufacturing/ /manufacturing/ 301
+/:lang/oem-odm /oem-odm/ 301
+/:lang/oem-odm/ /oem-odm/ 301
+/:lang/private-label /private-label/ 301
+/:lang/private-label/ /private-label/ 301
+/:lang/quality-control /quality-control/ 301
+/:lang/quality-control/ /quality-control/ 301
+/:lang/wholesale /wholesale/ 301
+/:lang/wholesale/ /wholesale/ 301
+/:lang/request-quotation /request-quotation/ 301
+/:lang/request-quotation/ /request-quotation/ 301
+/:lang/products/specs /products/specs/ 301
+/:lang/products/specs/ /products/specs/ 301
+/:lang/products/compare /products/compare/ 301
+/:lang/products/compare/ /products/compare/ 301
+/:lang/ai-answer-center /ai-answer-center/ 301
+/:lang/ai-answer-center/ /ai-answer-center/ 301
+/:lang/guides /guides/ 301
+/:lang/guides/ /guides/ 301
+/:lang/guides/* /guides/:splat 301
+/:lang/pool-ideas /pool-ideas/ 301
+/:lang/pool-ideas/ /pool-ideas/ 301
+/:lang/pool-ideas/* /pool-ideas/:splat 301

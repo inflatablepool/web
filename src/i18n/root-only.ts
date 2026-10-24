@@ -11,6 +11,20 @@ export const ROOT_ONLY_ROUTES = [
   '/products/compare',
   '/request-quotation',
   '/ai-answer-center',
+  // EN-only marketing, B2B and content routes — these have no [lang] variants,
+  // so localized hreflang and language-switcher links would 404.
+  '/commercial-pools',
+  '/find-your-pool',
+  '/for-businesses',
+  '/guides',
+  '/manufacturing',
+  '/news',
+  '/oem-odm',
+  '/pool-ideas',
+  '/private-label',
+  '/quality-control',
+  '/wholesale',
+  '/admin',
 ];
 
 export function isRootOnlyRoute(pathWithoutLang: string): boolean {
