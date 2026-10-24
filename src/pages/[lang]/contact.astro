@@ -118,7 +118,7 @@ import { SITE } from 'astrowind:config';
 import { languages } from '~/i18n/config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/contact.ts';
-import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { cleanLocalizedText, localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -190,13 +190,23 @@ const brandingData: any = branding ?? {};
 const resolvedEmailTo =
   (form.email_to && String(form.email_to).trim()) || (brandingData.contact_email_to as string) || '';
 
+const metaDescriptionBase = localizePageDescription(
+  page,
+  PAGE_DESC[lang]?.description ||
+    'Get in touch with Inflatable Pool Factory — sales, support and partnership enquiries reviewed by our team.'
+);
+// Localized contact descriptions are intentionally short. Extend them with the
+// already-published localized form intro rather than padding with the English
+// site description, which produced mixed-language snippets.
+const formIntro = cleanLocalizedText(form.subtitle);
+const metaDescription =
+  formIntro && !metaDescriptionBase.includes(formIntro)
+    ? `${metaDescriptionBase} ${formIntro}`.trim()
+    : metaDescriptionBase;
+
 const metadata = {
   title: localizePageTitle(page, PAGE_META[lang]?.title || `Contact ${SITE.name}`),
-  description: localizePageDescription(
-    page,
-    PAGE_DESC[lang]?.description ||
-      'Get in touch with Inflatable Pool Factory — sales, support and partnership enquiries reviewed by our team.'
-  ),
+  description: metaDescription,
 };
 
 const faqSchema = JSON.stringify({

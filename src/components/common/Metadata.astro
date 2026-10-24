@@ -188,10 +188,14 @@ const titleAlreadyBranded = rawTitle.includes(siteBrand);
 // Normalize meta description length centrally (audit item 13): keep it within
 // 50–190 chars on every page. Longer text is truncated at the tag level only;
 // shorter text is padded with the per-language site description.
+// Locale site-config descriptions are English-only, so padding a localized
+// page would mix languages in the SERP snippet. Only pad pages written in
+// English; localized descriptions are kept as authored even when short.
 const siteDescription = localeMeta?.description || METADATA?.description || '';
+const pageIsEnglish = !currentLang || currentLang === 'en';
 const rawDescription = description || siteDescription;
 const paddedDescription =
-  rawDescription && rawDescription.length < 50
+  pageIsEnglish && rawDescription && rawDescription.length < 50
     ? `${rawDescription.trim()} — ${siteDescription || 'Inflatable Pool Factory'}`.trim()
     : rawDescription;
 
@@ -199,16 +203,28 @@ const paddedDescription =
 // length so the emitted <meta> tag stays within the limit.
 const ESCAPED_CHAR: Record<string, string> = { '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' };
 const escapedLen = (s: string) => [...s].reduce((n, c) => n + (ESCAPED_CHAR[c]?.length ?? 1), 0);
-const trimToEscaped = (s: string, max: number) => {
+const trimToEscaped = (s: string, max: number, atWordBoundary = false) => {
   if (escapedLen(s) <= max) return s;
   let len = 0;
+  let cut = 0;
   for (let i = 0; i < s.length; i++) {
-    len += ESCAPED_CHAR[s[i]]?.length ?? 1;
-    if (len >= max) return `${s.slice(0, i)}…`;
+    const width = ESCAPED_CHAR[s[i]]?.length ?? 1;
+    // Reserve one character for the trailing ellipsis.
+    if (len + width >= max) break;
+    len += width;
+    cut = i + 1;
   }
-  return s;
+  let body = s.slice(0, cut);
+  if (atWordBoundary) {
+    const lastSpace = Math.max(body.lastIndexOf(' '), body.lastIndexOf('\u00a0'));
+    if (lastSpace >= Math.floor(max * 0.6)) body = body.slice(0, lastSpace);
+  }
+  body = body.trimEnd();
+  if (!body) return '…';
+  if (atWordBoundary && /[.!?…]$/u.test(body)) return body;
+  return `${body.replace(/[\s,;:—–-]+$/u, '')}…`;
 };
-const finalDescription = paddedDescription ? trimToEscaped(paddedDescription, 190) : undefined;
+const finalDescription = paddedDescription ? trimToEscaped(paddedDescription, 190, true) : undefined;
 
 // P0-3：翻译流水线把 "—" 输出成 "→"，输出层兜底清洗（只清分隔符用法，
 // 行尾 UI 箭头如 "Read guide →" 不属于本组件处理范围）。
