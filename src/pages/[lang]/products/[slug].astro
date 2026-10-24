@@ -14,7 +14,6 @@ import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 
 import { findRelatedProducts, getStaticPathsProduct } from '~/utils/products';
-import { productBusinessData } from '~/data/product-business-data';
 import { findImage } from '~/utils/images';
 import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
@@ -66,16 +65,6 @@ const gallery = await Promise.all(
 // render translated titles/summaries on non-EN pages.
 const related = (await findRelatedProducts(product, 3)).map((p) => localizeProductData(p, lang || defaultLang));
 const relatedGuides = rec ? guides.filter((g) => g.relatedProducts.includes(rec.id)).slice(0, 3) : [];
-const bizData = rec ? productBusinessData[rec.id] : undefined;
-const productRating = bizData
-  ? (() => {
-      const lifespan = parseInt(bizData.lifespan) || 0;
-      if (lifespan >= 10) return { ratingValue: 4.7, reviewCount: 8 };
-      if (lifespan >= 7) return { ratingValue: 4.5, reviewCount: 6 };
-      if (lifespan >= 4) return { ratingValue: 4.3, reviewCount: 4 };
-      return { ratingValue: 4.0, reviewCount: 3 };
-    })()
-  : undefined;
 
 const defaultTitle = product.categoryLabel
   ? `${product.title} — ${product.categoryLabel} | ${SITE.name}`
@@ -225,15 +214,6 @@ const hasVariant = catalogSeries
             ]
           : []),
       ],
-      ...(productRating
-        ? {
-            aggregateRating: {
-              ratingValue: productRating.ratingValue,
-              reviewCount: productRating.reviewCount,
-              bestRating: 5,
-            },
-          }
-        : {}),
       ...(hasVariant
         ? {
             productGroupId: product.sku || catalogSeries?.id,
