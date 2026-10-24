@@ -66,11 +66,11 @@ export const PLATFORMS: SocialPlatform[] = [
 ];
 
 const HOOKS = [
-  'Most surfers get this wrong...',
-  'Stop doing this with your board...',
-  'The #1 mistake beginners make:',
-  'This changes everything about surfing:',
-  "I tested every board size so you don't have to:",
+  'Most pool buyers get this wrong...',
+  'Stop choosing an inflatable pool by price alone...',
+  'A common mistake when comparing inflatable pools:',
+  'This changes how buyers compare drop-stitch pools:',
+  "We compared the options so you don't have to:",
 ];
 
 function getSlugKeywords(slug: string): string[] {

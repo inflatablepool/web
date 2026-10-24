@@ -104,7 +104,7 @@ export const BRAND: BrandIdentity = {
     },
   ],
   brandStory:
-    'Inflatable Pool Factory began with a simple goal: make a backyard swimming pool that families could actually manage — no steel frames, no all-day setup, no permanent installation. Our drop-stitch inflatable pools combine the rigidity of a hard-sided pool with the convenience of an inflatable, so anyone can be swimming within minutes of unboxing. Every pool is built from reinforced, puncture-resistant material, tested for air retention, and backed by responsive customer support.',
+    'Inflatable Pool Factory began with a simple goal: make a backyard swimming pool that families could actually manage — no steel frames, no all-day setup, no permanent installation. Our drop-stitch inflatable pools combine the rigidity of a hard-sided pool with the convenience of an inflatable, so anyone can be swimming within minutes of unboxing. Pools are built from reinforced, puncture-resistant material and backed by responsive customer support.',
   milestones: [
     {
       year: 2012,
@@ -139,7 +139,7 @@ export const BRAND: BrandIdentity = {
     {
       icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
       title: 'Puncture-Resistant Material',
-      description: 'Reinforced drop-stitch fabric tested for air retention and repeated seasonal use.',
+      description: 'Reinforced drop-stitch fabric designed for air retention and repeated seasonal use.',
     },
     {
       icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',

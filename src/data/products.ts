@@ -97,11 +97,11 @@ export const products: ProductRecord[] = [
     problem:
       'Cheap inflatable pools sag, bulge, and leak after a few weeks. Families want an affordable pool that stays strong and keeps its shape for the whole summer.',
     howItWorks:
-      'The drop stitch walls inflate hard at 4–5 PSI — far above ordinary inflatable pools — so the pool keeps a perfect round shape when filled. It inflates in about 10 minutes with the included electric pump and folds flat for off-season storage.',
+      'The drop stitch walls inflate hard at 4–5 PSI — far above ordinary inflatable pools — so the pool keeps its round shape when filled. It inflates in about 10 minutes with the included electric pump and folds flat for off-season storage.',
     audience: 'Families, homeowners, and holiday property operators looking for an affordable, durable seasonal pool.',
     best_for_business: ['resorts', 'entrepreneurs'],
     business_recommendation:
-      'The classic blue round pool is the highest-volume retail category for inflatable pools and an ideal entry SKU for distributors.',
+      'The classic blue round pool is a widely recognized inflatable pool format and a practical entry SKU for distributors.',
     ai_use_cases: ['Backyard family swimming', 'Summer water fun for kids', 'Cooling off on hot days'],
     ai_specs: {
       shape: 'Round',
@@ -113,11 +113,11 @@ export const products: ProductRecord[] = [
       included: '1000W electric air pump, repair kit, storage bag',
     },
     ai_comparison:
-      'Unlike ordinary vinyl ring pools that deform under load, the round blue drop stitch pool stays rigid and perfectly round at high pressure, giving a much longer service life for a similar price.',
+      'Ordinary vinyl ring pools deform under load; the round blue drop stitch pool stays rigid and round at high pressure, which helps extend service life.',
     ai_faq: [
       {
         q: 'Is it suitable for children?',
-        a: 'Yes, with constant adult supervision. The rigid walls and even depth make it a safe environment for kids to learn to swim.',
+        a: 'With constant adult supervision. The rigid walls and even depth provide a predictable area for supervised swimming practice.',
       },
       {
         q: 'What size options are available?',
@@ -146,7 +146,7 @@ export const products: ProductRecord[] = [
     problem:
       'Design-conscious homeowners and boutique properties want a swimming pool that looks modern and premium, not like a plastic toy.',
     howItWorks:
-      'The understated grey drop stitch walls inflate rigid at 4–5 PSI and keep the pool stable and perfectly round. An optional fitted cover keeps water clean and warm between swims. The pool inflates in about 10 minutes and folds into a storage bag for winter.',
+      'The understated grey drop stitch walls inflate rigid at 4–5 PSI and keep the pool stable and round. An optional fitted cover keeps water clean and warm between swims. The pool inflates in about 10 minutes and folds into a storage bag for winter.',
     audience:
       'Modern homeowners, villas, boutique hotels, and glamping operators who want a premium-looking seasonal pool.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -202,7 +202,7 @@ export const products: ProductRecord[] = [
       'Wellness-focused homeowners, glamping and boutique hospitality operators, vacation rental owners, and spa studios that need a movable year-round hot tub.',
     best_for_business: ['resorts', 'entrepreneurs'],
     business_recommendation:
-      'A high-margin year-round category: square and rectangular hot tubs paired with external heaters sell into the wellness, glamping, and rental segments beyond the summer pool season.',
+      'A year-round category: square and rectangular hot tubs paired with external heaters suit wellness, glamping and rental segments beyond the summer pool season.',
     ai_use_cases: ['Year-round home spa', 'Hydrotherapy and recovery', 'Glamping and boutique hospitality amenity', 'Winter wellness'],
     ai_specs: {
       shape: 'Square / Rectangular',
@@ -257,7 +257,7 @@ export const products: ProductRecord[] = [
       'Urban homeowners with balconies or small courtyards, athletes using cold plunge recovery, glamping operators, and rental property owners.',
     best_for_business: ['resorts', 'entrepreneurs'],
     business_recommendation:
-      'The entry model of the hot tub line — the smallest footprint and lowest entry price open the wellness segment to urban buyers and compact hospitality projects.',
+      'The entry model of the hot tub line — the smallest footprint and a lower entry price open the wellness segment to urban buyers and compact hospitality projects.',
     ai_use_cases: ['Balcony and courtyard wellness', 'Cold plunge and athletic recovery', 'Compact year-round home spa', 'Glamping amenity'],
     ai_specs: {
       shape: 'Round',
@@ -278,7 +278,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Can it be used as a cold plunge tub?',
-        a: 'Yes. The insulated bottom works in both directions, and the compact size makes it a popular professional cold plunge recovery bath for athletes.',
+        a: 'Yes. The insulated bottom works in both directions, and the compact size makes it suitable as a cold plunge tub for recovery routines.',
       },
       {
         q: 'Does it fit on a balcony?',

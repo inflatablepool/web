@@ -49,4 +49,4 @@ Public traffic is the hardest duty cycle a pool can face:
 
 ## 6. Fleet Procurement & OEM/ODM
 
-Inflatable Pool Factory works directly with rental operators and event suppliers through our Qingdao manufacturing partner: custom sizes and colorways, branded graphics, spare-parts and repair-kit packages, and volume pricing. See the [OEM/ODM program](/oem-odm) for capabilities, or email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) to discuss fleet requirements — our team will review your inquiry and follow up with next steps.
+Inflatable Pool Factory works directly with rental operators and event suppliers through our Qingdao manufacturing base: custom sizes and colorways, branded graphics, spare-parts and repair-kit packages, and volume pricing. See the [OEM/ODM program](/oem-odm) for capabilities, or email [info@inflatablepoolfactory.com](mailto:info@inflatablepoolfactory.com) to discuss fleet requirements — our team will review your inquiry and follow up with next steps.

@@ -235,7 +235,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A round Inflatable Pool Factory inflatable pool set on the wooden deck of a mountain glamping dome surrounded by pine forest.',
     intro: [
       'Glamping sites, boutique cabins, and countryside hotels compete on experience. A drop-stitch pool or SPA tub delivers a premium amenity that moves with your business: set it up for the season on a deck or level ground, then store it when the weather turns — no planning permission for permanent structures in many jurisdictions (always confirm locally).',
-      'For operators, the same product line is available in commercial configurations: custom sizes, branded colors, and OEM/ODM production through our Qingdao manufacturing partner.',
+      'For operators, the same product line is available in commercial configurations: custom sizes, branded colors, and OEM/ODM production through our Qingdao manufacturing base.',
     ],
     conditions: [
       'Level ground or a purpose-built deck rated for full water weight',
@@ -571,7 +571,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A round Inflatable Pool Factory soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
     intro: [
       'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Inflatable Pool Factory drop-stitch soaking pools deliver the same photogenic experience with a non-invasive install a small team completes in under an hour.',
-      'For properties, the line supports commercial projects: custom sizes and colorways, quiet filtration setups, and OEM/ODM production through our Qingdao manufacturing partner.',
+      'For properties, the line supports commercial projects: custom sizes and colorways, quiet filtration setups, and OEM/ODM production through our Qingdao manufacturing base.',
     ],
     conditions: [
       'Structural sign-off from a licensed engineer for any elevated terrace, balcony, or deck placement',

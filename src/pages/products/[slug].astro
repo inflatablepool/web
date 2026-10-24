@@ -100,7 +100,6 @@ const specEntries: Array<{ name: string; value: string }> = [
 const productExtraData: Record<string, unknown> = {
   ...(productMentions.length > 0 ? { mentions: productMentions } : {}),
   ...(businessAudience.length > 0 ? { audience: businessAudience } : {}),
-  award: productCompliance.certs.map((c) => c.label),
   material: productCompliance.materialCompliance.join(', '),
   additionalProperty: specEntries.map((s) => ({ '@type': 'PropertyValue', name: s.name, value: s.value })),
   potentialAction: {

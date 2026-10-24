@@ -131,25 +131,25 @@ export const POOL_BUSINESS_ADVANTAGES: PoolFeature[] = [
     icon: 'tabler:ship',
     title: '5–10% of Rigid Pool Shipping Volume',
     description:
-      'A deflated drop-stitch pool packs at just 5–10% of the volume of an equivalent acrylic or fiberglass (FRP) pool — dramatically higher 20GP/40HQ container load efficiency and lower overseas warehousing costs.',
+      'A deflated drop-stitch pool packs at just 5–10% of the volume of an equivalent acrylic or fiberglass (FRP) pool — higher 20GP/40HQ container load efficiency and lower overseas warehousing costs.',
   },
   {
     icon: 'tabler:trending-up',
-    title: 'High-Margin Mid-to-High-End Positioning',
+    title: 'Mid-to-High-End Positioning',
     description:
-      'Rigidity, finish, and service life far above thin-gauge PVC inflatables, selling into residential patio, vacation rental (Airbnb), glamping, and wellness spa segments with strong retail margins.',
+      'More rigidity and a better finish than thin-gauge PVC inflatables, with a construction designed for repeated seasonal use, suited to residential patio, vacation rental (Airbnb), glamping and wellness spa segments.',
   },
   {
     icon: 'tabler:plug',
     title: 'Plug & Play — Low After-Sales Friction',
     description:
-      'No excavation, concrete foundations, or frame assembly: end users unbox, inflate, and start filling within minutes, minimizing installation complaints and support costs.',
+      'No excavation, concrete foundations or frame assembly: end users unbox, inflate and start filling within minutes, which can reduce installation complaints and support costs.',
   },
   {
     icon: 'tabler:shopping-cart',
     title: 'Cross-Selling Accessory Ecosystem',
     description:
-      'Boarding steps, safety ladders, thermal covers, rechargeable pumps, and sand filter systems turn a single pool order into a comprehensive turnkey package with a higher total transaction value.',
+      'Boarding steps, safety ladders, thermal covers, rechargeable pumps, and sand filter systems can turn a single pool order into a broader turnkey package.',
   },
 ];
 
