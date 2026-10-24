@@ -64,7 +64,7 @@ steps2_values:
       description: Hochdruck-Drop-Stitch-Konstruktion, getestet über dem Nenndruck, bevor der Pool ausgeliefert wird.
       icon: tabler:settings
     - title: Unterstützung, die die Saison überdauert
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Meilensteine
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Premium-Pools in Grau mit optionaler, passender Abdeckung für einen modernen Hinterhof-Look.
     link: /products
     link_label: Pools anzeigen →
-production_section:
-  tagline: Produktionsexzellenz
-  title: Gewährleistung exquisiter Handwerkskunst
-  description: Die Inflatable Pool Factory-Produktionslinie ist auf hochwertige, langlebige, aufblasbare Hochdruck-Schwimmbecken spezialisiert.
-  cards:
-    - title: Erfahrenes Technikerteam
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Fortschrittliche Produktionsausrüstung
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Ausgereiftes Managementsystem
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Strenge Qualitätskontrolle
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Globale Reichweite
-  title_html: Eine Marke, <span class="text-white/90">Weltweiter Versand</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Pool-Kollektionen
-    - value: '5-15 min'
-      label: 'Aufblasdauer'
-    - value: 4-5 PSI
-      label: Nenndruck
-

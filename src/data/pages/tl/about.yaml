@@ -64,7 +64,7 @@ steps2_values:
       description: High-pressure drop stitch construction, nasubok sa itaas nito rate pressure, bago ang anumang pool ship.
       icon: tabler:settings
     - title: Suporta na lumalampas sa season
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milestones
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Mga premium na gray na pool na may opsyonal na fitted na mga pabalat para sa modernong hitsura sa likod-bahay.
     link: /products
     link_label: Tingnan ang mga pool →
-production_section:
-  tagline: Kahusayan sa Produksyon
-  title: Tinitiyak ang Katangi-tanging Pagkayari
-  description: Ang linya ng produksyon ng Inflatable Pool Factory ay nakatuon sa mataas na kalidad, matibay, mataas na presyon ng inflatable swimming pool.
-  cards:
-    - title: Sanay na Technician Team
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Advanced na Kagamitan sa Produksyon
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Mature Management System
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Mahigpit na Kontrol sa Kalidad
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Global na Abot
-  title_html: Isang tatak, <span class="text-white/90">pandaigdigang pagpapadala</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Mga koleksyon ng pool
-    - value: '5-15 min'
-      label: 'Oras para i-inflate'
-    - value: 4-5 PSI
-      label: Na-rate na presyon
-

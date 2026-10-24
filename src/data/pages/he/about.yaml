@@ -64,7 +64,7 @@ steps2_values:
       description: בניית Drop Stitch בלחץ גבוה, נבדקה מעל הלחץ המדורג שלה, לפני כל ספינת בריכה.
       icon: tabler:settings
     - title: תמיכה שנמשכת לאורך העונה
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: אבני דרך
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: בריכות פרימיום אפורות עם כיסויים אופציונליים למראה חצר אחורית מודרנית.
     link: /products
     link_label: צפה בבריכות →
-production_section:
-  tagline: מצוינות בייצור
-  title: הבטחת אומנות מעולה
-  description: קו הייצור של Inflatable Pool Factory מוקדש לבריכות שחייה מתנפחות איכותיות ועמידות בלחץ גבוה.
-  cards:
-    - title: צוות טכנאים מנוסה
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: ציוד ייצור מתקדם
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: מערכת ניהול בוגרת
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: בקרת איכות קפדנית
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: טווח הגעה עולמי
-  title_html: מותג אחד, <span class="text-white/90">משלוח לכל העולם</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: אוספי בריכות
-    - value: '5-15 min'
-      label: 'זמן ניפוח'
-    - value: 4-5 PSI
-      label: לחץ מדורג
-

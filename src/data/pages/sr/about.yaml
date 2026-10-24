@@ -64,7 +64,7 @@ steps2_values:
       description: Konstrukcija Drop Stitch visokog pritiska, testirana iznad svog nominalnog pritiska, pre bilo kakvog bazena.
       icon: tabler:settings
     - title: Podrška koja nadmašuje sezonu
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Prekretnice
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Vrhunski sivi bazeni sa opcionim ugrađenim poklopcima za moderan izgled dvorišta.
     link: /products
     link_label: Pogledajte bazene →
-production_section:
-  tagline: Production Ekcellence
-  title: Obezbeđivanje izuzetne izrade
-  description: Proizvodna linija Inflatable Pool Factory je posvećena visokokvalitetnim, izdržljivim bazenima na naduvavanje pod visokim pritiskom.
-  cards:
-    - title: Tim iskusnih tehničara
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Napredna proizvodna oprema
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Sistem zrelog upravljanja
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Stroga kontrola kvaliteta
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Global Reach
-  title_html: Jedan brend, <span class="text-white/90">slanje širom sveta</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Kolekcije bazena
-    - value: '5-15 min'
-      label: 'Vreme naduvavanja'
-    - value: 4-5 PSI
-      label: Nazivni pritisak
-

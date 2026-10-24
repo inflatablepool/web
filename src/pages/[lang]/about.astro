@@ -159,65 +159,72 @@ const faqSchema = JSON.stringify({
   </section>
 
   <!-- Production Line Advantages -->
-  <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{production.tagline}</span>
-        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">{production.title}</h2>
-        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{production.description}</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        {
-          productionCards.map((card: any, ci: number) => (
-            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
-              <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900/30 rounded-xl flex items-center justify-center mb-5">
-                <svg
-                  class="w-7 h-7 text-sky-600"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d={productionIconPaths[ci] || productionIconPaths[0]}
-                  />
-                </svg>
+  {
+    productionCards.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{production.tagline}</span>
+            <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">{production.title}</h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{production.description}</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            {productionCards.map((card: any, ci: number) => (
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900/30 rounded-xl flex items-center justify-center mb-5">
+                  <svg
+                    class="w-7 h-7 text-sky-600"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d={productionIconPaths[ci] || productionIconPaths[0]}
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-slate-100">{card.title}</h3>
+                <ul class="space-y-2 text-sm text-gray-500 dark:text-slate-400">
+                  {(card.items || []).map((item: string) => (
+                    <li class="flex gap-2">
+                      <span class="text-[#06b6d4] mt-0.5">&#10003;</span> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-slate-100">{card.title}</h3>
-              <ul class="space-y-2 text-sm text-gray-500 dark:text-slate-400">
-                {(card.items || []).map((item: string) => (
-                  <li class="flex gap-2">
-                    <span class="text-[#06b6d4] mt-0.5">&#10003;</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <!-- Global Operation Architecture -->
-  <section class="bg-sky-600 text-white py-24 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <span class="text-sm font-medium text-white/80 tracking-wide uppercase">{globalOps.tagline}</span>
-      <h2 class="mt-4 text-3xl md:text-4xl font-semibold leading-tight" set:html={globalOps.title_html} />
-      <p class="mt-6 max-w-4xl mx-auto text-lg text-white/80 leading-relaxed" set:html={globalOps.description_html} />
-      <div class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        {
-          globalOpsStats.map((s: any) => (
-            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-              <div class="text-3xl font-bold">{s.value}</div>
-              <div class="text-sm text-white/70 mt-1">{s.label}</div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  {
+    globalOpsStats.length > 0 && (
+      <section class="bg-sky-600 text-white py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+          <span class="text-sm font-medium text-white/80 tracking-wide uppercase">{globalOps.tagline}</span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-semibold leading-tight" set:html={globalOps.title_html} />
+          <p
+            class="mt-6 max-w-4xl mx-auto text-lg text-white/80 leading-relaxed"
+            set:html={globalOps.description_html}
+          />
+          <div class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {globalOpsStats.map((s: any) => (
+              <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                <div class="text-3xl font-bold">{s.value}</div>
+                <div class="text-sm text-white/70 mt-1">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <!-- Design Philosophy -->
   <section class="max-w-6xl mx-auto py-24 px-6">

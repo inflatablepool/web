@@ -64,7 +64,7 @@ steps2_values:
       description: هيكل Drop Stitch عالي الضغط، تم اختباره أعلى من الضغط المقدر، قبل شحن أي حمام سباحة.
       icon: tabler:settings
     - title: الدعم الذي يدوم هذا الموسم
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: المعالم
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: حمامات سباحة باللون الرمادي الفاخر مع أغطية اختيارية مناسبة لإضفاء مظهر عصري على الفناء الخلفي.
     link: /products
     link_label: عرض حمامات السباحة →
-production_section:
-  tagline: التميز في الإنتاج
-  title: ضمان براعة رائعة
-  description: إن خط إنتاج Inflatable Pool Factory مخصص لحمامات السباحة القابلة للنفخ عالية الجودة والمتينة وعالية الضغط.
-  cards:
-    - title: فريق فني من ذوي الخبرة
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: معدات الإنتاج المتقدمة
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: نظام إدارة ناضج
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: رقابة صارمة على الجودة
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: الوصول العالمي
-  title_html: علامة تجارية واحدة، <span class="text-white/90">الشحن في جميع أنحاء العالم</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: مجموعات حمامات السباحة
-    - value: '5-15 min'
-      label: 'وقت النفخ'
-    - value: 4-5 PSI
-      label: الضغط المقدر
-

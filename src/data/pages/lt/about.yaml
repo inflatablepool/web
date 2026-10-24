@@ -64,7 +64,7 @@ steps2_values:
       description: Aukšto slėgio „Drop Stitch“ konstrukcija, išbandyta virš vardinio slėgio, prieš siunčiant baseiną.
       icon: tabler:settings
     - title: Parama, kuri trunka ilgiau nei sezoną
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Gairės
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Aukščiausios kokybės pilki baseinai su papildomai montuojamais dangčiais, kad atrodytų šiuolaikiškai.
     link: /products
     link_label: Žiūrėti baseinus →
-production_section:
-  tagline: Gamybos meistriškumas
-  title: Išskirtinio meistriškumo užtikrinimas
-  description: Inflatable Pool Factory gamybos linija skirta aukštos kokybės, patvariems, aukšto slėgio pripučiamiems baseinams.
-  cards:
-    - title: Patyrusi technikų komanda
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Pažangi gamybos įranga
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Brandi valdymo sistema
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Griežta kokybės kontrolė
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Pasaulinis pasiekiamumas
-  title_html: Vienas prekės ženklas, <span class="text-white/90">gabenimas visame pasaulyje</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Baseino kolekcijos
-    - value: '5-15 min'
-      label: 'Pripūtimo laikas'
-    - value: 4-5 PSI
-      label: Vardinis slėgis
-

@@ -64,7 +64,7 @@ steps2_values:
       description: ساخت و ساز Drop Stitch فشار بالا، بالاتر از فشار نامی آن، قبل از هر کشتی استخر آزمایش شده است.
       icon: tabler:settings
     - title: حمایتی که طول فصل را بیشتر می کند
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: نقاط عطف
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: استخرهای خاکستری درجه یک با روکش‌های تعبیه شده اختیاری برای نمای مدرن حیاط خلوت.
     link: /products
     link_label: مشاهده استخرها →
-production_section:
-  tagline: تعالی تولید
-  title: حصول اطمینان از کاردستی عالی
-  description: خط تولید Inflatable Pool Factory به استخرهای بادی با کیفیت بالا، بادوام و فشار بالا اختصاص دارد.
-  cards:
-    - title: تیم تکنسین با تجربه
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: تجهیزات پیشرفته تولید
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: سیستم مدیریت بالغ
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: کنترل کیفیت دقیق
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: دسترسی جهانی
-  title_html: یک برند، <span class="text-white/90">حمل و نقل در سراسر جهان</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: مجموعه های استخر
-    - value: '5-15 min'
-      label: 'زمان باد کردن است'
-    - value: 4-5 PSI
-      label: فشار نامی
-

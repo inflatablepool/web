@@ -64,7 +64,7 @@ steps2_values:
       description: Konstruksi Drop Stitch bertekanan tinggi, diuji di atas tekanan terukurnya, sebelum kolam apa pun dikirimkan.
       icon: tabler:settings
     - title: Dukungan yang bertahan lebih lama dari musim ini
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Tonggak sejarah
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Kolam abu-abu premium dengan penutup opsional untuk tampilan halaman belakang modern.
     link: /products
     link_label: Lihat kolam →
-production_section:
-  tagline: Keunggulan Produksi
-  title: Memastikan Keahlian Yang Indah
-  description: Lini produksi Inflatable Pool Factory didedikasikan untuk kolam renang tiup berkualitas tinggi, tahan lama, dan bertekanan tinggi.
-  cards:
-    - title: Tim Teknisi Berpengalaman
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Peralatan Produksi Lanjutan
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Sistem Manajemen yang Matang
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Kontrol Kualitas yang Ketat
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Jangkauan Global
-  title_html: Satu merek, <span class="text-white/90">pengiriman ke seluruh dunia</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Koleksi kolam renang
-    - value: '5-15 min'
-      label: 'Waktu pengembungan'
-    - value: 4-5 PSI
-      label: Nilai tekanan
-

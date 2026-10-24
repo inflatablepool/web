@@ -64,7 +64,7 @@ steps2_values:
       description: Højtryks Drop Stitch-konstruktion, testet over dets nominelle tryk, før enhver pool sendes.
       icon: tabler:settings
     - title: Støtte, der varer længere end sæsonen
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milepæle
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Premium-grå pools med valgfrit monterede dæksler for et moderne baghave-look.
     link: /products
     link_label: Se pools →
-production_section:
-  tagline: Fremragende produktion
-  title: Sikrer udsøgt håndværk
-  description: Inflatable Pool Factory produktionslinjen er dedikeret til højkvalitets, holdbare højtryks oppustelige svømmebassiner.
-  cards:
-    - title: Erfarent teknikerteam
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Avanceret produktionsudstyr
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Modent ledelsessystem
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Streng kvalitetskontrol
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Global rækkevidde
-  title_html: Et mærke, <span class="text-white/90">verdensomspændende forsendelse</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Pool samlinger
-    - value: '5-15 min'
-      label: 'Oppustningstid'
-    - value: 4-5 PSI
-      label: Nominelt tryk
-

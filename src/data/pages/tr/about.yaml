@@ -64,7 +64,7 @@ steps2_values:
       description: Yüksek basınçlı Drop Stitch yapısı, herhangi bir havuz gemisinden önce nominal basıncının üzerinde test edilmiştir.
       icon: tabler:settings
     - title: Sezon boyunca sürecek destek
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Kilometre Taşları
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Modern bir arka bahçe görünümü için isteğe bağlı kapaklı birinci sınıf gri havuzlar.
     link: /products
     link_label: Havuzları görüntüle →
-production_section:
-  tagline: Üretim Mükemmelliği
-  title: Mükemmel İşçiliğin Sağlanması
-  description: Inflatable Pool Factory üretim hattı, yüksek kaliteli, dayanıklı, yüksek basınçlı şişme yüzme havuzlarına adanmıştır.
-  cards:
-    - title: Deneyimli Teknisyen Ekibi
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Gelişmiş Üretim Ekipmanları
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Olgun Yönetim Sistemi
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Sıkı Kalite Kontrolü
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Küresel Erişim
-  title_html: Tek marka, <span class="text-white/90">dünya çapında nakliye</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Havuz koleksiyonları
-    - value: '5-15 min'
-      label: 'Şişirme zamanı'
-    - value: 4-5 PSI
-      label: Nominal basınç
-

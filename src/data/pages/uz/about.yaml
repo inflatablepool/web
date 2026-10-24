@@ -64,7 +64,7 @@ steps2_values:
       description: Yuqori bosimli Drop Stitch konstruktsiyasi, har qanday basseynga jo'natilishidan oldin nominal bosimidan yuqori sinovdan o'tgan.
       icon: tabler:settings
     - title: Mavsumdan uzoq davom etadigan qo'llab-quvvatlash
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Marosimlar
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Hovlining zamonaviy ko'rinishi uchun ixtiyoriy o'rnatilgan qopqoqli premium kulrang hovuzlar.
     link: /products
     link_label: Hovuzlarni ko‘rish →
-production_section:
-  tagline: Ishlab chiqarish a'losi
-  title: Nafis hunarmandchilikni ta'minlash
-  description: Inflatable Pool Factory ishlab chiqarish liniyasi yuqori sifatli, bardoshli, yuqori bosimli shishiriladigan suzish havzalariga bag'ishlangan.
-  cards:
-    - title: Tajribali texniklar jamoasi
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Ilg'or ishlab chiqarish uskunalari
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Yetuk boshqaruv tizimi
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Qattiq sifat nazorati
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Global kirish
-  title_html: Bitta brend, <span class="text-white/90">butun dunyo bo'ylab yuk tashish</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Hovuz kolleksiyalari
-    - value: '5-15 min'
-      label: 'Shishirish vaqti'
-    - value: 4-5 PSI
-      label: Nominal bosim
-

@@ -64,7 +64,7 @@ steps2_values:
       description: Конструкция Drop Stitch высокого давления, проверенная давлением выше номинального, перед отправкой в ​​бассейн.
       icon: tabler:settings
     - title: Поддержка, которая переживет сезон
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Вехи
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Серые бассейны премиум-класса с дополнительными встроенными покрытиями для создания современного вида на заднем дворе.
     link: /products
     link_label: Посмотреть бассейны →
-production_section:
-  tagline: Совершенство производства
-  title: Обеспечение изысканного мастерства
-  description: Производственная линия Inflatable Pool Factory предназначена для производства высококачественных, долговечных надувных бассейнов высокого давления.
-  cards:
-    - title: Опытная команда технических специалистов
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Современное производственное оборудование
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Зрелая система управления
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Строгий контроль качества
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Глобальный охват
-  title_html: Один бренд, <span class="text-white/90">доставка по всему миру</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Коллекции для бассейнов
-    - value: '5-15 min'
-      label: 'Время надувания'
-    - value: 4-5 PSI
-      label: Номинальное давление
-

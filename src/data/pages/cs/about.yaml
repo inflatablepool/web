@@ -64,7 +64,7 @@ steps2_values:
       description: Vysokotlaká konstrukce Drop Stitch, testovaná nad jmenovitým tlakem, před odesláním jakéhokoli bazénu.
       icon: tabler:settings
     - title: Podpora, která přežije sezónu
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milníky
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Prémiové šedé bazény s volitelnými kryty pro moderní vzhled dvorku.
     link: /products
     link_label: Zobrazit bazény →
-production_section:
-  tagline: Výrobní dokonalost
-  title: Zajištění vynikajícího řemesla
-  description: Výrobní linka Inflatable Pool Factory je určena pro vysoce kvalitní, odolné, vysokotlaké nafukovací bazény.
-  cards:
-    - title: Tým zkušených techniků
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Pokročilé výrobní zařízení
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Vyspělý systém řízení
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Přísná kontrola kvality
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Globální dosah
-  title_html: Jedna značka, <span class="text-white/90">celosvětovou přepravu</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Bazénové sbírky
-    - value: '5-15 min'
-      label: 'Čas nafouknutí'
-    - value: 4-5 PSI
-      label: Jmenovitý tlak
-

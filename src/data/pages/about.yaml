@@ -68,7 +68,7 @@ steps2_values:
       description: High-pressure drop stitch construction, checked against the approved model specification before any pool ships.
       icon: tabler:settings
     - title: Support that outlasts the season
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 
 steps2_milestones:
@@ -115,41 +115,3 @@ brand_hub_cards:
     desc: Premium grey pools with optional fitted covers for a modern backyard look.
     link: /products
     link_label: 'View pools →'
-
-production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Inflatable Pool Factory production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
-  cards:
-    - title: 'Experienced Technician Team'
-      items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
-      items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
-      items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure and airtightness checks against the approved model specification'
-        - 'Final inspection against the approved quality plan before shipping'
-
-global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.'
-  stats:
-    - value: '4'
-      label: 'Pool collections'
-    - value: '5-15 min'
-      label: 'Time to inflate'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'

@@ -64,7 +64,7 @@ steps2_values:
       description: Kõrgsurve Drop Stitch konstruktsioon, mida on testitud üle selle nimirõhu, enne basseini saatmist.
       icon: tabler:settings
     - title: Toetus, mis kestab kauem kui hooaeg
-      description: Questions, spare parts, or warranty — reach us any time at info@inflatablepoolfactory.com.
+      description: Questions, spare parts, or warranty — contact us at info@inflatablepoolfactory.com.
       icon: tabler:headset
 steps2_milestones:
   title: Verstapostid
@@ -107,40 +107,3 @@ brand_hub_cards:
     desc: Esmaklassilised hallid basseinid koos lisavarustusse kuuluvate katetega, mis tagavad moodsa tagahoovi ilme.
     link: /products
     link_label: Vaata basseine →
-production_section:
-  tagline: Tootmise tipptase
-  title: Peen käsitöö tagamine
-  description: Inflatable Pool Factory tootmisliin on pühendatud kvaliteetsetele, vastupidavatele kõrgsurvega täispuhutavatele basseinidele.
-  cards:
-    - title: Kogenud tehnikute meeskond
-      items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
-    - title: Täiustatud tootmisseadmed
-      items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
-    - title: Küps juhtimissüsteem
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
-    - title: Range kvaliteedikontroll
-      items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure and airtightness checks against the approved model specification
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Globaalne haare
-  title_html: Üks kaubamärk, <span class="text-white/90">ülemaailmne saatmine</span>
-  description_html: Inflatable Pool Factory serves families and business customers worldwide from <strong class="text-white">inflatablepoolfactory.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@inflatablepoolfactory.com</strong>.
-  stats:
-    - value: '4'
-      label: Basseini kollektsioonid
-    - value: '5-15 min'
-      label: 'Puhumisaeg'
-    - value: 4-5 PSI
-      label: Nimirõhk
-
