@@ -16,6 +16,7 @@ import { localizeProductData } from '~/lib/product-l10n';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import { languages as langMap, defaultLang } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
+import { HOME_META } from '~/i18n/home-meta';
 import __pageData from '~/i18n/generated/pages/home.ts';
 
 export async function getStaticPaths() {
@@ -51,10 +52,12 @@ const customerItems = (customerTypes.items ?? []).map(
   })
 );
 
+const meta = HOME_META[lang || defaultLang];
 const metadata = {
-  title: `Premium Drop Stitch Inflatable Pools | ${SITE.name}`,
+  title: meta?.title || `Premium Drop Stitch Inflatable Pools | ${SITE.name}`,
   description:
-    'Inflatable Pool Factory premium drop stitch inflatable pools — rigid walls, fast setup, and easy storage for backyards and outdoor spaces. Compare sizes and find your pool.',
+    meta?.description ||
+    `Inflatable Pool Factory premium drop stitch inflatable pools — rigid walls, fast setup, and easy storage for backyards and outdoor spaces. Compare sizes and find your pool.`,
 };
 ---
 
