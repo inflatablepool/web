@@ -145,20 +145,38 @@ const LANGS = [
   'fa',
 ];
 
-const NON_LATIN = [
+const FULL_SCRIPT = [
   ['ar', /[\u0600-\u06FF]/g],
   ['el', /[\u0370-\u03FF]/g],
   ['ru', /[\u0400-\u04FF]/g],
-  // cs 毕业清单 §16.4-4：捷克语用专属变音字符检测（č/ď/ě/ň/ř/š/ť/ů/ž，Latin Extended-A）。
-  // 捷克语功能词多为单字符介词（v/s/k/z/o/a/i），被 stopwordHits 的 length>1 过滤，
-  // 停用词计数天然偏低（实测 cs/ap330 扩表后 cs=10:en=13 仍误折叠）；而英文页面
-  // 这些字符数为 0，已翻译 cs 页面（labels：Šířka/Vnitřní/délka…）必然远超 6 个。
-  // 斯洛伐克语共享部分字符，但 sk 为非毕业语言（整体 noindex，不进 fold 流程）。
-  [
-    'cs',
-    /[\u010C\u010D\u010E\u010F\u011A\u011B\u0147\u0148\u0158\u0159\u0160\u0161\u0164\u0165\u016E\u016F\u017D\u017E]/g,
-  ],
 ];
+
+// cs 毕业清单 §16.4-4：捷克语用专属变音字符检测（č/ď/ě/ň/ř/š/ť/ů/ž，Latin Extended-A）。
+// 捷克语功能词多为单字符介词（v/s/k/z/o/a/i），被 stopwordHits 的 length>1 过滤，
+// 停用词计数天然偏低（实测 cs/ap330 扩表后 cs=10:en=13 仍误折叠）；而英文页面
+// 这些字符数为 0，已翻译 cs 页面（labels：Šířka/Vnitřní/délka…）必然远超 6 个。
+// 斯洛伐克语共享部分字符，但 sk 为非毕业语言（整体 noindex，不进 fold 流程）。
+// 注意：cs 不能用下面的脚本占比门限——正字法本身只用少量变音字母，占比天然偏低。
+const CS_DIACRITICS =
+  /[\u010C\u010D\u010E\u010F\u011A\u011B\u0147\u0148\u0158\u0159\u0160\u0161\u0164\u0165\u016E\u016F\u017D\u017E]/g;
+
+/**
+ * 非拉丁文语言页的脚本占比。
+ *
+ * 旧逻辑只要正文出现 6 个阿/希/西里尔字母就判定为已翻译。产品页与联系页的
+ * UI 标签（"سعر التجزئة"、"Τιμή λιανικής"、"Розничная цена"）正好满足这一条，
+ * 于是正文仍是英文的页面被当成译文保留 self canonical，并继续进入 sitemap 与
+ * hreflang。实测这些页面脚本占比仅 0.10–0.17，而已翻译页普遍在 0.70 以上，
+ * 部分翻译的 about 页约 0.39–0.45。以 0.30 为界：超过视为本地化页面，
+ * 低于则交回停用词判定（英文正文会因此正确折叠）。
+ */
+const TRANSLATED_SCRIPT_SHARE = 0.3;
+
+function scriptShare(text, re) {
+  const script = (text.match(re) || []).length;
+  const letters = (text.match(/\p{L}/gu) || []).length;
+  return letters > 0 ? script / letters : 0;
+}
 
 function stopwordHits(text) {
   const sample = (text || '').slice(0, 4000);
@@ -201,10 +219,11 @@ function scandiDiacriticLang(bodyText) {
 function detectLanguage(text, bodyText) {
   const sample = (text || '').slice(0, 4000);
   if (!sample.trim()) return null;
-  for (const [l, re] of NON_LATIN) {
+  for (const [l, re] of FULL_SCRIPT) {
     const letters = sample.match(re) || [];
-    if (letters.length >= 6) return l;
+    if (letters.length >= 6 && scriptShare(sample, re) >= TRANSLATED_SCRIPT_SHARE) return l;
   }
+  if ((sample.match(CS_DIACRITICS) || []).length >= 6) return 'cs';
   const scandi = scandiDiacriticLang(bodyText || sample);
   if (scandi) return scandi;
   const hits = stopwordHits(sample);

@@ -24,11 +24,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://inflatablepoolfactory.com/products/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/"/>
@@ -52,10 +49,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/faq/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://inflatablepoolfactory.com/guides/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/guides/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/guides/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
@@ -68,9 +62,6 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
 </urlset>

@@ -30,11 +30,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>index</x:entity>
     <x:type>brand</x:type>
     <priority>0.8</priority>
@@ -71,41 +68,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://inflatablepoolfactory.com/ar/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
-    <x:entity>ar/about</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inflatablepoolfactory.com/fr/contact/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/contact/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inflatablepoolfactory.com/es/contact/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
-    <x:entity>ar/contact</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://inflatablepoolfactory.com/ar/disclaimer/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/disclaimer/"/>
@@ -125,20 +87,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/disclaimer/"/>
     <x:entity>ar/disclaimer</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/faq/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
-    <x:entity>ar/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -189,61 +137,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://inflatablepoolfactory.com/ar/products/hot-tub-round/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-round/"/>
-    <x:entity>ar/products/hot-tub-round</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/products/hot-tub-square-rect/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-square-rect/"/>
-    <x:entity>ar/products/hot-tub-square-rect</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/products/rectangular-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/rectangular-drop-stitch-pool/"/>
-    <x:entity>ar/products/rectangular-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/products/round-blue-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-blue-drop-stitch-pool/"/>
-    <x:entity>ar/products/round-blue-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ar/products/round-grey-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-grey-drop-stitch-pool/"/>
-    <x:entity>ar/products/round-grey-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://inflatablepoolfactory.com/ar/terms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/terms/"/>
@@ -284,10 +177,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>index</x:entity>
     <x:type>service</x:type>
@@ -323,11 +213,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>cs/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -342,10 +229,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>cs/contact</x:entity>
     <x:type>page</x:type>
@@ -381,9 +265,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
     <x:entity>cs/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -487,11 +368,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>da/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -506,10 +384,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>da/contact</x:entity>
     <x:type>page</x:type>
@@ -640,10 +515,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>de/contact</x:entity>
     <x:type>page</x:type>
@@ -679,9 +551,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
     <x:entity>de/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -802,41 +671,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://inflatablepoolfactory.com/el/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
-    <x:entity>el/about</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inflatablepoolfactory.com/fr/contact/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/contact/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inflatablepoolfactory.com/es/contact/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
-    <x:entity>el/contact</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://inflatablepoolfactory.com/el/disclaimer/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/disclaimer/"/>
@@ -856,20 +690,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/disclaimer/"/>
     <x:entity>el/disclaimer</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/faq/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
-    <x:entity>el/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -916,61 +736,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/products/"/>
     <x:entity>el/products</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/products/hot-tub-round/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-round/"/>
-    <x:entity>el/products/hot-tub-round</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/products/hot-tub-square-rect/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-square-rect/"/>
-    <x:entity>el/products/hot-tub-square-rect</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/products/rectangular-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/rectangular-drop-stitch-pool/"/>
-    <x:entity>el/products/rectangular-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/products/round-blue-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-blue-drop-stitch-pool/"/>
-    <x:entity>el/products/round-blue-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/el/products/round-grey-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-grey-drop-stitch-pool/"/>
-    <x:entity>el/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -1030,10 +795,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>es/contact</x:entity>
     <x:type>page</x:type>
@@ -1138,9 +900,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
     <x:entity>index</x:entity>
     <x:type>support</x:type>
     <priority>0.5</priority>
@@ -1175,11 +934,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>fi/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1194,10 +950,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>fi/contact</x:entity>
     <x:type>page</x:type>
@@ -1344,10 +1097,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>fr/contact</x:entity>
     <x:type>page</x:type>
@@ -1833,11 +1583,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>no/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2243,9 +1990,6 @@
     <loc>https://inflatablepoolfactory.com/products/hot-tub-round/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-round/"/>
     <x:entity>hot-tub-round</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -2254,9 +1998,6 @@
     <loc>https://inflatablepoolfactory.com/products/hot-tub-square-rect/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-square-rect/"/>
     <x:entity>hot-tub-square-rect</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -2265,9 +2006,6 @@
     <loc>https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/rectangular-drop-stitch-pool/"/>
     <x:entity>rectangular-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -2276,9 +2014,6 @@
     <loc>https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-blue-drop-stitch-pool/"/>
     <x:entity>round-blue-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -2287,9 +2022,6 @@
     <loc>https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-grey-drop-stitch-pool/"/>
     <x:entity>round-grey-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -2335,10 +2067,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>pt/contact</x:entity>
     <x:type>page</x:type>
@@ -2476,41 +2205,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://inflatablepoolfactory.com/ru/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
-    <x:entity>ru/about</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inflatablepoolfactory.com/fr/contact/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/contact/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inflatablepoolfactory.com/es/contact/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
-    <x:entity>ru/contact</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://inflatablepoolfactory.com/ru/disclaimer/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/disclaimer/"/>
@@ -2530,20 +2224,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/disclaimer/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/disclaimer/"/>
     <x:entity>ru/disclaimer</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/faq/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
-    <x:entity>ru/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2590,61 +2270,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/products/"/>
     <x:entity>ru/products</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/products/hot-tub-round/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-round/"/>
-    <x:entity>ru/products/hot-tub-round</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/products/hot-tub-square-rect/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/hot-tub-square-rect/"/>
-    <x:entity>ru/products/hot-tub-square-rect</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/products/rectangular-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/rectangular-drop-stitch-pool/"/>
-    <x:entity>ru/products/rectangular-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/products/round-blue-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-blue-drop-stitch-pool/"/>
-    <x:entity>ru/products/round-blue-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://inflatablepoolfactory.com/ru/products/round-grey-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/products/round-grey-drop-stitch-pool/"/>
-    <x:entity>ru/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2701,11 +2326,8 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/about/"/>
     <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/about/"/>
     <x:entity>sv/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2720,10 +2342,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/contact/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/contact/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/contact/"/>
     <x:entity>sv/contact</x:entity>
     <x:type>page</x:type>
@@ -2759,9 +2378,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/faq/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://inflatablepoolfactory.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://inflatablepoolfactory.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/faq/"/>
     <x:entity>sv/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
