@@ -79,6 +79,8 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       idea.image && (
         <img
           src={idea.image}
+          srcset={`${idea.image.replace(/\.webp$/, '-640.webp')} 640w, ${idea.image} 1200w`}
+          sizes="(min-width: 768px) 1152px, 100vw"
           alt={idea.imageAlt ?? idea.title}
           class="aspect-[16/10] w-full rounded-2xl border border-gray-100 dark:border-slate-800 object-cover shadow-sm"
           width="1200"

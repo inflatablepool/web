@@ -39,6 +39,8 @@ const metadata = merge(
             {idea.image && (
               <img
                 src={idea.image}
+                srcset={`${idea.image.replace(/\.webp$/, '-640.webp')} 640w, ${idea.image} 1200w`}
+                sizes="(min-width: 1024px) 384px, (min-width: 768px) 50vw, 100vw"
                 alt={idea.imageAlt ?? idea.title}
                 class="aspect-[4/3] w-full object-cover"
                 width="640"

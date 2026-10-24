@@ -99,48 +99,92 @@
     "w": 1080,
     "h": 1920
   },
-  "/images/pool-ideas/townhome-and-compact-yard-pools.jpg": {
+  "/images/pool-ideas/townhome-and-compact-yard-pools.webp": {
     "w": 1024,
     "h": 841
   },
-  "/images/pool-ideas/pools-for-water-fitness-and-recreation.jpg": {
+  "/images/pool-ideas/townhome-and-compact-yard-pools-640.webp": {
+    "w": 640,
+    "h": 526
+  },
+  "/images/pool-ideas/pools-for-water-fitness-and-recreation.webp": {
     "w": 1200,
     "h": 799
   },
-  "/images/pool-ideas/pools-for-vacation-rentals.jpg": {
-    "w": 1362,
-    "h": 734
+  "/images/pool-ideas/pools-for-water-fitness-and-recreation-640.webp": {
+    "w": 640,
+    "h": 426
   },
-  "/images/pool-ideas/pools-for-retirees-and-empty-nesters.jpg": {
+  "/images/pool-ideas/pools-for-vacation-rentals.webp": {
+    "w": 1200,
+    "h": 647
+  },
+  "/images/pool-ideas/pools-for-vacation-rentals-640.webp": {
+    "w": 640,
+    "h": 345
+  },
+  "/images/pool-ideas/pools-for-retirees-and-empty-nesters.webp": {
     "w": 1200,
     "h": 818
   },
-  "/images/pool-ideas/pools-for-rental-and-event-operators.jpg": {
+  "/images/pool-ideas/pools-for-retirees-and-empty-nesters-640.webp": {
+    "w": 640,
+    "h": 436
+  },
+  "/images/pool-ideas/pools-for-rental-and-event-operators.webp": {
     "w": 1200,
     "h": 728
   },
-  "/images/pool-ideas/pools-for-pet-families.jpg": {
+  "/images/pool-ideas/pools-for-rental-and-event-operators-640.webp": {
+    "w": 640,
+    "h": 388
+  },
+  "/images/pool-ideas/pools-for-pet-families.webp": {
     "w": 1155,
     "h": 655
   },
-  "/images/pool-ideas/pools-for-glamping-and-hospitality.jpg": {
-    "w": 1382,
-    "h": 768
+  "/images/pool-ideas/pools-for-pet-families-640.webp": {
+    "w": 640,
+    "h": 363
   },
-  "/images/pool-ideas/pools-for-dink-households.jpg": {
+  "/images/pool-ideas/pools-for-glamping-and-hospitality.webp": {
+    "w": 1200,
+    "h": 667
+  },
+  "/images/pool-ideas/pools-for-glamping-and-hospitality-640.webp": {
+    "w": 640,
+    "h": 356
+  },
+  "/images/pool-ideas/pools-for-dink-households.webp": {
     "w": 1200,
     "h": 797
   },
-  "/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.jpg": {
+  "/images/pool-ideas/pools-for-dink-households-640.webp": {
+    "w": 640,
+    "h": 425
+  },
+  "/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.webp": {
     "w": 1200,
     "h": 848
   },
-  "/images/pool-ideas/large-pools-for-family-gatherings.jpg": {
-    "w": 1600,
-    "h": 1121
+  "/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates-640.webp": {
+    "w": 640,
+    "h": 452
   },
-  "/images/pool-ideas/cold-plunge-and-recovery-pools.jpg": {
+  "/images/pool-ideas/large-pools-for-family-gatherings.webp": {
+    "w": 1200,
+    "h": 841
+  },
+  "/images/pool-ideas/large-pools-for-family-gatherings-640.webp": {
+    "w": 640,
+    "h": 448
+  },
+  "/images/pool-ideas/cold-plunge-and-recovery-pools.webp": {
     "w": 1024,
     "h": 762
+  },
+  "/images/pool-ideas/cold-plunge-and-recovery-pools-640.webp": {
+    "w": 640,
+    "h": 476
   }
 }

@@ -117,7 +117,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Large Pools for Family Gatherings',
     eyebrow: 'Pool Ideas',
     title: 'Large Pools for Family Gatherings',
-    image: '/images/pool-ideas/large-pools-for-family-gatherings.jpg',
+    image: '/images/pool-ideas/large-pools-for-family-gatherings.webp',
     imageAlt:
       'A family of five relaxing in a large round Inflatable Pool Factory drop-stitch pool on a wooden deck during a summer BBQ gathering.',
     intro: [
@@ -191,7 +191,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pools for Vacation Rentals',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Vacation Rentals',
-    image: '/images/pool-ideas/pools-for-vacation-rentals.jpg',
+    image: '/images/pool-ideas/pools-for-vacation-rentals.webp',
     imageAlt:
       'A family of three enjoying a round Inflatable Pool Factory inflatable pool on the rooftop terrace of a city vacation rental.',
     intro: [
@@ -230,7 +230,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pools for Glamping & Hospitality',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Glamping & Hospitality',
-    image: '/images/pool-ideas/pools-for-glamping-and-hospitality.jpg',
+    image: '/images/pool-ideas/pools-for-glamping-and-hospitality.webp',
     imageAlt:
       'A round Inflatable Pool Factory inflatable pool set on the wooden deck of a mountain glamping dome surrounded by pine forest.',
     intro: [
@@ -273,7 +273,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pools for DINK Households',
     eyebrow: 'Pool Ideas',
     title: 'Pools for DINK Households',
-    image: '/images/pool-ideas/pools-for-dink-households.jpg',
+    image: '/images/pool-ideas/pools-for-dink-households.webp',
     imageAlt:
       'A DINK couple soaking in a compact round Inflatable Pool Factory pool on a modern minimalist balcony with potted plants.',
     intro: [
@@ -319,7 +319,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Cold Plunge & Recovery',
     eyebrow: 'Pool Ideas',
     title: 'Cold Plunge & Recovery Pools',
-    image: '/images/pool-ideas/cold-plunge-and-recovery-pools.jpg',
+    image: '/images/pool-ideas/cold-plunge-and-recovery-pools.webp',
     imageAlt:
       'A man doing a cold plunge recovery session in a round grey Inflatable Pool Factory tub inside a home garage gym.',
     intro: [
@@ -362,7 +362,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pools for Pet Families',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Pet Families',
-    image: '/images/pool-ideas/pools-for-pet-families.jpg',
+    image: '/images/pool-ideas/pools-for-pet-families.webp',
     imageAlt:
       'A golden retriever playing in a round Inflatable Pool Factory pool on a sunny suburban lawn while its owner joins in with a toy.',
     intro: [
@@ -402,7 +402,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Water Fitness & Active Fun',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Water Fitness & Active Family Fun',
-    image: '/images/pool-ideas/pools-for-water-fitness-and-recreation.jpg',
+    image: '/images/pool-ideas/pools-for-water-fitness-and-recreation.webp',
     imageAlt:
       'A family doing water exercises and splash games in a spacious round Inflatable Pool Factory pool on a sunny backyard lawn.',
     intro: [
@@ -442,7 +442,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Townhomes & Compact Yards',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Townhomes & Compact Yards',
-    image: '/images/pool-ideas/townhome-and-compact-yard-pools.jpg',
+    image: '/images/pool-ideas/townhome-and-compact-yard-pools.webp',
     imageAlt:
       'A round Inflatable Pool Factory inflatable pool on the small patio of a modern townhome with wooden privacy fencing and potted plants.',
     intro: [
@@ -482,7 +482,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pools for Retirees & Empty Nesters',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Retirees & Empty Nesters',
-    image: '/images/pool-ideas/pools-for-retirees-and-empty-nesters.jpg',
+    image: '/images/pool-ideas/pools-for-retirees-and-empty-nesters.webp',
     imageAlt:
       'A retired couple enjoying a warm soak in a round Inflatable Pool Factory pool in a flower-filled garden at golden hour.',
     intro: [
@@ -526,7 +526,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Pool Rental & Event Operators',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Rental & Event Operators',
-    image: '/images/pool-ideas/pools-for-rental-and-event-operators.jpg',
+    image: '/images/pool-ideas/pools-for-rental-and-event-operators.webp',
     imageAlt:
       'A large commercial Inflatable Pool Factory pool deployed at an outdoor festival site with sand-filter equipment and an operator checking water circulation.',
     intro: [
@@ -566,7 +566,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     navTitle: 'Boutique Hotels & Luxury Estates',
     eyebrow: 'Pool Ideas',
     title: 'Pools for Boutique Hotels & Luxury Estates',
-    image: '/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.jpg',
+    image: '/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.webp',
     imageAlt:
       'A round Inflatable Pool Factory soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
     intro: [
