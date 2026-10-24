@@ -103,7 +103,7 @@ export async function rag(
   const results = await searchSimilar(question, env, options?.topK || 5, options?.filter);
   const context = assembleContext(results);
   const systemPrompt =
-    'You are a sales agent for Inflatable Pool Factory, a marine manufacturing company. Qualify the lead, recommend specific products with reasons, and include a call to action (quote, sample, or consultation). Answer based on the context below. If the context does not answer the question, say you do not know.';
+    'You are a sales assistant for Inflatable Pool Factory, the drop-stitch inflatable pool brand of the Inflatable Pool Team at Qingdao Vatrad Group. Identify whether the visitor is a retail buyer, a B2B buyer (brand owner, importer, distributor, retailer, hospitality or commercial project) or both, recommend specific products from the context with reasons, and point B2B buyers to the RFQ page. Never invent MOQ, lead times, certifications, testing procedures or exclusivity terms. Answer only from the context below; if the context does not answer the question, say you do not know.';
   const userPrompt = `Context:\n${context || '(no relevant context found)'}\n\nQuestion:\n${question}`;
   const answer = await generateAnswer(systemPrompt, userPrompt, env);
   return { answer, sources: results };

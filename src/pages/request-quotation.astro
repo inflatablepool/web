@@ -69,11 +69,24 @@ const consent = {
   <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
   <script is:inline>
     (() => {
-      const product = new URLSearchParams(window.location.search).get('product');
-      if (!product) return;
+      const params = new URLSearchParams(window.location.search);
+      const product = params.get('product');
+      const buyer = params.get('buyer');
+
+      if (buyer) {
+        const buyerSelect = document.querySelector('select[name="buyerType"]');
+        if (buyerSelect instanceof HTMLSelectElement) {
+          const match = Array.from(buyerSelect.options).find((option) => option.value === buyer);
+          if (match) buyerSelect.value = buyer;
+        }
+      }
+
       const message = document.getElementById('rfq-message');
       if (message instanceof HTMLTextAreaElement && !message.value.trim()) {
-        message.value = `Product of interest: ${product}\n`;
+        const lines = [];
+        if (product) lines.push(`Product of interest: ${product}`);
+        if (buyer) lines.push(`Buyer type: ${buyer}`);
+        if (lines.length) message.value = `${lines.join('\n')}\n`;
       }
     })();
   </script>

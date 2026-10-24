@@ -44,14 +44,14 @@ export interface PoolAccessory {
 
 /** Recommended daily operating pressure */
 export const POOL_OPERATING_PRESSURE = '4–5 PSI';
-/** Maximum pressure tolerance */
+/** Maximum inflation pressure confirmed for the standard models */
 export const POOL_MAX_PRESSURE = '8 PSI';
 /** Pressure-relief valve release threshold */
 export const POOL_RELIEF_VALVE_PRESSURE = '6 PSI';
 
 export const POOL_PRESSURE_SPECS = [
   { label: 'Recommended operating pressure', value: POOL_OPERATING_PRESSURE },
-  { label: 'Maximum pressure tolerance', value: POOL_MAX_PRESSURE },
+  { label: 'Maximum inflation pressure', value: `${POOL_MAX_PRESSURE} — confirm the rating for your model` },
   { label: 'Pressure-relief valve auto-release', value: `Above ${POOL_RELIEF_VALVE_PRESSURE}` },
 ];
 
@@ -103,7 +103,7 @@ export const POOL_KEY_FEATURES: PoolFeature[] = [
     icon: 'tabler:shield-check',
     title: 'Rock-Solid Rigidity',
     description:
-      'At the standard 4–5 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling — users can lean against or sit directly on the pool rim.',
+      'At the standard 4–5 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling. Users can lean against the wall; do not sit, stand or jump on the rim unless the model documentation explicitly permits it.',
   },
   {
     icon: 'tabler:box',
@@ -197,7 +197,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     wallOptions: '15 cm / 20 cm / 50 cm',
     sizeRange: '2 × 2 × 0.8 m – 6 × 5 × 1.5 m',
     highlights:
-      'Large models feature 50 cm reinforced extra-thick side walls, supporting tens of tons of lateral water pressure without external metal frames; the pool rim allows comfortable sitting or lounging.',
+      'Large models feature 50 cm reinforced extra-thick side walls, supporting lateral water pressure without external metal frames. Rim and wall use depends on the model and its approved user documentation.',
     included: ['1000W high-power electric air pump', 'Full-coverage dustproof & waterproof cover', 'Repair kit'],
     includedImage: '/images/pools/accessories-set.webp',
     items: [

@@ -27,7 +27,7 @@ Glamping resort amenities experience continuous, back-to-back usage from diverse
   Utilizing tens of thousands of internal polyester threads sealed within multi-layer UV-resistant PVC, Inflatable Pool Factory pools withstand high bather loads, sun exposure, and variable weather without sagging or losing pressure.
 
 - **Rigid structural stability:**
-  Unlike standard soft-sided inflatables, guests can safely sit on the reinforced side walls or lean back against the perimeter without causing water spillage or structural deformation.
+  Unlike standard soft-sided inflatables, the reinforced side walls stay firm in normal use, and the pool holds its shape without the deformation common to soft-sided designs. Do not sit, stand or jump on the walls unless the model documentation explicitly permits it.
 
 ## 3. Commercial Cleaning & Turnover Efficiency
 

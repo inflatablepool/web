@@ -7,7 +7,7 @@ Cold-water immersion (CWI) has moved from locker-room folklore to a mainstream r
 
 ## 1. Why Drop-Stitch Works for Cold Plunge
 
-A plunge vessel gets used hard: you grip the rim, brace against the wall, and step in and out daily. Soft air-ring pools flex under that treatment. A [drop-stitch tub](/guides/what-is-a-drop-stitch-inflatable-pool) inflated to its rated 4–5 PSI operating pressure holds a firm, straight-walled shape with a rim stable enough to sit on during entry, exit, and breathwork.
+A plunge vessel gets used hard: you grip the rim, brace against the wall, and step in and out daily. Soft air-ring pools flex under that treatment. A [drop-stitch tub](/guides/what-is-a-drop-stitch-inflatable-pool) inflated to its rated 4–5 PSI operating pressure holds a firm, straight-walled shape with a stable rim for support during entry and exit.
 
 Inflatable Pool Factory SPA tubs add the two features a plunge actually needs: **built-in seats** for an upright seated immersion position, and a **5 mm insulated thermal bottom** that slows heat transfer from the ground — useful whether you are keeping heat out (cold plunge) or in (hot soak).
 

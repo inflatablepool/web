@@ -51,7 +51,7 @@ const videoSchema = {
       '@type': 'VideoObject',
       name: 'Inflatable Pool Factory Drop-Stitch Pool Demo — Wall Strength & Setup',
       description:
-        'An Inflatable Pool Factory drop-stitch pool being set up with the included 1000W electric pump, showing rigid walls users can sit on.',
+        'An Inflatable Pool Factory drop-stitch pool being set up with the included 1000W electric pump, showing rigid drop-stitch walls.',
       thumbnailUrl: `${SITE.site}/images/pools/round-grey-pool-1.webp`,
       uploadDate: '2026-10-01',
       contentUrl: `${SITE.site}/videos/pools/inflatablepoolfactory-pool-demo-2.mp4`,
@@ -150,7 +150,7 @@ const formatUsd = (n: number) =>
                     <th class="px-4 py-3">Item No.</th>
                     <th class="px-4 py-3">Size (m)</th>
                     <th class="px-4 py-3">Wall</th>
-                    <th class="px-4 py-3">Weight</th>
+                    <th class="px-4 py-3">Packed weight</th>
                     <th class="px-4 py-3 text-right">FOB Qingdao</th>
                   </tr>
                 </thead>
@@ -167,7 +167,7 @@ const formatUsd = (n: number) =>
                         {item.wall}
                       </td>
                       <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
-                        {item.weightKg ? `${item.weightKg} kg` : '—'}
+                        {item.weightKg ? `${item.weightKg} kg` : 'On request'}
                       </td>
                       <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
                         {formatUsd(item.fobUsd)}
@@ -205,7 +205,7 @@ const formatUsd = (n: number) =>
 
             <div class="mt-4">
               <a
-                href="/request-quotation"
+                href={`/request-quotation?product=${encodeURIComponent(series.name)}`}
                 class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
               >
                 Request a bulk quote for {series.name}
@@ -337,9 +337,9 @@ const formatUsd = (n: number) =>
         </h2>
         <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
           Drop-stitch pools use a model-specific recommended operating pressure. Air-chamber side walls carry a
-          pressure-relief valve; the relief setting and maximum tolerance are confirmed in the model specification.
-          Production pressure and leak testing follows the method, hold time and acceptance criteria agreed in the
-          approved specification.
+          pressure-relief valve; the relief setting and maximum inflation pressure are confirmed in the specification
+          for each model. Production pressure and leak testing follows the method, hold time and acceptance criteria
+          agreed in the approved specification.
         </p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
           {

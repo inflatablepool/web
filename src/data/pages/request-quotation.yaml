@@ -28,7 +28,7 @@ content_form:
   email_to: info@inflatablepoolfactory.com
   email_subject: OEM/ODM quotation request
   submit_button: 'Submit Project RFQ'
-  success_message: 'Thanks — your project brief has been received. Our team will review it and reply with the next steps.'
+  success_message: 'Thanks — your project brief has been received. Our team will review the requirements and reply with the next steps. If a detail is missing, we may ask for clarification on target sizes, quantities, market or packaging before quoting.'
   error_message: 'Something went wrong sending your RFQ. Please try again or email us directly at info@inflatablepoolfactory.com.'
   default_country_code: '+86'
   fields:

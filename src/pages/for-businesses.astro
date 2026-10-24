@@ -11,6 +11,7 @@ interface BusinessTrack {
   description: string;
   points: string[];
   href: string;
+  quoteHref: string;
   cta: string;
 }
 
@@ -26,6 +27,8 @@ const tracks: BusinessTrack[] = [
       'Volume pricing for multi-unit sites',
     ],
     href: '/pool-ideas/pools-for-vacation-rentals',
+    quoteHref:
+      '/request-quotation?buyer=Hotel%20%2F%20Resort%20%2F%20Hospitality&product=Commercial%20pool%20for%20a%20vacation%20rental',
     cta: 'See rental setups',
   },
   {
@@ -36,9 +39,10 @@ const tracks: BusinessTrack[] = [
     points: [
       'Wholesale program with project-specific MOQ',
       'Full size and FOB price matrix published',
-      'Qingdao factory production capacity',
+      'Qingdao-based production and order coordination',
     ],
     href: '/wholesale',
+    quoteHref: '/request-quotation?buyer=Importer%20%2F%20Distributor&product=Wholesale%20drop-stitch%20pool%20range',
     cta: 'Wholesale program',
   },
   {
@@ -52,6 +56,7 @@ const tracks: BusinessTrack[] = [
       'Custom packaging and accessories',
     ],
     href: '/oem-odm',
+    quoteHref: '/request-quotation?buyer=Brand%20Owner%20%2F%20Private%20Label&product=Custom%20OEM%20%2F%20ODM%20pool',
     cta: 'OEM / ODM details',
   },
   {
@@ -65,6 +70,7 @@ const tracks: BusinessTrack[] = [
       'QC checkpoints agreed with your team',
     ],
     href: '/private-label',
+    quoteHref: '/request-quotation?buyer=Brand%20Owner%20%2F%20Private%20Label&product=Private-label%20pool%20program',
     cta: 'Private label program',
   },
 ];
@@ -175,6 +181,13 @@ const metadata = merge(
               class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
             >
               {track.cta}
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </a>
+            <a
+              href={track.quoteHref}
+              class="mt-2 inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+            >
+              Request a quote for this buyer type
               <Icon name="tabler:arrow-right" class="w-4 h-4" />
             </a>
           </div>
@@ -290,7 +303,8 @@ const metadata = merge(
     <div class="mt-14 bg-gray-900 dark:bg-slate-800 rounded-2xl px-6 sm:px-10 py-10 text-center">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">Have a project in mind?</h2>
       <p class="text-gray-300 dark:text-slate-300 max-w-xl mx-auto mb-6">
-        Tell us the sizes, quantities, and timeline — our team will review the brief and confirm the next steps.
+        Tell us your buyer type, sizes, quantities and target market — our team will review the brief and confirm the
+        next steps.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a

@@ -67,7 +67,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 2: Drop-Stitch Engineering Depth',
         paragraphs: [
-          'Drop stitch is a specialized construction: two layers of PVC joined by thousands of internal polyester threads, inflated to pressures an ordinary vinyl pool could never survive. A manufacturer with real drop-stitch capability can tell you its standard wall thickness options (Inflatable Pool Factory offers 10, 15, 20 and 50 cm), its rated operating pressure, its maximum pressure tolerance and its over-pressure protection strategy without checking with "the engineer."',
+          'Drop stitch is a specialized construction: two layers of PVC joined by thousands of internal polyester threads, inflated to pressures an ordinary vinyl pool could never survive. A manufacturer with real drop-stitch capability can tell you its standard wall thickness options (Inflatable Pool Factory offers 10, 15, 20 and 50 cm), its rated operating pressure, its maximum inflation pressure and its over-pressure protection strategy without checking with "the engineer."',
           'If a supplier cannot immediately state the operating pressure, the pressure-relief valve threshold and the test pressure used in QC, they do not engineer the product they sell.',
         ],
       },
@@ -341,7 +341,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'A Pool Is a Pressure Vessel',
         paragraphs: [
-          'Drop stitch construction joins two PVC layers with thousands of internal polyester threads. Inflated, those threads lock the layers at a fixed distance and turn soft fabric into panels rigid enough to sit on. The same property that makes the pool stiff makes it a pressure vessel — which means its safety and durability are governed by pressure engineering, not by fabric thickness alone.',
+          'Drop stitch construction joins two PVC layers with thousands of internal polyester threads. Inflated, those threads lock the layers at a fixed distance and turn soft fabric into rigid, self-supporting panels. The same property that makes the pool stiff makes it a pressure vessel — which means its safety and durability are governed by pressure engineering, not by fabric thickness alone.',
           'That is why a serious manufacturer publishes a pressure specification and tests to it before the pool ever sees water.',
         ],
       },
@@ -350,7 +350,7 @@ export const procurementGuides: ProcurementGuide[] = [
         paragraphs: ['Inflatable Pool Factory\'s engineering baseline, applied across the catalog:'],
         bullets: [
           'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
-          'Maximum pressure tolerance: 8 PSI — the structural limit the design must survive',
+          'Maximum inflation pressure: 8 PSI for the standard models — the structural limit the design must survive; confirm the rating for each model',
           'Pressure-relief valve: auto-releases above 6 PSI, protecting against over-inflation and heat expansion',
         ],
       },

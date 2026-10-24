@@ -1,18 +1,18 @@
 hero:
   tagline: 'OEM / ODM Inflatable Pool Manufacturing'
-  title: 'Custom Inflatable Pool Manufacturer<br />for Brands & Businesses'
+  title: 'Custom Drop Stitch Inflatable Pool<br />Manufacturer for Brands & Businesses'
   subtitle: |
     OEM and ODM manufacturing for inflatable swimming pools, with tailored product development, private-label options and manufacturing support for global B2B buyers.<br />
     From the Inflatable Pool Team at Qingdao Vatrad Group — based in Qingdao, China.<br />
     Homeowners can still explore our standard pool collections further down the page.
   actions:
     - variant: primary
-      text: Request an OEM Quote
+      text: Request an OEM/ODM Quote
       href: /request-quotation
       icon: tabler:file-invoice
-    - text: Explore Our Manufacturing
-      href: /manufacturing
-      icon: tabler:building-factory
+    - text: Explore Our Products
+      href: /products
+      icon: tabler:pool
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Inflatable Pool Factory rectangular drop stitch inflatable swimming pool in a backyard

@@ -43,7 +43,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Backyard Pools for Families',
     intro: [
       'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Inflatable Pool Factory drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
-      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rock-solid at 4–5 PSI: children can lean on the rim, and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
+      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rock-solid at 4–5 PSI, so the pool holds its shape through the season. When summer ends, it drains, folds, and stores in a storage bag.',
     ],
     conditions: [
       'A flat, load-bearing surface of about 3 × 3 m or larger (lawn, patio, or deck rated for the water weight)',
@@ -121,7 +121,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A family of five relaxing in a large round Inflatable Pool Factory drop-stitch pool on a wooden deck during a summer BBQ gathering.',
     intro: [
-      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Inflatable Pool Factory\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and rims strong enough to sit on.',
+      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Inflatable Pool Factory\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and firm, straight sides.',
       'Despite the size, setup stays measured in minutes-to-an-hour with a 1000W electric pump — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules).',
     ],
     conditions: [
@@ -487,7 +487,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A retired couple enjoying a warm soak in a round Inflatable Pool Factory pool in a flower-filled garden at golden hour.',
     intro: [
       'When the yard quiets down, a pool stops being a playground and becomes a daily comfort — a cool soak on a warm afternoon, gentle movement for stiff joints, and a magnet for visiting grandchildren. The catch is that permanent pools demand heavy upkeep that nobody wants in retirement.',
-      'Inflatable Pool Factory drop-stitch pools split the difference: rigid walls with a rim you can sit on while stepping in, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
+      'Inflatable Pool Factory drop-stitch pools split the difference: rigid walls that stay firm while you step in, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
     ],
     conditions: [
       'A level, step-free patch of patio or garden from about 1.8 × 1.8 m with a clear, non-slip access path',
@@ -511,7 +511,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       },
     ],
     tableNote:
-      'Prioritize entry comfort: the 0.8 m rim of the SPA tubs gives a stable sitting edge, plus a clear path with no hoses to step over.',
+      'Prioritize entry comfort: the 0.8 m rim of the SPA tubs gives a stable edge for stepping in, plus a clear path with no hoses to step over.',
     safety: [
       'Enter and exit slowly using the rim and seats; wet surfaces are slippery — keep a non-slip mat at the entry point.',
       'Avoid long solo soaks, especially in heated water; follow heater temperature guidance and consult a doctor where relevant.',

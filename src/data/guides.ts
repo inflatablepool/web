@@ -138,14 +138,14 @@ export const guides: GuideRecord[] = [
       'Outer layers: two sheets of reinforced, UV-stabilized PVC form the wall surfaces',
       'Internal threads: thousands of fine polyester threads connect the layers at fixed intervals',
       'Air chamber: inflating the chamber to 4–5 PSI pulls the layers taut against the threads, locking the wall flat',
-      'Rigid result: the wall becomes stiff enough to lean on or sit on, like a hard-sided pool',
+      'Rigid result: the wall becomes stiff enough to lean against, like a hard-sided pool',
       'Safety margin: rated maximum pressure is 8 PSI, with a relief valve that auto-releases above 6 PSI',
       'Storage: open the valves, let the fabric relax, and the whole pool folds into a storage bag',
     ],
     faq: [
       {
         q: 'Is a drop stitch pool really rigid?',
-        a: 'Yes. At the rated 4–5 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling — users can lean against or sit on the pool rim.',
+        a: 'Yes. At the rated 4–5 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling. Users can lean against the pool wall; do not sit, stand or jump on the rim unless the model documentation explicitly permits it.',
       },
       {
         q: 'Does drop stitch make the pool heavier?',
@@ -184,7 +184,7 @@ export const guides: GuideRecord[] = [
       'Operating pressure: drop stitch runs at 4–5 PSI with a relief valve; ring pools run at low pressure with no meaningful pressure rating',
       'Wall behavior: drop stitch walls stay flat and rigid; ring walls bulge outward as water pushes on them',
       'Achievable depth: drop stitch supports 1.2–1.5 m walls for real swimming; ring pools rarely exceed 0.7–0.8 m reliably',
-      'Rim usability: drop stitch rims are firm enough to sit on; ring rims deform under weight',
+      'Wall firmness: drop stitch walls stay firm in normal use; ring walls deform under load',
       'Durability: reinforced multi-layer PVC resists punctures and UV; thin single-layer vinyl is easier to puncture',
       'Storage: both types deflate — drop stitch packs into a storage bag after a full-season run',
     ],

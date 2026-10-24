@@ -124,7 +124,7 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-lifespan',
     question: 'How long does an inflatable pool last?',
     answer:
-      'With proper care, an Inflatable Pool Factory drop stitch pool lasts 5+ seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
+      'With proper care, an Inflatable Pool Factory drop stitch pool is designed for repeated seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
     keywords: ['last', 'lifespan', 'lifetime', 'durable', 'durability', 'years', 'seasons', 'uv', 'pvc', 'material'],
     url: '/faq',
   },
@@ -132,7 +132,7 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-shipping',
     question: 'How long does shipping take?',
     answer:
-      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate delivery estimate.',
+      'In-stock retail orders are typically dispatched within 2–3 business days. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an estimate.',
     keywords: ['shipping', 'delivery', 'deliver', 'ship', 'arrive', 'dispatch', 'courier'],
     url: '/faq',
   },
@@ -148,9 +148,17 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'pool-oem',
     question: 'Do you offer OEM/ODM services?',
     answer:
-      'Yes. We offer custom sizes, colors, logos, covers, and packaging for businesses. Our factory handles everything from minor branding changes to fully custom pool designs. Minimum order quantities apply — contact us for details.',
+      'Yes. We support OEM and ODM projects — from standard drop-stitch platforms with your logo and packaging to project-specific sizes, covers and accessories. MOQ, sample arrangements and production timing are confirmed per project in the quotation. Submit your requirements through the RFQ page or contact info@inflatablepoolfactory.com.',
     keywords: ['oem', 'odm', 'custom', 'logo', 'branding', 'white label', 'private label'],
-    url: '/faq',
+    url: '/request-quotation',
+  },
+  {
+    id: 'pool-b2b',
+    question: 'What is the MOQ and lead time for OEM or wholesale orders?',
+    answer:
+      'MOQ, sample arrangements and production lead time depend on the product, customization scope and order quantity. They are confirmed per project in the written quotation, FOB Qingdao. Share your target SKU or specification, estimated quantity and target market through the RFQ page so the team can review the requirement.',
+    keywords: ['moq', 'minimum order', 'lead time', 'wholesale', 'bulk', 'oem project', 'odm project', 'fob'],
+    url: '/request-quotation',
   },
   {
     id: 'pool-warranty',
@@ -172,17 +180,17 @@ const FAQ_CORPUS: FaqEntry[] = [
     id: 'company-model',
     question: 'Is Inflatable Pool Factory a trading company or a manufacturer?',
     answer:
-      'Inflatable Pool Factory is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+      'Inflatable Pool Factory is the pool brand of the Inflatable Pool Team at Qingdao Vatrad Group, based in Qingdao, China. Production takes place at our Qingdao manufacturing base; the contracting entity, production location and shipping terms are stated in your quotation and order documents.',
     keywords: ['manufacturer', 'factory', 'trading company', 'who are you', 'where made', 'made in', 'company'],
-    url: '/faq',
+    url: '/about',
   },
 ];
 
 const FALLBACK_ANSWER =
-  "I couldn't find an exact answer to that. For questions about our inflatable drop stitch swimming pools, email us at info@inflatablepoolfactory.com — we usually reply within a few hours. You can also browse the FAQ and product pages for details.";
+  "I couldn't find an exact answer to that. For questions about our inflatable drop stitch swimming pools, email us at info@inflatablepoolfactory.com or browse the FAQ and product pages. For OEM/ODM, wholesale or commercial projects, use the RFQ form and our team will review your requirements.";
 
 const GREETING_ANSWER =
-  'Hello! Ask me anything about Inflatable Pool Factory inflatable drop stitch swimming pools — setup, sizes, prices, shipping, care, or warranty.';
+  'Hello! Ask me about Inflatable Pool Factory drop-stitch pools — sizing, setup, care, warranty, or OEM/ODM and wholesale projects.';
 
 const GREETING_RE = /^(hi|hello|hey|yo|good\s*(morning|afternoon|evening))\b/i;
 

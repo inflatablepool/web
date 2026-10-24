@@ -58,7 +58,7 @@ const { position = 'bottom-right', title = 'Inflatable Pool Factory Pool Advisor
       <div class="flex-1 min-w-0">
         <div class="font-semibold text-sm">{title}</div>
         <div class="text-xs text-white/80">
-          Tell me your backyard size, budget & family needs — I will suggest the right pool
+          Ask about pool sizing, OEM/ODM projects or wholesale supply — I will point you to the next step
         </div>
       </div>
       <button id="ai-chat-close" class="text-white/80 hover:text-white" type="button" aria-label="Close">
@@ -98,13 +98,19 @@ const { position = 'bottom-right', title = 'Inflatable Pool Factory Pool Advisor
         class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors"
         data-hint="Which inflatable pool is best for a small backyard?">Compare products</button
       >
+      <button
+        type="button"
+        class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200 transition-colors"
+        data-hint="I am a retailer and want to source drop-stitch pools for my market. What information do you need to quote?"
+        >OEM / wholesale</button
+      >
     </div>
 
     <!-- Messages -->
     <div id="ai-chat-messages" class="flex-1 overflow-y-auto max-h-72 p-4 space-y-3 min-h-[180px]">
       <div class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-3 rounded-lg text-sm">
-        Tell me your backyard size, budget, and family needs — I will recommend pools, setup tips, and water care
-        advice.
+        Ask about pool sizing, water care, OEM/ODM projects or wholesale supply. For a quotation, use the RFQ form and
+        our team will review your requirements.
       </div>
     </div>
 

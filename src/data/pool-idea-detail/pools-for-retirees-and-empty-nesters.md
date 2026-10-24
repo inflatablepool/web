@@ -9,7 +9,7 @@ When the yard quiets down, a pool stops being a playground and becomes a daily c
 
 Confidence around water starts with getting in and out safely:
 
-- **A rim you can trust.** Unlike soft ring pools that collapse underhand, a [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) at its rated 4–5 PSI operating pressure has firm, straight walls with a stable rim you can sit on while swinging your legs into the water.
+- **A rim you can trust.** Unlike soft ring pools that collapse underhand, a [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) at its rated 4–5 PSI operating pressure has firm, straight walls and a stable rim for balance while stepping in.
 - **Seats built in.** SPA tubs include integrated inflatable seats — lower yourself in slowly, and use them as intermediate steps on the way out.
 - **Clear access.** Keep a step-free, non-slip path from the door to the pool. Garden hoses, filter cords, and pump units belong tucked away from walkways, not underfoot.
 

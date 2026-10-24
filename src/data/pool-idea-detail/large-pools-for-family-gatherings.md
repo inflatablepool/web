@@ -23,7 +23,7 @@ The tiers below map to real Inflatable Pool Factory catalog models — every dim
 
 ### Why vertical walls matter for capacity
 
-Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Inflatable Pool Factory's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
+Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Inflatable Pool Factory's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to lean comfortably along the pool perimeter without losing wall stability or spilling water over the sides.
 
 ### A working density rule
 

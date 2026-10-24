@@ -3,6 +3,7 @@ import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { getCanonical } from '~/utils/permalinks';
+import facts from '~/config/facts.json';
 import type { MetaData } from '~/types';
 
 export const prerender = true;
@@ -201,7 +202,7 @@ const process = [
         OEM / ODM Manufacturing
       </p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        Custom Inflatable Pool Manufacturing for Your Brand
+        Custom Inflatable Pool OEM/ODM Manufacturing for Your Brand
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
         We support OEM and ODM projects for brands, importers, retailers and commercial buyers — from standard
@@ -213,7 +214,7 @@ const process = [
           href="/request-quotation"
           class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
         >
-          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request an OEM Quote
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request an OEM/ODM Quote
         </a>
         <a
           href="/products/specs"
@@ -430,6 +431,40 @@ const process = [
           ))
         }
       </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Company &amp; Manufacturing Entity
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">
+        Brand, operating team, legal entity and production base — stated the same way across our B2B pages.
+      </p>
+      <dl class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+          [
+            { term: 'Brand', detail: facts.brand.name },
+            { term: 'Operating team', detail: facts.brand.operator },
+            { term: 'Legal entity', detail: facts.brand.legalName },
+            { term: 'Production base', detail: `${facts.factory.city}, ${facts.factory.province}, China` },
+            { term: 'Contracting entity', detail: 'Stated in your quotation and order documents' },
+            {
+              term: 'Quality & after-sales',
+              detail: 'Coordinated by the Inflatable Pool Team; claim and warranty terms are set out in our Terms',
+            },
+          ].map((item) => (
+            <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                {item.term}
+              </dt>
+              <dd class="mt-1 text-sm font-medium text-gray-900 dark:text-slate-200">{item.detail}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="mt-3 text-sm text-gray-500 dark:text-slate-400">
+        Read more on the <a href="/about#company" class="text-primary dark:text-sky-400 hover:underline">About page</a>.
+      </p>
     </section>
 
     <section class="mb-6">

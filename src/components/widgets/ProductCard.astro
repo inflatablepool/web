@@ -84,6 +84,9 @@ const priceDisplay =
       priceDisplay && (
         <div class="mt-3 flex items-baseline gap-2">
           <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">{priceDisplay}</span>
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+            {t('product.retailPrice') || 'Retail price'}
+          </span>
           {product.inStock && (
             <span class="text-xs font-medium text-green-600">{t('product.inStock') || 'Available to order'}</span>
           )}
