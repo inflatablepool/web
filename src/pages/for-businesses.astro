@@ -2,6 +2,7 @@
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import type { MetaData } from '~/types';
 
@@ -120,6 +121,45 @@ const resources: Array<{ title: string; description: string; href: string }> = [
     title: 'Specs & FOB Price List',
     description: 'The complete size ladder and FOB Qingdao price matrix, updated October 2026.',
     href: '/products/specs',
+  },
+];
+
+const procurementFaqs = [
+  {
+    q: 'Which types of buyers do you work with?',
+    a: 'Brand owners, private-label companies, importers, distributors, retailers, e-commerce sellers, hotels, resorts, rental operators and commercial project teams.',
+  },
+  {
+    q: 'Can you support both standard products and custom projects?',
+    a: 'Yes. You can start from our standard drop-stitch collections or discuss custom sizes, colors, branding and packaging. The applicable OEM or ODM scope is confirmed after we review your requirements.',
+  },
+  {
+    q: 'What should we include in an initial inquiry?',
+    a: 'Your buyer type, product type or reference product, target dimensions, estimated quantity, target market and any branding or packaging requirements. Drawings and reference images are welcome.',
+  },
+  {
+    q: 'How do we start a project?',
+    a: 'Submit the RFQ form or email our team. We will review the brief, confirm the next steps and identify any technical details needed before quotation.',
+  },
+  {
+    q: 'Can we evaluate a sample before a bulk order?',
+    a: 'Sample requirements and approval criteria are reviewed per project. Where a sample stage applies, the sample specification, cost and timing are confirmed in the quotation.',
+  },
+  {
+    q: 'How are finished pools tested for leaks?',
+    a: 'Production units are pressure and leak tested to the method, hold time and acceptance criteria agreed in the approved production specification. The applicable records are confirmed per project.',
+  },
+  {
+    q: 'Which compliance documents are available for our market?',
+    a: 'Material and compliance documentation is reviewed against your target market and confirmed per project. Ask for the applicable documents in your RFQ.',
+  },
+  {
+    q: 'Can you support third-party inspection?',
+    a: 'Third-party inspection can be arranged. The inspection scope, timing and cost are confirmed per project.',
+  },
+  {
+    q: 'Who is the contracting entity and where is production carried out?',
+    a: 'Inflatable Pool Factory is the pool brand of the Inflatable Pool Team at Qingdao Vatrad Group, based in Qingdao, China. Production takes place at our Qingdao manufacturing base; the contracting entity, production location and shipping terms are stated in your quotation and order documents.',
   },
 ];
 
@@ -265,24 +305,7 @@ const metadata = merge(
       </h2>
       <div class="space-y-3">
         {
-          [
-            {
-              q: 'Which types of buyers do you work with?',
-              a: 'Brand owners, private-label companies, importers, distributors, retailers, e-commerce sellers, hotels, resorts, rental operators and commercial project teams.',
-            },
-            {
-              q: 'Can you support both standard products and custom projects?',
-              a: 'Yes. You can start from our standard drop-stitch collections or discuss custom sizes, colors, branding and packaging. The applicable OEM or ODM scope is confirmed after we review your requirements.',
-            },
-            {
-              q: 'What should we include in an initial inquiry?',
-              a: 'Your buyer type, product type or reference product, target dimensions, estimated quantity, target market and any branding or packaging requirements. Drawings and reference images are welcome.',
-            },
-            {
-              q: 'How do we start a project?',
-              a: 'Submit the RFQ form or email our team. We will review the brief, confirm the next steps and identify any technical details needed before quotation.',
-            },
-          ].map((faq) => (
+          procurementFaqs.map((faq) => (
             <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 open:shadow-sm transition-shadow">
               <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
                 {faq.q}
@@ -323,4 +346,5 @@ const metadata = merge(
       </div>
     </div>
   </section>
+  <JsonLd type="FAQPage" faqs={procurementFaqs.map((faq) => ({ q: faq.q, a: faq.a }))} />
 </Layout>
