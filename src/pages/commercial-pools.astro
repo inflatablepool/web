@@ -2,6 +2,7 @@
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { getCanonical } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
@@ -11,7 +12,7 @@ export const prerender = true;
 const metadata = merge(
   {
     title: `Commercial Inflatable Pools for Hotels, Resorts & Glamping | ${SITE.name}`,
-    description: `Commercial drop-stitch pools up to 10 m diameter and 6 × 5 m, portable hot tubs with insulated bottoms, 50 cm reinforced walls. Fast deployment for hotels, resorts, glamping and events.`,
+    description: `Commercial drop-stitch pools for hotels, resorts, glamping and events. Review large-format sizes, site readiness, safety requirements and project quotation scope.`,
     canonical: getCanonical('/commercial-pools'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -52,9 +53,55 @@ const commercialSpecs = [
   { label: 'Largest round pool', value: 'Ø 10 × 1.2 m (S10012)' },
   { label: 'Largest rectangular pool', value: '6 × 5 × 1.5 m (SR561550)' },
   { label: 'Reinforced wall options', value: '15 / 20 / 50 cm' },
-  { label: 'Operating pressure', value: '4–5 PSI rigid walls' },
-  { label: 'Setup time', value: '5–15 minutes, one person' },
+  { label: 'Operating pressure', value: 'Per model specification (4–5 PSI where stated)' },
+  { label: 'Inflation time', value: '5–15 minutes, one person; filling time depends on water supply' },
   { label: 'QC pressure test', value: 'Approved test specification' },
+];
+
+const siteChecks = [
+  {
+    icon: 'tabler:ruler-measure',
+    title: 'Ground & structural load',
+    description:
+      'The pool needs a level, load-bearing surface with drainage. Rooftops, terraces and balconies require written confirmation from a qualified structural engineer that the structure supports the filled pool weight plus occupants, equipment and wind loads. Building approval remains the site owner’s responsibility.',
+  },
+  {
+    icon: 'tabler:droplet',
+    title: 'Water, power & access',
+    description:
+      'Confirm water supply, hose capacity, drainage and pump power before delivery. Inflation takes minutes, but filling time depends on water pressure and supply. Check delivery access, lifting equipment and the route to the installation area.',
+  },
+  {
+    icon: 'tabler:shield-check',
+    title: 'Safety & supervision',
+    description:
+      'Occupancy limits, supervision, barriers, water treatment, emergency procedures and signage must meet the rules of the operating jurisdiction. Confirm requirements with the local health and safety authority; a portable pool is not automatically equivalent to a code-compliant public pool.',
+  },
+  {
+    icon: 'tabler:package',
+    title: 'Transport & storage',
+    description:
+      'Packed dimensions, weights and handling method are confirmed per model and order. Plan forklift or team-lift access. Store the pool clean, dry and deflated, away from sunlight, sharp objects and rodents; follow the model’s storage instructions.',
+  },
+];
+
+const commercialFaqs = [
+  {
+    q: 'Can a commercial inflatable pool be installed on a rooftop or terrace?',
+    a: 'Only when a qualified structural engineer confirms in writing that the structure can support the filled pool weight plus occupants, equipment and wind loads, and when local rules allow the installation. Inflatable Pool Factory does not certify building structure; site approval and permits remain with the project owner.',
+  },
+  {
+    q: 'How long does installation take?',
+    a: 'Inflation typically takes 5–15 minutes with the specified pump. Total deployment depends on site preparation, delivery access, water supply and filling; filling time is not fixed and depends on water pressure and hose capacity. Plan emptying and drainage before installation.',
+  },
+  {
+    q: 'Are the pools suitable for public or commercial use?',
+    a: 'The models are specified for commercial hospitality and event projects, but suitability depends on occupancy, supervision, barriers, water treatment and local regulations. Confirm the operating requirements with the local health and safety authority before installation.',
+  },
+  {
+    q: 'What is included in a commercial quotation?',
+    a: 'The quotation itemizes the pool, accessories, covers, spare repair kits and shipping terms separately. Installation, commissioning, on-site training and permits are not included unless the quotation states otherwise. MOQ, lead time, sample scope and third-party inspection are confirmed for each project.',
+  },
 ];
 ---
 
@@ -68,9 +115,10 @@ const commercialSpecs = [
         Commercial Inflatable Pools for Hospitality & Events
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Heavy-duty drop-stitch pools up to 10 meters across, with reinforced 50 cm walls that hold tens of tons of water
-        without any metal frame — deployable in hours, storable in winter, and built for full-season use in hospitality
-        and event settings.
+        Heavy-duty drop-stitch pools up to 10 meters across, with reinforced 50 cm walls that support lateral water
+        pressure without a metal frame. They inflate in minutes, store deflated in the off-season, and are specified for
+        commercial hospitality and event use. Site preparation, water supply, supervision and local approvals are
+        confirmed per project.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
@@ -147,6 +195,52 @@ const commercialSpecs = [
       </p>
     </section>
 
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Site Readiness & Operations
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        A commercial pool is a site-specific installation. Before a model is confirmed, the project team should verify
+        these points with the site owner, engineer and local authority.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          siteChecks.map((c) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300 mb-3">
+                <Icon name={c.icon} class="w-5 h-5" />
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{c.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{c.description}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div
+        class="mt-5 rounded-xl border border-amber-200 dark:border-amber-900/60 bg-amber-50 dark:bg-amber-950/30 p-4"
+      >
+        <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+          <strong>Quotation scope:</strong> pool, accessories, covers, spare repair kits and shipping terms are itemized separately.
+          Installation, commissioning, on-site training and permits are not included unless the quotation states otherwise.
+          MOQ, lead time, sample scope and third-party inspection are confirmed for each project.
+        </p>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation?buyer=Commercial%20Project"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Send Site Details With Your RFQ
+        </a>
+        <a
+          href="/guides/placing-an-inflatable-pool-on-a-patio"
+          class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:arrow-right" class="w-4 h-4" /> Patio & Surface Guidance
+        </a>
+      </div>
+    </section>
+
     <section class="mb-6">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
       <div class="flex flex-wrap gap-2 text-sm">
@@ -188,7 +282,30 @@ const commercialSpecs = [
         >
       </div>
     </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">Commercial Project FAQ</h2>
+      <div class="space-y-3">
+        {
+          commercialFaqs.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
   </section>
+
+  <JsonLd type="FAQPage" faqs={commercialFaqs.map((faq) => ({ q: faq.q, a: faq.a }))} />
 
   <section class="sr-only" data-ai-block="commercial-pools" aria-hidden="true">
     <p>
@@ -197,9 +314,14 @@ const commercialSpecs = [
       5 × 1.5 m (SR561550) with 50 cm reinforced walls that support lateral water pressure without metal frames. Rim and
       wall use depends on the model and its approved user documentation. Portable hot tubs with built-in seats and 5 mm
       insulated thermal bottoms compatible with external heating units. Model-specific rigid operating pressure,
-      single-person setup with the specified pump, and pressure/leak testing to the approved production specification.
-      Commercial accessories: inflatable boarding stairs 1.2/1.5 m, 4-step safety ladder, FS-12C 370 W sand filter pump,
-      rechargeable pumps. Deflated storage at 5–10% of rigid pool volume — no winterizing or permanent footprint.
+      single-person inflation in 5–15 minutes with the specified pump, filling time depending on water supply, and
+      pressure/leak testing to the approved production specification. Site readiness covers level load-bearing ground,
+      drainage, water and power access, and written structural confirmation for rooftops, terraces or balconies.
+      Occupancy, supervision, barriers, water treatment and permits must meet local rules. Commercial quotations itemize
+      pool, accessories, covers, spare kits and shipping terms; installation, commissioning, training and permits are
+      excluded unless stated. Commercial accessories: inflatable boarding stairs 1.2/1.5 m, 4-step safety ladder, FS-12C
+      370 W sand filter pump, rechargeable pumps. Deflated storage at 5–10% of rigid pool volume — no winterizing or
+      permanent footprint.
     </p>
   </section>
 </Layout>
