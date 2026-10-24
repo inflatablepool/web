@@ -1,0 +1,7 @@
+# Common aliases for the RFQ page (also used to keep AI-generated links from 404ing).
+/request-a-quote /request-quotation/ 301
+/request-a-quote/ /request-quotation/ 301
+/request-quote /request-quotation/ 301
+/request-quote/ /request-quotation/ 301
+/get-a-quote /request-quotation/ 301
+/get-a-quote/ /request-quotation/ 301
