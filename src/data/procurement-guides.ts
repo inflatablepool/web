@@ -43,7 +43,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'How to Choose a Drop Stitch Pool Manufacturer',
     seoTitle: 'How to Choose a Drop Stitch Pool Manufacturer: 7 Criteria for B2B Buyers',
     description:
-      'A practical evaluation framework for wholesale buyers and brand owners selecting a drop stitch inflatable pool manufacturer — factory verification, QC standards, MOQ policy, sampling and export experience.',
+      'Evaluate drop stitch pool manufacturers: factory verification, QC standards, MOQ policy, sampling and export experience.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 8,
@@ -154,7 +154,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'OEM vs ODM Inflatable Pools: Which Manufacturing Model Fits Your Brand',
     seoTitle: 'OEM vs ODM Inflatable Pools: Differences, Costs and How to Choose',
     description:
-      'OEM vs ODM for inflatable pools explained — who owns the design, how costs and lead times differ, and how wholesale buyers should choose between custom manufacturing and ready-to-brand production.',
+      'OEM vs ODM inflatable pools: who owns the design, how costs and lead times differ, and how to choose the right manufacturing model.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 7,
@@ -235,7 +235,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'Private Label Inflatable Pools: A Buyer\'s Guide',
     seoTitle: 'Private Label Inflatable Pools: Brand Launch Guide for Importers & Retailers',
     description:
-      'How to launch a private label inflatable pool brand — what you can customize, MOQ and pricing structure, the sampling and production workflow, retail packaging, and the mistakes that sink first-time launches.',
+      'Launch a private label inflatable pool brand: customization options, MOQ and pricing, sampling, retail packaging and common pitfalls.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 8,
@@ -331,7 +331,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'How Inflatable Pool Pressure Testing Works — and Why Buyers Should Specify It',
     seoTitle: 'Drop Stitch Pool Pressure Testing: PSI Standards, QC Methods & Buyer Guide',
     description:
-      'The engineering behind inflatable pool pressure testing: operating pressures, QC test pressures, pressure-drop testing, seam and valve inspection — and how B2B buyers should specify testing in a purchase contract.',
+      'How inflatable pool pressure testing works: operating and QC pressures, pressure-drop checks, seam and valve inspection, and buyer requirements.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 7,
@@ -413,7 +413,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'How Much Does a Wholesale Drop Stitch Pool Cost?',
     seoTitle: 'Wholesale Drop Stitch Pool Cost: Real FOB Prices, Landed Cost & Pricing Rules',
     description:
-      'Real wholesale pricing for drop stitch inflatable pools — FOB Qingdao unit prices by series and size, what the price includes, quantity terms, accessories, and how to calculate landed cost before you order.',
+      'Wholesale drop stitch pool pricing: FOB Qingdao unit prices by series and size, inclusions, quantity terms and landed cost.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 8,
@@ -500,7 +500,7 @@ export const procurementGuides: ProcurementGuide[] = [
     title: 'Container Loading for Inflatable Pools: 20GP vs 40HQ Planning',
     seoTitle: 'Inflatable Pool Container Loading: Packed Weights, 20GP vs 40HQ, Loading Plans',
     description:
-      'How to plan container loading for wholesale inflatable pool orders — packed weights by SKU, the 5–10% volume advantage of deflated drop-stitch pools, 20GP vs 40HQ selection, and how to get a loading plan with your quote.',
+      'Plan container loading for inflatable pool orders: packed weights, deflated volume savings, 20GP vs 40HQ choice and loading plans.',
     publishDate: '2026-10-16',
     updateDate: '2026-10-16',
     readMinutes: 7,
