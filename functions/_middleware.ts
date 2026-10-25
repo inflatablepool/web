@@ -187,7 +187,13 @@ export const onRequest: (...args: any[]) => any = async (context) => {
   }
 
   if (shouldRedirectToR2(pathname)) {
-    return setSecurityHeaders(Response.redirect(ASSETS_BASE + pathname, 301));
+    // Asset redirects are permanent and immutable: let browsers and CF cache
+    // them for a year so repeated image requests skip a redirect round-trip.
+    const r2Headers = new Headers({
+      Location: ASSETS_BASE + pathname,
+      'Cache-Control': 'public, max-age=31536000, immutable',
+    });
+    return setSecurityHeaders(new Response(null, { status: 301, headers: r2Headers }));
   }
 
   if (shouldSkipI18n(pathname)) {
