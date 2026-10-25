@@ -332,6 +332,49 @@ if (type === 'Organization') {
   // Generic fallback: caller supplies the full schema node (e.g. ItemList, CollectionPage).
   schema = { ...schema, ...data };
 }
+
+// Structured-data URLs must be absolute. Callers pass site-relative image
+// paths (/images/...); resolve them so validators and rich results can fetch
+// the resources. R2-hosted asset directories are linked directly to avoid the
+// apex →assets 301 hop.
+const ASSET_URL_PREFIXES = ['/images/', '/files/'];
+// Site-internal URLs must point at the final trailingslash canonical so
+// breadcrumbs and entity links do not resolve through a 308 redirect.
+const normalizeSitePath = (u: string): string => {
+  const m = u.match(/^(https?:\/\/(?:www\.)?inflatablepoolfactory\.com)(\/[^?#]*)?([?#].*)?$/);
+  if (!m) return u;
+  const path = m[2] ?? '';
+  if (!path || path.endsWith('/') || /\.[a-z0-9]{2,5}$/i.test(path) || path.includes('#')) return u;
+  return `${m[1]}${path}/${m[3] ?? ''}`;
+};
+const asJsonUrl = (u: string): string => {
+  if (!u.startsWith('/') || u.startsWith('//')) return normalizeSitePath(u);
+  const absolute = ASSET_URL_PREFIXES.some((p) => u.startsWith(p))
+    ? `https://assets.inflatablepoolfactory.com${u}`
+    : `${SITE.site}${u}`;
+  return normalizeSitePath(absolute);
+};
+const absolutizeJsonUrls = (node: unknown): unknown => {
+  if (Array.isArray(node)) return node.map(absolutizeJsonUrls);
+  if (node && typeof node === 'object' && !(node instanceof Date)) {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(node as Record<string, unknown>)) {
+      if (
+        (k === 'image' || k === 'url' || k === 'contentUrl' || k === 'thumbnailUrl' || k === 'embedUrl') &&
+        typeof v === 'string'
+      ) {
+        out[k] = asJsonUrl(v);
+      } else if (k === 'item' && typeof v === 'string') {
+        out[k] = v.startsWith('/') && !v.startsWith('//') && !/^\/#/.test(v) ? asJsonUrl(v) : normalizeSitePath(v);
+      } else {
+        out[k] = absolutizeJsonUrls(v);
+      }
+    }
+    return out;
+  }
+  return node;
+};
+if (schema) schema = absolutizeJsonUrls(schema) as typeof schema;
 ---
 
 {
