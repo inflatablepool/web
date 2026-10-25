@@ -7,6 +7,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { POOL_IDEAS, findPoolIdea } from '~/data/pool-ideas';
 import { guides } from '~/data/guides';
 import { poolSeries } from '~/data/pool-catalog';
+import { toAssetUrl } from '~/utils/images';
 import { SITE } from 'astrowind:config';
 import type { MetaData } from '~/types';
 
@@ -62,7 +63,7 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
     article={{
       headline: idea.title,
       description: idea.intro[0].slice(0, 200),
-      image: idea.image ? `${SITE.site}${idea.image}` : undefined,
+      image: idea.image ? toAssetUrl(idea.image) : undefined,
       datePublished: '2026-10-17',
       dateModified: '2026-10-17',
       authorName: 'Inflatable Pool Factory Team',
@@ -78,8 +79,8 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
     {
       idea.image && (
         <img
-          src={idea.image}
-          srcset={`${idea.image.replace(/\.webp$/, '-640.webp')} 640w, ${idea.image} 1200w`}
+          src={toAssetUrl(idea.image)}
+          srcset={`${toAssetUrl(idea.image.replace(/\.webp$/, '-640.webp'))} 640w, ${toAssetUrl(idea.image)} 1200w`}
           sizes="(min-width: 768px) 1152px, 100vw"
           alt={idea.imageAlt ?? idea.title}
           class="aspect-[16/10] w-full rounded-2xl border border-gray-100 dark:border-slate-800 object-cover shadow-sm"

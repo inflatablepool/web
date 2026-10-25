@@ -9,6 +9,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import { SITE } from 'astrowind:config';
+import { toAssetUrl } from '~/utils/images';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import { pageContentData } from '~/i18n/generated/site-data';
 import __pageData from '~/i18n/generated/pages/about.ts';
@@ -120,7 +121,7 @@ const faqSchema = JSON.stringify({
       </div>
       <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3]">
         <img
-          src={origin.image ||
+          src={toAssetUrl(origin.image) ||
             'https://assets.inflatablepoolfactory.com/images/inflatable-pool-factory/hero/tech-meeting-small.webp'}
           alt={origin.image_alt || 'Inflatable Pool Factory coastal workshop'}
           class="w-full h-full object-cover"
@@ -231,7 +232,7 @@ const faqSchema = JSON.stringify({
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3] order-last md:order-first">
         <img
-          src={design.image ||
+          src={toAssetUrl(design.image) ||
             'https://assets.inflatablepoolfactory.com/images/inflatable-pool-factory/hero/inflatable-pool-factory-hero-design-concept.webp'}
           alt={design.image_alt || 'Inflatable Pool Factory design and engineering'}
           class="w-full h-full object-cover"

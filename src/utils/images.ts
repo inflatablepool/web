@@ -47,7 +47,20 @@ const isRemoteUrl = (src: unknown): src is string =>
 
 const OG_WIDTH = 1200;
 const OG_HEIGHT = 626;
-const ASSET_BASE = 'https://assets.inflatablepoolfactory.com';
+export const ASSET_BASE = 'https://assets.inflatablepoolfactory.com';
+
+const ASSET_URL_PREFIXES = ['/images/', '/files/'];
+
+/**
+ * Rewrite an asset path to its served location. Public-folder files are
+ * uploaded to the R2 bucket in CI and served from the assets host; linking
+ * there directly avoids the apex 301 hop on first visit.
+ */
+export const toAssetUrl = (src?: string | null): string | undefined => {
+  if (!src) return src ?? undefined;
+  if (!ASSET_URL_PREFIXES.some((p) => src === p || src.startsWith(p))) return src;
+  return `${ASSET_BASE}${src}`;
+};
 
 /**
  * Adapt OpenGraph images to absolute, optimized URLs.
@@ -72,7 +85,7 @@ export const adaptOpenGraphImages = async (
       if (typeof resolved === 'string' && resolved.startsWith('/')) {
         const dims = (imageDimensions as Record<string, { w: number; h: number }>)[resolved];
         return {
-          url: `${ASSET_BASE}${resolved}`,
+          url: toAssetUrl(resolved) ?? resolved,
           width: dims?.w || image.width || OG_WIDTH,
           height: dims?.h || image.height || OG_HEIGHT,
         };

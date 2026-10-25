@@ -3,6 +3,7 @@ import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
+import { toAssetUrl } from '~/utils/images';
 import { getCanonical } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import {
@@ -203,7 +204,7 @@ const formatUsd = (n: number) =>
               {series.includedImage && (
                 <span class="ml-1 inline-flex items-center gap-2 px-2 py-1 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
                   <img
-                    src={series.includedImage}
+                    src={toAssetUrl(series.includedImage)}
                     alt={`${series.name} standard factory inclusions`}
                     class="h-10 w-auto rounded"
                     loading="lazy"
@@ -257,7 +258,7 @@ const formatUsd = (n: number) =>
                     <td class="px-4 py-2.5 border-b border-gray-100 dark:border-slate-800">
                       {acc.image ? (
                         <img
-                          src={acc.image}
+                          src={toAssetUrl(acc.image)}
                           alt={acc.name}
                           class="h-14 w-auto rounded-md border border-gray-100 dark:border-slate-700"
                           loading="lazy"
