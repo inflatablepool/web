@@ -9,7 +9,12 @@ const logoImage = branding?.logo_image?.trim() || '';
 const logoAlt = branding?.logo_alt?.trim() || `${siteName} logo`;
 ---
 
-<a href="/" class="flex items-center gap-2 group" aria-label={`${siteName} home`}>
+{
+  /* No aria-label on the link: the visible text must be part of the accessible
+    name (axe label-content-name-mismatch), so the name comes from the visible
+    span; the responsive short-name variant is aria-hidden. */
+}
+<a href="/" class="flex items-center gap-2 group">
   {
     logoImage ? (
       <img
@@ -29,6 +34,7 @@ const logoAlt = branding?.logo_alt?.trim() || `${siteName} logo`;
   }
   <span
     class="self-center text-sm sm:text-base md:text-base lg:text-lg xl:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white tracking-tight min-[375px]:hidden"
+    aria-hidden="true"
   >
     {shortName}
   </span>
