@@ -5,7 +5,6 @@ import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import Button from '~/components/ui/Button.astro';
 
-import { getHomePermalink } from '~/utils/permalinks';
 import { getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
@@ -148,9 +147,13 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         <div class="flex items-center xl:hidden">
           <ToggleMenu />
         </div>
-        <a class="flex items-center" href={localizeHref(getHomePermalink(), currentLocale)}>
-          <Logo />
-        </a>
+        {
+          /* Logo is already an <a href="/">: wrapping it again in an anchor is
+            invalid HTML; the browser splits the nested link, leaving an empty
+            outer anchor that fails Lighthouse's link-name and
+            label-content-name-mismatch audits. */
+        }
+        <Logo />
       </div>
       <div class="flex items-center md:hidden gap-1">
         <button
