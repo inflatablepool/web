@@ -28,6 +28,18 @@ const columnsClass =
         : 'max-w-4xl';
 ---
 
+<style>
+  /* In-text links must be recognizable by more than color alone (axe
+     link-in-text-block): the cyan brand color has insufficient contrast with
+     the surrounding muted text, so underline links inside FAQ answer
+     paragraphs. The anchors are injected via set:html and carry no scope
+     attribute, hence :global. Brand colors are intentionally unchanged. */
+  p :global(a) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>
+
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
