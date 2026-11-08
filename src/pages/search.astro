@@ -34,10 +34,14 @@ const q = Astro.url.searchParams.get('q') || '';
     </div>
   </section>
 
-  {q && (
-    <script is:inline>
+  {/* Ship the search script unconditionally: the page is statically built,
+      so `q` is always empty at build time — gating the script on `{q &&}`
+      meant /search?q=… never fetched the index or rendered any results.
+      The localized search pages already ship it on every load. */}
+  <script is:inline>
       (async function () {
         const q = new URLSearchParams(location.search).get('q') || '';
+        if (!q) return;
         const lang = document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en';
         const [staticRes, newsRes] = await Promise.all([
           fetch('/search-index.json'),
@@ -170,5 +174,4 @@ const q = Astro.url.searchParams.get('q') || '';
         function escapeAttr(s) { return escapeHtml(s); }
       })();
     </script>
-  )}
 </Layout>
