@@ -46,13 +46,42 @@ const q = Astro.url.searchParams.get('q') || '';
         let index = [];
         if (staticRes.ok) index = index.concat(await staticRes.json());
         if (newsRes.ok) index = index.concat(await newsRes.json());
-        const lower = q.toLowerCase();
+        const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
 
         function highlight(s) {
-          if (!s || !lower) return s || '';
-          const idx = s.toLowerCase().indexOf(lower);
-          if (idx === -1) return escapeHtml(s);
-          return escapeHtml(s.slice(0, idx)) + '<mark class="bg-yellow-200 dark:bg-yellow-700/60 text-inherit rounded-sm px-0.5">' + escapeHtml(s.slice(idx, idx + lower.length)) + '</mark>' + escapeHtml(s.slice(idx + lower.length));
+          if (!s || !tokens.length) return s || '';
+          const lowerS = s.toLowerCase();
+          const ranges = [];
+          tokens.forEach(function (tok) {
+            let from = 0;
+            let idx = lowerS.indexOf(tok, from);
+            while (idx !== -1) {
+              ranges.push([idx, idx + tok.length]);
+              from = idx + tok.length;
+              idx = lowerS.indexOf(tok, from);
+            }
+          });
+          if (!ranges.length) return escapeHtml(s);
+          ranges.sort(function (a, b) {
+            return a[0] - b[0];
+          });
+          const merged = [];
+          ranges.forEach(function (r) {
+            const last = merged[merged.length - 1];
+            if (last && r[0] <= last[1]) last[1] = Math.max(last[1], r[1]);
+            else merged.push([r[0], r[1]]);
+          });
+          let out = '';
+          let pos = 0;
+          merged.forEach(function (r) {
+            out +=
+              escapeHtml(s.slice(pos, r[0])) +
+              '<mark class="bg-yellow-200 dark:bg-yellow-700/60 text-inherit rounded-sm px-0.5">' +
+              escapeHtml(s.slice(r[0], r[1])) +
+              '</mark>';
+            pos = r[1];
+          });
+          return out + escapeHtml(s.slice(pos));
         }
 
         function typeBadge(type) {
@@ -67,10 +96,17 @@ const q = Astro.url.searchParams.get('q') || '';
         }
 
         const matches = index.filter(function (it) {
-    return (it.title || '').toLowerCase().includes(lower) ||
-           (it.excerpt || '').toLowerCase().includes(lower) ||
-           (it.tags || []).some(function (t) { return String(t).toLowerCase().includes(lower); });
-  });
+          const hay = [(it.title || '').toLowerCase(), (it.excerpt || '').toLowerCase()].concat(
+            (it.tags || []).map(function (t) {
+              return String(t).toLowerCase();
+            })
+          );
+          return tokens.every(function (tok) {
+            return hay.some(function (f) {
+              return f.includes(tok);
+            });
+          });
+        });
 
         const types = {};
         matches.forEach(function (m) { types[m.type] = (types[m.type] || 0) + 1; });
