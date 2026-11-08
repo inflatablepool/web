@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import * as yaml from 'js-yaml';
+import { toAssetUrl } from '~/utils/images';
 
 export const prerender = true;
 
@@ -144,7 +145,7 @@ export const GET: APIRoute = async () => {
         url: `${SITE}/products/${product.id.replace(/\.(md|mdx)$/i, '')}`,
         excerpt: excerpt(fm.excerpt || fm.summary || fm.description || stripHtml(body)),
         type: 'product',
-        image: fm.image || '',
+        image: toAssetUrl(fm.image) || '',
         price: price.amount || '',
         currency: price.currency || 'USD',
         tags: fm.tags || [fm.category].filter(Boolean),
