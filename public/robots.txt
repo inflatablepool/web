@@ -187,6 +187,7 @@ Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=full
 # ---------- Sitemap ----------
 # 单一入口 sitemap-index.xml（generate-sitemaps.mjs 生成，汇总全部已过滤分片）
 Sitemap: https://inflatablepoolfactory.com/sitemap-index.xml
-# LLM training resources
-LLM-TXT: https://inflatablepoolfactory.com/llms.txt
-LLM-FULL: https://inflatablepoolfactory.com/llms-full.txt
+# LLM training resources（用注释声明：LLM-TXT/LLM-FULL 不是 robots.txt 标准指令，
+# 非标准指令会让 Lighthouse 及部分解析器报 robots.txt invalid）
+# LLM-TXT: https://inflatablepoolfactory.com/llms.txt
+# LLM-FULL: https://inflatablepoolfactory.com/llms-full.txt
