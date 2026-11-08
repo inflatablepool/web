@@ -17,7 +17,16 @@ for (const sm of sitemaps) {
   }
 }
 
-const stats = { titleMissing: 0, titleLong: 0, descMissing: 0, descLong: 0, h1Zero: 0, h1Multi: 0, ldError: 0, imgNoAlt: 0 };
+const stats = {
+  titleMissing: 0,
+  titleLong: 0,
+  descMissing: 0,
+  descLong: 0,
+  h1Zero: 0,
+  h1Multi: 0,
+  ldError: 0,
+  imgNoAlt: 0,
+};
 const dupTitles = new Map();
 const problems = [];
 
@@ -47,7 +56,9 @@ for (const p of urls) {
   // Inline runtime scripts build <img> strings (e.g. search results with
   // decorative alt=""); strip script/style bodies before counting images,
   // but keep them for the ld+json parse check below.
-  const imgScope = html.replace(/<script\b(?![^>]*application\/ld\+json)[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '');
+  const imgScope = html
+    .replace(/<script\b(?![^>]*application\/ld\+json)[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, '');
   for (const b of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
     try {
       JSON.parse(b[1]);
