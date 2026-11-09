@@ -146,11 +146,11 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
         container.innerHTML =
           '<div class="py-12 text-center"><p class="text-gray-500 dark:text-gray-400 text-lg">No results found for <strong>' +
           escapeHtml(q) +
-          '</strong>.</p><p class="text-gray-400 dark:text-gray-500 text-sm mt-2">Try a different keyword or browse <a href="/' +
+          '</strong>.</p><p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Try a different keyword or browse <a href="/' +
           lang +
-          '/faq" class="text-sky-600 hover:underline">FAQ</a> or <a href="/' +
+          '/faq" class="text-sky-700 underline underline-offset-2 hover:underline">FAQ</a> or <a href="/' +
           lang +
-          '/products" class="text-sky-600 hover:underline">products</a>.</p></div>';
+          '/products" class="text-sky-700 underline underline-offset-2 hover:underline">products</a>.</p></div>';
         filterBar.classList.add('hidden');
         return;
       }

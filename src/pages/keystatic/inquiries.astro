@@ -187,7 +187,7 @@ const statuses = INQUIRY_STATUSES as readonly string[];
               detailTr.className = 'detail-row';
               detailTr.dataset.id = row.id;
               const attachment = row.logoKey
-                ? `<div><span class="font-medium text-gray-500 dark:text-gray-400">Attachment:</span> <a class="text-sky-600 dark:text-sky-400 underline break-all" href="/api/admin/inquiries/file?id=${encodeURIComponent(row.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(String(row.logoKey).split('/').pop() || 'file')}</a></div>`
+                ? `<div><span class="font-medium text-gray-500 dark:text-gray-400">Attachment:</span> <a class="text-sky-700 dark:text-sky-400 underline break-all" href="/api/admin/inquiries/file?id=${encodeURIComponent(row.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(String(row.logoKey).split('/').pop() || 'file')}</a></div>`
                 : '';
               detailTr.innerHTML = `<td colspan="7" class="px-4 py-3"><div class="rounded-md bg-gray-50 dark:bg-gray-900 p-4 text-xs space-y-1.5">${fields
                 .filter(([, v]) => v)
