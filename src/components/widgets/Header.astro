@@ -585,7 +585,9 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
             : '';
           return (
             '<li><a href="' +
-            escapeAttr((document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en') + m.url) +
+            escapeAttr(
+              '/' + (document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en') + m.url
+            ) +
             '" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">' +
             img +
             '<div class="flex items-center gap-1.5 min-w-0 flex-1">' +
