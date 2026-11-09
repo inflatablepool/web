@@ -528,10 +528,8 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
       lastSearchFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       dialog.classList.remove('hidden');
       dialog.setAttribute('aria-hidden', 'false');
-      setTimeout(function () {
-        input.focus();
-        input.select();
-      }, 30);
+      input.focus();
+      input.select();
       loadIndex();
     }
     function close() {
