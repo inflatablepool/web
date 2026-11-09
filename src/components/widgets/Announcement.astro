@@ -4,12 +4,12 @@ const defaultMessages = [{ tag: 'NEW', text: 'Welcome to Inflatable Pool Factory
 const items = messages.length ? messages : defaultMessages;
 ---
 
-<div class="text-sm bg-sky-700 text-slate-300 flex items-center px-3 md:px-6 py-1">
+<div class="text-sm bg-sky-700 text-white flex items-center px-3 md:px-6 py-1">
   <div class="flex-1 flex gap-4 overflow-hidden">
     {
       items.map((m: { href?: string; tag?: string; text?: string }) => (
         <a href={m.href} class="hover:underline font-medium inline-flex items-center gap-1.5">
-          <span class="bg-white/20 text-slate-100 font-semibold px-1.5 py-0.5 text-[10px] inline-block uppercase tracking-wider">
+          <span class="bg-black/25 text-white font-semibold px-1.5 py-0.5 text-[10px] inline-block uppercase tracking-wider">
             {m.tag}
           </span>
           <span>{m.text}</span>

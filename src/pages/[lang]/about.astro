@@ -165,7 +165,9 @@ const faqSchema = JSON.stringify({
       <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
         <div class="max-w-6xl mx-auto">
           <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{production.tagline}</span>
+            <span class="text-sm font-semibold text-primary dark:text-sky-400 tracking-[0.15em] uppercase">
+              {production.tagline}
+            </span>
             <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">{production.title}</h2>
             <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{production.description}</p>
           </div>
@@ -191,7 +193,7 @@ const faqSchema = JSON.stringify({
                 <ul class="space-y-2 text-sm text-gray-500 dark:text-slate-400">
                   {(card.items || []).map((item: string) => (
                     <li class="flex gap-2">
-                      <span class="text-[#06b6d4] mt-0.5">&#10003;</span> {item}
+                      <span class="text-primary dark:text-sky-400 mt-0.5">&#10003;</span> {item}
                     </li>
                   ))}
                 </ul>
