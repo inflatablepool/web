@@ -295,6 +295,9 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
   id="search-dialog"
   data-search-dialog
   class="hidden fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-label={searchPlaceholder}
   aria-hidden="true"
 >
   <div class="max-w-2xl mx-auto mt-20 px-4">
@@ -327,7 +330,14 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
   </div>
 </div>
 
-<div id="lang-dialog" data-lang-dialog class="hidden fixed inset-0 z-[70] bg-black/50" aria-hidden="true">
+<div
+  id="lang-dialog"
+  data-lang-dialog
+  class="hidden fixed inset-0 z-[70] bg-black/50"
+  role="dialog"
+  aria-modal="true"
+  aria-label={languageDialogTitle}
+>
   <div class="flex items-start justify-center min-h-full pt-[12vh] px-4 pb-8">
     <div class="bg-white dark:bg-gray-950 rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
       <div class="flex items-center justify-between px-5 pt-5 pb-2">
@@ -374,16 +384,24 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
     const triggers = document.querySelectorAll('[data-lang-trigger]');
     const closeBtn = dialog ? dialog.querySelector('[data-lang-close]') : null;
 
+    let lastFocus = null;
     function openDialog() {
       if (!dialog) return;
+      lastFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       dialog.classList.remove('hidden');
       dialog.setAttribute('aria-hidden', 'false');
+      const focusTarget = dialog.querySelector('[data-lang-close]') || dialog.querySelector('a, button');
+      if (focusTarget) focusTarget.focus();
     }
 
     function closeDialog() {
       if (!dialog) return;
       dialog.classList.add('hidden');
       dialog.setAttribute('aria-hidden', 'true');
+      if (lastFocus) {
+        lastFocus.focus();
+        lastFocus = null;
+      }
     }
 
     if (triggers.length) {
@@ -505,7 +523,9 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
       return indexLoading;
     }
 
+    let lastSearchFocus = null;
     function open() {
+      lastSearchFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       dialog.classList.remove('hidden');
       dialog.setAttribute('aria-hidden', 'false');
       setTimeout(function () {
@@ -519,6 +539,10 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
       dialog.setAttribute('aria-hidden', 'true');
       input.value = '';
       render('');
+      if (lastSearchFocus) {
+        lastSearchFocus.focus();
+        lastSearchFocus = null;
+      }
     }
     function typeBadge(type) {
       const colors = {
