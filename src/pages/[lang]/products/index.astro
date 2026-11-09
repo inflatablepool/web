@@ -182,7 +182,7 @@ const metadata = merge(
       {
         filterGroups.map((group) => (
           <div class="flex flex-wrap items-center justify-center gap-2" data-filter-group={group.label}>
-            <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mr-1">
+            <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mr-1">
               {group.label}:
             </span>
             {group.filters.map((f) => (
@@ -208,7 +208,7 @@ const metadata = merge(
         </button>
       </div>
       <p
-        class="text-center text-sm text-gray-400 dark:text-slate-500"
+        class="text-center text-sm text-gray-500 dark:text-slate-500"
         data-filter-count
         data-template={t('product.showingTemplate') || 'Showing {n} of {total} pools'}
       >
@@ -272,7 +272,7 @@ const metadata = merge(
                   {card.price && (
                     <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">
                       {card.price}
-                      <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 ml-1">
+                      <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 ml-1">
                         {t('product.retail') || 'Retail'}
                       </span>
                     </span>

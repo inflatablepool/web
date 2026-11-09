@@ -88,7 +88,7 @@ const formatUsd = (n: number) =>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
         Complete drop-stitch pool catalog — sizes, wall thicknesses, weights, and FOB Qingdao wholesale prices.
       </p>
-      <p class="mt-4 mx-auto max-w-2xl text-sm text-gray-400 dark:text-slate-500">
+      <p class="mt-4 mx-auto max-w-2xl text-sm text-gray-500 dark:text-slate-500">
         {PRICE_BASIS_NOTE}
       </p>
       <p class="mt-2 mx-auto max-w-2xl text-sm font-medium text-gray-500 dark:text-slate-400">
@@ -140,7 +140,7 @@ const formatUsd = (n: number) =>
           <section id={series.id} class="scroll-mt-24">
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
               <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">{series.name}</h2>
-              <span class="text-sm font-medium text-gray-400 dark:text-slate-500">{series.heading}</span>
+              <span class="text-sm font-medium text-gray-500 dark:text-slate-500">{series.heading}</span>
             </div>
             <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">{series.highlights}</p>
 
@@ -193,7 +193,7 @@ const formatUsd = (n: number) =>
             </div>
 
             <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+              <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">
                 Standard inclusions:
               </span>
               {series.included.map((inc) => (
@@ -210,7 +210,7 @@ const formatUsd = (n: number) =>
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="text-[10px] font-medium uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  <span class="text-[10px] font-medium uppercase tracking-wider text-gray-500 dark:text-slate-500">
                     Factory photo
                   </span>
                 </span>
@@ -234,7 +234,7 @@ const formatUsd = (n: number) =>
       <section id="accessories" class="scroll-mt-24">
         <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
           <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Optional Accessories</h2>
-          <span class="text-sm font-medium text-gray-400 dark:text-slate-500">Extra charge</span>
+          <span class="text-sm font-medium text-gray-500 dark:text-slate-500">Extra charge</span>
         </div>
         <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
           Add-ons that complete turnkey pool packages — entry/exit assistance, pumping, and water circulation.
@@ -313,8 +313,10 @@ const formatUsd = (n: number) =>
             <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Custom & OEM/ODM Quotes</h3>
             <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
               Custom sizes, colors, logo printing, covers and retail packaging are quoted individually after engineering
-              review. See our <a href="/oem-odm" class="text-primary dark:text-sky-400 hover:underline">OEM/ODM page</a> for
-              the project flow.
+              review. See our <a
+                href="/oem-odm"
+                class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline">OEM/ODM page</a
+              > for the project flow.
             </p>
           </div>
           <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
@@ -359,7 +361,7 @@ const formatUsd = (n: number) =>
           {
             POOL_PRESSURE_SPECS.map((p) => (
               <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
                   {p.label}
                 </div>
                 <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
