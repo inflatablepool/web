@@ -45,3 +45,9 @@ apps:
       robots:
         index: true
         follow: true
+
+# Brand display name shown in the navbar logo and footer copyright.
+# Legal entity, email, domains and metadata titles keep the full
+# "Inflatable Pool Factory" name (entity identity is unchanged).
+branding:
+  site_name: iPool factory
