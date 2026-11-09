@@ -335,11 +335,7 @@ const metadata = merge(
         if (empty) empty.classList.toggle('hidden', visible !== 0);
       }
       function setChip(chip: HTMLElement, on: boolean): void {
-        chip.classList.toggle('bg-primary', on);
-        chip.classList.toggle('text-white', on);
-        chip.classList.toggle('border-primary', on);
-        chip.classList.toggle('dark:bg-blue-500', on);
-        chip.classList.toggle('dark:border-blue-500', on);
+        chip.classList.toggle('chip-on', on);
       }
       chips.forEach((chip) => {
         chip.addEventListener('click', () => {
@@ -349,7 +345,7 @@ const metadata = merge(
           if (wasOn) {
             delete active[group];
           } else {
-            const prev = groupEl?.querySelector<HTMLElement>('[data-filter].bg-primary');
+            const prev = groupEl?.querySelector<HTMLElement>('[data-filter].chip-on');
             if (prev) setChip(prev, false);
             active[group] = chip.getAttribute('data-filter') || '';
           }
