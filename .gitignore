@@ -40,7 +40,10 @@ pnpm-lock.yaml
 # uses the same nodeLinker: node-modules and produce a node_modules
 # tree that `npm run build` (and `node_modules/.bin/astro`) need.
 # R2-managed files (served from Cloudflare R2, not git)
-public/files/
+public/files/*
+# Exception: published QC test-report assets (PDFs + photos) are git-managed so
+# the CI checkout has them and fast-upload-r2.mjs syncs them to R2 on deploy.
+!public/files/quality/
 
 # Backup files
 *.bak
