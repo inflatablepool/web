@@ -1,0 +1,504 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Drop-Stitch Pool Destructive Testing SOP | ${SITE.name}`,
+    description:
+      'How our factory qualifies drop-stitch pool quality: a controlled destructive-testing SOP covering material peel and puncture tests, 55°C creep and step-up burst tests, 72-hour hydrostatic overload, rim load and pendulum impact tests, with a failure-diagnosis matrix and a 48-hour CAPA loop.',
+    canonical: getCanonical('/quality-control/destructive-testing'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Quality Control', href: '/quality-control' },
+  { name: 'Destructive Testing SOP' },
+];
+
+const stage1 = [
+  {
+    name: 'Coating 180° Peel & Base Fabric Tear',
+    method:
+      '20 strips (250 × 50 mm) are cut from wall and floor, ≥50 mm away from any weld seam — 5 warp + 5 weft each. The airtight coating is pre-peeled 50 mm, clamped at 100 mm grip separation, and pulled at 100 mm/min over a 150 mm stroke. The mean peel force is taken from the middle 100 mm steady-state zone of the force curve.',
+    criteria:
+      'Mean peel strength ≥120 N/5 cm with a minimum valley ≥100 N/5 cm, and a cohesive failure interface: the base fabric must tear/frac rather than separate cleanly. A smooth sheet-like peel that leaves bare fabric is rejected as a fabric calendering or lamination defect.',
+  },
+  {
+    name: 'Pressurized Single-Point Burst & Puncture Propagation',
+    method:
+      'Three 250 × 250 mm composite specimens are clamped in a Ø150 mm annular fixture and inflated to the model’s rated working pressure (Pw, per nameplate), held for 3 minutes with ≤0.1 PSI pressure drop. A hardened steel pin with a 1.0 mm hemispherical tip (simulating sharp gravel under a pool floor) is driven down at 50 mm/min until penetration.',
+    criteria:
+      'Peak puncture force ≥350 N, and total tear propagation along warp and weft ≤30 mm after puncture. Catastrophic bursting on first contact with tears across the fixture is rejected as insufficient high-tenacity yarn weight or a weave defect.',
+  },
+  {
+    name: 'Low-Temperature Fold Cracking (-18°C)',
+    method:
+      'Three main-panel and three seam-corner specimens are soaked 4 hours at -18°C ± 2°C, folded 180° under a pre-cooled 5 kg weight for 60 seconds per direction (cross-fold), then conditioned at room temperature for 30 minutes, pressurized to 10 PSI and soap-solution checked at the crease intersection for 3 minutes.',
+    criteria:
+      'No stress-whitening crazing along the crease and zero air bubbles within 3 minutes. Cracks or micro-bubbles at the fold intersection are rejected as a substandard cold-resistant plasticizer formulation.',
+  },
+];
+
+const stage2 = [
+  {
+    name: '55°C / 1.5× Pw Creep & Yarn-Anchorage Endurance (48 h)',
+    method:
+      'A full finished unit is inflated to Pw at 23°C, marked with 10 crosshair thickness points (measured to 0.05 mm) and witness lines every 200 mm across all edge-binding seams, then placed in a 55°C ± 2°C environmental chamber and raised to 1.5× Pw (ramp ≤1.0 PSI/min) for 48 continuous hours. Pressure is logged every 4 hours; thickness and witness lines are re-checked every 12 hours.',
+    criteria:
+      'Wall-thickness expansion ≤10% at all points with no localized bulging, witness-line shift ≤1.0 mm, total pressure drop ≤8%, and zero seam leaks on a post-test soap check. Hemispherical bulges (>15% expansion) are diagnosed as poor drop-stitch dipping/coating anchorage; line slip >2.0 mm or lifted, leaking edge tape indicates insufficient welding temperature/speed or adhesive activation failure.',
+  },
+  {
+    name: 'Step-Up Overpressure Burst Test',
+    method:
+      'The same unit, cooled back to 23°C, is placed inside an explosion-proof cage with all personnel ≥5 m behind blast shielding. Two high-speed cameras (≥240 fps) record the corner-seam and main-seam/valve zones. Pressure is raised to 1.5× Pw (held 5 min), then stepped up +2.0 PSI per stage with a 3-minute hold per step until structural rupture. Burst is recorded on a peak-hold gauge and the first failure point is located frame by frame from the footage.',
+    criteria:
+      'Ultimate burst pressure ≥2.5× Pw (≥3.0× Pw for premium models). Fracture forensics classify the cause: a seam that peels open cleanly with no fiber residue indicates a cold/weak weld; a clean brittle shear 1–2 mm along the weld edge indicates over-welding thermal damage; a center-panel rupture with mass fiber breakage confirms the fabric pressure limit was reached by design.',
+  },
+];
+
+const stage3 = [
+  {
+    name: '100% Overload Water Fill & 72-Hour Hydrostatic Deflection',
+    method:
+      'A brand-new unit is set on a level concrete floor with a 5 mm non-slip mat, inflated to Pw, and marked with 100 mm graduation lines on all four walls. A laser level records the initial top-edge position. The pool is filled to 100% of the maximum design waterline and left undisturbed for 72 hours, with air pressure re-trimmed morning and evening. Top-rim deflection and outward tilt angle are measured every 12 hours.',
+    criteria:
+      'Outward wall tilt ≤10° with no mid-wall buckling or overflow, and no stress whitening or delamination on the interior floor-to-wall seams after draining. Tilt >12° or overflow points to wall thickness that is too thin for the pool depth; interior seam whitening points to a missing internal triangular gusset.',
+  },
+  {
+    name: '150 kg Rim Load & 500-Cycle Pendulum Wave Impact',
+    method:
+      'Refilled to the standard waterline at Pw, a 600 × 150 mm pad centered on the long wall carries three 50 kg ballast bags (150 kg, simulating two adults seated on the rim) for 60 minutes while depression depth and any fold buckling are monitored. Separately, a 50 kg cylindrical pendulum sandbag released from a 1.0 m horizontal offset strikes the interior wall 250 times at mid-wall and 250 times at a corner (15–20 cycles/min), then the unit — still filled — is held at 1.5× Pw for 60 minutes and soap-checked.',
+    criteria:
+      'No fold collapse under the 60-minute rim load; zero pressure drop and zero bubbles at corner joints with no binding separation after impact. A corner that leaks first is diagnosed as too small a corner radius (stress concentration) and triggers a tooling change to R ≥150 mm with double-layer corner reinforcement.',
+  },
+  {
+    name: 'Valve & Drain Assembly Destructive Torque / Pull-Out',
+    method:
+      'With the unit inflated to Pw, a digital torque wrench and dedicated spline socket load the inflation-valve and drain-valve flanges clockwise and counterclockwise at ~5°/s until the flange peels, the housing fractures, or soap bubbles appear — peak torque is recorded. The drain assembly is then pulled vertically at 100 mm/min from a 400 × 400 mm clamped section until failure.',
+    criteria:
+      'Ultimate valve failure torque ≥25 N·m and axial drain pull-out ≥800 N. Early flange peel-off is traced to insufficient surface preparation (MEK wipe) or welding temperature between the rigid PVC fitting and the flexible fabric, or to a flange skirt that is too small (<25 mm).',
+  },
+];
+
+const matrix = [
+  {
+    failure: 'Localized hemispherical bulge; drop-stitch yarns pull out of the base fabric',
+    owner: 'Material (IQC)',
+    rootCause:
+      'Low base-fabric weave density or insufficient calendering temperature/pressure preventing mechanical anchoring around the yarn roots.',
+    capa: 'Fabric lot returned to the supplier with a single-yarn pull-out report required; base fabric density upgraded and resin impregnation optimized.',
+  },
+  {
+    failure: 'Weld seam peels open cleanly with no fiber residue; witness-line slip >2 mm',
+    owner: 'Process (IPQC)',
+    rootCause:
+      'Insufficient RF current or weld dwell time, low hot-air temperature with excessive travel speed, or adhesive applied outside its activation window.',
+    capa: 'Machine temperature–pressure–speed window recalibrated and locked; first-article destructive seam peel (≥120 N/5 cm) required before mass production.',
+  },
+  {
+    failure: 'Fabric fractures cleanly 1–2 mm along the weld edge with a brittle cross-section',
+    owner: 'Process (IPQC)',
+    rootCause:
+      'Excessive RF output or insufficient cooling hold time, thermally degrading the edge PVC and the polyester yarns.',
+    capa: 'RF output reduced and cooling hold extended; welding die edges inspected and radius-polished.',
+  },
+  {
+    failure: 'Severe mid-wall outward bulge or overflow after 100% water fill (tilt >12°)',
+    owner: 'Design (R&D)',
+    rootCause: 'Wall thickness mismatched to water depth, leaving inadequate bending stiffness.',
+    capa: 'Structural drawings revised to a thicker drop-stitch wall, or external strapping / frame support added for the same wall.',
+  },
+  {
+    failure: '90° sharp corners burst or leak first under burst or impact testing',
+    owner: 'Design (R&D)',
+    rootCause:
+      'Stress concentration at a right-angle vertex, with edge-binding tape prone to wrinkled weak welds at the bend.',
+    capa: 'Cutting dies revised to generous rounded corners (R ≥150 mm) and curved double-layer reinforcement patches bonded inside and out.',
+  },
+  {
+    failure: 'Interior floor-to-wall junction tears after hydrostatic loading',
+    owner: 'Design (R&D)',
+    rootCause:
+      'Outward hydrostatic thrust plus floor friction create a peeling moment a single interior binding strip cannot sustain.',
+    capa: 'A full-perimeter diagonal drop-stitch triangular gusset added to convert peel forces into axial fiber tension.',
+  },
+  {
+    failure: 'Stress-whitening or bubbles at crease intersections after -18°C folding',
+    owner: 'Material (IQC)',
+    rootCause: 'PVC compound uses general-purpose plasticizers without sufficient low-temperature flexibility.',
+    capa: 'Fabric mill reworks the plastisol with cold-resistant plasticizers, or the model moves to a cold-resistant TPU composite.',
+  },
+];
+
+const recordFields = [
+  'Product model / specification',
+  'Production lot / PO number',
+  'Rated working pressure Pw',
+  'Drop-stitch fabric supplier and roll number',
+  'Coating and edge-tape lots, adhesive and hardener lots',
+  'Welding machine ID / shift and operator badge',
+  'Per-test measured values (peel force, puncture force, tear length, creep expansion, burst pressure, tilt angle, torque, pull-out)',
+  'Per-item PASS/FAIL and overall lot disposition (release, or hold-and-CAPA)',
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Quality Control · Destructive Testing
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        How We Break Pools on Purpose: the Destructive Testing SOP
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Non-destructive checks verify every pool that leaves the line. To find out how the design fails — and make sure
+        it fails safely, never in a customer's hands — our QC laboratory also runs a controlled destructive-testing SOP
+        on sampled units. This page documents that procedure and its acceptance criteria.
+      </p>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Document
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">QMS SOP · WI-QC-DS-2026-001 (V1.0)</div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Full suite
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">
+            ≈5 working days (incl. 72 h hydrostatic)
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Sample per lot
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">3 finished units + 1 fabric offcut roll</div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Stages
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">IQC incoming · FAI first article · ORT</div>
+        </div>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Quote
+        </a>
+        <a
+          href="/quality-control"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:shield-check" class="w-4 h-4" /> Routine QC Framework
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">How sampling works</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">When units are pulled</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            Destructive qualification runs at first-article inspection for every new or revised model, and periodically
+            in series production on units drawn randomly from finished goods or the packaging line. Sampling frequency
+            and the destruction sample set are defined in the SOP; every routine unit still passes the non-destructive
+            QC checkpoints described on the main quality-control page.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Traceability before anything is cut</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            Before testing, the technician binds each sample to its full production history: fabric supplier and roll
+            number, coating and edge-tape lots, adhesive and hardener lots, welding machine ID and the operator's badge
+            number. A sample without complete traceability records is not admitted to the laboratory — a failed test
+            must always point to a correctable cause, not to an unknown one.
+          </p>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">One suite, three dedicated units</h3>
+        <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+          Three finished units are drawn per sample set, each with a dedicated role so later stages always test an
+          as-produced structure, not a previously stressed one:
+        </p>
+        <ul class="mt-2 space-y-1.5 text-sm text-gray-600 dark:text-slate-400 leading-relaxed list-disc pl-5">
+          <li>
+            <strong class="text-gray-800 dark:text-slate-200">Unit #1 — material:</strong> cut into specimens for coating
+            peel, pressurized puncture and cold-fold tests.
+          </li>
+          <li>
+            <strong class="text-gray-800 dark:text-slate-200">Unit #2 — process:</strong> 55°C / 1.5× Pw 48-hour creep, then
+            — after cooling — the step-up burst test.
+          </li>
+          <li>
+            <strong class="text-gray-800 dark:text-slate-200">Unit #3 — structure:</strong> 72-hour overload hydrostatic test,
+            rim load, pendulum impact, then destructive valve and drain tests.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Stage 1 — Base material (fabric)
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Specimens cut from a finished unit isolate the material itself from the welding process, screening incoming
+        fabric defects: weave density, coating adhesion, yarn anchorage and cold-weather formulation.
+      </p>
+      <div class="space-y-4">
+        {
+          stage1.map((t, i) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">
+                <span class="text-primary dark:text-sky-400 mr-1.5">{`1.${i + 1}`}</span>
+                {t.name}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-2">{t.method}</p>
+              <p class="text-sm leading-relaxed">
+                <strong class="text-gray-800 dark:text-slate-200">Accept:</strong>{' '}
+                <span class="text-gray-600 dark:text-slate-400">{t.criteria}</span>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Stage 2 — Manufacturing process limits
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Full-unit tests expose what only shows up after welding: RF and hot-air seam quality, adhesive activation and
+        drop-stitch yarn anchorage — under temperatures and pressures no customer should ever reach.
+      </p>
+      <div class="space-y-4">
+        {
+          stage2.map((t, i) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">
+                <span class="text-primary dark:text-sky-400 mr-1.5">{`2.${i + 1}`}</span>
+                {t.name}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-2">{t.method}</p>
+              <p class="text-sm leading-relaxed">
+                <strong class="text-gray-800 dark:text-slate-200">Accept:</strong>{' '}
+                <span class="text-gray-600 dark:text-slate-400">{t.criteria}</span>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Stage 3 — Full water load & dynamic impact
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Air alone cannot reproduce hydrostatic side pressure or people leaning on the wall. A brand-new unit is filled,
+        loaded and struck to validate aspect ratio, wall-thickness selection, corner geometry and valve flange design.
+      </p>
+      <div class="space-y-4">
+        {
+          stage3.map((t, i) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">
+                <span class="text-primary dark:text-sky-400 mr-1.5">{`3.${i + 1}`}</span>
+                {t.name}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-2">{t.method}</p>
+              <p class="text-sm leading-relaxed">
+                <strong class="text-gray-800 dark:text-slate-200">Accept:</strong>{' '}
+                <span class="text-gray-600 dark:text-slate-400">{t.criteria}</span>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Failure diagnosis & the 48-hour CAPA loop
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        A destructive test that passes proves the design margin. A failure is only useful when it names its root cause
+        and its owner. The SOP's diagnostic matrix routes every failure mode to a department and a corrective action:
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[860px]">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Failure mode observed</th>
+              <th class="px-4 py-3">Owner</th>
+              <th class="px-4 py-3">Root cause analysis</th>
+              <th class="px-4 py-3">Corrective & preventive action (CAPA)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              matrix.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.failure}
+                  </td>
+                  <td class="px-4 py-2.5 whitespace-nowrap text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.owner}
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.rootCause}
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.capa}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mt-3">
+        After every run, quality and process engineers log the measured values against each acceptance criterion on a
+        raw-data record sheet, sign off a lot disposition — release, or hold shipment with a CAPA report issued within
+        48 hours. A lot is only released when every test item passes.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+        What the record sheet captures
+      </h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4 max-w-3xl">
+        Every destructive-testing session is documented on a controlled raw-data and disposition sheet. Buyers can
+        request the record for the lot their order is produced against.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-2">
+        {
+          recordFields.map((f) => (
+            <div class="flex items-start gap-2 p-3 rounded-lg bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 text-sm text-gray-700 dark:text-slate-300">
+              <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              <span>{f}</span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">Test equipment & lab safety culture</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        The suite runs on calibrated equipment only: a high-precision digital pressure console (±0.1 PSI with peak-hold
+        and remote emergency relief), a ≥5 kN class-0.5 universal testing machine, a constant-temperature chamber
+        (±1.5°C uniformity verified at three heights), a low-temperature chamber, high-speed cameras (≥240 fps) and
+        torque-controlled fixtures. Overpressure work is executed inside an explosion-proof cage with mandatory standoff
+        distances, impact PPE and locked interlocks — the lab follows the same controlled-document discipline as
+        production.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+        What this means for your project
+      </h2>
+      <ul class="space-y-2.5 max-w-3xl text-gray-600 dark:text-slate-400 leading-relaxed">
+        <li class="flex gap-2">
+          <Icon name="tabler:point-filled" class="w-5 h-5 text-primary dark:text-sky-400 shrink-0" />
+          <span class="text-sm">
+            Test pressures are always relative to the model's rated working pressure (Pw) from the nameplate and
+            approved specification — the SOP defines multipliers and hold times, not one universal PSI figure.
+          </span>
+        </li>
+        <li class="flex gap-2">
+          <Icon name="tabler:point-filled" class="w-5 h-5 text-primary dark:text-sky-400 shrink-0" />
+          <span class="text-sm">
+            The same traceability chain that binds a destructive sample binds your production lot: fabric rolls, coating
+            lots, machine IDs and operators are on record for your units.
+          </span>
+        </li>
+        <li class="flex gap-2">
+          <Icon name="tabler:point-filled" class="w-5 h-5 text-primary dark:text-sky-400 shrink-0" />
+          <span class="text-sm">
+            For OEM/ODM programs, destructive qualification runs at first-article inspection before mass production
+            starts — you approve the validated sample before the container is filled.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control Framework</a
+        >
+        <a
+          href="/manufacturing"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Manufacturing Process</a
+        >
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/products/specs#pressure"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Full Specifications</a
+        >
+        <a
+          href="/request-quotation"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Request a Quote</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="destructive-testing" aria-hidden="true">
+    <p>
+      Inflatable Pool Factory destructive testing SOP (factory QMS controlled document WI-QC-DS-2026-001, V1.0):
+      sampling at first-article inspection and periodic in-production intervals draws three finished units plus one
+      fabric offcut roll per sample set, each unit with a dedicated role (material, process, structure) and bound
+      traceability records (fabric supplier and roll, coating and edge-tape lots, adhesive lots, welding machine ID,
+      operator badge). Stage 1 material tests: coating 180° peel (mean ≥120 N/5 cm, valley ≥100 N/5 cm, cohesive fiber
+      failure required), pressurized single-point puncture at rated working pressure Pw (peak ≥350 N, tear propagation
+      ≤30 mm with a 1.0 mm hemispherical pin), and a -18°C 180° cross-fold under a 5 kg weight with a 3-minute 10 PSI
+      soap-water leak check (no crazing, no bubbles). Stage 2 process tests: 55°C / 1.5× Pw 48-hour creep on a full unit
+      (wall-thickness expansion ≤10%, witness-line shift ≤1.0 mm, pressure drop ≤8%, zero seam leaks) followed by a
+      step-up burst test at +2.0 PSI stages inside an explosion-proof cage (ultimate burst pressure ≥2.5× Pw, ≥3.0× Pw
+      for premium models, first failure point located on high-speed video). Stage 3 structural tests: 100% overload
+      water fill held 72 hours (outward tilt ≤10°, no interior floor-to-wall seam whitening or delamination), a 150 kg
+      60-minute rim load with no fold buckling, 500 pendulum impacts from a 1.0 m release with a post-impact 1.5× Pw
+      60-minute soap check, destructive valve torque ≥25 N·m and drain pull-out ≥800 N. Failures are routed by a
+      diagnostic matrix to material (IQC), process (IPQC) or design (R&D) ownership with corrective and preventive
+      actions (CAPA) issued within 48 hours; the raw-data record sheet carries per-test measured values, per-item
+      PASS/FAIL and the lot disposition. Routine non-destructive QC on every unit is described on the quality-control
+      page; destructive qualification is performed on sampled units.
+    </p>
+  </section>
+</Layout>
