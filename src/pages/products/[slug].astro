@@ -445,6 +445,29 @@ const hasVariant = catalogSeries
             )
           }
 
+          {/* Test Evidence Callout */}
+          {
+            product.qualityReport && (
+              <a
+                href={product.qualityReport.href}
+                class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/20 border border-sky-100 dark:border-sky-800/50 hover:bg-sky-100 dark:hover:bg-sky-900/30 transition-colors"
+              >
+                <span class="mt-0.5 shrink-0 text-primary dark:text-sky-400">
+                  <Icon name="tabler:shield-check" class="w-5 h-5" />
+                </span>
+                <span>
+                  <span class="block text-sm font-bold text-gray-900 dark:text-slate-100">
+                    Destructive test evidence available
+                  </span>
+                  <span class="block text-xs text-gray-600 dark:text-slate-400 mt-0.5">
+                    {product.qualityReport.label ||
+                      'This configuration passed 8/8 destructive items in its type-test campaign — see the measured results and download the signed reports.'}
+                  </span>
+                </span>
+              </a>
+            )
+          }
+
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
             {

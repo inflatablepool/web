@@ -104,6 +104,14 @@ const productCollection = defineCollection({
     featured: z.boolean().optional(),
     metadata: metadataDefinition(),
     entityType: z.literal('product').optional(),
+    // Optional link to a published destructive-test / QC evidence page. When set,
+    // the product page shows a compact "test evidence" callout under the specs.
+    qualityReport: z
+      .object({
+        label: z.string().optional(),
+        href: z.string(),
+      })
+      .optional(),
     entityRelations: z.array(entityRelationSchema).optional(),
   }),
 });

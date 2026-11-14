@@ -80,6 +80,7 @@ export interface Product {
   featured: boolean;
   draft: boolean;
   metadata?: MetaData;
+  qualityReport?: { label?: string; href: string };
   Content?: AstroComponentFactory;
   readingTime?: number;
   environment?: string[];

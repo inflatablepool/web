@@ -3,6 +3,7 @@ import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { getCanonical } from '~/utils/permalinks';
+import { assetUrl } from '~/lib/assets';
 import type { MetaData } from '~/types';
 import { POOL_PRODUCTION_STEPS, POOL_PRESSURE_SPECS } from '~/data/pool-catalog';
 
@@ -140,6 +141,57 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
           ))
         }
       </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Published test evidence</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Beyond line inspection, a sampled unit is destroyed on purpose to prove the design. A recent type-test campaign
+        on the 4 × 3 × 1.2 m / 20 cm-wall drop-stitch pool passed all eight destructive items — including a 3.18×
+        rated-pressure burst and a 72-hour 110% water overload — and the four signed reports are public.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-4">
+        <figure
+          class="rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+        >
+          <img
+            src={assetUrl('/files/quality/photos/dsp400-final-02.webp')}
+            alt="Inflatable drop-stitch pool inside a steel blast-containment cage during a step-up overpressure burst test, with a remote burst console and high-speed camera"
+            width="1200"
+            height="896"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-auto"
+          />
+          <figcaption class="px-4 py-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            Step-up burst test inside the blast cage — the panel fabric ruptured at 25.4 PSI (3.18× rated pressure)
+            while every weld and adhesive seam stayed intact.
+          </figcaption>
+        </figure>
+        <figure
+          class="rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+        >
+          <img
+            src={assetUrl('/files/quality/photos/dsp400-final-03.webp')}
+            alt="Structural test bay with the pool filled to 110 percent of its rated waterline, sandbags loading the rim and a gantry-suspended pendulum bag ready to swing"
+            width="1200"
+            height="896"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-auto"
+          />
+          <figcaption class="px-4 py-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            72-hour hydrostatic overload: 10,810 L of water, a 150 kg rim load and 500 pendulum impacts — final wall
+            tilt 5.6° against a 10° limit, zero leaks.
+          </figcaption>
+        </figure>
+      </div>
+      <a
+        href="/quality-control/destructive-testing/results"
+        class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+      >
+        <Icon name="tabler:file-download" class="w-4 h-4" /> See the 8/8 PASS Results & Download the Reports
+      </a>
     </section>
 
     <section class="mb-14">
