@@ -1,0 +1,468 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import { assetUrl } from '~/lib/assets';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Destructive Test Results: FB-DSP-400 Type-Test Campaign | ${SITE.name}`,
+    description:
+      'Published results of our factory destructive-testing campaign on the FB-DSP-400 drop-stitch pool (batch LOT-202611-A08): 8 of 8 destructive items passed — 136.5–149.4 N/5cm peel with 100% cohesive failure, 406–425 N pressurized puncture, 3.18× rated-pressure burst, 72-hour overload hydrostatic at 5.6° tilt, 500 pendulum impacts with zero leaks — with the four signed test reports available as PDF downloads.',
+    canonical: getCanonical('/quality-control/destructive-testing/results'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Quality Control', href: '/quality-control' },
+  { name: 'Destructive Testing SOP', href: '/quality-control/destructive-testing' },
+  { name: 'Published Results' },
+];
+
+const matrix = [
+  {
+    stage: 'Stage 1 · Material',
+    test: '1.1 Coating 180° peel & base-fabric tear',
+    unit: 'Unit #1',
+    spec: 'Mean ≥120 / trough ≥100 N/5cm',
+    measured: 'Mean 136.5–149.4 / min 115.4 N/5cm, 100% cohesive fiber tear',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 1 · Material',
+    test: '1.2 Pressurized single-point puncture',
+    unit: 'Unit #1',
+    spec: 'Force ≥350 N; tear ≤30 mm',
+    measured: 'Force 406.2–425.0 N; tear ≤18.2 mm, no burst',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 1 · Material',
+    test: '1.3 -18°C cold folding + leak check',
+    unit: 'Unit #1',
+    spec: 'Zero cracking; 0 bubbles for 3 min',
+    measured: 'All 6 panel & seam cuts: 0 bubbles, no whitening',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 2 · Process',
+    test: '2.1 55°C / 1.5× Pw 48-hour creep',
+    unit: 'Unit #2',
+    spec: 'Expansion ≤10%; slip ≤1.0 mm',
+    measured: 'Max expansion 5.2%; max slip 0.42 mm; pressure drop 3.3%',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 2 · Process',
+    test: '2.2 Step-up overpressure burst',
+    unit: 'Unit #2',
+    spec: 'Burst ≥2.5× Pw (20.0 PSI)',
+    measured: 'Burst 25.4 PSI = 3.18× Pw, parent-panel rupture, all seams intact',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 3 · Structure',
+    test: '3.1 110% overload water fill, 72 h',
+    unit: 'Unit #3',
+    spec: 'Tilt ≤10°; zero inner-seam peel',
+    measured: 'Max tilt 5.6°; seams & triangular gusset intact',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 3 · Structure',
+    test: '3.2 150 kg rim load & 500 pendulum impacts',
+    unit: 'Unit #3',
+    spec: 'No buckling; post-impact 1.5× Pw 1 h zero leak',
+    measured: '11.8 mm depression, no buckling; 0.0 PSI drop, 0 bubbles',
+    result: 'PASS',
+  },
+  {
+    stage: 'Stage 3 · Structure',
+    test: '3.3 Valve torque & drain pull-out',
+    unit: 'Unit #3',
+    spec: 'Torque ≥25 N·m; pull-out ≥800 N',
+    measured: 'Torque 31.9–36.4 N·m; pull-out 1,185 N (+48%)',
+    result: 'PASS',
+  },
+];
+
+const reports = [
+  {
+    name: 'Final Conclusion Report',
+    doc: 'RPT-FB-QC-20261113-FINAL',
+    desc: 'Full-process summary: consolidated 8-item matrix, safety-margin assessment per dimension, and the batch-release approval signature.',
+    href: '/files/quality/dsp400-final-report-rpt-fb-qc-20261113.pdf',
+    pages: '2 pages',
+  },
+  {
+    name: 'Stage 1 — Raw Material & Fabric',
+    doc: 'RPT-FB-QC-20261113-S1',
+    desc: '20 peel specimens with per-specimen values, 3 pressurized puncture runs, 6 cold-fold cuts, and the material release disposition.',
+    href: '/files/quality/dsp400-stage1-material-report-rpt-fb-qc-20261113.pdf',
+    pages: '3 pages',
+  },
+  {
+    name: 'Stage 2 — Process Limits & Burst',
+    doc: 'RPT-FB-QC-20261113-S2',
+    desc: '48-hour creep table across 10 monitored zones with witness-line slip values, plus the 8-step burst ladder with high-speed-video observations.',
+    href: '/files/quality/dsp400-stage2-process-burst-report-rpt-fb-qc-20261113.pdf',
+    pages: '3 pages',
+  },
+  {
+    name: 'Stage 3 — Structural Validation',
+    doc: 'RPT-FB-QC-20261113-S3',
+    desc: '72-hour hydrostatic deflection log, rim load and 500-cycle impact results, and destructive valve torque / drain pull-out data.',
+    href: '/files/quality/dsp400-stage3-structural-report-rpt-fb-qc-20261113.pdf',
+    pages: '3 pages',
+  },
+];
+
+const photos = [
+  {
+    src: '/files/quality/photos/dsp400-material-04.webp',
+    alt: 'Technician marking 250 x 50 mm warp and weft peel coupons on a drop-stitch panel and pre-peeling the PVC coating with a heat gun',
+    caption: 'Test 1.1 specimen preparation: 250 × 50 mm coupons cut ≥50 mm away from welds, coating pre-peeled 50 mm',
+  },
+  {
+    src: '/files/quality/photos/dsp400-material-05.webp',
+    alt: 'Instron 5982 universal testing machine pulling a drop-stitch peel specimen at 100 mm per minute',
+    caption: 'Test 1.1 peel run on the 5 kN universal testing machine (100 mm/min, 150 mm stroke)',
+  },
+  {
+    src: '/files/quality/photos/dsp400-final-01.webp',
+    alt: 'Post-peel specimens showing torn white polyester fibers left on the PVC coating — cohesive failure — next to a digital caliper',
+    caption:
+      'Test 1.1 failure interface: dense fiber residue on the coating backing = cohesive tear, not adhesive separation',
+  },
+  {
+    src: '/files/quality/photos/dsp400-material-06.webp',
+    alt: 'Pressurized 150 mm annular ring fixture holding a drop-stitch specimen at 8.0 PSI with the R1.0 mm puncture stylus mounted above',
+    caption: 'Test 1.2 pressurized puncture rig: Ø150 mm ring fixture held at 8.0 PSI (0.1 PSI max hold drop)',
+  },
+  {
+    src: '/files/quality/photos/dsp400-process-07.webp',
+    alt: 'Digital caliper measuring wall thickness at witness alignment line W.A.L. #4 across the welded edge band',
+    caption: 'Test 2.1 creep monitoring: thickness re-checks at crosshair points and witness lines every 12 h',
+  },
+  {
+    src: '/files/quality/photos/dsp400-final-02.webp',
+    alt: 'Inflatable pool locked inside a steel blast-containment cage with a remote burst-test console and a high-speed camera on a tripod',
+    caption: 'Test 2.2 burst setup: remote pressurization from beyond the 5 m line, ≥240 fps cameras on the seams',
+  },
+  {
+    src: '/files/quality/photos/dsp400-final-03.webp',
+    alt: 'Pool filled beyond its rated waterline in a structural test bay with sandbags on the rim and a gantry-suspended pendulum weight',
+    caption: 'Tests 3.1 / 3.2: 110% overload water fill, 150 kg rim pad load and the gantry pendulum rig',
+  },
+  {
+    src: '/files/quality/photos/dsp400-structural-08.webp',
+    alt: 'QC technician applying a digital torque wrench to the inflation valve flange of an inflated drop-stitch pool',
+    caption: 'Test 3.3 destructive valve torque: CW/CCW loading at 5°/s until flange peel or housing fracture',
+  },
+];
+
+const pdfSizes: Record<string, string> = {
+  '/files/quality/dsp400-final-report-rpt-fb-qc-20261113.pdf': '1.0 MB',
+  '/files/quality/dsp400-stage1-material-report-rpt-fb-qc-20261113.pdf': '1.1 MB',
+  '/files/quality/dsp400-stage2-process-burst-report-rpt-fb-qc-20261113.pdf': '0.8 MB',
+  '/files/quality/dsp400-stage3-structural-report-rpt-fb-qc-20261113.pdf': '0.8 MB',
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Quality Control · Destructive Testing · Results
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Destructive Test Results: 8 for 8 PASS on the FB-DSP-400 Type Test
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        The procedures on our
+        <a href="/quality-control/destructive-testing" class="underline decoration-primary/40 hover:decoration-primary"
+          >destructive-testing SOP page</a
+        > are only claims until they produce records. This page publishes the results of a recent full campaign — three finished
+        units, five test days, eight destructive items — together with the four signed test reports as PDF downloads.
+      </p>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Campaign
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">
+            RPT-FB-QC-20261113 (S1 / S2 / S3 / FINAL)
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Batch / samples
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">LOT-202611-A08 · 3 finished units</div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Test period
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">
+            2026-11-09 → 2026-11-13 (incl. 48 h + 72 h holds)
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Disposition
+          </div>
+          <div class="text-sm font-bold text-green-700 dark:text-green-400">8 / 8 PASS — batch released</div>
+        </div>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="#reports"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-download" class="w-4 h-4" /> Download the 4 Reports
+        </a>
+        <a
+          href="/quality-control/destructive-testing"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:atom" class="w-4 h-4" /> The SOP Behind These Tests
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">
+        How to read the pressures in these reports
+      </h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        Test pressures are always relative to the tested model's rated working pressure (Pw) from its nameplate — the
+        SOP defines multipliers, not one universal figure. The campaign below ran on the FB-DSP-400 (400 × 300 × 120 cm,
+        20 cm drop-stitch wall), whose nameplate rating is Pw = 8.0 PSI (0.55 bar) — the same figure as the 8 PSI
+        maximum inflation pressure quoted in our platform pressure guidance, while 4–5 PSI remains the recommended
+        everyday operating range and the relief valve autoreleases above 6 PSI. So a "1.5× Pw" creep test ran at 12.0
+        PSI, and the unit burst at 25.4 PSI — 3.18 times its rated pressure and more than three times anything a
+        customer would ever inflate to.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Consolidated results matrix
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        All measured values below are quoted directly from the signed reports; each sub-report carries the per-specimen
+        raw data behind them.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[900px]">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Test</th>
+              <th class="px-4 py-3">Unit</th>
+              <th class="px-4 py-3">Acceptance spec</th>
+              <th class="px-4 py-3">Measured result</th>
+              <th class="px-4 py-3">Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              matrix.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-2.5 border-b border-gray-100 dark:border-slate-800 align-top">
+                    <span class="block font-medium text-gray-800 dark:text-slate-200">{row.test}</span>
+                    <span class="block text-xs text-gray-500 dark:text-slate-500 mt-0.5">{row.stage}</span>
+                  </td>
+                  <td class="px-4 py-2.5 whitespace-nowrap text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.unit}
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.spec}
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                    {row.measured}
+                  </td>
+                  <td class="px-4 py-2.5 whitespace-nowrap border-b border-gray-100 dark:border-slate-800 align-top">
+                    <span class="inline-flex px-2 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
+                      {row.result}
+                    </span>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">What the numbers mean</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Material margin (Stage 1)</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            Every one of the 20 peel specimens failed cohesively — the polyester yarns tore before the coating let go —
+            with group means of 136.5–149.4 N/5 cm against a 120 N/5 cm acceptance floor. Puncture peak force exceeded
+            the 350 N spec by 16–21%, and no specimen burst or propagated a tear beyond 18.2 mm.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Process margin (Stage 2)</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            After 48 hours at 55 °C and 1.5× Pw, the wall grew at most 5.2% in thickness and witness lines slipped at
+            most 0.42 mm — half the allowance. In the burst ladder the panel fabric itself ruptured at 25.4 PSI (3.18×
+            Pw) while every welded and adhesive-bonded seam stayed intact: the joints outlast the parent material.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Structural margin (Stage 3)</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            Ten tons of water at 110% overload for 72 hours produced a 5.6° outward tilt against a 10° limit, with no
+            mid-wall buckling, overflow or interior seam whitening. The valve flanges finally failed at 31.9–36.4 N·m
+            and the drain port at 1,185 N — both far above spec — and always in the fitting, never the weld.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Lab photographs</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Photographs from the campaign, reproduced from the sub-reports (each figure caption below matches the figure
+        numbering in the PDFs).
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          photos.map((p) => (
+            <figure class="rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+              <img
+                src={assetUrl(p.src)}
+                alt={p.alt}
+                width="1200"
+                height="896"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-auto"
+              />
+              <figcaption class="px-4 py-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+                {p.caption}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14" id="reports">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Download the signed test reports (PDF)
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        These are the signed sub-reports and final release report issued by our QC laboratory for campaign
+        RPT-FB-QC-20261113, governed by SOP WI-QC-DS-2026-001 (V1.0). Signed by H. Chen (QC Lab technician), reviewed by
+        M. Lin (Quality Engineering) and approved for release by W. Zhou (Quality Director).
+      </p>
+      <div class="space-y-3">
+        {
+          reports.map((r) => (
+            <a
+              href={assetUrl(r.href)}
+              class="flex flex-wrap items-center gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              download
+            >
+              <span class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700">
+                <Icon name="tabler:file-type-pdf" class="w-5 h-5 text-red-600 dark:text-red-400" />
+              </span>
+              <span class="flex-1 min-w-[240px]">
+                <span class="block text-sm font-bold text-gray-900 dark:text-slate-100">
+                  {r.name} · {r.doc}
+                </span>
+                <span class="block text-xs text-gray-500 dark:text-slate-400 mt-0.5">{r.desc}</span>
+              </span>
+              <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 whitespace-nowrap">
+                PDF · {r.pages} · {pdfSizes[r.href]}
+              </span>
+              <Icon name="tabler:download" class="w-4 h-4 text-gray-400 shrink-0" />
+            </a>
+          ))
+        }
+      </div>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mt-4">
+        Need the raw-data record sheet for your production lot, or destructive qualification at first-article stage for
+        an OEM/ODM program? <a
+          href="/request-quotation"
+          class="underline decoration-primary/40 hover:decoration-primary">Request a quotation</a
+        > and ask for the lot's test records — they follow your order.
+      </p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/quality-control/destructive-testing"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Destructive Testing SOP</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control Framework</a
+        >
+        <a
+          href="/manufacturing"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Manufacturing Process</a
+        >
+        <a
+          href="/products/specs#pressure"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Full Specifications</a
+        >
+        <a
+          href="/request-quotation"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Request a Quote</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="destructive-testing-results" aria-hidden="true">
+    <p>
+      Inflatable Pool Factory published destructive-test results, campaign RPT-FB-QC-20261113 (final report
+      RPT-FB-QC-20261113-FINAL with sub-reports S1, S2, S3), governed by QMS SOP WI-QC-DS-2026-001 (V1.0). Tested model:
+      FB-DSP-400 drop-stitch inflatable pool, 400 × 300 × 120 cm with a 20 cm drop-stitch wall, RF/hot-air heat welding
+      plus two-component polyurethane cold-bonding adhesive; batch LOT-202611-A08, three finished units, test period
+      2026-11-09 to 2026-11-13; nameplate rated working pressure Pw = 8.0 PSI (0.55 bar), equal to the 8 PSI maximum
+      inflation pressure in the platform pressure guidance, with 4–5 PSI the recommended operating range and
+      pressure-relief autorelease above 6 PSI. All eight destructive items passed and the batch was approved for
+      mass-production release: Stage 1 material — 180° coating peel group means 136.5–149.4 N/5 cm (spec ≥120, minimum
+      trough 115.4 N/5 cm, 100% cohesive fiber tear), pressurized single-point puncture at 8.0 PSI peak force
+      406.2–425.0 N (spec ≥350 N) with tear propagation ≤18.2 mm (spec ≤30 mm) and no burst, and -18°C cold folding of
+      six panel and seam cuts with zero cracking and zero bubbles in a 3-minute 10 PSI soap check; Stage 2 process —
+      55°C / 1.5× Pw (12.0 PSI) 48-hour creep with max wall-thickness expansion 5.2% (spec ≤10%), max witness-line slip
+      0.42 mm (spec ≤1.0 mm) and 3.3% pressure drop, followed by a step-up burst reaching 25.4 PSI = 3.18× Pw (spec
+      ≥2.5× Pw) with parent-panel fabric rupture while all heat-welded and PU-bonded seams stayed intact; Stage 3
+      structure — 110% overload water fill of 10,810 litres held 72 hours with max outward tilt 5.6° (spec ≤10°) and no
+      seam whitening or delamination, 150 kg 60-minute rim load with 11.8 mm depression and zero buckling, 500 pendulum
+      impacts with zero pressure drop and zero bubbles on a post-impact 1.5× Pw hold, destructive valve flange torque
+      31.9–36.4 N·m (spec ≥25 N·m) and drain pull-out 1,185 N (spec ≥800 N). Signed by H. Chen (QC Lab technician),
+      reviewed by M. Lin (Quality Engineering) and approved for release by W. Zhou (Quality Director). The four signed
+      reports are downloadable as PDFs on this page; buyers can request the raw-data record sheet for the lot their
+      order is produced against, and OEM/ODM programs include destructive qualification at first-article inspection
+      before mass production.
+    </p>
+  </section>
+</Layout>
