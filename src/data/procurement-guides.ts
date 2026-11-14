@@ -383,6 +383,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'Verifying a Supplier\'s Claims',
         paragraphs: [
           'Ask the factory to let you watch a live test during a video audit: a row of inflated pools with gauges and dated test tags is visible, hard to fake, and instantly tells you whether testing is a system or a slogan. If a supplier cannot show you the test area, assume the test does not happen.',
+          'A stronger test of a supplier is whether it can show destructive results, not just passing units. Our own factory publishes its latest destructive-test campaign: the 4 × 3 × 1.2 m, 20 cm-wall drop-stitch pool passed all eight destructive items — coating peel, pressurized puncture, cold folding, 48-hour thermal creep, a step-up burst at 3.18× rated pressure, a 72-hour water overload, 500 pendulum impacts and destructive valve tests — and the four signed reports are downloadable from the quality-control section of this site. Ask any prospective supplier for the equivalent, and compare the measured margins, not the marketing claims.',
         ],
       },
     ],
@@ -402,6 +403,8 @@ export const procurementGuides: ProcurementGuide[] = [
     ],
     related: [
       { label: 'Quality Control', href: '/quality-control' },
+      { label: 'Destructive Testing SOP', href: '/quality-control/destructive-testing' },
+      { label: 'Published Destructive Test Results', href: '/quality-control/destructive-testing/results' },
       { label: 'Manufacturing Process', href: '/manufacturing' },
       { label: 'OEM / ODM Manufacturing', href: '/oem-odm' },
       { label: 'Pool Specs & FOB Price List', href: '/products/specs' },

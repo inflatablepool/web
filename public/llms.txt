@@ -21,6 +21,8 @@ Inflatable Pool Factory pools are built with drop stitch construction: thousands
 - [Commercial Pools](https://inflatablepoolfactory.com/commercial-pools/): Event-scale and commercial inflatable pool solutions
 - [Manufacturing Process](https://inflatablepoolfactory.com/manufacturing/): Five-step factory production — CNC cutting to pressure testing
 - [Quality Control](https://inflatablepoolfactory.com/quality-control/): Project-specific inspection plan; pressure and leak-test requirements confirmed in the production specification
+- [Destructive Testing SOP](https://inflatablepoolfactory.com/quality-control/destructive-testing/): Controlled QMS procedure WI-QC-DS-2026-001 — sampling, material/process/structure test stages, acceptance criteria and the 48-hour CAPA loop
+- [Published Destructive Test Results](https://inflatablepoolfactory.com/quality-control/destructive-testing/results/): Campaign RPT-FB-QC-20261113 — all 8 destructive items passed; four signed test reports downloadable as PDF
 - [Pool Specs & FOB Price List](https://inflatablepoolfactory.com/products/specs/): Full SKU specifications, FOB Qingdao prices, and ordering rules
 
 ## Procurement Guides

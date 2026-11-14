@@ -152,13 +152,20 @@ const metadata = {
   />
   {
     quality.cta?.href && (
-      <div class="max-w-7xl mx-auto px-4 md:px-6 -mt-8 pb-10 text-center">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 -mt-8 pb-10 flex flex-wrap justify-center gap-3">
         <a
           href={quality.cta.href}
           class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
         >
           {quality.cta.text}
           <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/quality-control/destructive-testing/results"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-download" class="w-4 h-4" />
+          Destructive test results — 8/8 PASS
         </a>
       </div>
     )
