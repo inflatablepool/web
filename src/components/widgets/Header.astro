@@ -569,6 +569,15 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         }
         return;
       }
+      // First open: the index fetch can outlast the first keystrokes. Without
+      // this the query rendered against null and the panel stayed empty until
+      // the user typed again.
+      if (!index) {
+        loadIndex().then(function () {
+          if (input.value.trim().toLowerCase() === q) render(input.value);
+        });
+        return;
+      }
       const data = index || [];
       // Tokenize the query and require every word to match: whole-phrase
       // matching returned 0 results for natural multi-word queries such as
