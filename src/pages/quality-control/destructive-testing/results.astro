@@ -16,7 +16,16 @@ const metadata = merge(
       'Published results of our factory destructive-testing campaign on the FB-DSP-400 drop-stitch pool (batch LOT-202611-A08): 8 of 8 destructive items passed — 136.5–149.4 N/5cm peel with 100% cohesive failure, 406–425 N pressurized puncture, 3.18× rated-pressure burst, 72-hour overload hydrostatic at 5.6° tilt, 500 pendulum impacts with zero leaks — with the four signed test reports available as PDF downloads.',
     canonical: getCanonical('/quality-control/destructive-testing/results'),
     robots: { index: true, follow: true },
-    openGraph: { type: 'website' },
+    openGraph: {
+      type: 'website',
+      images: [
+        {
+          url: 'https://assets.inflatablepoolfactory.com/files/quality/photos/dsp400-final-02.webp',
+          width: 1200,
+          height: 896,
+        },
+      ],
+    },
   },
   {}
 ) as MetaData;
