@@ -144,7 +144,7 @@ const q = Astro.url.searchParams.get('q') || '';
                // German entries, root paths for English-only pages), so prefixing
                // the current locale again produced /de/de/about and /en/... 404s.
                const localizedUrl = m.url || '#';
-               return '<a href="' + escapeAttr(localizedUrl) + '" class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition">'
+               return '<a href="' + escapeAttr(localizedUrl) + '" data-astro-reload class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition">'
                 + img
                 + '<div class="min-w-0 flex-1">'
                 + '<div class="flex items-center gap-2 mb-1 flex-wrap">' + typeBadge(m.type) + '<h2 class="text-base font-semibold text-gray-900 dark:text-white truncate">' + highlight(m.title) + '</h2></div>'

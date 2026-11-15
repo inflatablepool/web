@@ -208,7 +208,7 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
               return (
                 '<a href="' +
                 escapeAttr(localizedUrl) +
-                '" class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition">' +
+                '" data-astro-reload class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition">' +
                 img +
                 '<div class="min-w-0 flex-1">' +
                 '<div class="flex items-center gap-2 mb-1 flex-wrap">' +
