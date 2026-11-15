@@ -58,6 +58,39 @@ const CATEGORY_LABELS: Record<string, string> = {
   POOL: 'Inflatable Swimming Pools',
 };
 
+// Root-only EN pages have no per-language YAML page data (src/data/pages/*.yaml),
+// so the Site Pages scan below never sees them. They are listed explicitly so
+// llms-full.txt stays a complete map of the site for AI crawlers.
+const ROOT_ONLY_PAGES: Array<{ path: string; title: string }> = [
+  { path: '/manufacturing/', title: 'Inflatable Pool Manufacturing & Inspection Process' },
+  { path: '/quality-control/', title: 'Quality Control & Testing Framework' },
+  {
+    path: '/quality-control/destructive-testing/',
+    title: 'Drop-Stitch Pool Destructive Testing SOP (WI-QC-DS-2026-001)',
+  },
+  {
+    path: '/quality-control/destructive-testing/results/',
+    title: 'Published Destructive Test Results (RPT-FB-QC-20261113, 8/8 PASS, signed PDF reports)',
+  },
+  { path: '/oem-odm/', title: 'OEM / ODM Inflatable Pool Manufacturing' },
+  { path: '/private-label/', title: 'Private Label Inflatable Pools' },
+  { path: '/wholesale/', title: 'Wholesale Program' },
+  { path: '/commercial-pools/', title: 'Commercial Pools' },
+  { path: '/for-businesses/', title: 'For Businesses' },
+  { path: '/guides/', title: 'Procurement & Technical Guides' },
+  { path: '/products/specs/', title: 'Pool Specs & FOB Price List' },
+  { path: '/products/compare/', title: 'Product Comparison' },
+  { path: '/find-your-pool/', title: 'Find Your Pool' },
+  { path: '/ai-answer-center/', title: 'AI Answer Center' },
+  { path: '/request-quotation/', title: 'Request a Quotation' },
+];
+
+function getRootOnlyPageLines(existing: string[]): string[] {
+  return ROOT_ONLY_PAGES.filter((p) => !existing.some((line) => line.includes(`${SITE_URL}${p.path}`))).map(
+    (p) => `- ${SITE_URL}${p.path} — ${p.title}`
+  );
+}
+
 function readSource(file: string): string | null {
   try {
     return fs.readFileSync(path.join(ROOT, 'src', 'data', 'geo', file), 'utf8');
@@ -190,7 +223,14 @@ function main(): void {
     baseParts.push('\n\n## Site Pages\n');
     baseParts.push(pageUrls.join('\n'));
   }
-  console.log(`[geo]   ${pageUrls.length} pages found`);
+  const rootOnlyLines = getRootOnlyPageLines(pageUrls);
+  if (rootOnlyLines.length > 0) {
+    // Appended to the same Site Pages section; when the YAML scan is empty the
+    // heading is still emitted so the file structure stays valid.
+    if (pageUrls.length === 0) baseParts.push('\n\n## Site Pages\n');
+    baseParts.push('\n' + rootOnlyLines.join('\n'));
+  }
+  console.log(`[geo]   ${pageUrls.length} pages found (+${rootOnlyLines.length} root-only)`);
 
   // Generate product catalog — all LANGUAGES, all products
   console.log('[geo] Generating product catalog...');
