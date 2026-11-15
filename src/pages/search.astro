@@ -42,7 +42,6 @@ const q = Astro.url.searchParams.get('q') || '';
       (async function () {
         const q = new URLSearchParams(location.search).get('q') || '';
         if (!q) return;
-        const lang = document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en';
         const [staticRes, newsRes] = await Promise.all([
           fetch('/search-index.json'),
           fetch('/news/search-index.json'),
@@ -141,7 +140,10 @@ const q = Astro.url.searchParams.get('q') || '';
           container.innerHTML = '<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">' + filtered.length + ' result' + (filtered.length !== 1 ? 's' : '') + ' for <strong>' + escapeHtml(q) + '</strong></p>'
             + filtered.map(function (m) {
               const img = m.image ? '<div class="shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700"><img src="' + escapeAttr(m.image) + '" alt="' + escapeAttr(m.title) + '" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display=\'none\'"></div>' : '';
-               const localizedUrl = '/' + lang + m.url;
+               // Index URLs already carry the right language prefix (/de/... for
+               // German entries, root paths for English-only pages), so prefixing
+               // the current locale again produced /de/de/about and /en/... 404s.
+               const localizedUrl = m.url || '#';
                return '<a href="' + escapeAttr(localizedUrl) + '" class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition">'
                 + img
                 + '<div class="min-w-0 flex-1">'

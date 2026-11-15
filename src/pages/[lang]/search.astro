@@ -201,7 +201,10 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
                   escapeAttr(m.title) +
                   '" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display=\'none\'"></div>'
                 : '';
-              const localizedUrl = '/' + lang + m.url;
+              // Index URLs already carry the right language prefix (/de/... for
+              // German entries, root paths for English-only pages), so prefixing
+              // the current locale again produced /de/de/about and /en/... 404s.
+              const localizedUrl = m.url || '#';
               return (
                 '<a href="' +
                 escapeAttr(localizedUrl) +
