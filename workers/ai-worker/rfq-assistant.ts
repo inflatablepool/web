@@ -427,42 +427,107 @@ Rules:
 - Return raw JSON without markdown fences or commentary.`;
 
 export function parseAiFields(raw: unknown): Partial<RfqFields> {
-  const text =
-    typeof raw === 'string'
-      ? raw
-      : isRecord(raw) && typeof raw.response === 'string'
-        ? raw.response
-        : '';
+  // Some models return the JSON object directly instead of { response: string }.
+  if (isRecord(raw)) {
+    if (isRecord(raw.response)) {
+      const direct = fieldsFromRecord(raw.response);
+      if (Object.keys(direct).length > 0) return direct;
+    }
+    if (isRecord(raw.result) && isRecord(raw.result.response)) {
+      const direct = fieldsFromRecord(raw.result.response);
+      if (Object.keys(direct).length > 0) return direct;
+    }
+    if (typeof raw.response !== 'string' && !isRecord(raw.result)) {
+      const direct = fieldsFromRecord(raw);
+      if (Object.keys(direct).length > 0) return direct;
+    }
+  }
+
+  const text = extractAiText(raw);
   if (!text.trim()) return {};
 
   const unfenced = text.replace(/```(?:json)?/gi, '').trim();
   const start = unfenced.indexOf('{');
   const end = unfenced.lastIndexOf('}');
-  if (start === -1 || end <= start) return {};
+  const candidates = start !== -1 && end > start ? [unfenced.slice(start, end + 1), unfenced] : [unfenced];
 
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(unfenced.slice(start, end + 1));
-  } catch {
-    return {};
+  for (const candidate of candidates) {
+    const parsed = parseJsonLoose(candidate);
+    if (!parsed) continue;
+    const fields = fieldsFromRecord(parsed);
+    if (Object.keys(fields).length > 0) return fields;
   }
-  if (!isRecord(parsed)) return {};
 
+  // Last resort: accept labelled key/value output from the model. Unknown or
+  // ungrounded values are still filtered by the caller.
+  return fieldsFromLooseText(unfenced);
+}
+
+function extractAiText(raw: unknown): string {
+  if (typeof raw === 'string') return raw;
+  if (!isRecord(raw)) return '';
+  if (typeof raw.response === 'string') return raw.response;
+  if (isRecord(raw.result) && typeof raw.result.response === 'string') return raw.result.response;
+  return '';
+}
+
+function fieldsFromRecord(record: Record<string, unknown>): Partial<RfqFields> {
   const result: Partial<RfqFields> = {};
-  const buyerType = canonicalAllowed(parsed.buyerType, BUYER_TYPES);
-  const productType = canonicalAllowed(parsed.productType, PRODUCT_TYPES);
-  const customizationLevel = canonicalAllowed(parsed.customizationLevel, CUSTOMIZATION_LEVELS);
+  const buyerType = canonicalAllowed(record.buyerType, BUYER_TYPES);
+  const productType = canonicalAllowed(record.productType, PRODUCT_TYPES);
+  const customizationLevel = canonicalAllowed(record.customizationLevel, CUSTOMIZATION_LEVELS);
   if (buyerType) result.buyerType = buyerType;
   if (productType) result.productType = productType;
   if (customizationLevel) result.customizationLevel = customizationLevel;
 
-  const quantity = clean(parsed.quantity, MAX_QUANTITY);
-  const country = clean(parsed.country, MAX_COUNTRY);
-  const targetDelivery = clean(parsed.targetDelivery, MAX_DELIVERY);
+  const quantity = clean(record.quantity, MAX_QUANTITY);
+  const country = clean(record.country, MAX_COUNTRY);
+  const targetDelivery = clean(record.targetDelivery, MAX_DELIVERY);
   if (quantity) result.quantity = quantity;
   if (country) result.country = country;
   if (targetDelivery) result.targetDelivery = targetDelivery;
   return result;
+}
+
+function parseJsonLoose(text: string): Record<string, unknown> | null {
+  const attempts = [
+    text,
+    text.replace(/,\s*([}\]])/g, '$1'),
+    text.replace(/[\u201c\u201d]/g, '"').replace(/,\s*([}\]])/g, '$1'),
+  ];
+  for (const attempt of attempts) {
+    try {
+      const parsed: unknown = JSON.parse(attempt);
+      if (isRecord(parsed)) return parsed;
+    } catch {
+      // Try the next repaired candidate.
+    }
+  }
+  return null;
+}
+
+const RFQ_KEYS = ['buyerType', 'productType', 'quantity', 'customizationLevel', 'country', 'targetDelivery'] as const;
+
+function fieldFromText(text: string, key: (typeof RFQ_KEYS)[number]): string {
+  const quoted = new RegExp(`["']?${key}["']?\\s*[:=]\\s*["']([^"']+)["']`, 'i').exec(text);
+  if (quoted) return clean(quoted[1], 240);
+  const bare = new RegExp(`["']?${key}["']?\\s*[:=]\\s*(?!["'])([^\\n}]+)`, 'i').exec(text);
+  if (!bare) return '';
+  return clean(
+    bare[1]
+      .replace(/\s*[,;]\s*(?=(?:buyerType|productType|quantity|customizationLevel|country|targetDelivery)\b).*$/i, '')
+      .replace(/[,\s]+$/, ''),
+    240
+  );
+}
+
+function fieldsFromLooseText(text: string): Partial<RfqFields> {
+  const record: Record<string, string> = {};
+  for (const key of RFQ_KEYS) {
+    const value = fieldFromText(text, key);
+    if (value) record[key] = value;
+  }
+  return fieldsFromRecord(record);
 }
 
 function quantityGrounded(value: string, text: string): boolean {

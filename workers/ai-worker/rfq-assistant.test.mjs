@@ -218,6 +218,48 @@ test('AI output that is not JSON falls back without fabricating fields', async (
   assert.equal(result.fields.customizationLevel, '');
 });
 
+test('malformed but recoverable AI output is parsed', () => {
+  const trailing = parseAiFields({
+    response:
+      '{"buyerType":"Importer / Distributor","productType":"Round Pool (Blue)","quantity":"1,000 pcs","country":"Germany",}',
+  });
+  assert.equal(trailing.buyerType, 'Importer / Distributor');
+  assert.equal(trailing.productType, 'Round Pool (Blue)');
+  assert.equal(trailing.quantity, '1,000 pcs');
+  assert.equal(trailing.country, 'Germany');
+
+  const labeled = parseAiFields({
+    response:
+      'buyerType: Importer / Distributor\nproductType: Round Pool (Blue)\nquantity: 500 pcs\ncustomizationLevel: Logo / Branding Only\ncountry: Germany\ntargetDelivery: Q3 2027',
+  });
+  assert.deepEqual(labeled, {
+    buyerType: 'Importer / Distributor',
+    productType: 'Round Pool (Blue)',
+    quantity: '500 pcs',
+    customizationLevel: 'Logo / Branding Only',
+    country: 'Germany',
+    targetDelivery: 'Q3 2027',
+  });
+
+  const direct = parseAiFields({ buyerType: 'Retailer / E-commerce', country: 'Poland' });
+  assert.deepEqual(direct, { buyerType: 'Retailer / E-commerce', country: 'Poland' });
+
+  const smartQuotes = parseAiFields(
+    '{"buyerType":"Importer / Distributor","country":"Germany",}'.replace(/"/g, '\u201c')
+  );
+  assert.deepEqual(smartQuotes, { buyerType: 'Importer / Distributor', country: 'Germany' });
+});
+
+test('an all-empty AI object does not fabricate fields', () => {
+  assert.deepEqual(
+    parseAiFields({
+      response:
+        '{"buyerType":"","productType":"","quantity":"","customizationLevel":"","country":"","targetDelivery":""}',
+    }),
+    {}
+  );
+});
+
 test('sanitizeRfqMessage rejects empty and contact-only briefs and caps length', () => {
   assert.equal(sanitizeRfqMessage('').tooShort, true);
   assert.equal(sanitizeRfqMessage('sales@example.com').tooShort, true);
