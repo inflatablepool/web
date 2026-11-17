@@ -25,11 +25,12 @@ jobs:
       - name: Lint + typecheck + prettier + i18n
         run: npm run check
 
-      - name: Asset ledger + AI content review tests
+      - name: Asset ledger + AI content review + RFQ + PDF tests
         run: |
           npm run test:assets
           npm run test:content
           npm run test:ai
+          npm run test:pdf
 
       - name: Full production build
         run: npm run build

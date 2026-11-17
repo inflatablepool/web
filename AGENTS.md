@@ -215,6 +215,14 @@ Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/adm
 - AI must never invent specifications, certifications, prices, MOQs, lead times or capacity. `workers/ai-worker/rfq-assistant.ts` only returns form fields; no product facts are generated.
 - Tests: `npm run test:ai`.
 
+## Product Specification & Comparison PDFs (P2)
+
+- Build step: `node scripts/generate-product-pdfs.mjs` runs after `astro build` and writes six PDFs to `dist/spec-sheets/` (five A4 product spec sheets plus one A4 landscape comparison chart). The folder is generated per build and is not committed.
+- Sources: `src/content/products/*.mdx` frontmatter (title, SKU, summary, specs, price note) and `src/config/facts.json` (legal entity, email, phone, website). No certifications, MOQs, lead times, capacity or prices are added beyond the published MDX values.
+- UI links: root `/products/compare/` links the comparison chart and every spec sheet; each root `/products/<slug>/` page links its own PDF. `check:links` verifies the targets exist in `dist/`.
+- Tests: `npm run test:pdf` covers MDX loading, WinAnsi text sanitizing/wrapping, page sizes, metadata and page counts.
+- Regenerate locally without a full build: `npm run generate:pdf` (requires `dist/` or pass `--out <dir>`).
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):

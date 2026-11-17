@@ -48,6 +48,22 @@ const comparisonRows = [
       Compare all Inflatable Pool Factory pools side by side. Find the right inflatable swimming pool for your backyard.
     </p>
 
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a
+        href="/spec-sheets/product-comparison.pdf"
+        download
+        class="inline-flex items-center gap-2 px-5 py-3 bg-sky-700 text-white text-sm font-semibold rounded-lg hover:bg-sky-800 transition-colors"
+      >
+        Download comparison PDF
+      </a>
+      <a
+        href="/products/specs"
+        class="inline-flex items-center gap-2 px-5 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
+      >
+        Size &amp; FOB price matrix
+      </a>
+    </div>
+
     <div class="mt-12 overflow-x-auto">
       <table class="w-full text-sm border-collapse">
         <thead>
@@ -88,6 +104,38 @@ const comparisonRows = [
         </tbody>
       </table>
     </div>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold text-gray-900">Download specification sheets</h2>
+      <p class="mt-2 max-w-3xl text-sm text-gray-500">
+        Print-ready A4 PDFs generated from the published product data. Reference prices are FOB Qingdao and are
+        confirmed in the quotation.
+      </p>
+      <div class="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          href="/spec-sheets/product-comparison.pdf"
+          download
+          class="block p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-sky-300 transition-all"
+        >
+          <span class="block text-xs font-semibold uppercase tracking-wider text-sky-700">All products</span>
+          <span class="mt-1 block font-semibold text-gray-900">Comparison chart (PDF)</span>
+          <span class="mt-1 block text-xs text-gray-500">Side-by-side A4 landscape table &darr;</span>
+        </a>
+        {
+          products.map((p) => (
+            <a
+              href={`/spec-sheets/${p.slug}.pdf`}
+              download
+              class="block p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-sky-300 transition-all"
+            >
+              <span class="block text-xs font-semibold uppercase tracking-wider text-sky-700">{p.categoryLabel}</span>
+              <span class="mt-1 block font-semibold text-gray-900">{p.title}</span>
+              <span class="mt-1 block text-xs text-gray-500">Specification sheet (PDF) &darr;</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
 
     <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       {
