@@ -47,12 +47,13 @@ jobs:
       - run: npm ci
       - name: Lint + typecheck + prettier + i18n
         run: npm run check
-      - name: Asset ledger + AI content review + RFQ + PDF tests
+      - name: Asset ledger + AI content review + RFQ + PDF + OEM brief tests
         run: |
           npm run test:assets
           npm run test:content
           npm run test:ai
           npm run test:pdf
+          npm run test:oem
       - run: npm run build
         env:
           # Public site key (safe to embed) — rendered into contact form & login.

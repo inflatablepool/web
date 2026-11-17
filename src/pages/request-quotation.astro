@@ -72,22 +72,51 @@ const consent = {
   <script is:inline>
     (() => {
       const params = new URLSearchParams(window.location.search);
-      const product = params.get('product');
+      const product = params.get('product') || params.get('productType');
       const buyer = params.get('buyer');
+      const quantity = params.get('quantity');
+      const customization = params.get('customization') || params.get('customizationLevel');
+      const country = params.get('country');
+      const delivery = params.get('delivery');
+      const brief = params.get('brief');
+      const root = document.getElementById('rfq-form') || document;
 
-      if (buyer) {
-        const buyerSelect = document.querySelector('select[name="buyerType"]');
-        if (buyerSelect instanceof HTMLSelectElement) {
-          const match = Array.from(buyerSelect.options).find((option) => option.value === buyer);
-          if (match) buyerSelect.value = buyer;
+      const setSelect = (name, value) => {
+        if (!value) return false;
+        const select = root.querySelector(`select[name="${name}"]`);
+        if (!(select instanceof HTMLSelectElement)) return false;
+        const match = Array.from(select.options).find((option) => option.value === value);
+        if (!match) return false;
+        if (!select.value) select.value = value;
+        return true;
+      };
+
+      const setText = (name, value) => {
+        if (!value) return;
+        const field = root.querySelector(`[name="${name}"]`);
+        if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
+          if (!field.value.trim()) field.value = value;
         }
-      }
+      };
+
+      setSelect('buyerType', buyer);
+      const productPrefilled = setSelect('productType', product);
+      setText('quantity', quantity);
+      setSelect('customizationLevel', customization);
+      setText('country', country);
+      setText('targetDelivery', delivery);
 
       const message = document.getElementById('rfq-message');
       if (message instanceof HTMLTextAreaElement && !message.value.trim()) {
         const lines = [];
-        if (product) lines.push(`Product of interest: ${product}`);
-        if (buyer) lines.push(`Buyer type: ${buyer}`);
+        if (brief) {
+          // The OEM/ODM brief builder already includes the product type.
+          lines.push(brief);
+          if (buyer) lines.push(`Buyer type: ${buyer}`);
+        } else {
+          if (product && !productPrefilled) lines.push(`Product of interest: ${product}`);
+          if (buyer) lines.push(`Buyer type: ${buyer}`);
+        }
         // Lead-source context for the sales team (no tracking cookies needed):
         // note the internal page that referred the visitor, when available.
         if (document.referrer) {
@@ -97,7 +126,7 @@ const consent = {
               lines.push(`Submitted from: ${ref.pathname.replace(/\/$/, '') || '/'}${ref.search}`);
             }
           } catch {
-            /* malformed referrer — skip */
+            /* malformed referrer - skip */
           }
         }
         if (lines.length) message.value = `${lines.join('\n')}\n`;

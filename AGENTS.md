@@ -223,6 +223,14 @@ Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/adm
 - Tests: `npm run test:pdf` covers MDX loading, WinAnsi text sanitizing/wrapping, page sizes, metadata and page counts.
 - Regenerate locally without a full build: `npm run generate:pdf` (requires `dist/` or pass `--out <dir>`).
 
+## OEM/ODM Project Brief Builder (P2)
+
+- UI: `/oem-odm#project-brief-builder` (root English page), embedded after the five-step process. Buyers fill optional project path, product type, target size, quantity, customization level, target market, target delivery and requirements.
+- Behaviour: the builder only composes a plain-text brief in the browser and links to `/request-quotation` with `product`, `quantity`, `customization`, `country`, `delivery` and `brief` query parameters. `/request-quotation` prefills the existing fields and message; it never submits automatically and adds no new endpoint, D1 field or Worker route.
+- Options: product type and customization values are imported from `src/lib/oem-brief.ts` and must match `src/data/pages/request-quotation.yaml`; keep them in sync when the RFQ form changes.
+- Safety: the brief is inserted with `textContent`/`.value` only, never `innerHTML`; empty fields are omitted and long values are capped.
+- Tests: `npm run test:oem`.
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):

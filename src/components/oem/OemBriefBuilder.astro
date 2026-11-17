@@ -1,0 +1,219 @@
+---
+import { OEM_CUSTOMIZATION_LEVELS, OEM_PRODUCT_TYPES, OEM_PROJECT_PATHS } from '~/lib/oem-brief';
+
+const labelClass = 'block text-sm font-medium text-gray-900 dark:text-slate-200 mb-1';
+const fieldClass =
+  'py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900';
+---
+
+<section id="project-brief-builder" class="mb-14 scroll-mt-24" data-oem-brief>
+  <div class="rounded-2xl border border-sky-100 dark:border-sky-900/60 bg-sky-50/60 dark:bg-slate-800/40 p-6 md:p-8">
+    <p class="text-xs font-semibold uppercase tracking-wider text-primary dark:text-sky-400 mb-2">
+      Project brief builder
+    </p>
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+      Build your OEM/ODM project brief
+    </h2>
+    <p class="text-sm text-gray-600 dark:text-slate-400 mb-6 max-w-3xl">
+      Start with what you know. Every field is optional. We prepare a structured brief in your browser and continue to
+      the RFQ form with the details pre-filled — nothing is sent until you submit that form yourself.
+    </p>
+
+    <form class="grid sm:grid-cols-2 gap-4" data-oem-brief-form novalidate>
+      <div>
+        <label for="oem-brief-project-path" class={labelClass}>Project path</label>
+        <select id="oem-brief-project-path" name="projectPath" class={fieldClass}>
+          <option value="">Select project path</option>
+          {OEM_PROJECT_PATHS.map((value) => <option value={value}>{value}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="oem-brief-product-type" class={labelClass}>Product type</label>
+        <select id="oem-brief-product-type" name="productType" class={fieldClass}>
+          <option value="">Select product type</option>
+          {OEM_PRODUCT_TYPES.map((value) => <option value={value}>{value}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="oem-brief-target-size" class={labelClass}>Target size</label>
+        <input
+          id="oem-brief-target-size"
+          name="targetSize"
+          type="text"
+          placeholder="e.g. 4.0 x 2.0 x 0.75 m"
+          class={fieldClass}
+        />
+      </div>
+
+      <div>
+        <label for="oem-brief-quantity" class={labelClass}>Estimated quantity</label>
+        <input
+          id="oem-brief-quantity"
+          name="quantity"
+          type="text"
+          placeholder="e.g. 300 pcs, or TBD"
+          class={fieldClass}
+        />
+      </div>
+
+      <div>
+        <label for="oem-brief-customization" class={labelClass}>Customization level</label>
+        <select id="oem-brief-customization" name="customizationLevel" class={fieldClass}>
+          <option value="">Select customization level</option>
+          {OEM_CUSTOMIZATION_LEVELS.map((value) => <option value={value}>{value}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="oem-brief-market" class={labelClass}>Target market</label>
+        <input
+          id="oem-brief-market"
+          name="targetMarket"
+          type="text"
+          placeholder="e.g. Germany, UAE, USA"
+          class={fieldClass}
+        />
+      </div>
+
+      <div>
+        <label for="oem-brief-delivery" class={labelClass}>Target delivery</label>
+        <input
+          id="oem-brief-delivery"
+          name="targetDelivery"
+          type="text"
+          placeholder="e.g. Q2 2027, or TBD"
+          class={fieldClass}
+        />
+      </div>
+
+      <div class="sm:col-span-2">
+        <label for="oem-brief-requirements" class={labelClass}>Additional requirements</label>
+        <textarea
+          id="oem-brief-requirements"
+          name="requirements"
+          rows="4"
+          placeholder="Logo placement, packaging, cover, accessories, compliance documents or other requirements..."
+          class={fieldClass}></textarea>
+      </div>
+    </form>
+
+    <div class="mt-5 flex flex-wrap items-center gap-3">
+      <button
+        type="button"
+        data-oem-brief-generate
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+      >
+        Generate project brief
+      </button>
+      <a
+        data-oem-brief-continue
+        href="/request-quotation"
+        hidden
+        class="inline-flex items-center gap-2 px-6 py-3 bg-sky-700 text-white font-semibold rounded-full hover:bg-sky-800 transition-all text-sm"
+      >
+        Continue to RFQ form
+      </a>
+    </div>
+
+    <p data-oem-brief-status role="status" aria-live="polite" class="mt-3 text-sm text-gray-500 dark:text-slate-400">
+      Add at least one project detail above to generate a brief.
+    </p>
+
+    <noscript>
+      <p class="mt-3 text-sm text-gray-600 dark:text-slate-400">
+        JavaScript is required to generate the brief in your browser. You can still <a
+          href="/request-quotation"
+          class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline">open the RFQ form</a
+        > and describe your project there.
+      </p>
+    </noscript>
+
+    <div data-oem-brief-output-wrap hidden class="mt-4">
+      <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-2">
+        Generated brief — review before continuing
+      </p>
+      <pre
+        data-oem-brief-output
+        class="whitespace-pre-wrap break-words max-h-72 overflow-auto rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed text-gray-700 dark:text-slate-300">
+      </pre>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { buildOemBrief, buildRfqPrefillUrl } from '~/lib/oem-brief';
+
+  (() => {
+    const root = document.querySelector('[data-oem-brief]');
+    if (!(root instanceof HTMLElement)) return;
+
+    const form = root.querySelector('[data-oem-brief-form]');
+    const generateButton = root.querySelector('[data-oem-brief-generate]');
+    const continueLink = root.querySelector('[data-oem-brief-continue]');
+    const status = root.querySelector('[data-oem-brief-status]');
+    const outputWrap = root.querySelector('[data-oem-brief-output-wrap]');
+    const output = root.querySelector('[data-oem-brief-output]');
+
+    if (
+      !(form instanceof HTMLFormElement) ||
+      !(generateButton instanceof HTMLButtonElement) ||
+      !(continueLink instanceof HTMLAnchorElement) ||
+      !(status instanceof HTMLElement) ||
+      !(outputWrap instanceof HTMLElement) ||
+      !(output instanceof HTMLElement)
+    ) {
+      return;
+    }
+
+    const readField = (name: string): string => {
+      const field = form.elements.namedItem(name);
+      return field instanceof HTMLInputElement ||
+        field instanceof HTMLTextAreaElement ||
+        field instanceof HTMLSelectElement
+        ? field.value
+        : '';
+    };
+
+    const readInput = () => ({
+      projectPath: readField('projectPath'),
+      productType: readField('productType'),
+      targetSize: readField('targetSize'),
+      quantity: readField('quantity'),
+      customizationLevel: readField('customizationLevel'),
+      targetMarket: readField('targetMarket'),
+      targetDelivery: readField('targetDelivery'),
+      requirements: readField('requirements'),
+    });
+
+    const render = () => {
+      const input = readInput();
+      const brief = buildOemBrief(input);
+      const hasBrief = brief.length > 0;
+
+      output.textContent = brief;
+      outputWrap.hidden = !hasBrief;
+      continueLink.hidden = !hasBrief;
+      continueLink.setAttribute('href', hasBrief ? buildRfqPrefillUrl(input) : '/request-quotation');
+      status.textContent = hasBrief
+        ? 'Brief ready. Review it below, then continue to the RFQ form to complete your details.'
+        : 'Add at least one project detail above to generate a brief.';
+    };
+
+    let generated = false;
+
+    generateButton.addEventListener('click', () => {
+      generated = true;
+      render();
+    });
+
+    const refreshAfterEdit = () => {
+      if (generated) render();
+    };
+
+    form.addEventListener('input', refreshAfterEdit);
+    form.addEventListener('change', refreshAfterEdit);
+    form.addEventListener('submit', (event) => event.preventDefault());
+  })();
+</script>
