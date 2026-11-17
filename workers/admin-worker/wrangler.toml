@@ -19,6 +19,8 @@ BETTER_AUTH_URL = "https://inflatablepoolfactory.com"
 #   GOOGLE_CLIENT_SECRET      — Google OAuth client secret
 #   ADMIN_EMAILS              — comma-separated admin emails (role source of truth)
 #   GITHUB_TOKEN              — Fine-grained PAT for the CMS content endpoints
+#   CONTACT_RESEND_API_KEY    — Resend key for manual inquiry resend (from RESEND_API_KEY)
+#   CONTACT_EMAIL_TO / CONTACT_FROM_EMAIL / CONTACT_FROM_NAME — notification mail
 
 # D1 (created via: wrangler d1 create inflatable-pool-factory-db)
 [[d1_databases]]

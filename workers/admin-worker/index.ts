@@ -13,6 +13,7 @@ import {
 } from '../shared/schema';
 import type { News } from '../shared/schema';
 import { applyRuleToText, scanFile, shouldScanPath, validateRule, type RefactorRule } from './link-refactor';
+import { mailRowFromD1, recordInquiryEmailAttempt, sendInquiryEmail } from '../shared/inquiry-mail';
 
 interface Env extends AuthEnv {
   GITHUB_TOKEN?: string;
@@ -22,6 +23,10 @@ interface Env extends AuthEnv {
   DATA_BUCKET: R2Bucket;
   BETTER_AUTH_URL?: string;
   EMAIL_FROM?: string;
+  CONTACT_RESEND_API_KEY?: string;
+  CONTACT_EMAIL_TO?: string;
+  CONTACT_FROM_EMAIL?: string;
+  CONTACT_FROM_NAME?: string;
 }
 
 const CORS = {
@@ -128,6 +133,30 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const page = Math.max(0, Number(urlParam(request, 'page') || 0) || 0);
     const pageSize = Math.min(200, Math.max(1, Number(urlParam(request, 'pageSize') || 30) || 30));
     return json(await listInquiries(db, { page, pageSize, ...readInquiryFilters(request) }));
+  }
+
+  if (path === '/api/admin/inquiries/resend' && request.method === 'POST') {
+    const { id } = (await request.json()) as { id?: string };
+    if (!id) return json({ error: 'Missing id' }, 400);
+    const raw = (await env.DB.prepare('SELECT * FROM inquiry WHERE id = ?1').bind(id).first()) as Record<
+      string,
+      unknown
+    > | null;
+    if (!raw) return json({ error: 'Not found' }, 404);
+    const mailRow = mailRowFromD1(raw);
+    const result = await sendInquiryEmail(env, mailRow);
+    await recordInquiryEmailAttempt(
+      env.DB,
+      id,
+      result,
+      result.status === 'not_configured' ? mailRow.emailAttempts || 0 : (mailRow.emailAttempts || 0) + 1
+    );
+    return json({
+      success: result.status === 'sent',
+      status: result.status,
+      error: result.status === 'sent' ? undefined : result.error,
+      messageId: result.status === 'sent' ? result.messageId : undefined,
+    });
   }
 
   if (path === '/api/admin/inquiries/status' && request.method === 'POST') {
@@ -806,6 +835,9 @@ async function exportInquiriesCsv(db: DB, filters: InquiryFilters = {}) {
     'email_status',
     'email_error',
     'email_sent_at',
+    'email_attempts',
+    'email_last_attempt_at',
+    'email_message_id',
   ];
   const esc = (v: unknown) => {
     const s = String(v ?? '');
@@ -847,6 +879,9 @@ async function exportInquiriesCsv(db: DB, filters: InquiryFilters = {}) {
       r.emailStatus,
       r.emailError,
       r.emailSentAt ? new Date(Number(r.emailSentAt) * 1000).toISOString() : '',
+      r.emailAttempts,
+      r.emailLastAttemptAt ? new Date(Number(r.emailLastAttemptAt) * 1000).toISOString() : '',
+      r.emailMessageId,
     ]
       .map(esc)
       .join(',')

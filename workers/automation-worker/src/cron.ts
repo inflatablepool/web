@@ -1,4 +1,5 @@
 interface Env {
+  DB: D1Database;
   DATA_BUCKET: R2Bucket;
   GSC_CLIENT_ID?: string;
   GSC_CLIENT_SECRET?: string;
@@ -7,6 +8,10 @@ interface Env {
   INDEXNOW_KEY?: string;
   INDEXNOW_HOST?: string;
   INDEXNOW_KEY_LOCATION?: string;
+  CONTACT_RESEND_API_KEY?: string;
+  CONTACT_EMAIL_TO?: string;
+  CONTACT_FROM_EMAIL?: string;
+  CONTACT_FROM_NAME?: string;
 }
 
 export async function cron(env: Env): Promise<Response> {
@@ -47,6 +52,18 @@ export async function cron(env: Env): Promise<Response> {
     results.indexnow = 'error';
   }
 
+  try {
+    const { retryFailedInquiryEmails } = await import('./email-retry');
+    const summary = await retryFailedInquiryEmails(env);
+    results.email = summary.skipped
+      ? `skip:${summary.skipped}`
+      : summary.failed > 0
+        ? `fail:${summary.failed}`
+        : `ok:${summary.sent}`;
+  } catch {
+    results.email = 'error';
+  }
+
   const completedAt = new Date().toISOString();
 
   try {
@@ -60,7 +77,9 @@ export async function cron(env: Env): Promise<Response> {
 
   return new Response(
     JSON.stringify({
-      success: Object.values(results).every((r) => r === 'ok' || r.startsWith('ok:')),
+      success: Object.values(results).every(
+        (r) => r === 'ok' || r === 'skip' || r.startsWith('ok:') || r.startsWith('skip:')
+      ),
       startedAt,
       completedAt,
       results,

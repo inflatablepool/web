@@ -171,7 +171,9 @@ The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static wa
 5. Inserts the record into D1 `inquiry` (`inflatable-pool-factory-db`) — no GitHub writes, no deploy churn.
 6. Sends the notification email via **Resend** with `Reply-To` set to the submitter.
 
-Admin reads submissions at `/keystatic/contact-submissions` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated) and shows the latest 50; full data is exportable via `/api/admin/inquiries.csv`.
+Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated), supports structured filters and shows the latest 30 per page; full data is exportable via `/api/admin/inquiries.csv` (same filters). Each submission has a **Resend notification email** action (`POST /api/admin/inquiries/resend`).
+
+**Email retry (D1 outbox):** `email_status` / `email_attempts` / `email_last_attempt_at` / `email_message_id` (migration `0005`) live on the inquiry row. The automation worker retries `pending` / `failed` / `not_configured` rows up to 5 times with a 15-minute cooldown (30-day window) via `/api/automation/email-retry`, which also runs in the daily cron. The contact worker records the first attempt; a Resend outage never turns a saved lead into a client-visible failure. The 0005 columns (like 0004) are optional during rollout — updates fall back to the status-only column set when the migration lags.
 
 **Daily D1 maintenance:** `inflatable-pool-factory-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
 

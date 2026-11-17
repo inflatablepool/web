@@ -256,6 +256,9 @@ const statuses = INQUIRY_STATUSES as readonly string[];
               }
               tbody.querySelectorAll('tr.detail-row').forEach((tr) => tr.remove());
               const emailSentAt = row.emailSentAt ? new Date(Number(row.emailSentAt) * 1000).toLocaleString() : '';
+              const emailLastAttemptAt = row.emailLastAttemptAt
+                ? new Date(Number(row.emailLastAttemptAt) * 1000).toLocaleString()
+                : '';
               const fields = [
                 ['Name', row.name],
                 ['Company', row.company],
@@ -279,6 +282,9 @@ const statuses = INQUIRY_STATUSES as readonly string[];
                 ['UTM term', row.utmTerm],
                 ['UTM content', row.utmContent],
                 ['Email status', row.emailStatus],
+                ['Email attempts', row.emailAttempts ? String(row.emailAttempts) : ''],
+                ['Email last attempt', emailLastAttemptAt],
+                ['Email message id', row.emailMessageId],
                 ['Email error', row.emailError],
                 ['Email sent at', emailSentAt],
                 ['Submission key', row.submissionKey],
@@ -293,14 +299,46 @@ const statuses = INQUIRY_STATUSES as readonly string[];
               const attachment = row.logoKey
                 ? `<div><span class="font-medium text-gray-500 dark:text-gray-400">Attachment:</span> <a class="text-sky-700 dark:text-sky-400 underline break-all" href="/api/admin/inquiries/file?id=${encodeURIComponent(row.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(String(row.logoKey).split('/').pop() || 'file')}</a></div>`
                 : '';
+              const resend = `<div class="pt-2 flex items-center gap-2"><button class="resend-email px-2.5 py-1 rounded-md bg-sky-600 hover:bg-sky-700 text-white" data-id="${escapeHtml(row.id)}">Resend notification email</button><span class="resend-result text-xs"></span></div>`;
               detailTr.innerHTML = `<td colspan="7" class="px-4 py-3"><div class="rounded-md bg-gray-50 dark:bg-gray-900 p-4 text-xs space-y-1.5">${fields
                 .filter(([, v]) => v)
                 .map(
                   ([k, v]) =>
                     `<div><span class="font-medium text-gray-500 dark:text-gray-400">${escapeHtml(k)}:</span> <span class="break-words">${escapeHtml(v)}</span></div>`
                 )
-                .join('')}${attachment}</div></td>`;
+                .join('')}${attachment}${resend}</div></td>`;
               btn.closest('tr')?.after(detailTr);
+              detailTr.querySelector('.resend-email')?.addEventListener('click', async (event) => {
+                const button = event.currentTarget;
+                const out = detailTr.querySelector('.resend-result');
+                button.disabled = true;
+                button.classList.add('opacity-60');
+                out.textContent = 'Sending…';
+                try {
+                  const res = await fetch('/api/admin/inquiries/resend', {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: row.id }),
+                  });
+                  if (res.status === 401) return window.location.replace('/login');
+                  const data = await res.json().catch(() => ({}));
+                  if (!res.ok || !data.success) {
+                    throw new Error(data.error || data.status || 'Send failed');
+                  }
+                  out.textContent = 'Email sent';
+                  out.className = 'resend-result text-xs text-green-600 dark:text-green-400';
+                  toast('Notification email sent');
+                  setTimeout(load, 800);
+                } catch (err) {
+                  out.textContent = `Send failed: ${String(err && err.message ? err.message : err)}`;
+                  out.className = 'resend-result text-xs text-red-600 dark:text-red-400';
+                  toast('Resend failed', 'error');
+                } finally {
+                  button.disabled = false;
+                  button.classList.remove('opacity-60');
+                }
+              });
             });
           });
         } catch (err) {

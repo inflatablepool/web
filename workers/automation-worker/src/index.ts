@@ -6,6 +6,7 @@ import { ruleEngine } from './rule-engine';
 import { taskExport } from './task-export';
 import { geoScore } from './geo-score';
 import { indexnowHandler } from './indexnow';
+import { retryFailedInquiryEmails } from './email-retry';
 
 interface Env {
   DATA_BUCKET: R2Bucket;
@@ -18,6 +19,10 @@ interface Env {
   INDEXNOW_HOST?: string;
   INDEXNOW_KEY_LOCATION?: string;
   CLEANUP_TOKEN?: string;
+  CONTACT_RESEND_API_KEY?: string;
+  CONTACT_EMAIL_TO?: string;
+  CONTACT_FROM_EMAIL?: string;
+  CONTACT_FROM_NAME?: string;
 }
 
 function json(body: unknown, status = 200): Response {
@@ -51,6 +56,8 @@ export default {
           return await geoScore(env);
         case '/indexnow':
           return await indexnowHandler(env, request);
+        case '/email-retry':
+          return json(await retryFailedInquiryEmails(env));
         case '/cleanup-db': {
           if (env.CLEANUP_TOKEN && url.searchParams.get('token') !== env.CLEANUP_TOKEN)
             return json({ error: 'Unauthorized' }, 401);
@@ -68,6 +75,7 @@ export default {
                 '/tasks/export',
                 '/geo/score',
                 '/indexnow',
+                '/email-retry',
                 '/cleanup-db',
               ],
             },

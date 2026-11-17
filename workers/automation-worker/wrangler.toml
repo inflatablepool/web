@@ -25,3 +25,8 @@ INDEXNOW_KEY = ""
 INDEXNOW_HOST = "inflatablepoolfactory.com"
 INDEXNOW_KEY_LOCATION = "https://inflatablepoolfactory.com/579f6d8a1e2b4c7f9a3d5e8b0c2f4a6b.txt"
 CLEANUP_TOKEN = ""
+
+# Secrets (synced by deploy.yml):
+#   CONTACT_RESEND_API_KEY / CONTACT_EMAIL_TO / CONTACT_FROM_EMAIL / CONTACT_FROM_NAME
+# Enable the D1 inquiry-email retry sweep; without them /api/automation/email-retry
+# reports enabled=false and the cron skips it.

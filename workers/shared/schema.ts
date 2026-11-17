@@ -139,6 +139,11 @@ export const inquiry = sqliteTable('inquiry', {
   emailStatus: text('email_status'),
   emailError: text('email_error'),
   emailSentAt: integer('email_sent_at'),
+  // Email retry/outbox metadata (migration 0005). Optional for the same
+  // migration-lag reason as the structured fields above.
+  emailAttempts: integer('email_attempts').default(0),
+  emailLastAttemptAt: integer('email_last_attempt_at'),
+  emailMessageId: text('email_message_id'),
   createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
 });
 

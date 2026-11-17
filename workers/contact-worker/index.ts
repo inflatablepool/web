@@ -1,5 +1,6 @@
 import { createDb } from '../shared/client';
 import { inquiry } from '../shared/schema';
+import { recordInquiryEmailAttempt, sendInquiryEmail } from '../shared/inquiry-mail';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const SPAM_KEYWORDS = /\b(viagra|cialis|crypto airdrop|investment opportunity|casino|betting)\b/i;
@@ -161,33 +162,7 @@ function sanitize(value: unknown, maxLen = 2000): string {
   return result.trim().slice(0, maxLen);
 }
 
-/** HTML-escape every user-controlled value before it reaches the email body. */
-function escapeHtml(value: string): string {
-  return value.replace(/[&<>"']/g, (ch) => {
-    switch (ch) {
-      case '&':
-        return '&amp;';
-      case '<':
-        return '&lt;';
-      case '>':
-        return '&gt;';
-      case '"':
-        return '&quot;';
-      default:
-        return '&#39;';
-    }
-  });
-}
-
 /** Header values (Subject, Reply-To) must never contain CR/LF. */
-function sanitizeHeaderValue(value: string, maxLen = 200): string {
-  return value
-    .replace(/[\r\n]+/g, ' ')
-    .replace(/\s{2,}/g, ' ')
-    .trim()
-    .slice(0, maxLen);
-}
-
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 interface StructuredFields {
@@ -307,17 +282,6 @@ function appendStructuredDetails(message: string, structured: StructuredFields):
   return lines.length > 0 ? [message, 'Submission details:', ...lines].join('\n') : message;
 }
 
-/** Best-effort delivery status update; never fails the submission. */
-async function markEmailStatus(env: Env, id: string, status: string, error = ''): Promise<void> {
-  try {
-    await env.DB.prepare('UPDATE inquiry SET email_status = ?1, email_error = ?2, email_sent_at = ?3 WHERE id = ?4')
-      .bind(status, error || null, status === 'sent' ? Math.floor(Date.now() / 1000) : null, id)
-      .run();
-  } catch (e) {
-    console.error('Email status update failed (non-fatal):', e);
-  }
-}
-
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === 'OPTIONS') {
@@ -431,7 +395,6 @@ export default {
 
     const receivedAt = new Date();
     const id = submissionId;
-    const destinationEmail = env.CONTACT_EMAIL_TO || '';
     const messageWithDetails = appendStructuredDetails(fields.message, parsed.structured);
 
     // Persist first: D1 is the source of truth for the admin Submissions page.
@@ -537,86 +500,52 @@ export default {
       return json({ success: false, error: 'Could not store submission' }, 500);
     }
 
-    if (!env.CONTACT_RESEND_API_KEY || !env.CONTACT_FROM_EMAIL || !destinationEmail || !EMAIL_RE.test(destinationEmail)) {
-      console.error(
-        'Contact email not configured: missing CONTACT_RESEND_API_KEY, CONTACT_FROM_EMAIL or CONTACT_EMAIL_TO'
-      );
-      await markEmailStatus(env, id, 'not_configured', 'missing provider credentials or destination');
-      return json({ success: true, id, receivedAt: receivedAt.toISOString(), emailStatus: 'not_configured' });
-    }
-
     // The inquiry is already safely stored, so email delivery is best-effort:
     // a Resend outage must not turn a saved lead into a client-visible error.
-    const fromName = sanitizeHeaderValue(env.CONTACT_FROM_NAME || 'Inflatable Pool Factory Contact', 80);
-    const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
-    const submitterName = sanitizeHeaderValue(`${fields.firstName} ${fields.lastName}`, 120);
-    const safeEmail = fields.email.replace(/[<>]/g, '');
-    const replyTo = `${submitterName} <${safeEmail}>`;
-    const subject = sanitizeHeaderValue(
-      `[Contact] ${fields.subject || '(no subject)'} — ${fields.firstName} ${fields.lastName}`,
-      180
+    // The automation worker retries failed/pending rows and the admin can
+    // resend manually.
+    const mailRow = {
+      id,
+      name: legacyValues.name,
+      company: fields.companyName,
+      country: fields.country,
+      email: legacyValues.email,
+      whatsapp: fields.tel,
+      tel: fields.tel,
+      businessType: legacyValues.businessType,
+      quantity: legacyValues.quantity,
+      requirements: '',
+      subject: fields.subject,
+      message: fields.message,
+      address: fields.address,
+      zip: fields.zip,
+      locale: parsed.locale,
+      createdAt: receivedAt.getTime(),
+      ip,
+      userAgent,
+      logoKey,
+      submissionKey: id,
+      buyerType: parsed.structured.buyerType,
+      productType: parsed.structured.productType,
+      productInterest: parsed.structured.productInterest,
+      sourceUrl: parsed.structured.sourceUrl,
+      referrer: parsed.structured.referrer,
+      utmSource: parsed.structured.utmSource,
+      utmMedium: parsed.structured.utmMedium,
+      utmCampaign: parsed.structured.utmCampaign,
+      utmTerm: parsed.structured.utmTerm,
+      utmContent: parsed.structured.utmContent,
+      emailAttempts: 0,
+    };
+    const emailResult = await sendInquiryEmail(env, mailRow);
+    await recordInquiryEmailAttempt(
+      env.DB,
+      id,
+      emailResult,
+      emailResult.status === 'not_configured' ? 0 : 1
     );
-
-    const fieldRows = Object.entries(fields)
-      .filter(([, v]) => v)
-      .map(
-        ([k, v]) =>
-          `<tr><td style="padding:6px;font-weight:600;vertical-align:top">${escapeHtml(k)}</td><td style="padding:6px">${escapeHtml(v).replace(/\n/g, '<br>')}</td></tr>`
-      )
-      .join('');
-    const structuredRows = STRUCTURED_LABELS.filter(([key]) => parsed.structured[key])
-      .map(
-        ([key, label]) =>
-          `<tr><td style="padding:6px;font-weight:600;vertical-align:top">${escapeHtml(label)}</td><td style="padding:6px">${escapeHtml(parsed.structured[key])}</td></tr>`
-      )
-      .join('');
-    const attachmentLine = logoKey ? `<p><strong>Attachment:</strong> stored (open in admin Submissions)</p>` : '';
-    const html = `<div style="font-family:sans-serif;max-width:640px;margin:0 auto">
-        <h2>New contact form submission</h2>
-        <p>Received at ${escapeHtml(receivedAt.toISOString())} | IP: ${escapeHtml(ip)} | ID: ${escapeHtml(id)}</p>
-        <table>${fieldRows}${structuredRows}</table>
-        ${attachmentLine}
-        <p style="font-size:12px;color:#666">User-Agent: ${escapeHtml(userAgent)}</p>
-      </div>`;
-
-    const text = [
-      `${fields.firstName} ${fields.lastName}`,
-      fields.email,
-      fields.companyName ? `Company: ${fields.companyName}` : '',
-      fields.message,
-      ...STRUCTURED_LABELS.filter(([key]) => parsed.structured[key]).map(
-        ([key, label]) => `${label}: ${parsed.structured[key]}`
-      ),
-    ]
-      .filter(Boolean)
-      .join('\n');
-
-    try {
-      const res = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.CONTACT_RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from,
-          to: destinationEmail,
-          reply_to: replyTo,
-          subject,
-          html,
-          text,
-        }),
-      });
-      if (!res.ok) {
-        const txt = await res.text();
-        console.error('Resend error:', txt.slice(0, 500));
-        await markEmailStatus(env, id, 'failed', txt.slice(0, 500));
-      } else {
-        await markEmailStatus(env, id, 'sent');
-      }
-    } catch (e) {
-      console.error('Email send failed:', e);
-      await markEmailStatus(env, id, 'failed', e instanceof Error ? e.message.slice(0, 500) : 'email send failed');
+    if (emailResult.status === 'not_configured') {
+      return json({ success: true, id, receivedAt: receivedAt.toISOString(), emailStatus: 'not_configured' });
     }
 
     return json({ success: true, id, receivedAt: receivedAt.toISOString() });
