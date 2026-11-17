@@ -64,6 +64,22 @@ TAG_RE = re.compile(r"<[^>]+>")
 LD_JSON_RE = re.compile(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.S | re.I)
 TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
 H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.S | re.I)
+CFEMAIL_RE = re.compile(r'data-cfemail=["\']([0-9a-fA-F]+)["\']')
+
+
+def decode_cfemail(markup):
+    """Decode Cloudflare email-protection spans back to the real address."""
+    addresses = []
+    for hex_value in CFEMAIL_RE.findall(markup):
+        try:
+            data = bytes.fromhex(hex_value)
+        except ValueError:
+            continue
+        if not data:
+            continue
+        key = data[0]
+        addresses.append("".join(chr(byte ^ key) for byte in data[1:]))
+    return addresses
 
 
 def fetch(url, timeout):
@@ -159,9 +175,13 @@ def check_page(path, markup):
         warnings.append("title/H1 does not mention inflatable pools")
 
     if path == "/":
+        normalized = re.sub(r"[\s()-]", "", text)
+        protected_emails = set(decode_cfemail(markup))
         for label, value in CONTACT_CHECKS.items():
-            normalized = re.sub(r"[\s()-]", "", text)
-            if value not in normalized and value.replace("+", "") not in normalized:
+            exposed = value in normalized or value.replace("+", "") in normalized
+            if not exposed and label == "email":
+                exposed = any(address == value for address in protected_emails)
+            if not exposed:
                 warnings.append(f"homepage does not expose the canonical {label}")
 
         for name in ld_json_names(markup):
