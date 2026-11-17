@@ -58,7 +58,7 @@ def _load_generic_title():
         m = re.search(r"default:\s*[\"']?([^\"'\n]+)", txt)
         if m:
             return m.group(1).strip()
-    return "Inflatable Pool Factory | RIB Boats, Inflatable Boats & SUP Boards Manufacturer \u2014 OEM/ODM"
+    return "Inflatable Pool Factory | Inflatable Pools & Drop-Stitch SPA Manufacturer — OEM/ODM"
 
 
 GENERIC_TITLE = _load_generic_title()

@@ -100,6 +100,7 @@ export default [
       'node_modules',
       '.github',
       '.wrangler',
+      '**/.wrangler/**',
       '**/.wrangler-tmp/**',
       'types.generated.d.ts',
       '.astro',

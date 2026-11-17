@@ -16,6 +16,10 @@ jobs:
           node-version: 22
           cache: npm
 
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
       - run: npm ci
 
       - name: Lint + typecheck + prettier + i18n
@@ -25,6 +29,15 @@ jobs:
         run: npm run build
         env:
           PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+
+      - name: Internal link audit (dist)
+        run: npm run check:links
+
+      - name: SEO route matrix (unique intents, no orphans)
+        run: npm run check:routes
+
+      - name: Brand positioning gate (inflatable pools)
+        run: python3 scripts/07_positioning_check.py --dist ./dist --strict
 
       - name: Workers compile check (dry-run bundles)
         run: |

@@ -37,6 +37,8 @@
     "check:prettier": "prettier --check .",
     "check:i18n": "node scripts/check-translations.mjs --json --fail",
     "check:links": "node scripts/audit-dist-links.mjs",
+    "check:routes": "node scripts/validate-route-matrix.mjs",
+    "quality": "npm run check && npm run build && npm run check:routes && npm run check:links",
     "validate": "node scripts/validate-dist.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "fix": "npm run fix:eslint && npm run fix:prettier",

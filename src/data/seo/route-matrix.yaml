@@ -1,0 +1,241 @@
+# Route matrix — one primary search intent per indexable core page.
+#
+# Rules enforced by scripts/validate-route-matrix.mjs:
+#   - url + primary_keyword must be unique (case-insensitive)
+#   - cta/evidence internal paths must exist (checked against dist/ when built)
+#   - every core marketing page must appear here (no orphan landing pages)
+#
+# Keep keywords真实: they describe the page's actual primary topic. Do not add a
+# page here until the content and evidence exist.
+version: 1
+site: https://inflatablepoolfactory.com
+updated: '2026-11-17'
+
+routes:
+  - url: /
+    primary_keyword: inflatable pool manufacturer
+    secondary_keywords:
+      - inflatable pool factory
+      - drop stitch pool supplier
+    intent: commercial
+    page_type: homepage
+    cta: /request-quotation/
+    evidence:
+      - /about/
+      - /quality-control/
+    indexable: true
+
+  - url: /products/
+    primary_keyword: inflatable swimming pools
+    secondary_keywords:
+      - drop stitch pools
+      - inflatable pool models
+    intent: commercial
+    page_type: product-list
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /quality-control/
+    indexable: true
+
+  - url: /products/specs/
+    primary_keyword: inflatable pool specifications
+    secondary_keywords:
+      - drop stitch pool dimensions
+      - inflatable pool price list
+    intent: research
+    page_type: specification
+    cta: /request-quotation/
+    evidence:
+      - /products/
+      - /quality-control/destructive-testing/results/
+    indexable: true
+
+  - url: /products/compare/
+    primary_keyword: compare inflatable pools
+    secondary_keywords:
+      - inflatable pool size comparison
+      - round vs rectangular inflatable pool
+    intent: research
+    page_type: comparison
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+    indexable: true
+
+  - url: /oem-odm/
+    primary_keyword: inflatable pool OEM ODM
+    secondary_keywords:
+      - custom inflatable pool manufacturing
+      - OEM pool factory
+    intent: commercial
+    page_type: service
+    cta: /request-quotation/
+    evidence:
+      - /manufacturing/
+      - /quality-control/
+    indexable: true
+
+  - url: /private-label/
+    primary_keyword: private label inflatable pools
+    secondary_keywords:
+      - custom branded inflatable pools
+      - private label pool manufacturer
+    intent: commercial
+    page_type: service
+    cta: /request-quotation/
+    evidence:
+      - /oem-odm/
+      - /manufacturing/
+    indexable: true
+
+  - url: /wholesale/
+    primary_keyword: wholesale inflatable pools
+    secondary_keywords:
+      - inflatable pool distributor program
+      - bulk inflatable pool supplier
+    intent: commercial
+    page_type: service
+    cta: /request-quotation/
+    evidence:
+      - /for-businesses/
+      - /products/specs/
+    indexable: true
+
+  - url: /commercial-pools/
+    primary_keyword: commercial inflatable pools
+    secondary_keywords:
+      - inflatable pools for resorts
+      - commercial pool supplier
+    intent: commercial
+    page_type: solution
+    cta: /request-quotation/
+    evidence:
+      - /quality-control/
+      - /products/specs/
+    indexable: true
+
+  - url: /manufacturing/
+    primary_keyword: inflatable pool manufacturing process
+    secondary_keywords:
+      - drop stitch pool production
+      - inflatable pool factory China
+    intent: research
+    page_type: process
+    cta: /request-quotation/
+    evidence:
+      - /quality-control/
+      - /about/
+    indexable: true
+
+  - url: /quality-control/
+    primary_keyword: inflatable pool quality control
+    secondary_keywords:
+      - drop stitch pool testing
+      - inflatable pool inspection
+    intent: trust
+    page_type: evidence
+    cta: /quality-control/destructive-testing/results/
+    evidence:
+      - /quality-control/destructive-testing/results/
+    indexable: true
+
+  - url: /request-quotation/
+    primary_keyword: inflatable pool quotation request
+    secondary_keywords:
+      - inflatable pool quote
+      - OEM pool RFQ
+    intent: transactional
+    page_type: form
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /oem-odm/
+    indexable: true
+
+  - url: /for-businesses/
+    primary_keyword: inflatable pool business opportunities
+    secondary_keywords:
+      - inflatable pool distribution business
+      - B2B inflatable pool supplier
+    intent: commercial
+    page_type: hub
+    cta: /wholesale/
+    evidence:
+      - /oem-odm/
+      - /private-label/
+    indexable: true
+
+  - url: /find-your-pool/
+    primary_keyword: find the right inflatable pool
+    secondary_keywords:
+      - inflatable pool size guide
+      - choose an inflatable pool
+    intent: research
+    page_type: tool
+    cta: /products/
+    evidence:
+      - /products/specs/
+    indexable: true
+
+  - url: /pool-ideas/
+    primary_keyword: inflatable pool ideas
+    secondary_keywords:
+      - backyard inflatable pool ideas
+      - small garden pool ideas
+    intent: inspiration
+    page_type: gallery
+    cta: /products/
+    evidence:
+      - /products/
+    indexable: true
+
+  - url: /guides/
+    primary_keyword: inflatable pool guides
+    secondary_keywords:
+      - inflatable pool care
+      - drop stitch pool setup
+    intent: informational
+    page_type: content-hub
+    cta: /products/
+    evidence:
+      - /products/specs/
+    indexable: true
+
+  - url: /about/
+    primary_keyword: inflatable pool factory company
+    secondary_keywords:
+      - Qingdao Vatrad Group
+      - inflatable pool manufacturer profile
+    intent: trust
+    page_type: about
+    cta: /contact/
+    evidence:
+      - /manufacturing/
+      - /quality-control/
+    indexable: true
+
+  - url: /contact/
+    primary_keyword: contact inflatable pool factory
+    secondary_keywords:
+      - inflatable pool supplier contact
+      - pool manufacturer email
+    intent: transactional
+    page_type: contact
+    cta: /request-quotation/
+    evidence:
+      - /about/
+    indexable: true
+
+  - url: /faq/
+    primary_keyword: inflatable pool FAQ
+    secondary_keywords:
+      - inflatable pool questions
+      - drop stitch pool warranty
+    intent: informational
+    page_type: faq
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /quality-control/
+    indexable: true

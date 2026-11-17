@@ -29,9 +29,13 @@ function loadWorkerRoutes() {
     const toml = path.join(workersDir, entry.name, 'wrangler.toml');
     if (!existsSync(toml)) continue;
     const txt = readFileSync(toml, 'utf8');
-    for (const m of txt.matchAll(/pattern\s*=\s*"Inflatable Pool Factory\.com(\/[^"]*?)(\*)?"/g)) {
-      if (m[2]) prefixes.push(m[1]);
-      else exact.add(m[1]);
+    for (const m of txt.matchAll(/pattern\s*=\s*"([^"]+)"/g)) {
+      const pattern = m[1];
+      const slash = pattern.indexOf('/');
+      if (slash < 0) continue;
+      const routePath = pattern.slice(slash);
+      if (routePath.endsWith('*')) prefixes.push(routePath.slice(0, -1));
+      else exact.add(routePath);
     }
   }
   if (exact.size === 0 && prefixes.length === 0) {
