@@ -164,7 +164,9 @@ def main():
             if lang and lang != expected:
                 err("A", f"<html lang=\"{lang}\"> 与 URL locale \"{expected}\" 不符")
             sample = " ".join([title, " ".join(h1s), text[:1200]])
-            mism, det, conf = is_mismatch(expected, sample)
+            # 近缘语言（pt/es）的短样本会把共享词 por/de/para 判成对方语种，
+            # conf 0.7 左右属于噪声；只拦截高置信串台，标题/H1 仍按 0.6 单独校验。
+            mism, det, conf = is_mismatch(expected, sample, min_conf=0.8)
             if mism and det == "en" and expected != "en":
                 # 背书语言（fr/de/es/it）页面正文仍是英文 = 内容翻译缺口。
                 # 不阻断（存量普遍存在，阻断会让闸门失去信号价值），输出清单供内容工程排期；
