@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import { desc, asc, eq, count, and, or, sql, gt } from 'drizzle-orm';
+import { desc, asc, eq, count, and, or, sql, gt, like, type SQL } from 'drizzle-orm';
 import { createDb, type DB } from '../shared/client';
 import { createAuth, type AuthEnv } from '../shared/auth';
 import { assertAdmin, type AdminUser } from '../shared/assert-admin';
@@ -127,8 +127,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   if (path === '/api/admin/inquiries' && request.method === 'GET') {
     const page = Math.max(0, Number(urlParam(request, 'page') || 0) || 0);
     const pageSize = Math.min(200, Math.max(1, Number(urlParam(request, 'pageSize') || 30) || 30));
-    const status = urlParam(request, 'status') || undefined;
-    return json(await listInquiries(db, { page, pageSize, status }));
+    return json(await listInquiries(db, { page, pageSize, ...readInquiryFilters(request) }));
   }
 
   if (path === '/api/admin/inquiries/status' && request.method === 'POST') {
@@ -141,7 +140,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   }
 
   if (path === '/api/admin/inquiries.csv' && request.method === 'GET') {
-    return await exportInquiriesCsv(db);
+    return await exportInquiriesCsv(db, readInquiryFilters(request));
   }
 
   // Stream a submitted inquiry attachment from R2. R2 objects are not public —
@@ -689,11 +688,60 @@ async function listUsers(
   return { rows: listed, total: Number(total) };
 }
 
-async function listInquiries(db: DB, params: { page: number; pageSize: number; status?: string }) {
-  const where =
-    params.status && INQUIRY_STATUSES.includes(params.status as InquiryStatus)
-      ? eq(inquiry.status, params.status as InquiryStatus)
-      : undefined;
+type InquiryFilters = {
+  status?: string;
+  q?: string;
+  country?: string;
+  buyerType?: string;
+  productType?: string;
+  emailStatus?: string;
+};
+
+const EMAIL_STATUSES = ['pending', 'sent', 'failed', 'not_configured'];
+
+function readInquiryFilters(request: Request): InquiryFilters {
+  const clean = (value: string | null) => {
+    const trimmed = (value || '').trim();
+    return trimmed ? trimmed.slice(0, 120) : undefined;
+  };
+  return {
+    status: clean(urlParam(request, 'status')),
+    q: clean(urlParam(request, 'q')),
+    country: clean(urlParam(request, 'country')),
+    buyerType: clean(urlParam(request, 'buyerType')),
+    productType: clean(urlParam(request, 'productType')),
+    emailStatus: clean(urlParam(request, 'emailStatus')),
+  };
+}
+
+function buildInquiryWhere(filters: InquiryFilters) {
+  const conditions: SQL[] = [];
+  if (filters.status && INQUIRY_STATUSES.includes(filters.status as InquiryStatus)) {
+    conditions.push(eq(inquiry.status, filters.status as InquiryStatus));
+  }
+  if (filters.emailStatus && EMAIL_STATUSES.includes(filters.emailStatus)) {
+    conditions.push(eq(inquiry.emailStatus, filters.emailStatus));
+  }
+  if (filters.country) conditions.push(like(inquiry.country, `%${filters.country}%`));
+  if (filters.buyerType) conditions.push(like(inquiry.buyerType, `%${filters.buyerType}%`));
+  if (filters.productType) conditions.push(like(inquiry.productType, `%${filters.productType}%`));
+  if (filters.q) {
+    const term = `%${filters.q}%`;
+    const search = or(
+      like(inquiry.name, term),
+      like(inquiry.company, term),
+      like(inquiry.email, term),
+      like(inquiry.subject, term),
+      like(inquiry.message, term),
+      like(inquiry.requirements, term)
+    );
+    if (search) conditions.push(search);
+  }
+  return conditions.length ? and(...conditions) : undefined;
+}
+
+async function listInquiries(db: DB, params: { page: number; pageSize: number } & InquiryFilters) {
+  const where = buildInquiryWhere(params);
   const [rows, [{ c: total }]] = await Promise.all([
     db
       .select()
@@ -704,11 +752,28 @@ async function listInquiries(db: DB, params: { page: number; pageSize: number; s
       .offset(params.page * params.pageSize),
     db.select({ c: count() }).from(inquiry).where(where),
   ]);
-  return { rows, total: Number(total), status: params.status || 'all' };
+  return {
+    rows,
+    total: Number(total),
+    status: params.status || 'all',
+    filters: {
+      q: params.q || '',
+      country: params.country || '',
+      buyerType: params.buyerType || '',
+      productType: params.productType || '',
+      emailStatus: params.emailStatus || '',
+    },
+  };
 }
 
-async function exportInquiriesCsv(db: DB) {
-  const rows = await db.select().from(inquiry).orderBy(desc(inquiry.createdAt)).limit(5000);
+async function exportInquiriesCsv(db: DB, filters: InquiryFilters = {}) {
+  const where = buildInquiryWhere(filters);
+  const rows = await db
+    .select()
+    .from(inquiry)
+    .where(where)
+    .orderBy(desc(inquiry.createdAt))
+    .limit(5000);
   const headers = [
     'id',
     'created_at',
@@ -727,6 +792,20 @@ async function exportInquiriesCsv(db: DB) {
     'tel',
     'status',
     'locale',
+    'submission_key',
+    'buyer_type',
+    'product_type',
+    'product_interest',
+    'source_url',
+    'referrer',
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_term',
+    'utm_content',
+    'email_status',
+    'email_error',
+    'email_sent_at',
   ];
   const esc = (v: unknown) => {
     const s = String(v ?? '');
@@ -754,6 +833,20 @@ async function exportInquiriesCsv(db: DB) {
       r.tel,
       r.status,
       r.locale,
+      r.submissionKey,
+      r.buyerType,
+      r.productType,
+      r.productInterest,
+      r.sourceUrl,
+      r.referrer,
+      r.utmSource,
+      r.utmMedium,
+      r.utmCampaign,
+      r.utmTerm,
+      r.utmContent,
+      r.emailStatus,
+      r.emailError,
+      r.emailSentAt ? new Date(Number(r.emailSentAt) * 1000).toISOString() : '',
     ]
       .map(esc)
       .join(',')

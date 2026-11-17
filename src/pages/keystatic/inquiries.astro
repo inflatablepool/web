@@ -15,6 +15,7 @@ const statuses = INQUIRY_STATUSES as readonly string[];
       </p>
     </div>
     <a
+      id="export-csv"
       href="/api/admin/inquiries.csv"
       class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md bg-green-600 hover:bg-green-700 text-white"
     >
@@ -28,6 +29,49 @@ const statuses = INQUIRY_STATUSES as readonly string[];
       Export CSV
     </a>
   </div>
+
+  <form id="filter-form" class="mb-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-6">
+    <input
+      id="filter-q"
+      type="search"
+      placeholder="Search name, company, email, message"
+      class="lg:col-span-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm"
+    />
+    <input
+      id="filter-country"
+      type="text"
+      placeholder="Country"
+      class="rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm"
+    />
+    <input
+      id="filter-buyer"
+      type="text"
+      placeholder="Buyer type"
+      class="rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm"
+    />
+    <input
+      id="filter-product"
+      type="text"
+      placeholder="Product type"
+      class="rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm"
+    />
+    <select
+      id="filter-email"
+      class="rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm"
+    >
+      <option value="">Any email status</option>
+      <option value="sent">Email sent</option>
+      <option value="pending">Email pending</option>
+      <option value="failed">Email failed</option>
+      <option value="not_configured">Email not configured</option>
+    </select>
+    <div class="flex gap-2 sm:col-span-2 lg:col-span-6">
+      <button type="submit" class="px-3 py-1.5 text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white">
+        Apply filters
+      </button>
+      <button type="button" id="clear-filters" class="px-3 py-1.5 text-sm rounded-md border">Clear</button>
+    </div>
+  </form>
 
   <div class="mb-4 flex flex-wrap gap-2" id="status-tabs">
     <button class="status-tab px-3 py-1.5 text-sm rounded-full border" data-status=""> All </button>
@@ -79,6 +123,22 @@ const statuses = INQUIRY_STATUSES as readonly string[];
       let page = 0;
       let status = '';
       const pageSize = 30;
+      const FILTER_IDS = {
+        q: 'filter-q',
+        country: 'filter-country',
+        buyerType: 'filter-buyer',
+        productType: 'filter-product',
+        emailStatus: 'filter-email',
+      };
+
+      function currentFilters() {
+        const values = {};
+        for (const [key, id] of Object.entries(FILTER_IDS)) {
+          const value = (document.getElementById(id)?.value || '').trim();
+          if (value) values[key] = value;
+        }
+        return values;
+      }
 
       function toast(msg, type) {
         const el = document.createElement('div');
@@ -95,8 +155,15 @@ const statuses = INQUIRY_STATUSES as readonly string[];
       async function load() {
         const tbody = document.getElementById('inquiry-rows');
         tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
+        const filters = currentFilters();
         const params = new URLSearchParams({ page: String(page), pageSize: String(pageSize) });
         if (status) params.set('status', status);
+        for (const [key, value] of Object.entries(filters)) params.set(key, value);
+        const exportParams = new URLSearchParams();
+        if (status) exportParams.set('status', status);
+        for (const [key, value] of Object.entries(filters)) exportParams.set(key, value);
+        document.getElementById('export-csv').href =
+          `/api/admin/inquiries.csv${exportParams.toString() ? `?${exportParams}` : ''}`;
         try {
           const res = await fetch(`/api/admin/inquiries?${params}`, { credentials: 'same-origin' });
           if (res.status === 401) {
@@ -106,9 +173,13 @@ const statuses = INQUIRY_STATUSES as readonly string[];
           if (!res.ok) throw new Error(await res.text());
           const data = await res.json();
           const rows = data.rows || [];
-          document.getElementById('total-label').textContent = `${data.total} total · ${
-            data.status === 'all' ? 'all statuses' : `status: ${data.status}`
-          }`;
+          const summary = [`${data.total} total`, data.status === 'all' ? 'all statuses' : `status: ${data.status}`];
+          const filterSummary = Object.entries(filters)
+            .filter(([, value]) => value)
+            .map(([key, value]) => `${key}: ${value}`)
+            .join(' · ');
+          if (filterSummary) summary.push(filterSummary);
+          document.getElementById('total-label').textContent = summary.join(' · ');
           document.getElementById('page-label').textContent = `Page ${page + 1}`;
           const prev = document.getElementById('prev-page');
           const next = document.getElementById('next-page');
@@ -125,6 +196,16 @@ const statuses = INQUIRY_STATUSES as readonly string[];
             .map((r) => {
               const date = new Date(r.createdAt);
               const name = [r.name, r.company].filter(Boolean).join(' · ') || '—';
+              const structured = [r.buyerType, r.productType, r.quantity ? `qty: ${r.quantity}` : '']
+                .filter(Boolean)
+                .join(' · ');
+              const emailStatus = r.emailStatus || '';
+              const emailColor =
+                emailStatus === 'sent'
+                  ? 'text-green-600 dark:text-green-400'
+                  : emailStatus === 'failed'
+                    ? 'text-red-600 dark:text-red-400'
+                    : 'text-amber-600 dark:text-amber-400';
               const opts = STATUSES.map(
                 (s) => `<option value="${s}" ${s === r.status ? 'selected' : ''}>${s}</option>`
               ).join('');
@@ -133,7 +214,13 @@ const statuses = INQUIRY_STATUSES as readonly string[];
                 <td class="px-4 py-3 font-medium whitespace-nowrap">${escapeHtml(name)}</td>
                 <td class="px-4 py-3 whitespace-nowrap"><a class="text-blue-600 dark:text-blue-400 hover:underline" href="mailto:${encodeURIComponent(r.email)}">${escapeHtml(r.email)}</a></td>
                 <td class="px-4 py-3">${escapeHtml(r.country || '—')}</td>
-                <td class="px-4 py-3 max-w-xs truncate">${escapeHtml(r.subject || r.requirements || '—')}</td>
+                <td class="px-4 py-3 max-w-xs">
+                  <div class="truncate">${escapeHtml(r.subject || r.requirements || '—')}</div>
+                  <div class="mt-0.5 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                    ${structured ? `<span class="truncate">${escapeHtml(structured)}</span>` : ''}
+                    ${emailStatus ? `<span class="uppercase tracking-wide ${emailColor}">${escapeHtml(emailStatus)}</span>` : ''}
+                  </div>
+                </td>
                 <td class="px-4 py-3"><select class="status-select text-xs rounded-md border px-2 py-1 capitalize" data-id="${r.id}">${opts}</select></td>
                 <td class="px-4 py-3"><button class="view-row text-blue-600 dark:text-blue-400 hover:underline text-xs" data-id="${r.id}">View</button></td>
               </tr>`;
@@ -168,6 +255,7 @@ const statuses = INQUIRY_STATUSES as readonly string[];
                 return;
               }
               tbody.querySelectorAll('tr.detail-row').forEach((tr) => tr.remove());
+              const emailSentAt = row.emailSentAt ? new Date(Number(row.emailSentAt) * 1000).toLocaleString() : '';
               const fields = [
                 ['Name', row.name],
                 ['Company', row.company],
@@ -178,6 +266,22 @@ const statuses = INQUIRY_STATUSES as readonly string[];
                 ['Zip', row.zip],
                 ['Subject', row.subject],
                 ['Message', row.message || row.requirements],
+                ['Business type', row.businessType],
+                ['Buyer type', row.buyerType],
+                ['Product type', row.productType],
+                ['Product interest', row.productInterest],
+                ['Quantity', row.quantity],
+                ['Source URL', row.sourceUrl],
+                ['Referrer', row.referrer],
+                ['UTM source', row.utmSource],
+                ['UTM medium', row.utmMedium],
+                ['UTM campaign', row.utmCampaign],
+                ['UTM term', row.utmTerm],
+                ['UTM content', row.utmContent],
+                ['Email status', row.emailStatus],
+                ['Email error', row.emailError],
+                ['Email sent at', emailSentAt],
+                ['Submission key', row.submissionKey],
                 ['IP', row.ip],
                 ['User-Agent', row.userAgent],
                 ['Locale', row.locale],
@@ -210,17 +314,36 @@ const statuses = INQUIRY_STATUSES as readonly string[];
         });
       }
 
+      function setActiveStatus(activeBtn) {
+        document.querySelectorAll('.status-tab').forEach((b) => {
+          b.classList.toggle('bg-blue-600', b === activeBtn);
+          b.classList.toggle('text-white', b === activeBtn);
+          b.classList.toggle('border-blue-600', b === activeBtn);
+        });
+      }
+
       document.querySelectorAll('.status-tab').forEach((btn) => {
         btn.addEventListener('click', () => {
           status = btn.dataset.status || '';
           page = 0;
-          document.querySelectorAll('.status-tab').forEach((b) => {
-            b.classList.toggle('bg-blue-600', b === btn);
-            b.classList.toggle('text-white', b === btn);
-            b.classList.toggle('border-blue-600', b === btn);
-          });
+          setActiveStatus(btn);
           load();
         });
+      });
+      document.getElementById('filter-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        page = 0;
+        load();
+      });
+      document.getElementById('clear-filters').addEventListener('click', () => {
+        for (const id of Object.values(FILTER_IDS)) {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        }
+        status = '';
+        page = 0;
+        setActiveStatus(document.querySelector('.status-tab[data-status=""]'));
+        load();
       });
       document.getElementById('prev-page').addEventListener('click', () => {
         if (page > 0) {
@@ -233,6 +356,7 @@ const statuses = INQUIRY_STATUSES as readonly string[];
         load();
       });
 
+      setActiveStatus(document.querySelector('.status-tab[data-status=""]'));
       load();
     })();
   </script>
