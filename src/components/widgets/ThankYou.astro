@@ -1,0 +1,112 @@
+---
+import type { ThankYouCopy } from '~/data/site/thank-you-text';
+
+interface Props {
+  copy: ThankYouCopy;
+  lang?: string;
+  productsHref?: string;
+  homeHref?: string;
+}
+
+const { copy, lang = 'en', productsHref = '/products/', homeHref = '/' } = Astro.props;
+const isRtl = lang === 'ar' || lang === 'he' || lang === 'fa' || lang === 'ur';
+const contactEmail = 'info@inflatablepoolfactory.com';
+---
+
+<section
+  class="bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 text-white py-16 px-6"
+  dir={isRtl ? 'rtl' : 'ltr'}
+>
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/15 ring-1 ring-white/25">
+      <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"></path>
+      </svg>
+    </span>
+    <h1 class="mt-6 text-3xl md:text-5xl font-bold leading-tight">{copy.title}</h1>
+    <p class="mt-4 text-lg text-white/85">{copy.intro}</p>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-14" dir={isRtl ? 'rtl' : 'ltr'}>
+  <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{copy.nextTitle}</h2>
+  <ol class="mt-8 grid gap-6 md:grid-cols-3">
+    {
+      [copy.step1, copy.step2, copy.step3].map((step, index) => (
+        <li class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 font-semibold">
+            {index + 1}
+          </span>
+          <p class="mt-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">{step}</p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+    <a
+      href={productsHref}
+      class="inline-flex justify-center items-center px-6 py-3 rounded-md bg-sky-700 text-white font-medium hover:bg-sky-800 transition"
+    >
+      {copy.ctaPrimary}
+    </a>
+    <a
+      href={homeHref}
+      class="inline-flex justify-center items-center px-6 py-3 rounded-md border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-50 dark:hover:bg-slate-800 transition"
+    >
+      {copy.ctaSecondary}
+    </a>
+  </div>
+
+  <p class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+    {copy.help}
+    <a class="text-sky-700 dark:text-sky-400 underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+  </p>
+</section>
+
+<script is:inline>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') !== '1') return;
+
+    const id = (params.get('id') || '').slice(0, 64);
+    const source = (params.get('source') || 'contact').slice(0, 64);
+    const storageKey = 'ipf:lead:' + (id || 'anonymous');
+    let alreadyFired = false;
+    try {
+      alreadyFired = window.sessionStorage.getItem(storageKey) === '1';
+      if (!alreadyFired) window.sessionStorage.setItem(storageKey, '1');
+    } catch {
+      // Storage can be blocked; the URL cleanup below still limits repeats.
+    }
+
+    if (!alreadyFired) {
+      try {
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({ event: 'inquiry:submitted', inquiry_id: id, form_source: source });
+        }
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', { inquiry_id: id, form_source: source });
+        }
+      } catch {
+        // Analytics must never break the confirmation page.
+      }
+      try {
+        document.dispatchEvent(new CustomEvent('inquiry:submitted', { detail: { id: id, source: source } }));
+      } catch {
+        // CustomEvent is best-effort for tag managers.
+      }
+    }
+
+    // Strip conversion parameters so a shared or bookmarked URL cannot fire again.
+    try {
+      params.delete('submitted');
+      params.delete('id');
+      params.delete('source');
+      const query = params.toString();
+      window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : '') + window.location.hash);
+    } catch {
+      // History API is optional.
+    }
+  })();
+</script>

@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import ThankYou from '~/components/widgets/ThankYou.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getThankYouCopy } from '~/data/site/thank-you-text';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const copy = getThankYouCopy(lang);
+const metadata = {
+  title: `${copy.title} — ${SITE.name}`,
+  description: copy.intro,
+  robots: { index: false, follow: true },
+  ignoreTitleTemplate: true,
+};
+const homeHref = lang === 'en' ? '/' : `/${lang}/`;
+---
+
+<Layout metadata={metadata}>
+  <ThankYou copy={copy} lang={lang} productsHref="/products/" homeHref={homeHref} />
+</Layout>

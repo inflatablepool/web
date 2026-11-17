@@ -1,0 +1,19 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ThankYou from '~/components/widgets/ThankYou.astro';
+import { SITE } from 'astrowind:config';
+import { getThankYouCopy } from '~/data/site/thank-you-text';
+
+const copy = getThankYouCopy('en');
+const metadata = {
+  title: `Thank you — ${SITE.name}`,
+  description:
+    'Your inquiry has been received. Our sales team reviews every message and replies within one business day.',
+  robots: { index: false, follow: true },
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <ThankYou copy={copy} lang="en" productsHref="/products/" homeHref="/" />
+</Layout>

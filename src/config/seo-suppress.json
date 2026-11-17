@@ -8,6 +8,7 @@
     "^/(?:[a-z]{2}/)?search/?$",
     "^/(?:[a-z]{2}/)?internal/seo/",
     "^/(?:[a-z]{2}/)?register/?$",
+    "^/(?:[a-z]{2}/)?thank-you/?$",
     "^/(?:az|bg|et|fa|he|hr|hu|id|kk|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|uk|uz|zh)(?:/|$)",
     "^/en/"
   ],

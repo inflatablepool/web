@@ -123,6 +123,22 @@ export const inquiry = sqliteTable('inquiry', {
   locale: text('locale').notNull().default('en'),
   ip: text('ip'),
   userAgent: text('user_agent'),
+  // Structured inquiry metadata (migration 0004). Optional so the worker can
+  // keep writing if the migration has not been applied yet.
+  submissionKey: text('submission_key'),
+  buyerType: text('buyer_type'),
+  productType: text('product_type'),
+  productInterest: text('product_interest'),
+  sourceUrl: text('source_url'),
+  referrer: text('referrer'),
+  utmSource: text('utm_source'),
+  utmMedium: text('utm_medium'),
+  utmCampaign: text('utm_campaign'),
+  utmTerm: text('utm_term'),
+  utmContent: text('utm_content'),
+  emailStatus: text('email_status'),
+  emailError: text('email_error'),
+  emailSentAt: integer('email_sent_at'),
   createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
 });
 

@@ -329,6 +329,9 @@ const rows = Object.keys(grouped)
       const errorMsg = formEl.dataset.errorMessage || 'Something went wrong.';
       const consentEl = formEl.querySelector('[data-consent]');
       const consentErrorEl = formEl.querySelector('[data-consent-error]');
+      // One key per form attempt: retries after a network error reuse it so the
+      // worker can deduplicate instead of storing/mailing the inquiry twice.
+      let submissionKey = '';
 
       formEl.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -369,6 +372,37 @@ const rows = Object.keys(grouped)
         if (data.tel) data.tel = `${cc} ${data.tel}`.trim();
         delete data.tel_countryCode;
 
+        // Stable idempotency key + structured attribution. These values are
+        // stored in their own D1 columns by the contact worker; the readable
+        // message copy below remains unchanged for backward compatibility.
+        if (!submissionKey) {
+          submissionKey =
+            typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+              ? crypto.randomUUID()
+              : `sk-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
+        }
+        data.submissionKey = submissionKey;
+        if (typeof window !== 'undefined') {
+          data.sourceUrl = `${window.location.pathname}${window.location.search}`.slice(0, 500);
+          if (document.referrer) {
+            try {
+              const referrer = new URL(document.referrer);
+              if (referrer.origin !== window.location.origin) {
+                data.referrer = `${referrer.origin}${referrer.pathname}`.slice(0, 300);
+              }
+            } catch {
+              // Ignore malformed referrer values.
+            }
+          }
+          // Campaign parameters are stored in dedicated D1 columns; they are
+          // also echoed into the message below so older deployments keep them.
+          const campaign = new URLSearchParams(window.location.search);
+          for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']) {
+            const value = campaign.get(key);
+            if (value) data[key] = value.slice(0, 150);
+          }
+        }
+
         // Keep the worker's required schema (firstName, lastName, email, message)
         // while preserving form-specific fields such as buyer type, product type,
         // quantity and customization level in the notification and D1 record.
@@ -388,6 +422,14 @@ const rows = Object.keys(grouped)
           'turnstileToken',
           'cf-turnstile-response',
           'locale',
+          'submissionKey',
+          'sourceUrl',
+          'referrer',
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_term',
+          'utm_content',
         ]);
         const extraLines = [];
         for (const [k, v] of Object.entries(data)) {
@@ -400,9 +442,9 @@ const rows = Object.keys(grouped)
           data.message = [data.message, 'Project details:', ...extraLines].filter(Boolean).join('\n');
         }
 
-        // Record lead attribution without changing the worker's D1 schema.
-        // The current page, campaign parameters, click IDs and external referrer
-        // are appended to the required message field for sales follow-up.
+        // Keep human-readable lead attribution in the message as well: the
+        // worker writes sourceUrl/referrer/utm_* to structured columns, but the
+        // email and the legacy fallback still read the message body.
         const sourceLines = [];
         if (typeof window !== 'undefined') {
           const pagePath = `${window.location.pathname}${window.location.search}`;
@@ -518,9 +560,19 @@ const rows = Object.keys(grouped)
             showStatus(statusEl, result.error || errorMsg, 'error');
             return;
           }
+          formEl.reset();
+          // Dedicated confirmation page: fires a single generate_lead event
+          // only when `?submitted=1` is present (see ThankYou.astro).
+          const thankYouLang = (langMeta?.getAttribute('content') || 'en').slice(0, 2).toLowerCase();
+          const thankYouBase = thankYouLang === 'en' ? '/thank-you/' : `/${thankYouLang}/thank-you/`;
+          const thankYouParams = new URLSearchParams({
+            submitted: '1',
+            id: String(result.id || submissionKey),
+            source: formEl.id || 'contact',
+          });
           showStatus(statusEl, successMsg, 'success');
           console.log('Contact form success:', result);
-          formEl.reset();
+          window.location.assign(`${thankYouBase}?${thankYouParams.toString()}`);
         } catch (fetchErr) {
           console.error('Contact form fetch error:', fetchErr);
           showStatus(statusEl, 'Network error — please check your connection and try again.', 'error');

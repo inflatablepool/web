@@ -151,12 +151,58 @@ function json(body: unknown, status = 200): Response {
 
 function sanitize(value: unknown, maxLen = 2000): string {
   if (typeof value !== 'string') return '';
+  const normalized = value.replace(/\r\n?/g, '\n');
   let result = '';
-  for (let i = 0; i < value.length; i++) {
-    const code = value.charCodeAt(i);
-    if (code >= 32 && code !== 127) result += value[i];
+  for (let i = 0; i < normalized.length; i++) {
+    const code = normalized.charCodeAt(i);
+    // Keep tabs and newlines; drop every other control character.
+    if ((code >= 32 && code !== 127) || code === 10 || code === 9) result += normalized[i];
   }
   return result.trim().slice(0, maxLen);
+}
+
+/** HTML-escape every user-controlled value before it reaches the email body. */
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (ch) => {
+    switch (ch) {
+      case '&':
+        return '&amp;';
+      case '<':
+        return '&lt;';
+      case '>':
+        return '&gt;';
+      case '"':
+        return '&quot;';
+      default:
+        return '&#39;';
+    }
+  });
+}
+
+/** Header values (Subject, Reply-To) must never contain CR/LF. */
+function sanitizeHeaderValue(value: string, maxLen = 200): string {
+  return value
+    .replace(/[\r\n]+/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+    .slice(0, maxLen);
+}
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+interface StructuredFields {
+  submissionKey: string;
+  buyerType: string;
+  productType: string;
+  quantity: string;
+  productInterest: string;
+  sourceUrl: string;
+  referrer: string;
+  utmSource: string;
+  utmMedium: string;
+  utmCampaign: string;
+  utmTerm: string;
+  utmContent: string;
 }
 
 interface ParsedSubmission {
@@ -164,6 +210,7 @@ interface ParsedSubmission {
     'firstName' | 'lastName' | 'companyName' | 'address' | 'zip' | 'country' | 'email' | 'tel' | 'subject' | 'message',
     string
   >;
+  structured: StructuredFields;
   locale: string;
   turnstileToken: string;
   honeypotFilled: boolean;
@@ -209,12 +256,66 @@ async function parseSubmission(request: Request): Promise<ParsedSubmission | nul
       subject: s(raw.subject, 200),
       message: s(raw.message, 4000),
     },
+    structured: {
+      submissionKey: s(raw.submissionKey, 64),
+      buyerType: s(raw.buyerType, 40),
+      productType: s(raw.productType, 100),
+      quantity: s(raw.quantity, 60),
+      productInterest: s(raw.productInterest, 200),
+      sourceUrl: s(raw.sourceUrl, 500),
+      referrer: s(raw.referrer, 300),
+      utmSource: s(raw.utm_source, 100),
+      utmMedium: s(raw.utm_medium, 100),
+      utmCampaign: s(raw.utm_campaign, 150),
+      utmTerm: s(raw.utm_term, 150),
+      utmContent: s(raw.utm_content, 150),
+    },
     locale: typeof raw.locale === 'string' ? raw.locale.slice(0, 10) : 'en',
     turnstileToken: typeof raw.turnstileToken === 'string' ? raw.turnstileToken.slice(0, 4096) : '',
     honeypotFilled: typeof raw.email_confirm === 'string' && raw.email_confirm.trim() !== '',
     file,
     fileError: null,
   };
+}
+
+const STRUCTURED_LABELS: Array<[keyof StructuredFields, string]> = [
+  ['buyerType', 'Buyer type'],
+  ['productType', 'Product type'],
+  ['productInterest', 'Product interest'],
+  ['quantity', 'Estimated quantity'],
+  ['sourceUrl', 'Source URL'],
+  ['referrer', 'External referrer'],
+  ['utmSource', 'utm_source'],
+  ['utmMedium', 'utm_medium'],
+  ['utmCampaign', 'utm_campaign'],
+  ['utmTerm', 'utm_term'],
+  ['utmContent', 'utm_content'],
+];
+
+/**
+ * Fold structured fields into the message when the new D1 columns are not
+ * available yet (migration lag / rollback). Values already present in the
+ * client-composed message are skipped case-insensitively.
+ */
+function appendStructuredDetails(message: string, structured: StructuredFields): string {
+  const lower = message.toLowerCase();
+  const lines: string[] = [];
+  for (const [key, label] of STRUCTURED_LABELS) {
+    const value = structured[key];
+    if (value && !lower.includes(`${label.toLowerCase()}:`)) lines.push(`${label}: ${value}`);
+  }
+  return lines.length > 0 ? [message, 'Submission details:', ...lines].join('\n') : message;
+}
+
+/** Best-effort delivery status update; never fails the submission. */
+async function markEmailStatus(env: Env, id: string, status: string, error = ''): Promise<void> {
+  try {
+    await env.DB.prepare('UPDATE inquiry SET email_status = ?1, email_error = ?2, email_sent_at = ?3 WHERE id = ?4')
+      .bind(status, error || null, status === 'sent' ? Math.floor(Date.now() / 1000) : null, id)
+      .run();
+  } catch (e) {
+    console.error('Email status update failed (non-fatal):', e);
+  }
 }
 
 export default {
@@ -249,6 +350,29 @@ export default {
       return json({ success: true, id: crypto.randomUUID(), receivedAt: new Date().toISOString() });
     }
 
+    const db = createDb(env.DB);
+    const submissionId =
+      parsed.structured.submissionKey && UUID_RE.test(parsed.structured.submissionKey)
+        ? parsed.structured.submissionKey
+        : crypto.randomUUID();
+
+    // Idempotency: a client retry (network timeout, double click, consumed
+    // Turnstile token) must not create a second row or send a second email.
+    // Checked before Turnstile because the first attempt already spent the
+    // one-time token; the email match prevents probing for foreign ids.
+    if (UUID_RE.test(parsed.structured.submissionKey)) {
+      try {
+        const existing = await env.DB.prepare('SELECT id FROM inquiry WHERE id = ?1 AND lower(email) = lower(?2)')
+          .bind(submissionId, fields.email)
+          .first();
+        if (existing) {
+          return json({ success: true, id: submissionId, receivedAt: new Date().toISOString(), duplicate: true });
+        }
+      } catch (e) {
+        console.error('Idempotency lookup failed (continuing):', e);
+      }
+    }
+
     // Turnstile (invisible/managed) verification — active only when a secret
     // key is configured; otherwise degrade gracefully like every other optional
     // integration. Verified AFTER field validation: a token is one-time-use.
@@ -257,7 +381,6 @@ export default {
     }
 
     // Global per-IP rate limit (D1-backed, 5/hour).
-    const db = createDb(env.DB);
     if (await isRateLimited(env.DB, ip || 'unknown')) {
       const resetAt =
         Math.ceil(Date.now() / 1000 / RATE_LIMIT_WINDOW_SECONDS) * RATE_LIMIT_WINDOW_SECONDS +
@@ -306,92 +429,194 @@ export default {
       }
     }
 
-    const destinationEmail = env.CONTACT_EMAIL_TO || '';
-    if (!destinationEmail || !EMAIL_RE.test(destinationEmail)) {
-      return json({ success: false, error: 'Destination email not configured' }, 500);
-    }
-
     const receivedAt = new Date();
-    const id = crypto.randomUUID();
+    const id = submissionId;
+    const destinationEmail = env.CONTACT_EMAIL_TO || '';
+    const messageWithDetails = appendStructuredDetails(fields.message, parsed.structured);
 
-    // Persist to D1 — the single source of truth for the admin Submissions page.
+    // Persist first: D1 is the source of truth for the admin Submissions page.
+    // New structured columns are optional during rollout (deploy.yml migrations
+    // may lag), so fall back to the legacy field set and fold the structured
+    // details into the message instead of losing the inquiry.
+    const legacyValues = {
+      id,
+      name: `${fields.firstName} ${fields.lastName}`.trim(),
+      company: fields.companyName,
+      country: fields.country,
+      email: fields.email.toLowerCase(),
+      whatsapp: fields.tel,
+      businessType: parsed.structured.buyerType || 'other',
+      quantity: parsed.structured.quantity || 'unsure',
+      requirements: messageWithDetails,
+      subject: fields.subject,
+      message: messageWithDetails,
+      address: fields.address,
+      zip: fields.zip,
+      tel: fields.tel,
+      logoKey,
+      status: 'new' as const,
+      locale: parsed.locale,
+      ip,
+      userAgent,
+      createdAt: receivedAt,
+    };
+
     try {
-      await db.insert(inquiry).values({
-        id,
-        name: `${fields.firstName} ${fields.lastName}`.trim(),
-        company: fields.companyName,
-        country: fields.country,
-        email: fields.email.toLowerCase(),
-        whatsapp: fields.tel,
-        businessType: 'other',
-        quantity: 'unsure',
-        requirements: fields.message,
-        subject: fields.subject,
-        message: fields.message,
-        address: fields.address,
-        zip: fields.zip,
-        tel: fields.tel,
-        logoKey,
-        status: 'new',
-        locale: parsed.locale,
-        ip,
-        userAgent,
-        createdAt: receivedAt,
-      });
+      try {
+        await db.insert(inquiry).values({
+          ...legacyValues,
+          submissionKey: id,
+          buyerType: parsed.structured.buyerType,
+          productType: parsed.structured.productType,
+          productInterest: parsed.structured.productInterest,
+          sourceUrl: parsed.structured.sourceUrl,
+          referrer: parsed.structured.referrer,
+          utmSource: parsed.structured.utmSource,
+          utmMedium: parsed.structured.utmMedium,
+          utmCampaign: parsed.structured.utmCampaign,
+          utmTerm: parsed.structured.utmTerm,
+          utmContent: parsed.structured.utmContent,
+          emailStatus: 'pending',
+        });
+      } catch (extendedError) {
+        console.error('D1 insert with structured columns failed; retrying legacy field set:', extendedError);
+        // Drizzle expands the schema and would add the missing columns with
+        // NULL values even when they are omitted from `values()`. The fallback
+        // therefore uses raw SQL with an explicit column list.
+        const columns = [
+          'id',
+          'name',
+          'company',
+          'country',
+          'email',
+          'whatsapp',
+          'business_type',
+          'quantity',
+          'requirements',
+          'subject',
+          'message',
+          'address',
+          'zip',
+          'tel',
+          'logo_key',
+          'status',
+          'locale',
+          'ip',
+          'user_agent',
+          'created_at',
+        ];
+        const placeholders = columns.map((_, index) => `?${index + 1}`).join(', ');
+        const row = [
+          id,
+          legacyValues.name,
+          legacyValues.company,
+          legacyValues.country,
+          legacyValues.email,
+          legacyValues.whatsapp,
+          legacyValues.businessType,
+          legacyValues.quantity,
+          legacyValues.requirements,
+          legacyValues.subject,
+          legacyValues.message,
+          legacyValues.address,
+          legacyValues.zip,
+          legacyValues.tel,
+          legacyValues.logoKey,
+          legacyValues.status,
+          legacyValues.locale,
+          legacyValues.ip,
+          legacyValues.userAgent,
+          receivedAt.getTime(),
+        ];
+        await env.DB.prepare(`INSERT INTO inquiry (${columns.join(', ')}) VALUES (${placeholders})`)
+          .bind(...row)
+          .run();
+      }
     } catch (e) {
       console.error('D1 insert failed:', e);
       return json({ success: false, error: 'Could not store submission' }, 500);
     }
 
-    if (env.CONTACT_RESEND_API_KEY && env.CONTACT_FROM_EMAIL) {
-      const fromName = env.CONTACT_FROM_NAME || 'Inflatable Pool Factory Contact';
-      const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
-      const replyTo = `${fields.firstName} ${fields.lastName} <${fields.email}>`;
+    if (!env.CONTACT_RESEND_API_KEY || !env.CONTACT_FROM_EMAIL || !destinationEmail || !EMAIL_RE.test(destinationEmail)) {
+      console.error(
+        'Contact email not configured: missing CONTACT_RESEND_API_KEY, CONTACT_FROM_EMAIL or CONTACT_EMAIL_TO'
+      );
+      await markEmailStatus(env, id, 'not_configured', 'missing provider credentials or destination');
+      return json({ success: true, id, receivedAt: receivedAt.toISOString(), emailStatus: 'not_configured' });
+    }
 
-      const subject = `[Contact] ${fields.subject || '(no subject)'} — ${fields.firstName} ${fields.lastName}`;
-      const attachmentLine = logoKey ? `<p><strong>Attachment:</strong> stored (open in admin Submissions)</p>` : '';
-      const html = `<div style="font-family:sans-serif;max-width:640px;margin:0 auto">
+    // The inquiry is already safely stored, so email delivery is best-effort:
+    // a Resend outage must not turn a saved lead into a client-visible error.
+    const fromName = sanitizeHeaderValue(env.CONTACT_FROM_NAME || 'Inflatable Pool Factory Contact', 80);
+    const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
+    const submitterName = sanitizeHeaderValue(`${fields.firstName} ${fields.lastName}`, 120);
+    const safeEmail = fields.email.replace(/[<>]/g, '');
+    const replyTo = `${submitterName} <${safeEmail}>`;
+    const subject = sanitizeHeaderValue(
+      `[Contact] ${fields.subject || '(no subject)'} — ${fields.firstName} ${fields.lastName}`,
+      180
+    );
+
+    const fieldRows = Object.entries(fields)
+      .filter(([, v]) => v)
+      .map(
+        ([k, v]) =>
+          `<tr><td style="padding:6px;font-weight:600;vertical-align:top">${escapeHtml(k)}</td><td style="padding:6px">${escapeHtml(v).replace(/\n/g, '<br>')}</td></tr>`
+      )
+      .join('');
+    const structuredRows = STRUCTURED_LABELS.filter(([key]) => parsed.structured[key])
+      .map(
+        ([key, label]) =>
+          `<tr><td style="padding:6px;font-weight:600;vertical-align:top">${escapeHtml(label)}</td><td style="padding:6px">${escapeHtml(parsed.structured[key])}</td></tr>`
+      )
+      .join('');
+    const attachmentLine = logoKey ? `<p><strong>Attachment:</strong> stored (open in admin Submissions)</p>` : '';
+    const html = `<div style="font-family:sans-serif;max-width:640px;margin:0 auto">
         <h2>New contact form submission</h2>
-        <p>Received at ${receivedAt.toISOString()} | IP: ${ip} | ID: ${id}</p>
-        <table>${Object.entries(fields)
-          .filter(([, v]) => v)
-          .map(
-            ([k, v]) =>
-              `<tr><td style="padding:6px;font-weight:600">${k}</td><td style="padding:6px">${v.replace(/\n/g, '<br>')}</td></tr>`
-          )
-          .join('')}</table>
+        <p>Received at ${escapeHtml(receivedAt.toISOString())} | IP: ${escapeHtml(ip)} | ID: ${escapeHtml(id)}</p>
+        <table>${fieldRows}${structuredRows}</table>
         ${attachmentLine}
-        <p style="font-size:12px;color:#666">User-Agent: ${userAgent}</p>
+        <p style="font-size:12px;color:#666">User-Agent: ${escapeHtml(userAgent)}</p>
       </div>`;
 
-      try {
-        const res = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${env.CONTACT_RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            from,
-            to: destinationEmail,
-            reply_to: replyTo,
-            subject,
-            html,
-            text: `${fields.firstName} ${fields.lastName}\n${fields.email}\n${fields.message}`,
-          }),
-        });
-        if (!res.ok) {
-          const txt = await res.text();
-          console.error('Resend error:', txt.slice(0, 500));
-          return json({ success: false, error: 'Email delivery failed. Please try again later.' }, 502);
-        }
-      } catch (e) {
-        console.error('Email send failed:', e);
-        return json({ success: false, error: 'Email service error. Please try again later.' }, 502);
+    const text = [
+      `${fields.firstName} ${fields.lastName}`,
+      fields.email,
+      fields.companyName ? `Company: ${fields.companyName}` : '',
+      fields.message,
+      ...STRUCTURED_LABELS.filter(([key]) => parsed.structured[key]).map(
+        ([key, label]) => `${label}: ${parsed.structured[key]}`
+      ),
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    try {
+      const res = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${env.CONTACT_RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from,
+          to: destinationEmail,
+          reply_to: replyTo,
+          subject,
+          html,
+          text,
+        }),
+      });
+      if (!res.ok) {
+        const txt = await res.text();
+        console.error('Resend error:', txt.slice(0, 500));
+        await markEmailStatus(env, id, 'failed', txt.slice(0, 500));
+      } else {
+        await markEmailStatus(env, id, 'sent');
       }
-    } else {
-      console.error('Contact email not configured: missing CONTACT_RESEND_API_KEY or CONTACT_FROM_EMAIL');
-      return json({ success: false, error: 'Contact service not configured.' }, 500);
+    } catch (e) {
+      console.error('Email send failed:', e);
+      await markEmailStatus(env, id, 'failed', e instanceof Error ? e.message.slice(0, 500) : 'email send failed');
     }
 
     return json({ success: true, id, receivedAt: receivedAt.toISOString() });
