@@ -1,4 +1,5 @@
 import glob
+import os
 
 replacements = {}
 
@@ -15,8 +16,8 @@ for f in glob.glob('src/pages/**/*.astro', recursive=True):
         changed = True
     
     # Fix Chinese text in English pages
-    if 'ϵ��' in content:
-        content = content.replace('ϵ��', '系列')
+    if '\u03f5\ufffd\ufffd' in content:
+        content = content.replace('\u03f5\ufffd\ufffd', '\u7cfb\u5217')
         changed = True
     
     if changed:
@@ -24,12 +25,14 @@ for f in glob.glob('src/pages/**/*.astro', recursive=True):
             fh.write(content)
         print(f'Fixed: {f}')
 
-# Fix factory page specifically - remove Chinese (压胶机) 
-with open('src/pages/factory/index.astro', 'r', encoding='utf-8') as f:
-    content = f.read()
+# Fix factory page specifically - remove Chinese (压胶机)
+factory_page = 'src/pages/factory/index.astro'
+if os.path.exists(factory_page):
+    with open(factory_page, 'r', encoding='utf-8') as f:
+        content = f.read()
 
-if '压胶机' in content:
-    content = content.replace('压胶机', 'laminate sealing')
-    with open('src/pages/factory/index.astro', 'w', encoding='utf-8') as f:
-        f.write(content)
-    print('Fixed: src/pages/factory/index.astro (压胶机 -> laminate sealing)')
+    if '压胶机' in content:
+        content = content.replace('压胶机', 'laminate sealing')
+        with open(factory_page, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print('Fixed: src/pages/factory/index.astro (压胶机 -> laminate sealing)')
