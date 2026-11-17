@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
+import { buildSampleRequestUrl } from '~/lib/sample-request';
 import type { MetaData } from '~/types';
 
 interface BusinessTrack {
@@ -73,6 +74,19 @@ const tracks: BusinessTrack[] = [
     href: '/private-label',
     quoteHref: '/request-quotation?buyer=Brand%20Owner%20%2F%20Private%20Label&product=Private-label%20pool%20program',
     cta: 'Private label program',
+  },
+  {
+    icon: 'tabler:package-export',
+    title: 'Sample Evaluation',
+    description: 'Review a standard drop-stitch pool or SPA tub in your market before committing to a volume order.',
+    points: [
+      'Five standard pool and SPA platforms',
+      'Sample terms confirmed in the quotation',
+      'Sample feedback reviewed before production planning',
+    ],
+    href: '/sample-request',
+    quoteHref: buildSampleRequestUrl({ intendedUse: 'B2B sample evaluation' }),
+    cta: 'Request a sample',
   },
 ];
 

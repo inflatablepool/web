@@ -150,6 +150,7 @@ const CORE_PAGE_FILES = [
   'private-label.astro',
   'quality-control.astro',
   'request-quotation.astro',
+  'sample-request.astro',
   'wholesale.astro',
   'products/index.astro',
   'products/specs.astro',

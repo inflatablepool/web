@@ -2313,6 +2313,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://inflatablepoolfactory.com/sample-request/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/sample-request/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/sample-request/"/>
+    <x:entity>sample-request</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://inflatablepoolfactory.com/sv/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/"/>

@@ -153,6 +153,19 @@ routes:
       - /oem-odm/
     indexable: true
 
+  - url: /sample-request/
+    primary_keyword: inflatable pool sample request
+    secondary_keywords:
+      - request inflatable pool sample
+      - drop stitch pool sample
+    intent: commercial
+    page_type: service
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /quality-control/
+    indexable: true
+
   - url: /for-businesses/
     primary_keyword: inflatable pool business opportunities
     secondary_keywords:

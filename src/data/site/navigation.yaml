@@ -37,6 +37,8 @@ header:
           href: /wholesale
         - text: Private Label Pools
           href: /private-label
+        - text: Sample Request
+          href: /sample-request
         - text: Manufacturing Process
           href: /manufacturing
         - text: Quality Control
@@ -82,6 +84,8 @@ footer:
           href: /wholesale
         - text: Private Label Pools
           href: /private-label
+        - text: Sample Request
+          href: /sample-request
         - text: Commercial Pools
           href: /commercial-pools
         - text: Manufacturing Process

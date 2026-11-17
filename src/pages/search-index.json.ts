@@ -270,6 +270,13 @@ export const GET: APIRoute = async () => {
       tags: ['b2b', 'business'],
     },
     {
+      title: 'Inflatable Pool Sample Request',
+      url: '/sample-request',
+      excerpt:
+        'Request a drop-stitch pool or SPA sample for market evaluation; sample quantity, charges, courier and timing are confirmed in the quotation.',
+      tags: ['sample', 'b2b', 'evaluation'],
+    },
+    {
       title: 'Find Your Pool',
       url: '/find-your-pool',
       excerpt: 'Match a pool size and wall type to your use case.',

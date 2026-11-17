@@ -75,6 +75,7 @@ const ROOT_ONLY_PAGES: Array<{ path: string; title: string }> = [
   { path: '/oem-odm/', title: 'OEM / ODM Inflatable Pool Manufacturing' },
   { path: '/private-label/', title: 'Private Label Inflatable Pools' },
   { path: '/wholesale/', title: 'Wholesale Program' },
+  { path: '/sample-request/', title: 'Inflatable Pool Sample Request' },
   { path: '/commercial-pools/', title: 'Commercial Pools' },
   { path: '/for-businesses/', title: 'For Businesses' },
   { path: '/guides/', title: 'Procurement & Technical Guides' },

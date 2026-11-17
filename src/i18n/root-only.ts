@@ -23,6 +23,7 @@ export const ROOT_ONLY_ROUTES = [
   '/pool-ideas',
   '/private-label',
   '/quality-control',
+  '/sample-request',
   '/wholesale',
   '/admin',
 ];

@@ -49,10 +49,12 @@
       "src/data/pool-catalog.ts"
     ],
     "/images/pools/hot-tub-round.png": [
-      "src/data/site/product-visuals.yaml"
+      "src/data/site/product-visuals.yaml",
+      "src/lib/sample-request.ts"
     ],
     "/images/pools/hot-tub-square.webp": [
-      "src/data/site/product-visuals.yaml"
+      "src/data/site/product-visuals.yaml",
+      "src/lib/sample-request.ts"
     ],
     "/images/pools/inflatable-stairs.png": [
       "src/data/pool-catalog.ts"
@@ -148,6 +150,7 @@
       "src/data/site/hero-images.yaml",
       "src/data/site/product-visuals.yaml",
       "src/data/site/tech-cards.yaml",
+      "src/lib/sample-request.ts",
       "src/pages/products/specs.astro"
     ],
     "/images/pools/round-blue-pool-1.webp": [
@@ -157,7 +160,8 @@
       "src/data/site/learning-center.yaml",
       "src/data/site/product-visuals.yaml",
       "src/data/site/tech-cards.yaml",
-      "src/data/site/use-cases.yaml"
+      "src/data/site/use-cases.yaml",
+      "src/lib/sample-request.ts"
     ],
     "/images/pools/round-grey-pool-1.webp": [
       "src/data/pages/about.yaml",
@@ -240,6 +244,7 @@
       "src/data/site/learning-center.yaml",
       "src/data/site/product-visuals.yaml",
       "src/data/site/use-cases.yaml",
+      "src/lib/sample-request.ts",
       "src/pages/about.astro",
       "src/pages/products/specs.astro"
     ],

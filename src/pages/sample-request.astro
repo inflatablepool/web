@@ -1,0 +1,494 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import facts from '~/config/facts.json';
+import type { MetaData } from '~/types';
+import { SAMPLE_PRODUCTS, buildSampleRequestUrl } from '~/lib/sample-request';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Inflatable Pool Sample Request | ${SITE.name}`,
+    description: `Request a drop-stitch pool or SPA sample for market evaluation. Choose a platform, share your target market and requirements, and confirm sample terms in your quotation.`,
+    canonical: getCanonical('/sample-request'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Sample Request' }];
+const genericSampleUrl = buildSampleRequestUrl();
+const products = SAMPLE_PRODUCTS.map((product) => ({
+  ...product,
+  sampleUrl: buildSampleRequestUrl({ productSlug: product.slug }),
+}));
+
+const evaluationPoints = [
+  {
+    icon: 'tabler:layers-subtract',
+    title: 'Drop-stitch wall construction',
+    body: 'Inspect the double-layer PVC wall, seam finish and inflated rigidity at the recommended pressure for the selected model.',
+  },
+  {
+    icon: 'tabler:ruler-2',
+    title: 'Size and footprint',
+    body: 'Check the inflated footprint, wall height and usable water area against your market, display space and customer expectations.',
+  },
+  {
+    icon: 'tabler:circle-dot',
+    title: 'Valves and ports',
+    body: 'Review valve placement, 38 mm filter ports, drain and safety valves against your pump and accessory plan.',
+  },
+  {
+    icon: 'tabler:package',
+    title: 'Cover and accessories',
+    body: 'Check cover fit, pump, repair kit and storage-bag inclusions against the packing list confirmed for the selected model.',
+  },
+  {
+    icon: 'tabler:color-swatch',
+    title: 'Color and finish',
+    body: 'Evaluate the blue or grey finish, or a custom color direction, under your own lighting and retail display conditions.',
+  },
+  {
+    icon: 'tabler:box',
+    title: 'Packaging and labeling',
+    body: 'Review carton, manual and branding requirements before a retail range or private-label production run.',
+  },
+];
+
+const processSteps = [
+  {
+    step: '1',
+    title: 'Select a platform',
+    body: 'Choose a standard pool or SPA platform below. If you need help shortlisting, send your target market and use case instead.',
+  },
+  {
+    step: '2',
+    title: 'Submit the sample request',
+    body: 'Use the existing RFQ form with your preferred size, intended use, target market and any branding requirements.',
+  },
+  {
+    step: '3',
+    title: 'Confirm sample terms',
+    body: 'We review the request and confirm sample availability, quantity, charges, courier arrangement and timing in the quotation.',
+  },
+  {
+    step: '4',
+    title: 'Evaluate and plan production',
+    body: 'Review the sample against your criteria, then confirm the production specification, MOQ, price and delivery schedule separately.',
+  },
+];
+
+const preparationItems = [
+  'Product platform and preferred model, or a reference product.',
+  'Target size, wall thickness or the dimensions you need to compare.',
+  'Target market and destination country for the sample.',
+  'Intended use: retail evaluation, distributor review, client approval or a commercial project.',
+  'Branding, logo or packaging requirements you want the sample to reflect.',
+  'Material and compliance documents required for your market.',
+  'Your evaluation criteria and the feedback date you are working toward.',
+  'Consignee and delivery address details, if available, so courier terms can be quoted.',
+];
+
+const termCards = [
+  {
+    icon: 'tabler:box',
+    title: 'Sample quantity',
+    body: 'The number of sample units is confirmed per project based on the model, configuration and evaluation scope.',
+  },
+  {
+    icon: 'tabler:receipt',
+    title: 'Sample charges',
+    body: 'Sample charges are stated in the project quotation. No fixed sample fee or blanket free-sample policy is published on this page.',
+  },
+  {
+    icon: 'tabler:truck-delivery',
+    title: 'Courier and destination',
+    body: 'Courier arrangement, destination and any freight charges are confirmed in the quotation for your project.',
+  },
+  {
+    icon: 'tabler:clock',
+    title: 'Sample timing',
+    body: 'Sample preparation and dispatch timing depend on the model, specification and destination, and are confirmed in the quotation.',
+  },
+  {
+    icon: 'tabler:palette',
+    title: 'Custom samples',
+    body: 'Logo, color, size or packaging samples are reviewed as an OEM/ODM project scope before they are quoted.',
+  },
+  {
+    icon: 'tabler:file-invoice',
+    title: 'Volume orders',
+    body: 'A volume order is quoted separately after sample evaluation, with MOQ, production lead time and delivery terms confirmed in the order documents.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'Can we request a sample before placing a volume order?',
+    answer:
+      'Yes. Sample evaluation is part of the B2B buying process. Choose a platform, submit the sample request through the RFQ form, and we will confirm the sample scope and terms in the quotation.',
+  },
+  {
+    question: 'Are samples free?',
+    answer:
+      'We do not publish a blanket free-sample policy. Sample charges and courier arrangements are confirmed per project in the quotation.',
+  },
+  {
+    question: 'How long does a sample take?',
+    answer:
+      'Sample timing depends on the selected model, specification, customization and destination. The applicable schedule is confirmed in the quotation.',
+  },
+  {
+    question: 'Can the sample carry our logo or custom packaging?',
+    answer:
+      'Logo, color, size and packaging changes are reviewed as an OEM/ODM scope. Share your artwork or specification so the sample requirements can be confirmed before quotation.',
+  },
+  {
+    question: 'What documents can accompany the sample?',
+    answer:
+      'Applicable material and compliance documentation is reviewed against your target market and confirmed per project. Ask for the documents your market requires in the sample request.',
+  },
+  {
+    question: 'Can a third party inspect production?',
+    answer: 'Third-party inspection can be arranged. The inspection scope, timing and cost are confirmed per project.',
+  },
+  {
+    question: 'Which sample should we choose?',
+    answer:
+      'Start with the product shape, size range and wall thickness that match your market. The specs page lists all standard sizes and FOB reference prices, and our team can help shortlist a platform if you share your requirements.',
+  },
+];
+
+const entityFacts = [
+  { term: 'Brand', detail: facts.brand.name },
+  { term: 'Operating team', detail: facts.brand.operator },
+  { term: 'Legal entity', detail: facts.brand.legalName },
+  { term: 'Production base', detail: `${facts.factory.city}, ${facts.factory.province}, China` },
+  { term: 'Sample coordination', detail: 'Handled by the Inflatable Pool Team; terms confirmed in the quotation' },
+  { term: 'Sample lead time', detail: facts.commercial.samplingLeadTimeDays },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Sample Request</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Request an Inflatable Pool Sample Before You Commit to Volume
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Evaluate a drop-stitch pool or SPA tub against your market, your customers and your quality criteria. Choose a
+        standard platform below, tell us what you need to verify, and we will confirm the sample scope and terms in your
+        quotation.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm">
+        {
+          [
+            'Drop-stitch pools and SPA tubs',
+            'Qingdao factory sample review',
+            'Sample terms confirmed in quotation',
+            'Published destructive-test evidence',
+          ].map((item) => (
+            <span class="inline-flex items-center rounded-full bg-sky-50 dark:bg-sky-900/40 px-3 py-1.5 font-medium text-sky-700 dark:text-sky-300">
+              {item}
+            </span>
+          ))
+        }
+      </div>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a
+          href={genericSampleUrl}
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:package-export" class="w-4 h-4" /> Start a sample request
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-4 h-4" /> View specs &amp; FOB prices
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-gray-500 dark:text-slate-500">
+        Sample quantity, charges, courier arrangement and timing are confirmed per project in the quotation.
+      </p>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What a Sample Lets You Evaluate
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        A sample is a working product review, not a catalog photo. Depending on the model and the agreed scope, you can
+        inspect these points before a volume order.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          evaluationPoints.map((point) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={point.icon} class="w-5 h-5" />
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{point.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{point.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Choose a Platform to Sample
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Five standard platforms cover the current range. Sample requests are reviewed against the selected model, the
+        requested configuration and your target market.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          products.map((product) => (
+            <article
+              id={`sample-${product.slug}`}
+              class="scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm"
+            >
+              <img
+                src={product.image}
+                alt={product.imageAlt}
+                width="640"
+                height="480"
+                loading="lazy"
+                class="w-full h-44 object-cover bg-gray-100 dark:bg-slate-800"
+              />
+              <div class="flex flex-col flex-1 p-5">
+                <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-1.5">{product.name}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{product.bestFor}</p>
+                <dl class="mt-4 grid grid-cols-2 gap-2 text-xs">
+                  <div class="rounded-xl bg-gray-50 dark:bg-slate-800/60 p-2.5">
+                    <dt class="font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">Size range</dt>
+                    <dd class="mt-1 font-medium text-gray-700 dark:text-slate-300">{product.sizeRange}</dd>
+                  </div>
+                  <div class="rounded-xl bg-gray-50 dark:bg-slate-800/60 p-2.5">
+                    <dt class="font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">Wall</dt>
+                    <dd class="mt-1 font-medium text-gray-700 dark:text-slate-300">{product.wallThickness}</dd>
+                  </div>
+                </dl>
+                <div class="mt-auto pt-4 flex flex-col gap-2">
+                  <a
+                    href={product.sampleUrl}
+                    class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    Request this sample
+                    <Icon name="tabler:arrow-right" class="w-4 h-4" />
+                  </a>
+                  <a
+                    href={product.productHref}
+                    class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+                  >
+                    View product details
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+        <div
+          class="flex flex-col justify-between rounded-2xl border border-dashed border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/30 p-6"
+        >
+          <div>
+            <span
+              class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-white dark:bg-slate-800 text-primary dark:text-sky-300"
+            >
+              <Icon name="tabler:help-circle" class="w-5 h-5" />
+            </span>
+            <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-1.5">Not sure which platform fits?</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+              Share your target market, preferred shape and size range. We will help shortlist a standard platform or
+              confirm whether an OEM/ODM review is needed.
+            </p>
+          </div>
+          <a
+            href={genericSampleUrl}
+            class="mt-5 inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 text-sm font-semibold rounded-lg hover:bg-white dark:hover:bg-slate-800 transition-colors"
+          >
+            Send your requirement
+            <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        How the Sample Process Works
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        The sample request uses the same RFQ form as our volume quotations, so your product and market details stay in
+        one place.
+      </p>
+      <ol class="grid md:grid-cols-4 gap-3">
+        {
+          processSteps.map((step) => (
+            <li class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-2 flex w-8 h-8 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {step.step}
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
+              <p class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{step.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What to Include in Your Sample Request
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        The more precisely you describe the evaluation, the faster we can confirm the right sample and quote its terms.
+      </p>
+      <ul class="grid md:grid-cols-2 gap-3">
+        {
+          preparationItems.map((item) => (
+            <li class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <Icon name="tabler:square-check" class="w-5 h-5 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              <span class="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">Sample Commercial Terms</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Sample terms depend on the model, configuration and destination. The applicable terms are stated in your project
+        quotation.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          termCards.map((term) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <Icon name={term.icon} class="w-5 h-5 text-primary dark:text-sky-400 mb-2.5" />
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{term.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{term.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">Sample Request FAQ</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Direct answers to the questions buyers ask before requesting a pool or SPA sample.
+      </p>
+      <div class="space-y-3">
+        {
+          faqs.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.question}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.answer}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Company and Sample Coordination
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">
+        Brand, operating team, legal entity and production base are stated consistently across our B2B pages.
+      </p>
+      <dl class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+          entityFacts.map((item) => (
+            <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">
+                {item.term}
+              </dt>
+              <dd class="mt-1 text-sm font-medium text-gray-900 dark:text-slate-200">{item.detail}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="mt-4 text-sm text-gray-500 dark:text-slate-400">
+        Email <a
+          href={`mailto:${facts.contact.email}`}
+          class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline">{facts.contact.email}</a
+        > or call <a
+          href={`tel:${facts.contact.primaryPhone.replace(/\s+/g, '')}`}
+          class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline"
+          >{facts.contact.primaryPhone}</a
+        >. Read more on the <a
+          href="/about#company"
+          class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline">About page</a
+        >.
+      </p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/products/specs"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Specs &amp; FOB Prices</a
+        >
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM Manufacturing</a
+        >
+        <a
+          href="/private-label"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Private Label Pools</a
+        >
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+        <a
+          href="/for-businesses"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >For Businesses</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="sample-request" aria-hidden="true">
+    <p>
+      Inflatable Pool Factory sample requests: buyers can request a sample of the rectangular drop-stitch pool (2 x 2 x
+      0.8 m to 6 x 5 x 1.5 m; 15/20/50 cm walls), round blue or grey drop-stitch pool (diameter 2.0-10.0 m; 10/15 cm
+      walls), round SPA tub (diameter 1.8/2.0/2.3 m; 8/10/15 cm walls) or square and rectangular SPA tub (1.5 x 1.5 x
+      0.8 m to 3 x 2 x 1 m; 15/20 cm walls). Sample quantity, charges, courier arrangement and timing are confirmed per
+      project in the quotation; no fixed sample fee or blanket free-sample policy is published. Samples are coordinated
+      from the Qingdao production base by the Inflatable Pool Team at Qingdao Vatrad Group. Contact
+      info@inflatablepoolfactory.com or +86 13305324192.
+    </p>
+  </section>
+</Layout>
