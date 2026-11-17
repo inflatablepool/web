@@ -1,0 +1,503 @@
+version: 1
+updated: '2026-11-17'
+assets:
+  - path: /images/default.webp
+    storage: repo
+    type: brand_asset
+    source: Pre-ledger asset; original provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/Helen-contact-480x463.webp
+    storage: repo
+    type: company_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); company photo provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/inflatable-pool-factory/hero/inflatable-pool-factory-hero-design-concept.webp
+    storage: r2
+    type: unconfirmed
+    source: R2-only hero asset; original provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: Referenced by src/pages/[lang]/about.astro; file is not stored in public/images.
+  - path: /images/inflatable-pool-factory/hero/tech-meeting-small.webp
+    storage: r2
+    type: company_photo
+    source: R2-only company photo; original provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: Referenced by src/pages/[lang]/about.astro; file is not stored in public/images.
+  - path: /images/og-default.jpg
+    storage: repo
+    type: brand_asset
+    source: Pre-ledger asset; original provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/cold-plunge-and-recovery-pools-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/large-pools-for-family-gatherings-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/large-pools-for-family-gatherings.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-dink-households-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-dink-households.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-glamping-and-hospitality-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-glamping-and-hospitality.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-pet-families-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-pet-families.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-rental-and-event-operators-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-rental-and-event-operators.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-retirees-and-empty-nesters-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-retirees-and-empty-nesters.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-vacation-rentals-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-vacation-rentals.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-water-fitness-and-recreation-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/townhome-and-compact-yard-pools-640.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+    storage: repo
+    type: reference
+    source: Pool-ideas expansion (commit 635af79, 2026-10-17); original photographer/licence not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/accessories-kit.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/accessories-set.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/hot-tub-round.png
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/hot-tub-square.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/inflatable-stairs.png
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/ladder-4-step-1.png
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/ladder-4-step-2.png
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/ladder-4-step-3.png
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rechargeable-air-pump.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rectangular-pool-1.jpg
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rectangular-pool-2.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rectangular-pool-3.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rectangular-pool-4.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/rectangular-pool-sr220815.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-blue-pool-1.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-grey-pool-1.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-grey-pool-2.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-grey-pool-3.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-grey-pool-cover-1.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/round-pool-s2005.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/pools/sand-filter-fs12c.webp
+    storage: repo
+    type: product_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); supplier/company provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/team-all.webp
+    storage: repo
+    type: company_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); company photo provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''
+  - path: /images/tech-meeting-small.webp
+    storage: repo
+    type: company_photo
+    source: Initial site import (commit 9d9a9ee, 2026-10-14); company photo provenance not recorded.
+    license: unverified
+    reviewStatus: pending
+    legacyBaseline: true
+    approvedBy: ''
+    approvedAt: ''
+    notes: ''

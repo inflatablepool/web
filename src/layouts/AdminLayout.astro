@@ -15,6 +15,7 @@ interface Props {
     | 'languages'
     | 'seo'
     | 'seo-dashboard'
+    | 'asset-ledger'
     | 'hero'
     | 'categories'
     | 'tech'
@@ -109,6 +110,10 @@ const groups: TabGroup[] = [
       { id: 'research', href: '/keystatic/research', label: 'Research' },
       { id: 'evidence', href: '/keystatic/evidence', label: 'Evidence' },
     ],
+  },
+  {
+    label: 'Assets',
+    children: [{ id: 'asset-ledger', href: '/keystatic/asset-ledger', label: 'Licence Ledger' }],
   },
   {
     label: 'Settings',

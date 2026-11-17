@@ -63,6 +63,9 @@ jobs:
       - name: Brand positioning gate (inflatable pools)
         run: python3 scripts/07_positioning_check.py --dist ./dist --strict
 
+      - name: Asset provenance + licence ledger
+        run: node scripts/check-asset-ledger.mjs --strict
+
       - name: Workers compile check (dry-run bundles)
         run: |
           npx wrangler deploy --dry-run -c workers/admin-worker/wrangler.toml

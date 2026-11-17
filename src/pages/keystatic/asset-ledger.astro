@@ -1,0 +1,484 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="Asset Licence Ledger" active="asset-ledger">
+  <div class="flex flex-wrap items-start justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">Asset Licence Ledger</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Every image used by the public site must record its type, source, licence and reviewer. Assets stay
+        <span class="font-medium">pending</span> until a human verifies them — the build gate blocks new unapproved assets.
+      </p>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+        id="refresh-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900"
+        >Refresh</button
+      >
+      <button
+        id="save-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white">Save Draft</button
+      >
+      <button
+        id="publish-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm font-medium rounded-md bg-green-600 hover:bg-green-700 text-white">Publish</button
+      >
+    </div>
+  </div>
+
+  <div
+    class="mb-4 rounded-md border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 p-3 text-xs text-amber-800 dark:text-amber-300"
+  >
+    <p class="font-medium">Review rules</p>
+    <p class="mt-1">
+      Approved assets need a concrete licence, a source record, a reviewer and a review date. AI illustrations must use
+      <code>ai_generated</code> and note the tool/model; reference images need a stock licence or supplier authorisation.
+      <code>unverified</code> can never be approved.
+    </p>
+  </div>
+
+  <div id="status" class="mb-4 text-sm text-gray-500 dark:text-gray-400">Loading asset ledger…</div>
+
+  <div
+    id="error"
+    class="hidden mb-4 rounded-md border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-950/40 p-3 text-sm text-red-700 dark:text-red-300"
+  >
+  </div>
+
+  <div id="content" class="hidden space-y-5">
+    <div id="stats" class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4"></div>
+
+    <div class="flex flex-wrap items-end gap-3 rounded-md border border-gray-200 dark:border-gray-800 p-3">
+      <label class="text-xs text-gray-500"
+        >Search
+        <input
+          id="search"
+          type="search"
+          placeholder="path, source, notes…"
+          class="mt-1 block w-64 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </label>
+      <label class="text-xs text-gray-500"
+        >Review status
+        <select
+          id="status-filter"
+          class="mt-1 block px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </label>
+      <label class="text-xs text-gray-500"
+        >Type
+        <select
+          id="type-filter"
+          class="mt-1 block px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="all">All</option>
+          <option value="product_photo">Product photo</option>
+          <option value="company_photo">Company photo</option>
+          <option value="brand_asset">Brand asset</option>
+          <option value="ai_illustration">AI illustration</option>
+          <option value="reference">Reference</option>
+          <option value="unconfirmed">Unconfirmed</option>
+        </select>
+      </label>
+      <span id="visible-count" class="text-xs text-gray-500"></span>
+      <span class="text-xs text-gray-400">Branch: <code id="branch-label" class="font-mono">—</code></span>
+    </div>
+
+    <div id="list" class="space-y-3"></div>
+  </div>
+
+  <script>
+    (() => {
+      type AssetType =
+        'product_photo' | 'company_photo' | 'brand_asset' | 'ai_illustration' | 'reference' | 'unconfirmed';
+      type AssetLicense =
+        'company_owned' | 'supplier_authorized' | 'licensed_stock' | 'ai_generated' | 'public_domain' | 'unverified';
+      type ReviewStatus = 'approved' | 'pending' | 'rejected';
+
+      interface LedgerEntry {
+        path: string;
+        storage: 'repo' | 'r2';
+        type: AssetType;
+        source: string;
+        license: AssetLicense;
+        reviewStatus: ReviewStatus;
+        legacyBaseline: boolean;
+        approvedBy: string;
+        approvedAt: string;
+        notes: string;
+      }
+
+      interface Ledger {
+        version: number;
+        updated: string;
+        assets: LedgerEntry[];
+      }
+
+      interface State {
+        ledger: Ledger | null;
+        sha: string;
+        usage: Record<string, string[]>;
+        branch: string;
+      }
+
+      const state: State = { ledger: null, sha: '', usage: {}, branch: '' };
+      const statusEl = document.getElementById('status')!;
+      const errorEl = document.getElementById('error')!;
+      const contentEl = document.getElementById('content')!;
+      const statsEl = document.getElementById('stats')!;
+      const listEl = document.getElementById('list')!;
+      const searchEl = document.getElementById('search') as HTMLInputElement;
+      const statusFilter = document.getElementById('status-filter') as HTMLSelectElement;
+      const typeFilter = document.getElementById('type-filter') as HTMLSelectElement;
+      const visibleCount = document.getElementById('visible-count')!;
+      const branchLabel = document.getElementById('branch-label')!;
+      const saveBtn = document.getElementById('save-btn') as HTMLButtonElement;
+      const publishBtn = document.getElementById('publish-btn') as HTMLButtonElement;
+      const refreshBtn = document.getElementById('refresh-btn') as HTMLButtonElement;
+
+      const TYPE_OPTIONS: Array<[AssetType, string]> = [
+        ['product_photo', 'Product photo'],
+        ['company_photo', 'Company photo'],
+        ['brand_asset', 'Brand asset'],
+        ['ai_illustration', 'AI illustration'],
+        ['reference', 'Reference'],
+        ['unconfirmed', 'Unconfirmed'],
+      ];
+      const LICENSE_OPTIONS: Array<[AssetLicense, string]> = [
+        ['company_owned', 'Company owned'],
+        ['supplier_authorized', 'Supplier authorised'],
+        ['licensed_stock', 'Licensed stock'],
+        ['ai_generated', 'AI generated'],
+        ['public_domain', 'Public domain'],
+        ['unverified', 'Unverified'],
+      ];
+      const STATUS_OPTIONS: Array<[ReviewStatus, string]> = [
+        ['pending', 'Pending'],
+        ['approved', 'Approved'],
+        ['rejected', 'Rejected'],
+      ];
+
+      function escapeHtml(value: unknown): string {
+        const map: Record<string, string> = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;',
+        };
+        return String(value ?? '').replace(/[&<>"']/g, (ch: string) => map[ch]);
+      }
+
+      function options(values: Array<[string, string]>, selected: string): string {
+        return values
+          .map(([value, label]) => `<option value="${value}"${value === selected ? ' selected' : ''}>${label}</option>`)
+          .join('');
+      }
+
+      function statusBadge(status: ReviewStatus): string {
+        const styles: Record<ReviewStatus, string> = {
+          approved: 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300',
+          pending: 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300',
+          rejected: 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300',
+        };
+        return `<span class="px-2 py-0.5 rounded-full text-xs font-medium ${styles[status]}">${status}</span>`;
+      }
+
+      function cardHtml(entry: LedgerEntry): string {
+        const refs = state.usage[entry.path] || [];
+        const usageHtml = refs.length
+          ? refs.map((ref) => `<li class="font-mono">${escapeHtml(ref)}</li>`).join('')
+          : '<li class="text-gray-400">No source reference (still uploaded to R2)</li>';
+        const preview =
+          entry.storage === 'r2'
+            ? '<div class="w-24 h-24 rounded-md border border-gray-200 dark:border-gray-700 flex items-center justify-center text-xs text-gray-400">R2 only</div>'
+            : `<img src="https://assets.inflatablepoolfactory.com${escapeHtml(entry.path)}" alt="" loading="lazy" class="w-24 h-24 object-cover rounded-md border border-gray-200 dark:border-gray-700" />`;
+
+        return `<article class="asset-card rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-4" data-path="${escapeHtml(
+          entry.path
+        )}" data-storage="${entry.storage}" data-legacy="${entry.legacyBaseline}">
+          <div class="flex gap-4">
+            ${preview}
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <p class="font-mono text-xs break-all">${escapeHtml(entry.path)}</p>
+                ${statusBadge(entry.reviewStatus)}
+                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300">${
+                  entry.storage === 'r2' ? 'R2 only' : 'repo'
+                }</span>
+                ${
+                  entry.legacyBaseline
+                    ? '<span class="px-2 py-0.5 rounded-full text-xs bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300">legacy baseline</span>'
+                    : ''
+                }
+                <span class="text-xs text-gray-500">${refs.length} reference(s)</span>
+              </div>
+              <details class="mt-2">
+                <summary class="cursor-pointer text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Used by source files</summary>
+                <ul class="mt-1 space-y-0.5 text-xs text-gray-600 dark:text-gray-400">${usageHtml}</ul>
+              </details>
+            </div>
+          </div>
+
+          <div class="mt-4 grid gap-3 md:grid-cols-3">
+            <label class="text-xs text-gray-500">Type
+              <select data-field="type" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(TYPE_OPTIONS, entry.type)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500">Licence
+              <select data-field="license" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(LICENSE_OPTIONS, entry.license)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500">Review status
+              <select data-field="reviewStatus" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(STATUS_OPTIONS, entry.reviewStatus)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-3">Source / provenance
+              <input data-field="source" value="${escapeHtml(
+                entry.source
+              )}" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500">Approved by
+              <input data-field="approvedBy" value="${escapeHtml(
+                entry.approvedBy
+              )}" placeholder="name or email" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500">Approved at
+              <input type="date" data-field="approvedAt" value="${escapeHtml(
+                entry.approvedAt
+              )}" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-3">Notes
+              <textarea data-field="notes" rows="2" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">${escapeHtml(
+                entry.notes
+              )}</textarea>
+            </label>
+          </div>
+        </article>`;
+      }
+
+      function field(card: HTMLElement, name: string): string {
+        const el = card.querySelector(`[data-field="${name}"]`) as
+          HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+        return el ? el.value.trim() : '';
+      }
+
+      function collect(): Ledger {
+        const cards = Array.from(document.querySelectorAll<HTMLElement>('.asset-card'));
+        const assets: LedgerEntry[] = cards.map((card) => ({
+          path: card.dataset.path || '',
+          storage: (card.dataset.storage === 'r2' ? 'r2' : 'repo') as 'repo' | 'r2',
+          type: field(card, 'type') as AssetType,
+          source: field(card, 'source'),
+          license: field(card, 'license') as AssetLicense,
+          reviewStatus: field(card, 'reviewStatus') as ReviewStatus,
+          legacyBaseline: card.dataset.legacy === 'true',
+          approvedBy: field(card, 'approvedBy'),
+          approvedAt: field(card, 'approvedAt'),
+          notes: field(card, 'notes'),
+        }));
+        return { version: 1, updated: new Date().toISOString().split('T')[0], assets };
+      }
+
+      function refreshStats(): void {
+        const ledger = collect();
+        const total = ledger.assets.length;
+        const approved = ledger.assets.filter((item) => item.reviewStatus === 'approved').length;
+        const pending = ledger.assets.filter((item) => item.reviewStatus === 'pending').length;
+        const rejected = ledger.assets.filter((item) => item.reviewStatus === 'rejected').length;
+        const unverified = ledger.assets.filter((item) => item.license === 'unverified').length;
+        const legacyPending = ledger.assets.filter(
+          (item) => item.reviewStatus === 'pending' && item.legacyBaseline
+        ).length;
+        const newPending = ledger.assets.filter(
+          (item) => item.reviewStatus === 'pending' && !item.legacyBaseline
+        ).length;
+
+        statsEl.innerHTML = [
+          ['Assets', total],
+          ['Approved', approved],
+          ['Pending', pending],
+          ['Rejected', rejected],
+          ['Unverified licence', unverified],
+          ['Legacy pending', legacyPending],
+          ['New pending (blocks deploy)', newPending],
+          ['R2-only assets', ledger.assets.filter((item) => item.storage === 'r2').length],
+        ]
+          .map(
+            ([label, value]) =>
+              `<div class="rounded-md border border-gray-200 dark:border-gray-800 p-3"><div class="text-xs uppercase tracking-wide text-gray-500">${escapeHtml(
+                label
+              )}</div><div class="mt-1 text-xl font-semibold">${escapeHtml(value)}</div></div>`
+          )
+          .join('');
+      }
+
+      function applyFilters(): void {
+        const query = searchEl.value.trim().toLowerCase();
+        const status = statusFilter.value;
+        const type = typeFilter.value;
+        let visible = 0;
+        for (const card of Array.from(document.querySelectorAll<HTMLElement>('.asset-card'))) {
+          const path = (card.dataset.path || '').toLowerCase();
+          const source = field(card, 'source').toLowerCase();
+          const notes = field(card, 'notes').toLowerCase();
+          const matchesQuery = !query || path.includes(query) || source.includes(query) || notes.includes(query);
+          const matchesStatus = status === 'all' || field(card, 'reviewStatus') === status;
+          const matchesType = type === 'all' || field(card, 'type') === type;
+          card.hidden = !(matchesQuery && matchesStatus && matchesType);
+          if (!card.hidden) visible += 1;
+        }
+        visibleCount.textContent = `${visible} of ${state.ledger?.assets.length ?? 0} asset(s) shown`;
+      }
+
+      function render(): void {
+        if (!state.ledger) return;
+        contentEl.classList.remove('hidden');
+        branchLabel.textContent = state.branch || '—';
+        listEl.innerHTML = state.ledger.assets.map(cardHtml).join('');
+        refreshStats();
+        applyFilters();
+      }
+
+      function setError(message: string | null): void {
+        if (!message) {
+          errorEl.classList.add('hidden');
+          errorEl.textContent = '';
+          return;
+        }
+        errorEl.textContent = message;
+        errorEl.classList.remove('hidden');
+      }
+
+      function toast(message: string, type: 'success' | 'error' = 'success'): void {
+        const fn = (window as any).__adminToast;
+        if (typeof fn === 'function') fn(message, type);
+        else if (type === 'error') setError(message);
+      }
+
+      function validateApproved(ledger: Ledger): string | null {
+        for (const entry of ledger.assets) {
+          if (entry.reviewStatus !== 'approved') continue;
+          if (entry.license === 'unverified') return `${entry.path}: approved asset needs a concrete licence`;
+          if (!entry.source) return `${entry.path}: approved asset needs a source`;
+          if (!entry.approvedBy) return `${entry.path}: approved asset needs an approver`;
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.approvedAt))
+            return `${entry.path}: approved asset needs a review date (YYYY-MM-DD)`;
+        }
+        return null;
+      }
+
+      async function saveDraft(): Promise<boolean> {
+        const ledger = collect();
+        const validation = validateApproved(ledger);
+        if (validation) {
+          toast(validation, 'error');
+          return false;
+        }
+        const res = await fetch('/api/admin/asset-ledger', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ledger, sha: state.sha, commitMessage: 'Update asset licence ledger' }),
+        });
+        if (res.status === 401) {
+          window.location.replace('/login');
+          return false;
+        }
+        const result = await res.json();
+        if (!res.ok || !result.success) throw new Error(result.error || `HTTP ${res.status}`);
+        state.sha = result.sha || state.sha;
+        toast('Draft saved', 'success');
+        return true;
+      }
+
+      async function withButton(button: HTMLButtonElement, label: string, fn: () => Promise<void>): Promise<void> {
+        const original = button.textContent;
+        button.disabled = true;
+        button.textContent = label;
+        try {
+          await fn();
+        } catch (error) {
+          toast(error instanceof Error ? error.message : String(error), 'error');
+        } finally {
+          button.disabled = false;
+          button.textContent = original;
+        }
+      }
+
+      async function load(): Promise<void> {
+        statusEl.classList.remove('hidden');
+        statusEl.textContent = 'Loading asset ledger…';
+        setError(null);
+        const res = await fetch('/api/admin/asset-ledger', { credentials: 'same-origin' });
+        if (res.status === 401) {
+          window.location.replace('/login');
+          return;
+        }
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.error || `HTTP ${res.status}`);
+        state.ledger = data.ledger as Ledger;
+        state.sha = data.sha || '';
+        state.usage = data.usage?.assets && typeof data.usage.assets === 'object' ? data.usage.assets : {};
+        state.branch = data.branch || '';
+        statusEl.classList.add('hidden');
+        render();
+      }
+
+      saveBtn.addEventListener('click', () => withButton(saveBtn, 'Saving…', async () => void (await saveDraft())));
+      refreshBtn.addEventListener('click', () =>
+        withButton(refreshBtn, 'Loading…', async () => {
+          await load();
+          toast('Ledger reloaded', 'success');
+        })
+      );
+      publishBtn.addEventListener('click', () =>
+        withButton(publishBtn, 'Publishing…', async () => {
+          if (!(await saveDraft())) return;
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json' },
+            body: '{}',
+          });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          const result = await res.json();
+          if (!res.ok || !result.success) throw new Error(result.error || `HTTP ${res.status}`);
+          toast('Published — Cloudflare is redeploying…', 'success');
+          setTimeout(() => window.location.reload(), 800);
+        })
+      );
+
+      listEl.addEventListener('change', refreshStats);
+      listEl.addEventListener('input', () => {
+        refreshStats();
+        applyFilters();
+      });
+      searchEl.addEventListener('input', applyFilters);
+      statusFilter.addEventListener('change', applyFilters);
+      typeFilter.addEventListener('change', applyFilters);
+
+      load().catch((error) => {
+        statusEl.classList.add('hidden');
+        setError(error instanceof Error ? error.message : String(error));
+      });
+    })();
+  </script>
+</AdminLayout>

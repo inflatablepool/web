@@ -15,6 +15,7 @@ import type { News } from '../shared/schema';
 import { applyRuleToText, scanFile, shouldScanPath, validateRule, type RefactorRule } from './link-refactor';
 import { mailRowFromD1, recordInquiryEmailAttempt, sendInquiryEmail } from '../shared/inquiry-mail';
 import { buildSeoDashboard } from './seo-dashboard';
+import { getAssetLedger, saveAssetLedger } from './asset-ledger';
 
 interface Env extends AuthEnv {
   GITHUB_TOKEN?: string;
@@ -229,6 +230,14 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   const owner = env.GITHUB_OWNER || 'inflatablepool';
   const repo = env.GITHUB_REPO || 'web';
   const api = `https://api.github.com/repos/${owner}/${repo}`;
+
+  if (path === '/api/admin/asset-ledger' && request.method === 'GET') {
+    return await getAssetLedger({ token, owner, repo, api }, request);
+  }
+
+  if (path === '/api/admin/asset-ledger' && request.method === 'POST') {
+    return await saveAssetLedger({ token, owner, repo, api }, request, ensureBranch);
+  }
 
   if (path === '/api/admin/pages' && request.method === 'POST') {
     const { slug, label, path: pagePath, permalink, sections } = (await request.json()) as any;

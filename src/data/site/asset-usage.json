@@ -1,0 +1,258 @@
+{
+  "assets": {
+    "/images/inflatable-pool-factory/hero/inflatable-pool-factory-hero-design-concept.webp": [
+      "src/pages/[lang]/about.astro"
+    ],
+    "/images/inflatable-pool-factory/hero/tech-meeting-small.webp": [
+      "src/pages/[lang]/about.astro"
+    ],
+    "/images/og-default.jpg": [
+      "src/config.yaml"
+    ],
+    "/images/pool-ideas/cold-plunge-and-recovery-pools.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/large-pools-for-family-gatherings.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-dink-households.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-glamping-and-hospitality.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-pet-families.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-rental-and-event-operators.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-retirees-and-empty-nesters.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-vacation-rentals.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/pools-for-water-fitness-and-recreation.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pool-ideas/townhome-and-compact-yard-pools.webp": [
+      "src/data/pool-ideas.ts"
+    ],
+    "/images/pools/accessories-kit.webp": [
+      "src/data/pool-catalog.ts"
+    ],
+    "/images/pools/accessories-set.webp": [
+      "src/data/pool-catalog.ts"
+    ],
+    "/images/pools/hot-tub-round.png": [
+      "src/data/site/product-visuals.yaml"
+    ],
+    "/images/pools/hot-tub-square.webp": [
+      "src/data/site/product-visuals.yaml"
+    ],
+    "/images/pools/inflatable-stairs.png": [
+      "src/data/pool-catalog.ts"
+    ],
+    "/images/pools/ladder-4-step-1.png": [
+      "src/data/pool-catalog.ts"
+    ],
+    "/images/pools/rechargeable-air-pump.webp": [
+      "src/data/pool-catalog.ts"
+    ],
+    "/images/pools/rectangular-pool-1.jpg": [
+      "src/data/site/about.yaml",
+      "src/data/site/evidence.yaml",
+      "src/data/site/learning-center.yaml",
+      "src/data/site/use-cases.yaml",
+      "src/pages/about.astro"
+    ],
+    "/images/pools/rectangular-pool-2.webp": [
+      "src/data/pages/about.yaml",
+      "src/data/pages/ar/about.yaml",
+      "src/data/pages/ar/home.yaml",
+      "src/data/pages/az/about.yaml",
+      "src/data/pages/az/home.yaml",
+      "src/data/pages/bg/about.yaml",
+      "src/data/pages/bg/home.yaml",
+      "src/data/pages/cs/about.yaml",
+      "src/data/pages/cs/home.yaml",
+      "src/data/pages/da/about.yaml",
+      "src/data/pages/da/home.yaml",
+      "src/data/pages/de/about.yaml",
+      "src/data/pages/de/home.yaml",
+      "src/data/pages/el/about.yaml",
+      "src/data/pages/el/home.yaml",
+      "src/data/pages/es/about.yaml",
+      "src/data/pages/es/home.yaml",
+      "src/data/pages/et/about.yaml",
+      "src/data/pages/et/home.yaml",
+      "src/data/pages/fa/about.yaml",
+      "src/data/pages/fa/home.yaml",
+      "src/data/pages/fi/about.yaml",
+      "src/data/pages/fi/home.yaml",
+      "src/data/pages/fr/about.yaml",
+      "src/data/pages/fr/home.yaml",
+      "src/data/pages/he/about.yaml",
+      "src/data/pages/he/home.yaml",
+      "src/data/pages/home.yaml",
+      "src/data/pages/hr/about.yaml",
+      "src/data/pages/hr/home.yaml",
+      "src/data/pages/hu/about.yaml",
+      "src/data/pages/hu/home.yaml",
+      "src/data/pages/id/about.yaml",
+      "src/data/pages/id/home.yaml",
+      "src/data/pages/it/about.yaml",
+      "src/data/pages/it/home.yaml",
+      "src/data/pages/kk/about.yaml",
+      "src/data/pages/kk/home.yaml",
+      "src/data/pages/lt/about.yaml",
+      "src/data/pages/lt/home.yaml",
+      "src/data/pages/lv/about.yaml",
+      "src/data/pages/lv/home.yaml",
+      "src/data/pages/ms/about.yaml",
+      "src/data/pages/ms/home.yaml",
+      "src/data/pages/nl/about.yaml",
+      "src/data/pages/nl/home.yaml",
+      "src/data/pages/no/about.yaml",
+      "src/data/pages/no/home.yaml",
+      "src/data/pages/pl/about.yaml",
+      "src/data/pages/pl/home.yaml",
+      "src/data/pages/pt/about.yaml",
+      "src/data/pages/pt/home.yaml",
+      "src/data/pages/ro/about.yaml",
+      "src/data/pages/ro/home.yaml",
+      "src/data/pages/ru/about.yaml",
+      "src/data/pages/ru/home.yaml",
+      "src/data/pages/sk/about.yaml",
+      "src/data/pages/sk/home.yaml",
+      "src/data/pages/sl/about.yaml",
+      "src/data/pages/sl/home.yaml",
+      "src/data/pages/sr/about.yaml",
+      "src/data/pages/sr/home.yaml",
+      "src/data/pages/sv/about.yaml",
+      "src/data/pages/sv/home.yaml",
+      "src/data/pages/th/about.yaml",
+      "src/data/pages/th/home.yaml",
+      "src/data/pages/tl/about.yaml",
+      "src/data/pages/tl/home.yaml",
+      "src/data/pages/tr/about.yaml",
+      "src/data/pages/tr/home.yaml",
+      "src/data/pages/uk/about.yaml",
+      "src/data/pages/uk/home.yaml",
+      "src/data/pages/uz/about.yaml",
+      "src/data/pages/uz/home.yaml",
+      "src/data/site/hero-images.yaml",
+      "src/data/site/product-visuals.yaml",
+      "src/data/site/tech-cards.yaml",
+      "src/pages/products/specs.astro"
+    ],
+    "/images/pools/round-blue-pool-1.webp": [
+      "src/data/site/categories.yaml",
+      "src/data/site/evidence.yaml",
+      "src/data/site/hero-images.yaml",
+      "src/data/site/learning-center.yaml",
+      "src/data/site/product-visuals.yaml",
+      "src/data/site/tech-cards.yaml",
+      "src/data/site/use-cases.yaml"
+    ],
+    "/images/pools/round-grey-pool-1.webp": [
+      "src/data/pages/about.yaml",
+      "src/data/pages/ar/about.yaml",
+      "src/data/pages/ar/home.yaml",
+      "src/data/pages/az/about.yaml",
+      "src/data/pages/az/home.yaml",
+      "src/data/pages/bg/about.yaml",
+      "src/data/pages/bg/home.yaml",
+      "src/data/pages/cs/about.yaml",
+      "src/data/pages/cs/home.yaml",
+      "src/data/pages/da/about.yaml",
+      "src/data/pages/da/home.yaml",
+      "src/data/pages/de/about.yaml",
+      "src/data/pages/de/home.yaml",
+      "src/data/pages/el/about.yaml",
+      "src/data/pages/el/home.yaml",
+      "src/data/pages/es/about.yaml",
+      "src/data/pages/es/home.yaml",
+      "src/data/pages/et/about.yaml",
+      "src/data/pages/et/home.yaml",
+      "src/data/pages/fa/about.yaml",
+      "src/data/pages/fa/home.yaml",
+      "src/data/pages/fi/about.yaml",
+      "src/data/pages/fi/home.yaml",
+      "src/data/pages/fr/about.yaml",
+      "src/data/pages/fr/home.yaml",
+      "src/data/pages/he/about.yaml",
+      "src/data/pages/he/home.yaml",
+      "src/data/pages/home.yaml",
+      "src/data/pages/hr/about.yaml",
+      "src/data/pages/hr/home.yaml",
+      "src/data/pages/hu/about.yaml",
+      "src/data/pages/hu/home.yaml",
+      "src/data/pages/id/about.yaml",
+      "src/data/pages/id/home.yaml",
+      "src/data/pages/it/about.yaml",
+      "src/data/pages/it/home.yaml",
+      "src/data/pages/kk/about.yaml",
+      "src/data/pages/kk/home.yaml",
+      "src/data/pages/lt/about.yaml",
+      "src/data/pages/lt/home.yaml",
+      "src/data/pages/lv/about.yaml",
+      "src/data/pages/lv/home.yaml",
+      "src/data/pages/ms/about.yaml",
+      "src/data/pages/ms/home.yaml",
+      "src/data/pages/nl/about.yaml",
+      "src/data/pages/nl/home.yaml",
+      "src/data/pages/no/about.yaml",
+      "src/data/pages/no/home.yaml",
+      "src/data/pages/pl/about.yaml",
+      "src/data/pages/pl/home.yaml",
+      "src/data/pages/pt/about.yaml",
+      "src/data/pages/pt/home.yaml",
+      "src/data/pages/ro/about.yaml",
+      "src/data/pages/ro/home.yaml",
+      "src/data/pages/ru/about.yaml",
+      "src/data/pages/ru/home.yaml",
+      "src/data/pages/sk/about.yaml",
+      "src/data/pages/sk/home.yaml",
+      "src/data/pages/sl/about.yaml",
+      "src/data/pages/sl/home.yaml",
+      "src/data/pages/sr/about.yaml",
+      "src/data/pages/sr/home.yaml",
+      "src/data/pages/sv/about.yaml",
+      "src/data/pages/sv/home.yaml",
+      "src/data/pages/th/about.yaml",
+      "src/data/pages/th/home.yaml",
+      "src/data/pages/tl/about.yaml",
+      "src/data/pages/tl/home.yaml",
+      "src/data/pages/tr/about.yaml",
+      "src/data/pages/tr/home.yaml",
+      "src/data/pages/uk/about.yaml",
+      "src/data/pages/uk/home.yaml",
+      "src/data/pages/uz/about.yaml",
+      "src/data/pages/uz/home.yaml",
+      "src/data/site/about.yaml",
+      "src/data/site/evidence.yaml",
+      "src/data/site/hero-images.yaml",
+      "src/data/site/learning-center.yaml",
+      "src/data/site/product-visuals.yaml",
+      "src/data/site/use-cases.yaml",
+      "src/pages/about.astro",
+      "src/pages/products/specs.astro"
+    ],
+    "/images/pools/round-grey-pool-2.webp": [
+      "src/data/site/tech-cards.yaml"
+    ],
+    "/images/pools/round-grey-pool-cover-1.webp": [
+      "src/data/site/evidence.yaml",
+      "src/data/site/hero-images.yaml",
+      "src/data/site/learning-center.yaml"
+    ],
+    "/images/pools/sand-filter-fs12c.webp": [
+      "src/data/pool-catalog.ts"
+    ]
+  }
+}
