@@ -100,10 +100,28 @@ export async function gscFetch(env: Env): Promise<Response> {
     const queries = await fetchGscQueries(accessToken, env.GSC_SITE_URL);
     const totalClicks = queries.reduce((s, q) => s + q.clicks, 0);
     const totalImpressions = queries.reduce((s, q) => s + q.impressions, 0);
+    const endDate = today;
+    const startDate = new Date(Date.now() - 28 * 86400000).toISOString().split('T')[0];
 
-    const result = { date: today, queries, totalClicks, totalImpressions };
+    const result = { date: today, startDate, endDate, queries, totalClicks, totalImpressions };
     const key = `analytics/gsc/${today}.json`;
     await env.DATA_BUCKET.put(key, JSON.stringify(result));
+    // Stable pointer for the admin dashboard (avoids listing dated keys).
+    await env.DATA_BUCKET.put('analytics/gsc/latest.json', JSON.stringify(result));
+
+    // Compact daily metrics only — the full history below can grow to tens of
+    // megabytes, while the dashboard trend needs a few numbers per day.
+    const trendKey = 'analytics/gsc/trend.json';
+    const existingTrend = await env.DATA_BUCKET.get(trendKey);
+    const trend = existingTrend ? ((await existingTrend.json()) as any[]) : [];
+    trend.push({
+      date: today,
+      clicks: totalClicks,
+      impressions: totalImpressions,
+      ctr: totalImpressions > 0 ? totalClicks / totalImpressions : 0,
+      queries: queries.length,
+    });
+    await env.DATA_BUCKET.put(trendKey, JSON.stringify(trend.slice(-365)));
 
     const historyKey = 'analytics/gsc/history.json';
     const existing = await env.DATA_BUCKET.get(historyKey);

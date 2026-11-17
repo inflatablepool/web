@@ -14,6 +14,7 @@ import {
 import type { News } from '../shared/schema';
 import { applyRuleToText, scanFile, shouldScanPath, validateRule, type RefactorRule } from './link-refactor';
 import { mailRowFromD1, recordInquiryEmailAttempt, sendInquiryEmail } from '../shared/inquiry-mail';
+import { buildSeoDashboard } from './seo-dashboard';
 
 interface Env extends AuthEnv {
   GITHUB_TOKEN?: string;
@@ -127,6 +128,10 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const sortBy = urlParam(request, 'sortBy') || 'createdAt';
     const sortDir = urlParam(request, 'sortDir') === 'asc' ? 'asc' : 'desc';
     return json(await listUsers(db, { q, page, pageSize, sortBy, sortDir }));
+  }
+
+  if (path === '/api/admin/seo/dashboard' && request.method === 'GET') {
+    return json(await buildSeoDashboard(env.DATA_BUCKET));
   }
 
   if (path === '/api/admin/inquiries' && request.method === 'GET') {

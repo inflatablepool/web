@@ -1,0 +1,325 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="SEO Dashboard" active="seo-dashboard">
+  <div class="flex flex-wrap items-start justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">SEO Dashboard</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Live Google Search Console snapshot — no sample or demo data. Snapshots are written by the automation worker's
+        daily GSC fetch.
+      </p>
+    </div>
+    <div class="flex items-center gap-2">
+      <a
+        href="/keystatic/seo"
+        class="px-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900"
+        >SEO settings</a
+      >
+      <button id="refresh" class="px-3 py-1.5 text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+        >Refresh</button
+      >
+    </div>
+  </div>
+
+  <div id="status" class="mb-4 text-sm text-gray-500 dark:text-gray-400">Loading Search Console data…</div>
+
+  <div
+    id="empty"
+    class="hidden rounded-md border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 p-4 text-sm"
+  >
+    <p class="font-medium text-amber-800 dark:text-amber-300">No real GSC data yet</p>
+    <p class="mt-1 text-amber-700 dark:text-amber-400">
+      Add <code>GSC_CLIENT_ID</code>, <code>GSC_CLIENT_SECRET</code>, <code>GSC_REFRESH_TOKEN</code> and
+      <code>GSC_SITE_URL</code> to the automation worker, then run
+      <code>/api/automation/gsc-fetch</code> or wait for the daily cron. This dashboard intentionally stays empty rather than
+      showing simulated numbers.
+    </p>
+    <p id="empty-reason" class="mt-2 text-xs text-amber-700/80 dark:text-amber-400/80"></p>
+  </div>
+
+  <div id="content" class="hidden space-y-6">
+    <p id="meta" class="text-xs text-gray-500 dark:text-gray-400"></p>
+
+    <div id="kpis" class="grid gap-3 sm:grid-cols-2 xl:grid-cols-6"></div>
+
+    <section class="rounded-md border border-gray-200 dark:border-gray-800">
+      <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">
+        Daily trend (last 14 snapshots)
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+            <tr
+              ><th class="px-4 py-2">Date</th><th class="px-4 py-2 text-right">Clicks</th><th
+                class="px-4 py-2 text-right">Impressions</th
+              ><th class="px-4 py-2 text-right">CTR</th></tr
+            >
+          </thead>
+          <tbody id="trend-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="grid gap-6 xl:grid-cols-2">
+      <section class="rounded-md border border-gray-200 dark:border-gray-800">
+        <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">Top queries</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+              <tr
+                ><th class="px-4 py-2">Query</th><th class="px-4 py-2 text-right">Clicks</th><th
+                  class="px-4 py-2 text-right">Impr.</th
+                ><th class="px-4 py-2 text-right">CTR</th><th class="px-4 py-2 text-right">Pos.</th></tr
+              >
+            </thead>
+            <tbody id="queries-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="rounded-md border border-gray-200 dark:border-gray-800">
+        <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">Top landing pages</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+              <tr
+                ><th class="px-4 py-2">Page</th><th class="px-4 py-2 text-right">Clicks</th><th
+                  class="px-4 py-2 text-right">Impr.</th
+                ><th class="px-4 py-2 text-right">CTR</th><th class="px-4 py-2 text-right">Pos.</th></tr
+              >
+            </thead>
+            <tbody id="pages-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="rounded-md border border-gray-200 dark:border-gray-800">
+      <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">
+        Content opportunities
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+            <tr
+              ><th class="px-4 py-2">Query</th><th class="px-4 py-2">Reason</th><th class="px-4 py-2 text-right"
+                >Impr.</th
+              ><th class="px-4 py-2 text-right">CTR</th><th class="px-4 py-2 text-right">Pos.</th></tr
+            >
+          </thead>
+          <tbody id="opportunities-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rounded-md border border-gray-200 dark:border-gray-800">
+      <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">
+        Cannibalization candidates
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+            <tr
+              ><th class="px-4 py-2">Query</th><th class="px-4 py-2 text-right">Pages</th><th
+                class="px-4 py-2 text-right">Impr.</th
+              ><th class="px-4 py-2">Competing pages</th></tr
+            >
+          </thead>
+          <tbody id="cannibalization-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rounded-md border border-gray-200 dark:border-gray-800">
+      <h2 class="px-4 py-3 text-sm font-semibold border-b border-gray-200 dark:border-gray-800">Derived SEO tasks</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-900 text-left text-xs uppercase tracking-wide text-gray-500">
+            <tr
+              ><th class="px-4 py-2">Priority</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Query</th><th
+                class="px-4 py-2 text-right">Impr.</th
+              ><th class="px-4 py-2">Action</th></tr
+            >
+          </thead>
+          <tbody id="tasks-body" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const statusEl = document.getElementById('status')!;
+      const emptyEl = document.getElementById('empty')!;
+      const emptyReason = document.getElementById('empty-reason')!;
+      const contentEl = document.getElementById('content')!;
+      const metaEl = document.getElementById('meta')!;
+      const kpisEl = document.getElementById('kpis')!;
+      const numberFmt = new Intl.NumberFormat('en-US');
+      const percentFmt = new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 2 });
+      const HTML_ESCAPES: Record<string, string> = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      };
+
+      function escapeHtml(value: unknown): string {
+        return String(value ?? '').replace(/[&<>"']/g, (ch: string) => HTML_ESCAPES[ch]);
+      }
+
+      function num(value: unknown): string {
+        return numberFmt.format(Number(value) || 0);
+      }
+
+      function pct(value: unknown): string {
+        return percentFmt.format(Number(value) || 0);
+      }
+
+      function pos(value: unknown): string {
+        const n = Number(value) || 0;
+        return n > 0 ? n.toFixed(1) : '—';
+      }
+
+      function rowsOrEmpty(tbody: HTMLElement, rows: unknown[], colspan: number, html: string): void {
+        tbody.innerHTML =
+          rows.length > 0
+            ? html
+            : `<tr><td colspan="${colspan}" class="px-4 py-6 text-center text-gray-400">No rows in this snapshot.</td></tr>`;
+      }
+
+      function render(data: any): void {
+        if (!data.configured) {
+          statusEl.textContent = 'Waiting for real GSC data.';
+          emptyEl.classList.remove('hidden');
+          emptyReason.textContent = `Source check: ${data.checkedAt} · reason: ${data.reason}`;
+          contentEl.classList.add('hidden');
+          return;
+        }
+        statusEl.textContent = 'Loaded from Google Search Console.';
+        emptyEl.classList.add('hidden');
+        contentEl.classList.remove('hidden');
+
+        const range = [data.startDate, data.endDate].filter(Boolean).join(' → ');
+        metaEl.textContent = `Snapshot: ${data.snapshotDate || 'unknown'}${range ? ` · GSC range: ${range}` : ''} · ${num(data.rowCount)} query/page rows · refreshed ${data.checkedAt}`;
+
+        const kpis = [
+          ['Clicks', num(data.totals.clicks)],
+          ['Impressions', num(data.totals.impressions)],
+          ['CTR', pct(data.totals.ctr)],
+          ['Avg. position', pos(data.totals.position)],
+          ['Queries', num(data.totals.queries)],
+          ['Landing pages', num(data.totals.pages)],
+        ];
+        kpisEl.innerHTML = kpis
+          .map(
+            ([label, value]) =>
+              `<div class="rounded-md border border-gray-200 dark:border-gray-800 p-3"><div class="text-xs uppercase tracking-wide text-gray-500">${escapeHtml(label)}</div><div class="mt-1 text-xl font-semibold">${escapeHtml(value)}</div></div>`
+          )
+          .join('');
+
+        const trendBody = document.getElementById('trend-body')!;
+        rowsOrEmpty(
+          trendBody,
+          data.trend,
+          4,
+          data.trend
+            .map(
+              (point: any) =>
+                `<tr><td class="px-4 py-2">${escapeHtml(point.date)}</td><td class="px-4 py-2 text-right">${num(point.clicks)}</td><td class="px-4 py-2 text-right">${num(point.impressions)}</td><td class="px-4 py-2 text-right">${pct(point.ctr)}</td></tr>`
+            )
+            .join('')
+        );
+
+        const queriesBody = document.getElementById('queries-body')!;
+        rowsOrEmpty(
+          queriesBody,
+          data.topQueries,
+          5,
+          data.topQueries
+            .map(
+              (row: any) =>
+                `<tr><td class="px-4 py-2 break-words">${escapeHtml(row.query)}</td><td class="px-4 py-2 text-right">${num(row.clicks)}</td><td class="px-4 py-2 text-right">${num(row.impressions)}</td><td class="px-4 py-2 text-right">${pct(row.ctr)}</td><td class="px-4 py-2 text-right">${pos(row.position)}</td></tr>`
+            )
+            .join('')
+        );
+
+        const pagesBody = document.getElementById('pages-body')!;
+        rowsOrEmpty(
+          pagesBody,
+          data.topPages,
+          5,
+          data.topPages
+            .map(
+              (row: any) =>
+                `<tr><td class="px-4 py-2 break-all">${escapeHtml(row.page)}</td><td class="px-4 py-2 text-right">${num(row.clicks)}</td><td class="px-4 py-2 text-right">${num(row.impressions)}</td><td class="px-4 py-2 text-right">${pct(row.ctr)}</td><td class="px-4 py-2 text-right">${pos(row.position)}</td></tr>`
+            )
+            .join('')
+        );
+
+        const opportunitiesBody = document.getElementById('opportunities-body')!;
+        rowsOrEmpty(
+          opportunitiesBody,
+          data.opportunities,
+          5,
+          data.opportunities
+            .map(
+              (row: any) =>
+                `<tr><td class="px-4 py-2 break-words">${escapeHtml(row.query)}</td><td class="px-4 py-2">${escapeHtml(row.reason === 'low_ctr' ? 'Low CTR' : 'Striking distance')}</td><td class="px-4 py-2 text-right">${num(row.impressions)}</td><td class="px-4 py-2 text-right">${pct(row.ctr)}</td><td class="px-4 py-2 text-right">${pos(row.position)}</td></tr>`
+            )
+            .join('')
+        );
+
+        const cannibalizationBody = document.getElementById('cannibalization-body')!;
+        rowsOrEmpty(
+          cannibalizationBody,
+          data.cannibalization,
+          4,
+          data.cannibalization
+            .map(
+              (row: any) =>
+                `<tr><td class="px-4 py-2 break-words">${escapeHtml(row.query)}</td><td class="px-4 py-2 text-right">${num(row.pages.length)}</td><td class="px-4 py-2 text-right">${num(row.impressions)}</td><td class="px-4 py-2 space-y-0.5">${row.pages
+                  .map(
+                    (page: any) =>
+                      `<div class="break-all text-xs"><span class="text-gray-500 dark:text-gray-400">${num(page.impressions)} impr.</span> ${escapeHtml(page.page)}</div>`
+                  )
+                  .join('')}</td></tr>`
+            )
+            .join('')
+        );
+
+        const tasksBody = document.getElementById('tasks-body')!;
+        rowsOrEmpty(
+          tasksBody,
+          data.tasks,
+          5,
+          data.tasks
+            .map(
+              (task: any) =>
+                `<tr><td class="px-4 py-2"><span class="text-xs font-medium uppercase ${task.priority === 'high' ? 'text-red-600 dark:text-red-400' : 'text-amber-600 dark:text-amber-400'}">${escapeHtml(task.priority)}</span></td><td class="px-4 py-2 text-xs">${escapeHtml(task.type)}</td><td class="px-4 py-2 break-words">${escapeHtml(task.query)}</td><td class="px-4 py-2 text-right">${num(task.impressions)}</td><td class="px-4 py-2 text-xs">${escapeHtml(task.action)}</td></tr>`
+            )
+            .join('')
+        );
+      }
+
+      async function load() {
+        statusEl.textContent = 'Loading Search Console data…';
+        try {
+          const res = await fetch('/api/admin/seo/dashboard', { credentials: 'same-origin' });
+          if (res.status === 401) return window.location.replace('/login');
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          render(await res.json());
+        } catch (err) {
+          statusEl.textContent = `Failed to load GSC data: ${err instanceof Error ? err.message : String(err)}`;
+        }
+      }
+
+      document.getElementById('refresh')!.addEventListener('click', load);
+      load();
+    })();
+  </script>
+</AdminLayout>

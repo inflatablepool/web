@@ -181,6 +181,12 @@ Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/adm
 
 **Security note:** the Resend key is a Worker secret (`CONTACT_RESEND_API_KEY`) synced from the GitHub secret `RESEND_API_KEY` via `wrangler secret bulk` in `deploy.yml` — no key lives in the repo (verified 2026-10-21). Rotate the GitHub secret to rotate the key.
 
+## SEO Dashboard (real GSC data)
+
+- Admin UI: `/keystatic/seo-dashboard` (AdminLayout `noindex`, robots-disallowed) → `GET /api/admin/seo/dashboard` (admin-worker).
+- Data source: R2 `analytics/gsc/latest.json` + `analytics/gsc/trend.json`, written by `workers/automation-worker/src/gsc-fetch.ts` during the daily cron or `POST /api/automation/gsc-fetch`. There is **no sample/demo fallback**: missing credentials or snapshots return `configured:false` and the UI shows an explicit empty state.
+- Derived rules (all from real rows): low CTR = position ≤20, CTR <2%, ≥50 impressions; striking distance = position 10.5–20, ≥50 impressions; cannibalization = one query on ≥2 pages, ≥20 impressions. Tasks are suggestions, never auto-published content.
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):
