@@ -89,7 +89,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'Criterion 5: Material Compliance',
         paragraphs: [
           'Pool fabric must survive UV exposure, chlorine chemistry and years of flexing. Ask for the material specification sheet: fabric weight, lamination layers, UV stabilizers and chemical compliance. For markets in the EU, REACH compliance is a legal requirement — request the declaration and keep it on file.',
-          'Inflatable Pool Factory pools use UV-resistant, double-layer drop-stitch PVC — the same material family used for high-pressure SUP boards. Material specifications and available compliance documents are reviewed against the target market and confirmed for each project.',
+          'Inflatable Pool Factory pools use UV-resistant, double-layer drop-stitch PVC — the same material family used in high-pressure inflatable structures. Material specifications and available compliance documents are reviewed against the target market and confirmed for each project.',
         ],
       },
       {

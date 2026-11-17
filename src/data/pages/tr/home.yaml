@@ -164,7 +164,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Drop Stitch havuzu ne kadar serttir?
-      description: Çok katı. Drop Stitch duvarları, şişirilebilir kürek tahtasına benzer şekilde 4-5 PSI'da sert bir şekilde şişer, böylece havuz suyla doldurulduğunda şeklini korur.
+      description: Çok katı. Drop Stitch duvarları 4-5 PSI'da sert bir şekilde şişer, böylece havuz suyla doldurulduğunda şeklini korur.
       icon: tabler:hexagon
       category: all
     - title: Çocuklar havuzu kullanabilir mi?

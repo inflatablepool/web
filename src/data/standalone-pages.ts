@@ -17,7 +17,7 @@ export const standalonePages: StandalonePage[] = [
     sections: [
       {
         heading: 'What Is Drop Stitch?',
-        body: 'Drop stitch fabric joins two layers of PVC with thousands of internal polyester threads. When the chamber inflates, the threads lock the layers a fixed distance apart, turning soft fabric into a panel as rigid as plywood. This is the same construction used in high-pressure inflatable stand-up paddleboards.',
+        body: 'Drop stitch fabric joins two layers of PVC with thousands of internal polyester threads. When the chamber inflates, the threads lock the layers a fixed distance apart, turning soft fabric into a panel as rigid as plywood. This is the same construction used in high-pressure inflatable structures.',
       },
       {
         heading: 'Why It Makes a Better Pool',

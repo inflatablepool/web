@@ -67,7 +67,7 @@ export const POOL_PRODUCTION_STEPS: PoolProductionStep[] = [
   {
     title: 'Material Preparation & CNC Cutting',
     description:
-      'High-density double-layer drop-stitch fabric — the same premium material used for our SUP boards — is fed into CNC cutting machines that precisely cut pool floors, side walls, and reinforcement patches per engineering blueprints.',
+      'High-density double-layer drop-stitch fabric — the same drop-stitch construction used across our pool range — is fed into CNC cutting machines that precisely cut pool floors, side walls, and reinforcement patches per engineering blueprints.',
   },
   {
     title: 'Valve & Fitting Installation',
