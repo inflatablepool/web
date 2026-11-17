@@ -1,0 +1,444 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+interface Props {
+  id?: string;
+  formId?: string;
+  endpoint?: string;
+}
+
+const { id = 'rfq-assistant', formId = 'rfq-form', endpoint = '/api/ai/rfq' } = Astro.props;
+
+const inputId = `${id}-brief`;
+const runId = `${id}-run`;
+const statusId = `${id}-status`;
+const resultId = `${id}-result`;
+const modeId = `${id}-mode`;
+const summaryId = `${id}-summary`;
+const missingId = `${id}-missing`;
+const applyId = `${id}-apply`;
+const messageId = `${id}-message`;
+const buyerTypeId = `${id}-buyer-type`;
+const productTypeId = `${id}-product-type`;
+const quantityId = `${id}-quantity`;
+const customizationId = `${id}-customization`;
+const countryId = `${id}-country`;
+const deliveryId = `${id}-delivery`;
+
+const buyerTypes = [
+  'Brand Owner / Private Label',
+  'Importer / Distributor',
+  'Retailer / E-commerce',
+  'Hotel / Resort / Hospitality',
+  'Commercial Project',
+  'Other',
+];
+const productTypes = [
+  'Rectangular Drop-Stitch Pool',
+  'Round Pool (Blue)',
+  'Round Pool (Grey)',
+  'SPA / Hot Tub',
+  'Custom OEM / ODM',
+  'Not Sure Yet',
+];
+const customizationLevels = [
+  'Standard Product',
+  'Logo / Branding Only',
+  'Custom Sizes, Colors or Packaging',
+  'ODM / Product Development',
+  'Not Sure Yet',
+];
+
+const inputClass =
+  'mt-1 block w-full rounded-md border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm text-default placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30';
+const labelClass = 'block text-xs font-medium text-muted';
+---
+
+<WidgetWrapper id={id} containerClass="max-w-7xl mx-auto">
+  <div class="grid items-start gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">AI RFQ Assistant</p>
+      <h2 class="mt-2 font-heading text-3xl font-bold tracking-tight text-default md:text-4xl">
+        Turn a rough brief into a structured RFQ
+      </h2>
+      <p class="mt-3 text-muted">
+        Describe your project in plain language. The assistant extracts the buyer type, product type, quantity,
+        customization level and target market so you can review them before completing the quotation form. It only
+        structures what you write — it does not invent specifications, certifications, prices, MOQs or lead times.
+      </p>
+
+      <label for={inputId} class="mt-6 block text-sm font-medium text-default">Your project description</label>
+      <textarea
+        id={inputId}
+        rows="6"
+        maxlength="2000"
+        class={`${inputClass} mt-2`}
+        placeholder="Example: We are a distributor in Germany planning a private-label range. We need 800 pcs of rectangular drop-stitch pools with custom colours and packaging for Q2 2027."
+      ></textarea>
+      <p class="mt-2 text-xs text-muted">
+        Please do not include email addresses or phone numbers. Contact details are removed before AI processing.
+        Nothing is submitted until you review and send the quotation form.
+      </p>
+
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button
+          id={runId}
+          type="button"
+          class="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-slate-900"
+        >
+          Structure my requirements
+        </button>
+        <span class="text-xs text-muted">Takes a few seconds · no form submission</span>
+      </div>
+
+      <p id={statusId} role="status" aria-live="polite" class="mt-3 min-h-5 text-sm text-muted"></p>
+
+      <ol class="mt-6 grid gap-2 text-sm text-muted sm:grid-cols-3">
+        <li class="rounded-md border border-gray-200 p-3 dark:border-slate-700">
+          <span class="font-semibold text-default">1.</span> Describe the project.
+        </li>
+        <li class="rounded-md border border-gray-200 p-3 dark:border-slate-700">
+          <span class="font-semibold text-default">2.</span> Review the extracted fields.
+        </li>
+        <li class="rounded-md border border-gray-200 p-3 dark:border-slate-700">
+          <span class="font-semibold text-default">3.</span> Add contact details and submit.
+        </li>
+      </ol>
+    </div>
+
+    <div
+      id={resultId}
+      data-root={id}
+      data-rfq-assistant-result
+      data-endpoint={endpoint}
+      data-form-id={formId}
+      class="hidden rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-900"
+    >
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h3 class="text-lg font-semibold text-default">Review structured fields</h3>
+        <span id={modeId} class="rounded-full px-2.5 py-0.5 text-xs font-medium"></span>
+      </div>
+      <p id={summaryId} class="mt-2 text-sm text-muted"></p>
+
+      <div
+        id={missingId}
+        class="mt-3 rounded-md border border-amber-300 bg-amber-50 p-2.5 text-xs text-amber-800 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300"
+      >
+      </div>
+
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <label class={labelClass} for={buyerTypeId}
+          >Buyer type
+          <select id={buyerTypeId} class={inputClass}>
+            <option value="">Select buyer type</option>
+            {buyerTypes.map((option) => <option value={option}>{option}</option>)}
+          </select>
+        </label>
+
+        <label class={labelClass} for={productTypeId}
+          >Product type
+          <select id={productTypeId} class={inputClass}>
+            <option value="">Select product type</option>
+            {productTypes.map((option) => <option value={option}>{option}</option>)}
+          </select>
+        </label>
+
+        <label class={labelClass} for={quantityId}
+          >Estimated quantity
+          <input
+            id={quantityId}
+            type="text"
+            maxlength="120"
+            class={inputClass}
+            placeholder="e.g. 800 pcs, sample order"
+          />
+        </label>
+
+        <label class={labelClass} for={customizationId}
+          >Customization level
+          <select id={customizationId} class={inputClass}>
+            <option value="">Select customization level</option>
+            {customizationLevels.map((option) => <option value={option}>{option}</option>)}
+          </select>
+        </label>
+
+        <label class={labelClass} for={countryId}
+          >Country / target market
+          <input id={countryId} type="text" maxlength="120" class={inputClass} placeholder="e.g. Germany, UAE, USA" />
+        </label>
+
+        <label class={labelClass} for={deliveryId}
+          >Target delivery date
+          <input id={deliveryId} type="text" maxlength="120" class={inputClass} placeholder="e.g. Q2 2027, or TBD" />
+        </label>
+
+        <label class={`${labelClass} sm:col-span-2`} for={messageId}
+          >Project brief
+          <textarea id={messageId} rows="3" maxlength="1500" class={inputClass}></textarea>
+        </label>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button
+          id={applyId}
+          type="button"
+          class="inline-flex items-center justify-center rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-slate-900"
+        >
+          Use in quotation form
+        </button>
+        <span class="text-xs text-muted">Fields are prefilled only; you still need to submit the form.</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      type Tone = 'info' | 'success' | 'error';
+
+      interface RfqFields {
+        buyerType: string;
+        productType: string;
+        quantity: string;
+        customizationLevel: string;
+        country: string;
+        targetDelivery: string;
+        message: string;
+      }
+
+      interface RfqApiResponse {
+        success?: boolean;
+        fields?: Partial<RfqFields>;
+        missing?: string[];
+        summary?: string;
+        mode?: 'ai' | 'rules';
+        redacted?: boolean;
+        error?: string;
+      }
+
+      const resultNode = document.querySelector<HTMLElement>('[data-rfq-assistant-result]');
+      if (!resultNode) return;
+      const result: HTMLElement = resultNode;
+      const rootId: string = result.dataset.root || 'rfq-assistant';
+
+      const inputNode = document.getElementById(`${rootId}-brief`);
+      const runNode = document.getElementById(`${rootId}-run`);
+      const statusNode = document.getElementById(`${rootId}-status`);
+      const modeNode = document.getElementById(`${rootId}-mode`);
+      const summaryNode = document.getElementById(`${rootId}-summary`);
+      const missingNode = document.getElementById(`${rootId}-missing`);
+      const applyNode = document.getElementById(`${rootId}-apply`);
+      if (
+        !(inputNode instanceof HTMLTextAreaElement) ||
+        !(runNode instanceof HTMLButtonElement) ||
+        !statusNode ||
+        !modeNode ||
+        !summaryNode ||
+        !missingNode ||
+        !(applyNode instanceof HTMLButtonElement)
+      ) {
+        return;
+      }
+
+      const input: HTMLTextAreaElement = inputNode;
+      const runButton: HTMLButtonElement = runNode;
+      const statusEl: HTMLElement = statusNode;
+      const modeEl: HTMLElement = modeNode;
+      const summaryEl: HTMLElement = summaryNode;
+      const missingEl: HTMLElement = missingNode;
+      const applyButton: HTMLButtonElement = applyNode;
+
+      const messageField = document.getElementById(`${rootId}-message`);
+      const buyerTypeField = document.getElementById(`${rootId}-buyer-type`);
+      const productTypeField = document.getElementById(`${rootId}-product-type`);
+      const quantityField = document.getElementById(`${rootId}-quantity`);
+      const customizationField = document.getElementById(`${rootId}-customization`);
+      const countryField = document.getElementById(`${rootId}-country`);
+      const deliveryField = document.getElementById(`${rootId}-delivery`);
+
+      const endpoint: string = result.dataset.endpoint || '/api/ai/rfq';
+      const formId: string = result.dataset.formId || 'rfq-form';
+
+      function setStatus(text: string, tone: Tone = 'info'): void {
+        statusEl.textContent = text;
+        statusEl.className =
+          tone === 'error'
+            ? 'mt-3 min-h-5 text-sm text-red-600 dark:text-red-400'
+            : tone === 'success'
+              ? 'mt-3 min-h-5 text-sm text-green-700 dark:text-green-400'
+              : 'mt-3 min-h-5 text-sm text-muted';
+      }
+
+      function fieldValue(element: HTMLElement | null): string {
+        if (
+          element instanceof HTMLInputElement ||
+          element instanceof HTMLTextAreaElement ||
+          element instanceof HTMLSelectElement
+        ) {
+          return element.value.trim();
+        }
+        return '';
+      }
+
+      function setSelect(select: HTMLSelectElement, value: string): void {
+        const match = Array.from(select.options).find((option) => option.value === value);
+        if (match) select.value = match.value;
+      }
+
+      function fillFields(fields: Partial<RfqFields>): void {
+        if (buyerTypeField instanceof HTMLSelectElement) setSelect(buyerTypeField, fields.buyerType || '');
+        if (productTypeField instanceof HTMLSelectElement) setSelect(productTypeField, fields.productType || '');
+        if (customizationField instanceof HTMLSelectElement) {
+          setSelect(customizationField, fields.customizationLevel || '');
+        }
+        if (quantityField instanceof HTMLInputElement) quantityField.value = fields.quantity || '';
+        if (countryField instanceof HTMLInputElement) countryField.value = fields.country || '';
+        if (deliveryField instanceof HTMLInputElement) deliveryField.value = fields.targetDelivery || '';
+        if (messageField instanceof HTMLTextAreaElement) messageField.value = fields.message || '';
+      }
+
+      function collectFields(): RfqFields {
+        return {
+          buyerType: fieldValue(buyerTypeField),
+          productType: fieldValue(productTypeField),
+          quantity: fieldValue(quantityField),
+          customizationLevel: fieldValue(customizationField),
+          country: fieldValue(countryField),
+          targetDelivery: fieldValue(deliveryField),
+          message: fieldValue(messageField),
+        };
+      }
+
+      function render(data: RfqApiResponse): void {
+        const fields: Partial<RfqFields> = data.fields || {};
+        fillFields(fields);
+        modeEl.textContent = data.mode === 'ai' ? 'AI-assisted extraction' : 'Rule-based extraction';
+        modeEl.className =
+          data.mode === 'ai'
+            ? 'rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-950 dark:text-blue-300'
+            : 'rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-slate-800 dark:text-slate-300';
+        summaryEl.textContent = data.summary || 'Review the fields below.';
+        const missingFields: string[] = Array.isArray(data.missing) ? data.missing : [];
+        missingEl.textContent = missingFields.length
+          ? `Still needed: ${missingFields.join(', ')}. You can fill these in below.`
+          : 'All core fields detected. Review the values before adding them to the quotation form.';
+        missingEl.className = missingFields.length
+          ? 'mt-3 rounded-md border border-amber-300 bg-amber-50 p-2.5 text-xs text-amber-800 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300'
+          : 'mt-3 rounded-md border border-green-300 bg-green-50 p-2.5 text-xs text-green-800 dark:border-green-700 dark:bg-green-950/40 dark:text-green-300';
+        result.classList.remove('hidden');
+        if (data.redacted) {
+          setStatus('Contact details were removed before processing. Review the extracted fields below.', 'success');
+        } else {
+          setStatus(
+            'Requirements structured. Review the fields and add them to the quotation form when ready.',
+            'success'
+          );
+        }
+      }
+
+      async function run(): Promise<void> {
+        const brief = input.value.trim();
+        if (brief.length < 12) {
+          setStatus(
+            'Please add a little more detail: product type, quantity, customization and target market.',
+            'error'
+          );
+          input.focus();
+          return;
+        }
+
+        const original = runButton.textContent;
+        runButton.disabled = true;
+        runButton.textContent = 'Structuring…';
+        setStatus('Reading your brief…');
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: brief }),
+          });
+          const data = (await response.json().catch(() => ({}))) as RfqApiResponse;
+          if (!response.ok || !data.success) {
+            throw new Error(data.error || `Request failed (${response.status})`);
+          }
+          render(data);
+        } catch (error) {
+          setStatus(
+            error instanceof Error ? error.message : 'Could not structure the brief. Please try again.',
+            'error'
+          );
+        } finally {
+          runButton.disabled = false;
+          runButton.textContent = original;
+        }
+      }
+
+      function setFormField(form: HTMLFormElement, name: string, value: string): boolean {
+        if (!value) return false;
+        const element = form.querySelector(`[name="${name}"]`);
+        if (element instanceof HTMLSelectElement) {
+          const match = Array.from(element.options).find((option) => option.value === value);
+          if (!match) return false;
+          element.value = match.value;
+        } else if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) {
+          element.value = value;
+        } else {
+          return false;
+        }
+        element.dispatchEvent(new Event('input', { bubbles: true }));
+        element.dispatchEvent(new Event('change', { bubbles: true }));
+        return true;
+      }
+
+      function applyToForm(): void {
+        const fields = collectFields();
+        const form = document.getElementById(formId);
+        if (!(form instanceof HTMLFormElement)) {
+          setStatus('Quotation form not found on this page. Please use the form below directly.', 'error');
+          return;
+        }
+
+        let applied = 0;
+        if (setFormField(form, 'buyerType', fields.buyerType)) applied += 1;
+        if (setFormField(form, 'productType', fields.productType)) applied += 1;
+        if (setFormField(form, 'quantity', fields.quantity)) applied += 1;
+        if (setFormField(form, 'customizationLevel', fields.customizationLevel)) applied += 1;
+        if (setFormField(form, 'country', fields.country)) applied += 1;
+        if (setFormField(form, 'targetDelivery', fields.targetDelivery)) applied += 1;
+
+        const summaryLines = [
+          fields.buyerType && `Buyer type: ${fields.buyerType}`,
+          fields.productType && `Product type: ${fields.productType}`,
+          fields.quantity && `Estimated quantity: ${fields.quantity}`,
+          fields.customizationLevel && `Customization level: ${fields.customizationLevel}`,
+          fields.country && `Country / target market: ${fields.country}`,
+          fields.targetDelivery && `Target delivery: ${fields.targetDelivery}`,
+        ].filter(Boolean);
+
+        const brief = fields.message ? `Buyer brief:\n${fields.message}` : '';
+        const structured = summaryLines.length ? `Structured summary:\n${summaryLines.join('\n')}` : '';
+        const addition = [brief, structured].filter(Boolean).join('\n\n');
+
+        const messageElement = form.querySelector('[name="message"]');
+        if (addition && (messageElement instanceof HTMLTextAreaElement || messageElement instanceof HTMLInputElement)) {
+          const existing = messageElement.value.trim();
+          messageElement.value = [existing, addition].filter(Boolean).join('\n\n').slice(0, 5000);
+          messageElement.dispatchEvent(new Event('input', { bubbles: true }));
+          messageElement.dispatchEvent(new Event('change', { bubbles: true }));
+          applied += 1;
+        }
+
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setStatus(
+          applied > 0
+            ? `Added ${applied} field(s) to the quotation form. Complete your contact details and submit when ready.`
+            : 'No fields could be added automatically. Please copy the details into the form below.',
+          applied > 0 ? 'success' : 'error'
+        );
+      }
+
+      runButton.addEventListener('click', run);
+      applyButton.addEventListener('click', applyToForm);
+    })();
+  </script>
+</WidgetWrapper>

@@ -206,6 +206,15 @@ Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/adm
 - `src/content.config.ts` exposes optional `aiGenerated`/`aiReview` fields on the post/product/technology/case-use/pool-idea-detail collections so MDX frontmatter validates.
 - Tests: `npm run test:content` (gate + admin API/sanitize/permission tests).
 
+## AI RFQ Assistant (P2)
+
+- UI: `/request-quotation#rfq-assistant` (root English page). It extracts buyer type, product type, quantity, customization level, target market and delivery timeframe from a free-text brief and pre-fills the existing RFQ form. It never submits automatically.
+- Endpoint: `POST /api/ai/rfq` (ai-worker; covered by the existing `inflatablepoolfactory.com/api/ai/*` route, so no new Cloudflare route is required). Rate limit: 10 requests / 10 minutes / IP.
+- Extraction order: deterministic rules always run first; Workers AI (`LLAMA_MODEL`) is an optional second pass. AI output is restricted to the form's allowed option values, and free-text values must be grounded in the buyer's own words; otherwise the rule value wins. The buyer's message is kept verbatim (minus redactions).
+- Privacy: email addresses and phone-like numbers are redacted before AI processing. The endpoint does not store the brief; submission still goes through the contact worker → D1.
+- AI must never invent specifications, certifications, prices, MOQs, lead times or capacity. `workers/ai-worker/rfq-assistant.ts` only returns form fields; no product facts are generated.
+- Tests: `npm run test:ai`.
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):

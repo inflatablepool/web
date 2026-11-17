@@ -1,3 +1,5 @@
+import { extractRfqRequirements, sanitizeRfqMessage } from './rfq-assistant';
+
 export interface Env {
   AI: AiLike;
   VECTORIZE: VectorizeLike;
@@ -133,6 +135,7 @@ const CRON_MAX_MS = 10 * 60 * 1000;
 const RATE_LIMITS: Record<string, { limit: number; windowSec: number }> = {
   ask: { limit: 10, windowSec: 600 },
   chat: { limit: 10, windowSec: 600 },
+  rfq: { limit: 10, windowSec: 600 },
   search: { limit: 60, windowSec: 60 },
   embed: { limit: 10, windowSec: 600 },
 };
@@ -729,6 +732,35 @@ async function handleChat(request: Request, env: Env, ctx: ExecutionContext): Pr
   return json({ ...fallback, context: fallback.answer });
 }
 
+async function handleRfqAssistant(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
+
+  const limited = await rateLimit(env, ctx, 'rfq', request);
+  if (limited) return limited;
+
+  const body = await readBody(request);
+  const message = sanitizeRfqMessage(body.message);
+  if (message.tooShort) {
+    return json(
+      {
+        error:
+          'Please describe your project in a little more detail: product type, estimated quantity, customization and target market.',
+      },
+      400
+    );
+  }
+
+  const extraction = await extractRfqRequirements(message.text, env, LLM_MODEL);
+  if (extraction.mode === 'ai') quotaAdd(env, ctx, { asks: 1 });
+
+  return json({
+    success: true,
+    ...extraction,
+    redacted: message.redacted,
+    truncated: message.tooLong,
+  });
+}
+
 async function handleSearch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const limited = await rateLimit(env, ctx, 'search', request);
   if (limited) return limited;
@@ -976,6 +1008,8 @@ export default {
           return await handleChat(request, env, ctx);
         case '/ask':
           return await handleAsk(request, env, ctx);
+        case '/ai/rfq':
+          return await handleRfqAssistant(request, env, ctx);
         case '/search':
           return await handleSearch(request, env, ctx);
         case '/embed':

@@ -1,6 +1,7 @@
 ---
 import Steps2 from '~/components/widgets/Steps2.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import RfqAssistant from '~/components/ai/RfqAssistant.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -48,6 +49,7 @@ const consent = {
     items={process.items}
     image={process.image}
   />
+  <RfqAssistant formId={`${form.id || 'rfq'}-form`} />
   <ContactUs
     id={form.id || 'rfq'}
     tagline={form.tagline}
