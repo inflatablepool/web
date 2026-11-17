@@ -164,6 +164,44 @@ test('AI values are grounded in the buyer text before merging', () => {
   assert.equal(merged.targetDelivery, '');
 });
 
+test('deterministic rule matches win over AI reclassification', () => {
+  const text = 'We are a distributor in Germany and need 800 pcs rectangular drop-stitch pools with our logo.';
+  const rules = extractRfqFieldsRules(text).fields;
+  assert.equal(rules.buyerType, 'Importer / Distributor');
+  const merged = mergeAiFields(
+    rules,
+    {
+      buyerType: 'Retailer / E-commerce',
+      productType: 'Not Sure Yet',
+      customizationLevel: 'Standard Product',
+      quantity: '2,000 pcs',
+      country: 'France',
+      targetDelivery: 'Q4 2030',
+    },
+    text
+  );
+  assert.equal(merged.buyerType, 'Importer / Distributor');
+  assert.equal(merged.productType, 'Rectangular Drop-Stitch Pool');
+  assert.equal(merged.customizationLevel, 'Logo / Branding Only');
+  assert.equal(merged.quantity, '800 pcs');
+  assert.equal(merged.country, 'Germany');
+  assert.equal(merged.targetDelivery, '');
+});
+
+test('AI fills only the fields the rules leave empty', () => {
+  const text =
+    'Our buying office sources seasonal outdoor leisure products for hypermarkets in Poland. We plan a first order of 500 units and need our own branding.';
+  const rules = extractRfqFieldsRules(text).fields;
+  assert.equal(rules.buyerType, '');
+  assert.equal(rules.productType, '');
+  const merged = mergeAiFields(rules, { buyerType: 'Retailer / E-commerce', productType: 'Not Sure Yet' }, text);
+  assert.equal(merged.buyerType, 'Retailer / E-commerce');
+  assert.equal(merged.productType, 'Not Sure Yet');
+  assert.equal(merged.quantity, '500 units');
+  assert.equal(merged.customizationLevel, 'Logo / Branding Only');
+  assert.equal(merged.country, 'Poland');
+});
+
 test('AI mode merges a valid extraction and keeps the buyer message verbatim', async () => {
   const env = {
     AI: {

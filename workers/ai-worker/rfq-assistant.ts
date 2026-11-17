@@ -553,18 +553,22 @@ function deliveryGrounded(value: string, text: string): boolean {
 }
 
 /**
- * Merge validated AI fields with the deterministic rules. AI may classify the
- * buyer/product/customization type, but free-text values must be grounded in
- * the buyer's own words. The buyer's message is always kept verbatim.
+ * Merge validated AI fields with the deterministic rules. A non-empty rule value
+ * always wins because it is anchored to explicit keywords in the buyer's
+ * message; the model only fills fields the rules could not determine. This
+ * prevents the small model from overriding e.g. an explicit "distributor".
+ * Free-text AI values must still be grounded in the buyer's own words.
  */
 export function mergeAiFields(rules: RfqFields, ai: Partial<RfqFields>, text: string): RfqFields {
   const merged: RfqFields = { ...rules };
-  if (ai.buyerType) merged.buyerType = ai.buyerType;
-  if (ai.productType) merged.productType = ai.productType;
-  if (ai.customizationLevel) merged.customizationLevel = ai.customizationLevel;
-  if (ai.quantity && quantityGrounded(ai.quantity, text)) merged.quantity = ai.quantity;
-  if (ai.country && countryGrounded(ai.country, text)) merged.country = ai.country;
-  if (ai.targetDelivery && deliveryGrounded(ai.targetDelivery, text)) merged.targetDelivery = ai.targetDelivery;
+  if (!merged.buyerType && ai.buyerType) merged.buyerType = ai.buyerType;
+  if (!merged.productType && ai.productType) merged.productType = ai.productType;
+  if (!merged.customizationLevel && ai.customizationLevel) merged.customizationLevel = ai.customizationLevel;
+  if (!merged.quantity && ai.quantity && quantityGrounded(ai.quantity, text)) merged.quantity = ai.quantity;
+  if (!merged.country && ai.country && countryGrounded(ai.country, text)) merged.country = ai.country;
+  if (!merged.targetDelivery && ai.targetDelivery && deliveryGrounded(ai.targetDelivery, text)) {
+    merged.targetDelivery = ai.targetDelivery;
+  }
   return merged;
 }
 
