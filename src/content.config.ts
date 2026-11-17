@@ -49,6 +49,13 @@ const entityRelationSchema = z
   })
   .optional();
 
+// AI provenance markers. A content file with `aiGenerated: true` must point at
+// a published review record via `aiReview`; see scripts/check-ai-content.mjs.
+const aiProvenanceFields = {
+  aiGenerated: z.boolean().optional(),
+  aiReview: z.string().optional(),
+};
+
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/content/news' }),
   schema: z.object({
@@ -64,6 +71,7 @@ const postCollection = defineCollection({
     metadata: metadataDefinition(),
     entityType: z.literal('article').optional(),
     entityRelations: z.array(entityRelationSchema).optional(),
+    ...aiProvenanceFields,
   }),
 });
 
@@ -113,6 +121,7 @@ const productCollection = defineCollection({
       })
       .optional(),
     entityRelations: z.array(entityRelationSchema).optional(),
+    ...aiProvenanceFields,
   }),
 });
 
@@ -126,6 +135,7 @@ const technologySchema = z.object({
   tags: z.array(z.string()).optional(),
   entityType: z.literal('technology').optional(),
   entityRelations: z.array(entityRelationSchema).optional(),
+  ...aiProvenanceFields,
 });
 
 const technologyCollection = defineCollection({
@@ -146,6 +156,7 @@ const caseUseSchema = z.object({
   tags: z.array(z.string()).optional(),
   entityType: z.literal('case-use').optional(),
   entityRelations: z.array(entityRelationSchema).optional(),
+  ...aiProvenanceFields,
 });
 
 const caseUseCollection = defineCollection({
@@ -158,6 +169,7 @@ const poolIdeaDetailCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    ...aiProvenanceFields,
   }),
 });
 

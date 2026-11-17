@@ -42,6 +42,9 @@ jobs:
       - name: Asset provenance + licence ledger
         run: node scripts/check-asset-ledger.mjs --strict
 
+      - name: AI content review gate (sources, fact check, publishers)
+        run: node scripts/check-ai-content.mjs --strict
+
       - name: Workers compile check (dry-run bundles)
         run: |
           npx wrangler deploy --dry-run -c workers/admin-worker/wrangler.toml

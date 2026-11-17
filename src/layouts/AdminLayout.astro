@@ -16,6 +16,7 @@ interface Props {
     | 'seo'
     | 'seo-dashboard'
     | 'asset-ledger'
+    | 'content-review'
     | 'hero'
     | 'categories'
     | 'tech'
@@ -112,8 +113,11 @@ const groups: TabGroup[] = [
     ],
   },
   {
-    label: 'Assets',
-    children: [{ id: 'asset-ledger', href: '/keystatic/asset-ledger', label: 'Licence Ledger' }],
+    label: 'Governance',
+    children: [
+      { id: 'asset-ledger', href: '/keystatic/asset-ledger', label: 'Licence Ledger' },
+      { id: 'content-review', href: '/keystatic/content-review', label: 'AI Content Review' },
+    ],
   },
   {
     label: 'Settings',

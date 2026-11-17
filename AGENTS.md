@@ -196,6 +196,16 @@ Admin reads submissions at `/keystatic/inquiries` — the page fetches `/api/adm
 - Admin UI: `/keystatic/asset-ledger` → `GET/POST /api/admin/asset-ledger` (admin-worker; reviews save to `draft`, Publish merges `draft` → `main`). The page shows previews, source-file references and per-asset type/licence/status/reviewer fields.
 - Current baseline (2026-11-17): 48 repo images + 2 R2-only hero images, all `pending`/`unverified` because no provenance was recorded at import time. The gate prevents new unapproved assets; it does not retroactively declare the legacy baseline licensed.
 
+## AI Content Review (P1-07)
+
+- Any AI-assisted content file must carry `aiGenerated: true` and `aiReview: <id>` (MD/MDX frontmatter or YAML top level). The id points at a record in `src/data/site/ai-content-reviews.yaml`.
+- Gate: `node scripts/check-ai-content.mjs --strict` runs in CI and `deploy.yml` before any Cloudflare upload; the build runs the non-strict gate. Missing markers/records and incomplete published records fail both modes. Draft AI content is a warning locally and a hard failure in strict/deploy mode.
+- Published records require: `factCheckStatus: approved`, `humanReviewStatus: approved`, `translationReviewStatus: approved` (or `not_required` for EN-only), at least one source, every claim `verified` with evidence, an approved `translations[]` entry for every non-English file, `publishedBy` in `publishers[]`, `publishedAt`, and a non-empty `history[]`.
+- AI must never invent product specs, certifications or production capacity: `check-ai-content.mjs` extracts risk tokens (ISO/ASTM/EN/CE/RoHS/SGS/TÜV, dimensions, pressure, wattage, capacity per month/year) from published AI files and fails unless each token appears in a verified claim's statement/evidence.
+- Admin UI: `/keystatic/content-review` → `GET/POST /api/admin/content-review` (admin-worker; saves to `draft`). `publishedBy` is assigned server-side from the logged-in admin; only emails in `publishers[]` may publish. The generic `/api/admin/publish` refuses to merge a draft that edits `publishers[]` or contains unpublished AI content files. Change the whitelist via PR, not the admin Publish button.
+- `src/content.config.ts` exposes optional `aiGenerated`/`aiReview` fields on the post/product/technology/case-use/pool-idea-detail collections so MDX frontmatter validates.
+- Tests: `npm run test:content` (gate + admin API/sanitize/permission tests).
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):

@@ -16,6 +16,7 @@ import { applyRuleToText, scanFile, shouldScanPath, validateRule, type RefactorR
 import { mailRowFromD1, recordInquiryEmailAttempt, sendInquiryEmail } from '../shared/inquiry-mail';
 import { buildSeoDashboard } from './seo-dashboard';
 import { getAssetLedger, saveAssetLedger } from './asset-ledger';
+import { checkContentReviewPublishGuard, getContentReview, saveContentReview } from './content-review';
 
 interface Env extends AuthEnv {
   GITHUB_TOKEN?: string;
@@ -237,6 +238,14 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
 
   if (path === '/api/admin/asset-ledger' && request.method === 'POST') {
     return await saveAssetLedger({ token, owner, repo, api }, request, ensureBranch);
+  }
+
+  if (path === '/api/admin/content-review' && request.method === 'GET') {
+    return await getContentReview({ token, owner, repo, api }, admin, request);
+  }
+
+  if (path === '/api/admin/content-review' && request.method === 'POST') {
+    return await saveContentReview({ token, owner, repo, api }, request, admin, ensureBranch);
   }
 
   if (path === '/api/admin/pages' && request.method === 'POST') {
@@ -642,6 +651,9 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   }
 
   if (path === '/api/admin/publish' && request.method === 'POST') {
+    const aiBlocked = await checkContentReviewPublishGuard({ token, owner, repo, api });
+    if (aiBlocked) return json({ success: false, error: aiBlocked }, 409);
+
     const res = await fetch(`${api}/merges`, {
       method: 'POST',
       headers: {

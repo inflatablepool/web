@@ -1,0 +1,696 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="AI Content Review" active="content-review">
+  <div class="flex flex-wrap items-start justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">AI Content Review</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        AI-assisted content must declare <code>aiReview: &lt;id&gt;</code> in the file. A record can only be published after
+        sources, fact-checked claims, human review and translation review are approved by a whitelisted publisher.
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <button
+        id="new-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900"
+        >New review</button
+      >
+      <button
+        id="refresh-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900"
+        >Refresh</button
+      >
+      <button
+        id="save-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white">Save Draft</button
+      >
+      <button
+        id="publish-btn"
+        type="button"
+        class="px-3 py-1.5 text-sm font-medium rounded-md bg-green-600 hover:bg-green-700 text-white">Publish</button
+      >
+    </div>
+  </div>
+
+  <div
+    class="mb-4 rounded-md border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 p-3 text-xs text-amber-800 dark:text-amber-300"
+  >
+    <p class="font-medium">Review rules (enforced by <code>scripts/check-ai-content.mjs --strict</code>)</p>
+    <p class="mt-1">
+      Published content needs <code>factCheckStatus</code>, <code>humanReviewStatus</code> and (for non-English files)
+      <code>translationReviewStatus</code> set to <code>approved</code>, at least one source, and every claim
+      <code>verified</code> with evidence. Certifications, product specs and production-capacity numbers in the file must
+      appear in a verified claim — AI must never invent them.
+    </p>
+    <p class="mt-1">
+      Publishers: <span id="publishers" class="font-mono">—</span>
+      <span id="publisher-note" class="block mt-1"></span>
+    </p>
+  </div>
+
+  <div id="status" class="mb-4 text-sm text-gray-500 dark:text-gray-400">Loading AI content reviews…</div>
+
+  <div
+    id="error"
+    class="hidden mb-4 rounded-md border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-950/40 p-3 text-sm text-red-700 dark:text-red-300"
+  >
+  </div>
+
+  <div id="content" class="hidden space-y-5">
+    <div id="stats" class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4"></div>
+
+    <div class="flex flex-wrap items-end gap-3 rounded-md border border-gray-200 dark:border-gray-800 p-3">
+      <label class="text-xs text-gray-500"
+        >Search
+        <input
+          id="search"
+          type="search"
+          placeholder="id, title, file, notes…"
+          class="mt-1 block w-64 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </label>
+      <label class="text-xs text-gray-500"
+        >Review status
+        <select
+          id="status-filter"
+          class="mt-1 block px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="all">All</option>
+          <option value="draft">Draft</option>
+          <option value="published">Published</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </label>
+      <label class="text-xs text-gray-500"
+        >Fact check
+        <select
+          id="check-filter"
+          class="mt-1 block px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </label>
+      <span id="visible-count" class="text-xs text-gray-500"></span>
+      <span class="text-xs text-gray-400">Branch: <code id="branch-label" class="font-mono">—</code></span>
+    </div>
+
+    <div id="list" class="space-y-4"></div>
+  </div>
+
+  <script>
+    (() => {
+      type ReviewStatus = 'draft' | 'published' | 'rejected';
+      type CheckStatus = 'pending' | 'approved' | 'rejected';
+      type TranslationStatus = 'pending' | 'approved' | 'rejected' | 'not_required';
+      type ClaimStatus = 'verified' | 'unverified' | 'rejected';
+
+      interface ContentSource {
+        label: string;
+        url: string;
+        accessedAt: string;
+      }
+
+      interface ContentClaim {
+        statement: string;
+        evidence: string;
+        status: ClaimStatus;
+      }
+
+      interface TranslationReview {
+        lang: string;
+        status: TranslationStatus;
+        reviewedBy: string;
+        reviewedAt: string;
+      }
+
+      interface ReviewHistoryEntry {
+        at: string;
+        by: string;
+        action: string;
+      }
+
+      interface ContentReview {
+        id: string;
+        title: string;
+        status: ReviewStatus;
+        model: string;
+        generatedBy: string;
+        generatedAt: string;
+        files: string[];
+        sources: ContentSource[];
+        claims: ContentClaim[];
+        factCheckStatus: CheckStatus;
+        humanReviewStatus: CheckStatus;
+        translationReviewStatus: TranslationStatus;
+        translations: TranslationReview[];
+        notes: string;
+        publishedBy: string;
+        publishedAt: string;
+        history: ReviewHistoryEntry[];
+      }
+
+      interface ContentReviewLedger {
+        version: number;
+        updated: string;
+        publishers: string[];
+        reviews: ContentReview[];
+      }
+
+      interface State {
+        ledger: ContentReviewLedger | null;
+        sha: string;
+        branch: string;
+        publishers: string[];
+        adminEmail: string;
+        canPublish: boolean;
+      }
+
+      const state: State = {
+        ledger: null,
+        sha: '',
+        branch: '',
+        publishers: [],
+        adminEmail: '',
+        canPublish: false,
+      };
+
+      const statusEl = document.getElementById('status')!;
+      const errorEl = document.getElementById('error')!;
+      const contentEl = document.getElementById('content')!;
+      const statsEl = document.getElementById('stats')!;
+      const listEl = document.getElementById('list')!;
+      const searchEl = document.getElementById('search') as HTMLInputElement;
+      const statusFilter = document.getElementById('status-filter') as HTMLSelectElement;
+      const checkFilter = document.getElementById('check-filter') as HTMLSelectElement;
+      const visibleCount = document.getElementById('visible-count')!;
+      const branchLabel = document.getElementById('branch-label')!;
+      const publishersEl = document.getElementById('publishers')!;
+      const publisherNote = document.getElementById('publisher-note')!;
+      const saveBtn = document.getElementById('save-btn') as HTMLButtonElement;
+      const publishBtn = document.getElementById('publish-btn') as HTMLButtonElement;
+      const refreshBtn = document.getElementById('refresh-btn') as HTMLButtonElement;
+      const newBtn = document.getElementById('new-btn') as HTMLButtonElement;
+
+      const REVIEW_OPTIONS: Array<[ReviewStatus, string]> = [
+        ['draft', 'Draft'],
+        ['published', 'Published'],
+        ['rejected', 'Rejected'],
+      ];
+      const CHECK_OPTIONS: Array<[CheckStatus, string]> = [
+        ['pending', 'Pending'],
+        ['approved', 'Approved'],
+        ['rejected', 'Rejected'],
+      ];
+      const TRANSLATION_OPTIONS: Array<[TranslationStatus, string]> = [
+        ['pending', 'Pending'],
+        ['approved', 'Approved'],
+        ['rejected', 'Rejected'],
+        ['not_required', 'Not required (EN only)'],
+      ];
+
+      function escapeHtml(value: unknown): string {
+        const map: Record<string, string> = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;',
+        };
+        return String(value ?? '').replace(/[&<>"']/g, (ch: string) => map[ch]);
+      }
+
+      function options(values: Array<[string, string]>, selected: string): string {
+        return values
+          .map(([value, label]) => `<option value="${value}"${value === selected ? ' selected' : ''}>${label}</option>`)
+          .join('');
+      }
+
+      function statusBadge(status: ReviewStatus): string {
+        const styles: Record<ReviewStatus, string> = {
+          published: 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300',
+          draft: 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300',
+          rejected: 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300',
+        };
+        return `<span class="px-2 py-0.5 rounded-full text-xs font-medium ${styles[status]}">${status}</span>`;
+      }
+
+      function lines(value: string): string[] {
+        return value
+          .split('\n')
+          .map((line) => line.trim())
+          .filter(Boolean);
+      }
+
+      function splitCells(line: string, count: number): string[] {
+        const parts = line.split('|').map((part) => part.trim());
+        while (parts.length < count) parts.push('');
+        return parts.slice(0, count);
+      }
+
+      function parseSources(value: string): ContentSource[] {
+        return lines(value).map((line) => {
+          const [label, url, accessedAt] = splitCells(line, 3);
+          return { label, url, accessedAt };
+        });
+      }
+
+      function parseClaims(value: string): ContentClaim[] {
+        return lines(value).map((line) => {
+          const [statement, evidence, rawStatus] = splitCells(line, 3);
+          const status = (
+            ['verified', 'unverified', 'rejected'].includes(rawStatus) ? rawStatus : 'unverified'
+          ) as ClaimStatus;
+          return { statement, evidence, status };
+        });
+      }
+
+      function parseTranslations(value: string): TranslationReview[] {
+        return lines(value).map((line) => {
+          const [lang, rawStatus, reviewedBy, reviewedAt] = splitCells(line, 4);
+          const status = (
+            ['pending', 'approved', 'rejected', 'not_required'].includes(rawStatus) ? rawStatus : 'pending'
+          ) as TranslationStatus;
+          return { lang: lang.toLowerCase(), status, reviewedBy, reviewedAt };
+        });
+      }
+
+      function formatSources(sources: ContentSource[]): string {
+        return sources
+          .map((source) => [source.label, source.url, source.accessedAt].filter((part) => part !== '').join(' | '))
+          .join('\n');
+      }
+
+      function formatClaims(claims: ContentClaim[]): string {
+        return claims.map((claim) => [claim.statement, claim.evidence, claim.status].join(' | ')).join('\n');
+      }
+
+      function formatTranslations(translations: TranslationReview[]): string {
+        return translations
+          .map((translation) =>
+            [translation.lang, translation.status, translation.reviewedBy, translation.reviewedAt]
+              .filter((part) => part !== '')
+              .join(' | ')
+          )
+          .join('\n');
+      }
+
+      function historyHtml(review: ContentReview): string {
+        if (!review.history?.length) return '<li class="text-gray-400">No history yet</li>';
+        return review.history
+          .map(
+            (entry) =>
+              `<li><span class="font-mono">${escapeHtml(entry.at)}</span> · ${escapeHtml(entry.by)} · ${escapeHtml(
+                entry.action
+              )}</li>`
+          )
+          .join('');
+      }
+
+      function field(card: HTMLElement, name: string): string {
+        const el = card.querySelector(`[data-field="${name}"]`) as
+          HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+        return el ? el.value.trim() : '';
+      }
+
+      function cardHtml(review: ContentReview): string {
+        const publishedMeta = review.publishedBy
+          ? `Published by <span class="font-mono">${escapeHtml(review.publishedBy)}</span> on ${escapeHtml(
+              review.publishedAt
+            )}`
+          : 'Not published yet — the deploy gate blocks draft AI content.';
+        return `<article class="review-card rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-4" data-id="${escapeHtml(
+          review.id
+        )}" data-published-by="${escapeHtml(review.publishedBy)}" data-published-at="${escapeHtml(review.publishedAt)}">
+          <div class="flex flex-wrap items-center gap-2">
+            <code class="font-mono text-xs break-all">${escapeHtml(review.id)}</code>
+            ${statusBadge(review.status)}
+            <span class="text-xs text-gray-500">${review.files.length} file(s)</span>
+          </div>
+
+          <div class="mt-3 grid gap-3 md:grid-cols-2">
+            <label class="text-xs text-gray-500 md:col-span-2">Title
+              <input data-field="title" value="${escapeHtml(
+                review.title
+              )}" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500">Review status
+              <select data-field="status" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(REVIEW_OPTIONS, review.status)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500">Model / tool
+              <input data-field="model" value="${escapeHtml(
+                review.model
+              )}" placeholder="e.g. gpt-4.1, claude, manual draft" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500">Generated by
+              <input data-field="generatedBy" value="${escapeHtml(
+                review.generatedBy
+              )}" placeholder="worker / person" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500">Generated at
+              <input type="date" data-field="generatedAt" value="${escapeHtml(
+                review.generatedAt
+              )}" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Content files (one <code>src/…</code> path per line)
+              <textarea data-field="files" rows="2" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono">${escapeHtml(
+                review.files.join('\n')
+              )}</textarea>
+            </label>
+            <label class="text-xs text-gray-500">Fact check
+              <select data-field="factCheckStatus" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(CHECK_OPTIONS, review.factCheckStatus)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500">Human review
+              <select data-field="humanReviewStatus" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(CHECK_OPTIONS, review.humanReviewStatus)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Translation review
+              <select data-field="translationReviewStatus" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+                ${options(TRANSLATION_OPTIONS, review.translationReviewStatus)}
+              </select>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Sources (one per line: label | url | accessed YYYY-MM-DD)
+              <textarea data-field="sources" rows="3" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono">${escapeHtml(
+                formatSources(review.sources)
+              )}</textarea>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Claims (one per line: statement | evidence | verified/unverified/rejected)
+              <textarea data-field="claims" rows="4" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono">${escapeHtml(
+                formatClaims(review.claims)
+              )}</textarea>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Translations (one per line: lang | status | reviewed by | reviewed YYYY-MM-DD)
+              <textarea data-field="translations" rows="3" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono">${escapeHtml(
+                formatTranslations(review.translations)
+              )}</textarea>
+            </label>
+            <label class="text-xs text-gray-500 md:col-span-2">Notes
+              <textarea data-field="notes" rows="2" class="mt-1 block w-full px-2 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">${escapeHtml(
+                review.notes
+              )}</textarea>
+            </label>
+          </div>
+
+          <div class="mt-3 grid gap-2 md:grid-cols-2">
+            <div class="text-xs text-gray-500">${publishedMeta}</div>
+            <details class="text-xs text-gray-500">
+              <summary class="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">History (${review.history?.length || 0})</summary>
+              <ul class="mt-1 space-y-0.5">${historyHtml(review)}</ul>
+            </details>
+          </div>
+        </article>`;
+      }
+
+      function collect(): ContentReviewLedger {
+        const cards = Array.from(document.querySelectorAll<HTMLElement>('.review-card'));
+        const reviews: ContentReview[] = cards.map((card) => ({
+          id: card.dataset.id || '',
+          title: field(card, 'title'),
+          status: field(card, 'status') as ReviewStatus,
+          model: field(card, 'model'),
+          generatedBy: field(card, 'generatedBy'),
+          generatedAt: field(card, 'generatedAt'),
+          files: lines(field(card, 'files')),
+          sources: parseSources(field(card, 'sources')),
+          claims: parseClaims(field(card, 'claims')),
+          factCheckStatus: field(card, 'factCheckStatus') as CheckStatus,
+          humanReviewStatus: field(card, 'humanReviewStatus') as CheckStatus,
+          translationReviewStatus: field(card, 'translationReviewStatus') as TranslationStatus,
+          translations: parseTranslations(field(card, 'translations')),
+          notes: field(card, 'notes'),
+          publishedBy: card.dataset.publishedBy || '',
+          publishedAt: card.dataset.publishedAt || '',
+          history: [],
+        }));
+        return {
+          version: 1,
+          updated: new Date().toISOString().split('T')[0],
+          publishers: [...state.publishers],
+          reviews,
+        };
+      }
+
+      function refreshStats(): void {
+        const ledger = collect();
+        const total = ledger.reviews.length;
+        const draft = ledger.reviews.filter((review) => review.status === 'draft').length;
+        const published = ledger.reviews.filter((review) => review.status === 'published').length;
+        const rejected = ledger.reviews.filter((review) => review.status === 'rejected').length;
+        const files = new Set(ledger.reviews.flatMap((review) => review.files)).size;
+        const factPending = ledger.reviews.filter((review) => review.factCheckStatus !== 'approved').length;
+        const humanPending = ledger.reviews.filter((review) => review.humanReviewStatus !== 'approved').length;
+        const translationsPending = ledger.reviews.filter(
+          (review) => !['approved', 'not_required'].includes(review.translationReviewStatus)
+        ).length;
+
+        statsEl.innerHTML = [
+          ['Reviews', total],
+          ['Published', published],
+          ['Draft', draft],
+          ['Rejected', rejected],
+          ['Content files', files],
+          ['Fact check pending', factPending],
+          ['Human review pending', humanPending],
+          ['Translation pending', translationsPending],
+        ]
+          .map(
+            ([label, value]) =>
+              `<div class="rounded-md border border-gray-200 dark:border-gray-800 p-3"><div class="text-xs uppercase tracking-wide text-gray-500">${escapeHtml(
+                label
+              )}</div><div class="mt-1 text-xl font-semibold">${escapeHtml(value)}</div></div>`
+          )
+          .join('');
+      }
+
+      function applyFilters(): void {
+        const query = searchEl.value.trim().toLowerCase();
+        const status = statusFilter.value;
+        const check = checkFilter.value;
+        let visible = 0;
+        for (const card of Array.from(document.querySelectorAll<HTMLElement>('.review-card'))) {
+          const haystack = [card.dataset.id || '', field(card, 'title'), field(card, 'files'), field(card, 'notes')]
+            .join(' ')
+            .toLowerCase();
+          const matchesQuery = !query || haystack.includes(query);
+          const matchesStatus = status === 'all' || field(card, 'status') === status;
+          const matchesCheck = check === 'all' || field(card, 'factCheckStatus') === check;
+          card.hidden = !(matchesQuery && matchesStatus && matchesCheck);
+          if (!card.hidden) visible += 1;
+        }
+        visibleCount.textContent = `${visible} of ${state.ledger?.reviews.length ?? 0} review(s) shown`;
+      }
+
+      function render(): void {
+        if (!state.ledger) return;
+        contentEl.classList.remove('hidden');
+        branchLabel.textContent = state.branch || '—';
+        publishersEl.textContent = state.publishers.length ? state.publishers.join(', ') : '—';
+        publisherNote.textContent = state.canPublish
+          ? `Signed in as ${state.adminEmail} — this account may publish.`
+          : `Signed in as ${state.adminEmail || 'unknown'} — this account is not in publishers[]; publishing is blocked.`;
+        publisherNote.className = state.canPublish
+          ? 'block mt-1 text-green-700 dark:text-green-400'
+          : 'block mt-1 text-red-700 dark:text-red-400';
+        listEl.innerHTML = state.ledger.reviews.map(cardHtml).join('');
+        refreshStats();
+        applyFilters();
+      }
+
+      function setError(message: string | null): void {
+        if (!message) {
+          errorEl.classList.add('hidden');
+          errorEl.textContent = '';
+          return;
+        }
+        errorEl.textContent = message;
+        errorEl.classList.remove('hidden');
+      }
+
+      function toast(message: string, type: 'success' | 'error' = 'success'): void {
+        const fn = (window as any).__adminToast;
+        if (typeof fn === 'function') fn(message, type);
+        else if (type === 'error') setError(message);
+      }
+
+      function validateClient(ledger: ContentReviewLedger): string | null {
+        for (const review of ledger.reviews) {
+          if (!/^ai-[a-z0-9][a-z0-9-]{2,80}$/.test(review.id)) {
+            return `${review.id || '(new review)'}: id must match ai-<lowercase-slug>`;
+          }
+          if (!review.title) return `${review.id}: title is required`;
+          if (review.files.length === 0) return `${review.id}: at least one content file is required`;
+          for (const file of review.files) {
+            if (!/^src\/.+\.(md|mdx|ya?ml)$/i.test(file) || file.includes('..')) {
+              return `${review.id}: invalid content file ${file}`;
+            }
+          }
+          if (review.status === 'published') {
+            if (review.factCheckStatus !== 'approved')
+              return `${review.id}: fact check must be approved before publishing`;
+            if (review.humanReviewStatus !== 'approved')
+              return `${review.id}: human review must be approved before publishing`;
+            if (!review.sources.length) return `${review.id}: at least one source is required before publishing`;
+            if (
+              !review.claims.length ||
+              review.claims.some((claim) => claim.status !== 'verified' || !claim.evidence)
+            ) {
+              return `${review.id}: every claim must be verified with evidence before publishing`;
+            }
+          }
+        }
+        if (ledger.reviews.some((review) => review.status === 'published') && !state.canPublish) {
+          return `${state.adminEmail || 'This account'} is not in publishers[]`;
+        }
+        return null;
+      }
+
+      async function load(): Promise<void> {
+        statusEl.classList.remove('hidden');
+        statusEl.textContent = 'Loading AI content reviews…';
+        setError(null);
+        const res = await fetch('/api/admin/content-review', { credentials: 'same-origin' });
+        if (res.status === 401) {
+          window.location.replace('/login');
+          return;
+        }
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.error || `HTTP ${res.status}`);
+        state.ledger = data.ledger as ContentReviewLedger;
+        state.sha = data.sha || '';
+        state.branch = data.branch || '';
+        state.publishers = Array.isArray(data.ledger?.publishers) ? data.ledger.publishers : [];
+        state.adminEmail = data.adminEmail || '';
+        state.canPublish = data.canPublish === true;
+        statusEl.classList.add('hidden');
+        render();
+      }
+
+      async function saveDraft(): Promise<boolean> {
+        const ledger = collect();
+        const validation = validateClient(ledger);
+        if (validation) {
+          toast(validation, 'error');
+          return false;
+        }
+        const res = await fetch('/api/admin/content-review', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ledger, sha: state.sha, commitMessage: 'Update AI content review ledger' }),
+        });
+        if (res.status === 401) {
+          window.location.replace('/login');
+          return false;
+        }
+        const result = await res.json();
+        if (!res.ok || !result.success) throw new Error(result.error || `HTTP ${res.status}`);
+        state.sha = result.sha || state.sha;
+        if (typeof result.canPublish === 'boolean') state.canPublish = result.canPublish;
+        await load();
+        toast('Draft saved', 'success');
+        return true;
+      }
+
+      async function withButton(button: HTMLButtonElement, label: string, fn: () => Promise<void>): Promise<void> {
+        const original = button.textContent;
+        button.disabled = true;
+        button.textContent = label;
+        try {
+          await fn();
+        } catch (error) {
+          toast(error instanceof Error ? error.message : String(error), 'error');
+        } finally {
+          button.disabled = false;
+          button.textContent = original;
+        }
+      }
+
+      function newReview(): void {
+        if (!state.ledger) return;
+        const id = `ai-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${Math.random()
+          .toString(36)
+          .slice(2, 8)}`;
+        const review: ContentReview = {
+          id,
+          title: '',
+          status: 'draft',
+          model: '',
+          generatedBy: '',
+          generatedAt: new Date().toISOString().slice(0, 10),
+          files: [],
+          sources: [],
+          claims: [],
+          factCheckStatus: 'pending',
+          humanReviewStatus: 'pending',
+          translationReviewStatus: 'pending',
+          translations: [],
+          notes: '',
+          publishedBy: '',
+          publishedAt: '',
+          history: [],
+        };
+        state.ledger.reviews.unshift(review);
+        listEl.insertAdjacentHTML('afterbegin', cardHtml(review));
+        refreshStats();
+        applyFilters();
+        const first = listEl.querySelector<HTMLElement>('.review-card input[data-field="title"]');
+        first?.focus();
+      }
+
+      newBtn.addEventListener('click', newReview);
+      saveBtn.addEventListener('click', () => withButton(saveBtn, 'Saving…', async () => void (await saveDraft())));
+      refreshBtn.addEventListener('click', () =>
+        withButton(refreshBtn, 'Loading…', async () => {
+          await load();
+          toast('Reviews reloaded', 'success');
+        })
+      );
+      publishBtn.addEventListener('click', () =>
+        withButton(publishBtn, 'Publishing…', async () => {
+          if (!(await saveDraft())) return;
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json' },
+            body: '{}',
+          });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          const result = await res.json();
+          if (!res.ok || !result.success) throw new Error(result.error || `HTTP ${res.status}`);
+          toast('Published — Cloudflare is redeploying…', 'success');
+          setTimeout(() => window.location.reload(), 800);
+        })
+      );
+
+      listEl.addEventListener('change', refreshStats);
+      listEl.addEventListener('input', () => {
+        refreshStats();
+        applyFilters();
+      });
+      searchEl.addEventListener('input', applyFilters);
+      statusFilter.addEventListener('change', applyFilters);
+      checkFilter.addEventListener('change', applyFilters);
+
+      load().catch((error) => {
+        statusEl.classList.add('hidden');
+        setError(error instanceof Error ? error.message : String(error));
+      });
+    })();
+  </script>
+</AdminLayout>

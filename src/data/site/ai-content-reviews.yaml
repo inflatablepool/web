@@ -1,0 +1,10 @@
+version: 1
+updated: '2026-11-17'
+# Human publishers allowed to move an AI content review to `published`.
+# Changing this list must go through a pull request (the admin Publish button
+# refuses to merge a draft that edits publishers[]).
+publishers:
+  - info@inflatablepoolfactory.com
+# One record per AI-assisted content unit. Content files point at a record
+# with `aiReview: <id>`. See AGENTS.md → AI Content Review (P1-07).
+reviews: []
