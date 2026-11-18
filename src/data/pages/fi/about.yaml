@@ -11,14 +11,14 @@ stats:
   title: Numeroiden mukaan
   columns: 4
   stats:
-    - title: Allas kokoelmat
-      amount: '4'
-    - title: 'Puhallusaika'
-      amount: '5-15 min'
-    - title: Nimellispaine
-      amount: 4-5 PSI
-    - title: Ota yhteyttä
-      amount: info@inflatablepoolfactory.com
+    - title: Perustettu
+      amount: '2012'
+    - title: Tehtaan pinta-ala
+      amount: 12,000 m²
+    - title: Kuukausikapasiteetti
+      amount: 500 yksikköä
+    - title: Viedään
+      amount: 50+ maahan
 features3_what_we_build:
   title: Mitä rakennamme
   subtitle: Keskittynyt tuotesarja, jonka tunnemme läpikotaisin – korkeapaineiset Drop Stitch puhallettavat uima-altaat.

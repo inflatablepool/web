@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory in breve
   columns: 4
   stats:
-    - title: Collezioni di piscine
-      amount: '4'
-    - title: 'Dimensioni della piscina'
-      amount: 2-10 m
-    - title: 'Tempo di gonfiaggio'
-      amount: '5-15 min'
-    - title: Pressione nominale
-      amount: 4-5 PSI
-    - title: Garanzia
-      amount: 2-Year Limited
-    - title: Dimensioni personalizzate
-      amount: Available
-    - title: Contatto
-      amount: info@inflatablepoolfactory.com
+    - title: Fondata
+      amount: '2012'
+    - title: Superficie dello stabilimento
+      amount: 12,000 m²
+    - title: Capacità mensile
+      amount: 500 unità
+    - title: Esportato in
+      amount: 50+ paesi
 features:
   id: features
   tagline: Tecnologia Drop Stitch

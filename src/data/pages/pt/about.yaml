@@ -11,14 +11,14 @@ stats:
   title: Pelos números
   columns: 4
   stats:
-    - title: Coleções de piscina
-      amount: '4'
-    - title: 'Tempo de inflar'
-      amount: '5-15 min'
-    - title: Pressão nominal
-      amount: 4-5 PSI
-    - title: Contato
-      amount: info@inflatablepoolfactory.com
+    - title: Fundada
+      amount: '2012'
+    - title: Área da fábrica
+      amount: 12,000 m²
+    - title: Capacidade mensal
+      amount: 500 unidades
+    - title: Exportado para
+      amount: 50+ países
 features3_what_we_build:
   title: O que construímos
   subtitle: 'Uma linha de produtos focada que conhecemos de dentro para fora: piscinas infláveis ​​Drop Stitch de alta pressão.'

@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory lühidalt
   columns: 4
   stats:
-    - title: Basseini kollektsioonid
-      amount: '4'
-    - title: 'Basseini suurused'
-      amount: 2-10 m
-    - title: 'Puhumisaeg'
-      amount: '5-15 min'
-    - title: Nimirõhk
-      amount: 4-5 PSI
-    - title: Garantii
-      amount: 2-Year Limited
-    - title: Kohandatud suurused
-      amount: Available
-    - title: Võtke ühendust
-      amount: info@inflatablepoolfactory.com
+    - title: Asutatud
+      amount: '2012'
+    - title: Tehase pindala
+      amount: 12,000 m²
+    - title: Igakuine tootmisvõimsus
+      amount: 500 ühikut
+    - title: Eksporditakse
+      amount: 50+ riiki
 features:
   id: features
   tagline: Drop Stitch tehnoloogia

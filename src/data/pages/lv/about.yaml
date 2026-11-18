@@ -11,14 +11,14 @@ stats:
   title: Pēc skaitļiem
   columns: 4
   stats:
-    - title: Baseinu kolekcijas
-      amount: '4'
-    - title: 'Uzpūšanas laiks'
-      amount: '5-15 min'
-    - title: Nominālais spiediens
-      amount: 4-5 PSI
-    - title: Sazināties
-      amount: info@inflatablepoolfactory.com
+    - title: Dibināts
+      amount: '2012'
+    - title: Rūpnīcas platība
+      amount: 12,000 m²
+    - title: Mēneša jauda
+      amount: 500 vienības
+    - title: Eksportē uz
+      amount: 50+ valstīm
 features3_what_we_build:
   title: Ko mēs veidojam
   subtitle: Mērķtiecīga produktu līnija, ko mēs zinām no iekšpuses — augstspiediena Drop Stitch piepūšamie peldbaseini.

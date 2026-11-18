@@ -23,20 +23,14 @@ stats:
   title: Το Inflatable Pool Factory με μια ματιά
   columns: 4
   stats:
-    - title: Συλλογές πισίνας
-      amount: '4'
-    - title: 'Μεγέθη πισίνας'
-      amount: 2-10 m
-    - title: 'Χρόνος φουσκώματος'
-      amount: '5-15 min'
-    - title: Ονομαστική πίεση
-      amount: 4-5 PSI
-    - title: Εγγύηση
-      amount: 2-Year Limited
-    - title: Προσαρμοσμένα μεγέθη
-      amount: Available
-    - title: Επαφή
-      amount: info@inflatablepoolfactory.com
+    - title: Ιδρύθηκε
+      amount: '2012'
+    - title: Έκταση εργοστασίου
+      amount: 12,000 m²
+    - title: Μηνιαία ικανότητα παραγωγής
+      amount: 500 μονάδες
+    - title: Εξαγωγές σε
+      amount: 50+ χώρες
 features:
   id: features
   tagline: Τεχνολογία Drop Stitch

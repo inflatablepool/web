@@ -11,14 +11,14 @@ stats:
   title: По цифрам
   columns: 4
   stats:
-    - title: Коллекции для бассейнов
-      amount: '4'
-    - title: 'Время надувания'
-      amount: '5-15 min'
-    - title: Номинальное давление
-      amount: 4-5 PSI
-    - title: Контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Год основания
+      amount: '2012'
+    - title: Площадь завода
+      amount: 12,000 m²
+    - title: Объём производства в месяц
+      amount: 500 шт.
+    - title: Экспорт
+      amount: 50+ стран
 features3_what_we_build:
   title: Что мы строим
   subtitle: Специализированная линейка продуктов, которую мы знаем изнутри — надувные бассейны высокого давления Drop Stitch.

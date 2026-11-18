@@ -11,14 +11,14 @@ stats:
   title: A számok alapján
   columns: 4
   stats:
-    - title: Medence kollekciók
-      amount: '4'
-    - title: 'Felfújási idő'
-      amount: '5-15 min'
-    - title: Névleges nyomás
-      amount: 4-5 PSI
-    - title: Érintkezés
-      amount: info@inflatablepoolfactory.com
+    - title: Alapítva
+      amount: '2012'
+    - title: Gyárterület
+      amount: 12,000 m²
+    - title: Havi kapacitás
+      amount: 500 egység
+    - title: Exportálva
+      amount: 50+ országba
 features3_what_we_build:
   title: Amit építünk
   subtitle: Egy fókuszált termékcsalád, amelyet kívülről ismerünk – nagynyomású Drop Stitch felfújható úszómedencék.

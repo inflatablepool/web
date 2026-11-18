@@ -11,14 +11,14 @@ stats:
   title: Pagal skaičius
   columns: 4
   stats:
-    - title: Baseino kolekcijos
-      amount: '4'
-    - title: 'Pripūtimo laikas'
-      amount: '5-15 min'
-    - title: Vardinis slėgis
-      amount: 4-5 PSI
-    - title: Susisiekite
-      amount: info@inflatablepoolfactory.com
+    - title: Įsteigta
+      amount: '2012'
+    - title: Gamyklos plotas
+      amount: 12,000 m²
+    - title: Mėnesinis pajėgumas
+      amount: 500 vienetų
+    - title: Eksportuojama į
+      amount: 50+ šalių
 features3_what_we_build:
   title: Ką statome
   subtitle: Tikslinga produktų linija, kurią žinome iš vidaus – aukšto slėgio „Drop Stitch“ pripučiami baseinai.

@@ -23,20 +23,14 @@ stats:
   title: Sekilas tentang Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Koleksi Kolam Renang
-      amount: '4'
-    - title: 'Ukuran Kolam Renang'
-      amount: 2-10 m
-    - title: 'Waktu pengembungan'
-      amount: '5-15 min'
-    - title: Nilai Tekanan
-      amount: 4-5 PSI
-    - title: Jaminan
-      amount: 2-Year Limited
-    - title: Ukuran Khusus
-      amount: Available
-    - title: Kontak
-      amount: info@inflatablepoolfactory.com
+    - title: Didirikan
+      amount: '2012'
+    - title: Luas pabrik
+      amount: 12,000 m²
+    - title: Kapasitas bulanan
+      amount: 500 unit
+    - title: Diekspor ke
+      amount: 50+ negara
 features:
   id: features
   tagline: Teknologi Drop Stitch

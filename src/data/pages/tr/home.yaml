@@ -23,20 +23,14 @@ stats:
   title: Bir Bakışta Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Havuz Koleksiyonları
-      amount: '4'
-    - title: 'Havuz Boyutları'
-      amount: 2-10 m
-    - title: 'Şişirme Zamanı'
-      amount: '5-15 min'
-    - title: Nominal Basınç
-      amount: 4-5 PSI
-    - title: Garanti
-      amount: 2-Year Limited
-    - title: Özel Boyutlar
-      amount: Available
-    - title: Temas etmek
-      amount: info@inflatablepoolfactory.com
+    - title: Kuruldu
+      amount: '2012'
+    - title: Fabrika alanı
+      amount: 12,000 m²
+    - title: Aylık üretim kapasitesi
+      amount: 500 adet
+    - title: İhracat
+      amount: 50+ ülkeye
 features:
   id: features
   tagline: Drop Stitch Teknolojisi

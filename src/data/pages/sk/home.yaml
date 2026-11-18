@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory v skratke
   columns: 4
   stats:
-    - title: Bazénové zbierky
-      amount: '4'
-    - title: 'Veľkosti bazénov'
-      amount: 2-10 m
-    - title: 'Čas nafúknutia'
-      amount: '5-15 min'
-    - title: Menovitý tlak
-      amount: 4-5 PSI
-    - title: Záruka
-      amount: 2-Year Limited
-    - title: Vlastné veľkosti
-      amount: Available
-    - title: Kontaktovať
-      amount: info@inflatablepoolfactory.com
+    - title: Založené
+      amount: '2012'
+    - title: Plocha fabriky
+      amount: 12,000 m²
+    - title: Mesačná kapacita
+      amount: 500 ks
+    - title: Export do
+      amount: 50+ krajín
 features:
   id: features
   tagline: Technológia Drop Stitch

@@ -23,20 +23,14 @@ stats:
   title: Felizbajs īsumā
   columns: 4
   stats:
-    - title: Baseinu kolekcijas
-      amount: '4'
-    - title: 'Baseina izmēri'
-      amount: 2-10 m
-    - title: 'Uzpūšanas laiks'
-      amount: '5-15 min'
-    - title: Nominālais spiediens
-      amount: 4-5 PSI
-    - title: Garantija
-      amount: 2-Year Limited
-    - title: Pielāgoti izmēri
-      amount: Available
-    - title: Sazināties
-      amount: info@inflatablepoolfactory.com
+    - title: Dibināts
+      amount: '2012'
+    - title: Rūpnīcas platība
+      amount: 12,000 m²
+    - title: Mēneša jauda
+      amount: 500 vienības
+    - title: Eksportē uz
+      amount: 50+ valstīm
 features:
   id: features
   tagline: Drop Stitch tehnoloģija

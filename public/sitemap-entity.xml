@@ -27,6 +27,7 @@
     <loc>https://inflatablepoolfactory.com/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
@@ -218,6 +219,7 @@
     <loc>https://inflatablepoolfactory.com/cs/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
@@ -373,6 +375,7 @@
     <loc>https://inflatablepoolfactory.com/da/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
@@ -510,6 +513,20 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://inflatablepoolfactory.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://inflatablepoolfactory.com/pt/"/>
     <x:entity>de</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://inflatablepoolfactory.com/de/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://inflatablepoolfactory.com/no/about/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://inflatablepoolfactory.com/fi/about/"/>
+    <x:entity>de/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -955,6 +972,7 @@
     <loc>https://inflatablepoolfactory.com/fi/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
@@ -1620,6 +1638,7 @@
     <loc>https://inflatablepoolfactory.com/no/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>
@@ -2379,6 +2398,7 @@
     <loc>https://inflatablepoolfactory.com/sv/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://inflatablepoolfactory.com/de/about/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/about/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://inflatablepoolfactory.com/sv/about/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://inflatablepoolfactory.com/da/about/"/>

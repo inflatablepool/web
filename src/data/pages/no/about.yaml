@@ -11,14 +11,14 @@ stats:
   title: Etter tallene
   columns: 4
   stats:
-    - title: Bassengsamlinger
-      amount: '4'
-    - title: 'Oppblåsingstid'
-      amount: '5-15 min'
-    - title: Nominell trykk
-      amount: 4-5 PSI
-    - title: Kontakt
-      amount: info@inflatablepoolfactory.com
+    - title: Grunnlagt
+      amount: '2012'
+    - title: Fabrikkareal
+      amount: 12,000 m²
+    - title: Månedlig kapasitet
+      amount: 500 enheter
+    - title: Eksporteres til
+      amount: 50+ land
 features3_what_we_build:
   title: Det vi bygger
   subtitle: En fokusert produktlinje vi kjenner ut og inn - høytrykks Drop Stitch oppblåsbare svømmebassenger.

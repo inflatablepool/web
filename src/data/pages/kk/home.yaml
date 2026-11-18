@@ -23,20 +23,14 @@ stats:
   title: Бір қарағанда Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Бассейн жинақтары
-      amount: '4'
-    - title: 'Бассейн өлшемдері'
-      amount: 2-10 m
-    - title: 'Үрлеу уақыты'
-      amount: '5-15 min'
-    - title: Номиналды қысым
-      amount: 4-5 PSI
-    - title: Кепілдік
-      amount: 2-Year Limited
-    - title: Арнайы өлшемдер
-      amount: Available
-    - title: Байланыс
-      amount: info@inflatablepoolfactory.com
+    - title: Құрылған
+      amount: '2012'
+    - title: Зауыт алаңы
+      amount: 12,000 m²
+    - title: Айлық өнімділік
+      amount: 500 бірлік
+    - title: Экспорт
+      amount: 50+ елге
 features:
   id: features
   tagline: Drop Stitch технологиясы

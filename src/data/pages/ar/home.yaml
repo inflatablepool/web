@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory في لمحة
   columns: 4
   stats:
-    - title: مجموعات البلياردو
-      amount: '4'
-    - title: 'أحجام حمامات السباحة'
-      amount: 2-10 m
-    - title: 'وقت النفخ'
-      amount: '5-15 min'
-    - title: الضغط المقدر
-      amount: 4-5 PSI
-    - title: ضمان
-      amount: 2-Year Limited
-    - title: أحجام مخصصة
-      amount: Available
-    - title: اتصال
-      amount: info@inflatablepoolfactory.com
+    - title: تأسست
+      amount: '2012'
+    - title: مساحة المصنع
+      amount: 12,000 m²
+    - title: الطاقة الإنتاجية الشهرية
+      amount: 500 وحدة
+    - title: التصدير إلى
+      amount: 50+ دولة
 features:
   id: features
   tagline: تقنية Drop Stitch

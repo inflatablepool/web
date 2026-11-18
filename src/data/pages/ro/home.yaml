@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory dintr-o privire
   columns: 4
   stats:
-    - title: Colecții de piscină
-      amount: '4'
-    - title: 'Dimensiunile piscinei'
-      amount: 2-10 m
-    - title: 'Timp de umflare'
-      amount: '5-15 min'
-    - title: Presiune nominală
-      amount: 4-5 PSI
-    - title: garanție
-      amount: 2-Year Limited
-    - title: Dimensiuni personalizate
-      amount: Available
-    - title: Contact
-      amount: info@inflatablepoolfactory.com
+    - title: Fondată
+      amount: '2012'
+    - title: Suprafața fabricii
+      amount: 12,000 m²
+    - title: Capacitate lunară
+      amount: 500 unități
+    - title: Exportat în
+      amount: 50+ țări
 features:
   id: features
   tagline: Tehnologia Drop Stitch

@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory с един поглед
   columns: 4
   stats:
-    - title: Колекции басейн
-      amount: '4'
-    - title: 'Размери на басейна'
-      amount: 2-10 m
-    - title: 'Време за надуване'
-      amount: '5-15 min'
-    - title: Номинално налягане
-      amount: 4-5 PSI
-    - title: Гаранция
-      amount: 2-Year Limited
-    - title: Персонализирани размери
-      amount: Available
-    - title: Контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Основана
+      amount: '2012'
+    - title: Площ на фабриката
+      amount: 12,000 m²
+    - title: Месечен капацитет
+      amount: 500 броя
+    - title: Износ за
+      amount: 50+ държави
 features:
   id: features
   tagline: Технология Drop Stitch

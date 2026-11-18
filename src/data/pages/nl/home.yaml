@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory in één oogopslag
   columns: 4
   stats:
-    - title: Zwembadcollecties
-      amount: '4'
-    - title: 'Zwembad maten'
-      amount: 2-10 m
-    - title: 'Opblaastijd'
-      amount: '5-15 min'
-    - title: Nominale druk
-      amount: 4-5 PSI
-    - title: Garantie
-      amount: 2-Year Limited
-    - title: Aangepaste formaten
-      amount: Available
-    - title: Contact
-      amount: info@inflatablepoolfactory.com
+    - title: Opgericht
+      amount: '2012'
+    - title: Fabrieksoppervlakte
+      amount: 12,000 m²
+    - title: Maandcapaciteit
+      amount: 500 eenheden
+    - title: Geëxporteerd naar
+      amount: 50+ landen
 features:
   id: features
   tagline: Drop Stitch-technologie

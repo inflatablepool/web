@@ -23,20 +23,14 @@ stats:
   title: Короткий погляд на Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Колекції басейнів
-      amount: '4'
-    - title: 'Розміри басейну'
-      amount: 2-10 m
-    - title: 'Час надування'
-      amount: '5-15 min'
-    - title: Номінальний тиск
-      amount: 4-5 PSI
-    - title: Гарантія
-      amount: 2-Year Limited
-    - title: Спеціальні розміри
-      amount: Available
-    - title: контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Заснована
+      amount: '2012'
+    - title: Площа заводу
+      amount: 12,000 m²
+    - title: Місячна потужність
+      amount: 500 шт.
+    - title: Експорт до
+      amount: 50+ країн
 features:
   id: features
   tagline: Технологія Drop Stitch

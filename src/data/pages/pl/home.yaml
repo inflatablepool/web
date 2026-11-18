@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory w skrócie
   columns: 4
   stats:
-    - title: Kolekcje basenowe
-      amount: '4'
-    - title: 'Rozmiary basenów'
-      amount: 2-10 m
-    - title: 'Czas pompowania'
-      amount: '5-15 min'
-    - title: Ciśnienie znamionowe
-      amount: 4-5 PSI
-    - title: Gwarancja
-      amount: 2-Year Limited
-    - title: Rozmiary niestandardowe
-      amount: Available
-    - title: Kontakt
-      amount: info@inflatablepoolfactory.com
+    - title: Rok założenia
+      amount: '2012'
+    - title: Powierzchnia fabryki
+      amount: 12,000 m²
+    - title: Miesięczna wydajność
+      amount: 500 sztuk
+    - title: Eksport do
+      amount: 50+ krajów
 features:
   id: features
   tagline: Technologia Drop Stitch

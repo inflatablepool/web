@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory iš pirmo žvilgsnio
   columns: 4
   stats:
-    - title: Baseino kolekcijos
-      amount: '4'
-    - title: 'Baseino dydžiai'
-      amount: 2-10 m
-    - title: 'Pripūtimo laikas'
-      amount: '5-15 min'
-    - title: Vardinis slėgis
-      amount: 4-5 PSI
-    - title: Garantija
-      amount: 2-Year Limited
-    - title: Individualūs dydžiai
-      amount: Available
-    - title: Susisiekite
-      amount: info@inflatablepoolfactory.com
+    - title: Įsteigta
+      amount: '2012'
+    - title: Gamyklos plotas
+      amount: 12,000 m²
+    - title: Mėnesinis pajėgumas
+      amount: 500 vienetų
+    - title: Eksportuojama į
+      amount: 50+ šalių
 features:
   id: features
   tagline: Drop Stitch technologija

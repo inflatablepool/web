@@ -23,20 +23,14 @@ stats:
   title: Bir Baxışda Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Hovuz kolleksiyaları
-      amount: '4'
-    - title: 'Hovuz Ölçüləri'
-      amount: 2-10 m
-    - title: 'Şişirmə vaxtı'
-      amount: '5-15 min'
-    - title: Nominal təzyiq
-      amount: 4-5 PSI
-    - title: Zəmanət
-      amount: 2-Year Limited
-    - title: Xüsusi Ölçülər
-      amount: Available
-    - title: Əlaqə
-      amount: info@inflatablepoolfactory.com
+    - title: Təsis edildi
+      amount: '2012'
+    - title: Zavod sahəsi
+      amount: 12,000 m²
+    - title: Aylıq istehsal tutumu
+      amount: 500 vahid
+    - title: İxrac olunur
+      amount: 50+ ölkə
 features:
   id: features
   tagline: Drop Stitch Texnologiyası

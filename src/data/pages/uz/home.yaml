@@ -23,20 +23,14 @@ stats:
   title: Bir qarashda Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Hovuz kolleksiyalari
-      amount: '4'
-    - title: 'Hovuz o''lchamlari'
-      amount: 2-10 m
-    - title: 'Shishirish vaqti'
-      amount: '5-15 min'
-    - title: Nominal bosim
-      amount: 4-5 PSI
-    - title: Kafolat
-      amount: 2-Year Limited
-    - title: Maxsus o'lchamlar
-      amount: Available
-    - title: Aloqa
-      amount: info@inflatablepoolfactory.com
+    - title: Asos solingan
+      amount: '2012'
+    - title: Zavod maydoni
+      amount: 12,000 m²
+    - title: Oylik quvvat
+      amount: 500 dona
+    - title: Eksport qilinadi
+      amount: 50+ mamlakatga
 features:
   id: features
   tagline: Drop Stitch texnologiyasi

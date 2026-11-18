@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory i korthet
   columns: 4
   stats:
-    - title: Pool samlingar
-      amount: '4'
-    - title: 'Poolstorlekar'
-      amount: 2-10 m
-    - title: 'Uppblåsningstid'
-      amount: '5-15 min'
-    - title: Nominellt tryck
-      amount: 4-5 PSI
-    - title: Garanti
-      amount: 2-Year Limited
-    - title: Anpassade storlekar
-      amount: Available
-    - title: Kontakta
-      amount: info@inflatablepoolfactory.com
+    - title: Grundat
+      amount: '2012'
+    - title: Fabriksyta
+      amount: 12,000 m²
+    - title: Månatlig kapacitet
+      amount: 500 enheter
+    - title: Exporteras till
+      amount: 50+ länder
 features:
   id: features
   tagline: Drop Stitch-teknik

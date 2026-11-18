@@ -11,14 +11,14 @@ stats:
   title: Dai numeri
   columns: 4
   stats:
-    - title: Collezioni di piscine
-      amount: '4'
-    - title: 'Tempo di gonfiaggio'
-      amount: '5-15 min'
-    - title: Pressione nominale
-      amount: 4-5 PSI
-    - title: Contatto
-      amount: info@inflatablepoolfactory.com
+    - title: Fondata
+      amount: '2012'
+    - title: Superficie dello stabilimento
+      amount: 12,000 m²
+    - title: Capacità mensile
+      amount: 500 unità
+    - title: Esportato in
+      amount: 50+ paesi
 features3_what_we_build:
   title: Cosa costruiamo
   subtitle: 'Una linea di prodotti mirata che conosciamo a fondo: piscine gonfiabili Drop Stitch ad alta pressione.'

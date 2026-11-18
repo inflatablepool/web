@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory egy pillantásra
   columns: 4
   stats:
-    - title: Medence gyűjtemények
-      amount: '4'
-    - title: 'Medence méretek'
-      amount: 2-10 m
-    - title: 'Felfújási idő'
-      amount: '5-15 min'
-    - title: Névleges nyomás
-      amount: 4-5 PSI
-    - title: Garancia
-      amount: 2-Year Limited
-    - title: Egyedi méretek
-      amount: Available
-    - title: Érintkezés
-      amount: info@inflatablepoolfactory.com
+    - title: Alapítva
+      amount: '2012'
+    - title: Gyárterület
+      amount: 12,000 m²
+    - title: Havi kapacitás
+      amount: 500 egység
+    - title: Exportálva
+      amount: 50+ országba
 features:
   id: features
   tagline: Drop Stitch technológia

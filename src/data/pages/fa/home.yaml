@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory در یک نگاه
   columns: 4
   stats:
-    - title: مجموعه های استخر
-      amount: '4'
-    - title: 'اندازه های استخر'
-      amount: 2-10 m
-    - title: 'زمان باد کردن'
-      amount: '5-15 min'
-    - title: فشار نامی
-      amount: 4-5 PSI
-    - title: گارانتی
-      amount: 2-Year Limited
-    - title: اندازه های سفارشی
-      amount: Available
-    - title: تماس بگیرید
-      amount: info@inflatablepoolfactory.com
+    - title: تأسیس
+      amount: '2012'
+    - title: مساحت کارخانه
+      amount: 12,000 m²
+    - title: ظرفیت ماهانه
+      amount: 500 دستگاه
+    - title: صادرات به
+      amount: 50+ کشور
 features:
   id: features
   tagline: تکنولوژی Drop Stitch

@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory auf einen Blick
   columns: 4
   stats:
-    - title: Pool-Kollektionen
-      amount: '4'
-    - title: 'Poolgrößen'
-      amount: 2-10 m
-    - title: 'Aufblasdauer'
-      amount: '5-15 min'
-    - title: Nenndruck
-      amount: 4-5 PSI
-    - title: Garantie
-      amount: 2-Year Limited
-    - title: Benutzerdefinierte Größen
-      amount: Available
-    - title: Kontakt
-      amount: info@inflatablepoolfactory.com
+    - title: Gegründet
+      amount: '2012'
+    - title: Werksfläche
+      amount: 12,000 m²
+    - title: Monatliche Kapazität
+      amount: 500 Einheiten
+    - title: Exportiert nach
+      amount: 50+ Länder
 features:
   id: features
   tagline: Drop-Stitch-Technologie

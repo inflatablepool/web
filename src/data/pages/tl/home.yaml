@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory sa isang Sulyap
   columns: 4
   stats:
-    - title: Mga Koleksyon ng Pool
-      amount: '4'
-    - title: 'Mga Sukat ng Pool'
-      amount: 2-10 m
-    - title: 'Oras para i-inflate'
-      amount: '5-15 min'
-    - title: Na-rate na Presyon
-      amount: 4-5 PSI
-    - title: Warranty
-      amount: 2-Year Limited
-    - title: Mga Custom na Laki
-      amount: Available
-    - title: Makipag-ugnayan
-      amount: info@inflatablepoolfactory.com
+    - title: Itinatag
+      amount: '2012'
+    - title: Laki ng pabrika
+      amount: 12,000 m²
+    - title: Buwanang kapasidad
+      amount: 500 yunit
+    - title: Iniluluwas sa
+      amount: 50+ bansa
 features:
   id: features
   tagline: Teknolohiya ng Drop Stitch

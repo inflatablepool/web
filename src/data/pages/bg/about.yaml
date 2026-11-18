@@ -11,14 +11,14 @@ stats:
   title: По числата
   columns: 4
   stats:
-    - title: Колекции басейн
-      amount: '4'
-    - title: 'Време е за надуване'
-      amount: '5-15 min'
-    - title: Номинално налягане
-      amount: 4-5 PSI
-    - title: Контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Основана
+      amount: '2012'
+    - title: Площ на фабриката
+      amount: 12,000 m²
+    - title: Месечен капацитет
+      amount: 500 броя
+    - title: Износ за
+      amount: 50+ държави
 features3_what_we_build:
   title: Какво изграждаме
   subtitle: Фокусирана продуктова линия, която познаваме отвътре навън — надуваеми басейни Drop Stitch с високо налягане.

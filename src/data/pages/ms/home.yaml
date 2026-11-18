@@ -23,20 +23,14 @@ stats:
   title: Sepintas lalu Inflatable Pool Factory
   columns: 4
   stats:
-    - title: Koleksi Kolam
-      amount: '4'
-    - title: 'Saiz Kolam'
-      amount: 2-10 m
-    - title: 'Masa pengembungan'
-      amount: '5-15 min'
-    - title: Tekanan Ternilai
-      amount: 4-5 PSI
-    - title: Waranti
-      amount: 2-Year Limited
-    - title: Saiz Tersuai
-      amount: Available
-    - title: Kenalan
-      amount: info@inflatablepoolfactory.com
+    - title: Ditubuhkan
+      amount: '2012'
+    - title: Keluasan kilang
+      amount: 12,000 m²
+    - title: Kapasiti bulanan
+      amount: 500 unit
+    - title: Dieksport ke
+      amount: 50+ negara
 features:
   id: features
   tagline: Teknologi Drop Stitch

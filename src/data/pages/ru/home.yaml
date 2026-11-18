@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory с первого взгляда
   columns: 4
   stats:
-    - title: Коллекции бассейнов
-      amount: '4'
-    - title: 'Размеры бассейна'
-      amount: 2-10 m
-    - title: 'Время надувания'
-      amount: '5-15 min'
-    - title: Номинальное давление
-      amount: 4-5 PSI
-    - title: Гарантия
-      amount: 2-Year Limited
-    - title: Нестандартные размеры
-      amount: Available
-    - title: Контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Год основания
+      amount: '2012'
+    - title: Площадь завода
+      amount: 12,000 m²
+    - title: Объём производства в месяц
+      amount: 500 шт.
+    - title: Экспорт
+      amount: 50+ стран
 features:
   id: features
   tagline: Технология Drop Stitch

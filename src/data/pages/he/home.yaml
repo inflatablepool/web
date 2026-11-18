@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory במבט חטוף
   columns: 4
   stats:
-    - title: אוספי בריכה
-      amount: '4'
-    - title: 'גדלי בריכה'
-      amount: 2-10 m
-    - title: 'זמן ניפוח'
-      amount: '5-15 min'
-    - title: לחץ מדורג
-      amount: 4-5 PSI
-    - title: אַחֲרָיוּת
-      amount: 2-Year Limited
-    - title: גדלים מותאמים אישית
-      amount: Available
-    - title: מַגָע
-      amount: info@inflatablepoolfactory.com
+    - title: נוסדה
+      amount: '2012'
+    - title: שטח המפעל
+      amount: 12,000 m²
+    - title: תפוקה חודשית
+      amount: 500 יחידות
+    - title: מיוצא ל
+      amount: 50+ מדינות
 features:
   id: features
   tagline: טכנולוגיית Drop Stitch

@@ -11,14 +11,14 @@ stats:
   title: Według liczb
   columns: 4
   stats:
-    - title: Kolekcje basenowe
-      amount: '4'
-    - title: 'Czas pompowania'
-      amount: '5-15 min'
-    - title: Ciśnienie znamionowe
-      amount: 4-5 PSI
-    - title: Kontakt
-      amount: info@inflatablepoolfactory.com
+    - title: Rok założenia
+      amount: '2012'
+    - title: Powierzchnia fabryki
+      amount: 12,000 m²
+    - title: Miesięczna wydajność
+      amount: 500 sztuk
+    - title: Eksport do
+      amount: 50+ krajów
 features3_what_we_build:
   title: Co budujemy
   subtitle: Skoncentrowana linia produktów, którą znamy na wylot — wysokociśnieniowe nadmuchiwane baseny Drop Stitch.

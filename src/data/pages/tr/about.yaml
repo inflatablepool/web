@@ -11,14 +11,14 @@ stats:
   title: Sayılara göre
   columns: 4
   stats:
-    - title: Havuz koleksiyonları
-      amount: '4'
-    - title: 'Şişirme zamanı'
-      amount: '5-15 min'
-    - title: Nominal basınç
-      amount: 4-5 PSI
-    - title: Temas etmek
-      amount: info@inflatablepoolfactory.com
+    - title: Kuruldu
+      amount: '2012'
+    - title: Fabrika alanı
+      amount: 12,000 m²
+    - title: Aylık üretim kapasitesi
+      amount: 500 adet
+    - title: İhracat
+      amount: 50+ ülkeye
 features3_what_we_build:
   title: Ne inşa ediyoruz
   subtitle: 'İçini dışını bildiğimiz odaklanmış bir ürün grubu: yüksek basınçlı Drop Stitch şişme yüzme havuzları.'

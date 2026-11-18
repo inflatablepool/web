@@ -23,20 +23,14 @@ stats:
   title: ข้อมูลโดยย่อของInflatable Pool Factory
   columns: 4
   stats:
-    - title: คอลเลกชันสระว่ายน้ำ
-      amount: '4'
-    - title: 'ขนาดสระว่ายน้ำ'
-      amount: 2-10 m
-    - title: 'เวลาสูบลม'
-      amount: '5-15 min'
-    - title: จัดอันดับความดัน
-      amount: 4-5 PSI
-    - title: การรับประกัน
-      amount: 2-Year Limited
-    - title: ขนาดที่กำหนดเอง
-      amount: Available
-    - title: ติดต่อ
-      amount: info@inflatablepoolfactory.com
+    - title: ก่อตั้ง
+      amount: '2012'
+    - title: พื้นที่โรงงาน
+      amount: 12,000 m²
+    - title: กำลังผลิตต่อเดือน
+      amount: 500 ยูนิต
+    - title: ส่งออกไปยัง
+      amount: 50+ ประเทศ
 features:
   id: features
   tagline: เทคโนโลยีDrop Stitch

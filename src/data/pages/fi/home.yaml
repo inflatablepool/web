@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory yhdellä silmäyksellä
   columns: 4
   stats:
-    - title: Allas kokoelmat
-      amount: '4'
-    - title: 'Altaan koot'
-      amount: 2-10 m
-    - title: 'Puhallusaika'
-      amount: '5-15 min'
-    - title: Nimellispaine
-      amount: 4-5 PSI
-    - title: Takuu
-      amount: 2-Year Limited
-    - title: Mukautetut koot
-      amount: Available
-    - title: Ota yhteyttä
-      amount: info@inflatablepoolfactory.com
+    - title: Perustettu
+      amount: '2012'
+    - title: Tehtaan pinta-ala
+      amount: 12,000 m²
+    - title: Kuukausikapasiteetti
+      amount: 500 yksikköä
+    - title: Viedään
+      amount: 50+ maahan
 features:
   id: features
   tagline: Drop Stitch -tekniikka

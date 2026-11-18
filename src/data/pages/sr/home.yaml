@@ -23,20 +23,14 @@ stats:
   title: Inflatable Pool Factory na prvi pogled
   columns: 4
   stats:
-    - title: Kolekcije bazena
-      amount: '4'
-    - title: Veličine bazena
-      amount: 2-10 m
-    - title: 'Vreme naduvavanja'
-      amount: '5-15 min'
-    - title: Nazivni pritisak
-      amount: 4-5 PSI
-    - title: Garancija
-      amount: 2-Year Limited
-    - title: Prilagođene veličine
-      amount: Available
-    - title: Kontakt
-      amount: info@inflatablepoolfactory.com
+    - title: Osnovano
+      amount: '2012'
+    - title: Površina fabrike
+      amount: 12,000 m²
+    - title: Mesečni kapacitet
+      amount: 500 komada
+    - title: Izvoz u
+      amount: 50+ zemalja
 features:
   id: features
   tagline: Drop Stitch tehnologija

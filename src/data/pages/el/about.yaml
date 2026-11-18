@@ -11,14 +11,14 @@ stats:
   title: Με τους αριθμούς
   columns: 4
   stats:
-    - title: Συλλογές πισίνας
-      amount: '4'
-    - title: 'Χρόνος φουσκώματος'
-      amount: '5-15 min'
-    - title: Ονομαστική πίεση
-      amount: 4-5 PSI
-    - title: Επαφή
-      amount: info@inflatablepoolfactory.com
+    - title: Ιδρύθηκε
+      amount: '2012'
+    - title: Έκταση εργοστασίου
+      amount: 12,000 m²
+    - title: Μηνιαία ικανότητα παραγωγής
+      amount: 500 μονάδες
+    - title: Εξαγωγές σε
+      amount: 50+ χώρες
 features3_what_we_build:
   title: Αυτό που χτίζουμε
   subtitle: Μια εστιασμένη σειρά προϊόντων που γνωρίζουμε από μέσα προς τα έξω — φουσκωτές πισίνες Drop Stitch υψηλής πίεσης.

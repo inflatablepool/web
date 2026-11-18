@@ -11,14 +11,14 @@ stats:
   title: За цифрами
   columns: 4
   stats:
-    - title: Колекції басейнів
-      amount: '4'
-    - title: 'Час надування'
-      amount: '5-15 min'
-    - title: Номінальний тиск
-      amount: 4-5 PSI
-    - title: контакт
-      amount: info@inflatablepoolfactory.com
+    - title: Заснована
+      amount: '2012'
+    - title: Площа заводу
+      amount: 12,000 m²
+    - title: Місячна потужність
+      amount: 500 шт.
+    - title: Експорт до
+      amount: 50+ країн
 features3_what_we_build:
   title: Що ми будуємо
   subtitle: Цілеспрямована лінія продуктів, яку ми знаємо зсередини, — надувні басейни Drop Stitch високого тиску.
