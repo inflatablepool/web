@@ -153,7 +153,7 @@ for (const container of CONTAINER_REFERENCE) {
                   <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-0.5">
                     Payload
                   </dt>
-                  <dd class="font-bold text-gray-900 dark:text-slate-100">≈ {Math.round(c.payloadKg / 1000)}–22 t</dd>
+                  <dd class="font-bold text-gray-900 dark:text-slate-100">≈ {Math.floor(c.payloadKg / 1000)}–22 t</dd>
                 </div>
               </dl>
             </div>
@@ -193,7 +193,7 @@ for (const container of CONTAINER_REFERENCE) {
                       <input type="radio" name="container" value={c.code} class="peer sr-only" checked={i === 0} />
                       <span class="flex flex-col items-center gap-1 rounded-xl border border-gray-200 dark:border-slate-700 px-2 py-3 text-xs font-medium text-gray-600 dark:text-slate-300 peer-checked:border-sky-500 peer-checked:bg-sky-50 peer-checked:text-sky-800 dark:peer-checked:bg-sky-900/30 dark:peer-checked:text-sky-300 transition-colors">
                         <Icon name="tabler:container" class="w-5 h-5" />
-                        {c.code} — ≈ {c.capacityM3} m³ / ≈ {Math.round(c.payloadKg / 1000)}–22 t
+                        {c.code} — ≈ {c.capacityM3} m³ / ≈ {Math.floor(c.payloadKg / 1000)}–22 t
                       </span>
                     </label>
                   ))
