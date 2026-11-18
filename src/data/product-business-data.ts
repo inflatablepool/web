@@ -11,31 +11,21 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'rectangular-drop-stitch-pool': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'The largest rectangular pool in the range — suited to families who want room to swim and to retailers targeting the premium backyard segment. Rigid drop stitch walls hold their shape at full fill, and the rectangular footprint suits lap swimming.',
+      'A 15-size rectangular range, from a 2 × 2 m plunge pool to a 6 × 5 m family swim pool — suited to families who want room to swim and to retailers targeting the premium backyard segment. Rigid drop stitch walls hold their shape at full fill, and the rectangular footprint suits lap swimming.',
     useCase: 'Backyard family swimming, lap swimming, larger groups, retail flagship SKU',
     operatingCost: 'Low — standard chlorine and filter cartridges; no tools or permanent installation',
     whyBusinessesChooseIt:
-      'A premium SKU that ships flat and stores compactly. Fast 30-minute setup is a strong selling point, and the fold-away design appeals to customers who cannot commit to a permanent pool.',
+      'A premium SKU that ships flat and stores compactly. Inflation in about 10 minutes with the included electric pump is a strong selling point, and the fold-away design appeals to customers who cannot commit to a permanent pool.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'round-blue-drop-stitch-pool': {
     bestFor: ['families', 'retailers'],
     recommendation:
-      'The classic family pool. The round shape fits smaller yards, sets up in under 20 minutes, and the bold blue finish photographs well for retail listings and seasonal promotions.',
+      'The classic family pool. Compact sizes from Ø 2 m fit smaller yards, the walls inflate in about 10 minutes, and the bold blue finish photographs well for retail listings and seasonal promotions.',
     useCase: 'Family fun, kids summer swimming, small to medium backyards',
-    operatingCost: 'Low — smaller water volume means less chemicals and faster heating',
+    operatingCost: 'Low — compact sizes hold less water, which means fewer chemicals and faster heating',
     whyBusinessesChooseIt:
       'A widely recognized pool shape. Compact shipping can reduce logistics costs, and the approachable price point suits both e-commerce and brick-and-mortar channels.',
-    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
-  },
-  'round-grey-drop-stitch-pool': {
-    bestFor: ['families', 'retailers', 'oem'],
-    recommendation:
-      'A modern, understated grey pool that pairs with an optional fitted debris cover. The neutral finish suits design-conscious buyers and premium retail lineups, and the optional cover expands the offer.',
-    useCase: 'Premium backyard setup, design-conscious buyers, gift and premium retail channels',
-    operatingCost: 'Low — the optional fitted cover cuts cleaning time and chemical loss between swims',
-    whyBusinessesChooseIt:
-      'Differentiates from the sea of blue pools at retail. The optional cover can help reduce debris and water-care effort between swims.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'hot-tub-square-rect': {

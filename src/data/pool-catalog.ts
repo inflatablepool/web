@@ -42,6 +42,9 @@ export interface PoolAccessory {
   image?: string;
 }
 
+// PENDING FACTORY CONFIRMATION (FC-01, docs/factory-confirmation-checklist.md):
+// relief valve (6 PSI) is below the stated maximum inflation pressure (8 PSI).
+// Do not change one value alone — follow the checklist once the factory confirms.
 /** Recommended daily operating pressure */
 export const POOL_OPERATING_PRESSURE = '4–5 PSI';
 /** Maximum inflation pressure confirmed for the standard models */

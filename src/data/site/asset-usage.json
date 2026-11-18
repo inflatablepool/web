@@ -238,20 +238,22 @@
       "src/data/pages/uk/home.yaml",
       "src/data/pages/uz/about.yaml",
       "src/data/pages/uz/home.yaml",
+      "src/data/product-colorways.ts",
       "src/data/site/about.yaml",
       "src/data/site/evidence.yaml",
       "src/data/site/hero-images.yaml",
       "src/data/site/learning-center.yaml",
-      "src/data/site/product-visuals.yaml",
       "src/data/site/use-cases.yaml",
       "src/lib/sample-request.ts",
       "src/pages/about.astro",
       "src/pages/products/specs.astro"
     ],
     "/images/pools/round-grey-pool-2.webp": [
+      "src/data/product-colorways.ts",
       "src/data/site/tech-cards.yaml"
     ],
     "/images/pools/round-grey-pool-cover-1.webp": [
+      "src/data/product-colorways.ts",
       "src/data/site/evidence.yaml",
       "src/data/site/hero-images.yaml",
       "src/data/site/learning-center.yaml"

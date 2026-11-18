@@ -29,10 +29,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscine gonflable ronde bleue Drop Stitch',
       desc: 'Piscine gonflable ronde bleue classique avec des parois rigides Drop Stitch à haute pression.',
     },
-    'round-grey-drop-stitch-pool': {
-      name: 'Piscine gonflable ronde grise Drop Stitch',
-      desc: 'Piscine gonflable ronde grise premium avec des parois rigides Drop Stitch et couverture ajustée en option.',
-    },
     'hot-tub-square-rect': {
       name: 'Bain à remous SPA gonflable carré et rectangulaire',
       desc: 'Bain à remous SPA gonflable carré et rectangulaire quatre saisons avec sièges intégrés et fond isolant de 5 mm.',
@@ -50,10 +46,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'round-blue-drop-stitch-pool': {
       name: 'Rundes blaues Drop Stitch Aufblaspool',
       desc: 'Klassisches rundes blaues Aufblaspool mit steifen Drop-Stitch-Wänden unter hohem Druck.',
-    },
-    'round-grey-drop-stitch-pool': {
-      name: 'Rundes graues Drop Stitch Aufblaspool',
-      desc: 'Hochwertiges rundes graues Aufblaspool mit steifen Drop-Stitch-Wänden und optionaler passgenauer Abdeckung.',
     },
     'hot-tub-square-rect': {
       name: 'Quadratischer und rechteckiger Aufblas-Whirlpool-SPA',
@@ -73,10 +65,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscina hinchable redonda azul Drop Stitch',
       desc: 'Piscina hinchable redonda azul clásica con paredes rígidas Drop Stitch de alta presión.',
     },
-    'round-grey-drop-stitch-pool': {
-      name: 'Piscina hinchable redonda gris Drop Stitch',
-      desc: 'Piscina hinchable redonda gris premium con paredes rígidas Drop Stitch y cubierta ajustada opcional.',
-    },
     'hot-tub-square-rect': {
       name: 'Spa de hidromasaje hinchable cuadrado y rectangular',
       desc: 'Spa de hidromasaje hinchable cuadrado y rectangular de cuatro estaciones con asientos integrados y fondo aislado de 5 mm.',
@@ -94,10 +82,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'round-blue-drop-stitch-pool': {
       name: 'Piscina insuflável redonda azul Drop Stitch',
       desc: 'Piscina insuflável redonda azul clássica com paredes rígidas Drop Stitch de alta pressão.',
-    },
-    'round-grey-drop-stitch-pool': {
-      name: 'Piscina insuflável redonda cinzenta Drop Stitch',
-      desc: 'Piscina insuflável redonda cinzenta premium com paredes rígidas Drop Stitch e cobertura ajustável opcional.',
     },
     'hot-tub-square-rect': {
       name: 'Banheira de hidromassagem SPA insuflável quadrada e retangular',
@@ -117,10 +101,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscina gonfiabile rotonda blu Drop Stitch',
       desc: 'Piscina gonfiabile rotonda blu classica con pareti rigide Drop Stitch ad alta pressione.',
     },
-    'round-grey-drop-stitch-pool': {
-      name: 'Piscina gonfiabile rotonda grigia Drop Stitch',
-      desc: 'Piscina gonfiabile rotonda grigia premium con pareti rigide Drop Stitch e copertura su misura opzionale.',
-    },
     'hot-tub-square-rect': {
       name: 'Vasca SPA gonfiabile quadrata e rettangolare',
       desc: 'Vasca SPA gonfiabile quadrata e rettangolare a quattro stagioni con sedili integrati e fondo isolato da 5 mm.',
@@ -138,10 +118,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'round-blue-drop-stitch-pool': {
       name: 'Круглый синий надувной бассейн Drop Stitch',
       desc: 'Классический круглый синий надувной бассейн с жёсткими стенками Drop Stitch высокого давления.',
-    },
-    'round-grey-drop-stitch-pool': {
-      name: 'Круглый серый надувной бассейн Drop Stitch',
-      desc: 'Премиальный круглый серый надувной бассейн с жёсткими стенками Drop Stitch и опциональной крышкой.',
     },
     'hot-tub-square-rect': {
       name: 'Квадратная и прямоугольная надувная джакузи-SPA',
@@ -161,10 +137,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Okrągły niebieski dmuchany basen Drop Stitch',
       desc: 'Klasyczny okrągły niebieski dmuchany basen z sztywnymi ścianami Drop Stitch wysokiego ciśnienia.',
     },
-    'round-grey-drop-stitch-pool': {
-      name: 'Okrągły szary dmuchany basen Drop Stitch',
-      desc: 'Dmuchany basen okrągły w kolorze szarym premium ze sztywnymi ścianami Drop Stitch i opcjonalnym dopasowanym pokrowcem.',
-    },
     'hot-tub-square-rect': {
       name: 'Kwadratowa i prostokątna dmuchana wanna SPA',
       desc: 'Czterosezonowa kwadratowa i prostokątna dmuchana wanna SPA z wbudowanymi siedziskami i izolowanym dnem 5 mm.',
@@ -182,10 +154,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'round-blue-drop-stitch-pool': {
       name: 'مسبح أزرق قابل للنفخ دائري Drop Stitch',
       desc: 'مسبح أزرق دائري كلاسيكي قابل للنفخ بجدران صلبة Drop Stitch عالية الضغط.',
-    },
-    'round-grey-drop-stitch-pool': {
-      name: 'مسبح رمادي قابل للنفخ دائري Drop Stitch',
-      desc: 'مسبح رمادي دائري فاخر قابل للنفخ بجدران صلبة Drop Stitch وغطاء مخصص اختياري.',
     },
     'hot-tub-square-rect': {
       name: 'حوض سبا قابل للنفخ مربع ومستطيل',

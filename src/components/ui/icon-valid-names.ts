@@ -63,6 +63,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:help-circle",
   "tabler:hexagon",
   "tabler:home",
+  "tabler:info-circle",
   "tabler:info-square",
   "tabler:language",
   "tabler:layers-intersect",

@@ -20,7 +20,9 @@ const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
   },
   'IPF-POOL-RND-GREY': {
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',
-    slug: 'round-grey-drop-stitch-pool',
+    // P1-5: the grey page was merged into the blue product page (colorway);
+    // return buyers to the merged page after checkout.
+    slug: 'round-blue-drop-stitch-pool',
     unitAmount: 39900,
     currency: 'usd',
     image: '/images/pools/round-grey-pool-1.webp',

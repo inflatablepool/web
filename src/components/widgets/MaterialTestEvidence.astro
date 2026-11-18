@@ -1,0 +1,61 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+
+/**
+ * P1-1: measured material results from the published type-test campaign
+ * (FB-DSP-400). Republishes the campaign values without rewording the
+ * measured figures, with the tested-model scope note.
+ */
+// English-only on all languages (matches the MDX body fallback).
+
+// Material-focused items of the campaign (peel / puncture / cold fold).
+const MATERIAL_RESULTS = TYPE_TEST_CAMPAIGN.items.slice(0, 3);
+---
+
+<section
+  class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
+  data-ai-block="material-evidence"
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+      Evidence
+    </span>
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+      Measured material results
+    </h2>
+    <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-6">
+      Measured in the {TYPE_TEST_CAMPAIGN.model} type-test campaign {TYPE_TEST_CAMPAIGN.campaignId} (lot{' '}
+      {TYPE_TEST_CAMPAIGN.lot}, {TYPE_TEST_CAMPAIGN.dates}) on {TYPE_TEST_CAMPAIGN.units} of{' '}
+      {TYPE_TEST_CAMPAIGN.specimen}:
+    </p>
+    <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-50 dark:bg-slate-800 text-left">
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              Test
+            </th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              Measured result
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-slate-800">
+          {
+            MATERIAL_RESULTS.map((item) => (
+              <tr class="bg-white dark:bg-slate-900/50">
+                <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 whitespace-nowrap">{item.test}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{item.result}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-3xl">
+      <Icon name="tabler:info-circle" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
+      {TYPE_TEST_CAMPAIGN.scopeNote} Values for other models and wall thicknesses are confirmed per project in the quotation.
+    </p>
+  </div>
+</section>

@@ -77,10 +77,10 @@ features:
       description: 'Double-layer PVC drop stitch fabric, engineered to resist punctures and UV exposure through a full season of family use.'
       icon: tabler:shield
     - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Rectangular models include a full-coverage cover; round models offer a fitted cover as an option.'
       icon: tabler:box
     - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666 — model-specific safety information is provided in the product documentation. Constant adult supervision is always required.'
+      description: 'Residential pool design with reference to EN 16582-1 and ASTM F2666 (design references, not certifications) — model-specific conformity is confirmed per target market, and safety information ships with the product documentation. Constant adult supervision is always required.'
       icon: tabler:shield-check
 
 content_customer_types:
@@ -292,7 +292,7 @@ content_compliance:
       description: 'Unbox and inflate with the included pump in 5-15 minutes, then fill with a garden hose — filling time varies with pool size and water supply.'
       icon: tabler:rocket
     - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a cover — included on rectangular models, optional on round models — keep water clean.'
       icon: tabler:droplet
     - title: 'Clean, Drain & Store'
       description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
@@ -348,7 +348,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: What is included with the pool?
-      description: 'Every Inflatable Pool Factory pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+      description: 'Every Inflatable Pool Factory pool includes an electric air pump, a repair kit, and a storage bag. Rectangular models also include a full-coverage cover; round models offer a fitted cover as an option.'
       icon: tabler:box
       category: all
     - title: What sizes are available?

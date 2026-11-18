@@ -126,57 +126,6 @@ export const products: ProductRecord[] = [
     ],
   },
   {
-    id: 'round-grey-drop-stitch-pool',
-    name: 'Round Drop Stitch Grey Inflatable Swimming Pool',
-    category: 'POOL',
-    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
-    skill: 'beginner',
-    environment: ['backyard', 'garden', 'patio', 'villa', 'glamping'],
-    water_condition: ['fresh water'],
-    safety_level: 'medium',
-    use_case: ['family swimming', 'relaxation', 'modern lifestyle', 'hydro-recovery'],
-    safety_rules: [
-      'adult supervision required for children at all times',
-      'install on flat, level ground away from sharp objects',
-      'cover the pool when not in use — a fitted cover is available as an option',
-    ],
-    desc: 'Premium round grey inflatable swimming pool with rigid drop stitch walls and optional fitted cover.',
-    definition:
-      'A premium round inflatable swimming pool with a modern grey finish, built from double-layer PVC drop stitch fabric, with an optional matching fitted cover.',
-    problem:
-      'Design-conscious homeowners and boutique properties want a swimming pool that looks modern and premium, not like a plastic toy.',
-    howItWorks:
-      'The understated grey drop stitch walls inflate rigid at 4–5 PSI and keep the pool stable and round. An optional fitted cover keeps water clean and warm between swims. The pool inflates in about 10 minutes and folds into a storage bag for winter.',
-    audience:
-      'Modern homeowners, villas, boutique hotels, and glamping operators who want a premium-looking seasonal pool.',
-    best_for_business: ['resorts', 'entrepreneurs'],
-    business_recommendation:
-      'The grey finish and fitted cover position this model for premium retail and boutique hospitality channels.',
-    ai_use_cases: ['Modern backyard swimming', 'Villa and glamping amenities', 'Relaxation and hydro-recovery'],
-    ai_specs: {
-      shape: 'Round',
-      color: 'Grey',
-      material: 'Double-layer PVC drop stitch fabric',
-      wall_thickness: '10 / 15 cm drop stitch',
-      pressure: '4–5 PSI',
-      cover: 'Optional fitted cover',
-      setup: '~10 minutes inflation with electric pump',
-      included: '1000W electric air pump, repair kit, storage bag',
-    },
-    ai_comparison:
-      'Compared to standard blue pools, the grey model offers a premium aesthetic plus an optional fitted cover, appealing to design-conscious buyers and boutique hospitality operators at the same durability level.',
-    ai_faq: [
-      {
-        q: 'Does it come with a cover?',
-        a: 'A fitted matching cover is available as an option and recommended to keep the water clean and warm.',
-      },
-      {
-        q: 'Can the color be customized?',
-        a: 'Yes. Inflatable Pool Factory manufactures pools in custom colors and sizes for OEM/ODM partners — contact info@inflatablepoolfactory.com.',
-      },
-    ],
-  },
-  {
     id: 'hot-tub-square-rect',
     name: 'Square and Rectangular Inflatable Hot Tub SPA Pool',
     category: 'POOL',

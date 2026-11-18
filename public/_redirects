@@ -40,3 +40,11 @@
 /:lang/pool-ideas /pool-ideas/ 301
 /:lang/pool-ideas/ /pool-ideas/ 301
 /:lang/pool-ideas/* /pool-ideas/:splat 301
+
+# P1-5: the round grey pool page was merged into the round blue pool page as a
+# colorway (same 23-size series, same dimensions). The grey SKU remains
+# purchasable on the merged page; only the separate page is retired.
+/products/round-grey-drop-stitch-pool /products/round-blue-drop-stitch-pool/ 301
+/products/round-grey-drop-stitch-pool/ /products/round-blue-drop-stitch-pool/ 301
+/:lang/products/round-grey-drop-stitch-pool /:lang/products/round-blue-drop-stitch-pool/ 301
+/:lang/products/round-grey-drop-stitch-pool/ /:lang/products/round-blue-drop-stitch-pool/ 301

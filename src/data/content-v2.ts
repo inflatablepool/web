@@ -47,7 +47,7 @@ const poolArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['how-to-choose-inflatable-pool'],
-    relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'],
+    relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool'],
     difficulty: 'beginner',
   },
   {
@@ -113,7 +113,7 @@ const poolArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['inflatable-pool-maintenance', 'inflatable-pool-setup'],
-    relatedProducts: ['round-grey-drop-stitch-pool'],
+    relatedProducts: ['round-blue-drop-stitch-pool'],
     difficulty: 'beginner',
   },
 ];

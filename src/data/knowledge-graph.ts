@@ -51,7 +51,6 @@ export const businessEntities: BusinessEntity[] = [
 export const productToBusinessMap: Record<string, string[]> = {
   'rectangular-drop-stitch-pool': [`${siteUrl}/#families`, `${siteUrl}/#businesses`],
   'round-blue-drop-stitch-pool': [`${siteUrl}/#families`, `${siteUrl}/#businesses`],
-  'round-grey-drop-stitch-pool': [`${siteUrl}/#families`, `${siteUrl}/#businesses`],
 };
 
 export function getBusinessEntityJsonLd(entityId: string): Record<string, unknown> | null {

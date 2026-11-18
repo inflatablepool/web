@@ -19,7 +19,6 @@ const EXPECTED_SLUGS = [
   'hot-tub-square-rect',
   'rectangular-drop-stitch-pool',
   'round-blue-drop-stitch-pool',
-  'round-grey-drop-stitch-pool',
 ];
 
 test('product PDF text is WinAnsi-safe', () => {
@@ -47,7 +46,7 @@ test('wrapText keeps words and respects the available width', async () => {
   assert.equal(lines.join(' '), 'Double-layer PVC drop stitch fabric with reinforced seams and a fitted thermal cover');
 });
 
-test('loadProductSpecs reads the five published MDX products', () => {
+test('loadProductSpecs reads the four published MDX products', () => {
   const products = loadProductSpecs();
   assert.equal(products.length, EXPECTED_SLUGS.length);
   assert.deepEqual(products.map((product) => product.slug).sort(), [...EXPECTED_SLUGS].sort());
@@ -60,7 +59,7 @@ test('loadProductSpecs reads the five published MDX products', () => {
   assert.equal(specValue(products[0], 'shape').toLowerCase(), 'round');
 });
 
-test('generates five A4 spec sheets plus one landscape comparison PDF', async () => {
+test('generates four A4 spec sheets plus one landscape comparison PDF', async () => {
   const outDir = mkdtempSync(path.join(os.tmpdir(), 'ipf-product-pdf-'));
   try {
     const result = await generateProductPdfs({ root: PROJECT_ROOT, outDir });

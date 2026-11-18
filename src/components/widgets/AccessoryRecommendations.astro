@@ -1,0 +1,91 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import { poolAccessories } from '~/data/pool-catalog';
+import { localizeHref } from '~/i18n/routing';
+
+/**
+ * P1-6: "Complete your pool" accessory cross-sell. Recommendations map each
+ * product page to catalog accessories (src/data/pool-catalog.ts poolAccessories)
+ * by pool type and wall height; prices are the indicative FOB Qingdao reference
+ * prices from the quotation sheet.
+ */
+interface Props {
+  slug: string;
+  lang?: string;
+}
+
+const { slug, lang = 'en' } = Astro.props;
+
+const RECOMMENDED_ACCESSORIES: Record<string, string[]> = {
+  'rectangular-drop-stitch-pool': ['FS-12C Sand Filter Pump', '4-Step Ladder', 'Inflatable Stairs 1.5 M'],
+  'round-blue-drop-stitch-pool': ['FS-12C Sand Filter Pump', '4-Step Ladder', 'Inflatable Stairs 1.2 M'],
+  'hot-tub-round': ['FS-12C Sand Filter Pump', '4-Step Ladder', 'Rechargeable Air Pump'],
+  'hot-tub-square-rect': ['FS-12C Sand Filter Pump', '4-Step Ladder', 'Rechargeable Air Pump'],
+};
+
+const recommendedNames = RECOMMENDED_ACCESSORIES[slug] ?? [];
+const accessories = recommendedNames
+  .map((name) => poolAccessories.find((a) => a.name === name))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+---
+
+{
+  accessories.length > 0 && (
+    <section
+      class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
+      data-ai-block="accessories"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+          Accessories
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+          Complete your pool
+        </h2>
+        <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-8">
+          Recommended pairings for this pool line: filtration for water care, safe entry matched to the wall height, and
+          power options for setup and season start.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {accessories.map((a) => (
+            <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden flex flex-col">
+              {a.image && (
+                <img
+                  src={a.image}
+                  alt={a.name}
+                  class="w-full aspect-[4/3] object-contain bg-gray-50 dark:bg-slate-900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <div class="p-5 flex flex-col gap-1.5 flex-1">
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100">{a.name}</h3>
+                <p class="text-xs text-gray-500 dark:text-slate-500">{a.spec}</p>
+                <p class="mt-auto pt-2 text-sm font-semibold text-gray-900 dark:text-slate-100">
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-500 uppercase tracking-wider mr-1.5">
+                    FOB Qingdao
+                  </span>
+                  ${a.fobUsd.toFixed(2)}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+          <p class="text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-2xl">
+            Accessory prices are indicative FOB Qingdao reference prices from the factory quotation sheet. Accessories
+            are quoted per project — compatibility with your pool size and wall height, quantity pricing and packaging
+            are confirmed in the quotation.
+          </p>
+          <a
+            href={localizeHref(`/request-quotation?product=${encodeURIComponent(slug)}`, lang)}
+            class="inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Quote pool + accessories
+            <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

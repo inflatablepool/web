@@ -51,7 +51,8 @@ export const SAMPLE_PRODUCTS = [
     image: '/images/pools/round-grey-pool-1.webp',
     imageAlt: 'Round grey drop stitch inflatable swimming pool',
     imageFit: 'cover',
-    productHref: '/products/round-grey-drop-stitch-pool',
+    // P1-5: grey is a colorway sold on the merged round pool page.
+    productHref: '/products/round-blue-drop-stitch-pool',
   },
   {
     slug: 'hot-tub-round',

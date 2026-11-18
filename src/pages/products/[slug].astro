@@ -6,6 +6,10 @@ import { Image } from 'astro:assets';
 import merge from 'lodash.merge';
 import ProductLayout from '~/layouts/ProductLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
+import ProductColorway from '~/components/widgets/ProductColorway.astro';
+import MaterialTestEvidence from '~/components/widgets/MaterialTestEvidence.astro';
+import PressureSafety from '~/components/widgets/PressureSafety.astro';
+import AccessoryRecommendations from '~/components/widgets/AccessoryRecommendations.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
@@ -116,7 +120,6 @@ const productExtraData: Record<string, unknown> = {
 // no per-variant offers — the group-level Offer is the only published price.
 const SERIES_BY_SLUG: Record<string, string> = {
   'round-blue-drop-stitch-pool': 'round',
-  'round-grey-drop-stitch-pool': 'round',
   'rectangular-drop-stitch-pool': 'rect-square',
   'hot-tub-round': 'hot-tub-round',
   'hot-tub-square-rect': 'hot-tub-square-rect',
@@ -533,6 +536,9 @@ const hasVariant = catalogSeries
     )
   }
 
+  {/* Colorway (merged product pages, P1-5) */}
+  <ProductColorway slug={product.slug} lang="en" />
+
   {/* Product Definition —Who is it for? */}
   {
     rec && rec.definition && (
@@ -710,6 +716,9 @@ const hasVariant = catalogSeries
     )
   }
 
+  {/* Measured material results (P1-1) */}
+  <MaterialTestEvidence />
+
   {/* Shape-specific engineering notes */}
   {
     engineering && (
@@ -748,6 +757,9 @@ const hasVariant = catalogSeries
       </section>
     )
   }
+
+  {/* Pressure ladder (P1-2) */}
+  <PressureSafety />
 
   {/* Compliance & Documentation */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
@@ -834,6 +846,9 @@ const hasVariant = catalogSeries
       <TrustBadges layout="row" />
     </div>
   </section>
+
+  {/* Accessory recommendations (P1-6) */}
+  <AccessoryRecommendations slug={product.slug} lang="en" />
 
   {/* Related Products */}
   {

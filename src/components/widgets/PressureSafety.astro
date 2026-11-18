@@ -1,0 +1,107 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import { POOL_OPERATING_PRESSURE, POOL_MAX_PRESSURE, POOL_RELIEF_VALVE_PRESSURE } from '~/data/pool-catalog';
+import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+
+/**
+ * P1-2: pressure ladder for drop-stitch pool pages. Every value is republished
+ * from the catalog SSOT or the type-test campaign — no invented figures. The
+ * relief-valve vs maximum-pressure relationship carries the FC-01 pending note
+ * (docs/factory-confirmation-checklist.md).
+ */
+// English-only on all languages (matches the MDX body fallback).
+
+// Rated working pressure (Pw) from the FB-DSP-400 nameplate — the reference
+// used in the type-test reports. Equals the 8 PSI maximum inflation pressure.
+const PW_PSI = 8;
+const CREEP_PSI = 1.5 * PW_PSI;
+const BURST_PSI = 25.4;
+
+const steps: Array<{ value: string; label: string; note: string; tested?: boolean }> = [
+  {
+    value: POOL_OPERATING_PRESSURE,
+    label: 'Recommended operating pressure',
+    note: 'The everyday inflation target for standard models',
+  },
+  {
+    value: POOL_RELIEF_VALVE_PRESSURE,
+    label: 'Relief-valve auto-release',
+    note: 'The valve opens automatically above this pressure',
+  },
+  {
+    value: POOL_MAX_PRESSURE,
+    label: 'Maximum inflation pressure',
+    note: 'The structural limit — do not inflate beyond the model rating',
+  },
+  {
+    value: `${CREEP_PSI} PSI`,
+    label: 'Creep-test level',
+    note: `55 °C for 48 h at 1.5× Pw — max 5.2% growth (spec ≤10%)`,
+    tested: true,
+  },
+  {
+    value: `${BURST_PSI} PSI`,
+    label: 'Measured burst pressure',
+    note: `${(BURST_PSI / PW_PSI).toFixed(2)}× Pw — parent-panel rupture, all seams intact`,
+    tested: true,
+  },
+];
+---
+
+<section
+  class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+  data-ai-block="pressure"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+      Pressure &amp; Safety
+    </span>
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Why 4–5 PSI?</h2>
+    <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-8">
+      Drop-stitch walls only become rigid above the pressure of an ordinary inflatable. The published pressure ladder
+      runs from the everyday operating target up to the measured burst point, with each step republished from the
+      catalog and the type-test reports.
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+      {
+        steps.map((step, i) => (
+          <div class="relative bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <span class="absolute top-3 right-3 text-[10px] font-mono text-gray-300 dark:text-slate-600">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <div class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100">{step.value}</div>
+            <div class="mt-1.5 text-xs font-semibold text-gray-700 dark:text-slate-300">{step.label}</div>
+            <div class="mt-1 text-[11px] text-gray-500 dark:text-slate-500 leading-snug">{step.note}</div>
+            {step.tested && (
+              <span class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                <Icon name="tabler:flask" class="w-3.5 h-3.5" />
+                Type-tested
+              </span>
+            )}
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="mt-6 flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/20 border border-sky-100 dark:border-sky-800/50"
+    >
+      <span class="mt-0.5 shrink-0 text-primary dark:text-sky-400">
+        <Icon name="tabler:shield-check" class="w-5 h-5" />
+      </span>
+      <span class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">
+        <span class="font-bold text-gray-900 dark:text-slate-100">Test evidence:</span>
+        campaign {TYPE_TEST_CAMPAIGN.campaignId} (lot {TYPE_TEST_CAMPAIGN.lot}, {TYPE_TEST_CAMPAIGN.dates}) on the{' '}
+        {TYPE_TEST_CAMPAIGN.model} ({TYPE_TEST_CAMPAIGN.specimen}) measured Pw = 8.0 PSI and burst at {BURST_PSI} PSI ={
+          ' '
+        }
+        {(BURST_PSI / PW_PSI).toFixed(2)}× Pw with all seams intact. Results cover the tested model, lot and units only
+        — {TYPE_TEST_CAMPAIGN.scopeNote.toLowerCase()}
+        <span class="block mt-1.5">
+          Pending factory confirmation (FC-01): the relief-valve threshold ({POOL_RELIEF_VALVE_PRESSURE}) and the
+          maximum inflation pressure ({POOL_MAX_PRESSURE}) are shown exactly as published; their exact relationship is
+          being confirmed with the factory.
+        </span>
+      </span>
+    </div>
+  </div>
+</section>

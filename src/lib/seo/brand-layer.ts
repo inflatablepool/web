@@ -21,7 +21,7 @@ export interface BrandConversion {
   recommendedProducts: typeof products;
 }
 
-const POOL_PRODUCT_IDS = ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'];
+const POOL_PRODUCT_IDS = ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool'];
 
 const CTA_RULES: Array<{
   match: (slug: string) => boolean;

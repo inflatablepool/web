@@ -93,7 +93,17 @@ const errors = [];
 const warnings = [];
 const items = [];
 
+/**
+ * Colorway SKUs (P1-5): sold on a shared product page through the same Stripe
+ * checkout, but they have no dedicated MDX file — the merged page's MDX covers
+ * the base colorway only, so the MDX×100 price gate cannot apply to them.
+ * They deliberately exit the feed; the base colorway item represents the page.
+ * Keep in sync with PRODUCT_CATALOG in functions/api/checkout.ts.
+ */
+const FEED_EXCLUDED_SKUS = new Set(['IPF-POOL-RND-GREY']);
+
 for (const [sku, entry] of Object.entries(catalog)) {
+  if (FEED_EXCLUDED_SKUS.has(sku)) continue;
   const mdx = readMdxFrontmatter(entry.slug);
   if (!mdx) {
     errors.push(`${sku}: no MDX at src/content/products/${entry.slug}.mdx`);

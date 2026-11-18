@@ -63,7 +63,7 @@ export interface EngineStatus {
   color: string;
 }
 
-const POOL_PRODUCT_IDS = ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'];
+const POOL_PRODUCT_IDS = ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool'];
 
 export const BRAND: BrandIdentity = {
   name: 'Inflatable Pool Factory',

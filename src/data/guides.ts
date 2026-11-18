@@ -159,7 +159,6 @@ export const guides: GuideRecord[] = [
     relatedProducts: [
       'rectangular-drop-stitch-pool',
       'round-blue-drop-stitch-pool',
-      'round-grey-drop-stitch-pool',
       'hot-tub-square-rect',
       'hot-tub-round',
     ],
@@ -205,7 +204,6 @@ export const guides: GuideRecord[] = [
     relatedProducts: [
       'rectangular-drop-stitch-pool',
       'round-blue-drop-stitch-pool',
-      'round-grey-drop-stitch-pool',
       'hot-tub-square-rect',
       'hot-tub-round',
     ],
@@ -251,7 +249,6 @@ export const guides: GuideRecord[] = [
     relatedProducts: [
       'rectangular-drop-stitch-pool',
       'round-blue-drop-stitch-pool',
-      'round-grey-drop-stitch-pool',
       'hot-tub-square-rect',
       'hot-tub-round',
     ],
@@ -294,7 +291,7 @@ export const guides: GuideRecord[] = [
         a: 'Ground-level concrete, level and crack-free, with a ground sheet, non-slip access, a covered pump connection, and a drainage route planned before filling.',
       },
     ],
-    relatedProducts: ['round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool', 'hot-tub-square-rect'],
+    relatedProducts: ['round-blue-drop-stitch-pool', 'hot-tub-square-rect'],
     relatedGuides: ['how-much-space-do-you-need-for-an-inflatable-pool', 'inflatable-pool-setup'],
     difficulty: 'beginner',
     waterType: ['freshwater'],
@@ -334,7 +331,7 @@ export const guides: GuideRecord[] = [
         a: 'For seasonal, low-frequency use it can work. For high-turnover properties, evaluate commercial-grade options and heavier-duty specifications before committing — see our business solutions page.',
       },
     ],
-    relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'],
+    relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool'],
     relatedGuides: ['inflatable-pool-maintenance', 'how-to-choose-inflatable-pool'],
     difficulty: 'beginner',
     waterType: ['freshwater'],

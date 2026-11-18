@@ -50,7 +50,16 @@ test('every sample platform maps to a valid RFQ product type', () => {
 
 test('sample platforms keep product page slugs and links aligned', () => {
   for (const product of SAMPLE_PRODUCTS) {
-    assert.equal(product.productHref, `/products/${product.slug}`);
+    // The grey colorway platform links to the merged round pool page (its own
+    // page 301-redirects there); every other platform links to its own page.
+    const hrefSlug = product.productHref.replace(/^\/products\//, '');
+    assert.ok(
+      PRODUCT_SLUGS.includes(hrefSlug),
+      `${product.slug} links to unknown product page ${product.productHref}`
+    );
+    if (product.slug !== 'round-grey-drop-stitch-pool') {
+      assert.equal(product.productHref, `/products/${product.slug}`);
+    }
     assert.ok(product.name.length > 0);
     assert.ok(product.sizeRange.length > 0);
     assert.ok(product.wallThickness.length > 0);

@@ -8,6 +8,10 @@ import { Image } from 'astro:assets';
 import merge from 'lodash.merge';
 import ProductLayout from '~/layouts/ProductLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
+import ProductColorway from '~/components/widgets/ProductColorway.astro';
+import MaterialTestEvidence from '~/components/widgets/MaterialTestEvidence.astro';
+import PressureSafety from '~/components/widgets/PressureSafety.astro';
+import AccessoryRecommendations from '~/components/widgets/AccessoryRecommendations.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
@@ -29,6 +33,8 @@ import { guides } from '~/data/guides';
 import { languages, defaultLang } from '~/i18n/config';
 import { localizeHref } from '~/i18n/routing';
 import { getUiForLang } from '~/i18n/generated/ui-all';
+import { productBusinessData } from '~/data/product-business-data';
+import { poolEngineeringProfiles } from '~/data/pool-engineering';
 
 export async function getStaticPaths() {
   const paths: { params: { lang: string; slug: string }; props: any }[] = [];
@@ -43,12 +49,46 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+// UI label with an explicit English fallback (keeps headings readable when a
+// language dictionary is missing a key).
+const tf = (key: string, fallback: string) => t(key) || fallback;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { product: rawProduct } = Astro.props as Props;
-const product = localizeProductData(rawProduct, lang);
+// Shallow copy: getStaticPaths shares one props object across every language,
+// so the per-language title override below must not mutate it.
+const product = { ...localizeProductData(rawProduct, lang) };
 const recRaw = productRecords.find((p) => p.id === product.slug);
 const rec = recRaw ? localizeProduct(recRaw, lang) : undefined;
+// Use the translated product name (src/data/product-texts.ts) when the product
+// UI dictionary has no localized title for this language.
+if (rec && recRaw && rec.name && rec.name !== recRaw.name && product.title === rawProduct.title) {
+  product.title = rec.name;
+}
+
+// Content-collection entries can carry empty defaults ([] / {}) for the AI
+// fields. `a || b` treats those as present, which rendered an empty FAQ list,
+// an empty "Use cases" line and skipped the English record fallback. Pick the
+// first value that actually has content instead.
+const hasContent = (v: unknown): boolean =>
+  Array.isArray(v) ? v.length > 0 : v && typeof v === 'object' ? Object.keys(v as object).length > 0 : Boolean(v);
+function firstFilled<T>(...vals: (T | undefined | null)[]): T | undefined {
+  return vals.find((v) => hasContent(v)) ?? undefined;
+}
+const pd = product as any;
+const l10n = {
+  definition: firstFilled<string>(pd.definition, rec?.definition),
+  audience: firstFilled<string>(pd.audience, rec?.audience),
+  useCases: firstFilled<string[]>(pd.ai_use_cases, rec?.ai_use_cases) ?? [],
+  comparison: firstFilled<string>(pd.ai_comparison, rec?.ai_comparison),
+  faq: firstFilled<Array<{ q: string; a: string }>>(pd.ai_faq, rec?.ai_faq) ?? [],
+  safety: firstFilled<string[]>(pd.safety_rules, rec?.safety_rules) ?? [],
+  specs: firstFilled<Record<string, string>>(pd.ai_specs, rec?.ai_specs as any) ?? {},
+};
+const business = rec ? productBusinessData[rec.id] : undefined;
+const engineering = poolEngineeringProfiles[product.slug];
+// Spec keys (ai_specs) → localized label; falls back to a Title Case label.
+const specLabel = (k: string) => t(`spec.${k}`) || k.replace(/_/g, ' ').replace(/^./, (c) => c.toUpperCase());
 // Canonical + og:url must include the language prefix on localized pages;
 // without it every non-EN product page canonicalizes to the EN URL and
 // deindexes itself.
@@ -115,7 +155,6 @@ const productCompliance = getProductCompliance(product.category);
 // per-variant offers — the group-level Offer is the only published price.
 const SERIES_BY_SLUG: Record<string, string> = {
   'round-blue-drop-stitch-pool': 'round',
-  'round-grey-drop-stitch-pool': 'round',
   'rectangular-drop-stitch-pool': 'rect-square',
   'hot-tub-round': 'hot-tub-round',
   'hot-tub-square-rect': 'hot-tub-square-rect',
@@ -489,13 +528,15 @@ const hasVariant = catalogSeries
 
   {/* TLDR (AI-crawlable) */}
   {
-    (product.definition || rec) && (
+    l10n.definition && (
       <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
         <Tldr
-          summary={product.definition || rec?.definition}
+          summary={l10n.definition}
           points={[
-            `${product.audience || rec?.audience}`,
-            `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
+            ...(l10n.audience ? [l10n.audience] : []),
+            ...(l10n.useCases.length > 0
+              ? [`${tf('product.useCases', 'Use cases')}: ${l10n.useCases.slice(0, 3).join(', ')}`]
+              : []),
           ]}
         />
       </section>
@@ -557,9 +598,72 @@ const hasVariant = catalogSeries
     )
   }
 
+  {/* Colorway (merged product pages, P1-5) */}
+  <ProductColorway slug={product.slug} lang={lang} />
+
+  {/* Who is it for? (parity with the EN product page) */}
+  {
+    (l10n.audience || business) && (
+      <section
+        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="definition"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+            {tf('product.businessFit', 'Business Fit')}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+            {tf('product.whoIsItFor', 'Who is it for?')}
+          </h2>
+          {l10n.audience && <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{l10n.audience}</p>}
+          {business && (
+            <div class="mt-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-5">
+              <p class="text-sm font-semibold text-orange-800 dark:text-orange-300 mb-3">
+                {tf('product.bestForBusiness', 'Best For Your Business')}
+              </p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                {business.bestFor.includes('families') && (
+                  <span class="inline-block text-xs font-medium bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full">
+                    {tf('product.audienceFamilies', 'Families')}
+                  </span>
+                )}
+                {business.bestFor.includes('retailers') && (
+                  <span class="inline-block text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 px-3 py-1 rounded-full">
+                    {tf('product.audienceRetailers', 'Retailers')}
+                  </span>
+                )}
+                {business.bestFor.includes('oem') && (
+                  <span class="inline-block text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full">
+                    OEM
+                  </span>
+                )}
+              </div>
+              <p class="text-sm text-orange-700 dark:text-orange-400 leading-relaxed">{business.recommendation}</p>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                {[
+                  [tf('product.useCase', 'Use Case'), business.useCase],
+                  [tf('product.operatingCost', 'Operating Cost'), business.operatingCost],
+                  [tf('product.expectedLifespan', 'Expected Lifespan'), business.lifespan],
+                  [tf('product.whyBusinesses', 'Why Businesses Choose It'), business.whyBusinessesChooseIt],
+                ].map(([label, value]) => (
+                  <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
+                    <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
+                      {label}
+                    </p>
+                    <p class="text-sm text-gray-700 dark:text-slate-300">{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
   {/* Comparison */}
   {
-    (product.ai_comparison || rec?.ai_comparison) && (
+    l10n.comparison && (
       <section
         class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
         data-ai-block="comparison"
@@ -571,9 +675,7 @@ const hasVariant = catalogSeries
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
             {t('product.howCompares')}
           </h2>
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
-            {product.ai_comparison || rec?.ai_comparison}
-          </p>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{l10n.comparison}</p>
         </div>
       </section>
     )
@@ -581,14 +683,14 @@ const hasVariant = catalogSeries
 
   {/* FAQ Section */}
   {
-    ((product.ai_faq || []).length > 0 || (rec?.ai_faq || []).length > 0) && (
+    l10n.faq.length > 0 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
             {t('product.faq')}
           </h2>
           <div class="space-y-3">
-            {(product.ai_faq || rec?.ai_faq || []).map((f: any) => (
+            {l10n.faq.map((f) => (
               <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
                 <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
                   {f.q}
@@ -607,11 +709,11 @@ const hasVariant = catalogSeries
     )
   }
 
-  <JsonLd type="FAQPage" faqs={product.ai_faq || rec?.ai_faq || []} />
+  <JsonLd type="FAQPage" faqs={l10n.faq} />
 
   {/* Safety & Usage */}
   {
-    ((rec?.safety_rules || []).length > 0 || (product.safety_rules || []).length > 0) && (
+    l10n.safety.length > 0 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="safety">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
@@ -619,7 +721,7 @@ const hasVariant = catalogSeries
           </h2>
           <div class="bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-6 py-5">
             <ul class="space-y-2.5">
-              {(product.safety_rules || rec?.safety_rules || []).map((rule: string) => (
+              {l10n.safety.map((rule: string) => (
                 <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                   <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
                   <span class="capitalize">{rule}</span>
@@ -634,23 +736,23 @@ const hasVariant = catalogSeries
 
   {/* Materials & Construction */}
   {
-    (product.ai_specs || rec?.ai_specs) && (
+    Object.keys(l10n.specs).length > 0 && (
       <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
-            {t('product.specifications')}
+            {tf('product.construction', 'Construction')}
           </span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.specifications')}
+            {tf('product.materialsConstruction', 'Materials & Construction')}
           </h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(product.ai_specs || rec?.ai_specs || {})
+            {Object.entries(l10n.specs)
               .filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k))
               .slice(0, 6)
               .map(([k, v]) => (
                 <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
                   <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
-                    {k.replace(/_/g, ' ')}
+                    {specLabel(k)}
                   </div>
                   <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
                 </div>
@@ -660,6 +762,54 @@ const hasVariant = catalogSeries
       </section>
     )
   }
+
+  {/* Measured material results (P1-1) */}
+  <MaterialTestEvidence />
+
+  {/* Shape-specific engineering notes (parity with the EN product page) */}
+  {
+    engineering && (
+      <section
+        class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="engineering"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+            {tf('product.engineering', 'Engineering')}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+            {tf(
+              `product.engineeringTitle.${engineering.shape}`,
+              `${engineering.shape.charAt(0).toUpperCase() + engineering.shape.slice(1)} pool engineering`
+            )}
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-6">{engineering.intro}</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            {engineering.points.map((point) => (
+              <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5">
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{point.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{point.body}</p>
+              </div>
+            ))}
+          </div>
+          <p class="mt-4 text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-3xl">{engineering.note}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            {engineering.links.map((link) => (
+              <a
+                href={localizeHref(link.href, lang)}
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-800 dark:text-sky-300 text-xs font-semibold hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
+              >
+                {link.label} <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Pressure ladder (P1-2) */}
+  <PressureSafety />
 
   {/* Compliance & Documentation */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
@@ -750,6 +900,9 @@ const hasVariant = catalogSeries
       <TrustBadges layout="row" />
     </div>
   </section>
+
+  {/* Accessory recommendations (P1-6) */}
+  <AccessoryRecommendations slug={product.slug} lang={lang} />
 
   {/* Related Products */}
   {

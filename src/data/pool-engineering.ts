@@ -152,7 +152,6 @@ const roundSpaProfile: PoolEngineeringProfile = {
 export const poolEngineeringProfiles: Record<string, PoolEngineeringProfile> = {
   'rectangular-drop-stitch-pool': rectangularProfile,
   'round-blue-drop-stitch-pool': roundProfile,
-  'round-grey-drop-stitch-pool': roundProfile,
   'hot-tub-round': roundSpaProfile,
   'hot-tub-square-rect': squareSpaProfile,
 };
