@@ -60,7 +60,7 @@ features:
       description: Har bir hovuz elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi. Dumaloq modellar uchun o'rnatilgan qopqoqlar mavjud.
       icon: tabler:box
     - title: Xavfsizlik nuqtai nazaridan dizayn
-      description: 'EN 16582-1 va ASTM F2666 standartlariga mos keladigan turar-joy hovuzining dizayni - modelga oid xavfsizlik ma''lumotlari mahsulot hujjatlarida keltirilgan. Doimiy kattalar nazorati doimo talab qilinadi.'
+      description: 'EN 16582-1 va ASTM F2666 standartlariga havola qiluvchi turar-joy hovuzi dizayni - modelga oid xavfsizlik ma''lumotlari mahsulot hujjatlarida keltirilgan. Doimiy kattalar nazorati doimo talab qilinadi.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Hovuz g'oyalari

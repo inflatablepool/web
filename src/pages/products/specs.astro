@@ -21,6 +21,12 @@ export const prerender = true;
 /** Month the factory price list was last confirmed with the sales team */
 const PRICE_LIST_UPDATED = 'October 2026';
 
+const skuBreakdown = poolSeries.map((series) => ({
+  name: series.heading.split(' — ')[0],
+  count: series.items.length,
+}));
+const totalSkuCount = skuBreakdown.reduce((total, row) => total + row.count, 0);
+
 const tocLinks = [
   { href: '#reading-guide', label: 'How to Read' },
   { href: '#round', label: 'Round Pools' },
@@ -153,7 +159,7 @@ const formatUsd = (n: number) =>
             },
             {
               title: 'Wall',
-              body: 'Inflated drop-stitch wall or chamber thickness (10, 15, 20 or 50 cm). It is not the PVC sheet thickness and not the water depth. The laminate thickness is a separate material specification.',
+              body: 'Inflated drop-stitch wall or chamber thickness (10, 15, 20 or 50 cm). The per-SKU tables below list the exact wall option for each model; a series range does not mean every size is available in every wall. It is not the PVC sheet thickness and not the water depth. The laminate thickness is a separate material specification.',
             },
             {
               title: 'Packed weight',
@@ -197,6 +203,12 @@ const formatUsd = (n: number) =>
           </a>
         </div>
       </div>
+      <p class="mt-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+        <strong class="text-gray-900 dark:text-slate-200">Catalog basis:</strong>
+        {totalSkuCount} standard pool SKUs —{' '}
+        {skuBreakdown.map((row) => `${row.count} × ${row.name}`).join(' + ')}. Optional accessories and custom/OEM sizes
+        are listed separately and are not included in this count.
+      </p>
     </section>
 
     <div class="space-y-14">
@@ -393,6 +405,15 @@ const formatUsd = (n: number) =>
             <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
               Prices are valid for the current production season; confirm final pricing with our sales team before
               ordering. FOB Qingdao is standard — CFR, CIF and DDP to major ports are available on request.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">MOQ, Inclusions & Packing</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+              Minimum order quantity, quantity breaks and the applicable material grade are confirmed per SKU in the
+              quotation; they are not inferred from the indicative unit price. Standard factory inclusions are listed
+              for each series above. Accessories, retail packaging where not listed, freight and destination charges are
+              quoted separately unless the quotation states otherwise.
             </p>
           </div>
         </div>

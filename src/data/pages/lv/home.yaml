@@ -60,7 +60,7 @@ features:
       description: Katrs baseins tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas maisiņu. Apaļajiem modeļiem pieejami iebūvēti vāki.
       icon: tabler:box
     - title: Drošību apzinīgs dizains
-      description: 'Dzīvojamo baseinu dizains, kas atbilst EN 16582-1 un ASTM F2666 — modeļa specifiskā drošības informācija ir sniegta produkta dokumentācijā. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
+      description: 'Dzīvojamo baseinu dizains ar atsauci uz EN 16582-1 un ASTM F2666 — modeļa specifiskā drošības informācija ir sniegta produkta dokumentācijā. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseina idejas

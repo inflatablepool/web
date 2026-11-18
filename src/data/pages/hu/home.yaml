@@ -60,7 +60,7 @@ features:
       description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. Kerek modellekhez felszerelt burkolatok kaphatók.
       icon: tabler:box
     - title: Biztonságtudatos tervezés
-      description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványnak megfelelően – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
+      description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványra hivatkozva – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Medence ötletek

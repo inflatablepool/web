@@ -60,7 +60,7 @@ features:
       description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Do modeli okrągłych dostępne są dopasowane pokrowce.
       icon: tabler:box
     - title: Projekt uwzględniający bezpieczeństwo
-      description: 'Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa dotyczące konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
+      description: 'Projekt basenu mieszkalnego odwołujący się do norm EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pomysły na basen

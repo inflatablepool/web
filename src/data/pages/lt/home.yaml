@@ -60,7 +60,7 @@ features:
       description: Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvaliems modeliams yra sumontuoti užvalkalai.
       icon: tabler:box
     - title: Saugumo požiūriu sąmoningas dizainas
-      description: 'Gyvenamojo baseino projektas, atitinkantis EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
+      description: 'Gyvenamojo baseino dizainas, kuriame remiamasi EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseino idėjos
