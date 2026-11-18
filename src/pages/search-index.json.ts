@@ -295,6 +295,27 @@ export const GET: APIRoute = async () => {
       excerpt: 'Compare drop-stitch pool models side by side.',
       tags: ['compare', 'products'],
     },
+    {
+      title: 'Drop Stitch Pool Technology: Structure, Materials & Testing',
+      url: '/drop-stitch-pool-technology',
+      excerpt:
+        'How drop stitch pool construction works: internal threads, PVC laminates, wall and pressure definitions, shape engineering, manufacturing and published 8/8 test evidence.',
+      tags: ['drop-stitch', 'technology', 'materials', 'pressure'],
+    },
+    {
+      title: 'Drop Stitch Pool Materials: 1000D vs 1500D PVC',
+      url: '/drop-stitch-pool-materials',
+      excerpt:
+        'Why denier describes yarn rather than finished wall thickness, what 1000D and 1500D do and do not tell you, and the material data to request before ordering.',
+      tags: ['pvc', 'denier', '1000d', '1500d', 'materials'],
+    },
+    {
+      title: 'Inflatable Pool Water Capacity Calculator',
+      url: '/inflatable-pool-water-capacity',
+      excerpt:
+        'Calculate water volume in cubic metres, litres and gallons, plus water weight, from internal pool dimensions and planned fill depth.',
+      tags: ['calculator', 'water-capacity', 'volume', 'litres', 'gallons'],
+    },
   ] as const;
 
   for (const p of staticPages) {

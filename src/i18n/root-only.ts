@@ -25,6 +25,9 @@ export const ROOT_ONLY_ROUTES = [
   '/quality-control',
   '/sample-request',
   '/wholesale',
+  '/drop-stitch-pool-technology',
+  '/drop-stitch-pool-materials',
+  '/inflatable-pool-water-capacity',
   '/admin',
 ];
 

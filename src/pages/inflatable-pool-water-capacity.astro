@@ -1,0 +1,650 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { CAPACITY_FAQS } from '~/data/drop-stitch-technology';
+
+export const prerender = true;
+
+const canonical = getCanonical('/inflatable-pool-water-capacity');
+const metadata = merge(
+  {
+    title: `Inflatable Pool Water Capacity Calculator (m3, Litres, Gallons) | ${SITE.name}`,
+    description:
+      'Calculate the water volume and weight of a round, square or rectangular inflatable pool from internal dimensions and actual fill depth. Metric and imperial input.',
+    canonical,
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Pool Water Capacity Calculator' }];
+
+const formulas = [
+  {
+    shape: 'Round',
+    formula: 'V = pi x (inner diameter / 2)^2 x water depth',
+    note: 'Use the internal diameter, not the outside diameter.',
+  },
+  {
+    shape: 'Square',
+    formula: 'V = inner side x inner side x water depth',
+    note: 'All four sides must be equal. For a rectangle with unequal sides, use the rectangular formula.',
+  },
+  {
+    shape: 'Rectangular',
+    formula: 'V = inner length x inner width x water depth',
+    note: 'Use internal dimensions measured at the waterline.',
+  },
+];
+
+const measurementSteps = [
+  {
+    title: 'Measure inside the pool',
+    body: 'Run the tape along the inside face of the wall, not the outside. The outside size includes the inflated wall and any rails or fittings, so it overstates the volume.',
+  },
+  {
+    title: 'Measure at the waterline height',
+    body: 'The wall can taper or round at the top. Measure the internal diameter or internal length and width at the height the water will actually reach.',
+  },
+  {
+    title: 'Use the planned water depth',
+    body: 'Water depth is the distance from the pool floor to the water surface. It is not the wall height. Leave freeboard above the waterline as required for your model and use.',
+  },
+  {
+    title: 'Check the support surface',
+    body: 'Water weighs about 1,000 kg per cubic metre. Confirm that the ground, deck or platform can carry the filled weight before you fill the pool.',
+  },
+];
+
+const conversionRows = [
+  { unit: '1 cubic metre', equals: '1,000 litres = 264.172 US gallons = 219.969 imperial gallons' },
+  { unit: '1 litre', equals: '0.001 cubic metre = 0.264172 US gallons' },
+  { unit: '1 US gallon', equals: '3.78541 litres' },
+  { unit: '1 imperial gallon', equals: '4.54609 litres' },
+  { unit: '1 cubic foot', equals: '28.3168 litres = 7.48052 US gallons' },
+  { unit: '1 metre', equals: '3.28084 feet' },
+  { unit: 'Fresh water density', equals: 'approximately 1,000 kg per cubic metre (1 kg per litre)' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@type': 'WebApplication',
+      name: 'Inflatable Pool Water Capacity Calculator',
+      description:
+        'Estimate water volume and water weight for a round, square or rectangular inflatable pool from internal dimensions and planned fill depth.',
+      url: String(canonical || ''),
+      applicationCategory: 'UtilityApplication',
+      operatingSystem: 'Any',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    }}
+  />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Calculator</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Inflatable Pool Water Capacity Calculator
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Estimate water volume and water weight from the pool's internal dimensions and the depth you actually plan to
+        fill.
+      </p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-slate-400">
+        No default values: enter your own measurements. Results update as you type.
+      </p>
+    </header>
+
+    <div class="grid lg:grid-cols-5 gap-6 mb-8">
+      <div
+        class="lg:col-span-3 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 md:p-7"
+      >
+        <form id="capacity-form" novalidate>
+          <fieldset class="mb-6">
+            <legend class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">1. Pool shape</legend>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="cursor-pointer">
+                <input type="radio" name="shape" value="round" class="peer sr-only" checked />
+                <span
+                  class="flex flex-col items-center gap-1 rounded-xl border border-gray-200 dark:border-slate-700 px-2 py-3 text-xs font-medium text-gray-600 dark:text-slate-300 peer-checked:border-sky-500 peer-checked:bg-sky-50 peer-checked:text-sky-800 dark:peer-checked:bg-sky-900/30 dark:peer-checked:text-sky-300 transition-colors"
+                >
+                  <Icon name="tabler:circle" class="w-5 h-5" />
+                  Round
+                </span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="shape" value="square" class="peer sr-only" />
+                <span
+                  class="flex flex-col items-center gap-1 rounded-xl border border-gray-200 dark:border-slate-700 px-2 py-3 text-xs font-medium text-gray-600 dark:text-slate-300 peer-checked:border-sky-500 peer-checked:bg-sky-50 peer-checked:text-sky-800 dark:peer-checked:bg-sky-900/30 dark:peer-checked:text-sky-300 transition-colors"
+                >
+                  <Icon name="tabler:square" class="w-5 h-5" />
+                  Square
+                </span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="shape" value="rectangular" class="peer sr-only" />
+                <span
+                  class="flex flex-col items-center gap-1 rounded-xl border border-gray-200 dark:border-slate-700 px-2 py-3 text-xs font-medium text-gray-600 dark:text-slate-300 peer-checked:border-sky-500 peer-checked:bg-sky-50 peer-checked:text-sky-800 dark:peer-checked:bg-sky-900/30 dark:peer-checked:text-sky-300 transition-colors"
+                >
+                  <Icon name="tabler:rectangle" class="w-5 h-5" />
+                  Rectangular
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="mb-6">
+            <legend class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">2. Units</legend>
+            <div class="inline-flex rounded-full border border-gray-200 dark:border-slate-700 p-0.5">
+              <label class="cursor-pointer">
+                <input type="radio" name="unit" value="m" class="peer sr-only" checked />
+                <span
+                  class="inline-block px-4 py-1.5 text-xs font-semibold rounded-full text-gray-600 dark:text-slate-300 peer-checked:bg-gray-900 peer-checked:text-white dark:peer-checked:bg-slate-600"
+                >
+                  Metres
+                </span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="unit" value="ft" class="peer sr-only" />
+                <span
+                  class="inline-block px-4 py-1.5 text-xs font-semibold rounded-full text-gray-600 dark:text-slate-300 peer-checked:bg-gray-900 peer-checked:text-white dark:peer-checked:bg-slate-600"
+                >
+                  Feet
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="mb-6">
+            <legend class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">
+              3. Internal dimensions and water depth
+            </legend>
+            <div class="space-y-4">
+              <div id="field-diameter">
+                <label for="diameter" class="block text-xs font-medium text-gray-600 dark:text-slate-400 mb-1">
+                  Internal diameter <span data-unit-label>(m)</span>
+                </label>
+                <input
+                  id="diameter"
+                  name="diameter"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  step="any"
+                  placeholder="e.g. 2.9"
+                  class="w-full rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-base text-gray-900 dark:text-slate-100 placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                />
+              </div>
+              <div id="field-side" class="hidden">
+                <label for="side" class="block text-xs font-medium text-gray-600 dark:text-slate-400 mb-1">
+                  Internal side length <span data-unit-label>(m)</span>
+                </label>
+                <input
+                  id="side"
+                  name="side"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  step="any"
+                  placeholder="e.g. 2.0"
+                  class="w-full rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-base text-gray-900 dark:text-slate-100 placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                />
+              </div>
+              <div id="field-length" class="hidden">
+                <label for="length" class="block text-xs font-medium text-gray-600 dark:text-slate-400 mb-1">
+                  Internal length <span data-unit-label>(m)</span>
+                </label>
+                <input
+                  id="length"
+                  name="length"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  step="any"
+                  placeholder="e.g. 4.0"
+                  class="w-full rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-base text-gray-900 dark:text-slate-100 placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                />
+              </div>
+              <div id="field-width" class="hidden">
+                <label for="width" class="block text-xs font-medium text-gray-600 dark:text-slate-400 mb-1">
+                  Internal width <span data-unit-label>(m)</span>
+                </label>
+                <input
+                  id="width"
+                  name="width"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  step="any"
+                  placeholder="e.g. 2.0"
+                  class="w-full rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-base text-gray-900 dark:text-slate-100 placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                />
+              </div>
+              <div>
+                <label for="depth" class="block text-xs font-medium text-gray-600 dark:text-slate-400 mb-1">
+                  Planned water depth <span data-unit-label>(m)</span>
+                </label>
+                <input
+                  id="depth"
+                  name="depth"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  step="any"
+                  placeholder="e.g. 0.75"
+                  class="w-full rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-base text-gray-900 dark:text-slate-100 placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                />
+                <p class="mt-1.5 text-xs text-gray-500 dark:text-slate-500">
+                  Not the wall height: leave freeboard above the waterline as required for the model.
+                </p>
+              </div>
+            </div>
+          </fieldset>
+
+          <p
+            id="capacity-error"
+            class="hidden rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 px-4 py-3 text-sm text-red-800 dark:text-red-300"
+            role="alert"
+          >
+          </p>
+        </form>
+      </div>
+
+      <div class="lg:col-span-2 rounded-2xl bg-slate-900 p-5 md:p-7 text-white">
+        <p class="text-xs font-semibold uppercase tracking-wider text-sky-300 mb-4">Estimated water volume</p>
+        <div aria-live="polite">
+          <div class="mb-5">
+            <div id="result-m3" class="text-3xl md:text-4xl font-bold tracking-tight">-</div>
+            <div class="text-xs text-slate-400 mt-1">cubic metres (m3)</div>
+          </div>
+          <dl class="space-y-3 text-sm border-t border-slate-700 pt-4">
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="text-slate-400">Litres</dt>
+              <dd id="result-l" class="font-semibold text-right">-</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="text-slate-400">US gallons</dt>
+              <dd id="result-gal" class="font-semibold text-right">-</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="text-slate-400">Imperial gallons</dt>
+              <dd id="result-igal" class="font-semibold text-right">-</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 border-t border-slate-700 pt-3">
+              <dt class="text-slate-400">Water weight</dt>
+              <dd id="result-kg" class="font-semibold text-right">-</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="text-slate-400">Water weight (US tons)</dt>
+              <dd id="result-ton" class="font-semibold text-right">-</dd>
+            </div>
+          </dl>
+        </div>
+        <p class="mt-5 text-[11px] leading-relaxed text-slate-400">
+          Theoretical estimate for fresh water at approximately 1,000 kg/m3. It does not include displacement from
+          people or equipment, and it is not a bather-load, structural or compliance rating.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-4 mb-12">
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        <strong class="text-gray-900 dark:text-slate-200">How to read the result:</strong> this is the volume of water for
+        the dimensions you entered. A 10 m3 result means about 10,000 litres and about 10 tonnes of water. Confirm the filled
+        weight against the support capacity of your site, and confirm the model's actual fill level in its user documentation.
+      </p>
+    </div>
+
+    <section id="formulas" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        The formulas behind the calculator
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        The calculator converts your inputs to metres, applies the standard volume formula for the selected shape, then
+        converts the result to litres, gallons and weight.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700 mb-4">
+        <table class="w-full text-sm min-w-[640px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Shape</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Formula</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              formulas.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top whitespace-nowrap">
+                    {row.shape}
+                  </td>
+                  <td class="px-4 py-3 text-gray-700 dark:text-slate-300 align-top font-mono text-xs">{row.formula}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.note}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 dark:text-slate-500">
+        Worked example: a round pool with an internal diameter of 2.9 m filled to 0.75 m depth holds 3.14159 x 1.45 x
+        1.45 x 0.75 = about 4.95 m3, or about 4,950 litres.
+      </p>
+    </section>
+
+    <section id="measure" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        How to measure your pool correctly
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Most capacity errors come from using outside dimensions, wall height, or a nominal marketing size. Measure the
+        water body itself.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        {
+          measurementSteps.map((step) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{step.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="conversions" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Unit conversions used
+      </h2>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[520px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Unit</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Equivalent</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              conversionRows.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top whitespace-nowrap">
+                    {row.unit}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top">{row.equals}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        Water capacity FAQ
+      </h2>
+      <div class="space-y-3">
+        {
+          CAPACITY_FAQS.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related technical pages</h2>
+      <div class="grid sm:grid-cols-3 gap-3">
+        <a
+          href="/drop-stitch-pool-technology"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100"
+            >Drop stitch technology center</span
+          >
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            Structure, materials, pressure, shape engineering and test evidence.
+          </span>
+        </a>
+        <a
+          href="/drop-stitch-pool-materials"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">PVC material guide</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            What 1000D and 1500D mean, and which material data to request.
+          </span>
+        </a>
+        <a
+          href="/products/specs"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Pool specifications</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            Standard sizes, wall options and indicative FOB Qingdao prices.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="rounded-2xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6"
+    >
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Scope and disclaimer</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        This calculator is a theoretical volume estimator for still fresh water. It does not account for pool fittings,
+        displacement, waves, splash, freeboard requirements, water temperature, dissolved solids or the manufacturer's
+        specified maximum fill level. It does not certify bather load, structural capacity, ground support or compliance
+        with any local rule. For a project, use the internal dimensions and fill level from the approved drawing and
+        have a qualified engineer confirm the support requirement.
+      </p>
+    </section>
+
+    <section class="mt-12 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Need a pool built to a specific internal size or water depth? Send the target dimensions and use case so the
+        model and wall options can be reviewed.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" /> Request a Quotation
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-5 h-5" /> View Specifications
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="water-capacity" aria-hidden="true">
+    <p>
+      Inflatable pool water capacity is calculated from internal dimensions and the actual water depth: round pools use
+      pi x (internal diameter / 2)^2 x depth; square pools use internal side squared x depth; rectangular pools use
+      internal length x internal width x depth. One cubic metre equals 1,000 litres, 264.172 US gallons or 219.969
+      imperial gallons. Fresh water weighs approximately 1,000 kg per cubic metre, so 10 m3 is about 10 tonnes. Outside
+      dimensions overstate the volume because they include the wall. Wall height is not water depth. The Inflatable Pool
+      Factory calculator reports a theoretical estimate only; it is not a bather-load, structural or compliance rating.
+    </p>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={CAPACITY_FAQS.map((faq) => ({ q: faq.q, a: faq.a }))} />
+</Layout>
+
+<script>
+  (() => {
+    const form = document.getElementById('capacity-form');
+    if (!form) return;
+
+    const inputs = {
+      diameter: form.querySelector<HTMLInputElement>('#diameter'),
+      side: form.querySelector<HTMLInputElement>('#side'),
+      length: form.querySelector<HTMLInputElement>('#length'),
+      width: form.querySelector<HTMLInputElement>('#width'),
+      depth: form.querySelector<HTMLInputElement>('#depth'),
+    };
+
+    const fields = {
+      diameter: document.getElementById('field-diameter'),
+      side: document.getElementById('field-side'),
+      length: document.getElementById('field-length'),
+      width: document.getElementById('field-width'),
+    };
+
+    const out = {
+      m3: document.getElementById('result-m3'),
+      l: document.getElementById('result-l'),
+      gal: document.getElementById('result-gal'),
+      igal: document.getElementById('result-igal'),
+      kg: document.getElementById('result-kg'),
+      ton: document.getElementById('result-ton'),
+    };
+
+    const errorEl = document.getElementById('capacity-error');
+    const unitLabels = form.querySelectorAll('[data-unit-label]');
+
+    const valueOf = (el: HTMLInputElement | null) => (el ? el.value : '');
+    const setText = (el: HTMLElement | null, value: string) => {
+      if (el) el.textContent = value;
+    };
+
+    const FT_TO_M = 0.3048;
+    const M3_TO_L = 1000;
+    const L_TO_US_GAL = 0.264172052;
+    const L_TO_IMP_GAL = 0.219969157;
+    const KG_TO_US_TON = 1 / 907.18474;
+
+    const fmt = (value: number, digits: number) =>
+      new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      }).format(value);
+
+    const getShape = () => {
+      const checked = form.querySelector<HTMLInputElement>('input[name="shape"]:checked');
+      return checked ? checked.value : 'round';
+    };
+
+    const getUnit = () => {
+      const checked = form.querySelector<HTMLInputElement>('input[name="unit"]:checked');
+      return checked ? checked.value : 'm';
+    };
+
+    const toMetres = (value: string) => {
+      const n = Number.parseFloat(value);
+      if (!Number.isFinite(n) || n <= 0) return null;
+      return getUnit() === 'ft' ? n * FT_TO_M : n;
+    };
+
+    const syncFields = () => {
+      const shape = getShape();
+      if (fields.diameter) fields.diameter.classList.toggle('hidden', shape !== 'round');
+      if (fields.side) fields.side.classList.toggle('hidden', shape !== 'square');
+      if (fields.length) fields.length.classList.toggle('hidden', shape !== 'rectangular');
+      if (fields.width) fields.width.classList.toggle('hidden', shape !== 'rectangular');
+    };
+
+    const syncUnits = () => {
+      const unit = getUnit() === 'ft' ? '(ft)' : '(m)';
+      unitLabels.forEach((el) => {
+        el.textContent = unit;
+      });
+    };
+
+    const clearResults = () => {
+      Object.values(out).forEach((el) => {
+        if (el) el.textContent = '-';
+      });
+    };
+
+    const showError = (message: string) => {
+      if (!errorEl) return;
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+    };
+
+    const hideError = () => {
+      if (!errorEl) return;
+      errorEl.textContent = '';
+      errorEl.classList.add('hidden');
+    };
+
+    const calculate = () => {
+      const shape = getShape();
+      const depth = toMetres(valueOf(inputs.depth));
+
+      let volume = 0;
+      let missing = '';
+
+      if (shape === 'round') {
+        const d = toMetres(valueOf(inputs.diameter));
+        if (!d) missing = 'Enter an internal diameter greater than zero.';
+        else if (depth) volume = Math.PI * Math.pow(d / 2, 2) * depth;
+      } else if (shape === 'square') {
+        const s = toMetres(valueOf(inputs.side));
+        if (!s) missing = 'Enter an internal side length greater than zero.';
+        else if (depth) volume = s * s * depth;
+      } else {
+        const l = toMetres(valueOf(inputs.length));
+        const w = toMetres(valueOf(inputs.width));
+        if (!l || !w) missing = 'Enter an internal length and width greater than zero.';
+        else if (depth) volume = l * w * depth;
+      }
+
+      if (!depth && !missing) missing = 'Enter a planned water depth greater than zero.';
+
+      if (missing) {
+        clearResults();
+        showError(missing);
+        return;
+      }
+
+      hideError();
+
+      const litres = volume * M3_TO_L;
+      const kg = litres * 1;
+
+      setText(out.m3, fmt(volume, volume < 10 ? 2 : 1));
+      setText(out.l, fmt(litres, 0) + ' L');
+      setText(out.gal, fmt(litres * L_TO_US_GAL, 0) + ' US gal');
+      setText(out.igal, fmt(litres * L_TO_IMP_GAL, 0) + ' imp gal');
+      setText(out.kg, fmt(kg, 0) + ' kg');
+      setText(out.ton, fmt(kg * KG_TO_US_TON, 1) + ' tons');
+    };
+
+    form.addEventListener('input', calculate);
+    form.addEventListener('change', () => {
+      syncFields();
+      syncUnits();
+      calculate();
+    });
+
+    syncFields();
+    syncUnits();
+    clearResults();
+  })();
+</script>

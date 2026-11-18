@@ -22,6 +22,7 @@ import { guides } from '~/data/guides';
 import { getProductCompliance } from '~/data/product-compliance';
 import { productBusinessData } from '~/data/product-business-data';
 import { getProductMentionsJsonLd } from '~/data/knowledge-graph';
+import { poolEngineeringProfiles } from '~/data/pool-engineering';
 
 export const prerender = true;
 
@@ -77,6 +78,7 @@ const productCrumbs = [
 ];
 
 const specRows = product.specs ?? [];
+const engineering = poolEngineeringProfiles[product.slug];
 
 const productCompliance = getProductCompliance(product.category);
 const productMentions = rec ? getProductMentionsJsonLd(rec.id) : [];
@@ -702,6 +704,45 @@ const hasVariant = catalogSeries
                   <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
                 </div>
               ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Shape-specific engineering notes */}
+  {
+    engineering && (
+      <section
+        class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="engineering"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
+            Engineering
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+            {engineering.shape.charAt(0).toUpperCase() + engineering.shape.slice(1)} pool engineering
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-6">{engineering.intro}</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            {engineering.points.map((point) => (
+              <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5">
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{point.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{point.body}</p>
+              </div>
+            ))}
+          </div>
+          <p class="mt-4 text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-3xl">{engineering.note}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            {engineering.links.map((link) => (
+              <a
+                href={link.href}
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-800 dark:text-sky-300 text-xs font-semibold hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
+              >
+                {link.label} <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </a>
+            ))}
           </div>
         </div>
       </section>

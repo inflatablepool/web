@@ -155,6 +155,9 @@ const CORE_PAGE_FILES = [
   'products/index.astro',
   'products/specs.astro',
   'products/compare.astro',
+  'drop-stitch-pool-technology.astro',
+  'drop-stitch-pool-materials.astro',
+  'inflatable-pool-water-capacity.astro',
   'guides/index.astro',
   'pool-ideas/index.astro',
 ];

@@ -22,6 +22,7 @@ export const prerender = true;
 const PRICE_LIST_UPDATED = 'October 2026';
 
 const tocLinks = [
+  { href: '#reading-guide', label: 'How to Read' },
   { href: '#round', label: 'Round Pools' },
   { href: '#rect-square', label: 'Rectangular / Square' },
   { href: '#hot-tub-square-rect', label: 'Square / Rect SPA' },
@@ -133,6 +134,70 @@ const formatUsd = (n: number) =>
         ))
       }
     </div>
+
+    <!-- How to read the specification table -->
+    <section id="reading-guide" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        How to read this specification table
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">
+        The columns use different units for different things. Check the definitions before comparing models or
+        estimating water volume.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          [
+            {
+              title: 'Size',
+              body: 'Nominal outside dimensions in metres. For round pools this is diameter x wall height; for rectangular and square pools it is length x width x wall height. Internal dimensions can differ because the inflated wall takes up space.',
+            },
+            {
+              title: 'Wall',
+              body: 'Inflated drop-stitch wall or chamber thickness (10, 15, 20 or 50 cm). It is not the PVC sheet thickness and not the water depth. The laminate thickness is a separate material specification.',
+            },
+            {
+              title: 'Packed weight',
+              body: 'Weight of the packed product where published on the price list. It is not the filled weight. A filled pool adds about 1,000 kg per cubic metre of water plus occupants and equipment.',
+            },
+            {
+              title: 'FOB price',
+              body: 'Indicative reference price per unit, FOB Qingdao, in USD. Quantity basis, mixed-container terms and the final price are confirmed in the quotation.',
+            },
+          ].map((item) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{item.body}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mt-4 rounded-xl border border-sky-100 dark:border-sky-800/60 bg-sky-50 dark:bg-sky-900/20 p-4">
+        <p class="text-sm text-sky-900 dark:text-sky-200 leading-relaxed mb-3">
+          <strong>Water capacity is not listed per SKU.</strong> Calculate it from the internal diameter or internal length
+          and width, multiplied by the water depth you actually plan to use. The nominal outside size overstates the volume.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <a
+            href="/inflatable-pool-water-capacity"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/70 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs font-semibold hover:bg-white dark:hover:bg-sky-950/60 transition-colors"
+          >
+            Water capacity calculator <Icon name="tabler:calculator" class="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="/drop-stitch-pool-technology"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/70 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs font-semibold hover:bg-white dark:hover:bg-sky-950/60 transition-colors"
+          >
+            Technology center <Icon name="tabler:stack-2" class="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="/drop-stitch-pool-materials"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/70 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs font-semibold hover:bg-white dark:hover:bg-sky-950/60 transition-colors"
+          >
+            PVC material guide <Icon name="tabler:layers-intersect" class="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </div>
+    </section>
 
     <div class="space-y-14">
       {
@@ -386,6 +451,17 @@ const formatUsd = (n: number) =>
             href="/quality-control/destructive-testing"
             class="underline decoration-primary/40 hover:decoration-primary">testing SOP</a
           > behind them.
+        </p>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mt-3">
+          The pressure figures above are published baselines for standard pool models. Confirm the nameplate and
+          approved specification for the exact SKU, and read the
+          <a
+            href="/drop-stitch-pool-technology#pressure"
+            class="underline decoration-primary/40 hover:decoration-primary"
+          >
+            pressure and wall terminology guide</a
+          >
+          before comparing designs.
         </p>
       </section>
 

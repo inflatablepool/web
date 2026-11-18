@@ -1,0 +1,725 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { POOL_PRODUCTION_STEPS } from '~/data/pool-catalog';
+import {
+  TECH_FAQS,
+  SHAPE_COMPARISON,
+  PRESSURE_DEFINITIONS,
+  DESTRUCTIVE_TEST_MATRIX,
+  TECH_DOCUMENTS,
+} from '~/data/drop-stitch-technology';
+
+export const prerender = true;
+
+const canonical = getCanonical('/drop-stitch-pool-technology');
+const metadata = merge(
+  {
+    title: `Drop Stitch Pool Technology: Structure, Materials & Testing | ${SITE.name}`,
+    description:
+      'How drop stitch pool construction works: internal threads, PVC laminates, wall thickness, pressure definitions, shape engineering, manufacturing and published test evidence.',
+    canonical,
+    robots: { index: true, follow: true },
+    openGraph: { type: 'article' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Drop Stitch Technology' }];
+
+const tocLinks = [
+  { href: '#what-is-drop-stitch', label: 'What it is' },
+  { href: '#how-it-works', label: 'How it works' },
+  { href: '#materials', label: 'Materials' },
+  { href: '#pressure', label: 'Pressure' },
+  { href: '#shapes', label: 'Shapes' },
+  { href: '#manufacturing', label: 'Manufacturing' },
+  { href: '#testing', label: 'Testing' },
+  { href: '#buyer-checklist', label: 'Buyer checklist' },
+  { href: '#faq', label: 'FAQ' },
+];
+
+const quickFacts = [
+  { label: 'Standard operating pressure', value: '4-5 PSI' },
+  { label: 'Inflated wall options', value: '10 / 15 / 20 / 50 cm' },
+  { label: 'Published destructive tests', value: '8 / 8 PASS' },
+  { label: 'Standard size range', value: 'Ø 2-10 m / up to 6 x 5 m' },
+];
+
+const engineeringQuestions = [
+  'Model number and product series',
+  'Shape and nominal outside dimensions',
+  'Internal dimensions on the approved drawing (if available)',
+  'Overall wall height and planned water depth',
+  'Inflated wall / chamber thickness',
+  'Laminate specification or material datasheet reference',
+  'Recommended operating, maximum and relief-valve pressure',
+  'Valve and port layout (filter, drain, safety)',
+  'Standard inclusions and accessory list',
+  'Carton dimensions, packed weight and loading plan (when confirmed)',
+];
+
+const documentRequests = [
+  'Material datasheet for the approved laminate',
+  'Pressure and leak-test method, hold time and acceptance criteria',
+  'Model-specific test reports with measured values',
+  'Dimensional drawing showing internal and external dimensions',
+  'Packaging drawing and carton marking artwork',
+  'Compliance or declaration documents required by the target market',
+];
+
+const relatedPages = [
+  {
+    title: 'PVC material guide',
+    description: 'What 1000D and 1500D actually mean, and the material questions to ask before ordering.',
+    href: '/drop-stitch-pool-materials',
+    icon: 'tabler:layers-intersect',
+  },
+  {
+    title: 'Water capacity calculator',
+    description: 'Estimate volume and water weight from internal dimensions and planned fill depth.',
+    href: '/inflatable-pool-water-capacity',
+    icon: 'tabler:calculator',
+  },
+  {
+    title: 'Pool specifications and prices',
+    description: 'Standard sizes, wall options, packed weights and indicative FOB Qingdao prices.',
+    href: '/products/specs',
+    icon: 'tabler:table',
+  },
+  {
+    title: 'Published test results',
+    description: 'The 8/8 destructive campaign on the FB-DSP-400 with four signed PDF reports.',
+    href: '/quality-control/destructive-testing/results',
+    icon: 'tabler:report-analytics',
+  },
+  {
+    title: 'Manufacturing process',
+    description: 'Five production steps from CNC cutting to pressure and leak testing.',
+    href: '/manufacturing',
+    icon: 'tabler:building-factory-2',
+  },
+  {
+    title: 'OEM / ODM projects',
+    description: 'Custom sizes, colors, branding, valves, covers and packaging reviewed per project.',
+    href: '/oem-odm',
+    icon: 'tabler:settings',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Drop Stitch Pool Technology: Structure, Materials, Pressure and Testing',
+      description:
+        'A buyer-focused explanation of drop stitch pool construction, PVC laminates, wall thickness, pressure definitions, shape engineering, manufacturing and published test evidence.',
+      datePublished: '2026-11-18',
+      dateModified: '2026-11-18',
+      authorName: 'Inflatable Pool Factory Team',
+    }}
+    data={{ url: String(canonical || '') }}
+  />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Technology Center
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Drop Stitch Pool Technology, Explained for Buyers
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        How internal threads, PVC laminates, wall geometry and pressure control turn an inflatable pool into a rigid,
+        packable pool - and what to verify before you place an order.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Quotation
+        </a>
+        <a
+          href="/inflatable-pool-water-capacity"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:calculator" class="w-4 h-4" /> Calculate Water Capacity
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-4 h-4" /> View Specifications
+        </a>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+      {
+        quickFacts.map((fact) => (
+          <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+              {fact.label}
+            </div>
+            <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{fact.value}</div>
+          </div>
+        ))
+      }
+    </div>
+
+    <nav
+      aria-label="Technology center sections"
+      class="mb-12 sticky top-16 z-10 -mx-4 px-4 py-2.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-gray-100 dark:border-slate-800"
+    >
+      <ul class="flex flex-wrap gap-1.5 max-w-6xl mx-auto">
+        {
+          tocLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="inline-block px-3 py-1.5 text-xs font-medium rounded-full text-gray-600 dark:text-slate-300 bg-gray-100 dark:bg-slate-800 hover:bg-sky-100 hover:text-primary dark:hover:bg-sky-900/50 dark:hover:text-sky-300 transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <section id="what-is-drop-stitch" class="scroll-mt-24 mb-14">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">
+            The short answer
+          </p>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+            What is a drop stitch pool?
+          </h2>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed mb-4">
+            Drop stitch fabric connects two PVC-coated surfaces with thousands of internal threads. When the wall is
+            inflated, those threads hold the surfaces at a fixed distance instead of letting the chamber balloon into a
+            round tube. The result is a flat, rigid wall that keeps the pool shape and still folds away when deflated.
+          </p>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed mb-4">
+            The structure is only one part of the performance story. The finished laminate, wall pattern, welded seams,
+            reinforced rail bands, valve system, inflation pressure and testing determine how the pool behaves in use.
+            "Drop stitch" is a construction type, not a complete quality specification.
+          </p>
+          <div class="rounded-xl border border-sky-100 dark:border-sky-800/60 bg-sky-50 dark:bg-sky-900/20 p-4">
+            <p class="text-sm text-sky-900 dark:text-sky-200 leading-relaxed">
+              <strong>Buyer takeaway:</strong> ask for the construction type, the laminate datasheet, the model pressure rating
+              and the test evidence. Do not compare pools on the words "drop stitch" or a denier number alone.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-slate-900 p-6 md:p-8 text-white">
+          <div class="text-xs font-semibold uppercase tracking-wider text-sky-300 mb-4">
+            Schematic: drop-stitch wall
+          </div>
+          <div aria-hidden="true">
+            <div class="h-4 rounded-full bg-sky-200"></div>
+            <div class="grid grid-cols-12 gap-2 py-7">
+              {Array.from({ length: 12 }).map(() => <div class="mx-auto h-20 w-px bg-sky-400/80" />)}
+            </div>
+            <div class="h-4 rounded-full bg-sky-200"></div>
+          </div>
+          <div class="mt-4 grid grid-cols-3 gap-2 text-[10px] uppercase tracking-wider text-slate-300">
+            <span>PVC surface</span>
+            <span class="text-center">Internal threads</span>
+            <span class="text-right">PVC surface</span>
+          </div>
+          <p class="mt-4 text-xs text-slate-400 leading-relaxed">
+            Schematic illustration, not a factory photo. Layer thickness and thread spacing are not to scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">
+        Working principle
+      </p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        How inflation creates a rigid wall
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        The wall does not become rigid because the fabric is thick. It becomes rigid because the internal threads become
+        taut and hold the two surfaces apart at a controlled distance.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        {
+          [
+            {
+              number: '01',
+              title: 'Flat fabric',
+              body: 'Before inflation, the two surfaces sit close together and the internal threads are slack. The panel is flexible and can be folded.',
+            },
+            {
+              number: '02',
+              title: 'Air pressure builds',
+              body: 'As air enters the chamber, the surfaces move apart. The threads straighten and begin to resist further separation.',
+            },
+            {
+              number: '03',
+              title: 'Rated pressure',
+              body: 'At the approved pressure, the thread array is taut and the panel feels firm. The wall is rigid, but still part of a deflatable structure.',
+            },
+          ].map((step) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="inline-flex w-9 h-9 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold mb-3">
+                {step.number}
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{step.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.body}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div
+        class="mt-4 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50/80 dark:bg-amber-900/20 p-4"
+      >
+        <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+          <strong>More pressure is not better.</strong> Inflate only to the pressure stated for the model. Over-inflation
+          increases seam and valve loads and can shorten the service life of the pool.
+        </p>
+      </div>
+    </section>
+
+    <section id="materials" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">Materials</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What the denier number does and does not tell you
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Drop-stitch fabric is often described as 1000D or 1500D. That number matters, but it is not a finished wall
+        thickness and it is not a complete performance rating.
+      </p>
+      <div class="grid lg:grid-cols-2 gap-4 mb-4">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">What the label tells you</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+            <li class="flex gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              Denier describes the reinforcing yarn, not the PVC sheet.
+            </li>
+            <li class="flex gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              A higher denier means a heavier yarn at the same yarn count.
+            </li>
+            <li class="flex gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              It can affect fabric weight, hand feel, cost and some strength properties.
+            </li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">What it does not tell you</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+            <li class="flex gap-2">
+              <Icon name="tabler:x" class="w-4 h-4 mt-0.5 text-red-500 shrink-0" />
+              The finished laminate thickness or coating weight.
+            </li>
+            <li class="flex gap-2">
+              <Icon name="tabler:x" class="w-4 h-4 mt-0.5 text-red-500 shrink-0" />
+              Peel adhesion, tear strength or UV performance.
+            </li>
+            <li class="flex gap-2">
+              <Icon name="tabler:x" class="w-4 h-4 mt-0.5 text-red-500 shrink-0" />
+              Whether the finished pool wall will perform better in your application.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+        Our published product specification identifies the wall material as double-layer PVC drop stitch fabric. The
+        detailed fabric denier, coating weight, laminate thickness and test values are confirmed in the approved
+        material specification for the model and project. Read the
+        <a href="/drop-stitch-pool-materials" class="text-primary dark:text-sky-400 underline underline-offset-2">
+          full PVC material guide</a
+        >
+        for the questions to ask any supplier.
+      </p>
+    </section>
+
+    <section id="pressure" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">Pressure</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Pressure, wall thickness and wall height are different things
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A catalog "15 cm wall" is the inflated chamber thickness, not the thickness of the PVC sheet. The pressure
+        rating is a separate model-specific value. Compare all three correctly before you specify a pool.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700 mb-4">
+        <table class="w-full text-sm min-w-[640px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Term</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Published baseline</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">What it means</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              PRESSURE_DEFINITIONS.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top">{row.term}</td>
+                  <td class="px-4 py-3 font-semibold text-gray-800 dark:text-slate-200 align-top whitespace-nowrap">
+                    {row.value}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">
+            Do not compare one PSI number across designs
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+            Published pressures differ because chamber thickness, wall geometry, laminate, valve rating and test
+            criteria differ. A higher PSI is not automatically a stronger pool, and a lower PSI is not automatically
+            weaker. Compare the nameplate definitions and the measured test results for the model you are buying.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">Where to confirm the rating</h3>
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-3">
+            The nameplate and approved specification are the controlling documents. Standard catalog models use the
+            published 4-5 PSI baseline; custom, SPA and project-specific designs are confirmed separately.
+          </p>
+          <a
+            href="/guides/inflatable-pool-pressure-testing-explained"
+            class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+          >
+            Read the pressure-testing guide <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shapes" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">
+        Shape engineering
+      </p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Round vs square vs rectangular
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Shape changes how water pressure is carried and how the pool fits the site. Neither shape is universally
+        stronger; materials, wall design, welding, reinforcement, pressure control and testing determine performance.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700 mb-4">
+        <table class="w-full text-sm min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Consideration</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Round</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Square</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Rectangular</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              SHAPE_COMPARISON.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top">{row.feature}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top">{row.round}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top">{row.square}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top">{row.rectangular}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/products/round-blue-drop-stitch-pool"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 dark:bg-slate-800 text-sm font-medium hover:bg-gray-200 dark:hover:bg-slate-700"
+        >
+          Round pool range <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/products/rectangular-drop-stitch-pool"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 dark:bg-slate-800 text-sm font-medium hover:bg-gray-200 dark:hover:bg-slate-700"
+        >
+          Rectangular pool range <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/inflatable-pool-water-capacity"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-800 dark:text-sky-300 text-sm font-medium hover:bg-sky-100 dark:hover:bg-sky-900/50"
+        >
+          Calculate water capacity <Icon name="tabler:calculator" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section id="manufacturing" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">Manufacturing</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        From fabric to finished pool
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Our Qingdao factory follows five controlled production steps. Pressure and leak-test requirements are agreed in
+        the approved production specification for each model and project.
+      </p>
+      <ol class="space-y-3">
+        {
+          POOL_PRODUCTION_STEPS.map((step, index) => (
+            <li class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {index + 1}
+              </span>
+              <div>
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a
+          href="/manufacturing"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+        >
+          See the manufacturing process <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/quality-control"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+        >
+          See the quality-control framework <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section id="testing" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">Test evidence</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Eight destructive tests, published results
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A recent type-test campaign on the FB-DSP-400 (4 x 3 x 1.2 m, 20 cm drop-stitch wall) passed all eight
+        destructive items. The campaign used three finished units from batch LOT-202611-A08; the measured values are
+        published below and the four signed reports are downloadable.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-3 mb-4">
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Campaign
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">RPT-FB-QC-20261113</div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Result
+          </div>
+          <div class="text-sm font-bold text-green-700 dark:text-green-400">8 / 8 PASS</div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
+            Rated pressure of tested model
+          </div>
+          <div class="text-sm font-bold text-gray-900 dark:text-slate-100">Pw = 8.0 PSI</div>
+        </div>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[720px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Stage</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Test</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Measured result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              DESTRUCTIVE_TEST_MATRIX.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400 align-top whitespace-nowrap">{row.stage}</td>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top">{row.test}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top">{row.measured}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-4 p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50">
+        <p class="text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+          These results apply to the tested model, batch and campaign. They are not a blanket claim that every SKU,
+          custom size or future production run has the same measured values. Ask for the applicable report when you
+          specify a model.
+        </p>
+        <a
+          href="/quality-control/destructive-testing/results"
+          class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-sky-400 hover:underline"
+        >
+          View the full results and download the reports <Icon name="tabler:download" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section id="buyer-checklist" class="scroll-mt-24 mb-14">
+      <p class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2">For B2B buyers</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What to confirm before you approve a pool specification
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A complete specification prevents most sampling and inspection disputes. Use these two lists as a starting point
+        for your RFQ or technical agreement.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-3">Confirm in the specification</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+            {
+              engineeringQuestions.map((item) => (
+                <li class="flex gap-2">
+                  <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-3">Request as documents</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+            {
+              documentRequests.map((item) => (
+                <li class="flex gap-2">
+                  <Icon name="tabler:file-check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Technical documents and next steps
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-3xl">
+        Published catalog data, test reports and procurement tools in one place.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+          TECH_DOCUMENTS.map((doc) => (
+            <a
+              href={doc.href}
+              class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+            >
+              <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">{doc.label}</span>
+              <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+                {doc.description}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Drop stitch technology FAQ
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-3xl">
+        Direct answers to the technical questions buyers ask before requesting a sample or approving a specification.
+      </p>
+      <div class="space-y-3">
+        {
+          TECH_FAQS.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related technical pages</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+          relatedPages.map((page) => (
+            <a
+              href={page.href}
+              class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+            >
+              <span class="mb-2 flex w-9 h-9 items-center justify-center rounded-lg bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300">
+                <Icon name={page.icon} class="w-4 h-4" />
+              </span>
+              <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">{page.title}</span>
+              <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+                {page.description}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-14 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Have a target specification, a reference product or a drawing? Send it with your target market and volume so the
+        applicable construction, material and test requirements can be reviewed.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" /> Request a Technical Quotation
+        </a>
+        <a
+          href="/sample-request"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:package-export" class="w-5 h-5" /> Request a Sample
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="technology" aria-hidden="true">
+    <p>
+      Drop stitch pool construction connects two PVC-coated surfaces with thousands of internal threads. Inflated to the
+      approved pressure, the threads hold the surfaces apart and create a flat, rigid wall that still deflates for
+      storage. In Inflatable Pool Factory's catalog, 10/15/20/50 cm refers to the inflated drop-stitch wall or chamber
+      thickness, not the PVC sheet thickness. Standard pool models publish 4-5 PSI recommended operating pressure, 8 PSI
+      maximum inflation pressure and a relief valve that releases above 6 PSI; confirm the nameplate for each model.
+      Denier (1000D or 1500D) describes the reinforcing yarn, not the finished laminate thickness; performance depends
+      on the base fabric, coating, lamination, wall design, welding and testing. The FB-DSP-400 type-test campaign
+      RPT-FB-QC-20261113 passed 8/8 destructive items, including 136.5-149.4 N/5 cm peel, a 25.4 PSI burst at 3.18x
+      rated pressure, a 72-hour 110% water overload, and 500 pendulum impacts with zero leaks. Results apply to the
+      tested model, batch and campaign, not every SKU.
+    </p>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={TECH_FAQS.map((faq) => ({ q: faq.q, a: faq.a }))} />
+</Layout>

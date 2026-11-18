@@ -27,7 +27,7 @@ const capabilities = [
     icon: 'tabler:ruler-2',
     title: 'Custom Sizes & Shapes',
     description:
-      'Round pools from Ø 2 m to Ø 10 m, rectangular pools from 2 × 2 × 0.8 m to 6 × 5 × 1.5 m in our standard program — and fully engineered custom dimensions beyond it. Wall thickness options of 10, 15, 20 and 50 cm.',
+      'Round pools from Ø 2 m to Ø 10 m, rectangular pools from 2 × 2 × 0.8 m to 6 × 5 × 1.5 m in our standard program — and fully engineered custom dimensions beyond it. Inflated drop-stitch wall options of 10, 15, 20 and 50 cm.',
   },
   {
     icon: 'tabler:palette',
@@ -471,6 +471,50 @@ const process = [
           class="text-primary dark:text-sky-400 underline underline-offset-2 hover:underline">About page</a
         >.
       </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Technical resources for custom projects
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">
+        Custom work is quoted against an approved drawing and specification. These pages explain the published
+        construction, material and test data you can reference in your brief.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {
+          [
+            {
+              title: 'Drop stitch technology',
+              href: '/drop-stitch-pool-technology',
+              body: 'Structure, pressure definitions, shape engineering and manufacturing.',
+            },
+            {
+              title: 'PVC material guide',
+              href: '/drop-stitch-pool-materials',
+              body: 'What 1000D and 1500D mean, and which material data to request.',
+            },
+            {
+              title: 'Water capacity calculator',
+              href: '/inflatable-pool-water-capacity',
+              body: 'Estimate volume and filled weight from internal dimensions.',
+            },
+            {
+              title: 'Published test results',
+              href: '/quality-control/destructive-testing/results',
+              body: '8/8 destructive campaign results with signed PDF reports.',
+            },
+          ].map((item) => (
+            <a
+              href={item.href}
+              class="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+            >
+              <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">{item.title}</span>
+              <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">{item.body}</span>
+            </a>
+          ))
+        }
+      </div>
     </section>
 
     <section class="mb-6">

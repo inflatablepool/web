@@ -38,7 +38,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-water-capacity',
     question: 'How much water does an inflatable pool hold?',
     answer:
-      'It depends on the model and fill level. Our round pools typically hold 1,500–5,000 liters at 80% fill; rectangular pools hold more. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
+      'It depends on the internal dimensions and the water depth you actually use, not the nominal outside size. For a round pool, calculate pi x (internal diameter / 2)^2 x water depth; for a square or rectangular pool, multiply internal length x internal width x water depth. One cubic metre equals 1,000 litres, and the water weighs about one tonne. Use our water capacity calculator to estimate volume and filled weight, then confirm that the ground or deck can support the load.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],

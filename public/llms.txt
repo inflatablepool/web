@@ -25,6 +25,12 @@ Inflatable Pool Factory pools are built with drop stitch construction: thousands
 - [Published Destructive Test Results](https://inflatablepoolfactory.com/quality-control/destructive-testing/results/): Campaign RPT-FB-QC-20261113 — all 8 destructive items passed; four signed test reports downloadable as PDF
 - [Pool Specs & FOB Price List](https://inflatablepoolfactory.com/products/specs/): Full SKU specifications, FOB Qingdao prices, and ordering rules
 
+## Technical Resources
+
+- [Drop Stitch Pool Technology](https://inflatablepoolfactory.com/drop-stitch-pool-technology/): How internal threads, PVC laminates, wall and pressure definitions, shape engineering, manufacturing and published test evidence fit together
+- [Drop Stitch Pool Materials: 1000D vs 1500D](https://inflatablepoolfactory.com/drop-stitch-pool-materials/): What denier does and does not tell you about finished wall thickness, plus the material data to request
+- [Inflatable Pool Water Capacity Calculator](https://inflatablepoolfactory.com/inflatable-pool-water-capacity/): Estimate water volume in m3, litres and gallons, and water weight, from internal dimensions and planned fill depth
+
 ## Procurement Guides
 
 - [All Guides](https://inflatablepoolfactory.com/guides/): Procurement & technical guides index

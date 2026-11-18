@@ -9,7 +9,7 @@
 # page here until the content and evidence exist.
 version: 1
 site: https://inflatablepoolfactory.com
-updated: '2026-11-17'
+updated: '2026-11-18'
 
 routes:
   - url: /
@@ -251,4 +251,43 @@ routes:
     evidence:
       - /products/specs/
       - /quality-control/
+    indexable: true
+
+  - url: /drop-stitch-pool-technology/
+    primary_keyword: drop stitch pool technology
+    secondary_keywords:
+      - how drop stitch pools work
+      - drop stitch pool construction
+    intent: research
+    page_type: technology-hub
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /quality-control/destructive-testing/results/
+    indexable: true
+
+  - url: /drop-stitch-pool-materials/
+    primary_keyword: 1000D vs 1500D PVC
+    secondary_keywords:
+      - drop stitch pool fabric
+      - PVC denier meaning
+    intent: research
+    page_type: material-guide
+    cta: /request-quotation/
+    evidence:
+      - /drop-stitch-pool-technology/
+      - /quality-control/destructive-testing/results/
+    indexable: true
+
+  - url: /inflatable-pool-water-capacity/
+    primary_keyword: inflatable pool water capacity calculator
+    secondary_keywords:
+      - pool volume calculator
+      - pool water volume in litres
+    intent: tool
+    page_type: calculator
+    cta: /request-quotation/
+    evidence:
+      - /products/specs/
+      - /drop-stitch-pool-technology/
     indexable: true

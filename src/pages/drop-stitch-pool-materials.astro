@@ -1,0 +1,503 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { MATERIAL_FAQS, MATERIAL_DOCUMENT_CHECKLIST } from '~/data/drop-stitch-technology';
+
+export const prerender = true;
+
+const canonical = getCanonical('/drop-stitch-pool-materials');
+const metadata = merge(
+  {
+    title: `Drop Stitch Pool Materials: 1000D vs 1500D PVC Explained | ${SITE.name}`,
+    description:
+      'What 1000D and 1500D actually mean in drop stitch pool fabric, why denier is not wall thickness, and which material data to request before ordering.',
+    canonical,
+    robots: { index: true, follow: true },
+    openGraph: { type: 'article' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Drop Stitch Pool Materials' }];
+
+const tocLinks = [
+  { href: '#denier', label: 'What denier means' },
+  { href: '#not-thickness', label: 'Denier vs thickness' },
+  { href: '#comparison', label: '1000D vs 1500D' },
+  { href: '#data', label: 'Material data' },
+  { href: '#tests', label: 'Material tests' },
+  { href: '#faq', label: 'FAQ' },
+];
+
+const denierRows = [
+  {
+    term: 'Denier (D)',
+    meaning: 'Mass in grams of 9,000 metres of yarn. It describes the reinforcing thread, not the finished sheet.',
+  },
+  {
+    term: 'Base fabric weight',
+    meaning: 'Mass per unit area of the woven or knitted base cloth, usually reported in g/m2.',
+  },
+  {
+    term: 'Coating weight',
+    meaning: 'Mass of PVC coating per unit area, usually g/m2. It is not the same as total laminate weight.',
+  },
+  {
+    term: 'Laminate thickness',
+    meaning:
+      'Finished sheet thickness, reported in mm or microns. It depends on base fabric plus coating plus process.',
+  },
+  {
+    term: 'Inflated wall / chamber',
+    meaning:
+      'The drop-stitch air chamber thickness, e.g. 10, 15, 20 or 50 cm in our catalog. It is not the PVC sheet thickness.',
+  },
+  {
+    term: 'Wall height',
+    meaning: 'Overall height of the pool wall from the ground. Water depth is lower than wall height.',
+  },
+];
+
+const comparisonRows = [
+  {
+    subject: 'What it describes',
+    d1000: 'A 1,000 g / 9,000 m reinforcing yarn.',
+    d1500: 'A 1,500 g / 9,000 m reinforcing yarn.',
+  },
+  {
+    subject: 'Typical effect at equal yarn count',
+    d1000: 'Lighter yarn and usually a lighter finished fabric.',
+    d1500: 'Heavier yarn and usually a heavier finished fabric.',
+  },
+  {
+    subject: 'What it does not define',
+    d1000: 'Coating weight, laminate thickness, adhesion or finished strength.',
+    d1500: 'Coating weight, laminate thickness, adhesion or finished strength.',
+  },
+  {
+    subject: 'Can it be the better choice?',
+    d1000: 'Yes, when the laminate and wall design meet the application and test requirements.',
+    d1500: 'Yes, when the extra yarn mass supports the application - but not automatically.',
+  },
+  {
+    subject: 'What to compare instead',
+    d1000: 'Full laminate datasheet plus model test results.',
+    d1500: 'Full laminate datasheet plus model test results.',
+  },
+];
+
+const materialTestRows = [
+  {
+    test: 'Coating peel adhesion',
+    why: 'Shows how well the PVC coating is bonded to the base fabric. Poor adhesion can delaminate at seams or folds.',
+    request: 'Measured N/5 cm value, test method, specimen direction and pass criterion.',
+  },
+  {
+    test: 'Tensile strength and elongation',
+    why: 'Describes how the laminate behaves when pulled. Warp and weft usually differ.',
+    request: 'Warp and weft values with units and test standard.',
+  },
+  {
+    test: 'Tear strength',
+    why: 'Indicates resistance to tearing once a cut or puncture starts.',
+    request: 'Test method, specimen orientation and measured value.',
+  },
+  {
+    test: 'Cold-fold resistance',
+    why: 'Relevant for storage and transport in cold climates.',
+    request: 'Test temperature, fold cycles and inspection criteria.',
+  },
+  {
+    test: 'UV / weathering',
+    why: 'Outdoor pools are exposed to sunlight. Requirements differ by market.',
+    request: 'Exposure method, duration and acceptance criteria - if required.',
+  },
+  {
+    test: 'Colorfastness / migration',
+    why: 'Printed or colored surfaces can transfer or fade.',
+    request: 'Test method and result for the actual color and print process.',
+  },
+];
+
+const documents = [
+  {
+    label: 'Drop stitch technology center',
+    href: '/drop-stitch-pool-technology',
+    description: 'How the thread array, wall geometry, pressure and welding work together.',
+    icon: 'tabler:stack-2',
+  },
+  {
+    label: 'Standard pool specifications',
+    href: '/products/specs',
+    description: 'Published sizes, wall options, packed weights and indicative FOB Qingdao prices.',
+    icon: 'tabler:table',
+  },
+  {
+    label: 'Destructive test results',
+    href: '/quality-control/destructive-testing/results',
+    description: 'Measured material and structural results for the FB-DSP-400 campaign.',
+    icon: 'tabler:report-analytics',
+  },
+  {
+    label: 'Water capacity calculator',
+    href: '/inflatable-pool-water-capacity',
+    description: 'Estimate volume and water weight from internal dimensions and fill depth.',
+    icon: 'tabler:calculator',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Drop Stitch Pool Materials: 1000D vs 1500D PVC Explained',
+      description:
+        'What denier means in drop stitch pool fabric, why it is not wall thickness, and which material data to request before ordering.',
+      datePublished: '2026-11-18',
+      dateModified: '2026-11-18',
+      authorName: 'Inflatable Pool Factory Team',
+    }}
+    data={{ url: String(canonical || '') }}
+  />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Materials</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Drop Stitch Pool Materials: What 1000D and 1500D Really Mean
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Denier is a yarn specification, not a finished wall thickness and not a quality score. Here is how to read it -
+        and what to request instead.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Quotation
+        </a>
+        <a
+          href="/drop-stitch-pool-technology"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:stack-2" class="w-4 h-4" /> Technology Center
+        </a>
+      </div>
+    </header>
+
+    <div class="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50/80 dark:bg-amber-900/20 p-4 mb-10">
+      <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>Read this first:</strong> we do not publish a 1000D vs 1500D winner based only on the denier label, because
+        that comparison would be misleading. The applicable laminate, denier, coating weight and test data for your project
+        are confirmed in the approved material specification before production.
+      </p>
+    </div>
+
+    <nav
+      aria-label="Material guide sections"
+      class="mb-12 sticky top-16 z-10 -mx-4 px-4 py-2.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-gray-100 dark:border-slate-800"
+    >
+      <ul class="flex flex-wrap gap-1.5 max-w-6xl mx-auto">
+        {
+          tocLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="inline-block px-3 py-1.5 text-xs font-medium rounded-full text-gray-600 dark:text-slate-300 bg-gray-100 dark:bg-slate-800 hover:bg-sky-100 hover:text-primary dark:hover:bg-sky-900/50 dark:hover:text-sky-300 transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <section id="denier" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What "1000D" actually measures
+      </h2>
+      <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed mb-5 max-w-3xl">
+        Denier is a linear mass density. One denier is one gram per 9,000 metres of yarn. A 1000D yarn therefore weighs
+        1,000 g per 9,000 m, and a 1500D yarn weighs 1,500 g per 9,000 m. The number says nothing directly about the
+        finished sheet you can measure with a caliper.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        {
+          [
+            {
+              title: 'It is a yarn spec',
+              body: 'Denier describes the reinforcing thread used in the base fabric. It does not describe the PVC coating, the adhesive layer or the finished laminate.',
+            },
+            {
+              title: 'It is not a thickness',
+              body: 'A 1500D fabric is not automatically 1.5x thicker than a 1000D fabric. Coating weight and lamination change the finished thickness independently.',
+            },
+            {
+              title: 'It is not a rating',
+              body: 'Two 1000D fabrics from different suppliers can have different adhesion, tear strength and UV performance. The datasheet and test report matter more than the label.',
+            },
+          ].map((card) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{card.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{card.body}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[640px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Term</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">What it describes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              denierRows.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top whitespace-nowrap">
+                    {row.term}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="not-thickness" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Why denier is not the same as wall thickness
+      </h2>
+      <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed mb-5 max-w-3xl">
+        Three different numbers are often mixed up in product listings. Keeping them separate prevents most
+        specification mistakes.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        {
+          [
+            {
+              number: '01',
+              title: 'Denier',
+              value: 'e.g. 1000D / 1500D',
+              body: 'Yarn mass per 9,000 m. A material input specification.',
+            },
+            {
+              number: '02',
+              title: 'Laminate thickness',
+              value: 'mm or microns',
+              body: 'Finished PVC-coated sheet thickness. Confirmed on the material datasheet.',
+            },
+            {
+              number: '03',
+              title: 'Inflated wall',
+              value: 'e.g. 10 / 15 / 20 / 50 cm',
+              body: 'Drop-stitch chamber thickness used in our catalog. Not the sheet thickness, and not the water depth.',
+            },
+          ].map((item) => (
+            <div class="p-5 rounded-2xl bg-slate-900 text-white">
+              <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">{item.number}</span>
+              <h3 class="mt-2 text-base font-bold">{item.title}</h3>
+              <p class="mt-1 text-sm text-sky-200 font-medium">{item.value}</p>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">{item.body}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-4 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-3xl">
+        In our published catalog, 10, 15, 20 and 50 cm always refer to the inflated drop-stitch wall or chamber
+        thickness. They are not the thickness of the PVC sheet, and they are not the water depth. See the
+        <a
+          href="/drop-stitch-pool-technology#pressure"
+          class="text-primary dark:text-sky-400 underline underline-offset-2"
+        >
+          pressure and wall terminology section</a
+        >
+        of the technology center for the full definitions.
+      </p>
+    </section>
+
+    <section id="comparison" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        1000D vs 1500D: an honest comparison
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        The table compares what the labels do and do not tell you. It deliberately does not rank one denier above the
+        other.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+        <table class="w-full text-sm min-w-[720px]">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">Subject</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">1000D label</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">1500D label</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              comparisonRows.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-200 align-top">{row.subject}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.d1000}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 align-top leading-relaxed">{row.d1500}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-4 rounded-xl border border-sky-100 dark:border-sky-800/60 bg-sky-50 dark:bg-sky-900/20 p-4">
+        <p class="text-sm text-sky-900 dark:text-sky-200 leading-relaxed">
+          <strong>How to decide:</strong> state the application, the target market, the expected duty cycle and any required
+          test thresholds in your RFQ. The material and wall construction should be selected against those requirements, then
+          verified with a sample and test report - not chosen from a denier number alone.
+        </p>
+      </div>
+    </section>
+
+    <section id="data" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        The material document checklist
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Ask for these items for the exact laminate you are approving. A generic brochure is not a substitute for the
+        model-specific datasheet and report.
+      </p>
+      <div class="grid md:grid-cols-2 gap-3">
+        {
+          MATERIAL_DOCUMENT_CHECKLIST.map((item) => (
+            <div class="flex gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <Icon name="tabler:file-check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              <span class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{item}</span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="tests" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Material tests that matter for a pool wall
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A material datasheet is only useful if you know which property it measures. These are the checks most relevant
+        to a coated drop-stitch pool wall.
+      </p>
+      <div class="space-y-3">
+        {
+          materialTestRows.map((row) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{row.test}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-2">{row.why}</p>
+              <p class="text-xs text-gray-500 dark:text-slate-500 leading-relaxed">
+                <span class="font-semibold text-gray-600 dark:text-slate-400">Request:</span> {row.request}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+        Our published FB-DSP-400 campaign includes material peel and puncture results as well as finished-product
+        structural tests. Read the
+        <a
+          href="/quality-control/destructive-testing/results"
+          class="text-primary dark:text-sky-400 underline underline-offset-2">measured results and signed reports</a
+        >. Those results apply to the tested model and batch, not to every SKU.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">Where to go next</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-4">
+        {
+          documents.map((doc) => (
+            <a
+              href={doc.href}
+              class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+            >
+              <span class="mb-2 flex w-9 h-9 items-center justify-center rounded-lg bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300">
+                <Icon name={doc.icon} class="w-4 h-4" />
+              </span>
+              <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">{doc.label}</span>
+              <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+                {doc.description}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        PVC material FAQ
+      </h2>
+      <div class="space-y-3">
+        {
+          MATERIAL_FAQS.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-14 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Send the target market, application and any required material test thresholds. We will confirm the applicable
+        laminate and wall specification for the project.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" /> Request a Technical Quotation
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-5 h-5" /> View Specifications
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="materials" aria-hidden="true">
+    <p>
+      In drop stitch pool fabric, denier (D) is the mass in grams of 9,000 metres of reinforcing yarn. 1000D and 1500D
+      therefore describe the yarn, not the finished PVC sheet thickness. Finished performance depends on base fabric,
+      coating weight, lamination, adhesion, wall design, welding and testing. A higher denier is not automatically
+      better. Inflatable Pool Factory's published catalog identifies the wall material as double-layer PVC drop stitch
+      fabric; the applicable denier, coating weight, laminate thickness and test values are confirmed in the approved
+      material specification for the model and project. Buyers should request measured peel adhesion, tensile and
+      elongation, tear strength, cold-fold performance and any required UV or colorfastness data, with the test method
+      and acceptance criteria. Published destructive-test results apply to the tested FB-DSP-400 batch, not to every
+      SKU.
+    </p>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={MATERIAL_FAQS.map((faq) => ({ q: faq.q, a: faq.a }))} />
+</Layout>
