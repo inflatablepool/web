@@ -55,6 +55,13 @@ test('sample platforms keep product page slugs and links aligned', () => {
     assert.ok(product.sizeRange.length > 0);
     assert.ok(product.wallThickness.length > 0);
     assert.ok(product.image.startsWith('/images/pools/'));
+    assert.ok(['cover', 'contain'].includes(product.imageFit));
+  }
+});
+
+test('square SPA product photos are shown whole instead of cropped', () => {
+  for (const slug of ['hot-tub-round', 'hot-tub-square-rect']) {
+    assert.equal(getSampleProduct(slug)?.imageFit, 'contain');
   }
 });
 

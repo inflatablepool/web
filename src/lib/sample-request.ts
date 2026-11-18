@@ -7,6 +7,7 @@ export interface SampleProduct {
   bestFor: string;
   image: string;
   imageAlt: string;
+  imageFit: 'cover' | 'contain';
   productHref: string;
 }
 
@@ -25,6 +26,7 @@ export const SAMPLE_PRODUCTS = [
     bestFor: 'Retail ranges and projects that need a defined swim lane.',
     image: '/images/pools/rectangular-pool-2.webp',
     imageAlt: 'Rectangular drop stitch inflatable swimming pool',
+    imageFit: 'cover',
     productHref: '/products/rectangular-drop-stitch-pool',
   },
   {
@@ -36,6 +38,7 @@ export const SAMPLE_PRODUCTS = [
     bestFor: 'Family pools and a classic blue retail assortment.',
     image: '/images/pools/round-blue-pool-1.webp',
     imageAlt: 'Round blue drop stitch inflatable swimming pool',
+    imageFit: 'cover',
     productHref: '/products/round-blue-drop-stitch-pool',
   },
   {
@@ -47,6 +50,7 @@ export const SAMPLE_PRODUCTS = [
     bestFor: 'Premium retail ranges and modern outdoor settings.',
     image: '/images/pools/round-grey-pool-1.webp',
     imageAlt: 'Round grey drop stitch inflatable swimming pool',
+    imageFit: 'cover',
     productHref: '/products/round-grey-drop-stitch-pool',
   },
   {
@@ -58,6 +62,7 @@ export const SAMPLE_PRODUCTS = [
     bestFor: 'Compact SPA, wellness and hospitality assortments.',
     image: '/images/pools/hot-tub-round.png',
     imageAlt: 'Round inflatable hot tub SPA pool with built-in seats',
+    imageFit: 'contain',
     productHref: '/products/hot-tub-round',
   },
   {
@@ -69,6 +74,7 @@ export const SAMPLE_PRODUCTS = [
     bestFor: 'Larger SPA layouts and commercial hospitality projects.',
     image: '/images/pools/hot-tub-square.webp',
     imageAlt: 'Square inflatable hot tub SPA pool with built-in seats',
+    imageFit: 'contain',
     productHref: '/products/hot-tub-square-rect',
   },
 ] as const;
