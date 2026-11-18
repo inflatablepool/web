@@ -9,12 +9,12 @@ import type { MetaData } from '~/types';
 import {
   poolSeries,
   poolAccessories,
-  POOL_PRESSURE_SPECS,
   POOL_PRODUCTION_STEPS,
   POOL_KEY_FEATURES,
   POOL_BUSINESS_ADVANTAGES,
   PRICE_BASIS_NOTE,
 } from '~/data/pool-catalog';
+import { PRESSURE_DEFINITIONS } from '~/data/sku-engineering';
 
 export const prerender = true;
 
@@ -429,6 +429,16 @@ const formatUsd = (n: number) =>
             >Container Loading Guide</a
           >
           <a
+            href="/inflatable-pool-packaging-shipping"
+            class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+            >Packaging & Container Calculator</a
+          >
+          <a
+            href="/certifications"
+            class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+            >Certification Center</a
+          >
+          <a
             href="/guides"
             class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
             >All Procurement Guides</a
@@ -447,19 +457,47 @@ const formatUsd = (n: number) =>
           for each model. Production pressure and leak testing follows the method, hold time and acceptance criteria
           agreed in the approved specification.
         </p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {
-            POOL_PRESSURE_SPECS.map((p) => (
-              <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-1">
-                  {p.label}
-                </div>
-                <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
-              </div>
-            ))
-          }
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          Drop-stitch pools use a model-specific recommended operating pressure. The table below lists every pressure
+          figure this site publishes, what it means and its data nature — so the recommended operating pressure, the
+          maximum inflation pressure, the relief-valve threshold and the type-test reference pressure (Pw) are never
+          confused with each other.
+        </p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700 mb-4">
+          <table class="w-full text-sm">
+            <thead>
+              <tr
+                class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+              >
+                <th class="px-4 py-3">Parameter</th>
+                <th class="px-4 py-3">Published value</th>
+                <th class="px-4 py-3">Data nature</th>
+                <th class="px-4 py-3">Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                PRESSURE_DEFINITIONS.map((row, i) => (
+                  <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                    <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                      {row.parameter}
+                    </td>
+                    <td class="px-4 py-2.5 font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800 whitespace-nowrap">
+                      {row.publishedValue}
+                    </td>
+                    <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                      {row.dataNature}
+                    </td>
+                    <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 leading-relaxed">
+                      {row.note}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
         </div>
-        <p class="text-sm text-gray-500 dark:text-slate-400 mt-4">
+        <p class="text-sm text-gray-500 dark:text-slate-400">
           Want to see how far the design is pushed beyond the rated pressure? Read the
           <a
             href="/quality-control/destructive-testing/results"
@@ -471,7 +509,10 @@ const formatUsd = (n: number) =>
           <a
             href="/quality-control/destructive-testing"
             class="underline decoration-primary/40 hover:decoration-primary">testing SOP</a
-          > behind them.
+          > behind them. The certification scope and pending certificates are listed in the
+          <a href="/certifications" class="underline decoration-primary/40 hover:decoration-primary"
+            >certification center</a
+          >.
         </p>
         <p class="text-sm text-gray-500 dark:text-slate-400 mt-3">
           The pressure figures above are published baselines for standard pool models. Confirm the nameplate and

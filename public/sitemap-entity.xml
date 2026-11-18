@@ -160,6 +160,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://inflatablepoolfactory.com/certifications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/certifications/"/>
+    <x:entity>certifications</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://inflatablepoolfactory.com/commercial-pools/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/commercial-pools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/commercial-pools/"/>
@@ -1330,6 +1338,14 @@
     <x:entity>what-is-a-drop-stitch-inflatable-pool</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inflatablepoolfactory.com/inflatable-pool-packaging-shipping/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/inflatable-pool-packaging-shipping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/inflatable-pool-packaging-shipping/"/>
+    <x:entity>inflatable-pool-packaging-shipping</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://inflatablepoolfactory.com/inflatable-pool-water-capacity/</loc>

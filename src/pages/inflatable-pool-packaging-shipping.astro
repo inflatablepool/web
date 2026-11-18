@@ -1,0 +1,691 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { skuEngineeringRecords, CONTAINER_REFERENCE, PACKED_WEIGHT_CAVEAT } from '~/data/sku-engineering';
+import { poolSeries } from '~/data/pool-catalog';
+
+export const prerender = true;
+
+const canonical = getCanonical('/inflatable-pool-packaging-shipping');
+const metadata = merge(
+  {
+    title: `Inflatable Pool Packaging & Shipping: Packed Weights, Container Calculator | ${SITE.name}`,
+    description:
+      'Inflatable pool packaging and container shipping: published packed weights by SKU, 20GP vs 40HQ reference, a weight-based container loading calculator and the carton data confirmed with every quotation.',
+    canonical,
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Packaging & Container Shipping' }];
+
+const totalSkuCount = skuEngineeringRecords.length;
+const skusWithWeight = skuEngineeringRecords.filter((r) => r.packedWeightKg !== null);
+
+const planningSteps = [
+  'Fix the SKU mix and quantity per SKU against your sales forecast',
+  'Request packed weight, net/gross weight and carton dimensions per SKU from the factory',
+  'Calculate the shipment gross weight and total cube; compare against container payload and capacity',
+  'Ask the factory for a carton-level loading plan (pieces per tier, cartons per row, stacking limits)',
+  'Confirm shipping marks, carton labeling and any palletization with your destination warehouse',
+  'Book with your forwarder on FOB Qingdao terms and align the loading date with the vessel cutoff',
+];
+
+const pendingFields = [
+  {
+    field: 'Carton dimensions (L × W × H)',
+    status: 'On request',
+    note: 'Per-SKU carton measurements are confirmed with the quotation and loading plan.',
+  },
+  {
+    field: 'Net weight (N.W.) / Gross weight (G.W.)',
+    status: 'On request',
+    note: 'The published "Packed weight" is not split into N.W. and G.W.; both are confirmed per SKU.',
+  },
+  {
+    field: 'MOQ per SKU',
+    status: 'On request',
+    note: 'Confirmed per SKU, order quantity and customization level in the quotation.',
+  },
+  {
+    field: 'Units per 20GP / 40HQ',
+    status: 'On request',
+    note: 'Real per-SKU loading counts depend on carton dimensions and the confirmed loading plan.',
+  },
+];
+
+const packagingFaqs = [
+  {
+    q: 'How many pools fit in one container?',
+    a: 'It depends entirely on the SKU mix. Compact Ø 2 m pools at 18.4 kg packed allow hundreds of units by weight; Ø 10 m event pools at 250 kg allow dozens. The calculator below gives a weight-based planning estimate; the binding answer is the carton-level loading plan that comes with your quotation.',
+  },
+  {
+    q: 'Is the published packed weight the gross weight?',
+    a: 'No. The catalog publishes a single "Packed weight" figure per SKU from the factory quotation sheet. It is not separately published as net weight (N.W.) or gross weight (G.W.). Both, the carton dimensions and the pallet/loading plan, are confirmed per SKU in the quotation.',
+  },
+  {
+    q: 'What packaging options are available?',
+    a: 'Standard export cartons are the default. For retail and e-commerce programs, printed color boxes and mailer cartons sized for garden-retail shelves or parcel networks can be reviewed per project, plus manuals and hang tags under your brand. Packed weight and carton dimensions are tuned to your logistics.',
+  },
+  {
+    q: '20GP or 40HQ — which should I book?',
+    a: 'Because deflated pools pack dense, most importers hit the payload before they fill the cube. Use a 20GP for a trial order or a narrow assortment, and step up to a 40HQ for a full multi-series program. Consolidating pools with accessories — ladders, pumps, sand filters — in the same container amortizes freight across a higher cargo value.',
+  },
+];
+
+/** Options consumed by the client-side calculator (weight-based framework) */
+const skuOptions = skuEngineeringRecords.map((record) => ({
+  sku: record.sku,
+  label: `${record.sku} — ${record.size} m${record.packedWeightKg !== null ? ` (${record.packedWeightKg} kg)` : ' (weight on request)'}`,
+  weightKg: record.packedWeightKg,
+}));
+
+const containerOptions: Record<string, { capacityM3: number; payloadKg: number }> = {};
+for (const container of CONTAINER_REFERENCE) {
+  containerOptions[container.code] = { capacityM3: container.capacityM3, payloadKg: container.payloadKg };
+}
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@type': 'WebApplication',
+      name: 'Inflatable Pool Container Loading Calculator',
+      description:
+        'Weight-based container loading planning for inflatable pool orders: compare a SKU mix against 20GP and 40HQ payload and capacity references.',
+      url: String(canonical || ''),
+      applicationCategory: 'UtilityApplication',
+      operatingSystem: 'Any',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    }}
+  />
+
+  <script type="application/json" id="sku-options-data" set:html={JSON.stringify(skuOptions)} />
+  <script type="application/json" id="container-options-data" set:html={JSON.stringify(containerOptions)} />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Packaging & Shipping
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Inflatable Pool Packaging & Container Shipping
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Published packed weights by SKU, the 20GP vs 40HQ reference, and a weight-based container loading calculator for
+        planning pool shipments — with the carton-level data confirmed in every quotation.
+      </p>
+    </header>
+
+    <!-- Container reference -->
+    <section id="containers" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Container reference: 20GP vs 40HQ
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A deflated drop-stitch pool packs at roughly 5–10% of the volume of an equivalent rigid acrylic or fiberglass
+        pool, so packed weight — not volume — is usually the planning constraint that matters. The figures below are
+        standard planning references; your forwarder confirms the final container specification.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        {
+          CONTAINER_REFERENCE.map((c) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100">{c.code}</h3>
+                <span class="text-xs font-medium text-gray-500 dark:text-slate-500">{c.name}</span>
+              </div>
+              <dl class="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-0.5">
+                    Capacity
+                  </dt>
+                  <dd class="font-bold text-gray-900 dark:text-slate-100">≈ {c.capacityM3} m³</dd>
+                </div>
+                <div>
+                  <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-0.5">
+                    Payload
+                  </dt>
+                  <dd class="font-bold text-gray-900 dark:text-slate-100">≈ {Math.round(c.payloadKg / 1000)}–22 t</dd>
+                </div>
+              </dl>
+            </div>
+          ))
+        }
+      </div>
+      <div class="rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50 dark:bg-amber-900/20 p-4">
+        <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+          <strong>Packed weight is not gross weight.</strong>
+          {PACKED_WEIGHT_CAVEAT}
+        </p>
+      </div>
+    </section>
+
+    <!-- Container loading calculator (weight-based framework) -->
+    <section id="calculator" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Container loading calculator
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        A weight-based planning framework: build your SKU mix and compare its total packed weight against the container
+        payload reference. Cube utilization and pieces-per-container cannot be calculated until per-SKU carton
+        dimensions are confirmed — those come with the carton-level loading plan in your quotation.
+      </p>
+
+      <div class="grid lg:grid-cols-5 gap-6">
+        <div
+          class="lg:col-span-3 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 md:p-7"
+        >
+          <form id="loading-form" novalidate>
+            <fieldset class="mb-6">
+              <legend class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3"> 1. Container </legend>
+              <div class="grid grid-cols-2 gap-2">
+                {
+                  CONTAINER_REFERENCE.map((c, i) => (
+                    <label class="cursor-pointer">
+                      <input type="radio" name="container" value={c.code} class="peer sr-only" checked={i === 0} />
+                      <span class="flex flex-col items-center gap-1 rounded-xl border border-gray-200 dark:border-slate-700 px-2 py-3 text-xs font-medium text-gray-600 dark:text-slate-300 peer-checked:border-sky-500 peer-checked:bg-sky-50 peer-checked:text-sky-800 dark:peer-checked:bg-sky-900/30 dark:peer-checked:text-sky-300 transition-colors">
+                        <Icon name="tabler:container" class="w-5 h-5" />
+                        {c.code} — ≈ {c.capacityM3} m³ / ≈ {Math.round(c.payloadKg / 1000)}–22 t
+                      </span>
+                    </label>
+                  ))
+                }
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+              <legend class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3"> 2. SKU mix </legend>
+              <div id="sku-rows" class="space-y-3"></div>
+              <button
+                type="button"
+                id="add-row"
+                class="mt-3 inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-dashed border-gray-300 dark:border-slate-600 text-xs font-semibold text-gray-600 dark:text-slate-300 hover:border-sky-400 hover:text-primary dark:hover:text-sky-300 transition-colors"
+              >
+                <Icon name="tabler:plus" class="w-3.5 h-3.5" /> Add SKU
+              </button>
+              <p
+                id="loading-error"
+                class="hidden mt-3 rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 px-4 py-3 text-sm text-red-800 dark:text-red-300"
+                role="alert"
+              >
+              </p>
+            </fieldset>
+          </form>
+
+          <template id="sku-row-template">
+            <div class="sku-row grid grid-cols-[1fr_auto_auto] gap-2 items-center">
+              <select
+                class="sku-select rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                aria-label="Select SKU"
+              >
+                <option value="">Select a SKU…</option>
+              </select>
+              <input
+                type="number"
+                inputmode="numeric"
+                min="1"
+                step="1"
+                value="1"
+                class="sku-qty w-20 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none"
+                aria-label="Quantity"
+              />
+              <button
+                type="button"
+                class="remove-row p-2 rounded-lg text-gray-400 hover:text-red-500 dark:text-slate-500 dark:hover:text-red-400 transition-colors"
+                aria-label="Remove SKU row"
+              >
+                <Icon name="tabler:trash" class="w-4 h-4" />
+              </button>
+            </div>
+          </template>
+        </div>
+
+        <div class="lg:col-span-2 rounded-2xl bg-slate-900 p-5 md:p-7 text-white">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-300 mb-4">Planning estimate</p>
+          <div aria-live="polite">
+            <div class="mb-5">
+              <div id="result-container" class="text-3xl md:text-4xl font-bold tracking-tight">-</div>
+              <div class="text-xs text-slate-400 mt-1">selected container</div>
+            </div>
+            <dl class="space-y-3 text-sm border-t border-slate-700 pt-4">
+              <div class="flex items-baseline justify-between gap-3">
+                <dt class="text-slate-400">Total packed weight</dt>
+                <dd id="result-weight" class="font-semibold text-right">-</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-3">
+                <dt class="text-slate-400">Payload utilization</dt>
+                <dd id="result-utilization" class="font-semibold text-right">-</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-3">
+                <dt class="text-slate-400">Total units</dt>
+                <dd id="result-units" class="font-semibold text-right">-</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-3 border-t border-slate-700 pt-3">
+                <dt class="text-slate-400">Cube utilization</dt>
+                <dd class="font-semibold text-right text-slate-400">Pending carton data</dd>
+              </div>
+            </dl>
+            <p id="result-status" class="mt-4 text-xs leading-relaxed text-slate-400">Add SKUs to plan the shipment.</p>
+          </div>
+          <p class="mt-5 text-[11px] leading-relaxed text-slate-400">
+            Weight-based estimate using published packed weights only. It excludes accessories, spare cartons, pallets
+            and dunnage, and it is not a loading plan. Pieces per container and cube utilization require the per-SKU
+            carton dimensions from the factory loading plan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packed weights by SKU -->
+    <section id="packed-weights" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Published packed weights by SKU
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        {totalSkuCount} standard SKUs across four series. {skusWithWeight.length} SKUs have a published packed weight; for
+        the rest it is confirmed at quotation. Weight scales with fabric area and wall thickness — which is why the Ø 6 ×
+        1.6 m at 135 kg outweighs the larger-diameter Ø 7 × 1.2 m at 130 kg.
+      </p>
+      <div class="space-y-8">
+        {
+          poolSeries.map((series) => (
+            <div>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-2">
+                {series.name} <span class="font-normal text-gray-500 dark:text-slate-500">— {series.heading}</span>
+              </h3>
+              <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                      <th class="px-4 py-3">Item No.</th>
+                      <th class="px-4 py-3">Size (m)</th>
+                      <th class="px-4 py-3">Wall</th>
+                      <th class="px-4 py-3">Packed weight</th>
+                      <th class="px-4 py-3">Carton (L × W × H)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {series.items.map((item, i) => (
+                      <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                        <td class="px-4 py-2.5 font-mono text-xs text-gray-500 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                          {item.item}
+                        </td>
+                        <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                          {item.size}
+                        </td>
+                        <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                          {item.wall}
+                        </td>
+                        <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                          {item.weightKg ? `${item.weightKg} kg` : 'On request'}
+                        </td>
+                        <td class="px-4 py-2.5 text-gray-500 dark:text-slate-500 border-b border-gray-100 dark:border-slate-800">
+                          On request
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Pending logistics data -->
+    <section id="pending-data" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Logistics data confirmed with your quotation
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        The table above publishes what the factory quotation sheet publishes. The following fields are confirmed per SKU
+        in the quotation and the carton-level loading plan — they are not estimated on this page.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+        <table class="w-full text-sm">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Field</th>
+              <th class="px-4 py-3">Status</th>
+              <th class="px-4 py-3">How it is confirmed</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              pendingFields.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                    {row.field}
+                  </td>
+                  <td class="px-4 py-3 border-b border-gray-100 dark:border-slate-800">
+                    <span class="px-2.5 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs font-medium rounded-full">
+                      {row.status}
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 leading-relaxed">
+                    {row.note}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Packaging options -->
+    <section id="packaging-options" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Packaging options
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Packaging is specified for your channel and dimensioned against the container, not against the product alone — a
+        color box that adds 2 cm per side can cost a full tier of loading across hundreds of cartons.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {
+          [
+            {
+              icon: 'tabler:package',
+              title: 'Standard export carton',
+              body: 'The default for wholesale and mixed-container orders. Packed weight and carton dimensions are confirmed per SKU in the quotation.',
+            },
+            {
+              icon: 'tabler:palette',
+              title: 'Retail color box',
+              body: 'Printed color boxes with product photography for garden-retail shelves; reviewed per project with your artwork and brand assets.',
+            },
+            {
+              icon: 'tabler:box',
+              title: 'E-commerce mailer carton',
+              body: 'Compact mailer cartons optimized for parcel networks, plus manuals and hang tags under your brand; tuned to your logistics.',
+            },
+          ].map((opt) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300 mb-3">
+                <Icon name={opt.icon} class="w-5 h-5" />
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{opt.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{opt.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Planning checklist -->
+    <section id="planning" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Loading planning sequence
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        The sequence we recommend to buyers planning a pool shipment from Qingdao.
+      </p>
+      <ol class="space-y-3">
+        {
+          planningSteps.map((step, i) => (
+            <li class="flex gap-4 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {i + 1}
+              </span>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        Packaging & shipping FAQ
+      </h2>
+      <div class="space-y-3">
+        {
+          packagingFaqs.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Related pages -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related pages</h2>
+      <div class="grid sm:grid-cols-3 gap-3">
+        <a
+          href="/guides/inflatable-pool-container-loading-guide"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Container Loading Guide</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            20GP vs 40HQ planning in depth, packed weights and what affects the load.
+          </span>
+        </a>
+        <a
+          href="/products/specs"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Pool specifications</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            All 48 standard SKUs with sizes, walls and indicative FOB Qingdao prices.
+          </span>
+        </a>
+        <a
+          href="/certifications"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Certification center</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            Published test evidence, design-reference standards and certification scope.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Scope and disclaimer</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        This page and its calculator are planning aids. Packed weights are published figures from the factory quotation
+        sheet; the calculator totals them without cartons, pallets, dunnage or accessories and does not verify container
+        regulations, road weight limits or stacking constraints. The binding figures — net and gross weight, carton
+        dimensions, pieces per container and the loading sequence — are confirmed per SKU in your quotation and its
+        carton-level loading plan.
+      </p>
+    </section>
+
+    <section class="mt-12 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Request packed weights, carton dimensions and a carton-level loading plan with your itemized FOB quotation.
+      </p>
+      <a
+        href="/request-quotation"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+      >
+        <Icon name="tabler:file-invoice" class="w-5 h-5" /> Request a Quotation
+      </a>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="packaging-shipping" aria-hidden="true">
+    <p>
+      Inflatable Pool Factory packaging and container shipping: deflated drop-stitch pools pack at 5–10% of the volume
+      of equivalent rigid pools, so packed weight is the usual planning constraint. Container reference: 20GP about 33
+      m³ and 21–22 t payload; 40HQ about 76 m³ with comparable payload. Published packed weights by SKU (round pools): Ø
+      2 × 0.5 m — 18.4 kg; Ø 3 × 1.2 m — 45 kg; Ø 3.7 × 1.2 m — 58 kg; Ø 4 × 1.2 m — 65 kg; Ø 4.6 × 1.2 m — 78 kg; Ø 5 ×
+      1.2 m — 88 kg; Ø 6 × 1.2 m — 115 kg; Ø 6 × 1.6 m — 135 kg; Ø 7 × 1.2 m — 130 kg; Ø 7.3 × 1.3 m — 160 kg; Ø 10 ×
+      1.2 m — 250 kg; rectangular, SPA and custom models are confirmed per SKU at quotation. The published packed weight
+      is not split into net weight and gross weight. Carton dimensions, N.W./G.W., MOQ and units per 20GP/40HQ are
+      confirmed per SKU in the quotation and the carton-level loading plan; the on-site calculator is a weight-based
+      planning framework only. Packaging options: standard export cartons, retail color boxes and e-commerce mailer
+      cartons reviewed per project. FOB Qingdao is the standard incoterm.
+    </p>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={packagingFaqs.map((faq) => ({ q: faq.q, a: faq.a }))} />
+</Layout>
+
+<script>
+  (() => {
+    const form = document.getElementById('loading-form') as HTMLFormElement | null;
+    const rowsEl = document.getElementById('sku-rows');
+    const template = document.getElementById('sku-row-template') as HTMLTemplateElement | null;
+    const addBtn = document.getElementById('add-row');
+    const errorEl = document.getElementById('loading-error');
+
+    interface SkuOption {
+      sku: string;
+      label: string;
+      weightKg: number | null;
+    }
+
+    const SKU_OPTIONS: SkuOption[] = JSON.parse(
+      document.getElementById('sku-options-data')?.textContent || '[]'
+    ) as SkuOption[];
+
+    const CONTAINERS: Record<string, { capacityM3: number; payloadKg: number }> = JSON.parse(
+      document.getElementById('container-options-data')?.textContent || '{}'
+    );
+
+    const out = {
+      container: document.getElementById('result-container'),
+      weight: document.getElementById('result-weight'),
+      utilization: document.getElementById('result-utilization'),
+      units: document.getElementById('result-units'),
+      status: document.getElementById('result-status'),
+    };
+
+    const fmt = (value: number, digits: number) =>
+      new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      }).format(value);
+
+    const getContainerCode = () => {
+      const checked = form?.querySelector<HTMLInputElement>('input[name="container"]:checked');
+      return checked ? checked.value : '20GP';
+    };
+
+    const buildOptions = (select: HTMLSelectElement) => {
+      for (const opt of SKU_OPTIONS) {
+        const option = document.createElement('option');
+        option.value = opt.sku;
+        option.textContent = opt.label;
+        option.disabled = opt.weightKg === null;
+        select.appendChild(option);
+      }
+    };
+
+    const createRow = () => {
+      if (!template || !rowsEl) return;
+      const row = template.content.firstElementChild?.cloneNode(true) as HTMLElement | null;
+      if (!row) return;
+      const select = row.querySelector<HTMLSelectElement>('.sku-select');
+      if (select) buildOptions(select);
+      row.querySelector<HTMLButtonElement>('.remove-row')?.addEventListener('click', () => {
+        row.remove();
+        calculate();
+      });
+      rowsEl.appendChild(row);
+    };
+
+    const showError = (message: string) => {
+      if (!errorEl) return;
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+    };
+
+    const hideError = () => {
+      if (!errorEl) return;
+      errorEl.textContent = '';
+      errorEl.classList.add('hidden');
+    };
+
+    const calculate = () => {
+      const code = getContainerCode();
+      const container = CONTAINERS[code] || CONTAINERS['20GP'];
+      if (out.container) out.container.textContent = code;
+
+      const rows = rowsEl ? Array.from(rowsEl.querySelectorAll('.sku-row')) : [];
+      let totalWeight = 0;
+      let totalUnits = 0;
+      let emptyRow = false;
+      let countedRows = 0;
+
+      for (const row of rows) {
+        const select = row.querySelector<HTMLSelectElement>('.sku-select');
+        const qtyInput = row.querySelector<HTMLInputElement>('.sku-qty');
+        if (!select || !qtyInput) continue;
+        const qty = Number.parseInt(qtyInput.value, 10);
+        if (!select.value) {
+          if (Number.isFinite(qty) && qty > 0) emptyRow = true;
+          continue;
+        }
+        const sku = SKU_OPTIONS.find((o) => o.sku === select.value);
+        if (!sku || !Number.isFinite(qty) || qty <= 0) continue;
+        totalUnits += qty;
+        countedRows++;
+        if (sku.weightKg !== null) totalWeight += sku.weightKg * qty;
+      }
+
+      if (out.units) out.units.textContent = totalUnits > 0 ? fmt(totalUnits, 0) : '-';
+      if (out.weight) out.weight.textContent = totalWeight > 0 ? `${fmt(totalWeight, 0)} kg` : '-';
+      if (out.utilization) {
+        out.utilization.textContent =
+          totalWeight > 0 && container ? `${fmt((totalWeight / container.payloadKg) * 100, 0)}%` : '-';
+      }
+
+      const status = out.status;
+      if (!status) return;
+      if (countedRows === 0 && !emptyRow) {
+        hideError();
+        status.textContent = 'Add SKUs to plan the shipment.';
+        return;
+      }
+      if (emptyRow) {
+        showError(
+          'Every row needs a selected SKU. SKUs without a published packed weight are disabled and confirmed at quotation.'
+        );
+        status.textContent = 'Select a SKU in every row, or remove the empty row.';
+        return;
+      }
+      hideError();
+      if (totalWeight > container.payloadKg) {
+        status.textContent = `The estimated packed weight exceeds the ≈ ${fmt(container.payloadKg / 1000, 1)} t ${code} payload reference. Reduce the mix, split it across containers, or ask for a 40HQ / multi-container loading plan.`;
+      } else {
+        status.textContent = `Within the ${code} payload reference of ≈ ${fmt(container.payloadKg / 1000, 1)} t. Cube utilization and pieces per container require the carton-level loading plan from your quotation.`;
+      }
+    };
+
+    addBtn?.addEventListener('click', () => {
+      createRow();
+      calculate();
+    });
+    form?.addEventListener('input', calculate);
+    form?.addEventListener('change', calculate);
+
+    createRow();
+    calculate();
+  })();
+</script>

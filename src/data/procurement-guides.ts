@@ -572,6 +572,7 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
+      { label: 'Packaging & Container Calculator', href: '/inflatable-pool-packaging-shipping' },
       { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
       { label: 'Wholesale Program', href: '/wholesale' },
       { label: 'Wholesale Pool Cost Guide', href: '/guides/how-much-does-a-wholesale-drop-stitch-pool-cost' },

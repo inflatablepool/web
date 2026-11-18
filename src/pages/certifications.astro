@@ -1,0 +1,374 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+
+export const prerender = true;
+
+const canonical = getCanonical('/certifications');
+const metadata = merge(
+  {
+    title: `Certification & Test Evidence Center | ${SITE.name}`,
+    description:
+      'Published destructive type-test results for the FB-DSP-400 drop-stitch pool, design-reference standards (EN 16582-1, ASTM F2666) and the honest certification scope: what is published, what is pending verification.',
+    canonical,
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Certification Center' }];
+
+/**
+ * Certification scope table. Status reflects exactly what the site publishes:
+ * the FB-DSP-400 type-test campaign is published with signed reports; product
+ * certificates (CE, UKCA, ISO 9001, REACH, RoHS, BSCI) are NOT published and
+ * are listed as pending until the original documents are verified.
+ */
+const certificationScope = [
+  {
+    item: 'Destructive type test (FB-DSP-400)',
+    reference: `Campaign ${TYPE_TEST_CAMPAIGN.campaignId}, SOP WI-QC-DS-2026-001`,
+    status: 'published',
+    statusLabel: 'Published — 8/8 PASS',
+    note: 'Eight destructive items passed on three finished units; four signed reports are downloadable from the results page.',
+  },
+  {
+    item: 'EN 16582-1 / ASTM F2666',
+    reference: 'Design references for residential pool models',
+    status: 'reference',
+    statusLabel: 'Design reference only',
+    note: 'Applied only where confirmed for the specific residential model. Design references do not by themselves certify a product or commercial installation.',
+  },
+  {
+    item: 'CE / UKCA',
+    reference: 'Product conformity marking',
+    status: 'pending',
+    statusLabel: 'Pending verification',
+    note: 'No certificate original, number, holder or validity period is published. Do not treat any current page as evidence of CE or UKCA certification.',
+  },
+  {
+    item: 'ISO 9001',
+    reference: 'Quality management system',
+    status: 'pending',
+    statusLabel: 'Pending verification',
+    note: 'No certificate original, number, holder or validity period is published. Confirm the current certification status directly with the factory.',
+  },
+  {
+    item: 'REACH / RoHS',
+    reference: 'Chemical and material compliance',
+    status: 'pending',
+    statusLabel: 'Pending verification',
+    note: 'Material and compliance documentation is reviewed against the target market per project; no REACH or RoHS certificate is published on this site.',
+  },
+  {
+    item: 'BSCI',
+    reference: 'Social compliance audit',
+    status: 'pending',
+    statusLabel: 'Pending verification',
+    note: 'No audit report or certificate is published. Confirm the current social-compliance status directly with the factory.',
+  },
+];
+
+const statusStyles: Record<string, string> = {
+  published: 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300',
+  reference: 'bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300',
+  pending: 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300',
+};
+
+const buyerRequests = [
+  'The four signed PDF reports of the FB-DSP-400 destructive-test campaign',
+  'The raw-data record for your production lot, requested with your order',
+  'Material and compliance documentation reviewed against your target market',
+  'The QC inspection plan (test method, hold time, acceptance criteria) for your model',
+  'Third-party pre-shipment inspection of any order, at your arrangement',
+];
+
+const certificationFaqs = [
+  {
+    q: 'Do the published test results cover all 48 catalog SKUs?',
+    a: 'No. The published campaign covers one model — the FB-DSP-400 (4 × 3 × 1.2 m, 20 cm drop-stitch wall), one lot and three finished units. It is published type-test evidence for that model, not a certification of the whole catalog. Per-SKU verification is handled through the inspection plan confirmed with your order.',
+  },
+  {
+    q: 'Are your pools CE certified?',
+    a: 'No certificate original, certificate number, holder or validity period is published on this site, so we do not claim CE or UKCA certification here. Material and compliance documentation is reviewed against your target market per project; confirm the applicable conformity route for your market with us before ordering.',
+  },
+  {
+    q: 'What do EN 16582-1 and ASTM F2666 mean on this site?',
+    a: 'They are design references applied only where confirmed for a specific residential model. A design reference informs the engineering review — it does not by itself certify a product or a commercial installation.',
+  },
+  {
+    q: 'Can I verify the test results myself?',
+    a: 'Yes. The destructive-testing results page lists all eight items with measured values and links the four signed PDF reports, and buyers can request the raw-data record for their own production lot. Third-party pre-shipment inspection of any order is welcome at your arrangement.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@type': 'WebPage',
+      name: 'Certification & Test Evidence Center',
+      description:
+        'Published destructive type-test results for the FB-DSP-400 drop-stitch pool and the honest certification scope of Inflatable Pool Factory.',
+      url: String(canonical || ''),
+    }}
+  />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Certification Center
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Certification & Test Evidence Center
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        What is published, what is a design reference, and what remains pending verification — stated plainly, because
+        inflated claims help no one.
+      </p>
+    </header>
+
+    <!-- Published type-test evidence -->
+    <section id="published-evidence" class="scroll-mt-24 mb-14">
+      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+          Published type-test evidence
+        </h2>
+        <span
+          class="px-2.5 py-1 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-semibold rounded-full"
+        >
+          8 / 8 PASS
+        </span>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        {TYPE_TEST_CAMPAIGN.model} — {TYPE_TEST_CAMPAIGN.specimen}. Campaign{' '}
+        {TYPE_TEST_CAMPAIGN.campaignId}, lot {TYPE_TEST_CAMPAIGN.lot}, {TYPE_TEST_CAMPAIGN.units},
+        {TYPE_TEST_CAMPAIGN.dates}.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700 mb-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Test item</th>
+              <th class="px-4 py-3">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              TYPE_TEST_CAMPAIGN.items.map((item, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                    {item.test}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 leading-relaxed">
+                    {item.result}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="rounded-xl border border-sky-100 dark:border-sky-800/60 bg-sky-50 dark:bg-sky-900/20 p-4">
+        <p class="text-sm text-sky-900 dark:text-sky-200 leading-relaxed">
+          <strong>Scope:</strong>
+          {TYPE_TEST_CAMPAIGN.scopeNote}
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <a
+            href="/quality-control/destructive-testing/results"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/70 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs font-semibold hover:bg-white dark:hover:bg-sky-950/60 transition-colors"
+          >
+            View results & download the signed reports <Icon name="tabler:file-download" class="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="/quality-control/destructive-testing"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/70 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs font-semibold hover:bg-white dark:hover:bg-sky-950/60 transition-colors"
+          >
+            Testing SOP <Icon name="tabler:flask" class="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification scope -->
+    <section id="scope" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Certification scope & status
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        This site distinguishes between published test evidence, design references and certificates. Items marked
+        "Pending verification" have no published original document, certificate number, holder or validity period — we
+        do not present them as certifications until they are verified.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+        <table class="w-full text-sm">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Item</th>
+              <th class="px-4 py-3">Reference</th>
+              <th class="px-4 py-3">Status</th>
+              <th class="px-4 py-3">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              certificationScope.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                    {row.item}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                    {row.reference}
+                  </td>
+                  <td class="px-4 py-3 border-b border-gray-100 dark:border-slate-800">
+                    <span
+                      class={`px-2.5 py-1 text-xs font-medium rounded-full whitespace-nowrap ${statusStyles[row.status]}`}
+                    >
+                      {row.statusLabel}
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 leading-relaxed">
+                    {row.note}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- What buyers can request -->
+    <section id="buyer-requests" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        What you can request for your project
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl">
+        Verification documents are tied to your model and production lot, not to marketing pages. Ask for any of the
+        following with your inquiry or order:
+      </p>
+      <ul class="grid sm:grid-cols-2 gap-3">
+        {
+          buyerRequests.map((request) => (
+            <li class="flex gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <Icon name="tabler:circle-check" class="w-5 h-5 flex-shrink-0 text-primary dark:text-sky-400 mt-0.5" />
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{request}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="scroll-mt-24 mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        Certification FAQ
+      </h2>
+      <div class="space-y-3">
+        {
+          certificationFaqs.map((faq) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {faq.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {faq.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Related pages -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related pages</h2>
+      <div class="grid sm:grid-cols-3 gap-3">
+        <a
+          href="/quality-control/destructive-testing/results"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Destructive test results</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            All eight items with measured values and the four signed PDF reports.
+          </span>
+        </a>
+        <a
+          href="/quality-control"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Quality control framework</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            Inspection plan, pressure and leak testing, valve and seal verification.
+          </span>
+        </a>
+        <a
+          href="/products/specs"
+          class="p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900 dark:text-slate-100">Pool specifications</span>
+          <span class="mt-1 block text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
+            All 48 standard SKUs with sizes, walls and indicative FOB Qingdao prices.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Scope and disclaimer</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+        This page states the certification and test-evidence position of Inflatable Pool Factory as published on this
+        site. Published results cover the tested model, lot and units only. Items marked "Pending verification" are not
+        claimed as certifications; market-specific conformity routes, documentation and third-party inspection are
+        confirmed per project in the quotation and order documents.
+      </p>
+    </section>
+
+    <section class="mt-12 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Need the signed test reports, raw data for your lot or a market-specific compliance review? Ask with your
+        project brief.
+      </p>
+      <a
+        href="/request-quotation"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+      >
+        <Icon name="tabler:file-invoice" class="w-5 h-5" /> Request a Quotation
+      </a>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="certifications" aria-hidden="true">
+    <p>
+      Inflatable Pool Factory certification and test evidence: the published destructive type-test campaign
+      RPT-FB-QC-20261113 on the FB-DSP-400 (4 × 3 × 1.2 m, 20 cm drop-stitch wall, lot LOT-202611-A08, three finished
+      units, 2026-11-09 to 2026-11-13) passed all eight items — peel 136.5–149.4 N/5 cm, puncture 406.2–425.0 N, -18 °C
+      low-temperature folding, 55 °C / 1.5× Pw 48-hour creep, burst at 25.4 PSI = 3.18× Pw, 72-hour 110% water overload,
+      500 pendulum impacts, valve torque 31.9–36.4 N·m and drain pull-out 1,185 N — with four signed PDF reports
+      downloadable from the destructive-testing results page. These results cover the tested model and lot, not all 48
+      catalog SKUs. EN 16582-1 and ASTM F2666 are design references applied only where confirmed for a specific
+      residential model and do not by themselves certify a product or commercial installation. CE, UKCA, ISO 9001,
+      REACH, RoHS and BSCI certificates are not published on this site and are listed as pending verification until
+      original documents, certificate numbers, holders and validity periods are verified. Buyers can request the signed
+      reports, the raw-data record for their production lot, target-market compliance documentation, the model
+      inspection plan and third-party pre-shipment inspection.
+    </p>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={certificationFaqs.map((faq) => ({ q: faq.q, a: faq.a }))} />
+</Layout>
