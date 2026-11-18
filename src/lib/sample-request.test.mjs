@@ -53,10 +53,7 @@ test('sample platforms keep product page slugs and links aligned', () => {
     // The grey colorway platform links to the merged round pool page (its own
     // page 301-redirects there); every other platform links to its own page.
     const hrefSlug = product.productHref.replace(/^\/products\//, '');
-    assert.ok(
-      PRODUCT_SLUGS.includes(hrefSlug),
-      `${product.slug} links to unknown product page ${product.productHref}`
-    );
+    assert.ok(PRODUCT_SLUGS.includes(hrefSlug), `${product.slug} links to unknown product page ${product.productHref}`);
     if (product.slug !== 'round-grey-drop-stitch-pool') {
       assert.equal(product.productHref, `/products/${product.slug}`);
     }
