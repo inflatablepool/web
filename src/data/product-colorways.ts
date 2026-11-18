@@ -36,9 +36,9 @@ export const productColorways: Record<string, ProductColorway> = {
     sku: 'IPF-POOL-RND-GREY',
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',
     colorName: 'Grey',
-    priceUsd: '399',
+    priceUsd: '299',
     priceNote:
-      'Includes 1000W electric air pump, repair kit, and storage bag. Optional matching fitted cover available.',
+      'Same price as the blue colorway for the Ø 2.0 × 0.5 m (S2005) size — includes 1000W electric air pump, repair kit, and storage bag. Optional matching fitted cover available.',
     note: 'The same round drop stitch series — the same 23 factory sizes, 10/15 cm walls, and 4–5 PSI rigid inflation — in a modern grey finish for contemporary patios, villas, and boutique settings. An optional matching fitted cover keeps debris out and the water warm between swims.',
     images: [
       {

@@ -12,6 +12,7 @@ import ProductColorway from '~/components/widgets/ProductColorway.astro';
 import MaterialTestEvidence from '~/components/widgets/MaterialTestEvidence.astro';
 import PressureSafety from '~/components/widgets/PressureSafety.astro';
 import AccessoryRecommendations from '~/components/widgets/AccessoryRecommendations.astro';
+import ProductSizeSelector from '~/components/widgets/ProductSizeSelector.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
@@ -35,6 +36,7 @@ import { localizeHref } from '~/i18n/routing';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import { productBusinessData } from '~/data/product-business-data';
 import { poolEngineeringProfiles } from '~/data/pool-engineering';
+import { productRetailSizes } from '~/data/product-variants';
 
 export async function getStaticPaths() {
   const paths: { params: { lang: string; slug: string }; props: any }[] = [];
@@ -496,10 +498,13 @@ const hasVariant = catalogSeries
             )
           }
 
+          {/* Retail size selector (R-01) */}
+          <ProductSizeSelector slug={product.slug} lang={lang} />
+
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
             {
-              product.sku && product.price?.amount ? (
+              product.sku && product.price?.amount && !productRetailSizes[product.slug] ? (
                 <form method="POST" action="/api/checkout" class="flex-1">
                   <input type="hidden" name="sku" value={product.sku} />
                   <input type="hidden" name="lang" value={lang} />

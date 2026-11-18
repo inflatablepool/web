@@ -1,0 +1,74 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import { productRetailSizes } from '~/data/product-variants';
+import { localizeHref } from '~/i18n/routing';
+
+/**
+ * R-01: retail size selector. Renders nothing when the slug has no registered
+ * retail size lineup. Firm-priced sizes post to the Stripe checkout with an
+ * explicit `item`; prices pending finance confirmation render as
+ * "Request price" and link to the contact form.
+ */
+// English-only on all languages (matches the MDX body fallback).
+
+interface Props {
+  slug: string;
+  lang?: string;
+}
+
+const { slug, lang = 'en' } = Astro.props;
+const retail = productRetailSizes[slug];
+---
+
+{
+  retail && (
+    <section data-ai-block="size-selector">
+      <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-2 block">
+        Choose your size
+      </span>
+      <div class="space-y-2">
+        {retail.sizes.map((size) => (
+          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <div class="min-w-0 flex-1">
+              <span class="block text-sm font-bold text-gray-900 dark:text-slate-100">
+                {size.size}
+                <span class="ml-2 font-normal text-gray-500 dark:text-slate-400">{size.wall}</span>
+              </span>
+              <span class="block text-xs text-gray-500 dark:text-slate-500 mt-0.5 font-mono">{size.item}</span>
+            </div>
+            {size.priceUsd ? (
+              <>
+                <span class="text-lg font-bold text-gray-900 dark:text-slate-100 shrink-0">${size.priceUsd}</span>
+                <form method="POST" action="/api/checkout" class="shrink-0">
+                  <input type="hidden" name="sku" value={retail.sku} />
+                  <input type="hidden" name="item" value={size.item} />
+                  <input type="hidden" name="lang" value={lang} />
+                  <button
+                    type="submit"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-xs"
+                  >
+                    <Icon name="tabler:shopping-cart" class="w-4 h-4" />
+                    Buy
+                  </button>
+                </form>
+              </>
+            ) : (
+              <a
+                href={localizeHref(`/contact?product=${encodeURIComponent(`${size.size} (${size.item})`)}`, lang)}
+                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-all text-xs shrink-0"
+              >
+                <Icon name="tabler:message-circle" class="w-4 h-4" />
+                Request price
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      <p class="mt-2.5 text-xs text-gray-500 dark:text-slate-500 leading-relaxed">
+        <Icon name="tabler:info-circle" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
+        Fixed retail prices apply to the sizes listed above. Sizes Ø 5 m and above, 20/50 cm reinforced walls and custom
+        dimensions are quoted as wholesale/OEM projects.
+      </p>
+    </section>
+  )
+}

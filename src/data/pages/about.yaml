@@ -12,14 +12,14 @@ stats:
   title: By the numbers
   columns: 4
   stats:
-    - title: Pool collections
-      amount: '4'
-    - title: Time to inflate
-      amount: '5-15 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
-      amount: info@inflatablepoolfactory.com
+    - title: Founded
+      amount: '2012'
+    - title: Factory area
+      amount: 12,000 m²
+    - title: Monthly capacity
+      amount: 500 units
+    - title: Exported to
+      amount: 50+ countries
 
 features3_what_we_build:
   title: What we build

@@ -7,7 +7,7 @@
 
   "brand": {
     "name": "Inflatable Pool Factory",
-    "legalName": "Qingdao Vatrad Group",
+    "legalName": "Qingdao Vatrad Group Co., Ltd.",
     "operator": "Inflatable Pool Team",
     "alternateName": "Inflatable Pool Factory",
     "slogan": "Premium Drop Stitch Inflatable Swimming Pools",
@@ -18,7 +18,7 @@
 
   "office": {
     "label": "Qingdao Office — Design, Sales & Billing",
-    "legalEntity": "Qingdao Vatrad Group",
+    "legalEntity": "Qingdao Vatrad Group Co., Ltd.",
     "city": "Qingdao",
     "province": "Shandong",
     "country": "CN"
@@ -26,17 +26,19 @@
 
   "factory": {
     "label": "Manufacturing & Export Hub",
-    "areaSqm": 0,
+    "areaSqm": 12000,
     "city": "Qingdao",
-    "prefecture": "",
+    "prefecture": "Laixi",
     "province": "Shandong",
     "country": "CN",
     "postalCode": "",
-    "streetAddress": "",
+    "streetAddress": "40 Yantai Road",
     "productionLines": 0,
-    "workforceMin": 0,
-    "workforceMax": 0,
-    "annualCapacityUnits": 0,
+    "hfWeldingMachines": 4,
+    "workforceMin": 50,
+    "workforceMax": 50,
+    "monthlyCapacityUnits": 500,
+    "annualCapacityUnits": 6000,
     "certifiedModels": 0
   },
 
@@ -63,9 +65,11 @@
   "certifications": [],
 
   "commercial": {
-    "moqPools": "Confirmed per product and project",
-    "samplingLeadTimeDays": "Confirmed in quotation",
-    "productionLeadTimeDays": "Confirmed in quotation",
+    "moqPools": "Standard program 1 pc (mixed models accepted); OEM logo 5 pcs; full custom development 20 pcs",
+    "samplingLeadTimeDays": "7 days for stock platforms / 15 days for customized samples; sample fee refunded at 30 pcs cumulative orders",
+    "productionLeadTimeDays": "45 days off-season / up to 60 days in peak season (January–April), from deposit and confirmed artwork",
+    "paymentTerms": "30% T/T deposit, 70% against B/L copy; T/T and L/C accepted; PayPal accepted for samples",
+    "incoterms": "FOB Qingdao standard; CIF and DDP on request",
     "warrantyPool": "2-year limited warranty on pool fabric, seams, and valves",
     "warrantyNote": "2-year limited warranty covers drop stitch fabric integrity, seam air-holding capability, inflation valves, and accessories"
   },

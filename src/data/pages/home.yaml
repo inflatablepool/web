@@ -21,14 +21,14 @@ stats:
   title: Inflatable Pool Factory at a Glance
   columns: 4
   stats:
-    - title: Pool Collections
-      amount: '4'
-    - title: Standard SKUs
-      amount: '48'
-    - title: Size Range
-      amount: 2-10 m
-    - title: Factory Base, China
-      amount: Qingdao
+    - title: Founded
+      amount: '2012'
+    - title: Factory Area
+      amount: 12,000 m²
+    - title: Monthly Capacity
+      amount: 500 units
+    - title: Exported To
+      amount: 50+ countries
 
 compare_collections:
   tagline: Compare Standard Collections

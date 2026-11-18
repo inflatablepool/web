@@ -120,7 +120,7 @@ const buyerFaqs = [
   {
     question: 'What determines MOQ and production lead time?',
     answer:
-      'MOQ and production lead time depend on the product platform, customization level, order volume and production season. Final terms are confirmed in your project quotation.',
+      'Standard-program orders start at 1 pc (mixed models accepted), logo-printed OEM orders at 5 pcs, and full custom development at 20 pcs. Production runs about 45 days off-season and up to 60 days in peak season (January–April), counted from receipt of the deposit and the confirmed artwork.',
   },
   {
     question: 'What is the difference between OEM and ODM here?',
@@ -137,20 +137,45 @@ const buyerFaqs = [
 const commercialTerms = [
   {
     title: 'Minimum order quantities',
-    body: 'MOQ depends on the product platform, customization level, packaging and order volume. We confirm the applicable MOQ for your project in the quotation.',
+    body: 'Standard program: 1 pc per order — mixed models and sizes accepted. OEM logo printing: 5 pcs. Full custom development (custom size, tooling or dedicated materials): 20 pcs.',
   },
   {
     title: 'Sample development lead time',
-    body: 'Sample timing depends on the specification, materials and any new tooling. We confirm the sample milestones in the project schedule.',
+    body: 'Stock platforms: sample ships in about 7 days. Customized samples: about 15 days. The sample fee is refunded once cumulative orders for the sampled model reach 30 pcs.',
   },
   {
     title: 'Mass production lead time',
-    body: 'Production timing depends on the confirmed specification, order volume and production season. We confirm the delivery schedule in the quotation.',
+    body: 'About 45 days off-season and up to 60 days in peak season (January–April), counted from receipt of the deposit and the confirmed artwork.',
+  },
+  {
+    title: 'Payment terms',
+    body: '30% T/T deposit with the order, 70% balance against the B/L copy. T/T and L/C are accepted for production orders; PayPal is accepted for samples.',
+  },
+  {
+    title: 'Incoterms & shipping',
+    body: 'FOB Qingdao as standard; CIF and DDP are available on request. Retail orders ship from Qingdao or our US warehouse; buyers in the US and EU get free basic shipping on retail orders.',
   },
   {
     title: 'Quality assurance standard',
-    body: 'Pressure and leak-test requirements are agreed per product and project. We confirm the test method, duration and acceptance criteria in the production specification.',
+    body: 'Every unit is inflated and hold-tested for 72 hours before packing. Inspection follows an agreed AQL plan, and third-party inspection (SGS / BV / TÜV) is accepted.',
   },
+  {
+    title: 'Warranty',
+    body: '2-year structural warranty covering drop stitch fabric integrity, seams and valves. Retail purchases are covered by a 30-day return policy (unused, unfilled, original packaging).',
+  },
+  {
+    title: 'Response time',
+    body: 'Formal quotations within 48 hours (China Standard Time, UTC+8); online inquiries are answered within 1 business day.',
+  },
+];
+
+const orderTimeline = [
+  { phase: 'RFQ & quotation', timing: 'Quote within 48 h' },
+  { phase: 'Sample approval', timing: '7 days stock / 15 days custom' },
+  { phase: 'Deposit & artwork', timing: '30% T/T deposit' },
+  { phase: 'Mass production', timing: '45–60 days' },
+  { phase: 'QC & 72 h hold test', timing: 'Every unit, before packing' },
+  { phase: 'Shipping', timing: 'FOB Qingdao / CIF / DDP' },
 ];
 
 const quoteChecklist = [
@@ -281,6 +306,28 @@ const process = [
               </span>
               <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{p.title}</h3>
               <p class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{p.description}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">Typical Order Timeline</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        The standard timing commitments behind an OEM/ODM order, from first inquiry to container loading.
+      </p>
+      <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+          orderTimeline.map((step, index) => (
+            <li class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex w-8 h-8 shrink-0 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {index + 1}
+              </span>
+              <span>
+                <span class="block text-sm font-bold text-gray-900 dark:text-slate-100">{step.phase}</span>
+                <span class="block text-xs text-gray-600 dark:text-slate-400 mt-0.5">{step.timing}</span>
+              </span>
             </li>
           ))
         }
@@ -449,7 +496,18 @@ const process = [
             { term: 'Brand', detail: facts.brand.name },
             { term: 'Operating team', detail: facts.brand.operator },
             { term: 'Legal entity', detail: facts.brand.legalName },
+            {
+              term: 'Factory',
+              detail:
+                '12,000 m² plant in Laixi, Qingdao — 4 high-frequency welding machines, about 50 employees, 500 units/month capacity',
+            },
             { term: 'Production base', detail: `${facts.factory.city}, ${facts.factory.province}, China` },
+            { term: 'Founded', detail: String(facts.brand.foundingYear) },
+            { term: 'Exported to', detail: '50+ countries' },
+            {
+              term: 'North America retail',
+              detail: 'Aquafarer LLC (USA) — sister brand Felizbay',
+            },
             { term: 'Contracting entity', detail: 'Stated in your quotation and order documents' },
             {
               term: 'Quality & after-sales',
@@ -575,11 +633,13 @@ const process = [
       Inflatable Pool Factory offers OEM/ODM inflatable pool manufacturing at its Qingdao factory: custom sizes (round Ø
       2–10 m, rectangular up to 6 × 5 × 1.5 m and beyond), wall thickness options of 10/15/20/50 cm, custom colors, logo
       printing, Oxford-fabric covers, built-in seats, 5 mm insulated bottoms, custom valve and 38 mm filter-port
-      placement, and retail-ready packaging. Five-step project flow: RFQ, engineering and FOB Qingdao quote, sample
-      approval, mass production, and QC against the approved specification. MOQ, sample timing, production lead time and
-      pressure-test requirements are confirmed in the project quotation and production specification. Material and
-      compliance documentation is reviewed against the requirements of the target market. NDA terms are available on
-      request.
+      placement, and retail-ready packaging. Commercial terms: MOQ 1 pc (standard program, mixed models), 5 pcs (OEM
+      logo), 20 pcs (full custom); samples in 7 days (stock platform) or 15 days (customized) with the sample fee
+      refunded at 30 pcs cumulative orders; production 45 days off-season / up to 60 days peak season (January–April)
+      from deposit and confirmed artwork; payment 30% T/T deposit and 70% against B/L copy; FOB Qingdao standard,
+      CIF/DDP on request; every unit hold-tested 72 hours before packing with AQL inspection and accepted third-party
+      inspection (SGS/BV/TÜV); 2-year structural warranty; quotations within 48 hours (CST/UTC+8). NDA terms are
+      available on request.
     </p>
   </section>
 </Layout>
