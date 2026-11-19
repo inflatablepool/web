@@ -128,7 +128,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-shipping',
     question: 'How long does shipping take?',
     answer:
-      'Dispatch timing for in-stock orders is confirmed with your order confirmation. Delivery time depends on destination and order size — contact us at info@inflatablepoolfactory.com with your location and quantity for an accurate estimate.',
+      'In-stock retail orders ship from our US warehouse or directly from the factory in Qingdao, depending on stock and destination. Typical delivery is 3–7 business days from the US warehouse, 7–12 business days by air express from Qingdao, and 25–35 days by sea (DDP) for larger orders. Wholesale and project shipments are confirmed per order — contact info@inflatablepoolfactory.com with your destination and quantity for an accurate estimate.',
     category: 'shipping',
     relatedProducts: [],
     relatedGuides: [],
@@ -155,8 +155,17 @@ export const faqs: FaqRecord[] = [
     id: 'pool-warranty',
     question: 'What is the Inflatable Pool Factory warranty?',
     answer:
-      'Inflatable Pool Factory pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@inflatablepoolfactory.com with your order details to start a claim.',
+      'Inflatable Pool Factory pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. To start a claim, email info@inflatablepoolfactory.com with your order number and photos or a video of the issue — for leaks, include a soapy-water test showing the leak location. Our team responds within 1 business day.',
     category: 'warranty',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-returns',
+    question: 'What is the return policy?',
+    answer:
+      'Retail orders can be returned within 30 days of delivery. The pool must be unused, unfilled, and in its original packaging with all accessories included. Returns that are not due to a manufacturing defect are shipped back at the buyer cost; confirmed defects are returned or replaced at our cost. Email info@inflatablepoolfactory.com with your order number to start a return.',
+    category: 'ordering',
     relatedProducts: [],
     relatedGuides: [],
   },

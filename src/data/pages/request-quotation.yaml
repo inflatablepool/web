@@ -28,7 +28,7 @@ content_form:
   email_to: info@inflatablepoolfactory.com
   email_subject: OEM/ODM quotation request
   submit_button: 'Submit Project RFQ'
-  success_message: 'Thanks — your project brief has been received. Our team will review the requirements and reply with the next steps. If a detail is missing, we may ask for clarification on target sizes, quantities, market or packaging before quoting.'
+  success_message: 'Thanks — your project brief has been received. Our team will review the requirements and reply within 48 business hours. If a detail is missing, we may ask for clarification on target sizes, quantities, market or packaging before quoting.'
   error_message: 'Something went wrong sending your RFQ. Please try again or email us directly at info@inflatablepoolfactory.com.'
   default_country_code: '+86'
   fields:
@@ -329,7 +329,7 @@ faq:
       description: 'Product type or reference product, target dimensions, materials or performance requirements, branding and packaging needs, estimated quantity, target market and delivery date. If a detail is still open, enter “TBD”.'
       icon: tabler:file-invoice
     - title: 'How long does it take to receive a quote?'
-      description: 'Quotation timing depends on the product scope and technical details. We review each request and reply with the next steps, including any clarification needed before pricing.'
+      description: 'Most inquiries get a reply within one business day, and a complete quotation is sent within 48 business hours. Complex or fully custom configurations may require technical clarification before final pricing.'
       icon: tabler:clock
     - title: 'Can I upload drawings or reference images?'
       description: 'Yes. Use the optional attachment field to upload a spec sheet, drawing, reference image or packaging artwork. Accepted formats include PDF, PNG, JPG, WebP, AI, PSD, DWG, DXF and ZIP, up to 20 MB.'
