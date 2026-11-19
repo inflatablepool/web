@@ -51,10 +51,10 @@ features:
       description: 'Ikki qavatli PVC drop stitch mato, oilaviy foydalanishning to''liq mavsumi davomida teshilish va UV ta''siriga qarshi turish uchun ishlab chiqilgan.'
       icon: tabler:shield
     - title: Toʻliq toʻplam
-      description: Har bir hovuz elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi. Dumaloq modellar uchun o'rnatilgan qopqoqlar mavjud.
+      description: 'Har bir hovuz elektr havo pompasi, ta''mirlash to''plami va saqlash sumkasi bilan birga keladi. To''rtburchak modellar to''liq qoplamani o''z ichiga oladi; dumaloq modellar variant sifatida o''rnatilgan qopqoqni taklif qiladi.'
       icon: tabler:box
     - title: Xavfsizlik nuqtai nazaridan dizayn
-      description: 'EN 16582-1 va ASTM F2666 standartlariga havola qiluvchi turar-joy hovuzi dizayni - modelga oid xavfsizlik ma''lumotlari mahsulot hujjatlarida keltirilgan. Doimiy kattalar nazorati doimo talab qilinadi.'
+      description: 'EN 16582-1 va ASTM F2666 (dizayn ma''lumotnomalari, sertifikatlar emas) ga asoslangan turar-joy hovuzining dizayni - modelga xos muvofiqlik maqsadli bozorda tasdiqlanadi va xavfsizlik ma''lumotlari mahsulot hujjatlari bilan birga yuboriladi. Doimiy kattalar nazorati doimo talab qilinadi.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Hovuz g'oyalari
@@ -117,13 +117,13 @@ content_compliance:
       description: '5-15 daqiqada qutidan chiqarib oling va kiritilgan nasos bilan puflang, keyin bog ''shlangi bilan to''ldiring - to''ldirish vaqti hovuz hajmi va suv ta''minotiga qarab farq qiladi.'
       icon: tabler:rocket
     - title: Oddiy suvni parvarish qilish
-      description: Standart 32/38 mm filtr-nasos portlari, muntazam pH tekshiruvlari va dumaloq modellarda o'rnatilgan qopqoq suvni toza saqlaydi.
+      description: 'Standart 32/38 mm filtr-nasos portlari, muntazam pH tekshiruvlari va qopqoq - to''rtburchaklar modellarga kiritilgan, dumaloq modellarda ixtiyoriy - suvni toza tuting.'
       icon: tabler:droplet
     - title: Tozalash, to'kib tashlash va saqlash
       description: Hovuzni to'kib tashlang, quriting, o'rang va qish uchun saqlash sumkasiga soling. Xizmat uchun doimiy o'rnatish yo'q.
       icon: tabler:package
     - title: Birinchi navbatda xavfsizlik
-      description: Bolalar har doim kattalar tomonidan faol nazorat qilinishi kerak. Qo'llanma, mahalliy qoidalar va xavfsiz foydalanish yo'riqnomasiga rioya qiling.
+      description: 'EN 16582-1 va ASTM F2666 (dizayn ma''lumotnomalari, sertifikatlar emas) ga asoslangan turar-joy hovuzining dizayni - modelga xos muvofiqlik maqsadli bozorda tasdiqlanadi va xavfsizlik ma''lumotlari mahsulot hujjatlari bilan birga yuboriladi. Doimiy kattalar nazorati doimo talab qilinadi.'
       icon: tabler:shield-check
 steps:
   title: Qutidan orqa hovliga
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuzga nima kiradi?
-      description: Har bir Inflatable Pool Factory hovuzida elektr havo nasosi, ta'mirlash to'plami va saqlash sumkasi mavjud. Dumaloq modellarda ixtiyoriy o'rnatilgan qopqoq mavjud.
+      description: 'Har bir Puflanadigan hovuz fabrikasi hovuzida elektr havo nasosi, ta''mirlash to''plami va saqlash sumkasi mavjud. To''rtburchak modellar, shuningdek, to''liq qoplamali qopqoqni o''z ichiga oladi; dumaloq modellar variant sifatida o''rnatilgan qopqoqni taklif qiladi.'
       icon: tabler:box
       category: all
     - title: Qanday o'lchamlar mavjud?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Qanday qilib suvni toza saqlashim mumkin?
-      description: O'rnatilgan joyda filtr nasosidan foydalaning, qoldiqlarni tozalang, pH darajasini tekshiring va foydalanilmaganda hovuzni yoping. Suv qancha davom etishi hovuz hajmi, foydalanish va filtratsiyaga bog'liq - belgilangan jadvalga tayanishdan ko'ra muntazam ravishda sinovdan o'tkazing.
+      description: 'Standart 32/38 mm filtr-nasos portlari, muntazam pH tekshiruvlari va qopqoq - to''rtburchaklar modellarga kiritilgan, dumaloq modellarda ixtiyoriy - suvni toza tuting.'
       icon: tabler:droplet
       category: all
 cta:

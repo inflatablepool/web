@@ -2,50 +2,77 @@
 import Icon from '~/components/ui/Icon.astro';
 import { POOL_OPERATING_PRESSURE, POOL_MAX_PRESSURE, POOL_RELIEF_VALVE_PRESSURE } from '~/data/pool-catalog';
 import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 
 /**
  * P1-2: pressure ladder for drop-stitch pool pages. Every value is republished
- * from the catalog SSOT or the type-test campaign — no invented figures. The
- * relief-valve vs maximum-pressure relationship carries the FC-01 pending note
- * (docs/factory-confirmation-checklist.md).
+ * from the catalog SSOT or the type-test campaign — no invented figures.
+ * P1-10: fixed chrome strings are translated via the `product.*` i18n keys;
+ * the pressure data and scope note stay EN with the MDX body fallback.
  */
-// English-only on all languages (matches the MDX body fallback).
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const tf = (key: string, fallback: string) => t(key) || fallback;
 
 // Rated working pressure (Pw) from the FB-DSP-400 nameplate — the reference
 // used in the type-test reports. Equals the 8 PSI maximum inflation pressure.
 const PW_PSI = 8;
 const CREEP_PSI = 1.5 * PW_PSI;
 const BURST_PSI = 25.4;
+const BURST_RATIO = (BURST_PSI / PW_PSI).toFixed(2);
 
 const steps: Array<{ value: string; label: string; note: string; tested?: boolean }> = [
   {
     value: POOL_OPERATING_PRESSURE,
-    label: 'Recommended operating pressure',
-    note: 'The everyday inflation target for standard models',
+    label: tf('product.pressureStep1Label', 'Recommended operating pressure'),
+    note: tf('product.pressureStep1Note', 'The everyday inflation target for standard models'),
   },
   {
     value: POOL_RELIEF_VALVE_PRESSURE,
-    label: 'Relief-valve auto-release',
-    note: 'The valve opens automatically above this pressure',
+    label: tf('product.pressureStep2Label', 'Relief-valve auto-release'),
+    note: tf('product.pressureStep2Note', 'The valve opens automatically above this pressure'),
   },
   {
     value: POOL_MAX_PRESSURE,
-    label: 'Maximum inflation pressure',
-    note: 'The structural limit — do not inflate beyond the model rating',
+    label: tf('product.pressureStep3Label', 'Rated working pressure (Pw)'),
+    note: tf(
+      'product.pressureStep3Note',
+      'Nameplate rating used as the test reference — confirm the rating for your model'
+    ),
   },
   {
     value: `${CREEP_PSI} PSI`,
-    label: 'Creep-test level',
-    note: `55 °C for 48 h at 1.5× Pw — max 5.2% growth (spec ≤10%)`,
+    label: tf('product.pressureStep4Label', 'Creep-test level'),
+    note: tf('product.pressureStep4Note', '55 °C for 48 h at 1.5× Pw — max 5.2% growth (spec ≤10%)'),
     tested: true,
   },
   {
     value: `${BURST_PSI} PSI`,
-    label: 'Measured burst pressure',
-    note: `${(BURST_PSI / PW_PSI).toFixed(2)}× Pw — parent-panel rupture, all seams intact`,
+    label: tf('product.pressureStep5Label', 'Measured burst pressure'),
+    note: tf('product.pressureStep5Note', '{ratio}× Pw — parent-panel rupture, all seams intact').replace(
+      '{ratio}',
+      BURST_RATIO
+    ),
     tested: true,
   },
 ];
+
+const evidenceBody = tf(
+  'product.testEvidenceBody',
+  'campaign {campaign} (lot {lot}, {dates}) on the {model} ({specimen}) measured Pw = 8.0 PSI and burst at {burst} PSI = {ratio}× Pw with all seams intact. Results cover the tested model, lot and units only — {scope}'
+)
+  .replace('{campaign}', TYPE_TEST_CAMPAIGN.campaignId)
+  .replace('{lot}', TYPE_TEST_CAMPAIGN.lot)
+  .replace('{dates}', TYPE_TEST_CAMPAIGN.dates)
+  .replace('{model}', TYPE_TEST_CAMPAIGN.model)
+  .replace('{specimen}', TYPE_TEST_CAMPAIGN.specimen)
+  .replace('{burst}', String(BURST_PSI))
+  .replace('{ratio}', BURST_RATIO)
+  .replace('{scope}', TYPE_TEST_CAMPAIGN.scopeNote.toLowerCase());
 ---
 
 <section
@@ -54,13 +81,18 @@ const steps: Array<{ value: string; label: string; note: string; tested?: boolea
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
     <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
-      Pressure &amp; Safety
+      {tf('product.pressureSafety', 'Pressure & Safety')}
     </span>
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Why 4–5 PSI?</h2>
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+      {tf('product.whyPsi', 'Why 4–5 PSI?')}
+    </h2>
     <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-8">
-      Drop-stitch walls only become rigid above the pressure of an ordinary inflatable. The published pressure ladder
-      runs from the everyday operating target up to the measured burst point, with each step republished from the
-      catalog and the type-test reports.
+      {
+        tf(
+          'product.pressureIntro',
+          'Drop-stitch walls only become rigid above the pressure of an ordinary inflatable. The published pressure ladder runs from the everyday operating target up to the measured burst point, with each step republished from the catalog and the type-test reports.'
+        )
+      }
     </p>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
       {
@@ -75,7 +107,7 @@ const steps: Array<{ value: string; label: string; note: string; tested?: boolea
             {step.tested && (
               <span class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
                 <Icon name="tabler:flask" class="w-3.5 h-3.5" />
-                Type-tested
+                {tf('product.typeTestedOn', 'Type-tested on SR341220')}
               </span>
             )}
           </div>
@@ -89,18 +121,10 @@ const steps: Array<{ value: string; label: string; note: string; tested?: boolea
         <Icon name="tabler:shield-check" class="w-5 h-5" />
       </span>
       <span class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">
-        <span class="font-bold text-gray-900 dark:text-slate-100">Test evidence:</span>
-        campaign {TYPE_TEST_CAMPAIGN.campaignId} (lot {TYPE_TEST_CAMPAIGN.lot}, {TYPE_TEST_CAMPAIGN.dates}) on the{' '}
-        {TYPE_TEST_CAMPAIGN.model} ({TYPE_TEST_CAMPAIGN.specimen}) measured Pw = 8.0 PSI and burst at {BURST_PSI} PSI ={
-          ' '
-        }
-        {(BURST_PSI / PW_PSI).toFixed(2)}× Pw with all seams intact. Results cover the tested model, lot and units only
-        — {TYPE_TEST_CAMPAIGN.scopeNote.toLowerCase()}
-        <span class="block mt-1.5">
-          Pending factory confirmation (FC-01): the relief-valve threshold ({POOL_RELIEF_VALVE_PRESSURE}) and the
-          maximum inflation pressure ({POOL_MAX_PRESSURE}) are shown exactly as published; their exact relationship is
-          being confirmed with the factory.
-        </span>
+        <span class="font-bold text-gray-900 dark:text-slate-100"
+          >{tf('product.testEvidenceLabel', 'Test evidence:')}</span
+        >
+        {evidenceBody}
       </span>
     </div>
   </div>

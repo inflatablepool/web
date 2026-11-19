@@ -51,10 +51,10 @@ features:
       description: 'Dobbelt-lags PVC drop stitch stof, konstrueret til at modstå punkteringer og UV-eksponering gennem en hel sæson med familiebrug.'
       icon: tabler:shield
     - title: Komplet pakke
-      description: Hver pool leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske. Monterede betræk fås til runde modeller.
+      description: 'Hver pool leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske. Rektangulære modeller inkluderer et fulddækkende dæksel; runde modeller tilbyder et monteret betræk som ekstraudstyr.'
       icon: tabler:box
     - title: Sikkerhedsbevidst design
-      description: 'Pooldesign til beboelse, der refererer til EN 16582-1 og ASTM F2666 — modelspecifik sikkerhedsinformation findes i produktdokumentationen. Konstant voksenopsyn er altid påkrævet.'
+      description: 'Design af boligpool med reference til EN 16582-1 og ASTM F2666 (designreferencer, ikke certificeringer) — modelspecifik overensstemmelse bekræftes pr. målmarked, og sikkerhedsoplysningerne leveres sammen med produktdokumentationen. Konstant voksenopsyn er altid påkrævet.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool ideer
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Pak ud og pust op med den medfølgende pumpe på 5-15 minutter, og fyld derefter med en haveslange - påfyldningstiden varierer med poolstørrelse og vandforsyning.'
       icon: tabler:rocket
     - title: Enkel vandpleje
-      description: Standard 32/38 mm filterpumpeporte, regelmæssige pH-kontroller og et monteret dæksel på runde modeller holder vandet rent.
+      description: 'Standard 32/38 mm filterpumpeporte, regelmæssige pH-kontroller og et dæksel - inkluderet på rektangulære modeller, valgfrit på runde modeller - holder vandet rent.'
       icon: tabler:droplet
     - title: Rengør, dræn og opbevar
       description: Dræn, tør, rul sammen og pak poolen i opbevaringstasken til vinteren. Ingen permanent installation at vedligeholde.
       icon: tabler:package
     - title: Sikkerhed først
-      description: Børn skal til enhver tid være aktivt under opsyn af en voksen. Følg manualen, lokale regler og vejledning om sikker brug.
+      description: 'Design af boligpool med reference til EN 16582-1 og ASTM F2666 (designreferencer, ikke certificeringer) — modelspecifik overensstemmelse bekræftes pr. målmarked, og sikkerhedsoplysningerne leveres sammen med produktdokumentationen. Konstant voksenopsyn er altid påkrævet.'
       icon: tabler:shield-check
 steps:
   title: Fra kasse til baghave
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hvad er inkluderet i poolen?
-      description: Hver Inflatable Pool Factory pool inkluderer en elektrisk luftpumpe, et reparationssæt og en opbevaringstaske. Runde modeller har et valgfrit monteret dæksel.
+      description: 'Hver oppustelige poolfabrikspool inkluderer en elektrisk luftpumpe, et reparationssæt og en opbevaringstaske. Rektangulære modeller inkluderer også et fuldt dækkende dæksel; runde modeller tilbyder et monteret betræk som ekstraudstyr.'
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgængelige?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Hvordan holder jeg vandet rent?
-      description: Brug en filterpumpe, hvor den er monteret, skum affald, kontroller pH, og dæk poolen til, når den ikke er i brug. Hvor længe vandet varer afhænger af poolens størrelse, brug og filtrering - test regelmæssigt i stedet for at stole på en fast tidsplan.
+      description: 'Standard 32/38 mm filterpumpeporte, regelmæssige pH-kontroller og et dæksel - inkluderet på rektangulære modeller, valgfrit på runde modeller - holder vandet rent.'
       icon: tabler:droplet
       category: all
 cta:

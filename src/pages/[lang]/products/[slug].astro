@@ -153,8 +153,8 @@ const specRows = product.specs ?? [];
 const productCompliance = getProductCompliance(product.category);
 
 // ProductGroup (schema.org): real series → factory-size structure from the catalog.
-// Variants carry only verified facts (item number, size, packed weight); no
-// per-variant offers — the group-level Offer is the only published price.
+// Variants carry verified catalog facts (item number, size, packed weight);
+// retail-priced variants additionally carry a per-variant Offer (P1-7).
 const SERIES_BY_SLUG: Record<string, string> = {
   'round-blue-drop-stitch-pool': 'round',
   'rectangular-drop-stitch-pool': 'rect-square',
@@ -162,15 +162,55 @@ const SERIES_BY_SLUG: Record<string, string> = {
   'hot-tub-square-rect': 'hot-tub-square-rect',
 };
 const catalogSeries = poolSeries.find((s) => s.id === SERIES_BY_SLUG[product.slug]);
+
+// P1-7: schema.org variant naming — the round series variants must match the
+// published product name ("Round Drop Stitch Pool Ø …"), not the legacy
+// "Classic Round Pool" collection label.
+const VARIANT_NAME_BY_SERIES: Record<string, string> = { round: 'Round Drop Stitch Pool' };
+const variantSeriesName = VARIANT_NAME_BY_SERIES[SERIES_BY_SLUG[product.slug]] ?? catalogSeries?.name ?? '';
+
+// P1-7: the round page sells two colorways of the S2005 size (blue + grey) at
+// the same retail price — declare color on every round variant, give the
+// priced S2005 a per-variant Offer, and expose the grey S2005 checkout SKU as
+// an extra variant.
+const isRoundColorwayPage = product.slug === 'round-blue-drop-stitch-pool';
+const roundVariantOffer = product.price?.amount
+  ? {
+      '@type': 'Offer',
+      availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+      businessFunction: 'https://schema.org/Sell',
+      url: String(url || ''),
+      price: product.price.amount,
+      priceCurrency: product.price.currency || 'USD',
+    }
+  : undefined;
+const greyColorwayVariant =
+  isRoundColorwayPage && roundVariantOffer
+    ? {
+        '@type': 'Product',
+        '@id': `${url}#item-S2005-grey`,
+        sku: 'IPF-POOL-RND-GREY',
+        name: 'Round Drop Stitch Pool Ø 2 × 0.5 m',
+        size: 'Ø 2 × 0.5 m',
+        color: 'Grey',
+        weight: '18.4 kg',
+        offers: roundVariantOffer,
+      }
+    : undefined;
 const hasVariant = catalogSeries
-  ? catalogSeries.items.map((it) => ({
-      '@type': 'Product',
-      '@id': `${url}#item-${it.item}`,
-      sku: it.item,
-      name: `${catalogSeries.name} ${it.size} m`,
-      size: `${it.size} m`,
-      ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
-    }))
+  ? [
+      ...catalogSeries.items.map((it) => ({
+        '@type': 'Product',
+        '@id': `${url}#item-${it.item}`,
+        sku: it.item,
+        name: `${variantSeriesName} ${it.size} m`,
+        size: `${it.size} m`,
+        ...(isRoundColorwayPage ? { color: 'Blue' } : {}),
+        ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
+        ...(isRoundColorwayPage && it.item === 'S2005' && roundVariantOffer ? { offers: roundVariantOffer } : {}),
+      })),
+      ...(greyColorwayVariant ? [greyColorwayVariant] : []),
+    ]
   : undefined;
 ---
 
@@ -209,20 +249,10 @@ const hasVariant = catalogSeries
                 }
               : {}),
           }
-        : {
-            // Wholesale-only page (no checkout SKU): publish the FOB floor price
-            // as AggregateOffer lowPrice — never as an exact retail price.
-            '@type': 'AggregateOffer',
-            availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
-            businessFunction: 'https://schema.org/Sell',
-            url: String(url || ''),
-            ...(product.price?.amount
-              ? {
-                  lowPrice: product.price.amount,
-                  priceCurrency: product.price.currency || 'USD',
-                }
-              : {}),
-          },
+        : // Wholesale-only page (no checkout SKU) — P1-6 option A: emit no
+          // offers at all. The FOB floor price is quotation material and must
+          // not surface in search results as a retail price.
+          undefined,
       additionalProperty: [
         ...(product.ai_specs?.length || rec?.ai_specs?.length
           ? [{ '@type': 'PropertyValue', name: 'Length', value: product.ai_specs?.length || rec?.ai_specs?.length }]
@@ -258,7 +288,9 @@ const hasVariant = catalogSeries
       ...(hasVariant
         ? {
             productGroupId: product.sku || catalogSeries?.id,
-            variesBy: ['https://schema.org/size'],
+            variesBy: isRoundColorwayPage
+              ? ['https://schema.org/size', 'https://schema.org/color']
+              : ['https://schema.org/size'],
             hasVariant,
           }
         : {}),
@@ -769,7 +801,7 @@ const hasVariant = catalogSeries
   }
 
   {/* Measured material results (P1-1) */}
-  <MaterialTestEvidence />
+  <MaterialTestEvidence isTestedModel={product.slug === 'rectangular-drop-stitch-pool'} lang={lang} />
 
   {/* Shape-specific engineering notes (parity with the EN product page) */}
   {
@@ -814,7 +846,7 @@ const hasVariant = catalogSeries
   }
 
   {/* Pressure ladder (P1-2) */}
-  <PressureSafety />
+  <PressureSafety lang={lang} />
 
   {/* Compliance & Documentation */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
@@ -823,13 +855,13 @@ const hasVariant = catalogSeries
         >{t('product.compliance') || 'Compliance'}</span
       >
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-        Compliance & Documentation
+        {t('product.certifications') || 'Compliance & Documentation'}
       </h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-700 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Documentation</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('product.certs') || 'Documentation'}</h3>
           </div>
           <div class="space-y-2">
             {
@@ -840,7 +872,9 @@ const hasVariant = catalogSeries
                     <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
                     {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
                     {c.body && (
-                      <span class="text-xs text-gray-500 dark:text-slate-500 block">Provided by {c.body}</span>
+                      <span class="text-xs text-gray-500 dark:text-slate-500 block">
+                        {t('product.certifiedBy') || 'Provided by'} {c.body}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -851,7 +885,9 @@ const hasVariant = catalogSeries
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-700 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Material Documentation</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.materialDocumentation') || 'Material Documentation'}
+            </h3>
           </div>
           <div class="space-y-2">
             {
@@ -915,7 +951,10 @@ const hasVariant = catalogSeries
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.comparedWith')} {product.categoryLabel || t('product.pageTitle')}
+            {t('product.comparedWith')}{' '}
+            {product.category === 'pool'
+              ? t('product.categoryPool') || product.categoryLabel || t('product.pageTitle')
+              : product.categoryLabel || t('product.pageTitle')}
           </h2>
           <div class="grid md:grid-cols-3 gap-4">
             {related.map((p) => (

@@ -51,10 +51,10 @@ features:
       description: 'Doppellagiges PVC-Drop-Stitch-Gewebe, das so konstruiert ist, dass es eine ganze Saison lang im Familienbereich stichfest und UV-Strahlung ausgesetzt ist.'
       icon: tabler:shield
     - title: Komplettpaket
-      description: Jeder Pool wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert. Passende Abdeckungen für runde Modelle erhältlich.
+      description: 'Jeder Pool wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert. Rechteckige Modelle verfügen über eine vollflächige Abdeckung; runde Modelle bieten optional eine passgenaue Abdeckung.'
       icon: tabler:box
     - title: Sicherheitsbewusstes Design
-      description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 – modellspezifische Sicherheitsinformationen finden Sie in der Produktdokumentation. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
+      description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 (Designreferenzen, keine Zertifizierungen) – modellspezifische Konformität wird pro Zielmarkt bestätigt und Sicherheitsinformationen werden mit der Produktdokumentation geliefert. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool-Ideen
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Auspacken und mit der mitgelieferten Pumpe in 5–15 Minuten aufpumpen, dann mit einem Gartenschlauch füllen – die Füllzeit variiert je nach Poolgröße und Wasserversorgung.'
       icon: tabler:rocket
     - title: Einfache Wasserpflege
-      description: Standardmäßige 32/38-mm-Filterpumpenanschlüsse, regelmäßige pH-Kontrollen und eine passende Abdeckung bei runden Modellen halten das Wasser sauber.
+      description: 'Standardmäßige 32/38-mm-Filterpumpenanschlüsse, regelmäßige pH-Prüfungen und eine Abdeckung – bei rechteckigen Modellen im Lieferumfang enthalten, bei runden Modellen optional – halten das Wasser sauber.'
       icon: tabler:droplet
     - title: Reinigen, abtropfen lassen und aufbewahren
       description: Lassen Sie den Pool abtropfen, trocknen Sie ihn, rollen Sie ihn auf und packen Sie ihn für den Winter in die Aufbewahrungstasche. Keine permanente Installation erforderlich.
       icon: tabler:package
     - title: Sicherheit geht vor
-      description: Kinder müssen jederzeit aktiv von einem Erwachsenen beaufsichtigt werden. Befolgen Sie das Handbuch, die örtlichen Vorschriften und die Hinweise zur sicheren Verwendung.
+      description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 (Designreferenzen, keine Zertifizierungen) – modellspezifische Konformität wird pro Zielmarkt bestätigt und Sicherheitsinformationen werden mit der Produktdokumentation geliefert. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
       icon: tabler:shield-check
 steps:
   title: Von der Kiste in den Hinterhof
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Was ist im Pool enthalten?
-      description: Zu jedem Inflatable Pool Factory-Pool gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Runde Modelle verfügen optional über eine passgenaue Abdeckung.
+      description: 'Zu jedem aufblasbaren Pool Factory-Pool gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Rechteckige Modelle verfügen außerdem über eine vollflächige Abdeckung; runde Modelle bieten optional eine passgenaue Abdeckung.'
       icon: tabler:box
       category: all
     - title: Welche Größen sind verfügbar?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Wie halte ich das Wasser sauber?
-      description: Verwenden Sie ggf. eine Filterpumpe, entfernen Sie Schmutz, überprüfen Sie den pH-Wert und decken Sie den Pool ab, wenn er nicht verwendet wird. Wie lange das Wasser reicht, hängt von der Poolgröße, der Nutzung und der Filterung ab – testen Sie es regelmäßig, anstatt sich auf einen festen Zeitplan zu verlassen.
+      description: 'Standardmäßige 32/38-mm-Filterpumpenanschlüsse, regelmäßige pH-Prüfungen und eine Abdeckung – bei rechteckigen Modellen im Lieferumfang enthalten, bei runden Modellen optional – halten das Wasser sauber.'
       icon: tabler:droplet
       category: all
 cta:

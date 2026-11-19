@@ -1,11 +1,15 @@
 ---
 import Icon from '~/components/ui/Icon.astro';
 import { productColorways } from '~/data/product-colorways';
+import { productRetailSizes } from '~/data/product-variants';
 import { localizeHref } from '~/i18n/routing';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 
 /**
  * P1-5: colorway cross-sell block for merged product pages. Renders nothing
- * when the slug has no registered colorway.
+ * when the slug has no registered colorway. P1-10: fixed chrome strings are
+ * translated via the `product.*` i18n keys; colorway data (names, notes)
+ * stays EN with the MDX body fallback.
  */
 interface Props {
   slug: string;
@@ -13,7 +17,25 @@ interface Props {
 }
 
 const { slug, lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const tf = (key: string, fallback: string) => t(key) || fallback;
 const colorway = productColorways[slug];
+
+// P1-8: the purchasable colorway size and its retail price come from the
+// shared retail size data (the same single source as the size selector); the
+// buy form posts an explicit `item` so checkout never falls back to the
+// default size silently.
+const retailSizes = productRetailSizes[slug];
+const buyEntry = retailSizes?.sizes.find((s) => s.item === colorway?.buyItem && typeof s.priceUsd === 'number');
+const buyPriceUsd = buyEntry?.priceUsd;
+
+const buyLabel =
+  buyPriceUsd !== undefined && colorway
+    ? tf('product.buyColorwayTemplate', 'Buy {color} {size} — {price}')
+        .replace('{color}', colorway.colorName)
+        .replace('{size}', colorway.buySize)
+        .replace('{price}', `$${buyPriceUsd}`)
+    : '';
 ---
 
 {
@@ -21,10 +43,10 @@ const colorway = productColorways[slug];
     <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="colorway">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
         <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
-          Colorway
+          {tf('product.colorway', 'Colorway')}
         </span>
         <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
-          Also available in {colorway.colorName}
+          {tf('product.alsoAvailableIn', 'Also available in')} {colorway.colorName}
         </h2>
         <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-start">
           <div class="grid grid-cols-3 gap-3">
@@ -41,31 +63,38 @@ const colorway = productColorways[slug];
           <div>
             <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{colorway.note}</p>
             <div class="mt-4 flex items-baseline gap-3 flex-wrap">
-              <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">${colorway.priceUsd}</span>
-              <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">
-                Retail price
-              </span>
-              <span class="text-sm font-medium text-green-700">Available to order</span>
+              {buyPriceUsd !== undefined && (
+                <>
+                  <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">${buyPriceUsd}</span>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500">
+                    {tf('product.retailPrice', 'Retail price')}
+                  </span>
+                  <span class="text-sm font-medium text-green-700">{tf('product.inStock', 'Available to order')}</span>
+                </>
+              )}
             </div>
             <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{colorway.priceNote}</p>
             <div class="mt-5 flex flex-col sm:flex-row gap-3">
-              <form method="POST" action="/api/checkout" class="flex-1">
-                <input type="hidden" name="sku" value={colorway.sku} />
-                <input type="hidden" name="lang" value={lang} />
-                <button
-                  type="submit"
-                  class="inline-flex w-full items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
-                >
-                  <Icon name="tabler:shopping-cart" class="w-5 h-5" />
-                  Buy the {colorway.colorName} version
-                </button>
-              </form>
+              {buyPriceUsd !== undefined && (
+                <form method="POST" action="/api/checkout" class="flex-1">
+                  <input type="hidden" name="sku" value={colorway.sku} />
+                  <input type="hidden" name="item" value={colorway.buyItem} />
+                  <input type="hidden" name="lang" value={lang} />
+                  <button
+                    type="submit"
+                    class="inline-flex w-full items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+                  >
+                    <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+                    {buyLabel}
+                  </button>
+                </form>
+              )}
               <a
                 href={localizeHref(`/contact?product=${encodeURIComponent(colorway.name)}`, lang)}
                 class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
               >
                 <Icon name="tabler:message-circle" class="w-5 h-5" />
-                Ask about this finish
+                {tf('product.askAboutFinish', 'Ask about this finish')}
               </a>
             </div>
           </div>

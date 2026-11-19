@@ -51,10 +51,10 @@ features:
       description: 'Dvoslojna tkanina PVC drop stitch, zasnovana tako, da je odporna na vbode in izpostavljenost UV skozi celotno sezono družinske uporabe.'
       icon: tabler:shield
     - title: Celoten paket
-      description: Vsak bazen ima električno zračno črpalko, komplet za popravilo in torbo za shranjevanje. Pritrjeni pokrovi so na voljo za okrogle modele.
+      description: 'Vsak bazen ima električno zračno črpalko, komplet za popravilo in torbo za shranjevanje. Pravokotni modeli vključujejo prevleko s popolno prekrivnostjo; okrogli modeli ponujajo prilegajočo prevleko kot možnost.'
       icon: tabler:box
     - title: Varnostno ozaveščena zasnova
-      description: 'Zasnova stanovanjskega bazena, ki se sklicuje na EN 16582-1 in ASTM F2666 — varnostne informacije, specifične za model, so na voljo v dokumentaciji izdelka. Vedno je potreben stalen nadzor odrasle osebe.'
+      description: 'Zasnova stanovanjskega bazena s sklicevanjem na standarda EN 16582-1 in ASTM F2666 (reference za načrtovanje, ne certifikati) — skladnost specifičnega modela je potrjena za ciljni trg, varnostne informacije pa so priložene dokumentaciji izdelka. Vedno je potreben stalen nadzor odrasle osebe.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideje za bazene
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Odstranite škatlo in napihnite s priloženo črpalko v 5–15 minutah, nato napolnite z vrtno cevjo — čas polnjenja je odvisen od velikosti bazena in količine vode.'
       icon: tabler:rocket
     - title: Enostavna nega vode
-      description: Standardni 32/38 mm priključki za filtrirne črpalke, redno preverjanje pH in nameščen pokrov na okroglih modelih ohranjajo vodo čisto.
+      description: 'Standardni 32/38 mm priključki za filtrirne črpalke, redno preverjanje pH in pokrov — priložen pri pravokotnih modelih, neobvezen pri okroglih modelih — ohranjajo vodo čisto.'
       icon: tabler:droplet
     - title: Očistite, odcedite in shranite
       description: Odcedite, posušite, zvijte in pospravite bazen v vrečo za zimo. Ni stalne namestitve za vzdrževanje.
       icon: tabler:package
     - title: Varnost na prvem mestu
-      description: Otroci morajo biti ves čas pod aktivnim nadzorom odrasle osebe. Upoštevajte priročnik, lokalne predpise in navodila za varno uporabo.
+      description: 'Zasnova stanovanjskega bazena s sklicevanjem na standarda EN 16582-1 in ASTM F2666 (reference za načrtovanje, ne certifikati) — skladnost specifičnega modela je potrjena za ciljni trg, varnostne informacije pa so priložene dokumentaciji izdelka. Vedno je potreben stalen nadzor odrasle osebe.'
       icon: tabler:shield-check
 steps:
   title: Od škatle do dvorišča
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kaj je vključeno v bazen?
-      description: Vsak bazen Inflatable Pool Factory vključuje električno zračno črpalko, komplet za popravilo in torbo za shranjevanje. Okrogli modeli imajo opcijsko nameščen pokrov.
+      description: 'Vsak bazen Inflatable Pool Factory vključuje električno zračno črpalko, komplet za popravilo in torbo za shranjevanje. Pravokotni modeli vključujejo tudi prevleko s popolno prekrivnostjo; okrogli modeli ponujajo prilegajočo prevleko kot možnost.'
       icon: tabler:box
       category: all
     - title: Katere velikosti so na voljo?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Kako ohranim vodo čisto?
-      description: Uporabite filtrirno črpalko, kjer je nameščena, posnemite ostanke, preverite pH in pokrijte bazen, ko ni v uporabi. Dolgotrajnost vode je odvisna od velikosti bazena, uporabe in filtracije – redno testirajte, namesto da se zanašate na določen urnik.
+      description: 'Standardni 32/38 mm priključki za filtrirne črpalke, redno preverjanje pH in pokrov — priložen pri pravokotnih modelih, neobvezen pri okroglih modelih — ohranjajo vodo čisto.'
       icon: tabler:droplet
       category: all
 cta:

@@ -51,10 +51,10 @@ features:
       description: 'Divslāņu PVC drop stitch audums, kas izstrādāts tā, lai tas izturētu caurduršanu un UV iedarbību visas ģimenes lietošanas laikā.'
       icon: tabler:shield
     - title: Pilnīga pakete
-      description: Katrs baseins tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas maisiņu. Apaļajiem modeļiem pieejami iebūvēti vāki.
+      description: 'Katrs baseins tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas maisiņu. Taisnstūra modeļos ir iekļauts pilna pārklājuma vāks; apaļie modeļi kā opciju piedāvā piestiprinātu pārsegu.'
       icon: tabler:box
     - title: Drošību apzinīgs dizains
-      description: 'Dzīvojamo baseinu dizains ar atsauci uz EN 16582-1 un ASTM F2666 — modeļa specifiskā drošības informācija ir sniegta produkta dokumentācijā. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
+      description: 'Dzīvojamā baseina dizains ar atsauci uz EN 16582-1 un ASTM F2666 (projekta atsauces, nevis sertifikāti) — modeļa atbilstība tiek apstiprināta katram mērķa tirgum, un drošības informācija tiek piegādāta kopā ar produkta dokumentāciju. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseina idejas
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Izņemiet kastīti un piepūšiet ar komplektā iekļauto sūkni 5–15 minūtēs, pēc tam piepildiet ar dārza šļūteni — uzpildes laiks mainās atkarībā no baseina izmēra un ūdens padeves.'
       icon: tabler:rocket
     - title: Vienkārša ūdens kopšana
-      description: Standarta 32/38 mm filtra sūkņa pieslēgvietas, regulāras pH pārbaudes un piestiprināts vāks apaļajiem modeļiem nodrošina ūdens tīrību.
+      description: 'Standarta 32/38 mm filtra sūkņa pieslēgvietas, regulāras pH pārbaudes un pārsegs — iekļauts taisnstūrveida modeļos, pēc izvēles apaļajiem modeļiem — uztur ūdeni tīru.'
       icon: tabler:droplet
     - title: Notīriet, iztukšojiet un uzglabājiet
       description: Iztukšojiet, nosusiniet, sarullējiet un iesaiņojiet baseinu tā uzglabāšanas maisiņā ziemai. Nav pastāvīgas instalācijas, kas jāuztur.
       icon: tabler:package
     - title: Drošība pirmajā vietā
-      description: Bērni visu laiku ir aktīvi jāuzrauga pieaugušajam. Ievērojiet rokasgrāmatu, vietējos noteikumus un drošas lietošanas norādījumus.
+      description: 'Dzīvojamā baseina dizains ar atsauci uz EN 16582-1 un ASTM F2666 (projekta atsauces, nevis sertifikāti) — modeļa atbilstība tiek apstiprināta katram mērķa tirgum, un drošības informācija tiek piegādāta kopā ar produkta dokumentāciju. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
       icon: tabler:shield-check
 steps:
   title: No kastes līdz pagalmam
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas ir iekļauts baseinā?
-      description: Katrā Inflatable Pool Factory baseinā ir elektriskais gaisa sūknis, remonta komplekts un uzglabāšanas soma. Apaļajiem modeļiem pēc izvēles ir uzstādīts vāks.
+      description: 'Katrā piepūšamo baseinu rūpnīcas baseinā ir elektriskais gaisa sūknis, remonta komplekts un uzglabāšanas soma. Taisnstūrveida modeļi ietver arī pilna pārklājuma vāku; apaļie modeļi kā opciju piedāvā piestiprinātu pārsegu.'
       icon: tabler:box
       category: all
     - title: Kādi izmēri ir pieejami?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Kā es varu uzturēt ūdeni tīru?
-      description: Izmantojiet filtra sūkni, ja tas ir uzstādīts, noslaukiet gružus, pārbaudiet pH un pārklājiet baseinu, kad to neizmantojat. Tas, cik ilgi ūdens pietiks, ir atkarīgs no baseina lieluma, lietojuma un filtrēšanas — regulāri pārbaudiet, nevis paļaujieties uz noteiktu grafiku.
+      description: 'Standarta 32/38 mm filtra sūkņa pieslēgvietas, regulāras pH pārbaudes un pārsegs — iekļauts taisnstūrveida modeļos, pēc izvēles apaļajiem modeļiem — uztur ūdeni tīru.'
       icon: tabler:droplet
       category: all
 cta:

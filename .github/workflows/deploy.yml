@@ -54,6 +54,7 @@ jobs:
           npm run test:ai
           npm run test:pdf
           npm run test:oem
+          npm run test:prices
           npm run test:sample
       - run: npm run build
         env:

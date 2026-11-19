@@ -51,10 +51,10 @@ features:
       description: 'Tecido PVC drop stitch de camada dupla, projetado para resistir a perfurações e exposição ao UV durante uma temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Pacote Completo
-      description: Cada piscina é enviada com uma bomba de ar elétrica, kit de reparo e bolsa de armazenamento. Capas equipadas disponíveis para modelos redondos.
+      description: 'Cada piscina é enviada com uma bomba de ar elétrica, kit de reparo e bolsa de armazenamento. Os modelos retangulares incluem capa de cobertura total; os modelos redondos oferecem uma capa ajustada como opção.'
       icon: tabler:box
     - title: Design consciente da segurança
-      description: 'Projeto de piscina residencial com referência a EN 16582-1 e ASTM F2666 — informações de segurança específicas do modelo são fornecidas na documentação do produto. A supervisão constante de um adulto é sempre necessária.'
+      description: 'Projeto de piscina residencial com referência à EN 16582-1 e ASTM F2666 (referências de projeto, não certificações) — a conformidade específica do modelo é confirmada por mercado-alvo e as informações de segurança são enviadas com a documentação do produto. A supervisão constante de um adulto é sempre necessária.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideias para piscinas
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Desembale e encha com a bomba incluída em 5 a 15 minutos e, em seguida, encha com uma mangueira de jardim – o tempo de enchimento varia de acordo com o tamanho da piscina e o abastecimento de água.'
       icon: tabler:rocket
     - title: Cuidados simples com a água
-      description: As portas padrão da bomba de filtro de 32/38 mm, verificações regulares de pH e uma tampa ajustada nos modelos redondos mantêm a água limpa.
+      description: 'Portas de filtro-bomba padrão de 32/38 mm, verificações regulares de pH e uma tampa (incluída em modelos retangulares, opcional em modelos redondos) mantêm a água limpa.'
       icon: tabler:droplet
     - title: Limpar, drenar e armazenar
       description: Escorra, seque, enrole e coloque a piscina em seu saco de armazenamento para o inverno. Nenhuma instalação permanente para manter.
       icon: tabler:package
     - title: Segurança em primeiro lugar
-      description: As crianças devem ser supervisionadas ativamente por um adulto em todos os momentos. Siga o manual, as regras locais e as orientações de uso seguro.
+      description: 'Projeto de piscina residencial com referência à EN 16582-1 e ASTM F2666 (referências de projeto, não certificações) — a conformidade específica do modelo é confirmada por mercado-alvo e as informações de segurança são enviadas com a documentação do produto. A supervisão constante de um adulto é sempre necessária.'
       icon: tabler:shield-check
 steps:
   title: Da caixa ao quintal
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: O que está incluído na piscina?
-      description: Cada piscina Inflatable Pool Factory inclui uma bomba de ar elétrica, um kit de reparo e uma bolsa de armazenamento. Os modelos redondos possuem uma tampa opcional.
+      description: 'Cada piscina inflável da fábrica de piscinas inclui uma bomba de ar elétrica, um kit de reparo e uma bolsa de armazenamento. Os modelos retangulares também incluem capa de cobertura total; os modelos redondos oferecem uma capa ajustada como opção.'
       icon: tabler:box
       category: all
     - title: Quais tamanhos estão disponíveis?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Como faço para manter a água limpa?
-      description: Use uma bomba de filtro quando instalada, retire os detritos, verifique o pH e cubra a piscina quando não estiver em uso. A duração da água depende do tamanho da piscina, do uso e da filtração – teste regularmente em vez de depender de um cronograma fixo.
+      description: 'Portas de filtro-bomba padrão de 32/38 mm, verificações regulares de pH e uma tampa (incluída em modelos retangulares, opcional em modelos redondos) mantêm a água limpa.'
       icon: tabler:droplet
       category: all
 cta:

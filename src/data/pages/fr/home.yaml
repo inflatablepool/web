@@ -51,10 +51,10 @@ features:
       description: 'Tissu PVC drop stitch double couche, conçu pour résister aux perforations et à l''exposition au UV pendant une saison complète d''utilisation familiale.'
       icon: tabler:shield
     - title: Forfait complet
-      description: Chaque piscine est livrée avec une pompe à air électrique, un kit de réparation et un sac de rangement. Housses ajustées disponibles pour les modèles ronds.
+      description: 'Chaque piscine est livrée avec une pompe à air électrique, un kit de réparation et un sac de rangement. Les modèles rectangulaires comprennent une couverture complète ; les modèles ronds proposent un couvercle ajusté en option.'
       icon: tabler:box
     - title: Conception soucieuse de la sécurité
-      description: 'Conception de piscine résidentielle faisant référence aux normes EN 16582-1 et ASTM F2666 — des informations de sécurité spécifiques au modèle sont fournies dans la documentation du produit. La surveillance constante d''un adulte est toujours requise.'
+      description: 'Conception de piscine résidentielle en référence aux normes EN 16582-1 et ASTM F2666 (références de conception, pas certifications) — la conformité spécifique au modèle est confirmée par marché cible et les informations de sécurité sont livrées avec la documentation du produit. La surveillance constante d''un adulte est toujours requise.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idées de piscine
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Déballez et gonflez avec la pompe incluse en 5 à 15 minutes, puis remplissez avec un tuyau d''arrosage — le temps de remplissage varie en fonction de la taille de la piscine et de l''approvisionnement en eau.'
       icon: tabler:rocket
     - title: Entretien simple de l'eau
-      description: Des ports de pompe-filtre standard de 32/38 mm, des contrôles réguliers du pH et un couvercle ajusté sur les modèles ronds maintiennent l'eau propre.
+      description: 'Des ports de pompe-filtre standard de 32/38 mm, des contrôles réguliers du pH et un couvercle (inclus sur les modèles rectangulaires, en option sur les modèles ronds) maintiennent l''eau propre.'
       icon: tabler:droplet
     - title: Nettoyer, égoutter et ranger
       description: Égoutter, sécher, enrouler et ranger la piscine dans son sac de rangement pour l'hiver. Aucune installation permanente à entretenir.
       icon: tabler:package
     - title: La sécurité avant tout
-      description: Les enfants doivent être activement surveillés par un adulte à tout moment. Suivez le manuel, les règles locales et les conseils d'utilisation en toute sécurité.
+      description: 'Conception de piscine résidentielle en référence aux normes EN 16582-1 et ASTM F2666 (références de conception, pas certifications) — la conformité spécifique au modèle est confirmée par marché cible et les informations de sécurité sont livrées avec la documentation du produit. La surveillance constante d''un adulte est toujours requise.'
       icon: tabler:shield-check
 steps:
   title: De la boîte à la cour
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Qu'est-ce qui est inclus avec la piscine ?
-      description: Chaque piscine Inflatable Pool Factory comprend une pompe à air électrique, un kit de réparation et un sac de rangement. Les modèles ronds ont un couvercle ajusté en option.
+      description: 'Chaque piscine Gonflable Pool Factory comprend une pompe à air électrique, un kit de réparation et un sac de rangement. Les modèles rectangulaires comprennent également une couverture complète ; les modèles ronds proposent un couvercle ajusté en option.'
       icon: tabler:box
       category: all
     - title: Quelles tailles sont disponibles ?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Comment garder l’eau propre ?
-      description: "Utilisez une pompe à filtre là où elle est installée, écumez les débris, vérifiez le pH et couvrez la piscine lorsqu'elle n'est pas utilisée. La durée de vie de l'eau dépend de la taille de la piscine, de son utilisation et de sa filtration : testez-la régulièrement plutôt que de vous fier à un calendrier fixe."
+      description: 'Des ports de pompe-filtre standard de 32/38 mm, des contrôles réguliers du pH et un couvercle (inclus sur les modèles rectangulaires, en option sur les modèles ronds) maintiennent l''eau propre.'
       icon: tabler:droplet
       category: all
 cta:

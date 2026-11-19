@@ -51,10 +51,10 @@ features:
       description: 'Tejido PVC drop stitch de doble capa, diseñado para resistir pinchazos y exposición UV durante una temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Paquete completo
-      description: Cada piscina se envía con una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Fundas ajustadas disponibles para modelos redondos.
+      description: 'Cada piscina se envía con una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos rectangulares incluyen una funda de cobertura total; Los modelos redondos ofrecen una cubierta integrada como opción.'
       icon: tabler:box
     - title: Diseño consciente de la seguridad
-      description: 'Diseño de piscina residencial que hace referencia a EN 16582-1 y ASTM F2666: la información de seguridad específica del modelo se proporciona en la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
+      description: 'Diseño de piscina residencial con referencia a EN 16582-1 y ASTM F2666 (referencias de diseño, no certificaciones): la conformidad específica del modelo se confirma por mercado objetivo y la información de seguridad se envía con la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideas para la piscina
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Desembale e infle con la bomba incluida en 5 a 15 minutos, luego llénelo con una manguera de jardín; el tiempo de llenado varía según el tamaño de la piscina y el suministro de agua.'
       icon: tabler:rocket
     - title: Cuidado sencillo del agua
-      description: Los puertos de bomba de filtrado estándar de 32/38 mm, los controles periódicos del pH y una cubierta ajustada en los modelos redondos mantienen el agua limpia.
+      description: 'Los puertos estándar de la bomba de filtrado de 32/38 mm, los controles periódicos del pH y una cubierta (incluida en los modelos rectangulares, opcional en los modelos redondos) mantienen el agua limpia.'
       icon: tabler:droplet
     - title: Limpiar, drenar y almacenar
       description: Escurre, seca, enrolla y guarda la piscina en su bolsa de almacenamiento para el invierno. No hay instalación permanente que mantener.
       icon: tabler:package
     - title: Seguridad ante todo
-      description: Los niños deben estar supervisados ​​activamente por un adulto en todo momento. Siga el manual, las normas locales y las instrucciones de uso seguro.
+      description: 'Diseño de piscina residencial con referencia a EN 16582-1 y ASTM F2666 (referencias de diseño, no certificaciones): la conformidad específica del modelo se confirma por mercado objetivo y la información de seguridad se envía con la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
       icon: tabler:shield-check
 steps:
   title: De la caja al patio trasero
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: ¿Qué incluye la piscina?
-      description: Cada piscina Inflatable Pool Factory incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos redondos tienen una cubierta incorporada opcional.
+      description: 'Cada piscina de Swimming Pool Factory incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos rectangulares también incluyen una funda de cobertura total; Los modelos redondos ofrecen una cubierta integrada como opción.'
       icon: tabler:box
       category: all
     - title: ¿Qué tallas hay disponibles?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: ¿Cómo mantengo el agua limpia?
-      description: Utilice una bomba de filtrado, si está instalada, retire los residuos, compruebe el pH y cubra la piscina cuando no esté en uso. La duración del agua depende del tamaño, el uso y la filtración de la piscina; pruébela periódicamente en lugar de depender de un horario fijo.
+      description: 'Los puertos estándar de la bomba de filtrado de 32/38 mm, los controles periódicos del pH y una cubierta (incluida en los modelos rectangulares, opcional en los modelos redondos) mantienen el agua limpia.'
       icon: tabler:droplet
       category: all
 cta:

@@ -51,10 +51,10 @@ features:
       description: 'Țesătură cu două straturi PVC drop stitch, proiectată pentru a rezista la perforare și la expunerea la UV pe parcursul unui sezon complet de utilizare în familie.'
       icon: tabler:shield
     - title: Pachet complet
-      description: Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Huse montate disponibile pentru modelele rotunde.
+      description: 'Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele dreptunghiulare includ o husă cu acoperire completă; modelele rotunde oferă opțiune o husă montată.'
       icon: tabler:box
     - title: Design conștient de siguranță
-      description: 'Proiectarea piscinei rezidențiale care face referire la EN 16582-1 și ASTM F2666 — informațiile de siguranță specifice modelului sunt furnizate în documentația produsului. Este întotdeauna necesară supravegherea constantă a unui adult.'
+      description: 'Proiectarea piscinei rezidențiale cu referire la EN 16582-1 și ASTM F2666 (referințe de proiectare, nu certificări) — conformitatea specifică modelului este confirmată pe piața țintă, iar informațiile de siguranță sunt livrate împreună cu documentația produsului. Este întotdeauna necesară supravegherea constantă a unui adult.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idei de piscină
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Despachetați și umflați cu pompa inclusă în 5-15 minute, apoi umpleți cu un furtun de grădină - timpul de umplere variază în funcție de dimensiunea piscinei și de alimentarea cu apă.'
       icon: tabler:rocket
     - title: Îngrijire simplă a apei
-      description: Porturile standard pentru pompa de filtru de 32/38 mm, verificări regulate ale pH-ului și un capac montat pe modelele rotunde mențin apa curată.
+      description: 'Porturile standard de 32/38 mm pentru pompă de filtru, verificări regulate ale pH-ului și un capac - inclus la modelele dreptunghiulare, opțional la modelele rotunde - păstrează apa curată.'
       icon: tabler:droplet
     - title: Curățați, scurgeți și depozitați
       description: Scurgeți, uscați, rulați și împachetați piscina în geanta de depozitare pentru iarnă. Fără instalație permanentă de întreținut.
       icon: tabler:package
     - title: Siguranța pe primul loc
-      description: Copiii trebuie să fie supravegheați activ de un adult în orice moment. Urmați manualul, regulile locale și îndrumările de utilizare în siguranță.
+      description: 'Proiectarea piscinei rezidențiale cu referire la EN 16582-1 și ASTM F2666 (referințe de proiectare, nu certificări) — conformitatea specifică modelului este confirmată pe piața țintă, iar informațiile de siguranță sunt livrate împreună cu documentația produsului. Este întotdeauna necesară supravegherea constantă a unui adult.'
       icon: tabler:shield-check
 steps:
   title: De la cutie la curte
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ce este inclus cu piscina?
-      description: Fiecare piscină Inflatable Pool Factory include o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele rotunde au o husă montată opțional.
+      description: 'Fiecare piscină Gonflabilă Pool Factory include o pompă electrică de aer, un kit de reparații și un sac de depozitare. Modelele dreptunghiulare includ și o husă cu acoperire completă; modelele rotunde oferă opțiune o husă montată.'
       icon: tabler:box
       category: all
     - title: Ce dimensiuni sunt disponibile?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Cum păstrez apa curată?
-      description: Utilizați o pompă de filtru acolo unde este prevăzută, îndepărtați resturile, verificați pH-ul și acoperiți piscina atunci când nu este utilizată. Cât de mult durează apa depinde de dimensiunea piscinei, de utilizare și de filtrare - testați în mod regulat, mai degrabă decât să vă bazați pe un program fix.
+      description: 'Porturile standard de 32/38 mm pentru pompă de filtru, verificări regulate ale pH-ului și un capac - inclus la modelele dreptunghiulare, opțional la modelele rotunde - păstrează apa curată.'
       icon: tabler:droplet
       category: all
 cta:

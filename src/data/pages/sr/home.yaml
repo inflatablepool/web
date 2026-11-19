@@ -51,10 +51,10 @@ features:
       description: 'Dvoslojni PVC drop stitch tkanina, projektovana da se odupre probojima i UV izloženost kroz celu sezonu porodične upotrebe.'
       icon: tabler:shield
     - title: Kompletan paket
-      description: Svaki bazen se isporučuje sa električnom vazdušnom pumpom, kompletom za popravku i torbom za odlaganje. Dostupni su ugrađeni poklopci za okrugle modele.
+      description: 'Сваки базен се испоручује са електричном ваздушном пумпом, комплетом за поправку и торбом за одлагање. Правоугаони модели укључују поклопац са пуном покривеношћу; округли модели нуде уграђени поклопац као опцију.'
       icon: tabler:box
     - title: Dizajn sa svešću o bezbednosti
-      description: 'Referenca za dizajn stambenog bazena EN 16582-1 i ASTM F2666 — bezbednosne informacije specifične za model su date u dokumentaciji proizvoda. Uvek je potreban stalni nadzor odraslih.'
+      description: 'Дизајн стамбеног базена у складу са ЕН 16582-1 и АСТМ Ф2666 (референце за дизајн, а не сертификати) — усаглашеност специфичног за модел је потврђена по циљном тржишту, а безбедносне информације се испоручују са документацијом производа. Увек је потребан стални надзор одраслих.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideje za bazen
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Otpakujte i naduvajte priloženom pumpom za 5-15 minuta, a zatim napunite baštenskim crevom — vreme punjenja zavisi od veličine bazena i količine vode.'
       icon: tabler:rocket
     - title: Jednostavna nega vode
-      description: Standardni otvori za filter-pumpu od 32/38 mm, redovne pH provere i ugrađeni poklopac na okruglim modelima održavaju vodu čistom.
+      description: 'Стандардни отвори за филтер-пумпу од 32/38 мм, редовне пХ провере и поклопац — укључени на правоугаоним моделима, опционо на округлим моделима — одржавају воду чистом.'
       icon: tabler:droplet
     - title: Očistite, ispraznite i čuvajte
       description: Ocedite, osušite, umotajte i spakujte bazen u vreću za odlaganje za zimu. Nema trajne instalacije za održavanje.
       icon: tabler:package
     - title: Safeti First
-      description: Decu u svakom trenutku mora aktivno nadgledati odrasla osoba. Pridržavajte se priručnika, lokalnih pravila i uputstava za bezbednu upotrebu.
+      description: 'Дизајн стамбеног базена у складу са ЕН 16582-1 и АСТМ Ф2666 (референце за дизајн, а не сертификати) — усаглашеност специфичног за модел је потврђена по циљном тржишту, а безбедносне информације се испоручују са документацијом производа. Увек је потребан стални надзор одраслих.'
       icon: tabler:shield-check
 steps:
   title: Od kutije do dvorišta
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Šta je uključeno u bazen?
-      description: Svaki Inflatable Pool Factory bazen uključuje električnu vazdušnu pumpu, komplet za popravku i torbu za odlaganje. Round models have an optional fitted cover.
+      description: 'Сваки базен фабрике на надувавање укључује електричну ваздушну пумпу, комплет за поправку и торбу за одлагање. Правоугаони модели такође укључују поклопац са пуном покривеношћу; округли модели нуде уграђени поклопац као опцију.'
       icon: tabler:box
       category: all
     - title: Koje veličine su dostupne?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Kako da održavam vodu čistom?
-      description: Koristite filter pumpu gde je ugrađena, skinite ostatke, proverite pH i pokrijte bazen kada se ne koristi. Koliko dugo voda traje zavisi od veličine bazena, upotrebe i filtracije - testirajte redovno umesto da se oslanjate na fiksni raspored.
+      description: 'Стандардни отвори за филтер-пумпу од 32/38 мм, редовне пХ провере и поклопац — укључени на правоугаоним моделима, опционо на округлим моделима — одржавају воду чистом.'
       icon: tabler:droplet
       category: all
 cta:

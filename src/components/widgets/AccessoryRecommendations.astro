@@ -2,12 +2,15 @@
 import Icon from '~/components/ui/Icon.astro';
 import { poolAccessories } from '~/data/pool-catalog';
 import { localizeHref } from '~/i18n/routing';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 
 /**
  * P1-6: "Complete your pool" accessory cross-sell. Recommendations map each
  * product page to catalog accessories (src/data/pool-catalog.ts poolAccessories)
  * by pool type and wall height; prices are the indicative FOB Qingdao reference
  * prices from the quotation sheet.
+ * P1-10: fixed chrome strings are translated via the `product.*` i18n keys;
+ * accessory names/specs stay EN with the MDX body fallback.
  */
 interface Props {
   slug: string;
@@ -15,6 +18,8 @@ interface Props {
 }
 
 const { slug, lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const tf = (key: string, fallback: string) => t(key) || fallback;
 
 const RECOMMENDED_ACCESSORIES: Record<string, string[]> = {
   'rectangular-drop-stitch-pool': ['FS-12C Sand Filter Pump', '4-Step Ladder', 'Inflatable Stairs 1.5 M'],
@@ -37,14 +42,16 @@ const accessories = recommendedNames
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
         <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
-          Accessories
+          {tf('product.accessories', 'Accessories')}
         </span>
         <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
-          Complete your pool
+          {tf('product.completeYourPool', 'Complete your pool')}
         </h2>
         <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-8">
-          Recommended pairings for this pool line: filtration for water care, safe entry matched to the wall height, and
-          power options for setup and season start.
+          {tf(
+            'product.accessoriesIntro',
+            'Recommended pairings for this pool line: filtration for water care, safe entry matched to the wall height, and power options for setup and season start.'
+          )}
         </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {accessories.map((a) => (
@@ -63,7 +70,7 @@ const accessories = recommendedNames
                 <p class="text-xs text-gray-500 dark:text-slate-500">{a.spec}</p>
                 <p class="mt-auto pt-2 text-sm font-semibold text-gray-900 dark:text-slate-100">
                   <span class="text-xs font-medium text-gray-500 dark:text-slate-500 uppercase tracking-wider mr-1.5">
-                    FOB Qingdao
+                    {tf('product.fobQingdao', 'FOB Qingdao')}
                   </span>
                   ${a.fobUsd.toFixed(2)}
                 </p>
@@ -73,15 +80,16 @@ const accessories = recommendedNames
         </div>
         <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
           <p class="text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-2xl">
-            Accessory prices are indicative FOB Qingdao reference prices from the factory quotation sheet. Accessories
-            are quoted per project — compatibility with your pool size and wall height, quantity pricing and packaging
-            are confirmed in the quotation.
+            {tf(
+              'product.accessoriesNote',
+              'Accessory prices are indicative FOB Qingdao reference prices from the factory quotation sheet. Accessories are quoted per project — compatibility with your pool size and wall height, quantity pricing and packaging are confirmed in the quotation.'
+            )}
           </p>
           <a
             href={localizeHref(`/request-quotation?product=${encodeURIComponent(slug)}`, lang)}
             class="inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
-            Quote pool + accessories
+            {tf('product.quotePoolAccessories', 'Quote pool + accessories')}
             <Icon name="tabler:arrow-right" class="w-4 h-4" />
           </a>
         </div>

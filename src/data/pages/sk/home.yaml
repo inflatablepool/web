@@ -51,10 +51,10 @@ features:
       description: 'Dvojvrstvová tkanina PVC drop stitch, navrhnutá tak, aby odolala prepichnutiu a vystaveniu UV počas celej sezóny rodinného používania.'
       icon: tabler:shield
     - title: Kompletný balík
-      description: Každý bazén sa dodáva s elektrickým vzduchovým čerpadlom, súpravou na opravu a úložným vakom. Pre okrúhle modely sú k dispozícii namontované kryty.
+      description: 'Každý bazén sa dodáva s elektrickým vzduchovým čerpadlom, súpravou na opravu a úložným vakom. Obdĺžnikové modely zahŕňajú kryt s úplným pokrytím; okrúhle modely ponúkajú namontovaný kryt ako voliteľnú možnosť.'
       icon: tabler:box
     - title: Bezpečný dizajn
-      description: 'Dizajn obytného bazéna s odkazom na EN 16582-1 a ASTM F2666 – bezpečnostné informácie špecifické pre daný model sú uvedené v dokumentácii k produktu. Vždy je potrebný neustály dozor dospelej osoby.'
+      description: 'Dizajn obytného bazéna s odkazom na EN 16582-1 a ASTM F2666 (odkazy na dizajn, nie certifikácie) – zhoda špecifická pre daný model je potvrdená pre cieľový trh a informácie o bezpečnosti sa dodávajú s dokumentáciou k produktu. Vždy je potrebný neustály dozor dospelej osoby.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Nápady na bazén
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Rozbaľte a nafúknite priloženou pumpou za 5-15 minút, potom naplňte záhradnou hadicou – čas plnenia sa líši v závislosti od veľkosti bazéna a množstva vody.'
       icon: tabler:rocket
     - title: Jednoduchá starostlivosť o vodu
-      description: Štandardné 32/38 mm otvory pre filtračné čerpadlo, pravidelné kontroly pH a namontovaný kryt na okrúhlych modeloch udržujú vodu čistú.
+      description: 'Štandardné 32/38 mm otvory pre filtračné čerpadlo, pravidelné kontroly pH a kryt – súčasťou dodávky na obdĺžnikových modeloch, voliteľný na okrúhlych modeloch – udržujú vodu čistú.'
       icon: tabler:droplet
     - title: Vyčistite, vypustite a uskladnite
       description: Vypustite, vysušte, zrolujte a zabaľte bazén do úložného vrecka na zimu. Nevyžaduje trvalú inštaláciu.
       icon: tabler:package
     - title: Bezpečnosť na prvom mieste
-      description: Deti musia byť neustále pod aktívnym dohľadom dospelej osoby. Postupujte podľa návodu, miestnych pravidiel a pokynov na bezpečné používanie.
+      description: 'Dizajn obytného bazéna s odkazom na EN 16582-1 a ASTM F2666 (odkazy na dizajn, nie certifikácie) – zhoda špecifická pre daný model je potvrdená pre cieľový trh a informácie o bezpečnosti sa dodávajú s dokumentáciou k produktu. Vždy je potrebný neustály dozor dospelej osoby.'
       icon: tabler:shield-check
 steps:
   title: Z krabice do dvora
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Čo je súčasťou bazéna?
-      description: Každý bazén Inflatable Pool Factory obsahuje elektrické vzduchové čerpadlo, súpravu na opravu a úložný vak. Okrúhle modely majú voliteľný namontovaný kryt.
+      description: 'Každý bazén Inflatable Pool Factory obsahuje elektrickú vzduchovú pumpu, súpravu na opravu a úložný vak. Obdĺžnikové modely obsahujú aj kryt s plným pokrytím; okrúhle modely ponúkajú namontovaný kryt ako voliteľnú možnosť.'
       icon: tabler:box
       category: all
     - title: Aké veľkosti sú k dispozícii?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Ako udržím vodu čistú?
-      description: Ak je namontované, použite filtračné čerpadlo, odstráňte nečistoty, skontrolujte pH a zakryte bazén, keď sa nepoužíva. Ako dlho voda vydrží závisí od veľkosti bazéna, používania a filtrácie – testujte radšej pravidelne, než sa spoliehajte na pevný plán.
+      description: 'Štandardné 32/38 mm otvory pre filtračné čerpadlo, pravidelné kontroly pH a kryt – súčasťou dodávky na obdĺžnikových modeloch, voliteľný na okrúhlych modeloch – udržujú vodu čistú.'
       icon: tabler:droplet
       category: all
 cta:

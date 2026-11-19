@@ -75,7 +75,7 @@ steps2_milestones:
       description: 'Inflatable Pool Factory tek bir odak noktasıyla kuruldu: birinci sınıf Drop Stitch şişme yüzme havuzları.'
       icon: tabler:pool
     - title: Üç imza koleksiyonu
-      description: Dikdörtgen, yuvarlak mavi ve yuvarlak gri havuz hatları, her biri isteğe bağlı kapaklara ve özel boyutlara sahiptir.
+      description: 'Dikdörtgen, yuvarlak mavi ve yuvarlak gri havuz hatları — dikdörtgen modellerde bir kapak bulunur; yuvarlak modeller bir seçenek olarak sunulmaktadır.'
       icon: tabler:circle-check
     - title: Dünya çapındaki ortaklar için OEM/ODM
       description: Markalara, distribütörlere, otellere ve glamping operatörlerine özel üretim.

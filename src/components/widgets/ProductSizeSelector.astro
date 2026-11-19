@@ -2,14 +2,16 @@
 import Icon from '~/components/ui/Icon.astro';
 import { productRetailSizes } from '~/data/product-variants';
 import { localizeHref } from '~/i18n/routing';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 
 /**
  * R-01: retail size selector. Renders nothing when the slug has no registered
  * retail size lineup. Firm-priced sizes post to the Stripe checkout with an
  * explicit `item`; prices pending finance confirmation render as
  * "Request price" and link to the contact form.
+ * P1-10: fixed chrome strings are translated via the `product.*` i18n keys;
+ * size/wall labels stay EN with the MDX body fallback.
  */
-// English-only on all languages (matches the MDX body fallback).
 
 interface Props {
   slug: string;
@@ -17,6 +19,8 @@ interface Props {
 }
 
 const { slug, lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const tf = (key: string, fallback: string) => t(key) || fallback;
 const retail = productRetailSizes[slug];
 ---
 
@@ -24,7 +28,7 @@ const retail = productRetailSizes[slug];
   retail && (
     <section data-ai-block="size-selector">
       <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-500 mb-2 block">
-        Choose your size
+        {tf('product.chooseYourSize', 'Choose your size')}
       </span>
       <div class="space-y-2">
         {retail.sizes.map((size) => (
@@ -48,7 +52,7 @@ const retail = productRetailSizes[slug];
                     class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-xs"
                   >
                     <Icon name="tabler:shopping-cart" class="w-4 h-4" />
-                    Buy
+                    {tf('product.buy', 'Buy')}
                   </button>
                 </form>
               </>
@@ -58,7 +62,7 @@ const retail = productRetailSizes[slug];
                 class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-all text-xs shrink-0"
               >
                 <Icon name="tabler:message-circle" class="w-4 h-4" />
-                Request price
+                {tf('product.requestPrice', 'Request price')}
               </a>
             )}
           </div>
@@ -66,8 +70,10 @@ const retail = productRetailSizes[slug];
       </div>
       <p class="mt-2.5 text-xs text-gray-500 dark:text-slate-500 leading-relaxed">
         <Icon name="tabler:info-circle" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
-        Fixed retail prices apply to the sizes listed above. Sizes Ø 5 m and above, 20/50 cm reinforced walls and custom
-        dimensions are quoted as wholesale/OEM projects.
+        {tf(
+          'product.retailPriceNote',
+          'Fixed retail prices apply to the sizes listed above. Sizes Ø 5 m and above, 20/50 cm reinforced walls and custom dimensions are quoted as wholesale/OEM projects.'
+        )}
       </p>
     </section>
   )

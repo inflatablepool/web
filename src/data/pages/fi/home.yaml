@@ -51,10 +51,10 @@ features:
       description: 'Kaksikerroksinen PVC drop stitch -kangas, joka on suunniteltu kestämään puhkaisuja ja UV-altistusta koko perhekäytön ajan.'
       icon: tabler:shield
     - title: Täydellinen paketti
-      description: Jokaisen uima-altaan mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi. Pyöreisiin malleihin saatavilla kiinteät kannet.
+      description: 'Jokaisen uima-altaan mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi. Suorakaiteen muotoisissa malleissa on koko peittävä kansi; pyöreät mallit tarjoavat lisävarusteena asennetun kannen.'
       icon: tabler:box
     - title: Turvallisuustietoinen suunnittelu
-      description: 'Asuin uima-altaan suunnittelu, jossa viitataan standardeihin EN 16582-1 ja ASTM F2666 – mallikohtaiset turvallisuustiedot on annettu tuotedokumentaatiossa. Jatkuva aikuisen valvonta vaaditaan aina.'
+      description: 'Asuin allassuunnittelu standardeihin EN 16582-1 ja ASTM F2666 viitaten (suunnitteluviitteet, ei sertifioinnit) – mallikohtainen vaatimustenmukaisuus vahvistetaan kohdemarkkinakohtaisesti, ja turvallisuustiedot toimitetaan tuotedokumentaation mukana. Constant adult supervision is always required.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Allas ideoita
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Pura pakkauksesta ja täytä mukana tulevalla pumpulla 5–15 minuutissa, täytä sitten puutarhaletkulla – täyttöaika vaihtelee altaan koon ja vesihuollon mukaan.'
       icon: tabler:rocket
     - title: Yksinkertainen vedenhoito
-      description: Tavalliset 32/38 mm:n suodatinpumppuportit, säännölliset pH-tarkastukset ja pyöreissä malleissa asennettu kansi pitävät veden puhtaana.
+      description: 'Vakiokokoiset 32/38 mm:n suodatinpumppuportit, säännölliset pH-tarkistukset ja kansi – mukana suorakaiteen muotoisissa malleissa, valinnainen pyöreissä malleissa – pitävät veden puhtaana.'
       icon: tabler:droplet
     - title: Puhdista, tyhjennä ja säilytä
       description: Tyhjennä, kuivaa, rullaa ja pakkaa allas säilytyspussiinsa talvea varten. Ei pysyvää asennusta ylläpidettäväksi.
       icon: tabler:package
     - title: Turvallisuus ennen kaikkea
-      description: Lapset on aina aikuisen aktiivisessa valvonnassa. Noudata käsikirjaa, paikallisia sääntöjä ja turvallista käyttöä koskevia ohjeita.
+      description: 'Asuin allassuunnittelu standardeihin EN 16582-1 ja ASTM F2666 viitaten (suunnitteluviitteet, ei sertifioinnit) – mallikohtainen vaatimustenmukaisuus vahvistetaan kohdemarkkinakohtaisesti, ja turvallisuustiedot toimitetaan tuotedokumentaation mukana. Constant adult supervision is always required.'
       icon: tabler:shield-check
 steps:
   title: Boksista takapihalle
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mitä altaan hintaan sisältyy?
-      description: Jokainen Inflatable Pool Factory-allas sisältää sähköisen ilmapumpun, korjaussarjan ja säilytyspussin. Pyöreissä malleissa on lisävarusteena asennettu kansi.
+      description: 'Jokainen puhallettava allastehtaan allas sisältää sähköisen ilmapumpun, korjaussarjan ja säilytyspussin. Suorakaiteen muotoisissa malleissa on myös koko peittävä kansi; pyöreät mallit tarjoavat lisävarusteena asennetun kannen.'
       icon: tabler:box
       category: all
     - title: Mitä kokoja on saatavilla?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Miten pidän veden puhtaana?
-      description: Käytä suodatinpumppua, jos se on asennettu, kuori roskat, tarkista pH ja peitä allas, kun se ei ole käytössä. Veden säilyvyys riippuu altaan koosta, käytöstä ja suodatuksesta – testaa säännöllisesti sen sijaan, että luottaisi kiinteään aikatauluun.
+      description: 'Vakiokokoiset 32/38 mm:n suodatinpumppuportit, säännölliset pH-tarkistukset ja kansi – mukana suorakaiteen muotoisissa malleissa, valinnainen pyöreissä malleissa – pitävät veden puhtaana.'
       icon: tabler:droplet
       category: all
 cta:

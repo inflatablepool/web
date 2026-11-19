@@ -326,6 +326,15 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://inflatablepoolfactory.com/cs/products/round-blue-drop-stitch-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/products/round-blue-drop-stitch-pool/"/>
+    <x:entity>cs/products/round-blue-drop-stitch-pool</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://inflatablepoolfactory.com/cs/terms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/terms/"/>
@@ -2073,6 +2082,7 @@
     <loc>https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://inflatablepoolfactory.com/cs/products/round-blue-drop-stitch-pool/"/>
     <x:entity>round-blue-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>

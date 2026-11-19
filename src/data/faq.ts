@@ -110,7 +110,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-with-cover',
     question: 'Do pools come with a cover?',
     answer:
-      'Our round grey pool ships with a fitted debris cover included. Covers for other models are available as accessories. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
+      'Rectangular pools include a full-coverage cover. Round pools, in blue or grey, offer a matching fitted cover as an option, and covers for SPA tubs are quoted on request. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],

@@ -51,10 +51,10 @@ features:
       description: 'Kétrétegű PVC drop stitch szövet, amelyet úgy terveztek, hogy ellenálljon a szúrásoknak és a UV expozíciónak a teljes családi használat során.'
       icon: tabler:shield
     - title: Komplett csomag
-      description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. Kerek modellekhez felszerelt burkolatok kaphatók.
+      description: 'Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. A téglalap alakú modellek teljes fedőburkolatot tartalmaznak; A kerek modellek opcionálisan felszerelt burkolatot kínálnak.'
       icon: tabler:box
     - title: Biztonságtudatos tervezés
-      description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványra hivatkozva – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
+      description: 'Lakossági medence tervezése az EN 16582-1 és az ASTM F2666 szabványra hivatkozva (tervezési hivatkozások, nem tanúsítványok) – a modell-specifikus megfelelőséget célpiaconként megerősítik, és a biztonsági információkat a termékdokumentációval együtt szállítják. Állandó felnőtt felügyelet szükséges.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Medence ötletek
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Bontsa ki és fújja fel a mellékelt szivattyúval 5-15 perc alatt, majd töltse fel kerti tömlővel – a feltöltési idő a medence méretétől és a vízellátástól függően változik.'
       icon: tabler:rocket
     - title: Egyszerű vízkezelés
-      description: A szabványos 32/38 mm-es szűrőszivattyú-csatlakozók, a rendszeres pH-ellenőrzés és a kerek modellek felszerelt burkolata tisztán tartják a vizet.
+      description: 'Szabványos 32/38 mm-es szűrőszivattyú-csatlakozók, rendszeres pH-ellenőrzés és fedél – a téglalap alakú modelleknél, opcionális a kerek modelleknél – tisztán tartják a vizet.'
       icon: tabler:droplet
     - title: Tisztítás, leeresztés és tárolás
       description: Csavarja le, szárítsa meg, tekerje fel, és csomagolja be a medencét a tárolótáskájába télre. Nincs karbantartásra való állandó telepítés.
       icon: tabler:package
     - title: Első a biztonság
-      description: A gyermekeket mindig egy felnőtt aktív felügyelete alatt kell tartani. Kövesse a kézikönyvet, a helyi szabályokat és a biztonságos használat útmutatásait.
+      description: 'Lakossági medence tervezése az EN 16582-1 és az ASTM F2666 szabványra hivatkozva (tervezési hivatkozások, nem tanúsítványok) – a modell-specifikus megfelelőséget célpiaconként megerősítik, és a biztonsági információkat a termékdokumentációval együtt szállítják. Állandó felnőtt felügyelet szükséges.'
       icon: tabler:shield-check
 steps:
   title: Boxtól a hátsó udvarig
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mit tartalmaz a medence?
-      description: Minden Inflatable Pool Factory medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A kerek modellek opcionálisan felszerelt burkolattal rendelkeznek.
+      description: 'Minden felfújható medencegyári medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A téglalap alakú modellek teljes fedőburkolatot is tartalmaznak; A kerek modellek opcionálisan felszerelt burkolatot kínálnak.'
       icon: tabler:box
       category: all
     - title: Milyen méretek kaphatók?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Hogyan tartsam tisztán a vizet?
-      description: Ha van, használjon szűrőszivattyút, távolítsa el a törmeléket, ellenőrizze a pH-t, és fedje le a medencét, ha nem használja. Az, hogy mennyi ideig tart a víz, a medence méretétől, a használattól és a szűréstől függ – rendszeresen tesztelje, ahelyett, hogy rögzített ütemezésre hagyatkozna.
+      description: 'Szabványos 32/38 mm-es szűrőszivattyú-csatlakozók, rendszeres pH-ellenőrzés és fedél – a téglalap alakú modelleknél, opcionális a kerek modelleknél – tisztán tartják a vizet.'
       icon: tabler:droplet
       category: all
 cta:

@@ -51,10 +51,10 @@ features:
       description: 'Dobbeltlags PVC drop stitch-stoff, konstruert for å motstå punkteringer og UV-eksponering gjennom en hel sesong med familiebruk.'
       icon: tabler:shield
     - title: Komplett pakke
-      description: Hvert basseng leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose. Tilpassede deksler tilgjengelig for runde modeller.
+      description: 'Hvert basseng leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose. Rektangulære modeller inkluderer et heldekkende deksel; runde modeller tilbyr et montert deksel som ekstrautstyr.'
       icon: tabler:box
     - title: Sikkerhetsbevisst design
-      description: 'Utforming av boligbasseng som refererer til EN 16582-1 og ASTM F2666 — modellspesifikk sikkerhetsinformasjon er gitt i produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
+      description: 'Utforming av boligbasseng med referanse til EN 16582-1 og ASTM F2666 (designreferanser, ikke sertifiseringer) — modellspesifikk samsvar bekreftes per målmarked, og sikkerhetsinformasjon følger med produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Bassengideer
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Pakk ut og fyll opp med den medfølgende pumpen på 5-15 minutter, og fyll deretter med en hageslange - fylletiden varierer med bassengstørrelsen og vanntilførselen.'
       icon: tabler:rocket
     - title: Enkel vannpleie
-      description: Standard 32/38 mm filterpumpeporter, regelmessige pH-kontroller og et montert deksel på runde modeller holder vannet rent.
+      description: 'Standard 32/38 mm filterpumpeporter, regelmessige pH-kontroller og et deksel – inkludert på rektangulære modeller, valgfritt på runde modeller – holder vannet rent.'
       icon: tabler:droplet
     - title: Rengjør, tøm og lagre
       description: Tøm, tørk, rull sammen og pakk bassenget i oppbevaringsposen for vinteren. Ingen permanent installasjon å vedlikeholde.
       icon: tabler:package
     - title: Sikkerhet først
-      description: Barn må være aktivt under oppsyn av en voksen til enhver tid. Følg bruksanvisningen, lokale regler og veiledning for sikker bruk.
+      description: 'Utforming av boligbasseng med referanse til EN 16582-1 og ASTM F2666 (designreferanser, ikke sertifiseringer) — modellspesifikk samsvar bekreftes per målmarked, og sikkerhetsinformasjon følger med produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
       icon: tabler:shield-check
 steps:
   title: Fra boks til bakgård
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hva følger med bassenget?
-      description: Hvert Inflatable Pool Factory-basseng inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Runde modeller har et valgfritt montert deksel.
+      description: 'Hvert Inflatable Pool Factory-basseng inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Rektangulære modeller inkluderer også et heldekkende deksel; runde modeller tilbyr et montert deksel som ekstrautstyr.'
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgjengelige?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Hvordan holder jeg vannet rent?
-      description: Bruk en filterpumpe der den er montert, skum av rusk, kontroller pH og dekk til bassenget når det ikke er i bruk. Hvor lenge vannet varer avhenger av bassengstørrelse, bruk og filtrering – test regelmessig i stedet for å stole på en fast tidsplan.
+      description: 'Standard 32/38 mm filterpumpeporter, regelmessige pH-kontroller og et deksel – inkludert på rektangulære modeller, valgfritt på runde modeller – holder vannet rent.'
       icon: tabler:droplet
       category: all
 cta:

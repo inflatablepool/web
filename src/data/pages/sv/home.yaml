@@ -51,10 +51,10 @@ features:
       description: 'Dubbellager PVC drop stitch-tyg, konstruerat för att motstå punkteringar och UV-exponering genom en hel säsong av familjeanvändning.'
       icon: tabler:shield
     - title: Komplett paket
-      description: Varje pool levereras med en elektrisk luftpump, reparationssats och förvaringsväska. Passade överdrag tillgängliga för runda modeller.
+      description: 'Varje pool levereras med en elektrisk luftpump, reparationssats och förvaringsväska. Rektangulära modeller inkluderar ett heltäckande lock; runda modeller erbjuder ett monterat skydd som tillval.'
       icon: tabler:box
     - title: Säkerhetsmedveten design
-      description: 'Bostadspooldesign med hänvisning till EN 16582-1 och ASTM F2666 — modellspecifik säkerhetsinformation finns i produktdokumentationen. Ständig vuxenövervakning krävs alltid.'
+      description: 'Design av pooler för bostäder med hänvisning till EN 16582-1 och ASTM F2666 (designreferenser, inte certifieringar) — modellspecifik överensstämmelse bekräftas per målmarknad och säkerhetsinformation levereras med produktdokumentationen. Ständig vuxenövervakning krävs alltid.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool idéer
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Packa upp och blåsa upp med den medföljande pumpen på 5-15 minuter, fyll sedan med en trädgårdsslang – påfyllningstiden varierar med poolstorlek och vattentillförsel.'
       icon: tabler:rocket
     - title: Enkel vattenvård
-      description: Standard 32/38 mm filterpumpportar, regelbundna pH-kontroller och ett monterat lock på runda modeller håller vattnet rent.
+      description: 'Standard 32/38 mm filterpumpportar, regelbundna pH-kontroller och ett lock – ingår på rektangulära modeller, valfritt på runda modeller – håller vattnet rent.'
       icon: tabler:droplet
     - title: Rengör, dränera & förvara
       description: Töm, torka, rulla ihop och packa poolen i förvaringsväskan för vintern. Ingen permanent installation att underhålla.
       icon: tabler:package
     - title: Säkerheten först
-      description: Barn måste alltid övervakas aktivt av en vuxen. Följ manualen, lokala regler och vägledning för säker användning.
+      description: 'Design av pooler för bostäder med hänvisning till EN 16582-1 och ASTM F2666 (designreferenser, inte certifieringar) — modellspecifik överensstämmelse bekräftas per målmarknad och säkerhetsinformation levereras med produktdokumentationen. Ständig vuxenövervakning krävs alltid.'
       icon: tabler:shield-check
 steps:
   title: Från box till bakgård
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Vad ingår i poolen?
-      description: Varje Inflatable Pool Factory-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Runda modeller har en valfri monterad kåpa.
+      description: 'Varje Inflatable Pool Factory-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Rektangulära modeller inkluderar även ett heltäckande lock; runda modeller erbjuder ett monterat skydd som tillval.'
       icon: tabler:box
       category: all
     - title: Vilka storlekar finns tillgängliga?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Hur håller jag vattnet rent?
-      description: Använd en filterpump där den finns, skumma bort skräp, kontrollera pH och täck över poolen när den inte används. Hur länge vattnet räcker beror på poolens storlek, användning och filtrering - testa regelbundet istället för att förlita sig på ett fast schema.
+      description: 'Standard 32/38 mm filterpumpportar, regelbundna pH-kontroller och ett lock – ingår på rektangulära modeller, valfritt på runda modeller – håller vattnet rent.'
       icon: tabler:droplet
       category: all
 cta:

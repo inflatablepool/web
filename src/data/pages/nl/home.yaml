@@ -51,10 +51,10 @@ features:
       description: 'Dubbellaags PVC drop-stitch-stof, ontworpen om lekrijden en UV-blootstelling te weerstaan ​​gedurende een volledig seizoen gezinsgebruik.'
       icon: tabler:shield
     - title: Compleet pakket
-      description: Elk zwembad wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas. Passende hoezen beschikbaar voor ronde modellen.
+      description: 'Elk zwembad wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas. Rechthoekige modellen hebben een volledig dekkende hoes; ronde modellen bieden optioneel een passend deksel.'
       icon: tabler:box
     - title: Veiligheidsbewust ontwerp
-      description: 'Ontwerp van residentiële zwembaden met verwijzing naar EN 16582-1 en ASTM F2666 – modelspecifieke veiligheidsinformatie vindt u in de productdocumentatie. Constant toezicht van een volwassene is altijd vereist.'
+      description: 'Ontwerp van residentiële zwembaden met verwijzing naar EN 16582-1 en ASTM F2666 (ontwerpreferenties, geen certificeringen) – modelspecifieke conformiteit wordt per doelmarkt bevestigd en veiligheidsinformatie wordt meegeleverd met de productdocumentatie. Constant toezicht van een volwassene is altijd vereist.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Zwembadideeën
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Uitpakken en opblazen met de meegeleverde pomp in 5-15 minuten, daarna vullen met een tuinslang. De vultijd varieert afhankelijk van de grootte van het zwembad en de watertoevoer.'
       icon: tabler:rocket
     - title: Eenvoudige waterverzorging
-      description: Standaard filterpomppoorten van 32/38 mm, regelmatige pH-controles en een passend deksel op ronde modellen houden het water schoon.
+      description: 'Standaard filterpomppoorten van 32/38 mm, regelmatige pH-controles en een deksel (meegeleverd op rechthoekige modellen, optioneel op ronde modellen) houden het water schoon.'
       icon: tabler:droplet
     - title: Reinigen, laten leeglopen en opslaan
       description: Laat het zwembad leeglopen, droog het, rol het op en stop het in de opbergtas voor de winter. Geen permanente installatie om te onderhouden.
       icon: tabler:package
     - title: Veiligheid eerst
-      description: Kinderen moeten te allen tijde actief onder toezicht staan ​​van een volwassene. Volg de handleiding, lokale regels en richtlijnen voor veilig gebruik.
+      description: 'Ontwerp van residentiële zwembaden met verwijzing naar EN 16582-1 en ASTM F2666 (ontwerpreferenties, geen certificeringen) – modelspecifieke conformiteit wordt per doelmarkt bevestigd en veiligheidsinformatie wordt meegeleverd met de productdocumentatie. Constant toezicht van een volwassene is altijd vereist.'
       icon: tabler:shield-check
 steps:
   title: Van doos tot achtertuin
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Wat is inbegrepen bij het zwembad?
-      description: Bij elk Inflatable Pool Factory-zwembad wordt een elektrische luchtpomp, een reparatieset en een opbergtas geleverd. Ronde modellen hebben optioneel een gemonteerde hoes.
+      description: 'Elk opblaasbaar zwembadfabriekszwembad wordt geleverd met een elektrische luchtpomp, een reparatieset en een opbergtas. Rechthoekige modellen hebben ook een volledig dekkende hoes; ronde modellen bieden optioneel een passend deksel.'
       icon: tabler:box
       category: all
     - title: Welke maten zijn beschikbaar?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Hoe houd ik het water schoon?
-      description: Gebruik indien aanwezig een filterpomp, verwijder het vuil, controleer de pH en dek het zwembad af wanneer het niet in gebruik is. Hoe lang het water meegaat, hangt af van de grootte, het gebruik en de filtratie van het zwembad. Test regelmatig in plaats van te vertrouwen op een vast schema.
+      description: 'Standaard filterpomppoorten van 32/38 mm, regelmatige pH-controles en een deksel (meegeleverd op rechthoekige modellen, optioneel op ronde modellen) houden het water schoon.'
       icon: tabler:droplet
       category: all
 cta:

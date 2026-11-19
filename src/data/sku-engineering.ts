@@ -128,7 +128,7 @@ export interface TypeTestCampaign {
  * never be presented as a certification of the whole catalog.
  */
 export const TYPE_TEST_CAMPAIGN: TypeTestCampaign = {
-  model: 'FB-DSP-400',
+  model: 'FB-DSP-400 (catalog item SR341220)',
   campaignId: 'RPT-FB-QC-20261113',
   lot: 'LOT-202611-A08',
   units: '3 finished units',
@@ -145,7 +145,7 @@ export const TYPE_TEST_CAMPAIGN: TypeTestCampaign = {
     { test: 'Valve torque / drain pull-out', result: '31.9–36.4 N·m / 1,185 N' },
   ],
   scopeNote:
-    'These results cover the tested model, lot and units only. They are published type-test evidence for FB-DSP-400, not a certification covering all 48 catalog SKUs.',
+    'These results cover the tested model, lot and units only. They are published type-test evidence for FB-DSP-400 (catalog item SR341220), not a certification covering all 48 catalog SKUs.',
 };
 
 // ---------------------------------------------------------------------------

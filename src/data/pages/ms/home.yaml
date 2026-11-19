@@ -51,10 +51,10 @@ features:
       description: 'Fabrik PVC drop stitch dua lapisan, direka bentuk untuk menahan tusukan dan pendedahan UV sepanjang musim penuh penggunaan keluarga.'
       icon: tabler:shield
     - title: Pakej Lengkap
-      description: Setiap kolam dihantar dengan pam udara elektrik, kit pembaikan dan beg penyimpanan. Sarung yang dipasang tersedia untuk model bulat.
+      description: 'Setiap kolam dihantar dengan pam udara elektrik, kit pembaikan dan beg penyimpanan. Model segi empat tepat termasuk penutup liputan penuh; model bulat menawarkan penutup yang dipasang sebagai pilihan.'
       icon: tabler:box
     - title: Reka Bentuk Sedar Keselamatan
-      description: 'Reka bentuk kolam kediaman merujuk EN 16582-1 dan ASTM F2666 — maklumat keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang berterusan sentiasa diperlukan.'
+      description: 'Reka bentuk kolam kediaman dengan merujuk kepada EN 16582-1 dan ASTM F2666 (rujukan reka bentuk, bukan pensijilan) — pematuhan khusus model disahkan mengikut pasaran sasaran, dan maklumat keselamatan dihantar dengan dokumentasi produk. Pengawasan orang dewasa yang berterusan sentiasa diperlukan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idea Kolam
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Buka kotak dan tiup dengan pam yang disertakan dalam 5-15 minit, kemudian isi dengan hos taman — masa pengisian berbeza mengikut saiz kolam dan bekalan air.'
       icon: tabler:rocket
     - title: Penjagaan Air Mudah
-      description: Port pam penapis 32/38 mm standard, pemeriksaan pH biasa dan penutup yang dipasang pada model bulat memastikan air bersih.
+      description: 'Port pam penapis 32/38 mm standard, pemeriksaan pH biasa dan penutup — disertakan pada model segi empat tepat, pilihan pada model bulat — pastikan air bersih.'
       icon: tabler:droplet
     - title: Bersihkan, Toskan & Simpan
       description: Toskan, keringkan, gulung dan bungkus kolam ke dalam beg simpanannya untuk musim sejuk. Tiada pemasangan kekal untuk diselenggara.
       icon: tabler:package
     - title: Keselamatan Diutamakan
-      description: Kanak-kanak mesti diawasi secara aktif oleh orang dewasa pada setiap masa. Ikut manual, peraturan tempatan dan panduan penggunaan selamat.
+      description: 'Reka bentuk kolam kediaman dengan merujuk kepada EN 16582-1 dan ASTM F2666 (rujukan reka bentuk, bukan pensijilan) — pematuhan khusus model disahkan mengikut pasaran sasaran, dan maklumat keselamatan dihantar dengan dokumentasi produk. Pengawasan orang dewasa yang berterusan sentiasa diperlukan.'
       icon: tabler:shield-check
 steps:
   title: Dari Kotak ke Halaman Belakang
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Apa yang disertakan dengan kolam renang?
-      description: Setiap kolam Inflatable Pool Factory termasuk pam udara elektrik, kit pembaikan dan beg penyimpanan. Model bulat mempunyai penutup dipasang pilihan.
+      description: 'Setiap kolam Kilang Kolam Kembung termasuk pam udara elektrik, kit pembaikan dan beg penyimpanan. Model segi empat tepat juga termasuk penutup liputan penuh; model bulat menawarkan penutup yang dipasang sebagai pilihan.'
       icon: tabler:box
       category: all
     - title: Apakah saiz yang ada?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Bagaimanakah saya memastikan air bersih?
-      description: Gunakan pam penapis di tempat yang dipasang, bersihkan serpihan, periksa pH, dan tutup kolam apabila tidak digunakan. Tempoh air bertahan bergantung pada saiz kolam, penggunaan dan penapisan — uji secara kerap dan bukannya bergantung pada jadual tetap.
+      description: 'Port pam penapis 32/38 mm standard, pemeriksaan pH biasa dan penutup — disertakan pada model segi empat tepat, pilihan pada model bulat — pastikan air bersih.'
       icon: tabler:droplet
       category: all
 cta:

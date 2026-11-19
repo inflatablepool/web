@@ -51,10 +51,10 @@ features:
       description: 'Tessuto Drop Stitch in PVC a doppio strato, progettato per resistere alle forature e all''esposizione ai raggi UV durante un''intera stagione di utilizzo in famiglia.'
       icon: tabler:shield
     - title: Pacchetto completo
-      description: Ogni piscina viene fornita con una pompa ad aria elettrica, un kit di riparazione e una custodia. Disponibili coperture su misura per i modelli rotondi.
+      description: 'Ogni piscina viene fornita con una pompa ad aria elettrica, un kit di riparazione e una custodia. I modelli rettangolari includono una copertura a copertura totale; i modelli rotondi offrono come opzione una copertura attrezzata.'
       icon: tabler:box
     - title: Design attento alla sicurezza
-      description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666: le informazioni sulla sicurezza specifiche del modello sono fornite nella documentazione del prodotto. È sempre necessaria la costante supervisione di un adulto.'
+      description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666 (riferimenti di progettazione, non certificazioni): la conformità specifica del modello è confermata per il mercato di destinazione e le informazioni sulla sicurezza vengono fornite con la documentazione del prodotto. È sempre necessaria la supervisione costante di un adulto.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idee per la piscina
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Disimballare e gonfiare con la pompa inclusa in 5-15 minuti, quindi riempire con un tubo da giardino: il tempo di riempimento varia in base alle dimensioni della piscina e alla fornitura d''acqua.'
       icon: tabler:rocket
     - title: Cura semplice dell'acqua
-      description: Le porte standard della pompa filtro da 32/38 mm, i controlli regolari del pH e un coperchio montato sui modelli rotondi mantengono l'acqua pulita.
+      description: 'Le porte standard della pompa filtro da 32/38 mm, i controlli regolari del pH e un coperchio (incluso sui modelli rettangolari, opzionale sui modelli rotondi) mantengono l''acqua pulita.'
       icon: tabler:droplet
     - title: Pulisci, drena e conserva
       description: Scolare, asciugare, arrotolare e riporre la piscina nella sua custodia per l'inverno. Nessuna installazione permanente da mantenere.
       icon: tabler:package
     - title: La sicurezza prima di tutto
-      description: I bambini devono essere sempre supervisionati attivamente da un adulto. Seguire il manuale, le regole locali e le indicazioni per un utilizzo sicuro.
+      description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666 (riferimenti di progettazione, non certificazioni): la conformità specifica del modello è confermata per il mercato di destinazione e le informazioni sulla sicurezza vengono fornite con la documentazione del prodotto. È sempre necessaria la supervisione costante di un adulto.'
       icon: tabler:shield-check
 steps:
   title: Dalla scatola al cortile
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Cosa è incluso nella piscina?
-      description: Ogni piscina Inflatable Pool Factory include una pompa ad aria elettrica, un kit di riparazione e una custodia. I modelli rotondi hanno una copertura montata opzionale.
+      description: 'Ogni piscina gonfiabile Pool Factory include una pompa ad aria elettrica, un kit di riparazione e una custodia. I modelli rettangolari includono anche una copertura a copertura totale; i modelli rotondi offrono come opzione una copertura attrezzata.'
       icon: tabler:box
       category: all
     - title: Quali taglie sono disponibili?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Come mantengo l'acqua pulita?
-      description: "Utilizzare una pompa filtro, se installata, rimuovere i detriti, controllare il pH e coprire la piscina quando non viene utilizzata. La durata dell'acqua dipende dalle dimensioni della piscina, dall'utilizzo e dal filtraggio: testare regolarmente anziché fare affidamento su un programma fisso."
+      description: 'Le porte standard della pompa filtro da 32/38 mm, i controlli regolari del pH e un coperchio (incluso sui modelli rettangolari, opzionale sui modelli rotondi) mantengono l''acqua pulita.'
       icon: tabler:droplet
       category: all
 cta:

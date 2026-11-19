@@ -75,7 +75,7 @@ steps2_milestones:
       description: "Inflatable Pool Factory bir yo'nalish bilan asos solingan: premium Drop Stitch shishiriladigan suzish havzalari."
       icon: tabler:pool
     - title: Uchta imzo to'plami
-      description: To'rtburchaklar, yumaloq ko'k va dumaloq kulrang hovuz chiziqlari, ularning har biri ixtiyoriy qopqoq va maxsus o'lchamlarga ega.
+      description: 'To''rtburchaklar, dumaloq ko''k va dumaloq kulrang hovuz chiziqlari - to''rtburchaklar modellar qopqoqni o''z ichiga oladi; dumaloq modellar variant sifatida birini taklif qiladi.'
       icon: tabler:circle-check
     - title: Dunyo bo'ylab hamkorlar uchun OEM / ODM
       description: Brendlar, distribyutorlar, mehmonxonalar va glamping operatorlari uchun maxsus ishlab chiqarish.

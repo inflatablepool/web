@@ -51,10 +51,10 @@ features:
       description: 'Kahekihiline PVC drop stitch kangas, mis on konstrueeritud nii, et see talub torke ja UV kokkupuudet terve pere kasutushooaja jooksul.'
       icon: tabler:shield
     - title: Täielik pakett
-      description: Iga basseiniga on kaasas elektriline õhupump, remondikomplekt ja hoiukott. Ümmargustele mudelitele on saadaval paigaldatud katted.
+      description: 'Iga basseiniga on kaasas elektriline õhupump, remondikomplekt ja hoiukott. Ristkülikukujulised mudelid sisaldavad täiskattega katet; ümmargused mudelid pakuvad lisavarustusena paigaldatud katet.'
       icon: tabler:box
     - title: Ohutustundlik disain
-      description: 'Elamu basseini projekt, mis viitab standarditele EN 16582-1 ja ASTM F2666 – mudelispetsiifiline ohutusteave on toodud toote dokumentatsioonis. Alati on vajalik täiskasvanu pidev järelevalve.'
+      description: 'Elamu basseini projekteerimine viidetega standarditele EN 16582-1 ja ASTM F2666 (disaini viited, mitte sertifikaadid) – mudelispetsiifiline vastavus kinnitatakse sihtturul ja ohutusteave tarnitakse koos toote dokumentatsiooniga. Alati on vajalik täiskasvanu pidev järelevalve.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Basseini ideed
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Eemaldage kast ja täitke 5–15 minutiga kaasasoleva pumbaga, seejärel täitke aiavoolikuga – täitmisaeg sõltub basseini suurusest ja veevarustusest.'
       icon: tabler:rocket
     - title: Lihtne veehooldus
-      description: Standardsed 32/38 mm filtripumba pordid, regulaarne pH kontroll ja ümarate mudelite paigaldatud kate hoiavad vee puhtana.
+      description: 'Standardsed 32/38 mm filtripumba pordid, regulaarne pH kontroll ja kate – ristkülikukujulistel mudelitel, valikuline ümaratel mudelitel – hoiavad vee puhtana.'
       icon: tabler:droplet
     - title: Puhastage, tühjendage ja hoidke
       description: Nõruta, kuivata, rulli kokku ja paki bassein talveks hoiukotti. Hooldamiseks pole püsivat paigaldust.
       icon: tabler:package
     - title: Ohutus ennekõike
-      description: Lapsed peavad olema kogu aeg aktiivse täiskasvanu järelevalve all. Järgige juhendit, kohalikke eeskirju ja ohutu kasutamise juhiseid.
+      description: 'Elamu basseini projekteerimine viidetega standarditele EN 16582-1 ja ASTM F2666 (disaini viited, mitte sertifikaadid) – mudelispetsiifiline vastavus kinnitatakse sihtturul ja ohutusteave tarnitakse koos toote dokumentatsiooniga. Alati on vajalik täiskasvanu pidev järelevalve.'
       icon: tabler:shield-check
 steps:
   title: Boksist tagahoovi
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mis on basseiniga kaasas?
-      description: Iga Inflatable Pool Factory bassein sisaldab elektrilist õhupumpa, remondikomplekti ja hoiukotti. Ümaratel mudelitel on valikuline paigaldatud kate.
+      description: 'Iga täispuhutava basseini tehase bassein sisaldab elektrilist õhupumpa, remondikomplekti ja hoiukotti. Ristkülikukujulistel mudelitel on ka täiskattega kate; ümmargused mudelid pakuvad lisavarustusena paigaldatud katet.'
       icon: tabler:box
       category: all
     - title: Mis suurused on saadaval?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Kuidas ma veen puhtana hoian?
-      description: Kasutage filtripumpa, kui see on paigaldatud, koorige praht, kontrollige pH-d ja katke bassein, kui seda ei kasutata. Kui kauaks vett jätkub, sõltub basseini suurusest, kasutusest ja filtreerimisest – testige regulaarselt, mitte ei tugine kindlale ajakavale.
+      description: 'Standardsed 32/38 mm filtripumba pordid, regulaarne pH kontroll ja kate – ristkülikukujulistel mudelitel, valikuline ümaratel mudelitel – hoiavad vee puhtana.'
       icon: tabler:droplet
       category: all
 cta:

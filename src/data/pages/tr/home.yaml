@@ -51,10 +51,10 @@ features:
       description: 'Çift katmanlı PVC drop stitch kumaş, tüm sezon boyunca aile kullanımı boyunca delinmelere ve UV''ye maruz kalmaya karşı dayanıklı olacak şekilde tasarlanmıştır.'
       icon: tabler:shield
     - title: Komple Paket
-      description: Her havuz bir elektrikli hava pompası, tamir seti ve saklama çantasıyla birlikte gönderilir. Yuvarlak modeller için gömme kapaklar mevcuttur.
+      description: 'Her havuz, elektrikli hava pompası, tamir seti ve saklama çantasıyla birlikte gönderilir. Dikdörtgen modeller tam kapsamlı bir kapak içerir; yuvarlak modeller isteğe bağlı olarak takılı bir kapak sunar.'
       icon: tabler:box
     - title: Güvenlik Bilincine Sahip Tasarım
-      description: 'EN 16582-1 ve ASTM F2666''yı referans alan konut havuzu tasarımı — modele özel güvenlik bilgileri ürün belgelerinde verilmektedir. Sürekli yetişkin gözetimi her zaman gereklidir.'
+      description: 'EN 16582-1 ve ASTM F2666''ya göre konut havuzu tasarımı (sertifikalar değil tasarım referansları) — modele özgü uygunluk, hedef pazara göre doğrulanır ve güvenlik bilgileri ürün belgeleriyle birlikte gönderilir. Sürekli yetişkin gözetimi her zaman gereklidir.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Havuz Fikirleri
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Kutusunu açın ve birlikte verilen pompayla 5-15 dakika içinde şişirin, ardından bahçe hortumuyla doldurun; doldurma süresi havuzun boyutuna ve su kaynağına göre değişir.'
       icon: tabler:rocket
     - title: Basit Su Bakımı
-      description: Standart 32/38 mm filtre pompası portları, düzenli pH kontrolleri ve yuvarlak modellerdeki takılı kapak suyu temiz tutar.
+      description: 'Standart 32/38 mm filtre pompası bağlantı noktaları, düzenli pH kontrolleri ve dikdörtgen modellerde bulunan, yuvarlak modellerde isteğe bağlı bir kapak suyu temiz tutar.'
       icon: tabler:droplet
     - title: Temizleyin, Tahliye Edin ve Saklayın
       description: Havuzu boşaltın, kurutun, yuvarlayın ve kış için saklama çantasına koyun. Bakım yapılması gereken kalıcı kurulum yok.
       icon: tabler:package
     - title: Önce Güvenlik
-      description: Çocuklar her zaman bir yetişkin tarafından aktif olarak denetlenmelidir. Kılavuza, yerel kurallara ve güvenli kullanım kılavuzuna uyun.
+      description: 'EN 16582-1 ve ASTM F2666''ya göre konut havuzu tasarımı (sertifikalar değil tasarım referansları) — modele özgü uygunluk, hedef pazara göre doğrulanır ve güvenlik bilgileri ürün belgeleriyle birlikte gönderilir. Sürekli yetişkin gözetimi her zaman gereklidir.'
       icon: tabler:shield-check
 steps:
   title: Kutudan Arka Bahçeye
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Havuza neler dahil?
-      description: Her Inflatable Pool Factory havuzunda elektrikli hava pompası, tamir seti ve saklama çantası bulunmaktadır. Yuvarlak modellerde isteğe bağlı olarak takılan bir kapak bulunur.
+      description: 'Her Şişme Havuz Fabrikası havuzunda bir elektrikli hava pompası, bir tamir seti ve bir saklama çantası bulunur. Dikdörtgen modeller ayrıca tam kapsamlı bir kapak içerir; yuvarlak modeller isteğe bağlı olarak takılı bir kapak sunar.'
       icon: tabler:box
       category: all
     - title: Hangi boyutlar mevcut?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Suyu nasıl temiz tutabilirim?
-      description: Takılı olduğu yerde bir filtre pompası kullanın, kalıntıları temizleyin, pH'ı kontrol edin ve kullanılmadığında havuzun üzerini kapatın. Suyun ne kadar dayanacağı havuz büyüklüğüne, kullanıma ve filtrelemeye bağlıdır; sabit bir programa bağlı kalmak yerine düzenli olarak test yapın.
+      description: 'Standart 32/38 mm filtre pompası bağlantı noktaları, düzenli pH kontrolleri ve dikdörtgen modellerde bulunan, yuvarlak modellerde isteğe bağlı bir kapak suyu temiz tutar.'
       icon: tabler:droplet
       category: all
 cta:

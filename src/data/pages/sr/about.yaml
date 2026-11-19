@@ -75,7 +75,7 @@ steps2_milestones:
       description: 'Inflatable Pool Factory je osnovan sa jednim fokusom: vrhunski bazeni na naduvavanje drop stitch.'
       icon: tabler:pool
     - title: Tri kolekcije potpisa
-      description: Pravougaone, okrugle plave i okrugle sive linije bazena, svaka sa opcionim poklopcima i prilagođenim veličinama.
+      description: 'Правоугаоне, округле плаве и округле сиве линије базена — правоугаони модели укључују поклопац; округли модели нуде један као опцију.'
       icon: tabler:circle-check
     - title: OEM/ODM za partnere širom sveta
       description: Proizvodnja po meri za brendove, distributere, hotele i operatere glampinga.

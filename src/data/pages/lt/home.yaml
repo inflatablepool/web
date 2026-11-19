@@ -51,10 +51,10 @@ features:
       description: 'Dvisluoksnis PVC drop stitch audinys, sukurtas taip, kad būtų atsparus pradūrimams ir UV poveikiui per visą šeimos naudojimo sezoną.'
       icon: tabler:shield
     - title: Pilnas paketas
-      description: Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvaliems modeliams yra sumontuoti užvalkalai.
+      description: 'Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Stačiakampiuose modeliuose yra pilnas dangtis; apvaliuose modeliuose kaip papildomą dangtelį galima įsigyti.'
       icon: tabler:box
     - title: Saugumo požiūriu sąmoningas dizainas
-      description: 'Gyvenamojo baseino dizainas, kuriame remiamasi EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
+      description: 'Gyvenamojo baseino projektas pagal EN 16582-1 ir ASTM F2666 (projekto nuorodos, o ne sertifikatai) – modelio atitiktis patvirtinama kiekvienoje tikslinėje rinkoje, o saugos informacija pateikiama kartu su gaminio dokumentacija. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseino idėjos
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Išpakuokite ir pripūskite naudodami pridedamą pompą per 5–15 minučių, tada užpildykite sodo žarna – užpildymo laikas priklauso nuo baseino dydžio ir vandens tiekimo.'
       icon: tabler:rocket
     - title: Paprasta vandens priežiūra
-      description: Standartiniai 32/38 mm filtro siurblio prievadai, reguliarus pH patikrinimas ir apvaliuose modeliuose sumontuotas dangtelis palaiko švarų vandenį.
+      description: 'Standartiniai 32/38 mm filtro siurblio prievadai, reguliarus pH patikrinimas ir dangtelis – stačiakampiuose modeliuose, o apvaliuose – neprivalomas – palaiko švarų vandenį.'
       icon: tabler:droplet
     - title: Išvalykite, nusausinkite ir laikykite
       description: Nusausinkite, išdžiovinkite, susukite ir supakuokite baseiną į laikymo maišelį žiemai. Nereikia nuolatinės priežiūros.
       icon: tabler:package
     - title: Saugumas pirmiausia
-      description: Vaikai visą laiką turi būti aktyviai prižiūrimi suaugusiojo. Laikykitės vadovo, vietinių taisyklių ir saugaus naudojimo nurodymų.
+      description: 'Gyvenamojo baseino projektas pagal EN 16582-1 ir ASTM F2666 (projekto nuorodos, o ne sertifikatai) – modelio atitiktis patvirtinama kiekvienoje tikslinėje rinkoje, o saugos informacija pateikiama kartu su gaminio dokumentacija. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
       icon: tabler:shield-check
 steps:
   title: Nuo dėžės iki kiemo
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas įskaičiuota į baseiną?
-      description: Kiekviename Inflatable Pool Factory baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvalūs modeliai turi papildomą dangtelį.
+      description: 'Kiekviename pripučiamo baseino gamyklos baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Stačiakampiuose modeliuose taip pat yra visą dengiantis dangtelis; apvaliuose modeliuose kaip papildomą dangtelį galima įsigyti.'
       icon: tabler:box
       category: all
     - title: Kokie dydžiai galimi?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Kaip išlaikyti švarų vandenį?
-      description: Jei yra, naudokite filtro siurblį, nugriebkite šiukšles, patikrinkite pH ir uždenkite baseiną, kai nenaudojate. Kiek laiko užteks vandens, priklauso nuo baseino dydžio, naudojimo ir filtravimo – reguliariai tikrinkite, o ne pasikliaukite fiksuotu grafiku.
+      description: 'Standartiniai 32/38 mm filtro siurblio prievadai, reguliarus pH patikrinimas ir dangtelis – stačiakampiuose modeliuose, o apvaliuose – neprivalomas – palaiko švarų vandenį.'
       icon: tabler:droplet
       category: all
 cta:

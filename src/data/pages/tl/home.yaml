@@ -51,10 +51,10 @@ features:
       description: 'Double-layer na PVC drop stitch na tela, na idinisenyo upang labanan ang mga butas at UV exposure sa buong panahon ng paggamit ng pamilya.'
       icon: tabler:shield
     - title: Kumpletong Package
-      description: Ang bawat pool ay nagpapadala ng electric air pump, repair kit, at storage bag. Available ang mga fitted cover para sa mga bilog na modelo.
+      description: 'Ang bawat pool ay nagpapadala ng electric air pump, repair kit, at storage bag. Ang mga hugis-parihaba na modelo ay may kasamang full-coverage na takip; ang mga bilog na modelo ay nag-aalok ng angkop na takip bilang isang opsyon.'
       icon: tabler:box
     - title: Disenyo na Nakababatid sa Kaligtasan
-      description: 'Ang disenyo ng residential pool na tumutukoy sa EN 16582-1 at ASTM F2666 — ang impormasyon sa kaligtasan na partikular sa modelo ay ibinibigay sa dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
+      description: 'Disenyo ng residential pool na may sanggunian sa EN 16582-1 at ASTM F2666 (mga sanggunian sa disenyo, hindi mga sertipikasyon) — nakumpirma ang pagsunod sa partikular na modelo sa bawat target na merkado, at ipinapadala ang impormasyon sa kaligtasan kasama ang dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Mga Ideya sa Pool
@@ -117,13 +117,13 @@ content_compliance:
       description: 'I-unbox at i-inflate ang kasamang pump sa loob ng 5-15 minuto, pagkatapos ay punuin ng hose sa hardin — nag-iiba ang oras ng pagpuno sa laki ng pool at supply ng tubig.'
       icon: tabler:rocket
     - title: Simpleng Pangangalaga sa Tubig
-      description: Ang mga karaniwang 32/38 mm na filter-pump port, regular na pH check, at isang fitted na takip sa mga bilog na modelo ay nagpapanatili ng malinis na tubig.
+      description: 'Mga karaniwang 32/38 mm na filter-pump port, regular na pH check, at isang takip — kasama sa mga hugis-parihaba na modelo, opsyonal sa mga bilog na modelo — panatilihing malinis ang tubig.'
       icon: tabler:droplet
     - title: Linisin, Patuyuin at Tindahan
       description: Patuyuin, tuyo, i-roll up, at i-pack ang pool sa storage bag nito para sa taglamig. Walang permanenteng pag-install upang mapanatili.
       icon: tabler:package
     - title: Kaligtasan Una
-      description: Ang mga bata ay dapat na aktibong pinangangasiwaan ng isang may sapat na gulang sa lahat ng oras. Sundin ang manwal, mga lokal na panuntunan, at gabay sa ligtas na paggamit.
+      description: 'Disenyo ng residential pool na may sanggunian sa EN 16582-1 at ASTM F2666 (mga sanggunian sa disenyo, hindi mga sertipikasyon) — nakumpirma ang pagsunod sa partikular na modelo sa bawat target na merkado, at ipinapadala ang impormasyon sa kaligtasan kasama ang dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
       icon: tabler:shield-check
 steps:
   title: Mula Box hanggang Backyard
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ano ang kasama sa pool?
-      description: Ang bawat pool ng Inflatable Pool Factory ay may kasamang electric air pump, repair kit, at storage bag. Ang mga bilog na modelo ay may opsyonal na fitted cover.
+      description: 'Bawat Inflatable Pool Factory pool ay may kasamang electric air pump, repair kit, at storage bag. Kasama rin sa mga parihabang modelo ang isang buong saklaw na takip; ang mga bilog na modelo ay nag-aalok ng angkop na takip bilang isang opsyon.'
       icon: tabler:box
       category: all
     - title: Anong mga sukat ang magagamit?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Paano ko mapapanatili na malinis ang tubig?
-      description: Gumamit ng filter pump kung saan nilagyan, skim debris, suriin ang pH, at takpan ang pool kapag hindi ginagamit. Kung gaano katagal ang tubig ay depende sa laki ng pool, paggamit, at pagsasala — regular na pagsubok sa halip na umasa sa isang nakapirming iskedyul.
+      description: 'Mga karaniwang 32/38 mm na filter-pump port, regular na pH check, at isang takip — kasama sa mga hugis-parihaba na modelo, opsyonal sa mga bilog na modelo — panatilihing malinis ang tubig.'
       icon: tabler:droplet
       category: all
 cta:

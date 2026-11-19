@@ -29,7 +29,7 @@ interface CatalogEntry {
  * The rectangular $499 retail entry was taken offline (wholesale RFQ only);
  * ≥ 5 m and 20/50 cm reinforced-wall configurations are quoted projects.
  */
-const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
+export const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
   'IPF-POOL-RND-BLUE': {
     name: 'Round Blue Inflatable Drop Stitch Swimming Pool',
     slug: 'round-blue-drop-stitch-pool',
@@ -100,6 +100,12 @@ const SUPPORTED_LANGS = new Set([
   'lt',
   'lv',
   'et',
+  // P1-9: the remaining site languages — checkout used to fall back to EN.
+  'kk',
+  'uz',
+  'uk',
+  'az',
+  'fa',
 ]);
 
 export const onRequestPost: (...args: any[]) => any = async (context: any) => {
@@ -145,7 +151,9 @@ export const onRequestPost: (...args: any[]) => any = async (context: any) => {
   if (!SUPPORTED_LANGS.has(lang)) lang = 'en';
   const origin = new URL(request.url).origin;
   const langPrefix = lang !== 'en' ? `/${lang}` : '';
-  const productPath = `${langPrefix}/products/${entry.slug}`;
+  // P1-9: trailing slash — the product page canonical is trailing-slash; without
+  // it Stripe redirects back through an extra 308 hop.
+  const productPath = `${langPrefix}/products/${entry.slug}/`;
 
   const params: Array<[string, string]> = [
     ['mode', 'payment'],

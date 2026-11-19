@@ -51,10 +51,10 @@ features:
       description: 'Kain PVC drop stitch lapis ganda, dirancang untuk tahan terhadap tusukan dan paparan UV selama penggunaan keluarga selama satu musim penuh.'
       icon: tabler:shield
     - title: Paket Lengkap
-      description: Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Penutup terpasang tersedia untuk model bulat.
+      description: 'Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model persegi panjang mencakup penutup dengan cakupan penuh; model bulat menawarkan penutup pas sebagai pilihan.'
       icon: tabler:box
     - title: Desain Sadar Keselamatan
-      description: 'Referensi desain kolam perumahan EN 16582-1 dan ASTM F2666 — informasi keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
+      description: 'Desain kolam perumahan dengan mengacu pada EN 16582-1 dan ASTM F2666 (referensi desain, bukan sertifikasi) — kesesuaian model spesifik dikonfirmasi per target pasar, dan informasi keselamatan dikirimkan bersama dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ide Kolam Renang
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Buka kotak dan kembangkan dengan pompa yang disertakan dalam 5-15 menit, lalu isi dengan selang taman — waktu pengisian bervariasi tergantung ukuran kolam dan persediaan air.'
       icon: tabler:rocket
     - title: Perawatan Air Sederhana
-      description: Port pompa filter standar 32/38 mm, pemeriksaan pH rutin, dan penutup terpasang pada model bundar menjaga air tetap bersih.
+      description: 'Port pompa filter standar 32/38 mm, pemeriksaan pH rutin, dan penutup — disertakan pada model persegi panjang, opsional pada model bulat — menjaga air tetap bersih.'
       icon: tabler:droplet
     - title: Bersihkan, Tiriskan & Simpan
       description: Tiriskan, keringkan, gulung, dan masukkan kolam ke dalam kantong penyimpanannya untuk musim dingin. Tidak ada instalasi permanen yang harus dipelihara.
       icon: tabler:package
     - title: Keselamatan Pertama
-      description: Anak-anak harus diawasi secara aktif oleh orang dewasa setiap saat. Ikuti manual, peraturan setempat, dan panduan penggunaan yang aman.
+      description: 'Desain kolam perumahan dengan mengacu pada EN 16582-1 dan ASTM F2666 (referensi desain, bukan sertifikasi) — kesesuaian model spesifik dikonfirmasi per target pasar, dan informasi keselamatan dikirimkan bersama dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
       icon: tabler:shield-check
 steps:
   title: Dari Kotak ke Halaman Belakang
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Apa saja yang termasuk dalam kolam renang?
-      description: Setiap kolam Inflatable Pool Factory dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model bulat memiliki penutup opsional.
+      description: 'Setiap kolam Pabrik Kolam Tiup dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model persegi panjang juga mencakup penutup dengan cakupan penuh; model bulat menawarkan penutup pas sebagai pilihan.'
       icon: tabler:box
       category: all
     - title: Ukuran apa yang tersedia?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Bagaimana cara menjaga air tetap bersih?
-      description: Gunakan pompa penyaring jika terpasang, singkirkan kotoran, periksa pH, dan tutupi kolam saat tidak digunakan. Berapa lama air bertahan tergantung pada ukuran kolam, penggunaan, dan penyaringan — ujilah secara teratur daripada mengandalkan jadwal yang tetap.
+      description: 'Port pompa filter standar 32/38 mm, pemeriksaan pH rutin, dan penutup — disertakan pada model persegi panjang, opsional pada model bulat — menjaga air tetap bersih.'
       icon: tabler:droplet
       category: all
 cta:

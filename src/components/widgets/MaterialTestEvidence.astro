@@ -1,16 +1,40 @@
 ---
 import Icon from '~/components/ui/Icon.astro';
 import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+interface Props {
+  /** True when this page IS the tested model (rectangular SR341220). */
+  isTestedModel?: boolean;
+  lang?: string;
+}
+
+const { isTestedModel = false, lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const tf = (key: string, fallback: string) => t(key) || fallback;
 
 /**
  * P1-1: measured material results from the published type-test campaign
- * (FB-DSP-400). Republishes the campaign values without rewording the
- * measured figures, with the tested-model scope note.
+ * (FB-DSP-400, catalog item SR341220). Republishes the campaign values
+ * without rewording the measured figures, with the tested-model scope note.
+ * P1-10: fixed chrome strings are translated via the `product.*` i18n keys;
+ * the campaign data (test names, results, scope note) stays EN with the MDX
+ * body fallback.
  */
-// English-only on all languages (matches the MDX body fallback).
 
 // Material-focused items of the campaign (peel / puncture / cold fold).
 const MATERIAL_RESULTS = TYPE_TEST_CAMPAIGN.items.slice(0, 3);
+
+const measuredIn = tf(
+  'product.measuredInTemplate',
+  'Measured in the {model} type-test campaign {campaign} (lot {lot}, {dates}) on {units} of {specimen}:'
+)
+  .replace('{model}', TYPE_TEST_CAMPAIGN.model)
+  .replace('{campaign}', TYPE_TEST_CAMPAIGN.campaignId)
+  .replace('{lot}', TYPE_TEST_CAMPAIGN.lot)
+  .replace('{dates}', TYPE_TEST_CAMPAIGN.dates)
+  .replace('{units}', TYPE_TEST_CAMPAIGN.units)
+  .replace('{specimen}', TYPE_TEST_CAMPAIGN.specimen);
 ---
 
 <section
@@ -19,25 +43,25 @@ const MATERIAL_RESULTS = TYPE_TEST_CAMPAIGN.items.slice(0, 3);
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
     <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 mb-2 block">
-      Evidence
+      {tf('product.evidence', 'Evidence')}
     </span>
     <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
-      Measured material results
+      {
+        isTestedModel
+          ? tf('product.measuredMaterialResults', 'Measured material results')
+          : tf('product.platformTestEvidence', 'Platform type-test evidence (tested on rectangular SR341220)')
+      }
     </h2>
-    <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-6">
-      Measured in the {TYPE_TEST_CAMPAIGN.model} type-test campaign {TYPE_TEST_CAMPAIGN.campaignId} (lot{' '}
-      {TYPE_TEST_CAMPAIGN.lot}, {TYPE_TEST_CAMPAIGN.dates}) on {TYPE_TEST_CAMPAIGN.units} of{' '}
-      {TYPE_TEST_CAMPAIGN.specimen}:
-    </p>
+    <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-6">{measuredIn}</p>
     <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
       <table class="w-full text-sm">
         <thead>
           <tr class="bg-gray-50 dark:bg-slate-800 text-left">
             <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
-              Test
+              {tf('product.test', 'Test')}
             </th>
             <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
-              Measured result
+              {tf('product.measuredResult', 'Measured result')}
             </th>
           </tr>
         </thead>
@@ -55,7 +79,13 @@ const MATERIAL_RESULTS = TYPE_TEST_CAMPAIGN.items.slice(0, 3);
     </div>
     <p class="mt-4 text-xs text-gray-500 dark:text-slate-500 leading-relaxed max-w-3xl">
       <Icon name="tabler:info-circle" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
-      {TYPE_TEST_CAMPAIGN.scopeNote} Values for other models and wall thicknesses are confirmed per project in the quotation.
+      {TYPE_TEST_CAMPAIGN.scopeNote}{' '}
+      {
+        tf(
+          'product.scopeValuesNote',
+          'Values for other models and wall thicknesses are confirmed per project in the quotation.'
+        )
+      }
     </p>
   </div>
 </section>

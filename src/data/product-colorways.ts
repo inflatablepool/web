@@ -6,8 +6,11 @@
  * they are presented on one page. The grey SKU stays purchasable through the
  * same Stripe checkout.
  *
- * Keep `sku` and `priceUsd` in sync with PRODUCT_CATALOG in
- * functions/api/checkout.ts (unitAmount = priceUsd × 100).
+ * The buy button posts an explicit `item` (P1-8) so checkout never falls back
+ * to a default size silently. The displayed price is NOT stored here — it is
+ * read from `productRetailSizes` (src/data/product-variants.ts), the single
+ * retail price source, and cross-checked against PRODUCT_CATALOG in
+ * functions/api/checkout.ts by `npm run test:prices`.
  */
 
 export interface ProductColorwayImage {
@@ -22,8 +25,10 @@ export interface ProductColorway {
   name: string;
   /** Short color name, e.g. "Grey" */
   colorName: string;
-  /** Retail price in USD, string form as published (matches checkout × 100) */
-  priceUsd: string;
+  /** Factory item code posted as `item` to /api/checkout (P1-8) */
+  buyItem: string;
+  /** Display size of the purchasable item, e.g. "Ø 2.0 × 0.5 m" */
+  buySize: string;
   /** Note under the price */
   priceNote: string;
   /** Marketing paragraph describing the colorway */
@@ -36,7 +41,8 @@ export const productColorways: Record<string, ProductColorway> = {
     sku: 'IPF-POOL-RND-GREY',
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',
     colorName: 'Grey',
-    priceUsd: '299',
+    buyItem: 'S2005',
+    buySize: 'Ø 2.0 × 0.5 m',
     priceNote:
       'Same price as the blue colorway for the Ø 2.0 × 0.5 m (S2005) size — includes 1000W electric air pump, repair kit, and storage bag. Optional matching fitted cover available.',
     note: 'The same round drop stitch series — the same 23 factory sizes, 10/15 cm walls, and 4–5 PSI rigid inflation — in a modern grey finish for contemporary patios, villas, and boutique settings. An optional matching fitted cover keeps debris out and the water warm between swims.',

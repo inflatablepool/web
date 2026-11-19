@@ -51,10 +51,10 @@ features:
       description: 'İki qatlı PVC drop stitch parça, ailənin tam mövsümü boyunca deşilmələrə və UV məruz qalmasına müqavimət göstərmək üçün hazırlanmışdır.'
       icon: tabler:shield
     - title: Tam Paket
-      description: Hər hovuz elektrik hava nasosu, təmir dəsti və saxlama çantası ilə təchiz olunur. Dəyirmi modellər üçün quraşdırılmış örtüklər mövcuddur.
+      description: 'Hər hovuz elektrik hava pompası, təmir dəsti və saxlama çantası ilə birlikdə göndərilir. Düzbucaqlı modellərə tam əhatə edən örtük daxildir; dəyirmi modellər seçim olaraq quraşdırılmış örtük təklif edir.'
       icon: tabler:box
     - title: Təhlükəsizlik şüurlu dizayn
-      description: 'EN 16582-1 və ASTM F2666 standartlarına istinad edən yaşayış hovuzunun dizaynı — modelə aid təhlükəsizlik məlumatı məhsul sənədlərində verilmişdir. Daimi böyüklərin nəzarəti həmişə tələb olunur.'
+      description: 'EN 16582-1 və ASTM F2666 standartlarına istinadla yaşayış hovuzunun dizaynı (dizayn arayışları, sertifikatlar deyil) — modelə xas uyğunluq hədəf bazar üzrə təsdiqlənir və təhlükəsizlik məlumatı məhsul sənədləri ilə birlikdə göndərilir. Daimi böyüklərin nəzarəti həmişə tələb olunur.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Hovuz ideyaları
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Qutudan çıxarın və daxil olan nasosla 5-15 dəqiqə ərzində doldurun, sonra bağ şlanqı ilə doldurun — doldurma vaxtı hovuzun ölçüsünə və su təchizatına görə dəyişir.'
       icon: tabler:rocket
     - title: Sadə Su Qulluğu
-      description: Standart 32/38 mm filtr-nasos portları, müntəzəm pH yoxlamaları və yuvarlaq modellərdə quraşdırılmış qapaq suyu təmiz saxlayır.
+      description: 'Standart 32/38 mm filtr-nasos portları, müntəzəm pH yoxlamaları və qapaq - düzbucaqlı modellərə daxildir, dairəvi modellərə isteğe bağlıdır - suyu təmiz saxlayın.'
       icon: tabler:droplet
     - title: Təmizləyin, Sökün və Saxlayın
       description: Hovuzu boşaltın, qurutun, yuvarlayın və qış üçün saxlama çantasına yığın. Saxlamaq üçün daimi quraşdırma yoxdur.
       icon: tabler:package
     - title: Birinci Təhlükəsizlik
-      description: Uşaqlara hər zaman böyüklər tərəfindən fəal nəzarət edilməlidir. Təlimata, yerli qaydalara və təhlükəsiz istifadə təlimatına əməl edin.
+      description: 'EN 16582-1 və ASTM F2666 standartlarına istinadla yaşayış hovuzunun dizaynı (dizayn arayışları, sertifikatlar deyil) — modelə xas uyğunluq hədəf bazar üzrə təsdiqlənir və təhlükəsizlik məlumatı məhsul sənədləri ilə birlikdə göndərilir. Daimi böyüklərin nəzarəti həmişə tələb olunur.'
       icon: tabler:shield-check
 steps:
   title: Qutudan Həyətə
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuza nə daxildir?
-      description: Hər Inflatable Pool Factory hovuzuna elektrik hava nasosu, təmir dəsti və saxlama çantası daxildir. Dəyirmi modellərdə əlavə olaraq quraşdırılmış örtük var.
+      description: 'Hər Şişmə Hovuz Fabriki hovuzuna elektrik hava nasosu, təmir dəsti və saxlama çantası daxildir. Düzbucaqlı modellər də tam örtüyü əhatə edir; dəyirmi modellər seçim olaraq quraşdırılmış örtük təklif edir.'
       icon: tabler:box
       category: all
     - title: Hansı ölçülər mövcuddur?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Suyu necə təmiz saxlaya bilərəm?
-      description: Quraşdırılmış yerdə filtr nasosundan istifadə edin, zibilləri təmizləyin, pH-ı yoxlayın və istifadə edilmədikdə hovuzu örtün. Suyun nə qədər davam etməsi hovuzun ölçüsündən, istifadəsindən və filtrasiyasından asılıdır - sabit cədvələ etibar etməkdənsə, müntəzəm olaraq sınaqdan keçirin.
+      description: 'Standart 32/38 mm filtr-nasos portları, müntəzəm pH yoxlamaları və qapaq - düzbucaqlı modellərə daxildir, dairəvi modellərə isteğe bağlıdır - suyu təmiz saxlayın.'
       icon: tabler:droplet
       category: all
 cta:

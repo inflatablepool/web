@@ -51,10 +51,10 @@ features:
       description: 'Dwuwarstwowy materiał PVC drop stitch, zaprojektowany tak, aby był odporny na przebicia i narażenie na działanie UV przez cały sezon rodzinnego użytkowania.'
       icon: tabler:shield
     - title: Kompletny pakiet
-      description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Do modeli okrągłych dostępne są dopasowane pokrowce.
+      description: 'Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Modele prostokątne obejmują pełną osłonę; modele okrągłe oferują opcjonalnie dopasowaną osłonę.'
       icon: tabler:box
     - title: Projekt uwzględniający bezpieczeństwo
-      description: 'Projekt basenu mieszkalnego odwołujący się do norm EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
+      description: 'Projekt basenu mieszkalnego w odniesieniu do EN 16582-1 i ASTM F2666 (odniesienia projektowe, a nie certyfikaty) — zgodność z konkretnym modelem jest potwierdzana dla każdego rynku docelowego, a informacje dotyczące bezpieczeństwa są dostarczane z dokumentacją produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pomysły na basen
@@ -117,13 +117,13 @@ content_compliance:
       description: 'Rozpakuj i napompuj za pomocą dołączonej pompy w ciągu 5–15 minut, a następnie napełnij wężem ogrodowym — czas napełniania różni się w zależności od wielkości basenu i zaopatrzenia w wodę.'
       icon: tabler:rocket
     - title: Prosta pielęgnacja wody
-      description: Standardowe porty pompy filtrującej 32/38 mm, regularne kontrole pH i dopasowana pokrywa w modelach okrągłych utrzymują wodę w czystości.
+      description: 'Standardowe porty pompy filtrującej 32/38 mm, regularne kontrole pH i pokrywa – w zestawie w modelach prostokątnych, opcjonalnie w modelach okrągłych – utrzymują wodę w czystości.'
       icon: tabler:droplet
     - title: Wyczyść, osusz i przechowuj
       description: Odcedź, osusz, zwiń i zapakuj basen do torby do przechowywania na zimę. Brak stałej instalacji wymagającej konserwacji.
       icon: tabler:package
     - title: Bezpieczeństwo przede wszystkim
-      description: Dzieci muszą być przez cały czas aktywnie nadzorowane przez osobę dorosłą. Postępuj zgodnie z instrukcją, lokalnymi przepisami i wskazówkami dotyczącymi bezpiecznego użytkowania.
+      description: 'Projekt basenu mieszkalnego w odniesieniu do EN 16582-1 i ASTM F2666 (odniesienia projektowe, a nie certyfikaty) — zgodność z konkretnym modelem jest potwierdzana dla każdego rynku docelowego, a informacje dotyczące bezpieczeństwa są dostarczane z dokumentacją produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
       icon: tabler:shield-check
 steps:
   title: Od pudełka do podwórka
@@ -170,7 +170,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: Co jest wliczone w cenę basenu?
-      description: Każdy basen Inflatable Pool Factory zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele okrągłe mają opcjonalną dopasowaną pokrywę.
+      description: 'Każdy basen dmuchany Factory zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele prostokątne obejmują również pełną osłonę; modele okrągłe oferują opcjonalnie dopasowaną osłonę.'
       icon: tabler:box
       category: all
     - title: Jakie rozmiary są dostępne?
@@ -182,7 +182,7 @@ faqs:
       icon: tabler:layout-grid
       category: all
     - title: Jak utrzymać czystość wody?
-      description: Użyj pompy filtrującej, jeśli jest zainstalowana, usuń zanieczyszczenia, sprawdź pH i przykryj basen, gdy nie jest używany. To, jak długo wystarczy woda, zależy od wielkości basenu, sposobu użytkowania i filtracji — testuj regularnie, zamiast polegać na ustalonym harmonogramie.
+      description: 'Standardowe porty pompy filtrującej 32/38 mm, regularne kontrole pH i pokrywa – w zestawie w modelach prostokątnych, opcjonalnie w modelach okrągłych – utrzymują wodę w czystości.'
       icon: tabler:droplet
       category: all
 cta:
