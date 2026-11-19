@@ -1,6 +1,6 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import type { Product, ProductCategory } from '~/types';
-import { APP_PRODUCTS } from 'astrowind:config';
+import { APP_PRODUCTS } from 'site:config';
 import { cleanSlug, PRODUCT_PERMALINK_PATTERN } from './permalinks';
 
 const PRODUCT_CATEGORY_LABELS: Record<ProductCategory, string> = {

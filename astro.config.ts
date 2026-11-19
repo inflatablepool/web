@@ -6,7 +6,7 @@ import { unified } from '@astrojs/markdown-remark';
 
 import mdx from '@astrojs/mdx';
 
-import astrowind from './vendor/integration';
+import siteConfig from './vendor/integration';
 import imageOptimizer from './vendor/integration/image-optimizer';
 import imgDimensions from './vendor/integration/img-dimensions';
 import yaml from '@rollup/plugin-yaml';
@@ -41,7 +41,7 @@ export default defineConfig({
 
     imgDimensions(),
 
-    astrowind({
+    siteConfig({
       config: configFile,
     }),
   ],

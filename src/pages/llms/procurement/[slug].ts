@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { procurementGuides, GUIDE_CLUSTER_LABELS } from '~/data/procurement-guides';
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 
 export const prerender = true;
 

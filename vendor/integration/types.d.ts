@@ -1,4 +1,4 @@
-declare module 'astrowind:config' {
+declare module 'site:config' {
   import type {
     SiteConfig,
     I18NConfig,

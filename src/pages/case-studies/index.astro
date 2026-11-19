@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { toAssetUrl } from '~/utils/images';
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 import type { MetaData } from '~/types';
 
 const cases = await getCollection('case-use', ({ data }) => !data.draft);

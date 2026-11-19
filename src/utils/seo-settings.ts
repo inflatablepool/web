@@ -1,4 +1,4 @@
-import { SITE, METADATA, SITE_SETTINGS, ANALYTICS } from 'astrowind:config';
+import { SITE, METADATA, SITE_SETTINGS, ANALYTICS } from 'site:config';
 
 export interface SeoSettings {
   siteUrl: string;

@@ -1,4 +1,4 @@
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 
 const siteUrl = String(SITE.site).replace(/\/+$/, '');
 

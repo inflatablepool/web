@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 
 export const prerender = true;
 

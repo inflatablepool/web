@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { guides } from '~/data/guides';
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 
 export const prerender = true;
 

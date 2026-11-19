@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { contentV2Records } from '~/data/content-v2';
-import { SITE } from 'astrowind:config';
+import { SITE } from 'site:config';
 
 export const prerender = true;
 
