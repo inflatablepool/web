@@ -1,0 +1,161 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { toAssetUrl } from '~/utils/images';
+import { SITE } from 'astrowind:config';
+import type { MetaData } from '~/types';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('case-use', ({ data }) => !data.draft);
+  return cases.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const otherCases = (await getCollection('case-use', ({ data }) => !data.draft)).filter((c) => c.id !== entry.id);
+
+const publishDay = entry.data.publishDate ? new Date(entry.data.publishDate).toISOString().slice(0, 10) : undefined;
+
+const metadata: MetaData = {
+  title: `${entry.data.title} | ${SITE.name}`,
+  description: entry.data.description ?? entry.data.summary ?? entry.data.title,
+  openGraph: { type: 'article' },
+};
+
+const crumbs = [{ name: 'Case Studies', href: '/case-studies' }, { name: entry.data.title }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: entry.data.title,
+      description: (entry.data.description ?? entry.data.summary ?? entry.data.title).slice(0, 200),
+      image: entry.data.image ? toAssetUrl(entry.data.image) : undefined,
+      datePublished: publishDay,
+      dateModified: publishDay,
+      authorName: 'Inflatable Pool Factory Team',
+    }}
+    data={{ url: `${SITE.site}/case-studies/${entry.id}` }}
+  />
+
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-10 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Case Study{entry.data.category ? ` · ${entry.data.category}` : ''}
+      </p>
+      <h1 class="text-3xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">{entry.data.title}</h1>
+      {
+        entry.data.summary && (
+          <p class="mt-4 text-lg text-gray-500 dark:text-slate-400 leading-relaxed">{entry.data.summary}</p>
+        )
+      }
+      <div class="mt-5 flex flex-wrap gap-2">
+        {
+          (entry.data.tags ?? []).map((tag) => (
+            <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-400">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+      {
+        entry.data.environment && (
+          <p class="mt-4 text-sm text-gray-500 dark:text-slate-400 flex items-center gap-2">
+            <Icon name="tabler:map-pin" class="w-4 h-4 shrink-0" />
+            {entry.data.environment}
+          </p>
+        )
+      }
+    </header>
+
+    {
+      entry.data.image && (
+        <img
+          src={toAssetUrl(entry.data.image)}
+          alt={entry.data.imageAlt ?? entry.data.title}
+          class="aspect-[3/2] w-full rounded-2xl border border-gray-100 dark:border-slate-800 object-cover shadow-sm"
+          width="1536"
+          height="1024"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      )
+    }
+  </section>
+
+  {
+    entry.data.skill && (
+      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-y border-gray-100 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300">
+            <Icon name="tabler:tool" class="w-4 h-4 text-primary dark:text-blue-400 shrink-0" />
+            <span>{entry.data.skill}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300">
+            <Icon name="tabler:calendar" class="w-4 h-4 text-primary dark:text-blue-400 shrink-0" />
+            <span>{publishDay}</span>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="max-w-4xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div
+      class="prose prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 max-w-none prose-table:block prose-table:overflow-x-auto"
+    >
+      <Content />
+    </div>
+  </section>
+
+  <section class="bg-gray-900 dark:bg-slate-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Ready to build your own pool brand?</h2>
+      <p class="text-gray-300 mb-8">Start from a small private-label order with your own logo, colors and packaging.</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" />
+          Request Quotation
+        </a>
+        <a
+          href="/oem-odm"
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
+          OEM / ODM Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {
+    otherCases.length > 0 && (
+      <section class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-14">
+        <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+          More case studies
+        </h2>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {otherCases.map((c) => (
+            <a
+              href={`/case-studies/${c.id}`}
+              class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{c.data.title}</h3>
+              <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{c.data.summary}</p>
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-700 dark:text-sky-400">
+                Read more
+                <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Layout>

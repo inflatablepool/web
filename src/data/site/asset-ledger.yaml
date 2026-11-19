@@ -1,6 +1,16 @@
 version: 1
-updated: '2026-11-17'
+updated: '2026-11-19'
 assets:
+  - path: /images/case-studies/saudi-arabia-drop-stitch-pool-brand.webp
+    storage: repo
+    type: product_photo
+    source: 'Customer case photo supplied by the site owner with the Saudi Arabia case brief (case/ae/阳光花园里的家庭泳池时光.png, converted to 1536px WebP), 2026-11-19.'
+    license: supplier_authorized
+    reviewStatus: approved
+    legacyBaseline: false
+    approvedBy: info@inflatablepoolfactory.com
+    approvedAt: '2026-11-19'
+    notes: 'Hero image for /case-studies/saudi-arabia-drop-stitch-pool-brand; provided for publication with the case story.'
   - path: /images/default.webp
     storage: repo
     type: brand_asset

@@ -70,6 +70,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:layers-subtract",
   "tabler:layout-grid",
   "tabler:mail",
+  "tabler:map-pin",
   "tabler:message-circle",
   "tabler:package",
   "tabler:package-export",

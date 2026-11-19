@@ -149,6 +149,8 @@ const caseUseSchema = z.object({
   title: z.string(),
   summary: z.string().optional(),
   description: z.string().optional(),
+  image: z.string().optional(),
+  imageAlt: z.string().optional(),
   category: z.string().optional(),
   environment: z.string().optional(),
   skill: z.string().optional(),

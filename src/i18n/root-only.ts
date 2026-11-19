@@ -30,6 +30,7 @@ export const ROOT_ONLY_ROUTES = [
   '/inflatable-pool-water-capacity',
   '/inflatable-pool-packaging-shipping',
   '/certifications',
+  '/case-studies',
   '/admin',
 ];
 

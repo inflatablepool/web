@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-11-17'
+updated: '2026-11-19'
 # Human publishers allowed to move an AI content review to `published`.
 # Changing this list must go through a pull request (the admin Publish button
 # refuses to merge a draft that edits publishers[]).
@@ -7,4 +7,40 @@ publishers:
   - info@inflatablepoolfactory.com
 # One record per AI-assisted content unit. Content files point at a record
 # with `aiReview: <id>`. See AGENTS.md → AI Content Review (P1-07).
-reviews: []
+reviews:
+  - id: ai-2026-11-19-saudi-arabia-drop-stitch-pool-brand
+    title: 'Saudi Arabia drop stitch pool brand case study'
+    status: published
+    model: ai-assisted marketing draft (human-edited)
+    generatedBy: site-owner-supplied case brief (case/ae/ae.txt)
+    generatedAt: '2026-11-19'
+    files:
+      - src/data/case-use/saudi-arabia-drop-stitch-pool-brand.mdx
+    sources:
+      - label: 'Factory case brief "Saudi Arabia Drop Stitch Pool brand story" supplied by the site owner (case/ae/ae.txt), 2026-11-19'
+        accessedAt: '2026-11-19'
+      - label: 'src/config/facts.json commercial terms — factory-confirmed MOQ and lead times, 2026-11-18'
+        accessedAt: '2026-11-19'
+      - label: 'Saudi National Meteorological Centre "Climate of Kingdom" and the Saudi Encyclopedia "Climate of Saudi Arabia" (climate references cited by the case brief)'
+        accessedAt: '2026-11-19'
+    claims:
+      - statement: 'Saudi Arabia summer temperatures commonly reach 40–45°C in many regions, and families in villas and private gardens seek private at-home water recreation.'
+        status: verified
+        evidence: 'Case brief cites Saudi National Meteorological Centre "Climate of Kingdom" and the Saudi Encyclopedia "Climate of Saudi Arabia"; figures reviewed against the factory case brief supplied 2026-11-19.'
+      - statement: 'Private-label drop stitch pool projects start from just 5 units for eligible configurations (OEM logo MOQ).'
+        status: verified
+        evidence: 'src/config/facts.json commercial.moqPools — "Standard program 1 pc (mixed models accepted); OEM logo 5 pcs; full custom development 20 pcs" — factory-confirmed commercial terms, 2026-11-18.'
+      - statement: 'Drop stitch construction connects two fabric layers with thousands of internal threads, producing a firm, relatively flat wall when inflated to the specified pressure.'
+        status: verified
+        evidence: 'Factory drop-stitch technology documentation (src/data/technology/drop-stitch-core.md) and published product pages.'
+    factCheckStatus: approved
+    humanReviewStatus: approved
+    translationReviewStatus: not_required
+    translations: []
+    notes: 'English-only case study. Copy supplied by the site owner from the customer case; claims cross-checked against factory-confirmed facts.json commercial terms. No certification, pressure, capacity or specification claims beyond factory-confirmed data; UV and heat copy stays hedged per the case brief guidance.'
+    publishedBy: info@inflatablepoolfactory.com
+    publishedAt: '2026-11-19'
+    history:
+      - at: '2026-11-19'
+        by: info@inflatablepoolfactory.com
+        action: 'created and published from site-owner-supplied case brief'

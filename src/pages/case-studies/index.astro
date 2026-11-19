@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { toAssetUrl } from '~/utils/images';
+import { SITE } from 'astrowind:config';
+import type { MetaData } from '~/types';
+
+const cases = await getCollection('case-use', ({ data }) => !data.draft);
+
+const metadata: MetaData = {
+  title: `Customer Case Studies | ${SITE.name}`,
+  description:
+    'Real customer stories: how entrepreneurs and businesses build their own drop stitch pool brands with Inflatable Pool Factory — private label, OEM logo and low-MOQ market entry.',
+  openGraph: { type: 'website' },
+};
+
+const crumbs = [{ name: 'Case Studies', href: '/case-studies' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Case Studies</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        How our customers build their own pool brands
+      </h1>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400 leading-relaxed">
+        Real stories from entrepreneurs who started with a small private-label order and grew a premium drop stitch pool
+        brand in their own market.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        cases.map((entry) => (
+          <a
+            href={`/case-studies/${entry.id}`}
+            class="group block bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            {entry.data.image && (
+              <img
+                src={toAssetUrl(entry.data.image)}
+                alt={entry.data.imageAlt ?? entry.data.title}
+                class="aspect-[3/2] w-full object-cover"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                {(entry.data.tags ?? []).slice(0, 4).map((tag) => (
+                  <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-400">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h2 class="text-lg font-semibold font-heading dark:text-slate-100 leading-snug group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                {entry.data.title}
+              </h2>
+              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed line-clamp-3">
+                {entry.data.summary}
+              </p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-700 dark:text-sky-400">
+                Read the story
+                <Icon name="tabler:arrow-right" class="w-4 h-4" />
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-gray-900 dark:bg-slate-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Want to build your own pool brand?</h2>
+      <p class="text-gray-300 mb-8">Start from a small private-label order with your own logo, colors and packaging.</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" />
+          Request Quotation
+        </a>
+        <a
+          href="/oem-odm"
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
+          OEM / ODM Services
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
