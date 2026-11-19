@@ -1,6 +1,26 @@
 version: 1
 updated: '2026-11-19'
 assets:
+  - path: /images/case-studies/custom-pools-for-events-brand-activations.webp
+    storage: repo
+    type: product_photo
+    source: 'Real ODM customer case photo (Foida company event, case/ODM Development Case/Foida公司团建.jpeg, converted to 1264px WebP), supplied by the site owner, 2026-11-19.'
+    license: supplier_authorized
+    reviewStatus: approved
+    legacyBaseline: false
+    approvedBy: info@inflatablepoolfactory.com
+    approvedAt: '2026-11-19'
+    notes: 'Hero image for /case-studies/custom-pools-for-events-brand-activations; customer-provided photo published with the case story.'
+  - path: /images/case-studies/pet-brand-pets-pool-collection.webp
+    storage: repo
+    type: product_photo
+    source: 'Real pet-brand customer case photo (case/Dog Pool/金毛犬畅游豪华庭院泳池.png, converted to 1536px WebP), supplied by the site owner, 2026-11-19.'
+    license: supplier_authorized
+    reviewStatus: approved
+    legacyBaseline: false
+    approvedBy: info@inflatablepoolfactory.com
+    approvedAt: '2026-11-19'
+    notes: 'Hero image for /case-studies/pet-brand-pets-pool-collection; customer-provided photo published with the case story.'
   - path: /images/case-studies/saudi-arabia-drop-stitch-pool-brand.webp
     storage: repo
     type: product_photo

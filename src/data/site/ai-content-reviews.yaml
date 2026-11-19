@@ -44,3 +44,68 @@ reviews:
       - at: '2026-11-19'
         by: info@inflatablepoolfactory.com
         action: 'created and published from site-owner-supplied case brief'
+  - id: ai-2026-11-19-pet-brand-pets-pool-collection
+    title: 'Pet brand Pets Pool collection case study'
+    status: published
+    model: ai-assisted marketing draft (human-edited)
+    generatedBy: site-owner-supplied case brief (case/Dog Pool/dogpool.txt)
+    generatedAt: '2026-11-19'
+    files:
+      - src/data/case-use/pet-brand-pets-pool-collection.mdx
+    sources:
+      - label: 'Factory case brief "Dog Pool / Pets Pool collection brand story" supplied by the site owner (case/Dog Pool/dogpool.txt), 2026-11-19'
+        accessedAt: '2026-11-19'
+      - label: 'src/config/facts.json commercial terms — factory-confirmed MOQ, 2026-11-18'
+        accessedAt: '2026-11-19'
+    claims:
+      - statement: 'The initial product concept was a round drop stitch dog pool with a 3-meter diameter, a 50 cm height and a 10 cm specified structural thickness, proposed for spacious villa gardens and private backyards.'
+        status: verified
+        evidence: 'Product concept specification agreed with the customer and recorded in the factory case brief (case/Dog Pool/dogpool.txt), supplied by the site owner, 2026-11-19.'
+      - statement: 'For eligible products and customization configurations, customers can start with just 5 units.'
+        status: verified
+        evidence: 'src/config/facts.json commercial.moqPools — "Standard program 1 pc (mixed models accepted); OEM logo 5 pcs; full custom development 20 pcs" — factory-confirmed commercial terms, 2026-11-18.'
+      - statement: 'Drop stitch construction connects two fabric layers with thousands of internal threads, allowing the structure to maintain a relatively flat and firm shape when inflated to the specified pressure.'
+        status: verified
+        evidence: 'Factory drop-stitch technology documentation (src/data/technology/drop-stitch-core.md) and published product pages.'
+    factCheckStatus: approved
+    humanReviewStatus: approved
+    translationReviewStatus: not_required
+    translations: []
+    notes: 'English-only case study. Copy supplied by the site owner from a real customer case; the pet pool concept dimensions come from the customer case brief. Material, abrasion and puncture copy stays hedged as development directions, not verified test results; no certification, pressure or capacity claims.'
+    publishedBy: info@inflatablepoolfactory.com
+    publishedAt: '2026-11-19'
+    history:
+      - at: '2026-11-19'
+        by: info@inflatablepoolfactory.com
+        action: 'created and published from site-owner-supplied case brief'
+  - id: ai-2026-11-19-custom-pools-events-brand-activations
+    title: 'Advertising agency brand activation pools ODM development case'
+    status: published
+    model: ai-assisted marketing draft (human-edited)
+    generatedBy: site-owner-supplied case brief (case/ODM Development Case/ODM Development Case.txt)
+    generatedAt: '2026-11-19'
+    files:
+      - src/data/case-use/custom-pools-for-events-brand-activations.mdx
+    sources:
+      - label: 'Factory case brief "ODM Development Case — custom pools for events & brand activations" supplied by the site owner (case/ODM Development Case/ODM Development Case.txt), 2026-11-19'
+        accessedAt: '2026-11-19'
+      - label: 'src/config/facts.json commercial terms — factory-confirmed MOQ, 2026-11-18'
+        accessedAt: '2026-11-19'
+    claims:
+      - statement: 'For eligible product designs and customization configurations, our MOQ can start from just 5 units.'
+        status: verified
+        evidence: 'src/config/facts.json commercial.moqPools — "Standard program 1 pc (mixed models accepted); OEM logo 5 pcs; full custom development 20 pcs" — factory-confirmed commercial terms, 2026-11-18.'
+      - statement: 'Drop stitch technology uses thousands of internal connecting threads to connect two fabric layers, creating a relatively firm and structured shape when inflated to the specified pressure.'
+        status: verified
+        evidence: 'Factory drop-stitch technology documentation (src/data/technology/drop-stitch-core.md) and published product pages.'
+    factCheckStatus: approved
+    humanReviewStatus: approved
+    translationReviewStatus: not_required
+    translations: []
+    notes: 'English-only ODM Development Case, labeled as such per the source brief requirement; the site owner confirmed this is a real customer case. Copy stays hedged: no verified order quantities, prices, certification, pressure or capacity claims; MOQ figure cross-checked against factory-confirmed facts.json commercial terms.'
+    publishedBy: info@inflatablepoolfactory.com
+    publishedAt: '2026-11-19'
+    history:
+      - at: '2026-11-19'
+        by: info@inflatablepoolfactory.com
+        action: 'created and published from site-owner-supplied case brief'

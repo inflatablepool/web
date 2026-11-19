@@ -161,6 +161,30 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://inflatablepoolfactory.com/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/case-studies/"/>
+    <x:entity>case-studies</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://inflatablepoolfactory.com/case-studies/custom-pools-for-events-brand-activations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/case-studies/custom-pools-for-events-brand-activations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/case-studies/custom-pools-for-events-brand-activations/"/>
+    <x:entity>case-studies/custom-pools-for-events-brand-activations</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://inflatablepoolfactory.com/case-studies/pet-brand-pets-pool-collection/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/case-studies/pet-brand-pets-pool-collection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/case-studies/pet-brand-pets-pool-collection/"/>
+    <x:entity>case-studies/pet-brand-pets-pool-collection</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://inflatablepoolfactory.com/case-studies/saudi-arabia-drop-stitch-pool-brand/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://inflatablepoolfactory.com/case-studies/saudi-arabia-drop-stitch-pool-brand/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inflatablepoolfactory.com/case-studies/saudi-arabia-drop-stitch-pool-brand/"/>
