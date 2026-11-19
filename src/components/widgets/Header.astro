@@ -55,8 +55,9 @@ const {
 
 const cleanPath = removeLang(new URL(Astro.url).pathname);
 
-// Root-only routes have no localized versions — the language dialog must not
-// offer (dead) per-locale links for them. Keep in sync with Layout.astro.
+// Root-only routes have no localized versions — the language dialog still
+// offers every language, but non-current languages link to their localized
+// homepage (see langHrefFor below). Keep in sync with Layout.astro.
 import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
 const isRootOnlyRoute = isRootOnlyRouteFn(cleanPath);
 
@@ -111,6 +112,16 @@ const langs: Array<{ code: string; name: string; locale: string; enabled?: boole
 ).filter((l) => l.enabled !== false);
 
 const currentLocale = getLangFromUrl(Astro.url);
+
+// Root-only routes have no localized variants — still offer every language in
+// the dialog, but non-current languages link to their localized homepage
+// instead of a same-path URL that would 404.
+const langHrefFor = (l: { locale: string }): string => {
+  if (isRootOnlyRoute && l.locale !== currentLocale) {
+    return l.locale === 'en' ? '/' : `/${l.locale}/`;
+  }
+  return localizeUseCasePath(cleanPath, l.locale);
+};
 
 const headerUi = getUiForLang(currentLocale);
 const searchPlaceholder = headerUi?.['search.placeholder'] || 'Search posts, products, pages...';
@@ -352,10 +363,10 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
       </div>
       <ul class="pb-3 px-3 grid grid-cols-4 sm:grid-cols-5 gap-1 max-h-[65vh] overflow-y-auto">
         {
-          (isRootOnlyRoute ? langs.filter((l) => l.locale === currentLocale) : langs).map((l) => (
+          langs.map((l) => (
             <li>
               <a
-                href={localizeUseCasePath(cleanPath, l.locale)}
+                href={langHrefFor(l)}
                 data-locale={l.locale}
                 data-lang-code={l.code}
                 data-lang-name={l.name}
@@ -429,8 +440,6 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         if (!t) return;
         e.preventDefault();
         const locale = t.getAttribute('data-locale') || 'en';
-        const path = window.location.pathname;
-        const host = window.location.hostname;
 
         try {
           localStorage.setItem('locale', locale);
@@ -439,12 +448,13 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         }
         document.cookie = 'x-user-locale=' + locale + '; path=/; max-age=31536000; SameSite=Lax';
 
-        // Path-based routing for all environments (no subdomain dependency)
-        const langMatch = path.match(/^\/[a-z]{2}(\/|$)/);
-        const newPath = langMatch
-          ? path.replace(/^\/[a-z]{2}(\/|$)/, '/' + locale + '$1')
-          : '/' + locale + (path === '/' ? '' : path);
-        window.location.href = window.location.protocol + '//' + host + newPath;
+        // Navigate to the server-rendered href — it already resolves the safe
+        // target for this page (same-path localization on translatable routes,
+        // localized homepage fallback on root-only routes). Recomputing the
+        // path client-side would build dead /{lang}/... URLs on root-only pages.
+        const href = t.getAttribute('href');
+        if (!href) return;
+        window.location.href = new URL(href, window.location.origin).href;
       });
     }
 
