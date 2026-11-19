@@ -36,12 +36,14 @@ export interface PressureDefinition {
 
 /**
  * The published pressure baseline, including the explicit distinction between
- * the recommended operating pressure, the maximum inflation pressure, the
- * relief-valve threshold and the rated working pressure (Pw) used as the
- * reference in destructive type-test reports. Pw = 8.0 PSI on the FB-DSP-400
- * nameplate equals the 8 PSI maximum inflation pressure for that model — it is
- * the structural verification reference, NOT a recommended operating pressure.
+ * the recommended operating pressure (4–5 PSI), the practical inflation cap
+ * (the relief-valve auto-release threshold, 6 PSI) and the type-test reference
+ * pressure (Pw = 8.0 PSI). Factory clarification (2026-11-19): 8 PSI exists
+ * ONLY in the destructive type-test reports — it is a test reference, NOT a
+ * product inflation pressure, and must never be presented as one.
  */
+export const TYPE_TEST_REFERENCE_PRESSURE = '8.0 PSI';
+
 export const PRESSURE_DEFINITIONS: PressureDefinition[] = [
   {
     parameter: 'Recommended operating pressure',
@@ -53,7 +55,7 @@ export const PRESSURE_DEFINITIONS: PressureDefinition[] = [
     parameter: 'Maximum inflation pressure',
     publishedValue: POOL_MAX_PRESSURE,
     dataNature: 'Standard platform reference',
-    note: 'The structural limit the design must survive. Do not inflate beyond the model rating.',
+    note: 'The practical inflation cap — the relief valve auto-releases above this threshold. Never force inflation past it.',
   },
   {
     parameter: 'Pressure-relief valve auto-release',
@@ -62,10 +64,10 @@ export const PRESSURE_DEFINITIONS: PressureDefinition[] = [
     note: 'Protects against over-inflation and heat expansion; the actual opening tolerance is confirmed per model.',
   },
   {
-    parameter: 'Rated working pressure (Pw) in type-test reports',
-    publishedValue: '8.0 PSI (FB-DSP-400 nameplate)',
+    parameter: 'Type-test reference pressure (Pw) in destructive-test reports',
+    publishedValue: '8.0 PSI (FB-DSP-400 type-test reference)',
     dataNature: 'Type-test reference for the tested model',
-    note: 'The reference pressure used in destructive-test reports. For FB-DSP-400 it equals the 8 PSI maximum inflation pressure — it is not the 4–5 PSI recommended operating pressure.',
+    note: 'The reference pressure used only in the destructive type-test reports. It is not an inflation pressure — the recommended operating pressure is 4–5 PSI.',
   },
   {
     parameter: 'Per-SKU measured pressure',

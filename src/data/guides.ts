@@ -139,7 +139,7 @@ export const guides: GuideRecord[] = [
       'Internal threads: thousands of fine polyester threads connect the layers at fixed intervals',
       'Air chamber: inflating the chamber to 4–5 PSI pulls the layers taut against the threads, locking the wall flat',
       'Rigid result: the wall becomes stiff enough to lean against, like a hard-sided pool',
-      'Safety margin: rated maximum pressure is 8 PSI, with a relief valve that auto-releases above 6 PSI',
+      'Safety margin: never inflate past 6 PSI — the relief valve auto-releases above this threshold',
       'Storage: open the valves, let the fabric relax, and the whole pool folds into a storage bag',
     ],
     faq: [
@@ -153,7 +153,7 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'What happens if I over-inflate?',
-        a: 'The pressure-relief valve automatically releases air above 6 PSI, well below the 8 PSI maximum tolerance, to protect the seams.',
+        a: 'The pressure-relief valve automatically releases air above 6 PSI to protect the seams — never force inflation past this threshold.',
       },
     ],
     relatedProducts: [

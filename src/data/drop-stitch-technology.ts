@@ -55,7 +55,7 @@ export const TECH_FAQS: TechFaq[] = [
   },
   {
     q: 'What inflation pressure should I use?',
-    a: 'Use the pressure stated on the model\'s nameplate or approved specification. For our standard pool models, the published baseline is 4-5 PSI recommended operating pressure, 8 PSI maximum inflation pressure, and a pressure-relief valve that releases above 6 PSI. Custom models, SPA tubs and project-specific designs can differ. Inflate gradually, check with a gauge, and do not use a higher pressure to make the wall "harder".',
+    a: 'Use the pressure stated on the model\'s nameplate or approved specification. For our standard pool models, the published baseline is 4-5 PSI recommended operating pressure, with a pressure-relief valve that releases above 6 PSI — never force inflation past this threshold. Custom models, SPA tubs and project-specific designs can differ. Inflate gradually, check with a gauge, and do not use a higher pressure to make the wall "harder".',
   },
   {
     q: 'Why do different drop stitch pools list different pressures?',
@@ -186,8 +186,8 @@ export const PRESSURE_DEFINITIONS = [
   },
   {
     term: 'Maximum inflation pressure',
-    value: '8 PSI',
-    meaning: 'The published maximum for standard models. It is a limit, not an operating target.',
+    value: '6 PSI',
+    meaning: 'The practical inflation cap for standard models: the relief valve auto-releases above this threshold. It is a limit, not an operating target.',
   },
   {
     term: 'Pressure-relief valve',

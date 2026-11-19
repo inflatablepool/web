@@ -336,7 +336,7 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 7,
     audience: 'Wholesale buyers, QC managers and importers specifying quality standards.',
-    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–5 PSI operating and 8 PSI maximum tolerance, with a pressure-relief valve that auto-releases above 6 PSI. Production units should pass the pressure-drop test defined in the approved specification, with the method, hold time and acceptance criteria agreed before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
+    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–5 PSI operating, with a pressure-relief valve that auto-releases above 6 PSI — the practical inflation cap; never force inflation past it. Production units should pass the pressure-drop test defined in the approved specification, with the method, hold time and acceptance criteria agreed before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
     sections: [
       {
         heading: 'A Pool Is a Pressure Vessel',
@@ -350,7 +350,7 @@ export const procurementGuides: ProcurementGuide[] = [
         paragraphs: ['Inflatable Pool Factory\'s engineering baseline, applied across the catalog:'],
         bullets: [
           'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
-          'Maximum inflation pressure: 8 PSI for the standard models — the structural limit the design must survive; confirm the rating for each model',
+          'Maximum inflation pressure: 6 PSI for the standard models — the relief valve auto-releases above this threshold; never force inflation past it. Per-model nameplate ratings are confirmed in the approved specification',
           'Pressure-relief valve: auto-releases above 6 PSI, protecting against over-inflation and heat expansion',
         ],
       },

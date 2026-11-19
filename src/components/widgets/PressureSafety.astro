@@ -1,7 +1,7 @@
 ---
 import Icon from '~/components/ui/Icon.astro';
-import { POOL_OPERATING_PRESSURE, POOL_MAX_PRESSURE, POOL_RELIEF_VALVE_PRESSURE } from '~/data/pool-catalog';
-import { TYPE_TEST_CAMPAIGN } from '~/data/sku-engineering';
+import { POOL_OPERATING_PRESSURE, POOL_RELIEF_VALVE_PRESSURE } from '~/data/pool-catalog';
+import { TYPE_TEST_CAMPAIGN, TYPE_TEST_REFERENCE_PRESSURE } from '~/data/sku-engineering';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
 /**
@@ -18,8 +18,9 @@ const { lang = 'en' } = Astro.props;
 const t = (key: string) => getUiForLang(lang)?.[key] || '';
 const tf = (key: string, fallback: string) => t(key) || fallback;
 
-// Rated working pressure (Pw) from the FB-DSP-400 nameplate — the reference
-// used in the type-test reports. Equals the 8 PSI maximum inflation pressure.
+// Type-test reference pressure (Pw) from the FB-DSP-400 destructive type-test
+// campaign. Factory clarification: 8 PSI exists ONLY in the destructive tests —
+// it is a test reference, not an inflation pressure.
 const PW_PSI = 8;
 const CREEP_PSI = 1.5 * PW_PSI;
 const BURST_PSI = 25.4;
@@ -37,12 +38,9 @@ const steps: Array<{ value: string; label: string; note: string; tested?: boolea
     note: tf('product.pressureStep2Note', 'The valve opens automatically above this pressure'),
   },
   {
-    value: POOL_MAX_PRESSURE,
-    label: tf('product.pressureStep3Label', 'Rated working pressure (Pw)'),
-    note: tf(
-      'product.pressureStep3Note',
-      'Nameplate rating used as the test reference — confirm the rating for your model'
-    ),
+    value: TYPE_TEST_REFERENCE_PRESSURE,
+    label: tf('product.pressureStep3Label', 'Type-test reference (Pw)'),
+    note: tf('product.pressureStep3Note', 'Destructive type-test reference only — not an inflation pressure'),
   },
   {
     value: `${CREEP_PSI} PSI`,
@@ -63,7 +61,7 @@ const steps: Array<{ value: string; label: string; note: string; tested?: boolea
 
 const evidenceBody = tf(
   'product.testEvidenceBody',
-  'campaign {campaign} (lot {lot}, {dates}) on the {model} ({specimen}) measured Pw = 8.0 PSI and burst at {burst} PSI = {ratio}× Pw with all seams intact. Results cover the tested model, lot and units only — {scope}'
+  'campaign {campaign} (lot {lot}, {dates}) on the {model} ({specimen}) used Pw = 8.0 PSI as the destructive-test reference pressure and burst at {burst} PSI = {ratio}× Pw with all seams intact. Results cover the tested model, lot and units only — {scope}'
 )
   .replace('{campaign}', TYPE_TEST_CAMPAIGN.campaignId)
   .replace('{lot}', TYPE_TEST_CAMPAIGN.lot)

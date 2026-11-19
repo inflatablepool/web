@@ -34,7 +34,7 @@ const COMMON_LINKS: EngineeringLink[] = [
 
 const PRESSURE_POINT: EngineeringPoint = {
   title: 'Pressure and water depth',
-  body: 'Inflate to the pressure stated on the model nameplate or approved specification. Our published standard-model baseline is 4-5 PSI operating, 8 PSI maximum and relief above 6 PSI; custom and SPA models can differ. Water depth is lower than the overall wall height, and capacity depends on internal dimensions and the actual fill level.',
+  body: 'Inflate to the pressure stated on the model nameplate or approved specification. Our published standard-model baseline is 4-5 PSI operating with the relief valve auto-releasing above 6 PSI — never force inflation past this threshold; custom and SPA models can differ. Water depth is lower than the overall wall height, and capacity depends on internal dimensions and the actual fill level.',
 };
 
 const roundProfile: PoolEngineeringProfile = {

@@ -42,19 +42,23 @@ export interface PoolAccessory {
   image?: string;
 }
 
-// PENDING FACTORY CONFIRMATION (FC-01, docs/factory-confirmation-checklist.md):
-// relief valve (6 PSI) is below the stated maximum inflation pressure (8 PSI).
-// Do not change one value alone — follow the checklist once the factory confirms.
+// Factory clarification (2026-11-19, resolves the FC-01 pressure direction): 8 PSI
+// exists ONLY as the Pw reference in the destructive type-test reports — it is not
+// a product inflation pressure. The published practical inflation cap is the
+// relief-valve threshold (6 PSI). Per-model ratings await engineering sign-off.
 /** Recommended daily operating pressure */
 export const POOL_OPERATING_PRESSURE = '4–5 PSI';
-/** Maximum inflation pressure confirmed for the standard models */
-export const POOL_MAX_PRESSURE = '8 PSI';
+/** Practical inflation cap — the relief-valve auto-release threshold */
+export const POOL_MAX_PRESSURE = '6 PSI';
 /** Pressure-relief valve release threshold */
 export const POOL_RELIEF_VALVE_PRESSURE = '6 PSI';
 
 export const POOL_PRESSURE_SPECS = [
   { label: 'Recommended operating pressure', value: POOL_OPERATING_PRESSURE },
-  { label: 'Maximum inflation pressure', value: `${POOL_MAX_PRESSURE} — confirm the rating for your model` },
+  {
+    label: 'Maximum inflation pressure',
+    value: `${POOL_MAX_PRESSURE} — the relief-valve auto-release threshold; never force inflation past it`,
+  },
   { label: 'Pressure-relief valve auto-release', value: `Above ${POOL_RELIEF_VALVE_PRESSURE}` },
 ];
 
