@@ -311,8 +311,8 @@ form_project:
       required: true
       options:
         - Urgent (within 30 days)
-        - Standard (30-60 days)
-        - Planned (60-90 days)
+        - Standard (45–60 days)
+        - Planned (60–90 days)
         - Future planning (90+ days)
     - name: message
       label: Project Details & Requirements
@@ -337,6 +337,9 @@ faq:
     - title: 'Does submitting an RFQ create an order?'
       description: 'No. The RFQ starts a project discussion. Commercial terms, samples, tooling and production are only confirmed after both sides agree in writing.'
       icon: tabler:checklist
+    - title: 'What are the typical production lead times?'
+      description: 'Standard production runs 45 days off-season and up to 60 days during the January–April peak season, counted from deposit and confirmed artwork. Plan peak-season orders early.'
+      icon: tabler:calendar-stats
 
 cta:
   title: 'Prefer to discuss by email?'

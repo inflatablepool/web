@@ -72,7 +72,7 @@ export const BRAND: BrandIdentity = {
   description:
     'Inflatable Pool Factory designs drop-stitch inflatable swimming pools that set up in minutes, store flat in the off-season, and stand up to summers of family use.',
   foundingYear: 2012,
-  categories: ['Rectangular Pools', 'Round Pools', 'Pool Accessories'],
+  categories: ['Rectangular Pools', 'Round Pools', 'Round SPA', 'Square/Rectangular SPA'],
   ethos: [
     'Drop-stitch construction — rigid walls at low air pressure',
     'Family-first — tested materials and stable, low-profile designs',
@@ -109,7 +109,8 @@ export const BRAND: BrandIdentity = {
     {
       year: 2012,
       event: 'Founded',
-      description: 'Inflatable Pool Factory established with a focus on outdoor family products.',
+      description:
+        'Qingdao Vatrad Group founded; the Inflatable Pool Factory brand later specialized in premium drop-stitch pools.',
     },
     {
       year: 2018,

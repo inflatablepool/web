@@ -164,7 +164,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     wallOptions: '10 cm / 15 cm',
     sizeRange: 'Diameter 2.0 m – 10.0 m',
     highlights:
-      'Dense size increments covering over 20 specifications; outstanding resistance to lateral water-pressure expansion; easy installation — ideal for residential backyard leisure and commercial events.',
+      'Dense size increments covering 23 sizes; outstanding resistance to lateral water-pressure expansion; easy installation — ideal for residential backyard leisure and commercial events.',
     included: ['1000W high-power electric air pump', 'Repair kit'],
     includedImage: '/images/pools/accessories-kit.webp',
     items: [

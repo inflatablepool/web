@@ -23,7 +23,7 @@ const RFQ_PRODUCT_TYPES = [
 const PRODUCT_SLUGS = [
   'rectangular-drop-stitch-pool',
   'round-blue-drop-stitch-pool',
-  'round-grey-drop-stitch-pool',
+  'round-blue-drop-stitch-pool#grey',
   'hot-tub-round',
   'hot-tub-square-rect',
 ];
@@ -32,7 +32,7 @@ function paramsOf(url) {
   return new URL(url, 'https://inflatablepoolfactory.com').searchParams;
 }
 
-test('sample platforms cover the five standard product pages', () => {
+test('sample platforms cover the five standard sample platforms', () => {
   assert.deepEqual(
     SAMPLE_PRODUCTS.map((product) => product.slug),
     PRODUCT_SLUGS
@@ -54,7 +54,7 @@ test('sample platforms keep product page slugs and links aligned', () => {
     // page 301-redirects there); every other platform links to its own page.
     const hrefSlug = product.productHref.replace(/^\/products\//, '');
     assert.ok(PRODUCT_SLUGS.includes(hrefSlug), `${product.slug} links to unknown product page ${product.productHref}`);
-    if (product.slug !== 'round-grey-drop-stitch-pool') {
+    if (product.slug !== 'round-blue-drop-stitch-pool#grey') {
       assert.equal(product.productHref, `/products/${product.slug}`);
     }
     assert.ok(product.name.length > 0);
@@ -142,7 +142,7 @@ test('field values are capped before the brief is assembled', () => {
 });
 
 test('URL maps the product slug to the exact RFQ select value', () => {
-  const url = buildSampleRequestUrl({ productSlug: 'round-grey-drop-stitch-pool' });
+  const url = buildSampleRequestUrl({ productSlug: 'round-blue-drop-stitch-pool#grey' });
   const params = paramsOf(url);
 
   assert.equal(params.get('product'), 'Round Pool (Grey)');

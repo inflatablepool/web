@@ -42,7 +42,9 @@ export const SAMPLE_PRODUCTS = [
     productHref: '/products/round-blue-drop-stitch-pool',
   },
   {
-    slug: 'round-grey-drop-stitch-pool',
+    // P2-19: grey is a colorway of the merged round pool page; the slug keeps
+    // the platform distinct for sample lookups and card anchors.
+    slug: 'round-blue-drop-stitch-pool#grey',
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',
     rfqProductType: 'Round Pool (Grey)',
     sizeRange: 'Diameter 2.0 m to 10.0 m',

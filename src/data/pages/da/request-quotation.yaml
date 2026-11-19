@@ -267,8 +267,8 @@ form_project:
       required: true
       options:
         - Urgent (within 30 days)
-        - Standard (30-60 days)
-        - Planned (60-90 days)
+        - Standard (45–60 days)
+        - Planned (60–90 days)
         - Future planning (90+ days)
     - name: message
       label: Project Details & Requirements

@@ -163,6 +163,11 @@ const localizedHref = (locale: string) => {
               ],
               industry: ['Consumer Pool & Outdoor Products', 'Inflatable Pool OEM'],
               areaServed: facts.reach.regions,
+              additionalProperty: {
+                '@type': 'PropertyValue',
+                name: 'Countries served',
+                value: facts.reach.countriesCount,
+              },
               email: facts.contact.email,
               telephone: facts.contact.primaryPhone,
               sameAs: [

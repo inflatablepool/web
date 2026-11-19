@@ -118,7 +118,7 @@ export const BRAND_SUMMARY = {
   tagline: 'Inflatable Swimming Pools for Every Backyard',
   description: 'Durable drop-stitch inflatable pools that set up in minutes and last for summers.',
   foundingYear: 2012,
-  categories: ['Rectangular Pools', 'Round Pools', 'Pool Accessories'],
+  categories: ['Rectangular Pools', 'Round Pools', 'Round SPA', 'Square/Rectangular SPA'],
   ethos: ['Drop-stitch construction', 'Family-safe materials', 'Easy setup and storage'],
   cta: { text: 'Find your pool', link: '/products' },
 };

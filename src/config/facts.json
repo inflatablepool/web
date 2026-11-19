@@ -33,25 +33,23 @@
     "country": "CN",
     "postalCode": "",
     "streetAddress": "40 Yantai Road",
-    "productionLines": 0,
     "hfWeldingMachines": 4,
     "workforceMin": 50,
     "workforceMax": 50,
     "monthlyCapacityUnits": 500,
-    "annualCapacityUnits": 6000,
-    "certifiedModels": 0
+    "annualCapacityUnits": 6000
   },
 
   "reach": {
     "countriesServed": "Worldwide",
+    "countriesCount": "50+",
     "regions": ["North America", "EU", "Asia-Pacific", "Middle East", "Africa"]
   },
 
   "catalog": {
-    "certifiedModels": 0,
-    "categories": ["Rectangular Pool", "Round Pool", "Pool Cover"],
-    "categoryCount": 3,
-    "featuredProductCount": "3 featured pools"
+    "categories": ["Rectangular Pool", "Round Pool", "Round SPA", "Square/Rectangular SPA"],
+    "categoryCount": 4,
+    "featuredProductCount": "4 featured products"
   },
 
   "quality": {

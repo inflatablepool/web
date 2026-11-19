@@ -151,14 +151,14 @@ export function organizationNode() {
     parentOrganization: { '@type': 'Organization', name: facts.brand.legalName },
     areaServed: facts.reach.regions,
     // 服务国家数只在这一处声明，正文用同一个变量渲染
-    ...(facts.reach.countriesServed
+    ...(facts.reach.countriesCount
       ? {
           numberOfLocations: undefined,
           additionalProperty: [
             {
               '@type': 'PropertyValue',
               name: 'Countries served',
-              value: facts.reach.countriesServed,
+              value: facts.reach.countriesCount,
             },
           ],
         }
