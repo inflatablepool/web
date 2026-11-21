@@ -113,5 +113,17 @@ footer:
       href: /terms
     - text: Privacy Policy
       href: /privacy
-  socialLinks: []
+  socialLinks:
+    - text: Facebook
+      href: https://www.facebook.com/Inflatablepoolfactory/
+      ariaLabel: Inflatable Pool Factory on Facebook
+      icon: tabler:brand-facebook
+    - text: LinkedIn
+      href: https://www.linkedin.com/company/inflatablepoolfactory
+      ariaLabel: Inflatable Pool Factory on LinkedIn
+      icon: tabler:brand-linkedin
+    - text: YouTube
+      href: https://www.youtube.com/@DropStitchPool
+      ariaLabel: Inflatable Pool Factory on YouTube
+      icon: tabler:brand-youtube
   footNote: 'Premium drop stitch inflatable pools by Inflatable Pool Factory.'

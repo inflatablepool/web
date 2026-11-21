@@ -51,3 +51,4 @@ apps:
 # "Inflatable Pool Factory" name (entity identity is unchanged).
 branding:
   site_name: iPool factory
+  logo_image: /images/ipf-logo.jpeg

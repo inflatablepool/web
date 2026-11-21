@@ -1,6 +1,16 @@
 version: 1
-updated: '2026-11-19'
+updated: '2026-11-21'
 assets:
+  - path: /images/ipf-logo.jpeg
+    storage: repo
+    type: brand_asset
+    source: 'Official IPF logo image (IPF/IPF_logo.jpeg), supplied by the site owner, 2026-11-21.'
+    license: company_owned
+    reviewStatus: approved
+    legacyBaseline: false
+    approvedBy: info@inflatablepoolfactory.com
+    approvedAt: '2026-11-21'
+    notes: 'Navigation bar logo (config.yaml branding.logo_image, rendered by Logo.astro).'
   - path: /images/case-studies/custom-pools-for-events-brand-activations.webp
     storage: repo
     type: product_photo

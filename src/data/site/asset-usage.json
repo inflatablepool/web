@@ -6,6 +6,9 @@
     "/images/inflatable-pool-factory/hero/tech-meeting-small.webp": [
       "src/pages/[lang]/about.astro"
     ],
+    "/images/ipf-logo.jpeg": [
+      "src/config.yaml"
+    ],
     "/images/og-default.jpg": [
       "src/config.yaml"
     ],
